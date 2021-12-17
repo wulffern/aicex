@@ -2,6 +2,10 @@
 Files for Advanced Integrated Circuits
 
 
+## Requirements
+
+ngspice > 34
+
 ## Getting Started
 
 Clone this repository, update submodules, clone cicsim
