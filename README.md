@@ -7,6 +7,7 @@ Files for Advanced Integrated Circuits
 Clone this repository, update submodules, clone cicsim
 
     git clone git@github.com:wulffern/cicsim.git
+    git checkout develop
     cd cicsim
     pip3 install -r requirements.txt --user
     pip3 install --user -e .
