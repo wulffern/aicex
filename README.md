@@ -17,8 +17,16 @@ Quick install
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/wulffern/aicex/main/install.sh)"
 ```
 
-Check that example runs
+Check that test runs
 
-    cd example/char
-    make tfs plotall
+``` sh
+cd aicex
+make test
+```
+
+## Introduction
+
+[https://www.youtube.com/watch?v=yvUW2gA42bM](https://www.youtube.com/watch?v=yvUW2gA42bM)
+
+
 
