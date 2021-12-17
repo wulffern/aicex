@@ -4,8 +4,9 @@ Files for Advanced Integrated Circuits
 
 ## Requirements
 
-ngspice > 34
-python > 3.8
+- ngspice > 34
+
+- python > 3.8
 
 
 ## Getting Started
