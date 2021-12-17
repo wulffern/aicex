@@ -1,0 +1,12 @@
+.lib Tt
+.option TEMP=27
+.endl
+
+
+.lib Th
+.option TEMP=125
+.endl
+
+.lib Tl
+.option TEMP=-40
+.endl
