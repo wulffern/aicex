@@ -5,22 +5,16 @@ Files for Advanced Integrated Circuits
 ## Requirements
 
 ngspice > 34
+python > 3.8
+
 
 ## Getting Started
 
-Clone this repository, update submodules, clone cicsim
+Quick install 
 
-    git clone git@github.com:wulffern/cicsim.git
-    git checkout develop
-    cd cicsim
-    pip3 install -r requirements.txt --user
-    pip3 install --user -e .
-    cd ..
-    git clone git@github.com:wulffern/aicex.git
-    cd aicex
-    git submodule init
-    git submodule update
-    
+``` sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/wulffern/aicex/main/install.sh)"
+```
 
 Check that example runs
 
