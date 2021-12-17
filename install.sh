@@ -2,8 +2,8 @@
 
 
 git clone git@github.com:wulffern/cicsim.git
-git checkout develop
 cd cicsim
+git checkout develop
 pip3 install -r requirements.txt --user
 pip3 install --user -e .
 cd ..
