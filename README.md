@@ -10,9 +10,10 @@ Clone this repository, update submodules, clone cicsim
     cd cicsim
     pip3 install -r requirements.txt --user
     pip3 install --user -e .
-
+    cd ..
     git clone git@github.com:wulffern/aicex.git
     cd aicex
+    git submodule init
     git submodule update
     
 
