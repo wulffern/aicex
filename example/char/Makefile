@@ -20,3 +20,7 @@ tfs:
 
 plotall:
 	python3 plot_idgm.py
+
+
+test:
+	${MAKE} tfs plotall

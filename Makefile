@@ -1,6 +1,6 @@
 
 
-dirs = sim/char
+dirs = example/char
 
 cwd = ${shell pwd}
 
