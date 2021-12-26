@@ -16,7 +16,7 @@ Quick install
 ``` sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/wulffern/aicex/main/install.sh)"
 ```
-
+    
 Check that test runs
 
 ``` sh
