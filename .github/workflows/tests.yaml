@@ -1,4 +1,4 @@
-name: dicex CI
+name: aicex ci
 
 on:
   push:
@@ -13,7 +13,11 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-      - uses: actions/checkout@main
+      - name: aicex
+        uses: actions/checkout@main
+        with:
+          submodules: true
+
       - name: eda
         uses: actions/checkout@main
         with:
