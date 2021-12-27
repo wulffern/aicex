@@ -1,0 +1,39 @@
+name: dicex CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-20.04
+
+    steps:
+      - uses: actions/checkout@main
+      - name: eda
+        uses: actions/checkout@main
+        with:
+          repository: wulffern/eda
+          path: eda
+      - name: cicsim
+        uses: actions/checkout@master
+        with:
+          repository: wulffern/cicsim
+          path: cicsim
+      - name: Install cicsim
+        run: |
+          cd cicsim
+          pip3 install  -r requirements.txt
+          pip3 install   .
+      - name: Run test
+        run:  |
+          git submodule init
+          git submodule update
+          echo "eda/bin" >> $GITHUB_PATH
+          export PATH=`pwd`/eda/bin:$PATH
+          echo $HOME
+          make test
