@@ -1,3 +1,6 @@
+
+[![aicex ci](https://github.com/wulffern/aicex/actions/workflows/tests.yaml/badge.svg)](https://github.com/wulffern/aicex/actions/workflows/tests.yaml)
+
 # aicex
 Files for Advanced Integrated Circuits
 

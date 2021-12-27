@@ -17,7 +17,6 @@ jobs:
         uses: actions/checkout@main
         with:
           submodules: true
-
       - name: eda
         uses: actions/checkout@main
         with:
