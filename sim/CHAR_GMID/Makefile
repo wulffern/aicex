@@ -1,5 +1,5 @@
 
-TB=idgm
+TB=idgm_lvt
 #VIEW=Sch
 VIEW=Sch
 #VIEW=Ver
@@ -21,6 +21,13 @@ fast:
 
 tfs:
 	cicsim runng ${TB} ${OPT} ${VIEW} Gt "Mtt,Mss,Mff" Rl Cl Bs Ds "Tt,Th,Tl" Vt
+
+ttffss:
+	cicsim runng ${TB} ${OPT} ${VIEW} Gt "Mtt,Mss,Mff" Rl Cl Bs Ds "Tt" Vt
+
+temp:
+	cicsim runng ${TB} ${OPT} ${VIEW} Gt "Mtt" Rl Cl Bs Ds "Tt,Th,Tl" Vt
+	#python3 plot_idgm.py ${TB}_${VIEW}GtMttRlClBsDsTtThTlVt.run
 
 tfsp:
 	python3 plot_idgm.py ${TB}_${VIEW}GtMttMssMffRlClBsDsTtThTlVt.run

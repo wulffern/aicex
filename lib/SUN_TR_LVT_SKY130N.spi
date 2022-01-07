@@ -1,11 +1,11 @@
 * Transistor library
 
 .SUBCKT PCHL D G S B
-XM1 D G S B sky130_fd_pr__pfet_01v8_lvt  w=0.54  l=0.18
+XM1 D G S B sky130_fd_pr__pfet_01v8_lvt  w=0.88  l=0.18
 .ENDS
 
 .SUBCKT NCHL D G S B
-XM1 D G S B sky130_fd_pr__nfet_01v8_lvt  w=0.54  l=0.18
+XM1 D G S B sky130_fd_pr__nfet_01v8_lvt  w=0.88  l=0.18
 .ENDS
 
 .SUBCKT NCHCM D G S B

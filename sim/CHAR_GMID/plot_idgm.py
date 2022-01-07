@@ -50,10 +50,16 @@ idsqs = list()
 
 f,axes = plt.subplots(2,1,sharex=True)
 f.set_figheight(8)
-f.set_figwidth(14)
+f.set_figwidth(17)
 for f in files:
     dfs = cs.toDataFrames(cs.ngRawRead(f))
     df = dfs[0]
+
+    if("i(binn)" in df):
+        df["i(i-sweep)"] =df["i(binn)"]
+
+
+    
     df["gmid"] = df["v(gm)"]/df["i(i-sweep)"]
     df["vgs"] = df["v(n1)"]
     df["idsq"] = df["v(idsq)"]
@@ -74,7 +80,12 @@ axes[0].legend()
 axes[1].grid()
 axes[1].legend()
 plt.xlabel("$V_{GS}$")
-plt.savefig(runfile.replace(".run",".pdf"))
+plt.tight_layout()
+
+if(len(sys.argv)> 2):
+    plt.show()
+else:
+    plt.savefig(runfile.replace(".run",".pdf"))
 
 #- print idsqs
 di = pd.DataFrame(idsqs)
