@@ -1,0 +1,92 @@
+{
+    "cells":
+    [
+
+		{ "comment" : ["-------------------------------------------------------",
+                       " CMOS bulk transistors                         ",
+                       "-------------------------------------------------------"]
+        },
+        { "name" : "DMOS_BULK" ,
+          "class" : "Gds::GdsPatternTransistor",
+          "abstract" : 1,
+          "yoffset": -0.5,
+          "widthoffset" : -0.5,
+          "fillCoordinatesFromStrings" : [
+              [   "OD",
+                  "-------------xxx",
+                  "---cxc-------xcx",
+                  "---xxx-------xxx",
+                  "---cxc-------xcx",
+                  "-------------xxx"
+              ],
+			  [   "ODB",
+                  "-------------xxx",
+                  "-------------xcx",
+                  "-------------xxx",
+                  "-------------xcx",
+                  "-------------xxx"
+              ],
+              [   "PO",
+                  "--mmmmmmmmm-----",
+                  "----------------",
+                  "--mmGmmmcxc-----",
+                  "----------------",
+                  "--mmmmmmmmm-----"
+              ],
+			  [   "POB",
+				  "----------------",
+                  "----------------",
+                  "--------XXX-----",
+                  "----------------",
+				  "----------------"
+
+              ],
+              [   "M1",
+                  "-------------xxx",
+                  "---wDw-------xxx",
+                  "--------wGw--xBx",
+                  "---wSw-------xxx",
+                  "-------------xxx"
+              ]
+          ]
+        },
+
+        { "name" : "PCHDL",
+		  "xoffset" : 0.0,
+          "inherit" : "DMOS_BULK",
+          "abstract" : 0,
+          "type" : "pch_lvt",
+          "beforePlace" :{
+              "addEnclosuresByRectangle" : [
+                  ["OD",[0,-1,17,7],["NWT"]],
+                  ["OD",[0,-1,12,7],["PPT"]],
+                  ["ODB",[12,-1,5,7],["NPT"]]
+              ]
+          }
+        },
+
+        { "name" : "NCHDL",
+          "inherit" : "DMOS_BULK",
+          "xoffset" : -1.5,
+          "abstract" : 0,
+          "afterNew" : {
+              "mirrorPatternString" : 1
+          },
+          "type" : "nch_lvt",
+          "beforePlace" :{
+              "addEnclosuresByRectangle" : [
+				  ["OD",[-1,-1,5,7],["PPT"]],
+                  ["ODB",[4,-1,12,7],["NPT"]]
+              ]
+          }
+        },
+
+        { "name" : "NCHDLR", "type" : "nch_lvt",
+          "inherit" : "NCHDL", "afterPaint" : { "mirrorCenterX" : 0 },
+          "xoffset" : -1.5,
+          "widthoffset" : 2
+        }
+     
+    ]
+
+}

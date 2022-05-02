@@ -1,0 +1,217 @@
+//====================================================================
+//        Copyright (c) 2017 Carsten Wulff Software, Norway
+// ===================================================================
+// Created       : wulff at 2017-6-11
+// ===================================================================
+//   This program is free software: you can redistribute it and/or modify
+//   it under the terms of the GNU General Public License as published by
+//   the Free Software Foundation, either version 3 of the License, or
+//   (at your option) any later version.
+//
+//   This program is distributed in the hope that it will be useful,
+//   but WITHOUT ANY WARRANTY; without even the implied warranty of
+//   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//   GNU General Public License for more details.
+//
+//   You should have received a copy of the GNU General Public License
+//   along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//====================================================================
+
+
+{ "cells" :
+  [
+    //Capacitor unit-cell
+    { "name" : "CAPBASE_W_DMY",
+      "boundaryIgnoreRouting" : 0,
+      "class" : "Gds::GdsPatternCapacitor",
+      "abstract" : 1,
+      "yoffset": -0.5,
+      "xoffset": -0.5,
+      "widthoffset" : -1,
+      "fillCoordinatesFromStrings" : [
+        [   "OD",
+            "--XXXXXXXXXXcXXXXXXXX--",
+            "-----------------------",
+            "--XXXXXXXXXXcXXXXXXXX--",
+            "-----------------------",
+            "--XXXXXXXXXXcXXXXXXXX--",
+            "-----------------------",
+            "--XXXXXXXXXXcXXXXXXXX--",
+            "----------------------",
+            "--XXXXXXXXXXcXXXXXXXX--"
+
+        ],
+        [   "PO",
+            "-----------------------",
+            "--XXXXXXXXcXXXXXXXXXX--",
+            "-----------------------",
+            "--XXXXXXXXcXXXXXXXXXX--",
+            "-----------------------",
+            "--XXXXXXXXcXXXXXXXXXX--",
+            "-----------------------",
+            "--XXXXXXXXcXXXXXXXXXX--",
+            "-----------------------"
+        ],
+        [   "M1",
+            "----XXXXXXXXXXXXXXX----",
+            "----X-X-X-X-X-X-X-X----",
+            "----X-X-X-X-X-X-r-X----",
+            "----X-X-X-X-X-X-X-X----",
+            "----X-X-X-D-X-X---X----",
+            "----X-X-X-X-X-X-X-X----",
+            "----X-X-X-X-X-X-X-X----",
+            "----X-X-X-X-X-X-X-X----",
+            "----XXXXXXXXXXXXXXX----"
+
+        ],
+        [   "M2",
+            "--x-xxkxxxxxxxxxkxxxx--",
+            "--x-----------------x--",
+            "--xxxxkxxxxxxxxxxxx-x--",
+            "--x-----------------x--",
+            "--x-xxxxxxxxxxxxkxxxx--",
+            "--x-----------------x--",
+            "--xxxxkxxxxxxxxxxxx-x--",
+            "--x-----------------x--",
+            "--x-xxkxxxxxxxxxkxxxx--"
+
+        ],
+        [   "M3",
+            "--x-xxkxxxxxxxxxkxxxx--",
+            "--x-----------------x--",
+            "--xxxxkxxxxxxxxxxxx-x--",
+            "--x-----------------x--",
+            "--x-xxxxxxxxxxxxkxxxx--",
+            "--x-----------------x--",
+            "--xxxxkxxxxxxxxxxxx-x--",
+            "--x-----------------x--",
+            "--x-xxkxxxxxxxxxkxxxx--"
+
+        ],
+        [   "M4",
+            "--x-xxxxxxxxxxxxxxxxx--",
+            "--x-----------------x--",
+            "--xxxxxxxxxxxxxxxxx-x--",
+            "--A-----------------B--",
+            "--x-xrxxxxxxxxxxxxxxx--",
+            "--x-----------------x--",
+            "--xxxxxxxxxxxxxxrxx-x--",
+            "--x-----------------x--",
+            "--x-xxxxxxxxxxxxxxxxx--"
+
+        ]
+
+      ],
+      "afterNew" : {
+        "getRuleForHorizontalGrid" : ["PO","space"],
+        "getRuleForVerticalGrid" : ["PO","space"]
+      }
+    },
+
+    {"name" : "CAP_W_DMY", "inherit" : "CAPBASE_W_DMY",
+     "abstract": 1,
+     "afterNew" :{
+       "copyColumns" :[
+         { "count" : 40, "offset" : 7,"length" : 2}
+       ]
+     }
+    },
+
+
+    //Capacitor unit-cell
+    { "name" : "CAPBASE_LEFT_SIDE_PORT",
+      "boundaryIgnoreRouting" : 0,
+      "class" : "Gds::GdsPatternCapacitor",
+      "yoffset": -0.5,
+      "xoffset": -0.5,
+      "widthoffset" : -1,
+      "fillCoordinatesFromStrings" : [
+
+        [   "M1",
+            "-----------------------",
+            "-----------------------",
+            "--xxxxxxxxxxxxxxxxxxx--",
+            "--x--------------------",
+            "--x-xxxkxxxxxxxxkxxxx--",
+            "--x-----------------x--",
+            "--xxxxxkxxxxxxxxxxx-x--",
+            "--x-----------------x--",
+            "--x-xxxxxxxxxxxxkxxxx--",
+            "--x-----------------x--",
+            "--xxxxxkxxxxxxxxxxx-x--",
+            "--------------------x--",
+            "--xxxxxxxxxxxxxxxxxxx--"
+
+        ],
+        [   "M4",
+            "-----------------------",
+            "-----------------------",
+            "--xxxxxxxxxxAxxxxxxxx--",
+            "--x--------------------",
+            "--x-xxxxxxxxxxxxxxxxx--",
+            "--x-----------------x--",
+            "--xxxxxxxxxxxxxxxxx-x--",
+            "--x-----------------x--",
+            "--x-xrxxxxxxxxxxxxxxx--",
+            "--x-----------------x--",
+            "--xxxxxxxxxxxxxxrxx-x--",
+            "--------------------x--",
+            "--xxxxxxxxxxBxxxxxxxx--"
+        ]
+
+      ],
+      "afterNew" : {
+        "copyLayers" : [["M1","M2"],["M1","M3"]]
+//        "getRuleForHorizontalGrid" : ["PO","space"],
+//        "getRuleForVerticalGrid" : ["PO","space"]
+      }
+    },
+
+    //10 finger capacitors, port on bottom
+    { "name" : "CAPX_W_DMY",
+      "abstract" : 1,
+      "afterRoute"  : {
+        "addPortOnRects" : [  ["A","M4","XA0:A" ] , ["B", "M4","XA0:B"]]
+      }
+    },
+    //10 finger capacitors, port on top
+    { "name" : "CAPXT_W_DMY", "inherit" : "CAPX",
+      "abstract" : 1,
+      "afterRoute"  : {
+        "addPortOnRects" : [  ["A","M4","XA9:A" ] , ["B", "M4","XA9:B"]]
+      }
+    },
+    { "name" : "CAPBW",
+      "boundaryIgnoreRouting" : 0,
+      "noPowerRoute" : 1,
+      "beforeRoute" :{
+        "addConnectivityRoutes" : [
+          ["M4","OTAIP","||","routeWidth=cap_width,track1,onTopL"],
+          ["M4","OTAIP","-","routeWidth=cap_width,track1"],
+          ["M4","OTAIN","-","routeWidth=cap_width,track1"],
+          ["M4","OTAIN","||","routeWidth=cap_width,track1,onTopR"],
+          ["M4","OTAON","||","routeWidth=cap_width"],
+          ["M4","OTAOP","||","routeWidth=cap_width"]
+        ],
+        "addRouteConnections" : [
+          ["AI","X","bottom","M1","routeWidth=cap_width"],
+          ["OTAO","X","top","M1","routeWidth=cap_width"]
+        ],
+        "addPowerConnections" : [
+          ["AVSS","","bottom"]
+        ]
+      },
+      "afterPlace" :[
+        {"addRouteRings" :[
+          ["M2","OTAOP","t",2,4],
+          ["M2","OTAON","t",2,4],
+          ["M2","AIP","b",2,4],
+          ["M2","AIN","b",2,4]
+        ]},
+        {"addPowerRings" :[
+          ["M1","AVSS","tbrl"]
+        ]}
+      ]
+    }
+  ]
+}

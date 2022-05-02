@@ -27,10 +27,9 @@ ttffss:
 
 temp:
 	cicsim runng ${TB} ${OPT} ${VIEW} Gt "Mtt" Rl Cl Bs Ds "Tt,Th,Tl" Vt
-	#python3 plot_idgm.py ${TB}_${VIEW}GtMttRlClBsDsTtThTlVt.run
 
 tfsp:
-	python3 plot_idgm.py ${TB}_${VIEW}GtMttMssMffRlClBsDsTtThTlVt.run
+	python3 plot_idgm.py ${TB}_${VIEW}GtMttMssMffRlClBsDsTtThTlVt.run ${OPT}
 
 
 test:
