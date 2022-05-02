@@ -1,0 +1,569 @@
+
+*-------------------------------------------------------------
+* PCHDL <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT PCHDL D G S B
+XM1 D G S B sky130_fd_pr__pfet_01v8  l=0.18  m=1  w=1.08  
+.ENDS
+
+*-------------------------------------------------------------
+* NCHDL <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT NCHDL D G S B
+XM1 D G S B sky130_fd_pr__nfet_01v8  l=0.18  m=1  w=1.08  
+.ENDS
+
+*-------------------------------------------------------------
+* NCHDLR <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT NCHDLR D G S B
+XM1 D G S B sky130_fd_pr__nfet_01v8  l=0.18  m=1  w=1.08  
+.ENDS
+
+*-------------------------------------------------------------
+* CAPBASE_LEFT_SIDE_PORT <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT CAPBASE_LEFT_SIDE_PORT A B
+.ENDS
+
+*-------------------------------------------------------------
+* RM1 <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT RM1 A B
+R1 A B 1m
+.ENDS
+
+*-------------------------------------------------------------
+* RM4 <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT RM4 A B
+R1 A B 1m
+.ENDS
+
+*-------------------------------------------------------------
+* CAP_BSSW_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT CAP_BSSW_CV A B
+C1 A B 5f
+.ENDS
+
+*-------------------------------------------------------------
+* CAP_BSSW5_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT CAP_BSSW5_CV A B
+XXCAPB0 A B CAP_BSSW_CV
+XXCAPB1 A B CAP_BSSW_CV
+XXCAPB2 A B CAP_BSSW_CV
+XXCAPB3 A B CAP_BSSW_CV
+XXCAPB4 A B CAP_BSSW_CV
+.ENDS
+
+*-------------------------------------------------------------
+* DMY_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT DMY_CV 
+.ENDS
+
+*-------------------------------------------------------------
+* TIEH_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT TIEH_CV Y BULKP BULKN AVDD AVSS
+XMN0 A A AVSS BULKN NCHDL
+XMP0 Y A AVDD BULKP PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* TIEL_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT TIEL_CV Y BULKP BULKN AVDD AVSS
+XMN0 Y A AVSS BULKN NCHDL
+XMP0 A A AVDD BULKP PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* IVX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT IVX1_CV A Y BULKP BULKN AVDD AVSS
+XMN0 Y A AVSS BULKN NCHDL
+XMP0 Y A AVDD BULKP PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* IVX2_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT IVX2_CV A Y BULKP BULKN AVDD AVSS
+XMN0 Y A AVSS BULKN NCHDL
+XMN1 AVSS A Y BULKN NCHDL
+XMP0 Y A AVDD BULKP PCHDL
+XMP1 AVDD A Y BULKP PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* IVX4_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT IVX4_CV A Y BULKP BULKN AVDD AVSS
+XMN0 Y A AVSS BULKN NCHDL
+XMN1 AVSS A Y BULKN NCHDL
+XMN2 Y A AVSS BULKN NCHDL
+XMN3 AVSS A Y BULKN NCHDL
+XMP0 Y A AVDD BULKP PCHDL
+XMP1 AVDD A Y BULKP PCHDL
+XMP2 Y A AVDD BULKP PCHDL
+XMP3 AVDD A Y BULKP PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* IVX8_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT IVX8_CV A Y BULKP BULKN AVDD AVSS
+XMN0 Y A AVSS BULKN NCHDL
+XMN1 AVSS A Y BULKN NCHDL
+XMN2 Y A AVSS BULKN NCHDL
+XMN3 AVSS A Y BULKN NCHDL
+XMN4 Y A AVSS BULKN NCHDL
+XMN5 AVSS A Y BULKN NCHDL
+XMN6 Y A AVSS BULKN NCHDL
+XMN7 AVSS A Y BULKN NCHDL
+XMP0 Y A AVDD BULKP PCHDL
+XMP1 AVDD A Y BULKP PCHDL
+XMP2 Y A AVDD BULKP PCHDL
+XMP3 AVDD A Y BULKP PCHDL
+XMP4 Y A AVDD BULKP PCHDL
+XMP5 AVDD A Y BULKP PCHDL
+XMP6 Y A AVDD BULKP PCHDL
+XMP7 AVDD A Y BULKP PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* BFX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT BFX1_CV A Y BULKP BULKN AVDD AVSS
+XMN0 AVSS A B BULKN NCHDL
+XMN1 Y B AVSS BULKN NCHDL
+XMP0 AVDD A B BULKP PCHDL
+XMP1 Y B AVDD BULKP PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* NRX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT NRX1_CV A B Y BULKP BULKN AVDD AVSS
+XMN0 Y A AVSS BULKN NCHDL
+XMN1 AVSS B Y BULKN NCHDL
+XMP0 N1 A AVDD BULKP PCHDL
+XMP1 Y B N1 BULKP PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* NDX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT NDX1_CV A B Y BULKP BULKN AVDD AVSS
+XMN0 N1 A AVSS BULKN NCHDL
+XMN1 Y B N1 BULKN NCHDL
+XMP0 Y A AVDD BULKP PCHDL
+XMP1 AVDD B Y BULKP PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* ORX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT ORX1_CV A B Y BULKP BULKN AVDD AVSS
+XXA1 A B YN BULKP BULKN AVDD AVSS NRX1_CV
+XXA2 YN Y BULKP BULKN AVDD AVSS IVX1_CV
+.ENDS
+
+*-------------------------------------------------------------
+* ORX2_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT ORX2_CV A B Y BULKP BULKN AVDD AVSS
+XXA1 A B YN BULKP BULKN AVDD AVSS NRX1_CV
+XXA2 YN Y BULKP BULKN AVDD AVSS IVX2_CV
+.ENDS
+
+*-------------------------------------------------------------
+* ORX4_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT ORX4_CV A B Y BULKP BULKN AVDD AVSS
+XXA1 A B YN BULKP BULKN AVDD AVSS NRX1_CV
+XXA2 YN Y BULKP BULKN AVDD AVSS IVX4_CV
+.ENDS
+
+*-------------------------------------------------------------
+* ANX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT ANX1_CV A B Y BULKP BULKN AVDD AVSS
+XXA1 A B YN BULKP BULKN AVDD AVSS NDX1_CV
+XXA2 YN Y BULKP BULKN AVDD AVSS IVX1_CV
+.ENDS
+
+*-------------------------------------------------------------
+* ANX2_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT ANX2_CV A B Y BULKP BULKN AVDD AVSS
+XXA1 A B YN BULKP BULKN AVDD AVSS NDX1_CV
+XXA2 YN Y BULKP BULKN AVDD AVSS IVX2_CV
+.ENDS
+
+*-------------------------------------------------------------
+* ANX4_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT ANX4_CV A B Y BULKP BULKN AVDD AVSS
+XXA1 A B YN BULKP BULKN AVDD AVSS NDX1_CV
+XXA2 YN Y BULKP BULKN AVDD AVSS IVX4_CV
+.ENDS
+
+*-------------------------------------------------------------
+* ANX8_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT ANX8_CV A B Y BULKP BULKN AVDD AVSS
+XXA1 A B YN BULKP BULKN AVDD AVSS NDX1_CV
+XXA2 YN Y BULKP BULKN AVDD AVSS IVX8_CV
+.ENDS
+
+*-------------------------------------------------------------
+* IVTRIX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT IVTRIX1_CV A C CN Y BULKP BULKN AVDD AVSS
+XMN0 N1 A AVSS BULKN NCHDL
+XMN1 Y C N1 BULKN NCHDL
+XMP0 N2 A AVDD BULKP PCHDL
+XMP1 Y CN N2 BULKP PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* NDTRIX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT NDTRIX1_CV A C CN RN Y BULKP BULKN AVDD AVSS
+XMN2 N1 RN AVSS BULKN NCHDL
+XMN0 N2 A N1 BULKN NCHDL
+XMN1 Y C N2 BULKN NCHDL
+XMP2 AVDD RN N2 BULKP PCHDL
+XMP0 N2 A AVDD BULKP PCHDL
+XMP1 Y CN N2 BULKP PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* DFRNQNX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT DFRNQNX1_CV D CK RN Q QN BULKP BULKN AVDD AVSS
+XXA1 CK RN CKN BULKP BULKN AVDD AVSS NDX1_CV
+XXA2 CKN CKB BULKP BULKN AVDD AVSS IVX1_CV
+XXA3 D CKN CKB A0 BULKP BULKN AVDD AVSS IVTRIX1_CV
+XXA4 A1 CKB CKN A0 BULKP BULKN AVDD AVSS IVTRIX1_CV
+XXA5 A0 A1 BULKP BULKN AVDD AVSS IVX1_CV
+XXA6 A1 CKB CKN QN BULKP BULKN AVDD AVSS IVTRIX1_CV
+XXA7 Q CKN CKB RN QN BULKP BULKN AVDD AVSS NDTRIX1_CV
+XXA8 QN Q BULKP BULKN AVDD AVSS IVX1_CV
+.ENDS
+
+*-------------------------------------------------------------
+* SCX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SCX1_CV A Y BULKP BULKN AVDD AVSS
+XXA2 N1 A AVSS BULKN NCHDL
+XXA3 SCO A N1 BULKN NCHDL
+XXA4a AVDD SCO N1 BULKN NCHDL
+XXA4b AVDD SCO N1 BULKN NCHDL
+XXA5 Y SCO AVSS BULKN NCHDL
+XXB0 N2 A AVDD BULKP PCHDL
+XXB1 SCO A N2 BULKP PCHDL
+XXB3a N2 SCO AVSS BULKP PCHDL
+XXB3b N2 SCO AVSS BULKP PCHDL
+XXB4 Y SCO AVDD AVSS PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SWX2_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SWX2_CV A Y VREF AVSS BULKP BULKN
+XMN0 Y A AVSS BULKN NCHDL
+XMN1 AVSS A Y BULKN NCHDL
+XMP0 Y A VREF BULKP PCHDL
+XMP1 VREF A Y BULKP PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SWX4_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SWX4_CV A Y VREF AVSS BULKP BULKN
+XMN0 Y A AVSS BULKN NCHDL
+XMN1 AVSS A Y BULKN NCHDL
+XMN2 Y A AVSS BULKN NCHDL
+XMN3 AVSS A Y BULKN NCHDL
+XMP0 Y A VREF BULKP PCHDL
+XMP1 VREF A Y BULKP PCHDL
+XMP2 Y A VREF BULKP PCHDL
+XMP3 VREF A Y BULKP PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* TGPD_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT TGPD_CV C A B BULKP BULKN AVDD AVSS
+XMN0 AVSS C CN BULKN NCHDL
+XMN1 B C AVSS BULKN NCHDL
+XMN2 A CN B BULKN NCHDL
+XMP0 AVDD C CN BULKP PCHDL
+XMP1_DMY B AVDD AVDD BULKP PCHDL
+XMP2 A C B BULKP PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* TAPCELLB_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT TAPCELLB_CV AVDD AVSS
+XMN1 AVSS AVSS AVSS AVSS NCHDL
+XMP1 AVDD AVDD AVDD AVDD PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SAREMX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SAREMX1_CV A B EN ENO RST_N BULKP BULKN AVDD AVSS
+XMN0 N3 EN AM BULKN NCHDL
+XMN1 N3 B AVSS BULKN NCHDL
+XMN2 AVSS A N3 BULKN NCHDL
+XMN3 ENO AM AVSS BULKN NCHDL
+XMP0 AVDD RST_N AM BULKP PCHDL
+XMP1 N2 B ENO BULKP PCHDL
+XMP2 N1 A N2 BULKP PCHDL
+XMP3 AVDD AM N1 BULKP PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SARLTX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SARLTX1_CV A CHL RST_N EN LCK_N BULKP BULKN AVDD AVSS
+XMN0 N1 A AVSS BULKN NCHDL
+XMN1 N3 LCK_N N1 BULKN NCHDL
+XMN2 CHL EN N3 BULKN NCHDL
+XMP0 NP2 RST_N AVDD BULKP PCHDL
+XMP1 NP1 RST_N NP2 BULKP PCHDL
+XMP2 CHL RST_N NP1 BULKP PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SARCEX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SARCEX1_CV A B Y RST BULKP BULKN AVDD AVSS
+XMN0 N4 RST AVSS BULKN NCHDL
+XMN1 AVSS RST N4 BULKN NCHDL
+XMN2 N1 RST AVSS BULKN NCHDL
+XMN3 Y RST N1 BULKN NCHDL
+XMP0 N2 A Y BULKP PCHDL
+XMP1 AVDD A N2 BULKP PCHDL
+XMP2 N3 B AVDD BULKP PCHDL
+XMP3 Y B N3 BULKP PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SARCMPHX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SARCMPHX1_CV CI CK CO VMR N1 N2 BULKP BULKN AVDD AVSS
+XMN0 N1 CK AVSS BULKN NCHDL
+XMN1 N2 CI N1 BULKN NCHDL
+XMN2 N1 CI N2 BULKN NCHDL
+XMN3 N2 CI N1 BULKN NCHDL
+XMN4 N1 CI N2 BULKN NCHDL
+XMN5 N2 CI N1 BULKN NCHDL
+XMN6 CO VMR N2 BULKN NCHDL
+XMP0 AVDD CK N1 BULKP PCHDL
+XMP1 N2 CK AVDD BULKP PCHDL
+XMP2 AVDD AVDD N2 BULKP PCHDL
+XMP3 CO CK AVDD BULKP PCHDL
+XMP4 AVDD VMR CO BULKP PCHDL
+XMP5 CO VMR AVDD BULKP PCHDL
+XMP6 AVDD VMR CO BULKP PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SARKICKHX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SARKICKHX1_CV CI CK CKN BULKP BULKN AVDD AVSS
+XMN0 N1 CKN AVSS BULKN NCHDL
+XMN1 N1 CI N1 BULKN NCHDL
+XMN2 N1 CI N1 BULKN NCHDL
+XMN3 N1 CI N1 BULKN NCHDL
+XMN4 N1 CI N1 BULKN NCHDL
+XMN5 N1 CI N1 BULKN NCHDL
+XMN6 AVDD CK N1 BULKN NCHDL
+XMP0 AVDD CKN N1 BULKP PCHDL
+XMP1_DMY AVDD AVDD AVDD BULKP PCHDL
+XMP2_DMY AVDD AVDD AVDD BULKP PCHDL
+XMP3_DMY AVDD AVDD AVDD BULKP PCHDL
+XMP4_DMY AVDD AVDD AVDD BULKP PCHDL
+XMP5_DMY AVDD AVDD AVDD BULKP PCHDL
+XMP6_DMY AVDD AVDD AVDD BULKP PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SARBSSWCTRL_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SARBSSWCTRL_CV C GN GNG TIE_H BULKP BULKN AVDD AVSS
+XMN0 N1 C AVSS BULKN NCHDL
+XMN1 GN TIE_H N1 BULKN NCHDL
+XMP0 GNG C GN BULKP PCHDL
+XMP1 AVDD GN GNG BULKP PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* CAP32C_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT CAP32C_CV C1A C1B C2 C4 C8 C16 CTOP AVSS
+C1 C1A CTOP 0.2f
+C2 C1B CTOP 0.2f
+C3 C2 CTOP 0.4f
+C4 C4 CTOP 0.8f
+C5 C8 CTOP 1.6f
+C6 C16 CTOP 3.2f
+.ENDS
+
+*-------------------------------------------------------------
+* SARCMPX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SARCMPX1_CV CPI CNI CPO CNO CK_CMP CK_SAMPLE DONE AVDD AVSS
+XXA0a  DMY_CV
+XXA0 AVDD AVSS TAPCELLB_CV
+XXA1 CPI CK_B CK_N AVDD AVSS AVDD AVSS SARKICKHX1_CV
+XXA2 CPI CK_B CNO_I CPO_I N1 NC1 AVDD AVSS AVDD AVSS SARCMPHX1_CV
+XXA2a CPO_I CPO AVDD AVSS AVDD AVSS IVX4_CV
+XXA3a CNO_I CNO AVDD AVSS AVDD AVSS IVX4_CV
+XXA3 CNI CK_B CPO_I CNO_I N1 NC2 AVDD AVSS AVDD AVSS SARCMPHX1_CV
+XXA4 CNI CK_B CK_N AVDD AVSS AVDD AVSS SARKICKHX1_CV
+XXA9 CK_N CK_B AVDD AVSS AVDD AVSS IVX1_CV
+XXA10 DONE_N CK_A CK_N AVDD AVSS AVDD AVSS NDX1_CV
+XXA11 CK_SAMPLE DONE DONE_N AVDD AVSS AVDD AVSS NRX1_CV
+XXA12 CK_CMP CK_A AVDD AVSS AVDD AVSS IVX1_CV
+XXA13 AVDD AVSS TAPCELLB_CV
+XXA14  DMY_CV
+.ENDS
+
+*-------------------------------------------------------------
+* SARBSSW_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SARBSSW_CV VI CK CKN TIE_L VO1 VO2 AVDD AVSS
+XM1 VI GN VO1 AVSS NCHDLR
+XM2 VI GN VO1 AVSS NCHDLR
+XM3 VI GN VO1 AVSS NCHDLR
+XM4 VI GN VO1 AVSS NCHDLR
+XM5 VI TIE_L VO2 AVSS NCHDLR
+XM6 VI TIE_L VO2 AVSS NCHDLR
+XM7 VI TIE_L VO2 AVSS NCHDLR
+XM8 VI TIE_L VO2 AVSS NCHDLR
+XXA5b AVDD AVSS TAPCELLB_CV
+XXA0 CK CKN AVDD AVSS AVDD AVSS IVX1_CV
+XXA3 CKN VI VS AVDD AVSS AVDD AVSS TGPD_CV
+XXA4 CKN GN GNG TIE_H AVDD AVSS AVDD AVSS SARBSSWCTRL_CV
+XXA1 TIE_H AVDD AVSS AVDD AVSS TIEH_CV
+XXA7 AVDD AVSS TAPCELLB_CV
+XXA2 TIE_L AVDD AVSS AVDD AVSS TIEL_CV
+XXA5 AVDD AVSS TAPCELLB_CV
+XXCAPB1 GNG VS CAP_BSSW5_CV
+.ENDS
+
+*-------------------------------------------------------------
+* SARMRYX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SARMRYX1_CV CMP_OP CMP_ON EN RST_N ENO CHL_OP CHL_ON AVDD AVSS
+XXA0 AVDD AVSS TAPCELLB_CV
+XXA1 CMP_OP CMP_ON EN ENO RST_N AVDD AVSS AVDD AVSS SAREMX1_CV
+XXA2 ENO LCK_N AVDD AVSS AVDD AVSS IVX1_CV
+XXA4 CMP_OP CHL_OP RST_N EN LCK_N AVDD AVSS AVDD AVSS SARLTX1_CV
+XXA5 CMP_ON CHL_ON RST_N EN LCK_N AVDD AVSS AVDD AVSS SARLTX1_CV
+.ENDS
+
+*-------------------------------------------------------------
+* SARDIGEX2_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SARDIGEX2_CV CMP_OP CMP_ON EN RST_N ENO DONE CP0 CP1 CN0 CN1 CEIN CEO CKS VREF AVDD AVSS
+XXA0a  DMY_CV
+XXA1 CMP_OP CMP_ON EN RST_N ENO CHL_OP CHL_ON AVDD AVSS SARMRYX1_CV
+XXA2 CHL_ON CN1 VREF AVSS AVDD AVSS SWX2_CV
+XXA3 CN1 CP1 VREF AVSS AVDD AVSS SWX2_CV
+XXA4 CHL_OP CP0 VREF AVSS AVDD AVSS SWX2_CV
+XXA5 CP0 CN0 VREF AVSS AVDD AVSS SWX2_CV
+XXA6 CN0 CP1 CE CKS AVDD AVSS AVDD AVSS SARCEX1_CV
+XXA7 ENO ENO_N AVDD AVSS AVDD AVSS IVX1_CV
+XXA8 ENO_N DONE AVDD AVSS AVDD AVSS IVX1_CV
+XXA9 ENO_N CE CE1 AVDD AVSS AVDD AVSS NDX1_CV
+XXA10 CE1 CE1_N AVDD AVSS AVDD AVSS IVX1_CV
+XXA11 CE1_N CEIN CEO1 AVDD AVSS AVDD AVSS NRX1_CV
+XXA12 CEO1 CEO AVDD AVSS AVDD AVSS IVX1_CV
+XXA13 AVDD AVSS TAPCELLB_CV
+XXA14  DMY_CV
+.ENDS
+
+*-------------------------------------------------------------
+* SARDIGEX4_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SARDIGEX4_CV CMP_OP CMP_ON EN RST_N ENO DONE CP0 CP1 CN0 CN1 CEIN CEO CKS VREF AVDD AVSS
+XXA0a  DMY_CV
+XXA1 CMP_OP CMP_ON EN RST_N ENO CHL_OP CHL_ON AVDD AVSS SARMRYX1_CV
+XXA2 CHL_ON CN1 VREF AVSS AVDD AVSS SWX4_CV
+XXA3 CN1 CP1 VREF AVSS AVDD AVSS SWX4_CV
+XXA4 CHL_OP CP0 VREF AVSS AVDD AVSS SWX4_CV
+XXA5 CP0 CN0 VREF AVSS AVDD AVSS SWX4_CV
+XXA6 CN0 CP1 CE CKS AVDD AVSS AVDD AVSS SARCEX1_CV
+XXA7 ENO ENO_N AVDD AVSS AVDD AVSS IVX1_CV
+XXA8 ENO_N DONE AVDD AVSS AVDD AVSS IVX1_CV
+XXA9 ENO_N CE CE1 AVDD AVSS AVDD AVSS NDX1_CV
+XXA10 CE1 CE1_N AVDD AVSS AVDD AVSS IVX1_CV
+XXA11 CE1_N CEIN CEO1 AVDD AVSS AVDD AVSS NRX1_CV
+XXA12 CEO1 CEO AVDD AVSS AVDD AVSS IVX1_CV
+XXA13 AVDD AVSS TAPCELLB_CV
+XXA14  DMY_CV
+.ENDS
+
+*-------------------------------------------------------------
+* CDAC8_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT CDAC8_CV CP_11 CP_10 CP_9 CP_8 CP_7 CP_6 CP_5 CP_4 CP_3 CP_2 CP_1 CP_0 CTOP AVSS
+XXC1 CP_10 CP_10 CP_10 CP_10 CP_10 CP_10 CTOP AVSS CAP32C_CV
+XXC64a<0> CP_8 CP_8 CP_8 CP_8 CP_8 CP_8 CTOP AVSS CAP32C_CV
+XXC32a<0> AVSS CP_0 CP_1 CP_2 CP_3 CP_7 CTOP AVSS CAP32C_CV
+XXC128a<1> CP_11 CP_11 CP_11 CP_11 CP_11 CP_11 CTOP AVSS CAP32C_CV
+XXC128b<2> CP_10 CP_10 CP_10 CP_10 CP_10 CP_10 CTOP AVSS CAP32C_CV
+XX16ab CP_5 CP_5 CP_5 CP_5 CP_4 CP_6 CTOP AVSS CAP32C_CV
+XXC64b<1> CP_9 CP_9 CP_9 CP_9 CP_9 CP_9 CTOP AVSS CAP32C_CV
+XXC0 CP_11 CP_11 CP_11 CP_11 CP_11 CP_11 CTOP AVSS CAP32C_CV
+.ENDS
+
+*-------------------------------------------------------------
+* SAR9B_CV_NOROUTE <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SAR9B_CV_NOROUTE SAR_IP SAR_IN SARN SARP DONE D_8 D_7 D_6 D_5 D_4 D_3 D_2 D_1 D_0 EN CK_SAMPLE CK_SAMPLE_BSSW VREF AVDD AVSS
+XXB1 SAR_IP CK_SAMPLE_BSSW NCCA CEIN SARP SARN AVDD AVSS SARBSSW_CV
+XXB2 SAR_IN CK_SAMPLE_BSSW NCCB CEIN SARN SARP AVDD AVSS SARBSSW_CV
+XXDAC1 CP_11 CP_10 D_7 CP_8 D_6 CP_6 D_5 CP_4 D_4 D_3 D_2 D_1 SARP AVSS CDAC8_CV
+XXDAC2 D_8 CN_10 CN_9 CN_8 CN_7 CN_6 CN_5 CN_4 CN_3 CN_2 CN_1 CN_0 SARN AVSS CDAC8_CV
+XXA0 CMP_OP CMP_ON EN EN ENO0 DONE0 CP_10 CP_11 CN_10 D_8 CEIN CEO0 CK_SAMPLE VREF AVDD AVSS SARDIGEX4_CV
+XXA1 CMP_OP CMP_ON ENO0 EN ENO1 DONE1 CP_8 D_7 CN_8 CN_9 CEO0 CEO1 CK_SAMPLE VREF AVDD AVSS SARDIGEX4_CV
+XXA2 CMP_OP CMP_ON ENO1 EN ENO2 DONE2 CP_6 D_6 CN_6 CN_7 CEO1 CEO2 CK_SAMPLE VREF AVDD AVSS SARDIGEX4_CV
+XXA3 CMP_OP CMP_ON ENO2 EN ENO3 DONE3 CP_4 D_5 CN_4 CN_5 CEO2 CEO3 CK_SAMPLE VREF AVDD AVSS SARDIGEX4_CV
+XXA4 CMP_OP CMP_ON ENO3 EN ENO4 DONE4 NC2A D_4 CN_3 NC2B CEO3 CEO4 CK_SAMPLE VREF AVDD AVSS SARDIGEX4_CV
+XXA5 CMP_OP CMP_ON ENO4 EN ENO5 DONE5 NC3A D_3 CN_2 NC3B CEO4 CEO5 CK_SAMPLE VREF AVDD AVSS SARDIGEX4_CV
+XXA6 CMP_OP CMP_ON ENO5 EN ENO6 DONE6 NC4A D_2 CN_1 NC4B CEO5 CEO6 CK_SAMPLE VREF AVDD AVSS SARDIGEX4_CV
+XXA7 CMP_OP CMP_ON ENO6 EN ENO7 DONE7 NC5A D_1 CN_0 NC5B CEO6 CEO7 CK_SAMPLE VREF AVDD AVSS SARDIGEX4_CV
+XXA8 CMP_OP CMP_ON ENO7 EN ENO8 DONE NC6A D_0 NC6C NC6B CEO7 CK_CMP CK_SAMPLE VREF AVDD AVSS SARDIGEX4_CV
+XXA20 SARP SARN CMP_OP CMP_ON CK_CMP CK_SAMPLE DONE AVDD AVSS SARCMPX1_CV
+.ENDS
+
+*-------------------------------------------------------------
+* SAR9B_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SAR9B_CV SAR_IP SAR_IN SARN SARP DONE D_8 D_7 D_6 D_5 D_4 D_3 D_2 D_1 D_0 EN CK_SAMPLE CK_SAMPLE_BSSW VREF AVDD AVSS
+XXB1 SAR_IP CK_SAMPLE_BSSW NCCA CEIN SARP SARN AVDD AVSS SARBSSW_CV
+XXB2 SAR_IN CK_SAMPLE_BSSW NCCB CEIN SARN SARP AVDD AVSS SARBSSW_CV
+XXDAC1 CP_11 CP_10 D_7 CP_8 D_6 CP_6 D_5 CP_4 D_4 D_3 D_2 D_1 SARP AVSS CDAC8_CV
+XXDAC2 D_8 CN_10 CN_9 CN_8 CN_7 CN_6 CN_5 CN_4 CN_3 CN_2 CN_1 CN_0 SARN AVSS CDAC8_CV
+XXA0 CMP_OP CMP_ON EN EN ENO0 DONE0 CP_10 CP_11 CN_10 D_8 CEIN CEO0 CK_SAMPLE VREF AVDD AVSS SARDIGEX4_CV
+XXA1 CMP_OP CMP_ON ENO0 EN ENO1 DONE1 CP_8 D_7 CN_8 CN_9 CEO0 CEO1 CK_SAMPLE VREF AVDD AVSS SARDIGEX4_CV
+XXA2 CMP_OP CMP_ON ENO1 EN ENO2 DONE2 CP_6 D_6 CN_6 CN_7 CEO1 CEO2 CK_SAMPLE VREF AVDD AVSS SARDIGEX4_CV
+XXA3 CMP_OP CMP_ON ENO2 EN ENO3 DONE3 CP_4 D_5 CN_4 CN_5 CEO2 CEO3 CK_SAMPLE VREF AVDD AVSS SARDIGEX4_CV
+XXA4 CMP_OP CMP_ON ENO3 EN ENO4 DONE4 NC2A D_4 CN_3 NC2B CEO3 CEO4 CK_SAMPLE VREF AVDD AVSS SARDIGEX4_CV
+XXA5 CMP_OP CMP_ON ENO4 EN ENO5 DONE5 NC3A D_3 CN_2 NC3B CEO4 CEO5 CK_SAMPLE VREF AVDD AVSS SARDIGEX4_CV
+XXA6 CMP_OP CMP_ON ENO5 EN ENO6 DONE6 NC4A D_2 CN_1 NC4B CEO5 CEO6 CK_SAMPLE VREF AVDD AVSS SARDIGEX4_CV
+XXA7 CMP_OP CMP_ON ENO6 EN ENO7 DONE7 NC5A D_1 CN_0 NC5B CEO6 CEO7 CK_SAMPLE VREF AVDD AVSS SARDIGEX4_CV
+XXA8 CMP_OP CMP_ON ENO7 EN ENO8 DONE NC6A D_0 NC6C NC6B CEO7 CK_CMP CK_SAMPLE VREF AVDD AVSS SARDIGEX4_CV
+XXA20 SARP SARN CMP_OP CMP_ON CK_CMP CK_SAMPLE DONE AVDD AVSS SARCMPX1_CV
+.ENDS

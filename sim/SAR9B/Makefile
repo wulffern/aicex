@@ -31,6 +31,8 @@ CELL=SAR9B_CV
 CIC=~/pro/cic/ciccreator/bin/cic
 CICPY = python3 ~/pro/cicpy/cicpy/cic.py
 
+all: sar typical
+
 sar:
 	-mkdir build
 	cd build;${CIC} --nogds --I ../cic ../cic/SAR9B_CV.json  ../cic/sky130.tech ${LIB}
