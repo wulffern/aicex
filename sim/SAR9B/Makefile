@@ -31,7 +31,7 @@ CELL=SAR9B_CV
 CIC=~/pro/cic/ciccreator/bin/cic
 CICPY = python3 ~/pro/cicpy/cicpy/cic.py
 
-all: sar typical
+all: sar bssw
 
 sar:
 	-mkdir build
@@ -39,6 +39,10 @@ sar:
 	cd build; ${CICPY}  transpile ${LIB}.cic ../cic/sky130.tech ${LIB}  --spice --verilog --smash "(P|N)CHIOA"
 
 
+
+bssw:
+	${MAKE} typical TB=tran_bssw
+	python3 plot_bssw.py tran_bssw_SchGtMttRtCtTtVtDtBt.run  plot
 
 TB=tran
 #VIEW=Sch
