@@ -1,6 +1,6 @@
 
 
-dirs = sim/CHAR_GMID
+dirs = sim/CHAR_GMID sim/SAR9B
 
 cwd = ${shell pwd}
 
