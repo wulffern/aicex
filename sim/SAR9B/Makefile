@@ -44,6 +44,17 @@ bssw:
 	${MAKE} typical TB=tran_bssw
 	python3 plot_bssw.py tran_bssw_SchGtMttRtCtTtVtDtBt.run  plot
 
+cap:
+	${MAKE} typical TB=tran_bssw_cap
+
+
+cmp:
+	${MAKE} typical TB=tran_bssw_cmp
+
+
+
+
+
 test:
 	${MAKE} typical TB=tran_bssw
 	python3 plot_bssw.py tran_bssw_SchGtMttRtCtTtVtDtBt.run
