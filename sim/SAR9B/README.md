@@ -67,4 +67,5 @@ signal after the boostrapped switches. Testbench is `tran_bssw.spi`
 
 # Results
 
-<img src="tran_SchGtMttRtCtTtVtDtBt.pdf" width="100%"></img>
+![64 point FFT of SAR output](tran_SchGtMttRtCtTtVtDtBt.pdf)
+
