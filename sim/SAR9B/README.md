@@ -22,7 +22,8 @@ cic
 # Compiling ADC
 
 The SAR is pre-compiled, so you don't really need to compile it. The compiled files are
-in the `build/` directory
+in the `build/` directory, so if all you want is to simulate on a SAR, then
+`build/SUN_SAR9B_SK130NM.spi` should suffice.
 
 To compile the ADC you need
 
