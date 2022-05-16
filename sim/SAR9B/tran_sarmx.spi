@@ -1,4 +1,4 @@
-* SAR testbench
+* Comparator testbench
 **********************************************************************
 **        Copyright (c) 2021 Carsten Wulff Software, Norway
 ** *******************************************************************
@@ -36,8 +36,7 @@
 *----------------------------------------------------------------
 *.option TNOM=27 GMIN=1e-15 reltol=1e-6 abstol=1e-6
 
-.option reltol=1e-5 srcsteps=1 ramptime=10n noopiter keepopinfo
-
+.option reltol=1e-5
 
 *----------------------------------------------------------------
 * PARAMETERS
@@ -58,7 +57,6 @@
 
 *- 50% duty-cycle comparator clock
 .param PW_CMP_CLK = PERIOD_CMP_CLK/2
-
 
 *- Frequency bin of the input signal
 .param fbin = 5
@@ -84,11 +82,10 @@ VREF VREF AVSS dc AVDD
 
 *- Control signals
 VCLK CLK 0 dc 0 pulse (0 AVDD 0 TRF TRF PW_CLK PERIOD_CLK)
-VCLK_CMP CLK_CMP 0 dc 0 pulse (0 AVDD 0 TRF TRF PW_CMP_CLK PERIOD_CMP_CLK)
+VCLK_CMP CK_CMP 0 dc 0 pulse (0 AVDD 0 TRF TRF PW_CMP_CLK PERIOD_CMP_CLK)
 
 X3 CLK CK_SAMPLE_BSSW AVDD AVSS AVDD AVSS BFX1_CV
-X2 CLK CK_SAMPLE AVDD AVSS AVDD AVSS BFX1_CV
-X1 CK_SAMPLE EN AVDD AVSS AVDD AVSS IVX1_CV
+X4 CLK EN AVDD AVSS AVDD AVSS IVX1_CV
 VCM VCM 0 dc {AVDD/2}
 VSARP SAR_IP VCM sin (0 vamp fin)
 VSARN SAR_IN VCM sin (0 {-vamp} fin)
@@ -99,52 +96,42 @@ VSARN SAR_IN VCM sin (0 {-vamp} fin)
 * DUT
 *----------------------------------------------------------------
 
-XDUT SAR_IP SAR_IN SARN SARP DONE D_8 D_7 D_6 D_5 D_4 D_3 D_2 D_1 D_0 EN CK_SAMPLE CK_SAMPLE_BSSW VREF AVDD AVSS SAR9B_CV
+XDUT1 SAR_IP CK_SAMPLE_BSSW NCCA CEIN SARP SARN AVDD AVSS SARBSSW_CV
+XDUT2 SAR_IN CK_SAMPLE_BSSW NCCB CEIN SARN SARP AVDD AVSS SARBSSW_CV
+
+XXA2 DONE AVDD AVSS AVDD AVSS TIEL_CV
+
+XXA20 SARP SARN CMP_OP CMP_ON CK_CMP CK_SAMPLE_BSSW DONE AVDD AVSS SARCMPX1_CV
+
+XXA0 CMP_OP CMP_ON EN EN ENO0 DONE0 CPA_10 CPA_11 CNA_10 CNA_10 CEIN CEO0 CK_SAMPLE_BSSW VREF AVDD AVSS SARDIGEX4_CV
+
+C1 SARP 0 0.5p
+C2 SARN 0 0.5p
 
 
-XDFF1 D_8 DONE AVDD DF_8 QN8 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-XDFF2 D_7 DONE AVDD DF_7 QN7 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-XDFF3 D_6 DONE AVDD DF_6 QN6 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-XDFF4 D_5 DONE AVDD DF_5 QN5 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-XDFF5 D_4 DONE AVDD DF_4 QN4 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-XDFF6 D_3 DONE AVDD DF_3 QN3 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-XDFF7 D_2 DONE AVDD DF_2 QN2 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-XDFF8 D_1 DONE AVDD DF_1 QN1 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-XDFF9 D_0 DONE AVDD DF_0 QN0 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-
-XDAC DF_8 DF_7 DF_6 DF_5 DF_4 DF_3 DF_2 DF_1 DF_0 RO AVDD DAC_9BIT_TWOS_COMPL
-
-
-
-*----------------------------------------------------------------
-* 8-bit DAC model model
-*----------------------------------------------------------------
-* integer = -2^8*b8  + 2^7*b7 + 2^6*b6 ... 2^0*b0
-.SUBCKT DAC_9BIT_TWOS_COMPL DATA_8 DATA_7 DATA_6 DATA_5 DATA_4 DATA_3 DATA_2 DATA_1 DATA_0 RO VDD
-B1 RO_VDD 0 V = -1/2*V(DATA_8) + 1/4*V(DATA_7) + 1/8*V(DATA_6) + 1/16*V(DATA_5) + 1/32*V(DATA_4)+ 1/64*V(DATA_3) + 1/128*V(DATA_2) + 1/256*V(DATA_1) + 1/512*V(DATA_0)
-B2 RO 0 V = V(RO_VDD)/V(VDD)
-.ENDS
+BDO VOD 0 V=V(SARP)-V(SARN)
+BD1 VOCMP 0 V=V(CMP_ON)-V(CMP_OP)
 
 
 *----------------------------------------------------------------
 * NGSPICE control
 *----------------------------------------------------------------
-.probe v(SARN) v(SARP) v(RO) v(SAR_IP) v(SAR_IN)
+*.probe v(SARP) v(SARN) v(vod) v(vocmp)
 
 .control
 set color0=white
 set color1=black
 unset askquit
-
-*optran !noopiter gminsteps srcsteps tstep tstop supramp
-*optran 0 0 0 1n 10n  0
-tran 1n 7u 1n 5n
-*tran 1n 200n
-
+tran 1n 1u
+*plot v(SARP) v(SARN) v(SAR_IP) v(SAR_IN)
+*plot v(VOD)
 write
 
-quit
+hardcopy {cicfname}.ps v(vod) v(vocmp)
+
+*quit
+
+
 
 .endc
-
 .end

@@ -39,7 +39,6 @@ sar:
 	cd build; ${CICPY}  transpile ${LIB}.cic ../cic/sky130.tech ${LIB}  --spice --verilog --smash "(P|N)CHIOA"
 
 
-
 bssw:
 	${MAKE} typical TB=tran_bssw
 	python3 plot_bssw.py tran_bssw_SchGtMttRtCtTtVtDtBt.run  plot
@@ -50,10 +49,6 @@ cap:
 
 cmp:
 	${MAKE} typical TB=tran_bssw_cmp
-
-
-
-
 
 test:
 	${MAKE} typical TB=tran_bssw
@@ -87,6 +82,8 @@ temp:
 	cicsim runng ${TB} ${OPT} ${VIEW} Gt "Mtt" Rl Cl Bs Ds "Tt,Th,Tl" Vt
 
 
+doc:
+	pandoc -s README.md -o README.html
 
 clean:
 	rm -rf build

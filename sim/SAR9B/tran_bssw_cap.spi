@@ -1,4 +1,4 @@
-* SAR testbench
+* Cap testbench
 **********************************************************************
 **        Copyright (c) 2021 Carsten Wulff Software, Norway
 ** *******************************************************************
@@ -36,8 +36,7 @@
 *----------------------------------------------------------------
 *.option TNOM=27 GMIN=1e-15 reltol=1e-6 abstol=1e-6
 
-.option reltol=1e-5 srcsteps=1 ramptime=10n noopiter keepopinfo
-
+.option reltol=1e-5
 
 *----------------------------------------------------------------
 * PARAMETERS
@@ -87,11 +86,9 @@ VCLK CLK 0 dc 0 pulse (0 AVDD 0 TRF TRF PW_CLK PERIOD_CLK)
 VCLK_CMP CLK_CMP 0 dc 0 pulse (0 AVDD 0 TRF TRF PW_CMP_CLK PERIOD_CMP_CLK)
 
 X3 CLK CK_SAMPLE_BSSW AVDD AVSS AVDD AVSS BFX1_CV
-X2 CLK CK_SAMPLE AVDD AVSS AVDD AVSS BFX1_CV
-X1 CK_SAMPLE EN AVDD AVSS AVDD AVSS IVX1_CV
 VCM VCM 0 dc {AVDD/2}
-VSARP SAR_IP VCM sin (0 vamp fin)
-VSARN SAR_IN VCM sin (0 {-vamp} fin)
+VSARP SAR_IP VCM dc {-AVDD/4-0.1}
+VSARN SAR_IN VCM dc {+AVDD/4+0.1}
 
 
 
@@ -99,52 +96,50 @@ VSARN SAR_IN VCM sin (0 {-vamp} fin)
 * DUT
 *----------------------------------------------------------------
 
-XDUT SAR_IP SAR_IN SARN SARP DONE D_8 D_7 D_6 D_5 D_4 D_3 D_2 D_1 D_0 EN CK_SAMPLE CK_SAMPLE_BSSW VREF AVDD AVSS SAR9B_CV
+XDUT1 SAR_IP CK_SAMPLE_BSSW NCCA CEIN SARP SARN AVDD AVSS SARBSSW_CV
+XDUT2 SAR_IN CK_SAMPLE_BSSW NCCB CEIN SARN SARP AVDD AVSS SARBSSW_CV
+
+XXDAC1 CP_7 CP_7 CP_6 CP_6 CP_5 CP_5 CP_4 CP_4 CP_3 CP_2 CP_1 CP_0 SARP AVSS CDAC8_CV
+
+XXDAC2 CN_7 CN_7 CN_6 CN_6 CN_5 CN_5 CN_4 CN_4 CN_3 CN_2 CN_1 CN_0 SARN AVSS CDAC8_CV
+
+XEN CK_SAMPLE_BSSW EN AVDD AVSS AVDD AVSS IVX1_CV
+
+XDFF1 AVDD CLK_CMP EN CP_7 QN1 AVDD AVSS AVDD AVSS DFRNQNX1_CV
+XDFF2 CP_7 CLK_CMP EN CN_6 QN2 AVDD AVSS AVDD AVSS DFRNQNX1_CV
+XDFF3 CN_6 CLK_CMP EN CP_5 QN3 AVDD AVSS AVDD AVSS DFRNQNX1_CV
+XDFF4 CP_5 CLK_CMP EN CN_4 QN4 AVDD AVSS AVDD AVSS DFRNQNX1_CV
+XDFF5 CN_4 CLK_CMP EN CP_3 QN5 AVDD AVSS AVDD AVSS DFRNQNX1_CV
+XDFF6 CP_3 CLK_CMP EN CN_2 QN6 AVDD AVSS AVDD AVSS DFRNQNX1_CV
+XDFF7 CN_2 CLK_CMP EN CP_1 QN7 AVDD AVSS AVDD AVSS DFRNQNX1_CV
+XDFF8 CP_1 CLK_CMP EN CN_0 QN8 AVDD AVSS AVDD AVSS DFRNQNX1_CV
+
+XIV5 CP_7 CN_7 AVDD AVSS AVDD AVSS IVX1_CV
+XIV6 CN_6 CP_6 AVDD AVSS AVDD AVSS IVX1_CV
+XIV7 CP_5 CN_5 AVDD AVSS AVDD AVSS IVX1_CV
+XIV8 CN_4 CP_4 AVDD AVSS AVDD AVSS IVX1_CV
+XIV9 CP_3 CN_3 AVDD AVSS AVDD AVSS IVX1_CV
+XIV10 CN_2 CP_2 AVDD AVSS AVDD AVSS IVX1_CV
+XIV11 CP_1 CN_1 AVDD AVSS AVDD AVSS IVX1_CV
+XIV12 CN_0 CP_0 AVDD AVSS AVDD AVSS IVX1_CV
 
 
-XDFF1 D_8 DONE AVDD DF_8 QN8 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-XDFF2 D_7 DONE AVDD DF_7 QN7 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-XDFF3 D_6 DONE AVDD DF_6 QN6 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-XDFF4 D_5 DONE AVDD DF_5 QN5 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-XDFF5 D_4 DONE AVDD DF_4 QN4 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-XDFF6 D_3 DONE AVDD DF_3 QN3 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-XDFF7 D_2 DONE AVDD DF_2 QN2 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-XDFF8 D_1 DONE AVDD DF_1 QN1 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-XDFF9 D_0 DONE AVDD DF_0 QN0 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-
-XDAC DF_8 DF_7 DF_6 DF_5 DF_4 DF_3 DF_2 DF_1 DF_0 RO AVDD DAC_9BIT_TWOS_COMPL
-
-
-
-*----------------------------------------------------------------
-* 8-bit DAC model model
-*----------------------------------------------------------------
-* integer = -2^8*b8  + 2^7*b7 + 2^6*b6 ... 2^0*b0
-.SUBCKT DAC_9BIT_TWOS_COMPL DATA_8 DATA_7 DATA_6 DATA_5 DATA_4 DATA_3 DATA_2 DATA_1 DATA_0 RO VDD
-B1 RO_VDD 0 V = -1/2*V(DATA_8) + 1/4*V(DATA_7) + 1/8*V(DATA_6) + 1/16*V(DATA_5) + 1/32*V(DATA_4)+ 1/64*V(DATA_3) + 1/128*V(DATA_2) + 1/256*V(DATA_1) + 1/512*V(DATA_0)
-B2 RO 0 V = V(RO_VDD)/V(VDD)
-.ENDS
-
+BDO VOD 0 V=V(SARP)-V(SARN)
 
 *----------------------------------------------------------------
 * NGSPICE control
 *----------------------------------------------------------------
-.probe v(SARN) v(SARP) v(RO) v(SAR_IP) v(SAR_IN)
+.probe v(VOD)
 
 .control
 set color0=white
 set color1=black
 unset askquit
+tran 1n 200n
 
-*optran !noopiter gminsteps srcsteps tstep tstop supramp
-*optran 0 0 0 1n 10n  0
-tran 1n 7u 1n 5n
-*tran 1n 200n
-
+hardcopy {cicfname}.ps v(vod)
 write
-
 quit
 
 .endc
-
 .end

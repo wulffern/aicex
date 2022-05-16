@@ -5,7 +5,10 @@ __pycache__/
 .DS_Store
 # C extensions
 *.so
-
+*.run
+*.csv
+*.pdf
+output*/
 # Distribution / packaging
 .Python
 build/
