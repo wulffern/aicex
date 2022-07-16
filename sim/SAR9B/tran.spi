@@ -29,7 +29,7 @@
 *----------------------------------------------------------------
 * Include
 *----------------------------------------------------------------
-.include ../build/SUN_SAR9B_SK130NM.spi
+.include ../build/SUN_SAR9B_SK130NM.spice
 
 *----------------------------------------------------------------
 * Options
@@ -50,14 +50,8 @@
 *- 10 MHz clock frequency
 .param PERIOD_CLK = 100n
 
-*- 100 MHz clock frequency
-.param PERIOD_CMP_CLK = 10n
-
 *- 25% duty-cycle clock
 .param PW_CLK = PERIOD_CLK/4
-
-*- 50% duty-cycle comparator clock
-.param PW_CMP_CLK = PERIOD_CMP_CLK/2
 
 
 *- Frequency bin of the input signal
@@ -84,7 +78,6 @@ VREF VREF AVSS dc AVDD
 
 *- Control signals
 VCLK CLK 0 dc 0 pulse (0 AVDD 0 TRF TRF PW_CLK PERIOD_CLK)
-VCLK_CMP CLK_CMP 0 dc 0 pulse (0 AVDD 0 TRF TRF PW_CMP_CLK PERIOD_CMP_CLK)
 
 X3 CLK CK_SAMPLE_BSSW AVDD AVSS AVDD AVSS BFX1_CV
 X2 CLK CK_SAMPLE AVDD AVSS AVDD AVSS BFX1_CV
@@ -92,7 +85,6 @@ X1 CK_SAMPLE EN AVDD AVSS AVDD AVSS IVX1_CV
 VCM VCM 0 dc {AVDD/2}
 VSARP SAR_IP VCM sin (0 vamp fin)
 VSARN SAR_IN VCM sin (0 {-vamp} fin)
-
 
 
 *----------------------------------------------------------------
@@ -115,7 +107,6 @@ XDFF9 D_0 DONE AVDD DF_0 QN0 AVDD AVSS AVDD AVSS DFRNQNX1_CV
 XDAC DF_8 DF_7 DF_6 DF_5 DF_4 DF_3 DF_2 DF_1 DF_0 RO AVDD DAC_9BIT_TWOS_COMPL
 
 
-
 *----------------------------------------------------------------
 * 8-bit DAC model model
 *----------------------------------------------------------------
@@ -129,17 +120,17 @@ B2 RO 0 V = V(RO_VDD)/V(VDD)
 *----------------------------------------------------------------
 * NGSPICE control
 *----------------------------------------------------------------
+
 .probe v(SARN) v(SARP) v(RO) v(SAR_IP) v(SAR_IN)
+
 
 .control
 set color0=white
 set color1=black
 unset askquit
 
-*optran !noopiter gminsteps srcsteps tstep tstop supramp
-*optran 0 0 0 1n 10n  0
 tran 1n 7u 1n 5n
-*tran 1n 200n
+
 
 write
 

@@ -21,101 +21,6 @@
 { "cells" :
   [
     //Capacitor unit-cell
-    { "name" : "CAPBASE_W_DMY",
-      "boundaryIgnoreRouting" : 0,
-      "class" : "Gds::GdsPatternCapacitor",
-      "abstract" : 1,
-      "yoffset": -0.5,
-      "xoffset": -0.5,
-      "widthoffset" : -1,
-      "fillCoordinatesFromStrings" : [
-        [   "OD",
-            "--XXXXXXXXXXcXXXXXXXX--",
-            "-----------------------",
-            "--XXXXXXXXXXcXXXXXXXX--",
-            "-----------------------",
-            "--XXXXXXXXXXcXXXXXXXX--",
-            "-----------------------",
-            "--XXXXXXXXXXcXXXXXXXX--",
-            "----------------------",
-            "--XXXXXXXXXXcXXXXXXXX--"
-
-        ],
-        [   "PO",
-            "-----------------------",
-            "--XXXXXXXXcXXXXXXXXXX--",
-            "-----------------------",
-            "--XXXXXXXXcXXXXXXXXXX--",
-            "-----------------------",
-            "--XXXXXXXXcXXXXXXXXXX--",
-            "-----------------------",
-            "--XXXXXXXXcXXXXXXXXXX--",
-            "-----------------------"
-        ],
-        [   "M1",
-            "----XXXXXXXXXXXXXXX----",
-            "----X-X-X-X-X-X-X-X----",
-            "----X-X-X-X-X-X-r-X----",
-            "----X-X-X-X-X-X-X-X----",
-            "----X-X-X-D-X-X---X----",
-            "----X-X-X-X-X-X-X-X----",
-            "----X-X-X-X-X-X-X-X----",
-            "----X-X-X-X-X-X-X-X----",
-            "----XXXXXXXXXXXXXXX----"
-
-        ],
-        [   "M2",
-            "--x-xxkxxxxxxxxxkxxxx--",
-            "--x-----------------x--",
-            "--xxxxkxxxxxxxxxxxx-x--",
-            "--x-----------------x--",
-            "--x-xxxxxxxxxxxxkxxxx--",
-            "--x-----------------x--",
-            "--xxxxkxxxxxxxxxxxx-x--",
-            "--x-----------------x--",
-            "--x-xxkxxxxxxxxxkxxxx--"
-
-        ],
-        [   "M3",
-            "--x-xxkxxxxxxxxxkxxxx--",
-            "--x-----------------x--",
-            "--xxxxkxxxxxxxxxxxx-x--",
-            "--x-----------------x--",
-            "--x-xxxxxxxxxxxxkxxxx--",
-            "--x-----------------x--",
-            "--xxxxkxxxxxxxxxxxx-x--",
-            "--x-----------------x--",
-            "--x-xxkxxxxxxxxxkxxxx--"
-
-        ],
-        [   "M4",
-            "--x-xxxxxxxxxxxxxxxxx--",
-            "--x-----------------x--",
-            "--xxxxxxxxxxxxxxxxx-x--",
-            "--A-----------------B--",
-            "--x-xrxxxxxxxxxxxxxxx--",
-            "--x-----------------x--",
-            "--xxxxxxxxxxxxxxrxx-x--",
-            "--x-----------------x--",
-            "--x-xxxxxxxxxxxxxxxxx--"
-
-        ]
-
-      ],
-      "afterNew" : {
-        "getRuleForHorizontalGrid" : ["PO","space"],
-        "getRuleForVerticalGrid" : ["PO","space"]
-      }
-    },
-
-    {"name" : "CAP_W_DMY", "inherit" : "CAPBASE_W_DMY",
-     "abstract": 1,
-     "afterNew" :{
-       "copyColumns" :[
-         { "count" : 40, "offset" : 7,"length" : 2}
-       ]
-     }
-    },
 
 
     //Capacitor unit-cell
@@ -125,6 +30,7 @@
       "yoffset": -0.5,
       "xoffset": -0.5,
       "widthoffset" : -1,
+      "metalUnderMetalRes" : 0,
       "fillCoordinatesFromStrings" : [
 
         [   "M1",
@@ -132,15 +38,31 @@
             "-----------------------",
             "--xxxxxxxxxxxxxxxxxxx--",
             "--x--------------------",
-            "--x-xxxkxxxxxxxxkxxxx--",
+            "--x-xxxxxxxxxxxxxxxxx--",
             "--x-----------------x--",
-            "--xxxxxkxxxxxxxxxxx-x--",
+            "--xxxxxxxxxxxxxxxxx-x--",
             "--x-----------------x--",
-            "--x-xxxxxxxxxxxxkxxxx--",
+            "--x-xxxxxxxxxxxxxxxxx--",
             "--x-----------------x--",
-            "--xxxxxkxxxxxxxxxxx-x--",
+            "--xxxxxxxxxxxxxxxxx-x--",
             "--------------------x--",
             "--xxxxxxxxxxxxxxxxxxx--"
+
+        ],
+        [   "VIA1",
+            "-----------------------",
+            "-----------------------",
+            "-------EEEEEEEE--------",
+            "-----------------------",
+            "-------EEEEEEEE--------",
+            "-----------------------",
+            "-------EEEEEEEE--------",
+            "-----------------------",
+            "-------EEEEEEEE-------",
+            "-----------------------",
+            "-------EEEEEEEE--------",
+            "-----------------------",
+            "-------EEEEEEEE--------"
 
         ],
         [   "M4",
@@ -161,24 +83,7 @@
 
       ],
       "afterNew" : {
-        "copyLayers" : [["M1","M2"],["M1","M3"]]
-//        "getRuleForHorizontalGrid" : ["PO","space"],
-//        "getRuleForVerticalGrid" : ["PO","space"]
-      }
-    },
-
-    //10 finger capacitors, port on bottom
-    { "name" : "CAPX_W_DMY",
-      "abstract" : 1,
-      "afterRoute"  : {
-        "addPortOnRects" : [  ["A","M4","XA0:A" ] , ["B", "M4","XA0:B"]]
-      }
-    },
-    //10 finger capacitors, port on top
-    { "name" : "CAPXT_W_DMY", "inherit" : "CAPX",
-      "abstract" : 1,
-      "afterRoute"  : {
-        "addPortOnRects" : [  ["A","M4","XA9:A" ] , ["B", "M4","XA9:B"]]
+        "copyLayers" : [["M1","M2"],["M1","M3"],["VIA1","VIA2"],["VIA1","VIA3"]]
       }
     },
     { "name" : "CAPBW",

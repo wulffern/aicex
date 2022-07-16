@@ -3,21 +3,21 @@
 * PCHDL <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
 .SUBCKT PCHDL D G S B
-XM1 D G S B sky130_fd_pr__pfet_01v8  l=0.18  m=1  w=1.08  
+XM1 D G S B sky130_fd_pr__pfet_01v8  l=0.18  m=1  w=1.2  
 .ENDS
 
 *-------------------------------------------------------------
 * NCHDL <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
 .SUBCKT NCHDL D G S B
-XM1 D G S B sky130_fd_pr__nfet_01v8  l=0.18  m=1  w=1.08  
+XM1 D G S B sky130_fd_pr__nfet_01v8  l=0.18  m=1  w=1.2  
 .ENDS
 
 *-------------------------------------------------------------
 * NCHDLR <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
 .SUBCKT NCHDLR D G S B
-XM1 D G S B sky130_fd_pr__nfet_01v8  l=0.18  m=1  w=1.08  
+XM1 D G S B sky130_fd_pr__nfet_01v8  l=0.18  m=1  w=1.2  
 .ENDS
 
 *-------------------------------------------------------------

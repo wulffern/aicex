@@ -7,7 +7,9 @@
 {
     "options" :
     {
-        "ignoreSetYoffsetHalf" : true
+        "ignoreSetYoffsetHalf" : true,
+        "metalUnderMetalRes" : false
+
     },
     "include" : [
         "dmos_sky130nm_core.json",
@@ -19,7 +21,33 @@
         "Z" : [ "-",
                 "x"],
         "Y" : [ "x",
-                "-"]
+                "-"],
+        "E" : [ "---",
+                "xxx",
+                "xxx",
+                "xxx",
+                "xxx",
+                "xxx",
+                "xxx",
+                "xxx",
+                "xxx",
+                "---"
+              ],
+        "T" : [ "---",
+                "xxx",
+                "xxx",
+                "---"
+              ],
+        "R" : [ "---",
+                "-xx",
+                "-xx",
+                "---"
+              ],
+        "L" : [ "---",
+                "xx-",
+                "xx-",
+                "---"
+              ]
     },
 
     "cells":
@@ -48,8 +76,8 @@
         { "name" : "CAP_BSSW_CV",
           "inherit" : "CAPBASE_LEFT_SIDE_PORT",
           "abstract" : 0,
-          "getRuleForHorizontalGrid" : ["M1","width"],
-          "getRuleForVerticalGrid" : ["M1","width"],
+          "getRuleForHorizontalGrid" : ["M3","cap_width"],
+          "getRuleForVerticalGrid" : ["M3","cap_width"],
           "meta" : {
               "spice" : "C1 A B 5f"
           },

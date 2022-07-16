@@ -26,12 +26,10 @@
 **
 **********************************************************************
 
-
-
 *----------------------------------------------------------------
 * Include
 *----------------------------------------------------------------
-.include ../build/SUN_SAR9B_SK130NM.spi
+.include ../build/SUN_SAR9B_SK130NM.spice
 
 *----------------------------------------------------------------
 * Options
@@ -51,14 +49,8 @@
 *- 10 MHz clock frequency
 .param PERIOD_CLK = 100n
 
-*- 100 MHz clock frequency
-.param PERIOD_CMP_CLK = 10n
-
 *- 25% duty-cycle clock
 .param PW_CLK = PERIOD_CLK/4
-
-*- 50% duty-cycle comparator clock
-.param PW_CMP_CLK = PERIOD_CMP_CLK/2
 
 *- Frequency bin of the input signal
 .param fbin = 5
@@ -72,6 +64,7 @@
 *- Input frequency for coherent sampling
 .param fin = fbin/nbpt*fs
 
+*- Input amplitude
 .param vamp = 0.25
 
 *----------------------------------------------------------------
@@ -84,14 +77,12 @@ VREF VREF AVSS dc AVDD
 
 *- Control signals
 VCLK CLK 0 dc 0 pulse (0 AVDD 0 TRF TRF PW_CLK PERIOD_CLK)
-VCLK_CMP CK_CMP 0 dc 0 pulse (0 AVDD 0 TRF TRF PW_CMP_CLK PERIOD_CMP_CLK)
 
 X3 CLK CK_SAMPLE_BSSW AVDD AVSS AVDD AVSS BFX1_CV
 X4 CLK EN AVDD AVSS AVDD AVSS IVX1_CV
 VCM VCM 0 dc {AVDD/2}
 VSARP SAR_IP VCM sin (0 vamp fin)
 VSARN SAR_IN VCM sin (0 {-vamp} fin)
-
 
 
 *----------------------------------------------------------------
