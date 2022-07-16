@@ -1,0 +1,35 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1657978845
+<< checkpaint >>
+rect 0 0 2320 1280
+<< locali >>
+rect 400 770 568 830
+rect 568 370 800 430
+rect 568 370 628 830
+<< m3 >>
+rect 1400 0 1600 1280
+rect 680 0 880 1280
+use NRX1_CV XA1
+transform 1 0 0 0 1 0
+box 0 0 2320 640
+use IVX2_CV XA2
+transform 1 0 0 0 1 640
+box 0 640 2320 1280
+<< labels >>
+flabel locali s 280 130 520 190 0 FreeSans 400 0 0 0 A
+port 1 nsew
+flabel locali s 280 450 520 510 0 FreeSans 400 0 0 0 B
+port 2 nsew
+flabel locali s 680 850 920 910 0 FreeSans 400 0 0 0 Y
+port 3 nsew
+flabel locali s 2200 120 2440 200 0 FreeSans 400 0 0 0 BULKP
+port 4 nsew
+flabel locali s -120 120 120 200 0 FreeSans 400 0 0 0 BULKN
+port 5 nsew
+flabel m3 s 1400 0 1600 1280 0 FreeSans 400 0 0 0 AVDD
+port 6 nsew
+flabel m3 s 680 0 880 1280 0 FreeSans 400 0 0 0 AVSS
+port 7 nsew
+<< end >>

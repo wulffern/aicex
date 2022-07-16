@@ -68,5 +68,11 @@ signal after the boostrapped switches. Testbench is `tran_bssw.spi`
 
 # Results
 
-![64 point FFT of SAR output](tran_SchGtMttRtCtTtVtDtBt.png)
+![64 point FFT of SAR output](media/tran_SchGtMttRtCtTtVtDtBt.png)
+
+
+# TODO
+Although sims work, the layout is not DRC/LVS clean yet.
+
+![magic layout](media/SAR9B_CV.png)
 

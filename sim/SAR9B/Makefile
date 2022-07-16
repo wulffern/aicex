@@ -46,7 +46,7 @@ all: sar bssw
 sar:
 	-mkdir build
 	cd build;${CIC} --nogds --spi  --I ../cic ../cic/SAR9B_CV.json  ../cic/sky130.tech ${LIB}
-	cd build; ${CICPY}  transpile ${LIB}.cic ../cic/sky130.tech ${LIB}  --layskill --schskill --winfo --spice --verilog --xschem --magic --smash "(P|N)CHIOA"
+	cd build; ${CICPY}  transpile ${LIB}.cic ../cic/sky130.tech ${LIB}  --spice --verilog --xschem --magic --smash "(P|N)CHIOA"
 
 sch:
 	cd build; ${CICPY}  transpile ${LIB}.cic ../cic/sky130.tech ${LIB}  --xschem --smash "(P|N)CHIOA"

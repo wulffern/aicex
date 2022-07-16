@@ -1,0 +1,158 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1657978845
+<< checkpaint >>
+rect 0 0 2320 4480
+<< locali >>
+rect 1520 210 1688 270
+rect 1688 710 1860 770
+rect 1688 210 1748 770
+rect 1800 770 1920 830
+rect 1520 850 1688 910
+rect 1688 1410 1920 1470
+rect 1688 3970 1920 4030
+rect 1688 850 1748 4030
+rect 400 2050 568 2110
+rect 568 850 800 910
+rect 568 850 628 2110
+rect 460 2950 568 3010
+rect 568 850 800 910
+rect 568 850 628 3010
+rect 400 3010 520 3070
+rect 800 1490 968 1550
+rect 800 2130 968 2190
+rect 968 1490 1028 2190
+rect 400 4290 568 4350
+rect 568 4050 800 4110
+rect 568 4050 628 4350
+<< m1 >>
+rect 1920 2050 2088 2110
+rect 1920 3010 2088 3070
+rect 1520 210 2088 270
+rect 2088 210 2148 3078
+rect 460 1350 568 1410
+rect 568 530 800 590
+rect 568 530 628 1478
+rect 400 1410 520 1470
+rect 800 3090 968 3150
+rect 800 4050 968 4110
+rect 968 3090 1028 4118
+rect 400 2370 568 2430
+rect 568 2130 800 2190
+rect 568 2130 628 2438
+rect 1520 2450 1688 2510
+rect 1688 1730 1920 1790
+rect 1688 2690 1920 2750
+rect 1688 1730 1748 2758
+rect 1520 4370 1688 4430
+rect 1688 3650 1920 3710
+rect 1688 3650 1748 4438
+rect 172 450 400 510
+rect 172 3330 400 3390
+rect 172 450 232 3398
+<< m2 >>
+rect 400 3970 568 4030
+rect 568 3010 1920 3070
+rect 568 3010 628 4038
+<< m3 >>
+rect 1400 0 1600 4480
+rect 680 0 880 4480
+use NDX1_CV XA1
+transform 1 0 0 0 1 0
+box 0 0 2320 640
+use IVX1_CV XA2
+transform 1 0 0 0 1 640
+box 0 640 2320 960
+use IVTRIX1_CV XA3
+transform 1 0 0 0 1 960
+box 0 960 2320 1600
+use IVTRIX1_CV XA4
+transform 1 0 0 0 1 1600
+box 0 1600 2320 2240
+use IVX1_CV XA5
+transform 1 0 0 0 1 2240
+box 0 2240 2320 2560
+use IVTRIX1_CV XA6
+transform 1 0 0 0 1 2560
+box 0 2560 2320 3200
+use NDTRIX1_CV XA7
+transform 1 0 0 0 1 3200
+box 0 3200 2320 4160
+use IVX1_CV XA8
+transform 1 0 0 0 1 4160
+box 0 4160 2320 4480
+use cut_M1M2_2x1 
+transform 1 0 1800 0 1 2050
+box 1800 2050 2000 2118
+use cut_M1M2_2x1 
+transform 1 0 1800 0 1 3010
+box 1800 3010 2000 3078
+use cut_M1M2_2x1 
+transform 1 0 1400 0 1 210
+box 1400 210 1600 278
+use cut_M1M2_2x1 
+transform 1 0 280 0 1 1410
+box 280 1410 480 1478
+use cut_M1M2_2x1 
+transform 1 0 680 0 1 530
+box 680 530 880 598
+use cut_M1M3_2x1 
+transform 1 0 280 0 1 3970
+box 280 3970 480 4038
+use cut_M1M3_2x1 
+transform 1 0 1800 0 1 3010
+box 1800 3010 2000 3078
+use cut_M1M2_2x1 
+transform 1 0 680 0 1 3090
+box 680 3090 880 3158
+use cut_M1M2_2x1 
+transform 1 0 680 0 1 4050
+box 680 4050 880 4118
+use cut_M1M2_2x1 
+transform 1 0 280 0 1 2370
+box 280 2370 480 2438
+use cut_M1M2_2x1 
+transform 1 0 680 0 1 2130
+box 680 2130 880 2198
+use cut_M1M2_2x1 
+transform 1 0 1400 0 1 2450
+box 1400 2450 1600 2518
+use cut_M1M2_2x1 
+transform 1 0 1800 0 1 1730
+box 1800 1730 2000 1798
+use cut_M1M2_2x1 
+transform 1 0 1800 0 1 2690
+box 1800 2690 2000 2758
+use cut_M1M2_2x1 
+transform 1 0 1400 0 1 4370
+box 1400 4370 1600 4438
+use cut_M1M2_2x1 
+transform 1 0 1800 0 1 3650
+box 1800 3650 2000 3718
+use cut_M1M2_2x1 
+transform 1 0 280 0 1 450
+box 280 450 480 518
+use cut_M1M2_2x1 
+transform 1 0 280 0 1 3330
+box 280 3330 480 3398
+<< labels >>
+flabel locali s 280 1090 520 1150 0 FreeSans 400 0 0 0 D
+port 1 nsew
+flabel locali s 280 130 520 190 0 FreeSans 400 0 0 0 CK
+port 2 nsew
+flabel locali s 680 4370 920 4430 0 FreeSans 400 0 0 0 Q
+port 3 nsew
+flabel locali s 680 4050 920 4110 0 FreeSans 400 0 0 0 QN
+port 4 nsew
+flabel locali s 280 3330 520 3390 0 FreeSans 400 0 0 0 RN
+port 5 nsew
+flabel locali s 2200 120 2440 200 0 FreeSans 400 0 0 0 BULKP
+port 6 nsew
+flabel locali s -120 120 120 200 0 FreeSans 400 0 0 0 BULKN
+port 7 nsew
+flabel m3 s 1400 0 1600 4480 0 FreeSans 400 0 0 0 AVDD
+port 8 nsew
+flabel m3 s 680 0 880 4480 0 FreeSans 400 0 0 0 AVSS
+port 9 nsew
+<< end >>

@@ -1,0 +1,181 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1657978845
+<< checkpaint >>
+rect 0 0 2320 10560
+<< locali >>
+rect 400 4610 568 4670
+rect 568 4050 800 4110
+rect 568 4050 628 4670
+rect 400 5890 568 5950
+rect 568 5330 800 5390
+rect 568 5330 628 5950
+rect 1692 3970 1920 4030
+rect 1520 3730 1692 3790
+rect 1692 3730 1752 4030
+rect 400 8130 568 8190
+rect 568 7890 800 7950
+rect 568 7890 628 8190
+rect 370 8130 430 8510
+rect 460 9030 568 9090
+rect 568 8850 800 8910
+rect 568 8850 628 9090
+rect 460 9090 520 9150
+rect 460 9350 568 9410
+rect 568 9170 800 9230
+rect 568 9170 628 9410
+rect 460 9410 520 9470
+rect 400 10050 568 10110
+rect 568 9650 800 9710
+rect 568 9650 628 10110
+rect 1520 5970 1688 6030
+rect 1688 6530 1920 6590
+rect 1688 5970 1748 6590
+<< m1 >>
+rect 400 5250 568 5310
+rect 568 2770 800 2830
+rect 568 2770 628 5318
+rect 1920 7810 2088 7870
+rect 1520 690 2088 750
+rect 2088 690 2148 7878
+rect 400 8770 568 8830
+rect 568 7570 800 7630
+rect 568 7570 628 8838
+rect 1520 4690 1688 4750
+rect 1688 7170 1920 7230
+rect 1688 4690 1748 7238
+<< m3 >>
+rect 2110 4370 2170 6490
+rect 1400 0 1600 10560
+rect 680 0 880 10560
+use DMY_CV XA0a
+transform 1 0 0 0 1 0
+box 0 0 0 0
+use SARMRYX1_CV XA1
+transform 1 0 0 0 1 0
+box 0 0 2320 3840
+use SWX2_CV XA2
+transform 1 0 0 0 1 3840
+box 0 3840 2320 4480
+use SWX2_CV XA3
+transform 1 0 0 0 1 4480
+box 0 4480 2320 5120
+use SWX2_CV XA4
+transform 1 0 0 0 1 5120
+box 0 5120 2320 5760
+use SWX2_CV XA5
+transform 1 0 0 0 1 5760
+box 0 5760 2320 6400
+use SARCEX1_CV XA6
+transform 1 0 0 0 1 6400
+box 0 6400 2320 7680
+use IVX1_CV XA7
+transform 1 0 0 0 1 7680
+box 0 7680 2320 8000
+use IVX1_CV XA8
+transform 1 0 0 0 1 8000
+box 0 8000 2320 8320
+use NDX1_CV XA9
+transform 1 0 0 0 1 8320
+box 0 8320 2320 8960
+use IVX1_CV XA10
+transform 1 0 0 0 1 8960
+box 0 8960 2320 9280
+use NRX1_CV XA11
+transform 1 0 0 0 1 9280
+box 0 9280 2320 9920
+use IVX1_CV XA12
+transform 1 0 0 0 1 9920
+box 0 9920 2320 10240
+use TAPCELLB_CV XA13
+transform 1 0 0 0 1 10240
+box 0 10240 2320 10560
+use DMY_CV XA14
+transform 1 0 0 0 1 10560
+box 0 10560 0 10560
+use cut_M1M2_2x1 
+transform 1 0 280 0 1 5250
+box 280 5250 480 5318
+use cut_M1M2_2x1 
+transform 1 0 680 0 1 2770
+box 680 2770 880 2838
+use cut_M1M2_2x1 
+transform 1 0 1800 0 1 7810
+box 1800 7810 2000 7878
+use cut_M1M2_2x1 
+transform 1 0 1400 0 1 690
+box 1400 690 1600 758
+use cut_M1M2_2x1 
+transform 1 0 280 0 1 8770
+box 280 8770 480 8838
+use cut_M1M2_2x1 
+transform 1 0 680 0 1 7570
+box 680 7570 880 7638
+use cut_M1M2_2x1 
+transform 1 0 1400 0 1 4690
+box 1400 4690 1600 4758
+use cut_M1M2_2x1 
+transform 1 0 1800 0 1 7170
+box 1800 7170 2000 7238
+use cut_M1M4_2x1 
+transform 1 0 320 0 1 4606
+box 320 4606 520 4674
+use cut_M1M4_1x2 
+transform 1 0 1056 0 1 4620
+box 1056 4620 1124 4820
+use cut_M1M4_1x2 
+transform 1 0 1192 0 1 5260
+box 1192 5260 1260 5460
+use cut_M1M4_1x2 
+transform 1 0 1328 0 1 5900
+box 1328 5900 1396 6100
+use cut_M2M3_2x1 
+transform 1 0 1440 0 1 686
+box 1440 686 1640 754
+use cut_M2M3_2x1 
+transform 1 0 320 0 1 446
+box 320 446 520 514
+use cut_M2M3_2x1 
+transform 1 0 320 0 1 446
+box 320 446 520 514
+use cut_M2M3_2x1 
+transform 1 0 320 0 1 2046
+box 320 2046 520 2114
+use cut_M2M3_2x1 
+transform 1 0 320 0 1 2046
+box 320 2046 520 2114
+<< labels >>
+flabel m2 s 320 2046 520 2114 0 FreeSans 400 0 0 0 CMP_OP
+port 1 nsew
+flabel locali s 1800 3650 2040 3710 0 FreeSans 400 0 0 0 RST_N
+port 2 nsew
+flabel m2 s 320 446 520 514 0 FreeSans 400 0 0 0 EN
+port 3 nsew
+flabel locali s 280 3010 520 3070 0 FreeSans 400 0 0 0 CMP_ON
+port 4 nsew
+flabel m2 s 1440 686 1640 754 0 FreeSans 400 0 0 0 ENO
+port 5 nsew
+flabel m3 s 320 4606 520 4674 0 FreeSans 400 0 0 0 CN1
+port 6 nsew
+flabel m3 s 1056 4620 1124 4820 0 FreeSans 400 0 0 0 CP1
+port 7 nsew
+flabel m3 s 1192 5260 1260 5460 0 FreeSans 400 0 0 0 CP0
+port 8 nsew
+flabel m3 s 1328 5900 1396 6100 0 FreeSans 400 0 0 0 CN0
+port 9 nsew
+flabel locali s 280 9730 520 9790 0 FreeSans 400 0 0 0 CEIN
+port 10 nsew
+flabel locali s 1400 10130 1640 10190 0 FreeSans 400 0 0 0 CEO
+port 11 nsew
+flabel locali s 280 6850 520 6910 0 FreeSans 400 0 0 0 CKS
+port 12 nsew
+flabel locali s 680 8210 920 8270 0 FreeSans 400 0 0 0 DONE
+port 13 nsew
+flabel m3 s 2040 4370 2240 4570 0 FreeSans 400 0 0 0 VREF
+port 14 nsew
+flabel m3 s 1400 0 1600 10560 0 FreeSans 400 0 0 0 AVDD
+port 15 nsew
+flabel m3 s 680 0 880 10560 0 FreeSans 400 0 0 0 AVSS
+port 16 nsew
+<< end >>

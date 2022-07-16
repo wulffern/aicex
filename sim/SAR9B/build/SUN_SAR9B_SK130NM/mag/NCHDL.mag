@@ -1,0 +1,66 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1657978845
+<< checkpaint >>
+rect 0 0 1160 320
+<< ndiff >>
+rect 680 40 920 120
+rect 680 120 920 200
+rect 680 200 920 280
+<< ptap >>
+rect -120 -40 120 40
+rect -120 40 120 120
+rect -120 120 120 200
+rect -120 200 120 280
+rect -120 280 120 360
+<< poly >>
+rect 280 -18 1000 18
+rect 280 142 1000 178
+rect 280 302 1000 338
+rect 280 120 520 200
+<< pcontact >>
+rect 306 140 359 160
+rect 306 160 359 180
+rect 360 140 439 160
+rect 360 160 439 180
+rect 440 140 493 160
+rect 440 160 493 180
+<< locali >>
+rect -120 -40 120 40
+rect -120 40 120 120
+rect 680 50 920 110
+rect -120 120 120 200
+rect 280 130 520 190
+rect -120 200 120 280
+rect 680 210 920 270
+rect -120 280 120 360
+<< ptapc >>
+rect -40 40 40 120
+rect -40 120 40 200
+rect -40 200 40 280
+<< ndcontact >>
+rect 706 60 759 80
+rect 706 80 759 100
+rect 760 60 839 80
+rect 760 80 839 100
+rect 840 60 893 80
+rect 840 80 893 100
+rect 706 220 759 240
+rect 706 240 759 260
+rect 760 220 839 240
+rect 760 240 839 260
+rect 840 220 893 240
+rect 840 240 893 260
+<< pwell >>
+rect -200 -120 1160 440
+<< labels >>
+flabel locali s 280 130 520 190 0 FreeSans 400 0 0 0 G
+port 1 nsew
+flabel locali s 680 50 920 110 0 FreeSans 400 0 0 0 S
+port 2 nsew
+flabel locali s -120 120 120 200 0 FreeSans 400 0 0 0 B
+port 3 nsew
+flabel locali s 680 210 920 270 0 FreeSans 400 0 0 0 D
+port 4 nsew
+<< end >>

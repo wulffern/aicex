@@ -1,0 +1,17 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1657978845
+<< checkpaint >>
+rect 0 0 120 0
+<< m3 >>
+rect 0 0 60 60
+rect 60 0 180 60
+<< rm3 >>
+rect 60 0 120 60
+<< labels >>
+flabel m3 s 0 0 60 60 0 FreeSans 400 0 0 0 A
+port 1 nsew
+flabel m3 s 60 0 180 60 0 FreeSans 400 0 0 0 B
+port 2 nsew
+<< end >>

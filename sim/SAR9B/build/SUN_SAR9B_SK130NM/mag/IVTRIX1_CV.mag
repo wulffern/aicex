@@ -1,0 +1,53 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1657978845
+<< checkpaint >>
+rect 0 0 2320 640
+<< locali >>
+rect 770 210 830 430
+rect 1490 210 1550 430
+rect 800 530 968 590
+rect 968 530 1520 590
+rect 968 530 1028 590
+<< poly >>
+rect 280 142 2040 178
+<< m3 >>
+rect 1400 0 1600 640
+rect 680 0 880 640
+use NCHDL MN0
+transform 1 0 0 0 1 0
+box 0 0 1160 320
+use NCHDL MN1
+transform 1 0 0 0 1 320
+box 0 320 1160 640
+use PCHDL MP0
+transform 1 0 1160 0 1 0
+box 1160 0 2320 320
+use PCHDL MP1
+transform 1 0 1160 0 1 320
+box 1160 320 2320 640
+use cut_M1M4_2x1 
+transform 1 0 1400 0 1 50
+box 1400 50 1600 118
+use cut_M1M4_2x1 
+transform 1 0 680 0 1 50
+box 680 50 880 118
+<< labels >>
+flabel locali s 280 130 520 190 0 FreeSans 400 0 0 0 A
+port 1 nsew
+flabel locali s 1800 450 2040 510 0 FreeSans 400 0 0 0 CN
+port 2 nsew
+flabel locali s 280 450 520 510 0 FreeSans 400 0 0 0 C
+port 3 nsew
+flabel locali s 680 530 920 590 0 FreeSans 400 0 0 0 Y
+port 4 nsew
+flabel locali s 2200 120 2440 200 0 FreeSans 400 0 0 0 BULKP
+port 5 nsew
+flabel locali s -120 120 120 200 0 FreeSans 400 0 0 0 BULKN
+port 6 nsew
+flabel m3 s 1400 0 1600 640 0 FreeSans 400 0 0 0 AVDD
+port 7 nsew
+flabel m3 s 680 0 880 640 0 FreeSans 400 0 0 0 AVSS
+port 8 nsew
+<< end >>

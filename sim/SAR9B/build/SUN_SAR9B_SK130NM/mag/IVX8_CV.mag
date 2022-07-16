@@ -1,0 +1,148 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1657978845
+<< checkpaint >>
+rect 0 0 2320 2560
+<< locali >>
+rect 800 210 968 270
+rect 800 370 968 430
+rect 800 850 968 910
+rect 800 1010 968 1070
+rect 800 1490 968 1550
+rect 800 1650 968 1710
+rect 800 2130 968 2190
+rect 800 2290 968 2350
+rect 968 210 1520 270
+rect 968 370 1520 430
+rect 968 850 1520 910
+rect 968 1010 1520 1070
+rect 968 1490 1520 1550
+rect 968 1650 1520 1710
+rect 968 2130 1520 2190
+rect 968 2290 1520 2350
+rect 968 210 1028 2350
+rect 370 130 430 2430
+rect 1890 130 1950 2430
+<< poly >>
+rect 280 142 2040 178
+rect 280 462 2040 498
+rect 280 782 2040 818
+rect 280 1102 2040 1138
+rect 280 1422 2040 1458
+rect 280 1742 2040 1778
+rect 280 2062 2040 2098
+rect 280 2382 2040 2418
+<< m3 >>
+rect 1400 0 1600 2560
+rect 680 0 880 2560
+use NCHDL MN0
+transform 1 0 0 0 1 0
+box 0 0 1160 320
+use NCHDL MN1
+transform 1 0 0 0 1 320
+box 0 320 1160 640
+use NCHDL MN2
+transform 1 0 0 0 1 640
+box 0 640 1160 960
+use NCHDL MN3
+transform 1 0 0 0 1 960
+box 0 960 1160 1280
+use NCHDL MN4
+transform 1 0 0 0 1 1280
+box 0 1280 1160 1600
+use NCHDL MN5
+transform 1 0 0 0 1 1600
+box 0 1600 1160 1920
+use NCHDL MN6
+transform 1 0 0 0 1 1920
+box 0 1920 1160 2240
+use NCHDL MN7
+transform 1 0 0 0 1 2240
+box 0 2240 1160 2560
+use PCHDL MP0
+transform 1 0 1160 0 1 0
+box 1160 0 2320 320
+use PCHDL MP1
+transform 1 0 1160 0 1 320
+box 1160 320 2320 640
+use PCHDL MP2
+transform 1 0 1160 0 1 640
+box 1160 640 2320 960
+use PCHDL MP3
+transform 1 0 1160 0 1 960
+box 1160 960 2320 1280
+use PCHDL MP4
+transform 1 0 1160 0 1 1280
+box 1160 1280 2320 1600
+use PCHDL MP5
+transform 1 0 1160 0 1 1600
+box 1160 1600 2320 1920
+use PCHDL MP6
+transform 1 0 1160 0 1 1920
+box 1160 1920 2320 2240
+use PCHDL MP7
+transform 1 0 1160 0 1 2240
+box 1160 2240 2320 2560
+use cut_M1M4_2x1 
+transform 1 0 1400 0 1 50
+box 1400 50 1600 118
+use cut_M1M4_2x1 
+transform 1 0 1400 0 1 530
+box 1400 530 1600 598
+use cut_M1M4_2x1 
+transform 1 0 1400 0 1 690
+box 1400 690 1600 758
+use cut_M1M4_2x1 
+transform 1 0 1400 0 1 1170
+box 1400 1170 1600 1238
+use cut_M1M4_2x1 
+transform 1 0 1400 0 1 1330
+box 1400 1330 1600 1398
+use cut_M1M4_2x1 
+transform 1 0 1400 0 1 1810
+box 1400 1810 1600 1878
+use cut_M1M4_2x1 
+transform 1 0 1400 0 1 1970
+box 1400 1970 1600 2038
+use cut_M1M4_2x1 
+transform 1 0 1400 0 1 2450
+box 1400 2450 1600 2518
+use cut_M1M4_2x1 
+transform 1 0 680 0 1 50
+box 680 50 880 118
+use cut_M1M4_2x1 
+transform 1 0 680 0 1 530
+box 680 530 880 598
+use cut_M1M4_2x1 
+transform 1 0 680 0 1 690
+box 680 690 880 758
+use cut_M1M4_2x1 
+transform 1 0 680 0 1 1170
+box 680 1170 880 1238
+use cut_M1M4_2x1 
+transform 1 0 680 0 1 1330
+box 680 1330 880 1398
+use cut_M1M4_2x1 
+transform 1 0 680 0 1 1810
+box 680 1810 880 1878
+use cut_M1M4_2x1 
+transform 1 0 680 0 1 1970
+box 680 1970 880 2038
+use cut_M1M4_2x1 
+transform 1 0 680 0 1 2450
+box 680 2450 880 2518
+<< labels >>
+flabel locali s 280 130 520 190 0 FreeSans 400 0 0 0 A
+port 1 nsew
+flabel locali s 680 210 920 270 0 FreeSans 400 0 0 0 Y
+port 2 nsew
+flabel locali s 2200 120 2440 200 0 FreeSans 400 0 0 0 BULKP
+port 3 nsew
+flabel locali s -120 120 120 200 0 FreeSans 400 0 0 0 BULKN
+port 4 nsew
+flabel m3 s 1400 0 1600 2560 0 FreeSans 400 0 0 0 AVDD
+port 5 nsew
+flabel m3 s 680 0 880 2560 0 FreeSans 400 0 0 0 AVSS
+port 6 nsew
+<< end >>

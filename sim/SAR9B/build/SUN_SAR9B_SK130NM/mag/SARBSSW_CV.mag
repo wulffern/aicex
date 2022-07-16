@@ -1,0 +1,181 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1657978845
+<< checkpaint >>
+rect 0 0 15200 4800
+<< m1 >>
+rect 2760 1810 3240 1870
+rect 2880 530 3048 590
+rect 3048 770 3280 830
+rect 3048 530 3108 838
+rect 400 2370 568 2430
+rect 568 3090 2160 3150
+rect 568 2370 628 3158
+rect 1760 2050 1928 2110
+rect 1928 2480 2880 2540
+rect 1928 2050 1988 2552
+rect 800 690 968 750
+rect 968 1490 2160 1550
+rect 968 690 1028 1558
+<< locali >>
+rect 572 50 800 110
+rect 572 370 800 430
+rect 572 690 800 750
+rect 572 1010 800 1070
+rect 572 1330 800 1390
+rect 572 1650 800 1710
+rect 572 1970 800 2030
+rect 572 2290 800 2350
+rect 572 50 632 2350
+rect 370 130 430 1150
+rect 370 1410 430 2430
+rect 800 210 968 270
+rect 800 530 968 590
+rect 800 850 968 910
+rect 800 1170 968 1230
+rect 968 210 1028 1230
+rect 800 1490 968 1550
+rect 800 1810 968 1870
+rect 800 2130 968 2190
+rect 800 2450 968 2510
+rect 968 1490 1028 2510
+<< m2 >>
+rect 1760 1730 1928 1790
+rect 1928 560 2160 620
+rect 1928 560 1988 1798
+rect 1244 2130 2160 2190
+rect 400 770 1244 830
+rect 1244 770 1304 2198
+rect 2880 1330 3048 1390
+rect 3048 -40 4140 20
+rect 3048 -40 3108 1398
+<< m3 >>
+rect 3932 2680 9600 2740
+rect 3340 1810 3932 1870
+rect 3932 1810 3992 2740
+rect 2760 0 2960 4800
+rect 2040 0 2240 4800
+use NCHDLR M1
+transform 1 0 0 0 1 0
+box 0 0 1360 320
+use NCHDLR M2
+transform 1 0 0 0 1 320
+box 0 320 1360 640
+use NCHDLR M3
+transform 1 0 0 0 1 640
+box 0 640 1360 960
+use NCHDLR M4
+transform 1 0 0 0 1 960
+box 0 960 1360 1280
+use NCHDLR M5
+transform 1 0 0 0 1 1280
+box 0 1280 1360 1600
+use NCHDLR M6
+transform 1 0 0 0 1 1600
+box 0 1600 1360 1920
+use NCHDLR M7
+transform 1 0 0 0 1 1920
+box 0 1920 1360 2240
+use NCHDLR M8
+transform 1 0 0 0 1 2240
+box 0 2240 1360 2560
+use TAPCELLB_CV XA5b
+transform 1 0 1360 0 1 0
+box 1360 0 3680 320
+use IVX1_CV XA0
+transform 1 0 1360 0 1 320
+box 1360 320 3680 640
+use TGPD_CV XA3
+transform 1 0 1360 0 1 640
+box 1360 640 3680 1600
+use SARBSSWCTRL_CV XA4
+transform 1 0 1360 0 1 1600
+box 1360 1600 3680 2240
+use TIEH_CV XA1
+transform 1 0 1360 0 1 2240
+box 1360 2240 3680 2560
+use TAPCELLB_CV XA7
+transform 1 0 1360 0 1 2560
+box 1360 2560 3680 2880
+use TIEL_CV XA2
+transform 1 0 1360 0 1 2880
+box 1360 2880 3680 3200
+use TAPCELLB_CV XA5
+transform 1 0 1360 0 1 3200
+box 1360 3200 3680 3520
+use CAP_BSSW5_CV XCAPB1
+transform 1 0 3920 0 1 0
+box 3920 0 15200 4800
+use cut_M1M2_2x1 
+transform 1 0 2760 0 1 1810
+box 2760 1810 2960 1878
+use cut_M2M4_2x1 
+transform 1 0 3240 0 1 1810
+box 3240 1810 3440 1878
+use cut_M1M2_2x1 
+transform 1 0 2760 0 1 530
+box 2760 530 2960 598
+use cut_M1M2_2x1 
+transform 1 0 3160 0 1 770
+box 3160 770 3360 838
+use cut_M1M3_2x1 
+transform 1 0 1640 0 1 1730
+box 1640 1730 1840 1798
+use cut_M1M3_2x1 
+transform 1 0 2040 0 1 564
+box 2040 564 2240 632
+use cut_M1M2_2x1 
+transform 1 0 280 0 1 2370
+box 280 2370 480 2438
+use cut_M1M2_2x1 
+transform 1 0 2040 0 1 3090
+box 2040 3090 2240 3158
+use cut_M1M2_2x1 
+transform 1 0 1640 0 1 2050
+box 1640 2050 1840 2118
+use cut_M1M2_2x1 
+transform 1 0 2760 0 1 2484
+box 2760 2484 2960 2552
+use cut_M1M2_2x1 
+transform 1 0 680 0 1 690
+box 680 690 880 758
+use cut_M1M2_2x1 
+transform 1 0 2040 0 1 1490
+box 2040 1490 2240 1558
+use cut_M1M3_2x1 
+transform 1 0 2080 0 1 2130
+box 2080 2130 2280 2198
+use cut_M1M3_2x1 
+transform 1 0 320 0 1 770
+box 320 770 520 838
+use cut_M1M3_2x1 
+transform 1 0 2760 0 1 1330
+box 2760 1330 2960 1398
+use cut_M3M4_2x1 
+transform 1 0 4040 0 1 -40
+box 4040 -40 4240 28
+use cut_M1M4_2x1 
+transform 1 0 720 0 1 46
+box 720 46 920 114
+use cut_M2M4_2x1 
+transform 1 0 1480 0 1 3086
+box 1480 3086 1680 3154
+<< labels >>
+flabel m3 s 720 46 920 114 0 FreeSans 400 0 0 0 VI
+port 1 nsew
+flabel m3 s 1480 3086 1680 3154 0 FreeSans 400 0 0 0 TIE_L
+port 2 nsew
+flabel locali s 1640 450 1880 510 0 FreeSans 400 0 0 0 CK
+port 3 nsew
+flabel locali s 3160 770 3400 830 0 FreeSans 400 0 0 0 CKN
+port 4 nsew
+flabel locali s 680 1170 920 1230 0 FreeSans 400 0 0 0 VO1
+port 5 nsew
+flabel locali s 680 2450 920 2510 0 FreeSans 400 0 0 0 VO2
+port 6 nsew
+flabel m3 s 2760 0 2960 4800 0 FreeSans 400 0 0 0 AVDD
+port 7 nsew
+flabel m3 s 2040 0 2240 4800 0 FreeSans 400 0 0 0 AVSS
+port 8 nsew
+<< end >>
