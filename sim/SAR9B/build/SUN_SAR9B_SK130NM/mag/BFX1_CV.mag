@@ -1,43 +1,49 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1658060514
+timestamp 1658072521
 << checkpaint >>
-rect 0 0 1980 640
+rect 0 0 2100 640
 << locali >>
-rect 360 450 498 510
-rect 498 50 720 110
-rect 498 50 558 510
-rect 720 50 858 110
-rect 858 50 1260 110
-rect 858 50 918 110
-rect 720 530 858 590
-rect 858 530 1260 590
-rect 858 530 918 590
+rect 360 450 514 510
+rect 514 50 720 110
+rect 514 50 574 510
+rect 720 50 874 110
+rect 874 50 1380 110
+rect 874 50 934 110
+rect 720 530 874 590
+rect 874 530 1380 590
+rect 874 530 934 590
+rect 270 130 450 190
+rect 630 530 810 590
+rect 2010 120 2190 200
+rect -90 120 90 200
 << poly >>
-rect 270 142 1710 178
-rect 270 462 1710 498
+rect 270 142 1830 178
+rect 270 462 1830 498
 << m3 >>
-rect 1170 0 1354 640
+rect 1290 0 1474 640
+rect 630 0 814 640
+rect 1290 0 1474 640
 rect 630 0 814 640
 use NCHDL MN0
 transform 1 0 0 0 1 0
-box 0 0 990 320
+box 0 0 1050 320
 use NCHDL MN1
 transform 1 0 0 0 1 320
-box 0 320 990 640
+box 0 320 1050 640
 use PCHDL MP0
-transform 1 0 990 0 1 0
-box 990 0 1980 320
+transform 1 0 1050 0 1 0
+box 1050 0 2100 320
 use PCHDL MP1
-transform 1 0 990 0 1 320
-box 990 320 1980 640
+transform 1 0 1050 0 1 320
+box 1050 320 2100 640
 use cut_M1M4_2x1 
-transform 1 0 1170 0 1 210
-box 1170 210 1354 278
+transform 1 0 1290 0 1 210
+box 1290 210 1474 278
 use cut_M1M4_2x1 
-transform 1 0 1170 0 1 370
-box 1170 370 1354 438
+transform 1 0 1290 0 1 370
+box 1290 370 1474 438
 use cut_M1M4_2x1 
 transform 1 0 630 0 1 210
 box 630 210 814 278
@@ -49,11 +55,11 @@ flabel locali s 270 130 450 190 0 FreeSans 400 0 0 0 A
 port 1 nsew
 flabel locali s 630 530 810 590 0 FreeSans 400 0 0 0 Y
 port 2 nsew
-flabel locali s 1890 120 2070 200 0 FreeSans 400 0 0 0 BULKP
+flabel locali s 2010 120 2190 200 0 FreeSans 400 0 0 0 BULKP
 port 3 nsew
 flabel locali s -90 120 90 200 0 FreeSans 400 0 0 0 BULKN
 port 4 nsew
-flabel m3 s 1170 0 1354 640 0 FreeSans 400 0 0 0 AVDD
+flabel m3 s 1290 0 1474 640 0 FreeSans 400 0 0 0 AVDD
 port 5 nsew
 flabel m3 s 630 0 814 640 0 FreeSans 400 0 0 0 AVSS
 port 6 nsew

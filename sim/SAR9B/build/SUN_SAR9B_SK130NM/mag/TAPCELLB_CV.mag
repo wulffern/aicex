@@ -1,39 +1,41 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1658060514
+timestamp 1658072521
 << checkpaint >>
-rect 0 0 1980 320
+rect 0 0 2100 320
 << locali >>
 rect -90 130 450 190
-rect 360 130 498 190
-rect 498 50 720 110
-rect 498 50 558 190
-rect 360 130 498 190
-rect 498 210 720 270
-rect 498 130 558 270
-rect 1260 50 1398 110
-rect 1398 130 1620 190
-rect 1398 50 1458 190
-rect 1260 210 1398 270
-rect 1398 130 1620 190
-rect 1398 130 1458 270
-rect 1530 130 2070 190
+rect 360 130 514 190
+rect 514 50 720 110
+rect 514 50 574 190
+rect 360 130 514 190
+rect 514 210 720 270
+rect 514 130 574 270
+rect 1380 50 1534 110
+rect 1534 130 1740 190
+rect 1534 50 1594 190
+rect 1380 210 1534 270
+rect 1534 130 1740 190
+rect 1534 130 1594 270
+rect 1650 130 2190 190
 << m3 >>
-rect 1170 0 1354 320
+rect 1290 0 1474 320
+rect 630 0 814 320
+rect 1290 0 1474 320
 rect 630 0 814 320
 use NCHDL MN1
 transform 1 0 0 0 1 0
-box 0 0 990 320
+box 0 0 1050 320
 use PCHDL MP1
-transform 1 0 990 0 1 0
-box 990 0 1980 320
+transform 1 0 1050 0 1 0
+box 1050 0 2100 320
 use cut_M1M4_2x1 
-transform 1 0 1170 0 1 210
-box 1170 210 1354 278
+transform 1 0 1290 0 1 210
+box 1290 210 1474 278
 use cut_M1M4_2x1 
-transform 1 0 1170 0 1 50
-box 1170 50 1354 118
+transform 1 0 1290 0 1 50
+box 1290 50 1474 118
 use cut_M1M4_2x1 
 transform 1 0 630 0 1 210
 box 630 210 814 278
@@ -41,7 +43,7 @@ use cut_M1M4_2x1
 transform 1 0 630 0 1 50
 box 630 50 814 118
 << labels >>
-flabel m3 s 1170 0 1354 320 0 FreeSans 400 0 0 0 AVDD
+flabel m3 s 1290 0 1474 320 0 FreeSans 400 0 0 0 AVDD
 port 1 nsew
 flabel m3 s 630 0 814 320 0 FreeSans 400 0 0 0 AVSS
 port 2 nsew

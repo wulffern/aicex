@@ -54,22 +54,46 @@ sch:
 magic:
 	cd build; ${CICPY}  transpile ${LIB}.cic ../cic/sky130.tech ${LIB}  --magic --smash "(P|N)CHIOA"
 
+
 #----------------------------------------------------------------------------
-# POSTCHECK
+# REGRESSION
+#----------------------------------------------------------------------------
+
+blocks = SARDIGEX4_CV SARCMPX1_CV SARBSSW_CV CDAC8_CV SAR9B_CV
+
+lvsblocks:
+	${foreach b, ${blocks}, make lvsf CELL=$b;}
+
+drcblocks:
+	${foreach  b, ${blocks}, make drc CELL=$b;}
+
+
+#----------------------------------------------------------------------------
+# VERIFICATION
 #----------------------------------------------------------------------------
 
 NCELL=build/${LIB}/mag/${CELL}
 MCELL=${NCELL}.mag
 
+lvsf:
+
+	@echo "set VDD AVDD\nset GND AVSS\nset SUB BULKN\nload ${NCELL}.mag\nextract all\n\next2spice lvs\next2spice hierarchy off\next2spice subcircuits off\next2spice -o clvs/${CELL}_lvs.spi\nquit" > clvs/${CELL}_lvs.tcl
+	@magic -noconsole -dnull clvs/${CELL}_lvs.tcl 2&>1 > clvs/${CELL}_magic_lvs.log
+	@netgen -batch lvs "clvs/${CELL}_lvs.spi ${CELL}"  "${BUILD}/${LIB}.spi ${CELL}" ${PDKPATH}/libs.tech/netgen/sky130A_setup.tcl clvs/${CELL}_lvs.log > clvs/${CELL}_netgen_lvs.log
+	@tail -n 1 clvs/${CELL}_lvs.log|perl -ne "use Term::ANSIColor;print(sprintf(\"%-40s\t[ \",${CELL}));if(m/match uniquely/ig){print(color('green').'LVS OK  '.color('reset'));}else{print(color('red').'LVS FAIL'.color('reset'));};print(\" ]\n\");"
+
 lvs:
 	#echo "load ${NCELL}.mag\nextract all\nextract no capacitance\nextract no resistance\n\next2spice lvs\next2spice subcircuits off\next2spice -o clvs/${CELL}_lvs.spi\nquit" > clvs/${CELL}_lvs.tcl
-	echo "set VDD AVDD\nset GND AVSS\nset SUB AVSS\nload ${NCELL}.mag\nextract all\n\next2spice lvs\next2spice subcircuits off\next2spice -o clvs/${CELL}_lvs.spi\nquit" > clvs/${CELL}_lvs.tcl
+	#echo "set VDD AVDD\nset GND AVSS\nset SUB BULKN\nload ${NCELL}.mag\nextract all\n\next2spice lvs\next2spice hierarchy off\next2spice subcircuits off\next2spice -o clvs/${CELL}_lvs.spi\nquit" > clvs/${CELL}_lvs.tcl
+	echo "set VDD AVDD\nset GND AVSS\nset SUB BULKN\nload ${NCELL}.mag\nextract all\n\next2spice lvs\next2spice subcircuits off\next2spice -o clvs/${CELL}_lvs.spi\nquit" > clvs/${CELL}_lvs.tcl
 	magic -noconsole -dnull clvs/${CELL}_lvs.tcl
 	netgen -batch lvs "clvs/${CELL}_lvs.spi ${CELL}"  "${BUILD}/${LIB}.spi ${CELL}" ${PDKPATH}/libs.tech/netgen/sky130A_setup.tcl clvs/${CELL}_lvs.log
 
 drc:
-	echo "load ${NCELL}.mag\nlogcommands cdrc/${CELL}_drc.log\ndrc catchup\ndrc count\ndrc why\nquit\n" > cdrc/${CELL}_drc.tcl
-	magic -noconsole -dnull cdrc/${CELL}_drc.tcl
+	@echo "load ${NCELL}.mag\nlogcommands cdrc/${CELL}_drc.log\nset b [view bbox]\nbox values [lindex \$$b 0] [lindex \$$b 1] [lindex \$$b 2] [lindex \$$b 3]\ndrc catchup\ndrc why\ndrc count total\nquit\n" > cdrc/${CELL}_drc.tcl
+	@magic -noconsole -dnull cdrc/${CELL}_drc.tcl 2&>1 > cdrc/${CELL}_drc.log
+	@tail -n 1 cdrc/${CELL}_drc.log|perl -ne "\$$exit = 0;use Term::ANSIColor;print(sprintf(\"%-40s\t[ \",${CELL}));if(m/:\s+0\n/ig){print(color('green').'DRC OK  '.color('reset'));}else{print(color('red').'DRC FAIL'.color('reset'));\$$exit = 1;};print(\" ]\n\");exit \$$exit;" || tail -n 10 cdrc/${CELL}_drc.log
+
 
 #----------------------------------------------------------------------------
 # SIM

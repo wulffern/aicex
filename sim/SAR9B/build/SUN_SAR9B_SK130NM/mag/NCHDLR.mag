@@ -1,9 +1,9 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1658060514
+timestamp 1658072521
 << checkpaint >>
-rect 0 0 1140 320
+rect 0 0 1200 320
 << ndiff >>
 rect 630 200 810 280
 rect 630 120 810 200
@@ -19,6 +19,19 @@ rect 270 302 870 338
 rect 270 142 870 178
 rect 270 -18 870 18
 rect 270 120 450 200
+<< locali >>
+rect 270 130 450 190
+rect -90 280 90 360
+rect -90 200 90 280
+rect 630 210 810 270
+rect 630 210 810 270
+rect -90 120 90 200
+rect -90 120 90 200
+rect 270 130 450 190
+rect -90 40 90 120
+rect 630 50 810 110
+rect 630 50 810 110
+rect -90 -40 90 40
 << pcontact >>
 rect 290 160 330 180
 rect 290 140 330 160
@@ -26,15 +39,6 @@ rect 330 160 390 180
 rect 330 140 390 160
 rect 390 160 430 180
 rect 390 140 430 160
-<< locali >>
-rect -90 280 90 360
-rect -90 200 90 280
-rect 630 210 810 270
-rect -90 120 90 200
-rect 270 130 450 190
-rect -90 40 90 120
-rect 630 50 810 110
-rect -90 -40 90 40
 << ptapc >>
 rect -30 200 30 280
 rect -30 120 30 200
@@ -53,7 +57,7 @@ rect 690 60 750 80
 rect 750 80 790 100
 rect 750 60 790 80
 << pwell >>
-rect -150 -120 990 440
+rect -150 -120 1050 440
 << labels >>
 flabel locali s 270 130 450 190 0 FreeSans 400 0 0 0 G
 port 1 nsew

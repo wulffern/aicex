@@ -1,22 +1,29 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1658060514
+timestamp 1658072521
 << checkpaint >>
-rect 0 0 1980 1920
+rect 0 0 2100 1920
 << locali >>
-rect 360 770 498 830
-rect 498 370 720 430
-rect 498 370 558 830
+rect 360 770 514 830
+rect 514 370 720 430
+rect 514 370 574 830
+rect 270 130 450 190
+rect 270 450 450 510
+rect 630 850 810 910
+rect 2010 120 2190 200
+rect -90 120 90 200
 << m3 >>
-rect 1170 0 1354 1920
+rect 1290 0 1474 1920
+rect 630 0 814 1920
+rect 1290 0 1474 1920
 rect 630 0 814 1920
 use NRX1_CV XA1
 transform 1 0 0 0 1 0
-box 0 0 1980 640
+box 0 0 2100 640
 use IVX4_CV XA2
 transform 1 0 0 0 1 640
-box 0 640 1980 1920
+box 0 640 2100 1920
 << labels >>
 flabel locali s 270 130 450 190 0 FreeSans 400 0 0 0 A
 port 1 nsew
@@ -24,11 +31,11 @@ flabel locali s 270 450 450 510 0 FreeSans 400 0 0 0 B
 port 2 nsew
 flabel locali s 630 850 810 910 0 FreeSans 400 0 0 0 Y
 port 3 nsew
-flabel locali s 1890 120 2070 200 0 FreeSans 400 0 0 0 BULKP
+flabel locali s 2010 120 2190 200 0 FreeSans 400 0 0 0 BULKP
 port 4 nsew
 flabel locali s -90 120 90 200 0 FreeSans 400 0 0 0 BULKN
 port 5 nsew
-flabel m3 s 1170 0 1354 1920 0 FreeSans 400 0 0 0 AVDD
+flabel m3 s 1290 0 1474 1920 0 FreeSans 400 0 0 0 AVDD
 port 6 nsew
 flabel m3 s 630 0 814 1920 0 FreeSans 400 0 0 0 AVSS
 port 7 nsew

@@ -53,7 +53,7 @@ RR1 A B sky130_fd_pr__res_generic_l1 w=0.3 l=0.3
 * RM4 (cIcCore::PatternResistor)
 *-------------------------------------------------------------
 .SUBCKT RM4 A B
-R1 A B sky130_fd_pr__res_generic_m3 w=0.3 l=0.3
+R1 A B sky130_fd_pr__res_generic_m3 w=0.34 l=0.34
 .ENDS 
 
 *-------------------------------------------------------------

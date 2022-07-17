@@ -135,11 +135,11 @@
         "NDIFFC"   : { "width" : 10},
         "PDIFFC"   : { "width" : 10},
 
-        "M1"   : { "space" : 12, "ana_width": 15, "cap_width" : 15, "width" : 15, "minwidth":15,  "VIA1enclosure" : 1.5, "VIA1encOpposite" : 3, "capspace" : 16},
-        "M2"   : { "space" : 12, "width" : 15, "minwidth":15,  "VIA1encOpposite" : 3, "VIA1enclosure" : 1.5, "VIA2encOpposite" : 3, "VIA2enclosure" : 1.5, "capspace" : 16},
-        "M3"   : { "space" : 12, "width" : 15, "minwidth":15 , "VIA2enclosure" : 1.5, "VIA2encOpposite" : 3, "VIA3enclosure" : 1.5,"VIA3encOpposite" : 3, "capspace" : 16},
-        "M4"   : { "space" : 12, "width" : 15, "minwidth":15 , "cap_width" : 20, "VIA3enclosure" : 1.5, "VIA3encOpposite" : 3,"VIA4enclosure" : 1.5, "VIA4encOpposite" : 3, "capspace" : 16},
-        "M5"   : { "space" : 12, "width" : 15, "minwidth":15 , "cap_width" : 20, "VIA4enclosure" : 1.5, "VIA4encOpposite" : 3,"VIA5enclosure" : 1.5, "VIA5encOpposite" : 3, "capspace" : 16},
+        "M1"   : { "space" : 16, "ana_width": 15, "cap_width" : 15, "width" : 17, "minwidth":17,  "VIA1enclosure" : 1.5, "VIA1encOpposite" : 3, "capspace" : 16},
+        "M2"   : { "space" : 16, "width" : 15, "minwidth":17,  "VIA1encOpposite" : 3, "VIA1enclosure" : 1.5, "VIA2encOpposite" : 3, "VIA2enclosure" : 1.5, "capspace" : 16},
+        "M3"   : { "space" : 16, "width" : 17, "minwidth":17 , "VIA2enclosure" : 1.5, "VIA2encOpposite" : 3, "VIA3enclosure" : 1.5,"VIA3encOpposite" : 3, "capspace" : 16},
+        "M4"   : { "space" : 16, "width" : 17, "minwidth":17 , "cap_width" : 20, "VIA3enclosure" : 1.5, "VIA3encOpposite" : 3,"VIA4enclosure" : 1.5, "VIA4encOpposite" : 3, "capspace" : 16},
+        "M5"   : { "space" : 16, "width" : 17, "minwidth":17 , "cap_width" : 20, "VIA4enclosure" : 1.5, "VIA4encOpposite" : 3,"VIA5enclosure" : 1.5, "VIA5encOpposite" : 3, "capspace" : 16},
 
 
         "OP"   : { "POenclosure" : 0, "POencOpposite" : 40},

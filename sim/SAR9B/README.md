@@ -74,5 +74,10 @@ signal after the boostrapped switches. Testbench is `tran_bssw.spi`
 # TODO
 Although sims work, the layout is not DRC/LVS clean yet.
 
+- Figure out how to fix CAP32_CV. Can't overlap metal1 with rmetal1. Probably
+  need to modifiy cic
+- via3 width drc error
+- LVS only works with a flat hierarchy
+
 ![magic layout](media/SAR9B_CV.png)
 
