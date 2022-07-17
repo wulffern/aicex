@@ -1,65 +1,65 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1657978845
+timestamp 1658060514
 << checkpaint >>
-rect 0 0 2320 640
+rect 0 0 1980 640
 << locali >>
-rect 800 210 968 270
-rect 800 370 968 430
-rect 968 210 1520 270
-rect 968 370 1520 430
-rect 968 210 1028 430
-rect 370 130 430 510
-rect 1890 130 1950 510
+rect 720 210 858 270
+rect 720 370 858 430
+rect 858 210 1260 270
+rect 858 370 1260 430
+rect 858 210 918 430
+rect 330 130 390 510
+rect 1590 130 1650 510
 << poly >>
-rect 280 142 2040 178
-rect 280 462 2040 498
+rect 270 142 1710 178
+rect 270 462 1710 498
 << m2 >>
-rect 1520 50 1688 110
-rect 1520 530 1688 590
-rect 1688 530 2140 590
-rect 1688 50 1748 598
+rect 1260 50 1398 110
+rect 1260 530 1398 590
+rect 1398 530 1742 590
+rect 1398 50 1458 598
 << m3 >>
-rect 680 0 880 640
+rect 630 0 814 640
 use NCHDL MN0
 transform 1 0 0 0 1 0
-box 0 0 1160 320
+box 0 0 990 320
 use NCHDL MN1
 transform 1 0 0 0 1 320
-box 0 320 1160 640
+box 0 320 990 640
 use PCHDL MP0
-transform 1 0 1160 0 1 0
-box 1160 0 2320 320
+transform 1 0 990 0 1 0
+box 990 0 1980 320
 use PCHDL MP1
-transform 1 0 1160 0 1 320
-box 1160 320 2320 640
+transform 1 0 990 0 1 320
+box 990 320 1980 640
 use cut_M3M4_2x2 
-transform 1 0 2040 0 1 530
-box 2040 530 2240 730
+transform 1 0 1650 0 1 530
+box 1650 530 1834 714
 use cut_M1M3_2x1 
-transform 1 0 1400 0 1 50
-box 1400 50 1600 118
+transform 1 0 1170 0 1 50
+box 1170 50 1354 118
 use cut_M1M3_2x1 
-transform 1 0 1400 0 1 530
-box 1400 530 1600 598
+transform 1 0 1170 0 1 530
+box 1170 530 1354 598
 use cut_M1M4_2x1 
-transform 1 0 680 0 1 50
-box 680 50 880 118
+transform 1 0 630 0 1 50
+box 630 50 814 118
 use cut_M1M4_2x1 
-transform 1 0 680 0 1 530
-box 680 530 880 598
+transform 1 0 630 0 1 530
+box 630 530 814 598
 << labels >>
-flabel locali s 280 130 520 190 0 FreeSans 400 0 0 0 A
+flabel locali s 270 130 450 190 0 FreeSans 400 0 0 0 A
 port 1 nsew
-flabel locali s 680 210 920 270 0 FreeSans 400 0 0 0 Y
+flabel locali s 630 210 810 270 0 FreeSans 400 0 0 0 Y
 port 2 nsew
-flabel locali s 2200 120 2440 200 0 FreeSans 400 0 0 0 BULKP
+flabel locali s 1890 120 2070 200 0 FreeSans 400 0 0 0 BULKP
 port 3 nsew
-flabel locali s -120 120 120 200 0 FreeSans 400 0 0 0 BULKN
+flabel locali s -90 120 90 200 0 FreeSans 400 0 0 0 BULKN
 port 4 nsew
-flabel m3 s 2040 530 2240 730 0 FreeSans 400 0 0 0 VREF
+flabel m3 s 1650 530 1834 714 0 FreeSans 400 0 0 0 VREF
 port 5 nsew
-flabel m3 s 680 0 880 640 0 FreeSans 400 0 0 0 AVSS
+flabel m3 s 630 0 814 640 0 FreeSans 400 0 0 0 AVSS
 port 6 nsew
 << end >>

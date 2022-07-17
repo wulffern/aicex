@@ -1,41 +1,41 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1657978845
+timestamp 1658060514
 << checkpaint >>
-rect 0 0 2320 320
+rect 0 0 1980 320
 << locali >>
-rect 800 210 968 270
-rect 968 210 1520 270
-rect 968 210 1028 270
+rect 720 210 858 270
+rect 858 210 1260 270
+rect 858 210 918 270
 << poly >>
-rect 280 142 2040 178
+rect 270 142 1710 178
 << m3 >>
-rect 1400 0 1600 320
-rect 680 0 880 320
+rect 1170 0 1354 320
+rect 630 0 814 320
 use NCHDL MN0
 transform 1 0 0 0 1 0
-box 0 0 1160 320
+box 0 0 990 320
 use PCHDL MP0
-transform 1 0 1160 0 1 0
-box 1160 0 2320 320
+transform 1 0 990 0 1 0
+box 990 0 1980 320
 use cut_M1M4_2x1 
-transform 1 0 1400 0 1 50
-box 1400 50 1600 118
+transform 1 0 1170 0 1 50
+box 1170 50 1354 118
 use cut_M1M4_2x1 
-transform 1 0 680 0 1 50
-box 680 50 880 118
+transform 1 0 630 0 1 50
+box 630 50 814 118
 << labels >>
-flabel locali s 280 130 520 190 0 FreeSans 400 0 0 0 A
+flabel locali s 270 130 450 190 0 FreeSans 400 0 0 0 A
 port 1 nsew
-flabel locali s 680 210 920 270 0 FreeSans 400 0 0 0 Y
+flabel locali s 630 210 810 270 0 FreeSans 400 0 0 0 Y
 port 2 nsew
-flabel locali s 2200 120 2440 200 0 FreeSans 400 0 0 0 BULKP
+flabel locali s 1890 120 2070 200 0 FreeSans 400 0 0 0 BULKP
 port 3 nsew
-flabel locali s -120 120 120 200 0 FreeSans 400 0 0 0 BULKN
+flabel locali s -90 120 90 200 0 FreeSans 400 0 0 0 BULKN
 port 4 nsew
-flabel m3 s 1400 0 1600 320 0 FreeSans 400 0 0 0 AVDD
+flabel m3 s 1170 0 1354 320 0 FreeSans 400 0 0 0 AVDD
 port 5 nsew
-flabel m3 s 680 0 880 320 0 FreeSans 400 0 0 0 AVSS
+flabel m3 s 630 0 814 320 0 FreeSans 400 0 0 0 AVSS
 port 6 nsew
 << end >>

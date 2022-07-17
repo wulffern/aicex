@@ -81,6 +81,16 @@ input logic AVSS;
 endmodule
 
 //-------------------------------------------------------------
+// TIVX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module TIVX1_CV(A,Y,AVDD,AVSS);
+input logic A;
+input logic Y;
+input logic AVDD;
+input logic AVSS;
+endmodule
+
+//-------------------------------------------------------------
 // IVX2_CV <class 'cicpy.core.layoutcell.LayoutCell'>
 //-------------------------------------------------------------
 module IVX2_CV(A,Y,BULKP,BULKN,AVDD,AVSS);
@@ -432,6 +442,18 @@ input logic CKN;
 input logic CI;
 input logic AVDD;
 input logic AVSS;
+endmodule
+
+//-------------------------------------------------------------
+// TEST_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module TEST_CV(A,Y,AVDD,AVSS);
+input logic A;
+input logic Y;
+input logic AVDD;
+input logic AVSS;
+TAPCELLB_CV XA5 (AVDD,AVSS);
+TIVX1_CV XA2 (A,Y,AVDD,AVSS);
 endmodule
 
 //-------------------------------------------------------------

@@ -1,53 +1,53 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1657978845
+timestamp 1658060514
 << checkpaint >>
-rect 0 0 2320 640
+rect 0 0 1980 640
 << locali >>
-rect 770 210 830 430
-rect 1490 210 1550 430
-rect 800 530 968 590
-rect 968 530 1520 590
-rect 968 530 1028 590
+rect 690 210 750 430
+rect 1230 210 1290 430
+rect 720 530 858 590
+rect 858 530 1260 590
+rect 858 530 918 590
 << poly >>
-rect 280 142 2040 178
+rect 270 142 1710 178
 << m3 >>
-rect 1400 0 1600 640
-rect 680 0 880 640
+rect 1170 0 1354 640
+rect 630 0 814 640
 use NCHDL MN0
 transform 1 0 0 0 1 0
-box 0 0 1160 320
+box 0 0 990 320
 use NCHDL MN1
 transform 1 0 0 0 1 320
-box 0 320 1160 640
+box 0 320 990 640
 use PCHDL MP0
-transform 1 0 1160 0 1 0
-box 1160 0 2320 320
+transform 1 0 990 0 1 0
+box 990 0 1980 320
 use PCHDL MP1
-transform 1 0 1160 0 1 320
-box 1160 320 2320 640
+transform 1 0 990 0 1 320
+box 990 320 1980 640
 use cut_M1M4_2x1 
-transform 1 0 1400 0 1 50
-box 1400 50 1600 118
+transform 1 0 1170 0 1 50
+box 1170 50 1354 118
 use cut_M1M4_2x1 
-transform 1 0 680 0 1 50
-box 680 50 880 118
+transform 1 0 630 0 1 50
+box 630 50 814 118
 << labels >>
-flabel locali s 280 130 520 190 0 FreeSans 400 0 0 0 A
+flabel locali s 270 130 450 190 0 FreeSans 400 0 0 0 A
 port 1 nsew
-flabel locali s 1800 450 2040 510 0 FreeSans 400 0 0 0 CN
+flabel locali s 1530 450 1710 510 0 FreeSans 400 0 0 0 CN
 port 2 nsew
-flabel locali s 280 450 520 510 0 FreeSans 400 0 0 0 C
+flabel locali s 270 450 450 510 0 FreeSans 400 0 0 0 C
 port 3 nsew
-flabel locali s 680 530 920 590 0 FreeSans 400 0 0 0 Y
+flabel locali s 630 530 810 590 0 FreeSans 400 0 0 0 Y
 port 4 nsew
-flabel locali s 2200 120 2440 200 0 FreeSans 400 0 0 0 BULKP
+flabel locali s 1890 120 2070 200 0 FreeSans 400 0 0 0 BULKP
 port 5 nsew
-flabel locali s -120 120 120 200 0 FreeSans 400 0 0 0 BULKN
+flabel locali s -90 120 90 200 0 FreeSans 400 0 0 0 BULKN
 port 6 nsew
-flabel m3 s 1400 0 1600 640 0 FreeSans 400 0 0 0 AVDD
+flabel m3 s 1170 0 1354 640 0 FreeSans 400 0 0 0 AVDD
 port 7 nsew
-flabel m3 s 680 0 880 640 0 FreeSans 400 0 0 0 AVSS
+flabel m3 s 630 0 814 640 0 FreeSans 400 0 0 0 AVSS
 port 8 nsew
 << end >>

@@ -21,6 +21,11 @@ MN0 Y A AVSS BULKN NCHDL
 MP0 Y A AVDD BULKP PCHDL
 .ends
 
+.subckt TIVX1_CV A Y AVDD AVSS
+MN0 Y A AVSS AVSS NCHDL
+MP0 Y A AVDD AVDD PCHDL
+.ends
+
 .subckt IVX2_CV A Y BULKP BULKN AVDD AVSS
 MN0 Y A AVSS BULKN NCHDL
 MN1 AVSS A Y BULKN NCHDL
@@ -64,6 +69,8 @@ MN1 Y B AVSS BULKN NCHDL
 MP0 AVDD A B BULKP PCHDL
 MP1 Y B AVDD BULKP PCHDL
 .ends BFX1_CV
+
+
 
 
 
@@ -269,6 +276,11 @@ MP6_DMY  AVDD AVDD AVDD BULKP PCHDL
 *-----------------------------------------------------------------------------
 * SAR composite logic cells
 *---------------------------------------------------------------------------
+
+.subckt TEST_CV A Y AVDD AVSS
+XA5 AVDD AVSS TAPCELLB_CV
+XA2 A Y AVDD AVSS TIVX1_CV
+.ends
 
 
 .SUBCKT CAP_BSSW5_CV A B

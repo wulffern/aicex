@@ -1,62 +1,62 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1657978845
+timestamp 1658060514
 << checkpaint >>
-rect 0 0 2320 960
+rect 0 0 1980 960
 << locali >>
-rect 800 850 968 910
-rect 968 850 1520 910
-rect 968 850 1028 910
-rect 1890 130 1950 830
-rect 770 210 830 430
-rect 770 530 830 750
-rect 1490 210 1550 430
-rect 1490 530 1550 750
+rect 720 850 858 910
+rect 858 850 1260 910
+rect 858 850 918 910
+rect 1590 130 1650 830
+rect 690 210 750 430
+rect 690 530 750 750
+rect 1230 210 1290 430
+rect 1230 530 1290 750
 << m3 >>
-rect 1400 0 1600 960
-rect 680 0 880 960
+rect 1170 0 1354 960
+rect 630 0 814 960
 use NCHDL MN0
 transform 1 0 0 0 1 0
-box 0 0 1160 320
+box 0 0 990 320
 use NCHDL MN1
 transform 1 0 0 0 1 320
-box 0 320 1160 640
+box 0 320 990 640
 use NCHDL MN2
 transform 1 0 0 0 1 640
-box 0 640 1160 960
+box 0 640 990 960
 use PCHDL MP0
-transform 1 0 1160 0 1 0
-box 1160 0 2320 320
+transform 1 0 990 0 1 0
+box 990 0 1980 320
 use PCHDL MP1
-transform 1 0 1160 0 1 320
-box 1160 320 2320 640
+transform 1 0 990 0 1 320
+box 990 320 1980 640
 use PCHDL MP2
-transform 1 0 1160 0 1 640
-box 1160 640 2320 960
+transform 1 0 990 0 1 640
+box 990 640 1980 960
 use cut_M1M4_2x1 
-transform 1 0 1400 0 1 50
-box 1400 50 1600 118
+transform 1 0 1170 0 1 50
+box 1170 50 1354 118
 use cut_M1M4_2x1 
-transform 1 0 680 0 1 50
-box 680 50 880 118
+transform 1 0 630 0 1 50
+box 630 50 814 118
 << labels >>
-flabel locali s 2200 120 2440 200 0 FreeSans 400 0 0 0 BULKP
+flabel locali s 1890 120 2070 200 0 FreeSans 400 0 0 0 BULKP
 port 1 nsew
-flabel locali s -120 120 120 200 0 FreeSans 400 0 0 0 BULKN
+flabel locali s -90 120 90 200 0 FreeSans 400 0 0 0 BULKN
 port 2 nsew
-flabel locali s 280 130 520 190 0 FreeSans 400 0 0 0 A
+flabel locali s 270 130 450 190 0 FreeSans 400 0 0 0 A
 port 3 nsew
-flabel locali s 1800 770 2040 830 0 FreeSans 400 0 0 0 RST_N
+flabel locali s 1530 770 1710 830 0 FreeSans 400 0 0 0 RST_N
 port 4 nsew
-flabel locali s 280 770 520 830 0 FreeSans 400 0 0 0 EN
+flabel locali s 270 770 450 830 0 FreeSans 400 0 0 0 EN
 port 5 nsew
-flabel locali s 280 450 520 510 0 FreeSans 400 0 0 0 LCK_N
+flabel locali s 270 450 450 510 0 FreeSans 400 0 0 0 LCK_N
 port 6 nsew
-flabel locali s 680 850 920 910 0 FreeSans 400 0 0 0 CHL
+flabel locali s 630 850 810 910 0 FreeSans 400 0 0 0 CHL
 port 7 nsew
-flabel m3 s 1400 0 1600 960 0 FreeSans 400 0 0 0 AVDD
+flabel m3 s 1170 0 1354 960 0 FreeSans 400 0 0 0 AVDD
 port 8 nsew
-flabel m3 s 680 0 880 960 0 FreeSans 400 0 0 0 AVSS
+flabel m3 s 630 0 814 960 0 FreeSans 400 0 0 0 AVSS
 port 9 nsew
 << end >>

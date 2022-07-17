@@ -1,35 +1,35 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1657978845
+timestamp 1658060514
 << checkpaint >>
-rect 0 0 2320 320
+rect 0 0 1980 320
 << locali >>
-rect 1520 210 1688 270
-rect 1688 130 1920 190
-rect 1688 130 1748 270
+rect 1260 210 1398 270
+rect 1398 130 1620 190
+rect 1398 130 1458 270
 << poly >>
-rect 280 142 2040 178
+rect 270 142 1710 178
 << m3 >>
-rect 1400 0 1600 320
-rect 680 0 880 320
+rect 1170 0 1354 320
+rect 630 0 814 320
 use NCHDL MN0
 transform 1 0 0 0 1 0
-box 0 0 1160 320
+box 0 0 990 320
 use PCHDL MP0
-transform 1 0 1160 0 1 0
-box 1160 0 2320 320
+transform 1 0 990 0 1 0
+box 990 0 1980 320
 use cut_M1M4_2x1 
-transform 1 0 1400 0 1 50
-box 1400 50 1600 118
+transform 1 0 1170 0 1 50
+box 1170 50 1354 118
 use cut_M1M4_2x1 
-transform 1 0 680 0 1 50
-box 680 50 880 118
+transform 1 0 630 0 1 50
+box 630 50 814 118
 << labels >>
-flabel locali s 680 210 920 270 0 FreeSans 400 0 0 0 Y
+flabel locali s 630 210 810 270 0 FreeSans 400 0 0 0 Y
 port 1 nsew
-flabel m3 s 1400 0 1600 320 0 FreeSans 400 0 0 0 AVDD
+flabel m3 s 1170 0 1354 320 0 FreeSans 400 0 0 0 AVDD
 port 2 nsew
-flabel m3 s 680 0 880 320 0 FreeSans 400 0 0 0 AVSS
+flabel m3 s 630 0 814 320 0 FreeSans 400 0 0 0 AVSS
 port 3 nsew
 << end >>

@@ -3,21 +3,21 @@
 * PCHDL <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
 .SUBCKT PCHDL D G S B
-XM1 D G S B sky130_fd_pr__pfet_01v8  l=0.18  m=1  w=1.2  
+XM1 D G S B sky130_fd_pr__pfet_01v8  l=0.18  m=1  w=0.9  
 .ENDS
 
 *-------------------------------------------------------------
 * NCHDL <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
 .SUBCKT NCHDL D G S B
-XM1 D G S B sky130_fd_pr__nfet_01v8  l=0.18  m=1  w=1.2  
+XM1 D G S B sky130_fd_pr__nfet_01v8  l=0.18  m=1  w=0.9  
 .ENDS
 
 *-------------------------------------------------------------
 * NCHDLR <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
 .SUBCKT NCHDLR D G S B
-XM1 D G S B sky130_fd_pr__nfet_01v8  l=0.18  m=1  w=1.2  
+XM1 D G S B sky130_fd_pr__nfet_01v8  l=0.18  m=1  w=0.9  
 .ENDS
 
 *-------------------------------------------------------------
@@ -86,6 +86,14 @@ XMP0 A A AVDD BULKP PCHDL
 .SUBCKT IVX1_CV A Y BULKP BULKN AVDD AVSS
 XMN0 Y A AVSS BULKN NCHDL
 XMP0 Y A AVDD BULKP PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* TIVX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT TIVX1_CV A Y AVDD AVSS
+XMN0 Y A AVSS AVSS NCHDL
+XMP0 Y A AVDD AVDD PCHDL
 .ENDS
 
 *-------------------------------------------------------------
@@ -394,6 +402,14 @@ XMP3_DMY AVDD AVDD AVDD BULKP PCHDL
 XMP4_DMY AVDD AVDD AVDD BULKP PCHDL
 XMP5_DMY AVDD AVDD AVDD BULKP PCHDL
 XMP6_DMY AVDD AVDD AVDD BULKP PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* TEST_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT TEST_CV A Y AVDD AVSS
+XXA5 AVDD AVSS TAPCELLB_CV
+XXA2 A Y AVDD AVSS TIVX1_CV
 .ENDS
 
 *-------------------------------------------------------------

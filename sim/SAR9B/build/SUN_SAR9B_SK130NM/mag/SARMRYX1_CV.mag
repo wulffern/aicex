@@ -1,85 +1,85 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1657978845
+timestamp 1658060514
 << checkpaint >>
-rect 0 0 2320 3840
+rect 0 0 1980 3840
 << locali >>
-rect 1920 450 2088 510
-rect 1920 2690 2088 2750
-rect 1920 3650 2088 3710
-rect 2088 450 2148 3710
-rect 460 1670 568 1730
-rect 568 1490 800 1550
-rect 568 1490 628 1730
-rect 460 1730 520 1790
-rect 400 3330 568 3390
-rect 568 1810 800 1870
-rect 568 1810 628 3390
-rect 400 2370 568 2430
-rect 568 1810 800 1870
-rect 568 1810 628 2430
-rect 172 770 400 830
-rect 172 3010 400 3070
-rect 172 770 232 3070
+rect 1620 450 1758 510
+rect 1620 2690 1758 2750
+rect 1620 3650 1758 3710
+rect 1758 450 1818 3710
+rect 390 1670 498 1730
+rect 498 1490 720 1550
+rect 498 1490 558 1730
+rect 390 1730 450 1790
+rect 360 3330 498 3390
+rect 498 1810 720 1870
+rect 498 1810 558 3390
+rect 360 2370 498 2430
+rect 498 1810 720 1870
+rect 498 1810 558 2430
+rect 162 770 360 830
+rect 162 3010 360 3070
+rect 162 770 222 3070
 << m1 >>
-rect 400 1090 568 1150
-rect 400 2050 568 2110
-rect 568 1090 628 2118
-rect 172 450 400 510
-rect 172 3650 400 3710
-rect 172 2690 400 2750
-rect 172 450 232 3718
+rect 360 1090 498 1150
+rect 360 2050 498 2110
+rect 498 1090 558 2118
+rect 162 450 360 510
+rect 162 3650 360 3710
+rect 162 2690 360 2750
+rect 162 450 222 3718
 << m3 >>
-rect 1400 0 1600 3840
-rect 680 0 880 3840
+rect 1170 0 1354 3840
+rect 630 0 814 3840
 use TAPCELLB_CV XA0
 transform 1 0 0 0 1 0
-box 0 0 2320 320
+box 0 0 1980 320
 use SAREMX1_CV XA1
 transform 1 0 0 0 1 320
-box 0 320 2320 1600
+box 0 320 1980 1600
 use IVX1_CV XA2
 transform 1 0 0 0 1 1600
-box 0 1600 2320 1920
+box 0 1600 1980 1920
 use SARLTX1_CV XA4
 transform 1 0 0 0 1 1920
-box 0 1920 2320 2880
+box 0 1920 1980 2880
 use SARLTX1_CV XA5
 transform 1 0 0 0 1 2880
-box 0 2880 2320 3840
+box 0 2880 1980 3840
 use cut_M1M2_2x1 
-transform 1 0 320 0 1 1090
-box 320 1090 520 1158
+transform 1 0 266 0 1 1090
+box 266 1090 450 1158
 use cut_M1M2_2x1 
-transform 1 0 320 0 1 2050
-box 320 2050 520 2118
+transform 1 0 266 0 1 2050
+box 266 2050 450 2118
 use cut_M1M2_2x1 
-transform 1 0 280 0 1 450
-box 280 450 480 518
+transform 1 0 270 0 1 450
+box 270 450 454 518
 use cut_M1M2_2x1 
-transform 1 0 280 0 1 3650
-box 280 3650 480 3718
+transform 1 0 270 0 1 3650
+box 270 3650 454 3718
 use cut_M1M2_2x1 
-transform 1 0 280 0 1 2690
-box 280 2690 480 2758
+transform 1 0 270 0 1 2690
+box 270 2690 454 2758
 << labels >>
-flabel locali s 280 2050 520 2110 0 FreeSans 400 0 0 0 CMP_OP
+flabel locali s 270 2050 450 2110 0 FreeSans 400 0 0 0 CMP_OP
 port 1 nsew
-flabel locali s 1800 3650 2040 3710 0 FreeSans 400 0 0 0 RST_N
+flabel locali s 1530 3650 1710 3710 0 FreeSans 400 0 0 0 RST_N
 port 2 nsew
-flabel locali s 280 450 520 510 0 FreeSans 400 0 0 0 EN
+flabel locali s 270 450 450 510 0 FreeSans 400 0 0 0 EN
 port 3 nsew
-flabel locali s 280 3010 520 3070 0 FreeSans 400 0 0 0 CMP_ON
+flabel locali s 270 3010 450 3070 0 FreeSans 400 0 0 0 CMP_ON
 port 4 nsew
-flabel locali s 680 2770 920 2830 0 FreeSans 400 0 0 0 CHL_OP
+flabel locali s 630 2770 810 2830 0 FreeSans 400 0 0 0 CHL_OP
 port 5 nsew
-flabel locali s 680 3730 920 3790 0 FreeSans 400 0 0 0 CHL_ON
+flabel locali s 630 3730 810 3790 0 FreeSans 400 0 0 0 CHL_ON
 port 6 nsew
-flabel locali s 1400 690 1640 750 0 FreeSans 400 0 0 0 ENO
+flabel locali s 1170 690 1350 750 0 FreeSans 400 0 0 0 ENO
 port 7 nsew
-flabel m3 s 1400 0 1600 3840 0 FreeSans 400 0 0 0 AVDD
+flabel m3 s 1170 0 1354 3840 0 FreeSans 400 0 0 0 AVDD
 port 8 nsew
-flabel m3 s 680 0 880 3840 0 FreeSans 400 0 0 0 AVSS
+flabel m3 s 630 0 814 3840 0 FreeSans 400 0 0 0 AVSS
 port 9 nsew
 << end >>

@@ -1,80 +1,80 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1657978845
+timestamp 1658060514
 << checkpaint >>
-rect 0 0 2320 960
+rect 0 0 1980 960
 << locali >>
-rect 800 50 968 110
-rect 968 50 1520 110
-rect 968 50 1028 110
-rect 800 850 968 910
-rect 968 850 1520 910
-rect 968 850 1028 910
-rect 800 690 968 750
-rect 968 690 1520 750
-rect 968 690 1028 750
-rect 370 130 430 510
-rect 400 770 568 830
-rect 568 50 800 110
-rect 568 50 628 830
-rect 1920 130 2088 190
-rect 1920 770 2088 830
-rect 2088 130 2148 830
-rect 770 210 830 430
-rect 770 530 830 750
-rect 1490 210 1550 430
-rect 1490 530 1550 750
+rect 720 50 858 110
+rect 858 50 1260 110
+rect 858 50 918 110
+rect 720 850 858 910
+rect 858 850 1260 910
+rect 858 850 918 910
+rect 720 690 858 750
+rect 858 690 1260 750
+rect 858 690 918 750
+rect 330 130 390 510
+rect 360 770 498 830
+rect 498 50 720 110
+rect 498 50 558 830
+rect 1620 130 1758 190
+rect 1620 770 1758 830
+rect 1758 130 1818 830
+rect 690 210 750 430
+rect 690 530 750 750
+rect 1230 210 1290 430
+rect 1230 530 1290 750
 << poly >>
-rect 280 142 2040 178
+rect 270 142 1710 178
 << m3 >>
-rect 1520 370 1688 430
-rect 1688 450 1920 510
-rect 1688 370 1748 518
-rect 1400 0 1600 960
-rect 680 0 880 960
+rect 1260 370 1398 430
+rect 1398 450 1620 510
+rect 1398 370 1458 518
+rect 1170 0 1354 960
+rect 630 0 814 960
 use NCHDL MN0
 transform 1 0 0 0 1 0
-box 0 0 1160 320
+box 0 0 990 320
 use NCHDL MN1
 transform 1 0 0 0 1 320
-box 0 320 1160 640
+box 0 320 990 640
 use NCHDL MN2
 transform 1 0 0 0 1 640
-box 0 640 1160 960
+box 0 640 990 960
 use PCHDL MP0
-transform 1 0 1160 0 1 0
-box 1160 0 2320 320
+transform 1 0 990 0 1 0
+box 990 0 1980 320
 use PCHDL MP1_DMY
-transform 1 0 1160 0 1 320
-box 1160 320 2320 640
+transform 1 0 990 0 1 320
+box 990 320 1980 640
 use PCHDL MP2
-transform 1 0 1160 0 1 640
-box 1160 640 2320 960
+transform 1 0 990 0 1 640
+box 990 640 1980 960
 use cut_M1M4_2x1 
-transform 1 0 1400 0 1 370
-box 1400 370 1600 438
+transform 1 0 1170 0 1 370
+box 1170 370 1354 438
 use cut_M1M4_2x1 
-transform 1 0 1800 0 1 450
-box 1800 450 2000 518
+transform 1 0 1530 0 1 450
+box 1530 450 1714 518
 use cut_M1M4_2x1 
-transform 1 0 1400 0 1 210
-box 1400 210 1600 278
+transform 1 0 1170 0 1 210
+box 1170 210 1354 278
 use cut_M1M4_2x1 
-transform 1 0 680 0 1 210
-box 680 210 880 278
+transform 1 0 630 0 1 210
+box 630 210 814 278
 use cut_M1M4_2x1 
-transform 1 0 680 0 1 370
-box 680 370 880 438
+transform 1 0 630 0 1 370
+box 630 370 814 438
 << labels >>
-flabel locali s 1800 130 2040 190 0 FreeSans 400 0 0 0 C
+flabel locali s 1530 130 1710 190 0 FreeSans 400 0 0 0 C
 port 1 nsew
-flabel locali s 1400 690 1640 750 0 FreeSans 400 0 0 0 B
+flabel locali s 1170 690 1350 750 0 FreeSans 400 0 0 0 B
 port 2 nsew
-flabel locali s 680 850 920 910 0 FreeSans 400 0 0 0 A
+flabel locali s 630 850 810 910 0 FreeSans 400 0 0 0 A
 port 3 nsew
-flabel m3 s 1400 0 1600 960 0 FreeSans 400 0 0 0 AVDD
+flabel m3 s 1170 0 1354 960 0 FreeSans 400 0 0 0 AVDD
 port 4 nsew
-flabel m3 s 680 0 880 960 0 FreeSans 400 0 0 0 AVSS
+flabel m3 s 630 0 814 960 0 FreeSans 400 0 0 0 AVSS
 port 5 nsew
 << end >>

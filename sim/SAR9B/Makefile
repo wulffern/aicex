@@ -62,7 +62,8 @@ NCELL=build/${LIB}/mag/${CELL}
 MCELL=${NCELL}.mag
 
 lvs:
-	echo "set VDD AVDD\nset GND AVSS\nset SUB AVSS\nload ${NCELL}.mag\nextract all\next2spice lvs\next2spice subcircuits off\next2spice -o clvs/${CELL}_lvs.spi\nquit" > clvs/${CELL}_lvs.tcl
+	#echo "load ${NCELL}.mag\nextract all\nextract no capacitance\nextract no resistance\n\next2spice lvs\next2spice subcircuits off\next2spice -o clvs/${CELL}_lvs.spi\nquit" > clvs/${CELL}_lvs.tcl
+	echo "set VDD AVDD\nset GND AVSS\nset SUB AVSS\nload ${NCELL}.mag\nextract all\n\next2spice lvs\next2spice subcircuits off\next2spice -o clvs/${CELL}_lvs.spi\nquit" > clvs/${CELL}_lvs.tcl
 	magic -noconsole -dnull clvs/${CELL}_lvs.tcl
 	netgen -batch lvs "clvs/${CELL}_lvs.spi ${CELL}"  "${BUILD}/${LIB}.spi ${CELL}" ${PDKPATH}/libs.tech/netgen/sky130A_setup.tcl clvs/${CELL}_lvs.log
 

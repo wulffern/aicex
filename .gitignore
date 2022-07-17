@@ -8,6 +8,8 @@ __pycache__/
 *.run
 *.csv
 *.pdf
+*.ext
+*.gds
 output*/
 # Distribution / packaging
 .Python

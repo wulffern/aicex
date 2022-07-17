@@ -154,6 +154,7 @@
               "addPortOnRects" : [  ["A","M1", "MN0:G"] , ["Y", "M1", "MN0:D"], ["BULKP","M1","MP0:B"], ["BULKN","M1","MN0:B"] ]
           }
         },
+        { "name": "TIVX1_CV", "inherit" : "IVX1_CV", "setYoffsetHalf" : ""},
         { "name": "IVX2_CV", "inherit" : "IVX1_CV", "setYoffsetHalf" : ""},
         { "name": "IVX4_CV", "inherit" : "IVX2_CV"},
         { "name": "IVX8_CV" ,"inherit" : "IVX2_CV"},
@@ -532,6 +533,12 @@
           },
           "afterRoute" : {
               "addPortOnRects" : [["BULKP","M1"],["BULKN","M1"], ["AVDD","M4"], ["CK","M1", "MN6:G" ],["CKN","M1","MN0:G"],["CI","M1","MN1:G"]]
+          }
+        },
+        { "name" : "TEST_CV",
+          "class" : "Layout::LayoutDigitalCell",
+          "afterRoute"  : {
+              "addPortOnRects" : [["A","M1"],["Y","M1"]]
           }
         },
         { "name": "SARBSSWCTRL_CV" ,
