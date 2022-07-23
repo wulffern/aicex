@@ -31,6 +31,12 @@
 * Include
 *----------------------------------------------------------------
 
+*ifdef Lay
+.include ../clpe/SAR9B_CV_lpe.spi
+.include "../../../lib/SUN_TR_SKY130N.spi"
+*else
+.include ../build/SUN_SAR9B_SK130NM.spice
+*endif
 
 
 
@@ -61,7 +67,7 @@
 .param fbin = 5
 
 *- number of cycles in FFT
-.param nbpt = 64
+.param nbpt = 128
 
 *- Sampling frequency
 .param fs = 1/PERIOD_CLK
@@ -124,7 +130,7 @@ B2 RO 0 V = V(RO_VDD)/V(VDD)
 * NGSPICE control
 *----------------------------------------------------------------
 
-.probe v(SARN) v(SARP) v(RO) v(SAR_IP) v(SAR_IN)
+.probe v(SARN) v(SARP) v(RO) v(SAR_IP) v(SAR_IN) V(DONE) v(CK_SAMPLE)
 
 
 .control
@@ -132,7 +138,7 @@ set color0=white
 set color1=black
 unset askquit
 
-tran 1n 7u 1n 5n
+tran 1n 13.2u 1n 5n
 
 
 write

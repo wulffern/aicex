@@ -46,23 +46,29 @@ for f in files:
 
     fullscale_in = 1.5
 
-    sigi = df["v(sar_ip)"] - df["v(sar_in)"]/fullscale_in
+    sigi = df["v(sar_ip)"] - df["v(sar_in)"]
+    sigibssw = df["v(sarp)"] - df["v(sarn)"]
     saro = df["v(ro)"]
 
     sigixx =  sigi.resample(pd.Timedelta(tsample,unit="ns")).first()
+    sigibsswxx =  sigi.resample(pd.Timedelta(tsample,unit="ns")).first()
     saroxx =  saro.resample(pd.Timedelta(tsample,unit="ns")).first()
 
+    print(len(sigixx))
     sigixx = sigixx[-nbpt-1:-1]
+    sigibsswxx = sigixx[-nbpt-1:-1]
     saroxx = saroxx[-nbpt-1:-1]
 
     scc = cs.SimCalc()
     (data1,ydB1) = scc.fftWithHanning(sigixx.to_numpy())
+    #(data2,ydB2) = scc.fftWithHanning(sigibsswxx.to_numpy())
     (data3,ydB3) = scc.fftWithHanning(saroxx.to_numpy())
 
     print("input signal: " + str(data1))
     print("output signal: " + str(data3))
 
     axes[0].plot(ydB1,label=f + " fft sigi",linestyle='solid',marker="d")
+    #axes[0].plot(ydB2,label=f + " fft sigi",linestyle='solid',marker="-")
     axes[0].plot(ydB3,label=f + " fft saro",linestyle='solid',marker="o")
 
 axes[0].set_ylabel("fft(v(ro))")

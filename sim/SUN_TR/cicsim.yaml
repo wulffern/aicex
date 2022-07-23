@@ -5,5 +5,5 @@ ngspice:
 
 corner:
   Sch: |
-    .include ../build/SUN_TR_SK130NM.spice
+
   Lay: |
