@@ -1,0 +1,99 @@
+//--------------------------------------------------------------------
+//        Copyright (c) 2016 Carsten Wulff Software, Norway
+//--------------------------------------------------------------------
+// Created       : wulff at 2016-11-16
+//--------------------------------------------------------------------
+
+{
+    "include" : [
+
+    ],
+    "noPortTranslation" : 1,
+    "patterns" : {
+        "Z" : [ "-",
+                "x"],
+        "Y" : [ "x",
+                "-"]
+    },
+
+    "cells":
+    [
+        { "name" : "DFTRIX1_CV",
+          "class" : "Layout::LayoutDigitalCell",
+          "boundaryIgnoreRouting" : 1,
+          "beforeRoute" : {
+              "addConnectivityRoutes" : [
+                  ["M1","QN$","-|--","onTopL"],
+                  ["M1","^C$","|-","onTopL"]
+              ]
+          },
+          "afterRoute"  : {
+              "addPortOnRects" : [
+                  ["D","M1"],
+                  ["C","M1","XA0:C"]
+              ]
+
+          }
+        },
+        { "name" : "RG12TRIX1_CV",
+          "class" : "Layout::LayoutDigitalCell",
+          "boundaryIgnoreRouting" : 0,
+          "composite" : 1,
+          "alternateGroup" : 1,
+          "noPowerRoute" : 0,
+          "afterPlace": {
+              "addRouteRings" :[
+                  ["M1","CK","b",1,4],
+                  ["M1","C","t"],
+                  ["M1","CN","t"],
+				  ["M1","Y<11:0>","t",1,1]
+              ],
+              "addPowerRings" :[
+                  ["M1","AVSS","b"],
+                  ["M1","AVDD","b"]
+              ]
+
+          },
+          "beforeRoute" : {
+              "addConnectivityRoutes" : [
+              ],
+              "addRouteConnections" : [
+                  ["^CN$","X","top","M2"],
+                  ["^C$","X","top","M2"],
+                  ["CK","X","bottom","M2"],
+                  ["Y","X","top","M2"]
+              ],
+              "addPowerConnections" : [
+                  ["AVDD","X","bottom"],
+				  ["AVSS","X","bottom"]
+              ]
+          },
+          "afterRoute" : {
+              "trimRouteRings" : [
+                  [ "Y","top","r"]
+              ]
+          }
+        },
+        { "name" : "SUN_TR",
+          "class" : "Layout::LayoutDigitalCell",
+          "alternateGroup" : 1,
+          "noPowerRoute" : 1,
+          "boundaryIgnoreRouting": 0,
+          "composite" : 1,
+          "afterPlace" : [
+             {"addPowerRings" :[
+                 ["M1","AVSS"],
+                 ["M1","AVDD"]
+             ]}
+          ],
+          "beforeRoute" : {
+               "addPowerConnections" : [
+                 ["AVDD","X","bottom"],
+                 ["AVSS","X","bottom"]
+               ]
+          }
+
+        }
+
+    ]
+}

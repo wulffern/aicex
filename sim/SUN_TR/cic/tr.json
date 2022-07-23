@@ -1,0 +1,126 @@
+{
+    "cells":
+    [
+
+		{ "comment" : ["-------------------------------------------------------",
+                       " CMOS bulk transistors                         ",
+                       "-------------------------------------------------------"]
+        },
+
+        { "name" : "NCHDLCM",
+          "setYoffsetHalf" : 1,
+          "class" : "Layout::LayoutDigitalCell",
+          "beforeRoute" : {
+              "addConnectivityRoutes" : [
+                  ["M1","^G","||","onTopL"]
+              ]
+          },
+          "afterRoute" : {
+              "addPortOnRects" : [  ["B","M1", "M0:B"] ]
+          }
+        }
+         ,
+        { "name" : "PCHDLCM",
+          "setYoffsetHalf" : 1,
+          "class" : "Layout::LayoutDigitalCell",
+          "beforeRoute" : {
+              "addConnectivityRoutes" : [
+                  ["M1","^G","||","onTopL"]
+              ]
+          },
+          "afterRoute" : {
+              "addPortOnRects" : [  ["B","M1", "M0:B"] ]
+          }
+        }
+         ,
+        { "name" : "NCHDLA",
+          "setYoffsetHalf" : 1,
+          "class" : "Layout::LayoutDigitalCell",
+          "beforeRoute" : {
+              "addConnectivityRoutes" : [
+                  ["M1","^S","-|--","onTopL"],
+                  ["M1","^G","||","onTopL"]
+              ]
+          },
+          "afterRoute" : {
+              "addPortOnRects" : [  ["B","M1", "M0:B"] ]
+          }
+        }
+         ,
+        { "name" : "PCHDLA",
+          "setYoffsetHalf" : 1,
+          "class" : "Layout::LayoutDigitalCell",
+          "beforeRoute" : {
+              "addConnectivityRoutes" : [
+                  ["M1","^S","--|-","onTopL"],
+                  ["M1","^D","-|--","onTopR"],
+                  ["M1","^G","||","onTopL"]
+              ]
+          },
+          "afterRoute" : {
+              "addPortOnRects" : [  ["B","M1", "M0:B"] ]
+          }
+        },
+        { "name" : "NCHDLCM2",
+          "setYoffsetHalf" : 0,
+          "inherit" : "NCHDLA",
+          "class" : "Layout::LayoutDigitalCell",
+          //"spiceRegex" : [[" NCHDL\s*$"," NCHDLCM"]],
+          "beforeRoute" : {
+              "addConnectivityRoutes" : [
+                  ["M1","^D","||","onTopL"]
+              ]
+          },
+          "afterRoute" : {
+              "addPortOnRects" : [  ["B","M1", "M0:M0:B"] ]
+          }
+
+        }
+         ,
+        { "name" : "PCHDLCM2",
+          "setYoffsetHalf" : 0,
+          "class" : "Layout::LayoutDigitalCell",
+          "inherit" : "PCHDLA",
+           "beforeRoute" : {
+              "addConnectivityRoutes" : [
+                  ["M1","^D","||","onTopL"]
+              ]
+          },
+          "afterRoute" : {
+              "addPortOnRects" : [  ["B","M1", "M0:M0:B"] ]
+          }
+          //"spiceRegex" : [[" NCHDL\s*$"," PCHDLCM"]]
+        },
+        { "name" : "CPCHDLCM2",
+          "setYoffsetHalf" : 0,
+          "class" : "Layout::LayoutDigitalCell",
+           "beforeRoute" : {
+              "addConnectivityRoutes" : [
+                  ["M1","^CS","-|--","onTopL"]
+              ]
+          },
+          "afterRoute" : {
+              "addPortOnRects" : [  ["B","M1", "M0:B"],["S","M1","M0:S"] ]
+          }
+          //"spiceRegex" : [[" NCHDL\s*$"," PCHDLCM"]]
+         },
+         { "name" : "CNCHDLCM2",
+           "setYoffsetHalf" : 0,
+           "class" : "Layout::LayoutDigitalCell",
+           "beforeRoute" : {
+              "addConnectivityRoutes" : [
+                  ["M1","^CS","--|-","onTopL"]
+              ]
+          },
+          "afterRoute" : {
+              "addPortOnRects" : [  ["B","M1", "M0:B"],["S","M1","M0:S"] ]
+          }
+          //"spiceRegex" : [[" NCHDL\s*$"," PCHDLCM"]]
+        }
+
+
+
+
+    ]
+
+}

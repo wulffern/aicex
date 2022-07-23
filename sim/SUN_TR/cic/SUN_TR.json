@@ -1,0 +1,14 @@
+{
+	"options" :
+	{
+		"ignoreSetYoffsetHalf" : false
+	},
+	"include" : [
+		"dmos_sky130nm_core.json",
+		"tr.json",
+		"dig.json",
+		"components.json"
+
+	],
+    "cells" : []
+}
