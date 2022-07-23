@@ -1,42 +1,42 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1658072521
+timestamp 1658582973
 << checkpaint >>
-rect 0 0 8460 4800
+rect 0 0 10152 5280
 << m3 >>
-rect -42 760 4260 828
-rect -42 1720 4260 1788
-rect -42 2680 4260 2748
-rect -42 3640 4260 3708
-rect -42 4600 4260 4668
-rect -42 760 26 4668
-rect 4260 -40 8494 28
-rect 4260 920 8494 988
-rect 4260 1880 8494 1948
-rect 4260 2840 8494 2908
-rect 4260 3800 8494 3868
-rect 8494 -40 8562 3868
-rect 90 2680 8430 2760
-rect 90 -40 8430 40
+rect -40 836 5112 912
+rect -40 1892 5112 1968
+rect -40 2948 5112 3024
+rect -40 4004 5112 4080
+rect -40 5060 5112 5136
+rect -40 836 36 5136
+rect 5112 -44 10188 32
+rect 5112 1012 10188 1088
+rect 5112 2068 10188 2144
+rect 5112 3124 10188 3200
+rect 5112 4180 10188 4256
+rect 10188 -44 10264 4256
+rect 108 2948 10116 3036
+rect 108 -44 10116 44
 use CAP_BSSW_CV XCAPB0
 transform 1 0 0 0 1 0
-box 0 0 8460 960
+box 0 0 10152 1056
 use CAP_BSSW_CV XCAPB1
-transform 1 0 0 0 1 960
-box 0 960 8460 1920
+transform 1 0 0 0 1 1056
+box 0 1056 10152 2112
 use CAP_BSSW_CV XCAPB2
-transform 1 0 0 0 1 1920
-box 0 1920 8460 2880
+transform 1 0 0 0 1 2112
+box 0 2112 10152 3168
 use CAP_BSSW_CV XCAPB3
-transform 1 0 0 0 1 2880
-box 0 2880 8460 3840
+transform 1 0 0 0 1 3168
+box 0 3168 10152 4224
 use CAP_BSSW_CV XCAPB4
-transform 1 0 0 0 1 3840
-box 0 3840 8460 4800
+transform 1 0 0 0 1 4224
+box 0 4224 10152 5280
 << labels >>
-flabel m3 s 90 2680 8430 2760 0 FreeSans 400 0 0 0 A
+flabel m3 s 108 2948 10116 3036 0 FreeSans 400 0 0 0 A
 port 1 nsew
-flabel m3 s 90 -40 8430 40 0 FreeSans 400 0 0 0 B
+flabel m3 s 108 -44 10116 44 0 FreeSans 400 0 0 0 B
 port 2 nsew
 << end >>

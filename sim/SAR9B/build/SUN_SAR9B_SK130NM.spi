@@ -3,65 +3,65 @@
 * DMOS_BULKP (cIcCore::PatternTransistor)
 *-------------------------------------------------------------
 .SUBCKT DMOS_BULKP D G S B
-M1 D G S B nch w=0.9 l=0.18 nf=1 M=1
+M1 D G S B nch w=1.08 l=0.18 nf=1 M=1
 .ENDS 
 
 *-------------------------------------------------------------
 * DMOS_BULKN (cIcCore::PatternTransistor)
 *-------------------------------------------------------------
 .SUBCKT DMOS_BULKN D G S B
-M1 D G S B nch w=0.9 l=0.18 nf=1 M=1
+M1 D G S B nch w=1.08 l=0.18 nf=1 M=1
 .ENDS 
 
 *-------------------------------------------------------------
 * PCHDL (cIcCore::PatternTransistor)
 *-------------------------------------------------------------
 .SUBCKT PCHDL D G S B
-XM1 D G S B sky130_fd_pr__pfet_01v8 w=0.9 l=0.18 nf=1 M=1
+XM1 D G S B sky130_fd_pr__pfet_01v8 w=1.08 l=0.18 nf=1 M=1
 .ENDS 
 
 *-------------------------------------------------------------
 * NCHDL (cIcCore::PatternTransistor)
 *-------------------------------------------------------------
 .SUBCKT NCHDL D G S B
-XM1 D G S B sky130_fd_pr__nfet_01v8 w=0.9 l=0.18 nf=1 M=1
+XM1 D G S B sky130_fd_pr__nfet_01v8 w=1.08 l=0.18 nf=1 M=1
 .ENDS 
 
 *-------------------------------------------------------------
 * NCHDLR (cIcCore::PatternTransistor)
 *-------------------------------------------------------------
 .SUBCKT NCHDLR D G S B
-XM1 D G S B sky130_fd_pr__nfet_01v8 w=0.9 l=0.18 nf=1 M=1
+XM1 D G S B sky130_fd_pr__nfet_01v8 w=1.08 l=0.18 nf=1 M=1
 .ENDS 
 
 *-------------------------------------------------------------
 * CAPBASE_LEFT_SIDE_PORT (cIcCore::PatternCapacitor)
 *-------------------------------------------------------------
 .SUBCKT CAPBASE_LEFT_SIDE_PORT A B
-R1 A NC0 sky130_fd_pr__res_generic_m3 w=0.4 l=0.3
-R2 B NC1 sky130_fd_pr__res_generic_m3 w=0.4 l=0.3
+R1 A NC0 sky130_fd_pr__res_generic_m3 w=0.44 l=0.36
+R2 B NC1 sky130_fd_pr__res_generic_m3 w=0.44 l=0.36
 .ENDS 
 
 *-------------------------------------------------------------
 * RM1 (cIcCore::PatternResistor)
 *-------------------------------------------------------------
 .SUBCKT RM1 A B
-RR1 A B sky130_fd_pr__res_generic_l1 w=0.3 l=0.3
+RR1 A B sky130_fd_pr__res_generic_l1 w=0.38 l=0.3
 .ENDS 
 
 *-------------------------------------------------------------
 * RM4 (cIcCore::PatternResistor)
 *-------------------------------------------------------------
 .SUBCKT RM4 A B
-R1 A B sky130_fd_pr__res_generic_m3 w=0.34 l=0.34
+R1 A B sky130_fd_pr__res_generic_m3 w=0.38 l=0.38
 .ENDS 
 
 *-------------------------------------------------------------
 * CAP_BSSW_CV (cIcCore::PatternCapacitor)
 *-------------------------------------------------------------
 .SUBCKT CAP_BSSW_CV A B
-R1 A NC0 sky130_fd_pr__res_generic_m3 w=0.4 l=0.3
-R2 B NC1 sky130_fd_pr__res_generic_m3 w=0.4 l=0.3
+R1 A NC0 sky130_fd_pr__res_generic_m3 w=0.44 l=0.36
+R2 B NC1 sky130_fd_pr__res_generic_m3 w=0.44 l=0.36
 .ENDS 
 
 *-------------------------------------------------------------
@@ -97,14 +97,6 @@ XMP0 A A AVDD BULKP PCHDL
 .SUBCKT IVX1_CV A Y BULKP BULKN AVDD AVSS
 XMN0 Y A AVSS BULKN NCHDL
 XMP0 Y A AVDD BULKP PCHDL
-.ENDS 
-
-*-------------------------------------------------------------
-* TIVX1_CV (cIcCore::LayoutCell)
-*-------------------------------------------------------------
-.SUBCKT TIVX1_CV A Y AVDD AVSS
-XMN0 Y A AVSS AVSS NCHDL
-XMP0 Y A AVDD AVDD PCHDL
 .ENDS 
 
 *-------------------------------------------------------------
@@ -420,7 +412,6 @@ XMP6_DMY AVDD AVDD AVDD BULKP PCHDL
 *-------------------------------------------------------------
 .SUBCKT TEST_CV A Y AVDD AVSS
 XA5 AVDD AVSS TAPCELLB_CV
-XA2 A Y AVDD AVSS TIVX1_CV
 .ENDS 
 
 *-------------------------------------------------------------

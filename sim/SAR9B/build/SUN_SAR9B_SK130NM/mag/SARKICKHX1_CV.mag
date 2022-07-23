@@ -1,106 +1,106 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1658072521
+timestamp 1658582973
 << checkpaint >>
-rect 0 0 2100 2240
+rect 0 0 2520 2464
 << locali >>
-rect 690 210 750 2030
-rect 720 210 874 270
-rect 874 50 1380 110
-rect 874 50 934 270
-rect 330 450 390 1790
-rect 1710 450 1770 2110
-rect 1350 210 1410 2190
-rect 630 2130 1470 2190
-rect 1380 2130 1534 2190
-rect 1534 2050 1740 2110
-rect 1534 2050 1594 2190
-rect 690 210 750 430
-rect 690 530 750 750
-rect 690 850 750 1070
-rect 690 1170 750 1390
-rect 690 1490 750 1710
-rect 690 1810 750 2030
-rect 1350 210 1410 430
-rect 1350 530 1410 750
-rect 1350 850 1410 1070
-rect 1350 1170 1410 1390
-rect 1350 1490 1410 1710
-rect 1350 1810 1410 2030
-rect 2010 120 2190 200
-rect -90 120 90 200
-rect 270 2050 450 2110
-rect 270 130 450 190
-rect 270 450 450 510
+rect 834 234 894 2230
+rect 864 234 1032 294
+rect 1032 58 1656 118
+rect 1032 58 1092 294
+rect 402 498 462 1966
+rect 2058 498 2118 2318
+rect 1626 234 1686 2406
+rect 756 2346 1764 2406
+rect 1656 2346 1824 2406
+rect 1824 2258 2088 2318
+rect 1824 2258 1884 2406
+rect 834 234 894 470
+rect 834 586 894 822
+rect 834 938 894 1174
+rect 834 1290 894 1526
+rect 834 1642 894 1878
+rect 834 1994 894 2230
+rect 1626 234 1686 470
+rect 1626 586 1686 822
+rect 1626 938 1686 1174
+rect 1626 1290 1686 1526
+rect 1626 1642 1686 1878
+rect 1626 1994 1686 2230
+rect 2412 132 2628 220
+rect -108 132 108 220
+rect 324 2258 540 2318
+rect 324 146 540 206
+rect 324 498 540 558
 << poly >>
-rect 270 142 1830 178
+rect 324 158 2196 194
 << m3 >>
-rect 1290 0 1474 2240
-rect 630 0 814 2240
-rect 1290 0 1474 2240
-rect 630 0 814 2240
+rect 1548 0 1748 2464
+rect 756 0 956 2464
+rect 1548 0 1748 2464
+rect 756 0 956 2464
 use NCHDL MN0
 transform 1 0 0 0 1 0
-box 0 0 1050 320
+box 0 0 1260 352
 use NCHDL MN1
-transform 1 0 0 0 1 320
-box 0 320 1050 640
+transform 1 0 0 0 1 352
+box 0 352 1260 704
 use NCHDL MN2
-transform 1 0 0 0 1 640
-box 0 640 1050 960
+transform 1 0 0 0 1 704
+box 0 704 1260 1056
 use NCHDL MN3
-transform 1 0 0 0 1 960
-box 0 960 1050 1280
+transform 1 0 0 0 1 1056
+box 0 1056 1260 1408
 use NCHDL MN4
-transform 1 0 0 0 1 1280
-box 0 1280 1050 1600
+transform 1 0 0 0 1 1408
+box 0 1408 1260 1760
 use NCHDL MN5
-transform 1 0 0 0 1 1600
-box 0 1600 1050 1920
+transform 1 0 0 0 1 1760
+box 0 1760 1260 2112
 use NCHDL MN6
-transform 1 0 0 0 1 1920
-box 0 1920 1050 2240
+transform 1 0 0 0 1 2112
+box 0 2112 1260 2464
 use PCHDL MP0
-transform 1 0 1050 0 1 0
-box 1050 0 2100 320
+transform 1 0 1260 0 1 0
+box 1260 0 2520 352
 use PCHDL MP1_DMY
-transform 1 0 1050 0 1 320
-box 1050 320 2100 640
+transform 1 0 1260 0 1 352
+box 1260 352 2520 704
 use PCHDL MP2_DMY
-transform 1 0 1050 0 1 640
-box 1050 640 2100 960
+transform 1 0 1260 0 1 704
+box 1260 704 2520 1056
 use PCHDL MP3_DMY
-transform 1 0 1050 0 1 960
-box 1050 960 2100 1280
+transform 1 0 1260 0 1 1056
+box 1260 1056 2520 1408
 use PCHDL MP4_DMY
-transform 1 0 1050 0 1 1280
-box 1050 1280 2100 1600
+transform 1 0 1260 0 1 1408
+box 1260 1408 2520 1760
 use PCHDL MP5_DMY
-transform 1 0 1050 0 1 1600
-box 1050 1600 2100 1920
+transform 1 0 1260 0 1 1760
+box 1260 1760 2520 2112
 use PCHDL MP6_DMY
-transform 1 0 1050 0 1 1920
-box 1050 1920 2100 2240
+transform 1 0 1260 0 1 2112
+box 1260 2112 2520 2464
 use cut_M1M4_2x1 
-transform 1 0 1290 0 1 210
-box 1290 210 1474 278
+transform 1 0 1548 0 1 234
+box 1548 234 1748 310
 use cut_M1M4_2x1 
-transform 1 0 630 0 1 50
-box 630 50 814 118
+transform 1 0 756 0 1 58
+box 756 58 956 134
 << labels >>
-flabel locali s 2010 120 2190 200 0 FreeSans 400 0 0 0 BULKP
+flabel locali s 2412 132 2628 220 0 FreeSans 400 0 0 0 BULKP
 port 1 nsew
-flabel locali s -90 120 90 200 0 FreeSans 400 0 0 0 BULKN
+flabel locali s -108 132 108 220 0 FreeSans 400 0 0 0 BULKN
 port 2 nsew
-flabel locali s 270 2050 450 2110 0 FreeSans 400 0 0 0 CK
+flabel locali s 324 2258 540 2318 0 FreeSans 400 0 0 0 CK
 port 3 nsew
-flabel locali s 270 130 450 190 0 FreeSans 400 0 0 0 CKN
+flabel locali s 324 146 540 206 0 FreeSans 400 0 0 0 CKN
 port 4 nsew
-flabel locali s 270 450 450 510 0 FreeSans 400 0 0 0 CI
+flabel locali s 324 498 540 558 0 FreeSans 400 0 0 0 CI
 port 5 nsew
-flabel m3 s 1290 0 1474 2240 0 FreeSans 400 0 0 0 AVDD
+flabel m3 s 1548 0 1748 2464 0 FreeSans 400 0 0 0 AVDD
 port 6 nsew
-flabel m3 s 630 0 814 2240 0 FreeSans 400 0 0 0 AVSS
+flabel m3 s 756 0 956 2464 0 FreeSans 400 0 0 0 AVSS
 port 7 nsew
 << end >>

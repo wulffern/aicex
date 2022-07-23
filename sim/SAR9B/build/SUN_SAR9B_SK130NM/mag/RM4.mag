@@ -1,19 +1,19 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1658072521
+timestamp 1658582973
 << checkpaint >>
-rect 0 0 136 0
+rect 0 0 152 0
 << m3 >>
-rect 0 0 68 68
-rect 0 0 68 68
-rect 68 0 204 68
-rect 68 0 204 68
+rect 0 0 76 76
+rect 0 0 76 76
+rect 76 0 228 76
+rect 76 0 228 76
 << rm3 >>
-rect 68 0 136 68
+rect 76 0 152 76
 << labels >>
-flabel m3 s 0 0 68 68 0 FreeSans 400 0 0 0 A
+flabel m3 s 0 0 76 76 0 FreeSans 400 0 0 0 A
 port 1 nsew
-flabel m3 s 68 0 204 68 0 FreeSans 400 0 0 0 B
+flabel m3 s 76 0 228 76 0 FreeSans 400 0 0 0 B
 port 2 nsew
 << end >>

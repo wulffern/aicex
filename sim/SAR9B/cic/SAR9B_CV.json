@@ -54,7 +54,7 @@
     [
         { "name": "RM1" , "class" : "cIcCore::PatternResistor",
           "getRuleForHorizontalGrid" : ["M1","width"],
-          "getRuleForVerticalGrid" : ["M1","width"],
+          "getRuleForVerticalGrid" : ["M3","width"],
           "afterNew" :{
               "fillCoordinatesFromStrings" :[[  "M1","ArB"]]
           },
@@ -154,14 +154,13 @@
               "addPortOnRects" : [  ["A","M1", "MN0:G"] , ["Y", "M1", "MN0:D"], ["BULKP","M1","MP0:B"], ["BULKN","M1","MN0:B"] ]
           }
         },
-        { "name": "TIVX1_CV", "inherit" : "IVX1_CV", "setYoffsetHalf" : ""},
-        { "name": "IVX2_CV", "inherit" : "IVX1_CV", "setYoffsetHalf" : ""},
+        { "name": "IVX2_CV", "inherit" : "IVX1_CV", "setYoffsetHalf" : 1},
         { "name": "IVX4_CV", "inherit" : "IVX2_CV"},
         { "name": "IVX8_CV" ,"inherit" : "IVX2_CV"},
 
         { "name": "BFX1_CV" ,
           "class" : "Layout::LayoutDigitalCell",
-          "setYoffsetHalf" : "",
+          "setYoffsetHalf" : 1,
           "beforeRoute" : {
               "addDirectedRoutes" : [ ["M1","B","MN1:G-|--MN0:S"],
                                       ["PO","A","MN0:G-MP0:G"] ,
@@ -181,7 +180,7 @@
         //-----------------------------------------------------------------------------
         { "name": "NRX1_CV",
           "class" : "Layout::LayoutDigitalCell",
-          "setYoffsetHalf" :  "" ,
+          "setYoffsetHalf" :  1 ,
           "beforeRoute" : {
               "addDirectedRoutes" : [ ["M1","Y","MN0:D,MN1:S-|--MP1:D"],
                                       ["M1","N1","MP0:D||MP1:S"],
@@ -195,7 +194,7 @@
         },
         { "name": "NDX1_CV" ,
           "class" : "Layout::LayoutDigitalCell",
-          "setYoffsetHalf" :  "" ,
+          "setYoffsetHalf" :  1 ,
           "beforeRoute" : {
               "addDirectedRoutes" : [ ["M1","Y","MN1:D-|--MP1:S,MP0:D"],
                                       ["M1","N1","MN0:D||MN1:S"],
@@ -246,7 +245,7 @@
         //-----------------------------------------------------------------------------
         { "name": "IVTRIX1_CV",
           "class" : "Layout::LayoutDigitalCell",
-          "setYoffsetHalf" :  "" ,
+          "setYoffsetHalf" :  1 ,
           "description" : "Tristate inverter, Y = A if C, Y =HiZ if CN",
           "beforeRoute" : {
               "addDirectedRoutes" : [ ["M1","Y","MN1:D-|--MP1:D"],
@@ -262,7 +261,7 @@
         },
         { "name": "NDTRIX1_CV",
           "class" : "Layout::LayoutDigitalCell",
-          "setYoffsetHalf" :  "" ,
+          "setYoffsetHalf" :  1 ,
           "description" : "Tristate nand, Y = !A if C and !RN, Y =HiZ if CN",
           "beforeRoute" : {
               "addDirectedRoutes" : [ ["M1","Y","MN1:D-|--MP1:D"],
@@ -362,7 +361,7 @@
         { "name": "SWX4_CV" ,
           "class" : "Layout::LayoutDigitalCell",
           "symbol" : "",
-          "setYoffsetHalf" :  "" ,
+          "setYoffsetHalf" :  1 ,
           "decorator" : [
               {"ConnectSourceDrain" : ["M1","||",""]}
           ],
@@ -386,7 +385,7 @@
         },
         { "name": "TGPD_CV" ,
           "class" : "Layout::LayoutDigitalCell",
-          "setYoffsetHalf" : "",
+          "setYoffsetHalf" : 1,
           "decorator" : [
               {"ConnectSourceDrain" : ["M1","||",""]}
           ],
@@ -450,7 +449,7 @@
           "description" : "Conditional pull down, DOWN = A & EN & LCK_N, UP = RST_N",
           "class" : "Layout::LayoutDigitalCell",
           "rows" : 3,
-          "setYoffsetHalf" :  "" ,
+          "setYoffsetHalf" :  1 ,
           "decorator" : [
               {"ConnectSourceDrain" : ["M1","||",""]}
           ],
@@ -468,7 +467,7 @@
           "description" : "Conditional pull up, UP = A | B, DOWN = RST",
           "class" : "Layout::LayoutDigitalCell",
           "rows" : 4,
-          "setYoffsetHalf" :  "" ,
+          "setYoffsetHalf" :  1 ,
           "decorator" : [
               {"ConnectSourceDrain" : ["M1","||",""]}
           ],
@@ -487,7 +486,7 @@
         { "name": "SARCMPHX1_CV",
           "description" : "Half a strong-arm comparator",
           "class" : "Layout::LayoutDigitalCell",
-          "setYoffsetHalf" :  "" ,
+          "setYoffsetHalf" :  1 ,
           "rows" : 7,
           "decorator" : [
               {"ConnectSourceDrain" : ["M1","||",""]}
@@ -515,7 +514,7 @@
         { "name": "SARKICKHX1_CV",
           "description" : "Kick generator for SARCMP",
           "class" : "Layout::LayoutDigitalCell",
-          "setYoffsetHalf" :  "" ,
+          "setYoffsetHalf" :  1 ,
           "decorator" : [
               {"ConnectSourceDrain" : ["M1","||",""]}
           ],
@@ -543,7 +542,7 @@
         },
         { "name": "SARBSSWCTRL_CV" ,
           "class" : "Layout::LayoutDigitalCell",
-          "setYoffsetHalf" : "",
+          "setYoffsetHalf" : 1,
           "decorator" : [
               {"ConnectSourceDrain" : ["M1","||",""]}
           ],
@@ -687,9 +686,9 @@
               "addPortOnRects" : [ ["CMP_OP", "M1"], ["RST_N", "M1"] , ["EN", "M1"], ["CMP_ON", "M1"], ["ENO", "M1","XA1:XA1:MP1:S"] ],
               "addPortVias" : [
                   ["M1","M4","CN1","XA3:MN0:G",1,2,-1,-0.5],
-                  ["M1","M4","CP1","XA3:MN0:D",2,1,1,-0.5],
-                  ["M1","M4","CP0","XA4:MN0:D",2,1,3,-0.5],
-                  ["M1","M4","CN0","XA5:MN0:D",2,1,5,-0.5]
+                  ["M1","M4","CP1","XA3:MN0:D",2,1,1.1,-0.5],
+                  ["M1","M4","CP0","XA4:MN0:D",2,1,3.2,-0.5],
+                  ["M1","M4","CN0","XA5:MN0:D",2,1,5.5,-0.5]
               ]
           }
         },
@@ -759,7 +758,7 @@
                  ["CEIN","XB","bottom","M4"]
              ],
              "addDirectedRoutes" : [
-                 ["M3","CMP_OP","XA20$:CPO--|-XA8$:CMP_OP","offsethighend,startoffsetcuthigh"],
+                 ["M3","CMP_OP","XA20$:CPO--|-XA8$:CMP_OP","offsethighend,startoffsetcuthigh,track1"],
                  ["M3","CMP_ON","XA20$:XA3a:MP0:D--|-XA8$:CMP_ON","noendcut,offsethighend,startoffsetcuthigh"],
                  ["M3","CK_SAMPLE","XA20$:XA11:MP0:G-|--XA8$:XA6:MN3:G"],
                  ["M3","CK_CMP","XA20$:XA12:MP0:G--|-XA8$:CEO","endoffsetcuthigh"],
@@ -787,8 +786,8 @@
                  ["M2","CEO[13579]","-|--","leftdownleftup","","SARDIG"],
                  ["M3","ENO[02468]","-|--","leftdownleftup","","SARDIG"],
                  ["M3","ENO[13579]","-|--","leftupleftdown,onTopL","","SARDIG"],
-                 ["M3","CMP_OP","--|","track2","","SARDIG"],
-                 ["M3","CMP_ON","|--","track2","","SARDIG"],
+                 ["M3","CMP_OP","--|","track1","","SARDIG"],
+                 ["M3","CMP_ON","|--","track1","","SARDIG"],
                  ["M3","EN$","-","offsethigh,onTopT","","SARDIG"]
              ]
          },
