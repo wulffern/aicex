@@ -74,19 +74,19 @@
 * Sources
 *----------------------------------------------------------------
 VSS  AVSS 0 dc 0
-VDD  AVDD AVSS dc AVDD
-VREF VREF AVSS dc AVDD
+VDD  AVDD AVSS dc {AVDD}
+VREF VREF AVSS dc {AVDD}
 
 
 *- Control signals
-VCLK CLK 0 dc 0 pulse (0 AVDD 0 TRF TRF PW_CLK PERIOD_CLK)
+VCLK CLK 0 dc 0 pulse (0 {AVDD} 0 {TRF} {TRF} {PW_CLK} {PERIOD_CLK})
 
 
 
 X3 CLK CK_SAMPLE_BSSW AVDD AVSS AVDD AVSS BFX1_CV
 VCM VCM 0 dc {AVDD/2}
-VSARP SAR_IP VCM sin (0 vamp fin)
-VSARN SAR_IN VCM sin (0 {-vamp} fin)
+VSARP SAR_IP VCM sin (0 {vamp} {fin})
+VSARN SAR_IN VCM sin (0 {-vamp} {fin})
 
 
 
