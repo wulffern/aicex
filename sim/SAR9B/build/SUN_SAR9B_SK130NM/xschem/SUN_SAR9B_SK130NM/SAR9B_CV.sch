@@ -4,15 +4,15 @@ C {devices/iopin.sym} 0 20 0 0{name=p1 lab=SAR_IN}
 C {devices/iopin.sym} 0 40 0 0{name=p2 lab=SARN}
 C {devices/iopin.sym} 0 60 0 0{name=p3 lab=SARP}
 C {devices/iopin.sym} 0 80 0 0{name=p4 lab=DONE}
-C {devices/iopin.sym} 0 100 0 0{name=p5 lab=D_8}
-C {devices/iopin.sym} 0 120 0 0{name=p6 lab=D_7}
-C {devices/iopin.sym} 0 140 0 0{name=p7 lab=D_6}
-C {devices/iopin.sym} 0 160 0 0{name=p8 lab=D_5}
-C {devices/iopin.sym} 0 180 0 0{name=p9 lab=D_4}
-C {devices/iopin.sym} 0 200 0 0{name=p10 lab=D_3}
-C {devices/iopin.sym} 0 220 0 0{name=p11 lab=D_2}
-C {devices/iopin.sym} 0 240 0 0{name=p12 lab=D_1}
-C {devices/iopin.sym} 0 260 0 0{name=p13 lab=D_0}
+C {devices/iopin.sym} 0 100 0 0{name=p5 lab=D<8>}
+C {devices/iopin.sym} 0 120 0 0{name=p6 lab=D<7>}
+C {devices/iopin.sym} 0 140 0 0{name=p7 lab=D<6>}
+C {devices/iopin.sym} 0 160 0 0{name=p8 lab=D<5>}
+C {devices/iopin.sym} 0 180 0 0{name=p9 lab=D<4>}
+C {devices/iopin.sym} 0 200 0 0{name=p10 lab=D<3>}
+C {devices/iopin.sym} 0 220 0 0{name=p11 lab=D<2>}
+C {devices/iopin.sym} 0 240 0 0{name=p12 lab=D<1>}
+C {devices/iopin.sym} 0 260 0 0{name=p13 lab=D<0>}
 C {devices/iopin.sym} 0 280 0 0{name=p14 lab=EN}
 C {devices/iopin.sym} 0 300 0 0{name=p15 lab=CK_SAMPLE}
 C {devices/iopin.sym} 0 320 0 0{name=p16 lab=CK_SAMPLE_BSSW}
@@ -54,59 +54,59 @@ C {devices/lab_pin.sym} 340.0 300.0 0 0  {name=l14 sig_type=std_logic lab=AVDD }
 N 340.0 320.0 380.0 320.0{lab=AVSS}
 C {devices/lab_pin.sym} 340.0 320.0 0 0  {name=l15 sig_type=std_logic lab=AVSS }
 C {SUN_SAR9B_SK130NM/CDAC8_CV.sym} 400 360 0 0 {name=XDAC1}
-N 340.0 360.0 380.0 360.0{lab=CP_11}
-C {devices/lab_pin.sym} 340.0 360.0 0 0  {name=l16 sig_type=std_logic lab=CP_11 }
-N 340.0 380.0 380.0 380.0{lab=CP_10}
-C {devices/lab_pin.sym} 340.0 380.0 0 0  {name=l17 sig_type=std_logic lab=CP_10 }
-N 340.0 400.0 380.0 400.0{lab=D_7}
-C {devices/lab_pin.sym} 340.0 400.0 0 0  {name=l18 sig_type=std_logic lab=D_7 }
-N 340.0 420.0 380.0 420.0{lab=CP_8}
-C {devices/lab_pin.sym} 340.0 420.0 0 0  {name=l19 sig_type=std_logic lab=CP_8 }
-N 340.0 440.0 380.0 440.0{lab=D_6}
-C {devices/lab_pin.sym} 340.0 440.0 0 0  {name=l20 sig_type=std_logic lab=D_6 }
-N 340.0 460.0 380.0 460.0{lab=CP_6}
-C {devices/lab_pin.sym} 340.0 460.0 0 0  {name=l21 sig_type=std_logic lab=CP_6 }
-N 340.0 480.0 380.0 480.0{lab=D_5}
-C {devices/lab_pin.sym} 340.0 480.0 0 0  {name=l22 sig_type=std_logic lab=D_5 }
-N 340.0 500.0 380.0 500.0{lab=CP_4}
-C {devices/lab_pin.sym} 340.0 500.0 0 0  {name=l23 sig_type=std_logic lab=CP_4 }
-N 340.0 520.0 380.0 520.0{lab=D_4}
-C {devices/lab_pin.sym} 340.0 520.0 0 0  {name=l24 sig_type=std_logic lab=D_4 }
-N 340.0 540.0 380.0 540.0{lab=D_3}
-C {devices/lab_pin.sym} 340.0 540.0 0 0  {name=l25 sig_type=std_logic lab=D_3 }
-N 340.0 560.0 380.0 560.0{lab=D_2}
-C {devices/lab_pin.sym} 340.0 560.0 0 0  {name=l26 sig_type=std_logic lab=D_2 }
-N 340.0 580.0 380.0 580.0{lab=D_1}
-C {devices/lab_pin.sym} 340.0 580.0 0 0  {name=l27 sig_type=std_logic lab=D_1 }
+N 340.0 360.0 380.0 360.0{lab=CP<11>}
+C {devices/lab_pin.sym} 340.0 360.0 0 0  {name=l16 sig_type=std_logic lab=CP<11> }
+N 340.0 380.0 380.0 380.0{lab=CP<10>}
+C {devices/lab_pin.sym} 340.0 380.0 0 0  {name=l17 sig_type=std_logic lab=CP<10> }
+N 340.0 400.0 380.0 400.0{lab=D<7>}
+C {devices/lab_pin.sym} 340.0 400.0 0 0  {name=l18 sig_type=std_logic lab=D<7> }
+N 340.0 420.0 380.0 420.0{lab=CP<8>}
+C {devices/lab_pin.sym} 340.0 420.0 0 0  {name=l19 sig_type=std_logic lab=CP<8> }
+N 340.0 440.0 380.0 440.0{lab=D<6>}
+C {devices/lab_pin.sym} 340.0 440.0 0 0  {name=l20 sig_type=std_logic lab=D<6> }
+N 340.0 460.0 380.0 460.0{lab=CP<6>}
+C {devices/lab_pin.sym} 340.0 460.0 0 0  {name=l21 sig_type=std_logic lab=CP<6> }
+N 340.0 480.0 380.0 480.0{lab=D<5>}
+C {devices/lab_pin.sym} 340.0 480.0 0 0  {name=l22 sig_type=std_logic lab=D<5> }
+N 340.0 500.0 380.0 500.0{lab=CP<4>}
+C {devices/lab_pin.sym} 340.0 500.0 0 0  {name=l23 sig_type=std_logic lab=CP<4> }
+N 340.0 520.0 380.0 520.0{lab=D<4>}
+C {devices/lab_pin.sym} 340.0 520.0 0 0  {name=l24 sig_type=std_logic lab=D<4> }
+N 340.0 540.0 380.0 540.0{lab=D<3>}
+C {devices/lab_pin.sym} 340.0 540.0 0 0  {name=l25 sig_type=std_logic lab=D<3> }
+N 340.0 560.0 380.0 560.0{lab=D<2>}
+C {devices/lab_pin.sym} 340.0 560.0 0 0  {name=l26 sig_type=std_logic lab=D<2> }
+N 340.0 580.0 380.0 580.0{lab=D<1>}
+C {devices/lab_pin.sym} 340.0 580.0 0 0  {name=l27 sig_type=std_logic lab=D<1> }
 N 340.0 600.0 380.0 600.0{lab=SARP}
 C {devices/lab_pin.sym} 340.0 600.0 0 0  {name=l28 sig_type=std_logic lab=SARP }
 N 340.0 620.0 380.0 620.0{lab=AVSS}
 C {devices/lab_pin.sym} 340.0 620.0 0 0  {name=l29 sig_type=std_logic lab=AVSS }
 C {SUN_SAR9B_SK130NM/CDAC8_CV.sym} 400 660 0 0 {name=XDAC2}
-N 340.0 660.0 380.0 660.0{lab=D_8}
-C {devices/lab_pin.sym} 340.0 660.0 0 0  {name=l30 sig_type=std_logic lab=D_8 }
-N 340.0 680.0 380.0 680.0{lab=CN_10}
-C {devices/lab_pin.sym} 340.0 680.0 0 0  {name=l31 sig_type=std_logic lab=CN_10 }
-N 340.0 700.0 380.0 700.0{lab=CN_9}
-C {devices/lab_pin.sym} 340.0 700.0 0 0  {name=l32 sig_type=std_logic lab=CN_9 }
-N 340.0 720.0 380.0 720.0{lab=CN_8}
-C {devices/lab_pin.sym} 340.0 720.0 0 0  {name=l33 sig_type=std_logic lab=CN_8 }
-N 340.0 740.0 380.0 740.0{lab=CN_7}
-C {devices/lab_pin.sym} 340.0 740.0 0 0  {name=l34 sig_type=std_logic lab=CN_7 }
-N 340.0 760.0 380.0 760.0{lab=CN_6}
-C {devices/lab_pin.sym} 340.0 760.0 0 0  {name=l35 sig_type=std_logic lab=CN_6 }
-N 340.0 780.0 380.0 780.0{lab=CN_5}
-C {devices/lab_pin.sym} 340.0 780.0 0 0  {name=l36 sig_type=std_logic lab=CN_5 }
-N 340.0 800.0 380.0 800.0{lab=CN_4}
-C {devices/lab_pin.sym} 340.0 800.0 0 0  {name=l37 sig_type=std_logic lab=CN_4 }
-N 340.0 820.0 380.0 820.0{lab=CN_3}
-C {devices/lab_pin.sym} 340.0 820.0 0 0  {name=l38 sig_type=std_logic lab=CN_3 }
-N 340.0 840.0 380.0 840.0{lab=CN_2}
-C {devices/lab_pin.sym} 340.0 840.0 0 0  {name=l39 sig_type=std_logic lab=CN_2 }
-N 340.0 860.0 380.0 860.0{lab=CN_1}
-C {devices/lab_pin.sym} 340.0 860.0 0 0  {name=l40 sig_type=std_logic lab=CN_1 }
-N 340.0 880.0 380.0 880.0{lab=CN_0}
-C {devices/lab_pin.sym} 340.0 880.0 0 0  {name=l41 sig_type=std_logic lab=CN_0 }
+N 340.0 660.0 380.0 660.0{lab=D<8>}
+C {devices/lab_pin.sym} 340.0 660.0 0 0  {name=l30 sig_type=std_logic lab=D<8> }
+N 340.0 680.0 380.0 680.0{lab=CN<10>}
+C {devices/lab_pin.sym} 340.0 680.0 0 0  {name=l31 sig_type=std_logic lab=CN<10> }
+N 340.0 700.0 380.0 700.0{lab=CN<9>}
+C {devices/lab_pin.sym} 340.0 700.0 0 0  {name=l32 sig_type=std_logic lab=CN<9> }
+N 340.0 720.0 380.0 720.0{lab=CN<8>}
+C {devices/lab_pin.sym} 340.0 720.0 0 0  {name=l33 sig_type=std_logic lab=CN<8> }
+N 340.0 740.0 380.0 740.0{lab=CN<7>}
+C {devices/lab_pin.sym} 340.0 740.0 0 0  {name=l34 sig_type=std_logic lab=CN<7> }
+N 340.0 760.0 380.0 760.0{lab=CN<6>}
+C {devices/lab_pin.sym} 340.0 760.0 0 0  {name=l35 sig_type=std_logic lab=CN<6> }
+N 340.0 780.0 380.0 780.0{lab=CN<5>}
+C {devices/lab_pin.sym} 340.0 780.0 0 0  {name=l36 sig_type=std_logic lab=CN<5> }
+N 340.0 800.0 380.0 800.0{lab=CN<4>}
+C {devices/lab_pin.sym} 340.0 800.0 0 0  {name=l37 sig_type=std_logic lab=CN<4> }
+N 340.0 820.0 380.0 820.0{lab=CN<3>}
+C {devices/lab_pin.sym} 340.0 820.0 0 0  {name=l38 sig_type=std_logic lab=CN<3> }
+N 340.0 840.0 380.0 840.0{lab=CN<2>}
+C {devices/lab_pin.sym} 340.0 840.0 0 0  {name=l39 sig_type=std_logic lab=CN<2> }
+N 340.0 860.0 380.0 860.0{lab=CN<1>}
+C {devices/lab_pin.sym} 340.0 860.0 0 0  {name=l40 sig_type=std_logic lab=CN<1> }
+N 340.0 880.0 380.0 880.0{lab=CN<0>}
+C {devices/lab_pin.sym} 340.0 880.0 0 0  {name=l41 sig_type=std_logic lab=CN<0> }
 N 340.0 900.0 380.0 900.0{lab=SARN}
 C {devices/lab_pin.sym} 340.0 900.0 0 0  {name=l42 sig_type=std_logic lab=SARN }
 N 340.0 920.0 380.0 920.0{lab=AVSS}
@@ -124,14 +124,14 @@ N 340.0 1040.0 380.0 1040.0{lab=ENO0}
 C {devices/lab_pin.sym} 340.0 1040.0 0 0  {name=l48 sig_type=std_logic lab=ENO0 }
 N 340.0 1060.0 380.0 1060.0{lab=DONE0}
 C {devices/lab_pin.sym} 340.0 1060.0 0 0  {name=l49 sig_type=std_logic lab=DONE0 }
-N 340.0 1080.0 380.0 1080.0{lab=CP_10}
-C {devices/lab_pin.sym} 340.0 1080.0 0 0  {name=l50 sig_type=std_logic lab=CP_10 }
-N 340.0 1100.0 380.0 1100.0{lab=CP_11}
-C {devices/lab_pin.sym} 340.0 1100.0 0 0  {name=l51 sig_type=std_logic lab=CP_11 }
-N 340.0 1120.0 380.0 1120.0{lab=CN_10}
-C {devices/lab_pin.sym} 340.0 1120.0 0 0  {name=l52 sig_type=std_logic lab=CN_10 }
-N 340.0 1140.0 380.0 1140.0{lab=D_8}
-C {devices/lab_pin.sym} 340.0 1140.0 0 0  {name=l53 sig_type=std_logic lab=D_8 }
+N 340.0 1080.0 380.0 1080.0{lab=CP<10>}
+C {devices/lab_pin.sym} 340.0 1080.0 0 0  {name=l50 sig_type=std_logic lab=CP<10> }
+N 340.0 1100.0 380.0 1100.0{lab=CP<11>}
+C {devices/lab_pin.sym} 340.0 1100.0 0 0  {name=l51 sig_type=std_logic lab=CP<11> }
+N 340.0 1120.0 380.0 1120.0{lab=CN<10>}
+C {devices/lab_pin.sym} 340.0 1120.0 0 0  {name=l52 sig_type=std_logic lab=CN<10> }
+N 340.0 1140.0 380.0 1140.0{lab=D<8>}
+C {devices/lab_pin.sym} 340.0 1140.0 0 0  {name=l53 sig_type=std_logic lab=D<8> }
 N 340.0 1160.0 380.0 1160.0{lab=CEIN}
 C {devices/lab_pin.sym} 340.0 1160.0 0 0  {name=l54 sig_type=std_logic lab=CEIN }
 N 340.0 1180.0 380.0 1180.0{lab=CEO0}
@@ -157,14 +157,14 @@ N 740.0 80.0 780.0 80.0{lab=ENO1}
 C {devices/lab_pin.sym} 740.0 80.0 0 0  {name=l64 sig_type=std_logic lab=ENO1 }
 N 740.0 100.0 780.0 100.0{lab=DONE1}
 C {devices/lab_pin.sym} 740.0 100.0 0 0  {name=l65 sig_type=std_logic lab=DONE1 }
-N 740.0 120.0 780.0 120.0{lab=CP_8}
-C {devices/lab_pin.sym} 740.0 120.0 0 0  {name=l66 sig_type=std_logic lab=CP_8 }
-N 740.0 140.0 780.0 140.0{lab=D_7}
-C {devices/lab_pin.sym} 740.0 140.0 0 0  {name=l67 sig_type=std_logic lab=D_7 }
-N 740.0 160.0 780.0 160.0{lab=CN_8}
-C {devices/lab_pin.sym} 740.0 160.0 0 0  {name=l68 sig_type=std_logic lab=CN_8 }
-N 740.0 180.0 780.0 180.0{lab=CN_9}
-C {devices/lab_pin.sym} 740.0 180.0 0 0  {name=l69 sig_type=std_logic lab=CN_9 }
+N 740.0 120.0 780.0 120.0{lab=CP<8>}
+C {devices/lab_pin.sym} 740.0 120.0 0 0  {name=l66 sig_type=std_logic lab=CP<8> }
+N 740.0 140.0 780.0 140.0{lab=D<7>}
+C {devices/lab_pin.sym} 740.0 140.0 0 0  {name=l67 sig_type=std_logic lab=D<7> }
+N 740.0 160.0 780.0 160.0{lab=CN<8>}
+C {devices/lab_pin.sym} 740.0 160.0 0 0  {name=l68 sig_type=std_logic lab=CN<8> }
+N 740.0 180.0 780.0 180.0{lab=CN<9>}
+C {devices/lab_pin.sym} 740.0 180.0 0 0  {name=l69 sig_type=std_logic lab=CN<9> }
 N 740.0 200.0 780.0 200.0{lab=CEO0}
 C {devices/lab_pin.sym} 740.0 200.0 0 0  {name=l70 sig_type=std_logic lab=CEO0 }
 N 740.0 220.0 780.0 220.0{lab=CEO1}
@@ -190,14 +190,14 @@ N 740.0 420.0 780.0 420.0{lab=ENO2}
 C {devices/lab_pin.sym} 740.0 420.0 0 0  {name=l80 sig_type=std_logic lab=ENO2 }
 N 740.0 440.0 780.0 440.0{lab=DONE2}
 C {devices/lab_pin.sym} 740.0 440.0 0 0  {name=l81 sig_type=std_logic lab=DONE2 }
-N 740.0 460.0 780.0 460.0{lab=CP_6}
-C {devices/lab_pin.sym} 740.0 460.0 0 0  {name=l82 sig_type=std_logic lab=CP_6 }
-N 740.0 480.0 780.0 480.0{lab=D_6}
-C {devices/lab_pin.sym} 740.0 480.0 0 0  {name=l83 sig_type=std_logic lab=D_6 }
-N 740.0 500.0 780.0 500.0{lab=CN_6}
-C {devices/lab_pin.sym} 740.0 500.0 0 0  {name=l84 sig_type=std_logic lab=CN_6 }
-N 740.0 520.0 780.0 520.0{lab=CN_7}
-C {devices/lab_pin.sym} 740.0 520.0 0 0  {name=l85 sig_type=std_logic lab=CN_7 }
+N 740.0 460.0 780.0 460.0{lab=CP<6>}
+C {devices/lab_pin.sym} 740.0 460.0 0 0  {name=l82 sig_type=std_logic lab=CP<6> }
+N 740.0 480.0 780.0 480.0{lab=D<6>}
+C {devices/lab_pin.sym} 740.0 480.0 0 0  {name=l83 sig_type=std_logic lab=D<6> }
+N 740.0 500.0 780.0 500.0{lab=CN<6>}
+C {devices/lab_pin.sym} 740.0 500.0 0 0  {name=l84 sig_type=std_logic lab=CN<6> }
+N 740.0 520.0 780.0 520.0{lab=CN<7>}
+C {devices/lab_pin.sym} 740.0 520.0 0 0  {name=l85 sig_type=std_logic lab=CN<7> }
 N 740.0 540.0 780.0 540.0{lab=CEO1}
 C {devices/lab_pin.sym} 740.0 540.0 0 0  {name=l86 sig_type=std_logic lab=CEO1 }
 N 740.0 560.0 780.0 560.0{lab=CEO2}
@@ -223,14 +223,14 @@ N 740.0 760.0 780.0 760.0{lab=ENO3}
 C {devices/lab_pin.sym} 740.0 760.0 0 0  {name=l96 sig_type=std_logic lab=ENO3 }
 N 740.0 780.0 780.0 780.0{lab=DONE3}
 C {devices/lab_pin.sym} 740.0 780.0 0 0  {name=l97 sig_type=std_logic lab=DONE3 }
-N 740.0 800.0 780.0 800.0{lab=CP_4}
-C {devices/lab_pin.sym} 740.0 800.0 0 0  {name=l98 sig_type=std_logic lab=CP_4 }
-N 740.0 820.0 780.0 820.0{lab=D_5}
-C {devices/lab_pin.sym} 740.0 820.0 0 0  {name=l99 sig_type=std_logic lab=D_5 }
-N 740.0 840.0 780.0 840.0{lab=CN_4}
-C {devices/lab_pin.sym} 740.0 840.0 0 0  {name=l100 sig_type=std_logic lab=CN_4 }
-N 740.0 860.0 780.0 860.0{lab=CN_5}
-C {devices/lab_pin.sym} 740.0 860.0 0 0  {name=l101 sig_type=std_logic lab=CN_5 }
+N 740.0 800.0 780.0 800.0{lab=CP<4>}
+C {devices/lab_pin.sym} 740.0 800.0 0 0  {name=l98 sig_type=std_logic lab=CP<4> }
+N 740.0 820.0 780.0 820.0{lab=D<5>}
+C {devices/lab_pin.sym} 740.0 820.0 0 0  {name=l99 sig_type=std_logic lab=D<5> }
+N 740.0 840.0 780.0 840.0{lab=CN<4>}
+C {devices/lab_pin.sym} 740.0 840.0 0 0  {name=l100 sig_type=std_logic lab=CN<4> }
+N 740.0 860.0 780.0 860.0{lab=CN<5>}
+C {devices/lab_pin.sym} 740.0 860.0 0 0  {name=l101 sig_type=std_logic lab=CN<5> }
 N 740.0 880.0 780.0 880.0{lab=CEO2}
 C {devices/lab_pin.sym} 740.0 880.0 0 0  {name=l102 sig_type=std_logic lab=CEO2 }
 N 740.0 900.0 780.0 900.0{lab=CEO3}
@@ -258,10 +258,10 @@ N 1140.0 100.0 1180.0 100.0{lab=DONE4}
 C {devices/lab_pin.sym} 1140.0 100.0 0 0  {name=l113 sig_type=std_logic lab=DONE4 }
 N 1140.0 120.0 1180.0 120.0{lab=NC2A}
 C {devices/lab_pin.sym} 1140.0 120.0 0 0  {name=l114 sig_type=std_logic lab=NC2A }
-N 1140.0 140.0 1180.0 140.0{lab=D_4}
-C {devices/lab_pin.sym} 1140.0 140.0 0 0  {name=l115 sig_type=std_logic lab=D_4 }
-N 1140.0 160.0 1180.0 160.0{lab=CN_3}
-C {devices/lab_pin.sym} 1140.0 160.0 0 0  {name=l116 sig_type=std_logic lab=CN_3 }
+N 1140.0 140.0 1180.0 140.0{lab=D<4>}
+C {devices/lab_pin.sym} 1140.0 140.0 0 0  {name=l115 sig_type=std_logic lab=D<4> }
+N 1140.0 160.0 1180.0 160.0{lab=CN<3>}
+C {devices/lab_pin.sym} 1140.0 160.0 0 0  {name=l116 sig_type=std_logic lab=CN<3> }
 N 1140.0 180.0 1180.0 180.0{lab=NC2B}
 C {devices/lab_pin.sym} 1140.0 180.0 0 0  {name=l117 sig_type=std_logic lab=NC2B }
 N 1140.0 200.0 1180.0 200.0{lab=CEO3}
@@ -291,10 +291,10 @@ N 1140.0 440.0 1180.0 440.0{lab=DONE5}
 C {devices/lab_pin.sym} 1140.0 440.0 0 0  {name=l129 sig_type=std_logic lab=DONE5 }
 N 1140.0 460.0 1180.0 460.0{lab=NC3A}
 C {devices/lab_pin.sym} 1140.0 460.0 0 0  {name=l130 sig_type=std_logic lab=NC3A }
-N 1140.0 480.0 1180.0 480.0{lab=D_3}
-C {devices/lab_pin.sym} 1140.0 480.0 0 0  {name=l131 sig_type=std_logic lab=D_3 }
-N 1140.0 500.0 1180.0 500.0{lab=CN_2}
-C {devices/lab_pin.sym} 1140.0 500.0 0 0  {name=l132 sig_type=std_logic lab=CN_2 }
+N 1140.0 480.0 1180.0 480.0{lab=D<3>}
+C {devices/lab_pin.sym} 1140.0 480.0 0 0  {name=l131 sig_type=std_logic lab=D<3> }
+N 1140.0 500.0 1180.0 500.0{lab=CN<2>}
+C {devices/lab_pin.sym} 1140.0 500.0 0 0  {name=l132 sig_type=std_logic lab=CN<2> }
 N 1140.0 520.0 1180.0 520.0{lab=NC3B}
 C {devices/lab_pin.sym} 1140.0 520.0 0 0  {name=l133 sig_type=std_logic lab=NC3B }
 N 1140.0 540.0 1180.0 540.0{lab=CEO4}
@@ -324,10 +324,10 @@ N 1140.0 780.0 1180.0 780.0{lab=DONE6}
 C {devices/lab_pin.sym} 1140.0 780.0 0 0  {name=l145 sig_type=std_logic lab=DONE6 }
 N 1140.0 800.0 1180.0 800.0{lab=NC4A}
 C {devices/lab_pin.sym} 1140.0 800.0 0 0  {name=l146 sig_type=std_logic lab=NC4A }
-N 1140.0 820.0 1180.0 820.0{lab=D_2}
-C {devices/lab_pin.sym} 1140.0 820.0 0 0  {name=l147 sig_type=std_logic lab=D_2 }
-N 1140.0 840.0 1180.0 840.0{lab=CN_1}
-C {devices/lab_pin.sym} 1140.0 840.0 0 0  {name=l148 sig_type=std_logic lab=CN_1 }
+N 1140.0 820.0 1180.0 820.0{lab=D<2>}
+C {devices/lab_pin.sym} 1140.0 820.0 0 0  {name=l147 sig_type=std_logic lab=D<2> }
+N 1140.0 840.0 1180.0 840.0{lab=CN<1>}
+C {devices/lab_pin.sym} 1140.0 840.0 0 0  {name=l148 sig_type=std_logic lab=CN<1> }
 N 1140.0 860.0 1180.0 860.0{lab=NC4B}
 C {devices/lab_pin.sym} 1140.0 860.0 0 0  {name=l149 sig_type=std_logic lab=NC4B }
 N 1140.0 880.0 1180.0 880.0{lab=CEO5}
@@ -357,10 +357,10 @@ N 1540.0 100.0 1580.0 100.0{lab=DONE7}
 C {devices/lab_pin.sym} 1540.0 100.0 0 0  {name=l161 sig_type=std_logic lab=DONE7 }
 N 1540.0 120.0 1580.0 120.0{lab=NC5A}
 C {devices/lab_pin.sym} 1540.0 120.0 0 0  {name=l162 sig_type=std_logic lab=NC5A }
-N 1540.0 140.0 1580.0 140.0{lab=D_1}
-C {devices/lab_pin.sym} 1540.0 140.0 0 0  {name=l163 sig_type=std_logic lab=D_1 }
-N 1540.0 160.0 1580.0 160.0{lab=CN_0}
-C {devices/lab_pin.sym} 1540.0 160.0 0 0  {name=l164 sig_type=std_logic lab=CN_0 }
+N 1540.0 140.0 1580.0 140.0{lab=D<1>}
+C {devices/lab_pin.sym} 1540.0 140.0 0 0  {name=l163 sig_type=std_logic lab=D<1> }
+N 1540.0 160.0 1580.0 160.0{lab=CN<0>}
+C {devices/lab_pin.sym} 1540.0 160.0 0 0  {name=l164 sig_type=std_logic lab=CN<0> }
 N 1540.0 180.0 1580.0 180.0{lab=NC5B}
 C {devices/lab_pin.sym} 1540.0 180.0 0 0  {name=l165 sig_type=std_logic lab=NC5B }
 N 1540.0 200.0 1580.0 200.0{lab=CEO6}
@@ -390,8 +390,8 @@ N 1540.0 440.0 1580.0 440.0{lab=DONE}
 C {devices/lab_pin.sym} 1540.0 440.0 0 0  {name=l177 sig_type=std_logic lab=DONE }
 N 1540.0 460.0 1580.0 460.0{lab=NC6A}
 C {devices/lab_pin.sym} 1540.0 460.0 0 0  {name=l178 sig_type=std_logic lab=NC6A }
-N 1540.0 480.0 1580.0 480.0{lab=D_0}
-C {devices/lab_pin.sym} 1540.0 480.0 0 0  {name=l179 sig_type=std_logic lab=D_0 }
+N 1540.0 480.0 1580.0 480.0{lab=D<0>}
+C {devices/lab_pin.sym} 1540.0 480.0 0 0  {name=l179 sig_type=std_logic lab=D<0> }
 N 1540.0 500.0 1580.0 500.0{lab=NC6C}
 C {devices/lab_pin.sym} 1540.0 500.0 0 0  {name=l180 sig_type=std_logic lab=NC6C }
 N 1540.0 520.0 1580.0 520.0{lab=NC6B}

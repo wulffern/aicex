@@ -5,3 +5,7 @@ ngspice:
 
 corner:
   Sch: |
+    .include ../build/SUN_SAR9B_SK130NM.spice
+  Lay: |
+    .include ../clpe/SAR9B_CV_lpe.spi
+    .include "../../../lib/SUN_TR_SKY130N.spi"

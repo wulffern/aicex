@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1658582973
+timestamp 1658600916
 << checkpaint >>
 rect 0 0 2520 4928
 << locali >>
@@ -151,11 +151,11 @@ port 1 nsew
 flabel locali s 324 146 540 206 0 FreeSans 400 0 0 0 CK
 port 2 nsew
 flabel locali s 756 4810 972 4870 0 FreeSans 400 0 0 0 Q
-port 3 nsew
-flabel locali s 756 4458 972 4518 0 FreeSans 400 0 0 0 QN
 port 4 nsew
-flabel locali s 324 3666 540 3726 0 FreeSans 400 0 0 0 RN
+flabel locali s 756 4458 972 4518 0 FreeSans 400 0 0 0 QN
 port 5 nsew
+flabel locali s 324 3666 540 3726 0 FreeSans 400 0 0 0 RN
+port 3 nsew
 flabel locali s 2412 132 2628 220 0 FreeSans 400 0 0 0 BULKP
 port 6 nsew
 flabel locali s -108 132 108 220 0 FreeSans 400 0 0 0 BULKN

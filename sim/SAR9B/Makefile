@@ -40,6 +40,7 @@ CICPY = python3 ~/pro/cicpy/cicpy/cic.py
 dirs:
 	-mkdir clvs
 	-mkdir cdrc
+	-mkdir clpe
 
 all: sar bssw
 
@@ -94,6 +95,10 @@ drc:
 	@magic -noconsole -dnull cdrc/${CELL}_drc.tcl 2&>1 > cdrc/${CELL}_drc.log
 	@tail -n 1 cdrc/${CELL}_drc.log|perl -ne "\$$exit = 0;use Term::ANSIColor;print(sprintf(\"%-40s\t[ \",${CELL}));if(m/:\s+0\n/ig){print(color('green').'DRC OK  '.color('reset'));}else{print(color('red').'DRC FAIL'.color('reset'));\$$exit = 1;};print(\" ]\n\");exit \$$exit;" || tail -n 10 cdrc/${CELL}_drc.log
 
+lpe:
+	@echo "set VDD AVDD\nset GND AVSS\nset SUB BULKN\nload ${NCELL}.mag\nextract all\n\next2spice resistor off\next2spice capacitance on\next2spice hierarchy off\next2spice subcircuits off\next2spice -o clpe/${CELL}_lpe.spi\nquit" > clpe/${CELL}_lpe.tcl
+	@magic -noconsole -dnull clpe/${CELL}_lpe.tcl 2&>1 | tee clpe/${CELL}_magic_lpe.log
+
 
 #----------------------------------------------------------------------------
 # SIM
@@ -116,8 +121,8 @@ test:
 
 
 TB=tran
-#VIEW=Sch
 VIEW=Sch
+#VIEW=Lay
 #VIEW=Ver
 
 OPT=

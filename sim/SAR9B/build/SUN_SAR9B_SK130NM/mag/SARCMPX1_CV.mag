@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1658582973
+timestamp 1658600916
 << checkpaint >>
 rect 0 0 2520 15488
 << locali >>
@@ -136,19 +136,19 @@ transform 1 0 756 0 1 13962
 box 756 13962 940 14030
 << labels >>
 flabel locali s 324 14226 540 14286 0 FreeSans 400 0 0 0 CK_SAMPLE
-port 1 nsew
+port 6 nsew
 flabel locali s 324 14930 540 14990 0 FreeSans 400 0 0 0 CK_CMP
-port 2 nsew
+port 5 nsew
 flabel locali s 324 14578 540 14638 0 FreeSans 400 0 0 0 DONE
-port 3 nsew
+port 7 nsew
 flabel locali s 756 6922 972 6982 0 FreeSans 400 0 0 0 CNO
 port 4 nsew
 flabel locali s 756 5514 972 5574 0 FreeSans 400 0 0 0 CPO
-port 5 nsew
+port 3 nsew
 flabel locali s 324 2258 540 2318 0 FreeSans 400 0 0 0 CPI
-port 6 nsew
+port 1 nsew
 flabel locali s 324 10002 540 10062 0 FreeSans 400 0 0 0 CNI
-port 7 nsew
+port 2 nsew
 flabel m3 s 1548 0 1748 15488 0 FreeSans 400 0 0 0 AVDD
 port 8 nsew
 flabel m3 s 756 0 956 15488 0 FreeSans 400 0 0 0 AVSS

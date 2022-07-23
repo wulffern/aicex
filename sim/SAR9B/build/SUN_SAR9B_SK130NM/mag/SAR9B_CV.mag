@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1658582973
+timestamp 1658600916
 << checkpaint >>
 rect -3928 -1848 28016 42182
 << m3 >>
@@ -890,43 +890,43 @@ transform 1 0 26908 0 1 16394
 box 26908 16394 27092 16578
 << labels >>
 flabel m3 s -216 19954 -140 30304 0 FreeSans 400 0 0 0 D<8>
-port 1 nsew
-flabel m3 s 13432 20148 13508 30330 0 FreeSans 400 0 0 0 D<3>
-port 2 nsew
-flabel m3 s 18472 20342 18548 30330 0 FreeSans 400 0 0 0 D<1>
-port 3 nsew
-flabel m3 s 10579 20536 10655 30330 0 FreeSans 400 0 0 0 D<4>
-port 4 nsew
-flabel m3 s 15619 20730 15695 30330 0 FreeSans 400 0 0 0 D<2>
-port 5 nsew
-flabel m3 s 5539 21118 5615 30330 0 FreeSans 400 0 0 0 D<6>
 port 6 nsew
+flabel m3 s 13432 20148 13508 30330 0 FreeSans 400 0 0 0 D<3>
+port 11 nsew
+flabel m3 s 18472 20342 18548 30330 0 FreeSans 400 0 0 0 D<1>
+port 13 nsew
+flabel m3 s 10579 20536 10655 30330 0 FreeSans 400 0 0 0 D<4>
+port 10 nsew
+flabel m3 s 15619 20730 15695 30330 0 FreeSans 400 0 0 0 D<2>
+port 12 nsew
+flabel m3 s 5539 21118 5615 30330 0 FreeSans 400 0 0 0 D<6>
+port 8 nsew
 flabel m3 s 3352 21312 3428 30330 0 FreeSans 400 0 0 0 D<7>
 port 7 nsew
 flabel m3 s 8392 21506 8468 30330 0 FreeSans 400 0 0 0 D<5>
-port 8 nsew
-flabel locali s 26892 -720 27092 40742 0 FreeSans 400 0 0 0 AVSS
 port 9 nsew
+flabel locali s 26892 -720 27092 40742 0 FreeSans 400 0 0 0 AVSS
+port 20 nsew
 flabel locali s 27612 -1440 27812 41462 0 FreeSans 400 0 0 0 AVDD
-port 10 nsew
+port 19 nsew
 flabel locali s -3724 41982 27812 42182 0 FreeSans 400 0 0 0 VREF
-port 11 nsew
+port 18 nsew
 flabel locali s 27956 -1644 28016 42182 0 FreeSans 400 0 0 0 CK_SAMPLE_BSSW
-port 12 nsew
+port 17 nsew
 flabel locali s 20360 36384 20576 36444 0 FreeSans 400 0 0 0 DONE
-port 13 nsew
+port 5 nsew
 flabel m3 s 11072 50 11272 126 0 FreeSans 400 0 0 0 SAR_IP
-port 14 nsew
+port 1 nsew
 flabel m3 s 12816 50 13016 126 0 FreeSans 400 0 0 0 SAR_IN
-port 15 nsew
+port 2 nsew
 flabel locali s -232 34888 -16 34948 0 FreeSans 400 0 0 0 CK_SAMPLE
 port 16 nsew
 flabel locali s 1424 28552 1640 28612 0 FreeSans 400 0 0 0 EN
-port 17 nsew
+port 15 nsew
 flabel locali s 11072 2698 11288 2758 0 FreeSans 400 0 0 0 SARN
-port 18 nsew
+port 3 nsew
 flabel locali s 11072 1290 11288 1350 0 FreeSans 400 0 0 0 SARP
-port 19 nsew
+port 4 nsew
 flabel m3 s 20659 30330 20735 30530 0 FreeSans 400 0 0 0 D<0>
-port 20 nsew
+port 14 nsew
 << end >>

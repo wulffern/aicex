@@ -1,3 +1,5 @@
 [submodule "models/skywater-pdk-libs-sky130_fd_pr"]
 	path = models/skywater-pdk-libs-sky130_fd_pr
 	url = git@github.com:google/skywater-pdk-libs-sky130_fd_pr.git
+[submodule "skywater-pdk-libs-sky130_fd_pr"]
+	url = git@github.com:wulffern/skywater-pdk-libs-sky130_fd_pr.git

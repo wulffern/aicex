@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1658582973
+timestamp 1658600916
 << checkpaint >>
 rect 0 0 2520 14432
 << locali >>
@@ -166,29 +166,29 @@ box 340 2250 540 2326
 flabel m2 s 340 2250 540 2326 0 FreeSans 400 0 0 0 CMP_OP
 port 1 nsew
 flabel locali s 1980 4018 2196 4078 0 FreeSans 400 0 0 0 RST_N
-port 2 nsew
+port 4 nsew
 flabel m2 s 340 490 540 566 0 FreeSans 400 0 0 0 EN
 port 3 nsew
 flabel locali s 324 3314 540 3374 0 FreeSans 400 0 0 0 CMP_ON
-port 4 nsew
+port 2 nsew
 flabel m2 s 1564 754 1764 830 0 FreeSans 400 0 0 0 ENO
 port 5 nsew
 flabel m3 s 340 5770 540 5846 0 FreeSans 400 0 0 0 CN1
-port 6 nsew
+port 10 nsew
 flabel m3 s 1055 5796 1131 5996 0 FreeSans 400 0 0 0 CP1
-port 7 nsew
-flabel m3 s 1215 7204 1291 7404 0 FreeSans 400 0 0 0 CP0
 port 8 nsew
+flabel m3 s 1215 7204 1291 7404 0 FreeSans 400 0 0 0 CP0
+port 7 nsew
 flabel m3 s 1390 8612 1466 8812 0 FreeSans 400 0 0 0 CN0
 port 9 nsew
 flabel locali s 324 13522 540 13582 0 FreeSans 400 0 0 0 CEIN
-port 10 nsew
-flabel locali s 1548 13962 1764 14022 0 FreeSans 400 0 0 0 CEO
 port 11 nsew
-flabel locali s 324 10354 540 10414 0 FreeSans 400 0 0 0 CKS
+flabel locali s 1548 13962 1764 14022 0 FreeSans 400 0 0 0 CEO
 port 12 nsew
-flabel locali s 756 11850 972 11910 0 FreeSans 400 0 0 0 DONE
+flabel locali s 324 10354 540 10414 0 FreeSans 400 0 0 0 CKS
 port 13 nsew
+flabel locali s 756 11850 972 11910 0 FreeSans 400 0 0 0 DONE
+port 6 nsew
 flabel m3 s 2124 4810 2324 5010 0 FreeSans 400 0 0 0 VREF
 port 14 nsew
 flabel m3 s 1548 0 1748 14432 0 FreeSans 400 0 0 0 AVDD

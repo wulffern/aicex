@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1658582973
+timestamp 1658600916
 << checkpaint >>
 rect 112 0 11844 12540
 << m1 >>
@@ -1762,7 +1762,7 @@ port 11 nsew
 flabel m1 s 120 4400 180 12480 0 FreeSans 400 0 0 0 CP<0>
 port 12 nsew
 flabel m1 s 2668 0 11768 76 0 FreeSans 400 0 0 0 AVSS
-port 13 nsew
-flabel m3 s 2668 10920 2744 12540 0 FreeSans 400 0 0 0 CTOP
 port 14 nsew
+flabel m3 s 2668 10920 2744 12540 0 FreeSans 400 0 0 0 CTOP
+port 13 nsew
 << end >>

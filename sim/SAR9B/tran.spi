@@ -26,17 +26,20 @@
 **
 **********************************************************************
 
+
 *----------------------------------------------------------------
 * Include
 *----------------------------------------------------------------
-.include ../build/SUN_SAR9B_SK130NM.spice
+
+
+
 
 *----------------------------------------------------------------
 * Options
 *----------------------------------------------------------------
 *.option TNOM=27 GMIN=1e-15 reltol=1e-6 abstol=1e-6
 
-.option reltol=1e-5 srcsteps=1 ramptime=10n noopiter keepopinfo
+.option reltol=1e-6 srcsteps=1 ramptime=10n noopiter keepopinfo
 
 
 *----------------------------------------------------------------
@@ -72,19 +75,19 @@
 * Sources
 *----------------------------------------------------------------
 VSS  AVSS 0 dc 0
-VDD  AVDD AVSS dc AVDD
-VREF VREF AVSS dc AVDD
+VDD  AVDD AVSS dc {AVDD}
+VREF VREF AVSS dc {AVDD}
 
 
 *- Control signals
-VCLK CLK 0 dc 0 pulse (0 AVDD 0 TRF TRF PW_CLK PERIOD_CLK)
+VCLK CLK 0 dc 0 pulse (0 {AVDD} 0 {TRF} {TRF} {PW_CLK} {PERIOD_CLK})
 
-X3 CLK CK_SAMPLE_BSSW AVDD AVSS AVDD AVSS BFX1_CV
-X2 CLK CK_SAMPLE AVDD AVSS AVDD AVSS BFX1_CV
-X1 CK_SAMPLE EN AVDD AVSS AVDD AVSS IVX1_CV
+X3 CLK CK_SAMPLE_BSSW AVDD AVSS BFX1_CV
+X2 CLK CK_SAMPLE AVDD AVSS BFX1_CV
+X1 CK_SAMPLE EN AVDD AVSS IVX1_CV
 VCM VCM 0 dc {AVDD/2}
-VSARP SAR_IP VCM sin (0 vamp fin)
-VSARN SAR_IN VCM sin (0 {-vamp} fin)
+VSARP SAR_IP VCM sin (0 {vamp} {fin})
+VSARN SAR_IN VCM sin (0 {-vamp} {fin})
 
 
 *----------------------------------------------------------------
@@ -94,15 +97,15 @@ VSARN SAR_IN VCM sin (0 {-vamp} fin)
 XDUT SAR_IP SAR_IN SARN SARP DONE D_8 D_7 D_6 D_5 D_4 D_3 D_2 D_1 D_0 EN CK_SAMPLE CK_SAMPLE_BSSW VREF AVDD AVSS SAR9B_CV
 
 
-XDFF1 D_8 DONE AVDD DF_8 QN8 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-XDFF2 D_7 DONE AVDD DF_7 QN7 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-XDFF3 D_6 DONE AVDD DF_6 QN6 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-XDFF4 D_5 DONE AVDD DF_5 QN5 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-XDFF5 D_4 DONE AVDD DF_4 QN4 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-XDFF6 D_3 DONE AVDD DF_3 QN3 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-XDFF7 D_2 DONE AVDD DF_2 QN2 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-XDFF8 D_1 DONE AVDD DF_1 QN1 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-XDFF9 D_0 DONE AVDD DF_0 QN0 AVDD AVSS AVDD AVSS DFRNQNX1_CV
+XDFF1 D_8 DONE AVDD DF_8 QN8 AVDD AVSS DFRNQNX1_CV
+XDFF2 D_7 DONE AVDD DF_7 QN7 AVDD AVSS DFRNQNX1_CV
+XDFF3 D_6 DONE AVDD DF_6 QN6 AVDD AVSS DFRNQNX1_CV
+XDFF4 D_5 DONE AVDD DF_5 QN5 AVDD AVSS DFRNQNX1_CV
+XDFF5 D_4 DONE AVDD DF_4 QN4 AVDD AVSS DFRNQNX1_CV
+XDFF6 D_3 DONE AVDD DF_3 QN3 AVDD AVSS DFRNQNX1_CV
+XDFF7 D_2 DONE AVDD DF_2 QN2 AVDD AVSS DFRNQNX1_CV
+XDFF8 D_1 DONE AVDD DF_1 QN1 AVDD AVSS DFRNQNX1_CV
+XDFF9 D_0 DONE AVDD DF_0 QN0 AVDD AVSS DFRNQNX1_CV
 
 XDAC DF_8 DF_7 DF_6 DF_5 DF_4 DF_3 DF_2 DF_1 DF_0 RO AVDD DAC_9BIT_TWOS_COMPL
 
