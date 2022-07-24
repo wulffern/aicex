@@ -529,7 +529,7 @@
           }
 
         },
-        { "name": "CAP32C_CV" , "class" : "Layout::LayoutCapCellSmall","maxcap" : 32,"usem3" : 1,
+        { "name": "CAP32C_CV" , "class" : "Layout::LayoutCapCellSmall","usem3" : 0, "heightIncreaseMult" : 3,
           "meta" : {
               "spice":
               [ "C1 C1A CTOP 0.2f",
@@ -541,6 +541,7 @@
               ]
           }
         },
+        {"name": "CAPPH", "class": "cIcCells::PhCapCell"},
         { "name": "SARCMPX1_CV",
           "class" : "Layout::LayoutDigitalCell",
           "description" : "Strong-arm comparator",

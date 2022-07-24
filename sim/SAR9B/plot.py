@@ -10,7 +10,11 @@ import os
 import sys
 
 
-nbpt = 64
+
+
+def paramToStr(data):
+
+    return "A[dB]=%.2f SNDR[dB]=%.2f SFDR[dBc]=%.2f ENOB=%.2f" %(data["amp"],data["sndr"],data["sfdr"],data["enob"])
 
 
 if(len(sys.argv) < 2):
@@ -28,7 +32,7 @@ with open(runfile) as fi:
 
 idsqs = list()
 
-tsample = 100
+tsample = 125
 
 f,ax = plt.subplots(1,1,sharex=False)
 
@@ -44,38 +48,31 @@ for f in files:
     df.index = pd.to_datetime(df.index,unit='s')
 
 
-    fullscale_in = 1.5
+    fullscale_in = 2
 
-    sigi = df["v(sar_ip)"] - df["v(sar_in)"]
-    sigibssw = df["v(sarp)"] - df["v(sarn)"]
+    sigi = (df["v(sar_ip)"] - df["v(sar_in)"])/fullscale_in
     saro = df["v(ro)"]
 
     sigixx =  sigi.resample(pd.Timedelta(tsample,unit="ns")).first()
-    sigibsswxx =  sigi.resample(pd.Timedelta(tsample,unit="ns")).first()
     saroxx =  saro.resample(pd.Timedelta(tsample,unit="ns")).first()
 
-    print(len(sigixx))
+
+    nbpt = int(2**np.floor(np.log2(len(sigixx))))
     sigixx = sigixx[-nbpt-1:-1]
-    sigibsswxx = sigixx[-nbpt-1:-1]
     saroxx = saroxx[-nbpt-1:-1]
 
     scc = cs.SimCalc()
-    (data1,ydB1) = scc.fftWithHanning(sigixx.to_numpy())
-    #(data2,ydB2) = scc.fftWithHanning(sigibsswxx.to_numpy())
-    (data3,ydB3) = scc.fftWithHanning(saroxx.to_numpy())
+    (data1,ydB1) = scc.fft(sigixx.to_numpy())
+    (data3,ydB3) = scc.fft(saroxx.to_numpy())
 
-    print("input signal: " + str(data1))
-    print("output signal: " + str(data3))
+    axes[0].plot(ydB1,label=f + " v(in):" +paramToStr(data1),linestyle='solid',marker="d")
+    axes[0].plot(ydB3,label=f + " v(ro):" + paramToStr(data3),linestyle='solid',marker="o")
+    #axes[0].stem(ydB1,label=f + " v(in):" +paramToStr(data1),linefmt='-.',bottom=-100)
+    #axes[0].stem(ydB3,label=f + " v(ro):" + paramToStr(data3),linefmt=':',bottom=-100)
 
-    axes[0].plot(ydB1,label=f + " fft sigi",linestyle='solid',marker="d")
-    #axes[0].plot(ydB2,label=f + " fft sigi",linestyle='solid',marker="-")
-    axes[0].plot(ydB3,label=f + " fft saro",linestyle='solid',marker="o")
-
-axes[0].set_ylabel("fft(v(ro))")
+axes[0].set_ylabel("Power Spectrum [dBFS]")
 axes[0].grid()
 axes[0].legend()
-axes[0].text(10,-20,"input signal " + str(data1))
-axes[0].text(10,-30,"output signal "  + str(data3))
 axes[0].axis([0,len(ydB3),-100,10])
 plt.tight_layout()
 

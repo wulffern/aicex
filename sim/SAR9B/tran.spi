@@ -31,12 +31,17 @@
 * Include
 *----------------------------------------------------------------
 
-*ifdef Lay
-.include ../clpe/SAR9B_CV_lpe.spi
+#ifdef Lay
+*.include ../clpe/SARDIGEX4_CV_lpe.spi
+*.include ../clpe/SARCMPX1_CV_lpe.spi
+*.include ../clpe/SARBSSW_CV_lpe.spi
+*.include ../clpe/CAP32C_CV_lpe.spi
 .include "../../../lib/SUN_TR_SKY130N.spi"
-*else
+.include ../clpe/SAR9B_CV_lpe.spi
+*.include ../build/SUN_SAR9B_SK130NM.spice
+#else
 .include ../build/SUN_SAR9B_SK130NM.spice
-*endif
+#endif
 
 
 
@@ -44,9 +49,12 @@
 * Options
 *----------------------------------------------------------------
 *.option TNOM=27 GMIN=1e-15 reltol=1e-6 abstol=1e-6
-
-.option reltol=1e-6 srcsteps=1 ramptime=10n noopiter keepopinfo
-
+*vntol=1u abstol=1p trtol=7 method=trap chgtol=1e-16
+#ifdef Debug
+.option reltol=1e-3 srcsteps=1 ramptime=10n noopiter keepopinfo gmin=1e-12
+#else
+.option reltol=1e-5 srcsteps=1 ramptime=10n noopiter keepopinfo gmin=1e-15
+#endif
 
 *----------------------------------------------------------------
 * PARAMETERS
@@ -54,14 +62,13 @@
 .param TRF = 10p
 
 *- Analog parameters
-.param AVDD = 1.5
+.param AVDD = {vdda}
 
-*- 10 MHz clock frequency
-.param PERIOD_CLK = 100n
+*- 8 MHz clock frequency
+.param PERIOD_CLK = 125n
 
 *- 25% duty-cycle clock
 .param PW_CLK = PERIOD_CLK/4
-
 
 *- Frequency bin of the input signal
 .param fbin = 5
@@ -75,7 +82,7 @@
 *- Input frequency for coherent sampling
 .param fin = fbin/nbpt*fs
 
-.param vamp = 0.25
+.param vamp = 0.4
 
 *----------------------------------------------------------------
 * Sources
@@ -84,24 +91,22 @@ VSS  AVSS 0 dc 0
 VDD  AVDD AVSS dc {AVDD}
 VREF VREF AVSS dc {AVDD}
 
-
 *- Control signals
 VCLK CLK 0 dc 0 pulse (0 {AVDD} 0 {TRF} {TRF} {PW_CLK} {PERIOD_CLK})
 
-*ifdef Lay
+#ifdef Lay
 X3 CLK CK_SAMPLE_BSSW AVDD AVSS BFX1_CV
 X2 CLK CK_SAMPLE AVDD AVSS BFX1_CV
 X1 CK_SAMPLE EN AVDD AVSS IVX1_CV
-*else
+#else
 X3 CLK CK_SAMPLE_BSSW AVDD AVSS AVDD AVSS BFX1_CV
 X2 CLK CK_SAMPLE AVDD AVSS AVDD AVSS BFX1_CV
 X1 CK_SAMPLE EN AVDD AVSS AVDD AVSS IVX1_CV
-*endif
+#endif
 
 VCM VCM 0 dc {AVDD/2}
-VSARP SAR_IP VCM sin (0 {vamp} {fin})
-VSARN SAR_IN VCM sin (0 {-vamp} {fin})
-
+VSARP SAR_IP VCM sin (0 {vamp} {fin} )
+VSARN SAR_IN VCM sin (0 {-vamp} {fin} )
 
 *----------------------------------------------------------------
 * DUT
@@ -109,28 +114,33 @@ VSARN SAR_IN VCM sin (0 {-vamp} {fin})
 
 XDUT SAR_IP SAR_IN SARN SARP DONE D_8 D_7 D_6 D_5 D_4 D_3 D_2 D_1 D_0 EN CK_SAMPLE CK_SAMPLE_BSSW VREF AVDD AVSS SAR9B_CV
 
-*ifdef Lay
-XDFF1 D_8 DONE AVDD DF_8 QN8 AVDD AVSS DFRNQNX1_CV
-XDFF2 D_7 DONE AVDD DF_7 QN7 AVDD AVSS DFRNQNX1_CV
-XDFF3 D_6 DONE AVDD DF_6 QN6 AVDD AVSS DFRNQNX1_CV
-XDFF4 D_5 DONE AVDD DF_5 QN5 AVDD AVSS DFRNQNX1_CV
-XDFF5 D_4 DONE AVDD DF_4 QN4 AVDD AVSS DFRNQNX1_CV
-XDFF6 D_3 DONE AVDD DF_3 QN3 AVDD AVSS DFRNQNX1_CV
-XDFF7 D_2 DONE AVDD DF_2 QN2 AVDD AVSS DFRNQNX1_CV
-XDFF8 D_1 DONE AVDD DF_1 QN1 AVDD AVSS DFRNQNX1_CV
-XDFF9 D_0 DONE AVDD DF_0 QN0 AVDD AVSS DFRNQNX1_CV
-*else
-XDFF1 D_8 DONE AVDD DF_8 QN8 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-XDFF2 D_7 DONE AVDD DF_7 QN7 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-XDFF3 D_6 DONE AVDD DF_6 QN6 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-XDFF4 D_5 DONE AVDD DF_5 QN5 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-XDFF5 D_4 DONE AVDD DF_4 QN4 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-XDFF6 D_3 DONE AVDD DF_3 QN3 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-XDFF7 D_2 DONE AVDD DF_2 QN2 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-XDFF8 D_1 DONE AVDD DF_1 QN1 AVDD AVSS AVDD AVSS DFRNQNX1_CV
-XDFF9 D_0 DONE AVDD DF_0 QN0 AVDD AVSS AVDD AVSS DFRNQNX1_CV
+#ifdef Lay
 
-*endif
+XD1 DONE DDONE AVDD AVSS BFX1_CV
+XDFF1 D_8 DDONE AVDD DF_8 QN8 AVDD AVSS DFRNQNX1_CV
+XDFF2 D_7 DDONE AVDD DF_7 QN7 AVDD AVSS DFRNQNX1_CV
+XDFF3 D_6 DDONE AVDD DF_6 QN6 AVDD AVSS DFRNQNX1_CV
+XDFF4 D_5 DDONE AVDD DF_5 QN5 AVDD AVSS DFRNQNX1_CV
+XDFF5 D_4 DDONE AVDD DF_4 QN4 AVDD AVSS DFRNQNX1_CV
+XDFF6 D_3 DDONE AVDD DF_3 QN3 AVDD AVSS DFRNQNX1_CV
+XDFF7 D_2 DDONE AVDD DF_2 QN2 AVDD AVSS DFRNQNX1_CV
+XDFF8 D_1 DDONE AVDD DF_1 QN1 AVDD AVSS DFRNQNX1_CV
+XDFF9 D_0 DDONE AVDD DF_0 QN0 AVDD AVSS DFRNQNX1_CV
+
+#else
+
+XD1 DONE DDONE AVDD AVSS AVDD AVSS BFX1_CV
+XDFF1 D_8 DDONE AVDD DF_8 QN8 AVDD AVSS AVDD AVSS DFRNQNX1_CV
+XDFF2 D_7 DDONE AVDD DF_7 QN7 AVDD AVSS AVDD AVSS DFRNQNX1_CV
+XDFF3 D_6 DDONE AVDD DF_6 QN6 AVDD AVSS AVDD AVSS DFRNQNX1_CV
+XDFF4 D_5 DDONE AVDD DF_5 QN5 AVDD AVSS AVDD AVSS DFRNQNX1_CV
+XDFF5 D_4 DDONE AVDD DF_4 QN4 AVDD AVSS AVDD AVSS DFRNQNX1_CV
+XDFF6 D_3 DDONE AVDD DF_3 QN3 AVDD AVSS AVDD AVSS DFRNQNX1_CV
+XDFF7 D_2 DDONE AVDD DF_2 QN2 AVDD AVSS AVDD AVSS DFRNQNX1_CV
+XDFF8 D_1 DDONE AVDD DF_1 QN1 AVDD AVSS AVDD AVSS DFRNQNX1_CV
+XDFF9 D_0 DDONE AVDD DF_0 QN0 AVDD AVSS AVDD AVSS DFRNQNX1_CV
+
+#endif
 
 XDAC DF_8 DF_7 DF_6 DF_5 DF_4 DF_3 DF_2 DF_1 DF_0 RO AVDD DAC_9BIT_TWOS_COMPL
 
@@ -146,10 +156,19 @@ B2 RO 0 V = V(RO_VDD)/V(VDD)
 
 
 *----------------------------------------------------------------
+* Measures
+*----------------------------------------------------------------
+.measure tran tpd_done trig v(CK_SAMPLE) val='AVDD/2' rise=1 targ v(DONE) val='AVDD/2' rise=1
+
+*----------------------------------------------------------------
 * NGSPICE control
 *----------------------------------------------------------------
 
+#ifdef Debug
+.probe v(SARN) v(SARP) v(RO) v(SAR_IP) v(SAR_IN) V(DONE) v(CK_SAMPLE) v(XDUT.CMP_OP) v(XDUT.CMP_ON)
+#else
 .probe v(SARN) v(SARP) v(RO) v(SAR_IP) v(SAR_IN) V(DONE) v(CK_SAMPLE)
+#endif
 
 
 .control
@@ -157,12 +176,17 @@ set color0=white
 set color1=black
 unset askquit
 
-tran 1n 13.2u 1n 5n
-
-
-write
-
+#ifdef Debug
+tran 1n 400n
 quit
+#else
+*nbpt=64 => 8u
+*tran 1n 8.5u
+*npbt=128 => 16u
+tran 1n 16.5u
+write
+quit
+#endif
 
 .endc
 

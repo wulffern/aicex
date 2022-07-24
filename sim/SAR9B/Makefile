@@ -60,10 +60,13 @@ magic:
 # REGRESSION
 #----------------------------------------------------------------------------
 
-blocks = SARDIGEX4_CV SARCMPX1_CV SARBSSW_CV CDAC8_CV SAR9B_CV
+blocks = SARDIGEX4_CV SARCMPX1_CV SARBSSW_CV CAP32C_CV CDAC8_CV SAR9B_CV
 
 lvsblocks:
 	${foreach b, ${blocks}, make lvsf CELL=$b;}
+
+lpeblocks:
+	${foreach b, ${blocks}, make lpe CELL=$b;}
 
 drcblocks:
 	${foreach  b, ${blocks}, make drc CELL=$b;}
@@ -158,3 +161,6 @@ clean:
 	-rm *.run
 	-rm *.pdf
 	-rm *.csv
+
+calccap:
+	cat clpe/CAP32C_CV_lpe.spi |grep CTOP|grep XRES | perl -e 'while(<>){@ar = split(/\s+/); $$c = $$ar[-1]; $$c =~ s/fF//ig; m/XRES(\d+)\w?\//ig; $$m = $$1; printf("%-2d\t%.3f %.3f\n",$$m,$$c,($$c/$$m));}'

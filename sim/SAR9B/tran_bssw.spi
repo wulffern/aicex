@@ -34,12 +34,13 @@
 * Include
 *----------------------------------------------------------------
 
-*ifdef Lay
+
+#ifdef Lay
 .include ../clpe/SARBSSW_CV_lpe.spi
 .include "../../../lib/SUN_TR_SKY130N.spi"
-*else
+#else
 .include ../build/SUN_SAR9B_SK130NM.spice
-*endif
+#endif
 
 
 *----------------------------------------------------------------
@@ -90,11 +91,11 @@ VCLK CLK 0 dc 0 pulse (0 {AVDD} 0 {TRF} {TRF} {PW_CLK} {PERIOD_CLK})
 
 
 
-*ifdef Lay
+#ifdef Lay
 X3 CLK CK_SAMPLE_BSSW  AVDD AVSS BFX1_CV
-*else
+#else
 X3 CLK CK_SAMPLE_BSSW AVDD AVSS AVDD AVSS BFX1_CV
-*endif
+#endif
 
 VCM VCM 0 dc {AVDD/2}
 VSARP SAR_IP VCM sin (0 {vamp} {fin})
