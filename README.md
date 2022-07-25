@@ -10,8 +10,8 @@ This repository is a collection of IPs in Skywater 130nm technology.
 |---------------------------------------|-----------------------------------------------------------------------------------------------------|
 | ip                                      | IP directory                                                                                        |
 | ip/sun_sar9b_sky130nm                   | 9-bit successive approximation analog-to-digital converter                                          |
-| ip/un_tr_sky130nm                       | Standard cell libraries for analog schematics                                                       |
-| /models/ skywater-pdk-libs-sky130_fd_pr | Skywater spice models. Git submodule                                                                |
+| ip/sun_tr_sky130nm                       | Standard cell libraries for analog schematics                                                       |
+| /models/skywater-pdk-libs-sky130_fd_pr | Skywater spice models. Git submodule                                                                |
 | sim/CHAR_GMID                           | Example of simulation                                                                               |
 | tech                                    | Technology files                                                                                    |
 | tech/cic                                | [ciccreator](https://github.com/wulffern/ciccreator) and [cicpy](https://github.com/wulffern/cicpy) |
