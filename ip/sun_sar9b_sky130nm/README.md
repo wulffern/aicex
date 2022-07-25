@@ -1,12 +1,20 @@
-# 9-bit successive approximation analog-to-digital converter
+# SUN_SAR9B_SKY130NM
 
-A description of the ADC can be found in [A Compiled 9-bit 20-MS/s
+# Who
+Carsten Wulff carsten@wulff.no
+
+# Why
+Many years ago I made a compiler, and a state-of-the-art compiled ADC in 28 nm
+FDSOI, described in [A Compiled 9-bit 20-MS/s
 3.5-fJ/conv.step SAR ADC in 28-nm FDSOI for Bluetooth Low Energy
-Receivers](https://ieeexplore.ieee.org/document/7906479), which describes an
-implementation of this ADC in 28-nm FDSOI.
+Receivers](https://ieeexplore.ieee.org/document/7906479). Since then, I've
+ported the ADC to multiple closed PDKs (22 nm FDSOI, 22 nm, 28 nm, 55 nm, 65 nm and
+130nm). Finally, there is an open source port to skywater 130nm!
 
-This is the same ADC ported to skywater 130nm.
-
+# How
+Made with [ciccreator](https://github.com/wulffern/ciccreator) and
+ [cicpy](https://github.com/wulffern/cicpy).
+ 
 The sources for the ADC are
 
 ``` bash
@@ -18,9 +26,25 @@ cic
 └── sky130.tech                  # Technology file for Skywater 130 nm
 ```
 
+ 
+# What
+| What               | Path                                   | Comment          |
+|:-------------------|:---------------------------------------|:-----------------|
+| Schematic          | design/SUN_SAR9B_SKY130NM/SAR9B_CV.sch | Not fully tested |
+| Layout             | design/SUN_SAR9B_SKY130NM/SAR9B_CV.mag |                  |
+| Verilog            | design/SUN_SAR9B_SKY130NM.v            | Not tested       |
+| Simulation netlist | design/SUN_SAR9B_SKY130NM.spice        |                  |
+| LVS netlist        | design/SUN_SAR9B_SKY130NM.spi          |                  |
+
+
+# Changelog/Plan
+| Version | Status             | Comment         |
+|:--------|:-------------------|:----------------|
+| 0.1.0   | :white_check_mark: | Initial version |
+|         |                    |                 |
+
 
 # Compiling ADC
-
 The SAR is pre-compiled, so you don't really need to compile it. The compiled files are
 in the `design/` directory, so if all you want is to simulate on a SAR, then
 `design/SUN_SAR9B_SK130NM.spice` should suffice.
@@ -59,6 +83,32 @@ make test
 | Name              | Purpose                                                       | Notes                                      |
 |:------------------|---------------------------------------------------------------|--------------------------------------------|
 | sim/SAR9B/tran.spi          | Full simulation of SAR, takes 1.5 hours on my Macbook pro     | python3 plot.py <runfile> to plot FFT      |
+
+
+# Key parameters
+| Parameter           | Min     | Typ           | Max     | Unit  |
+| :---                | :-:     | :-:           | :-:     | :---: |
+| Technology          |         | SKY130NM  |         |       |
+| AVDD                | 1.7    | 1.8           | 1.9    | V     |
+| Temperature         | -40     | 27            | 125     | C     |
+
+
+
+# Status
+
+| Stage                | TYPE | Status             | Comment |
+|:---------------------|:----:|:------------------:|:-------:|
+| Specification        | DOC  | :white_check_mark: |         |
+| Verilog model        | VIEW | :x:                |         |
+| Schematic            | VIEW | :x:                |         |
+| Schematic simulation | VER  | :x:                |         |
+| Spice simulation     | VER  | :white_check_mark: |         |
+| Layout               | VIEW | :white_check_mark: |         |
+| LPE simulation       | VER  | :white_check_mark: |         |
+| LVS                  | VER  | :white_check_mark: |         |
+| DRC                  | VER  | :white_check_mark: |         |
+| ERC                  | VER  | :x:                |         |
+| ANT                  | VER  | :x:                |         |
 
 
 # Results

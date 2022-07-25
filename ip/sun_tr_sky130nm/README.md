@@ -14,13 +14,14 @@ Library with digital cells, and standard transistors
 
 # What
 
-| What               | Path                   | Comment          |
-|:-------------------|:----------------------------|:----------------|
-| Schematic          | build/SUN_TR_SKY130NM/xschem | Not fully tested |
-| Verilog            | build/SUN_TR_SKY130NM/xschem | Not tested       |
-| Simulation netlist | build/SUN_TR_SKY130NM.spice  |                  |
-| LVS netlist        | build/SUN_TR_SKY130NM.spi    |                  |
-| Layout             | build/SUN_TR_SKY130NM/mag    |                  |
+| What               | Path                                    | Comment          |
+|:-------------------|:----------------------------------------|:-----------------|
+| Schematic          | design/SUN_TR_SKY130NM/SUNTR_SUN_TR.sch | Not fully tested |
+| Layout             | design/SUN_TR_SKY130NM/SUNTR_SUN_TR.mag |                  |
+| Verilog            | design/SUN_TR_SKY130NM.v                | Not tested       |
+| Simulation netlist | design/SUN_TR_SKY130NM.spice            |                  |
+| LVS netlist        | design/SUN_TR_SKY130NM.spi              |                  |
+
 
 
 
@@ -64,7 +65,6 @@ Some cells may come in multiple drive strengths.
 | SUNTR_TAPCELLB_CV | Bulk connection                                     |
 | SUNTR_TIEH_CV     | Tie high                                            |
 | SUNTR_TIEL_CV     | Tie low                                             |
-|             |                                                     |
 
 
 
@@ -91,7 +91,6 @@ Some cells may come in multiple drive strengths.
 | DRC                         | VER  | :white_check_mark: |         |
 | ERC                         | VER  | :x:                |         |
 | ANT                         | VER  | :x:                |         |
-
 
 
 
