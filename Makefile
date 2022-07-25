@@ -1,6 +1,6 @@
 
 
-dirs = sim/CHAR_GMID sim/SAR9B
+dirs = sim/CHAR_GMID ip/sun_tr_sky130nm/sim/IVX1_CV
 
 cwd = ${shell pwd}
 

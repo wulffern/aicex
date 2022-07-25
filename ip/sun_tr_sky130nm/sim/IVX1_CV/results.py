@@ -32,11 +32,11 @@ import sys
 
 
 
-files = glob.glob("output_ivx1/ivx1_*.csv")
+files = glob.glob("output_tran/tran_*.csv")
 df_all = pd.DataFrame()
 for f in files:
     df = pd.read_csv(f)
-    df["name"] =os.path.basename(f).replace("ivx1_","").replace(".csv","")
+    df["name"] =os.path.basename(f).replace("tran_","").replace(".csv","")
     df_all = pd.concat([df,df_all])
 
 

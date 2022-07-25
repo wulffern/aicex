@@ -1,4 +1,3 @@
-
 ######################################################################
 ##        Copyright (c) 2022 Carsten Wulff Software, Norway
 ## ###################################################################
@@ -27,53 +26,16 @@
 ######################################################################
 
 
+include ../../../tech/make/core.make
+
+LIB=SUN_SAR9B_SK130NM
+CELL=SAR9B_CV
 
 #----------------------------------------------------------------------------
 # REGRESSION
 #----------------------------------------------------------------------------
 
-blocks = SUN_TR NCHDLA PCHDLA PCHDLCM NCHDLCM NCHDLCM2 PCHDLCM2 CPCHDLCM2 CNCHDLCM2 RG12TRIX1_CV
+CELLS = SARDIGEX4_CV SARCMPX1_CV SARBSSW_CV CAP32C_CV CDAC8_CV SAR9B_CV
 
-
-
-TB=tran
-VIEW=Sch
-#VIEW=Lay
-#VIEW=Ver
-
-OPT=
-
-test:
-	${MAKE} tfs
-	python3 results.py
-
-typical:
-	cicsim runng ${TB} ${OPT} ${VIEW} Gt Mtt Rt Ct Tt Vt Dt Bt
-
-slow:
-	cicsim runng ${TB} ${OPT} ${VIEW} Gt Mss Rh Ch Bf Df "Th,Tl" Vl
-
-fast:
-	cicsim runng ${TB} ${OPT} ${VIEW} Gt Mff Rl Cl Bs Ds "Th,Tl" Vh
-
-tfs:
-	cicsim runng ${TB} ${OPT} ${VIEW} Gt "Mtt,Mss,Mff" Rl Cl Bs Ds "Tt,Th,Tl" Vt
-
-ttffss:
-	cicsim runng ${TB} ${OPT} ${VIEW} Gt "Mtt,Mss,Mff" Rl Cl Bs Ds "Tt" Vt
-
-temp:
-	cicsim runng ${TB} ${OPT} ${VIEW} Gt "Mtt" Rl Cl Bs Ds "Tt,Th,Tl" Vt
-
-doc:
-	pandoc -s README.md -o README.html
-
-clean:
-	-rm -rf build
-	-rm -rf clvs cdrc
-	-rm *.ext
-	-rm -rf output_*
-	-rm -rf __pycache__
-	-rm *.run
-	-rm *.pdf
-	-rm *.csv
+calccap:
+	cat lpe/CAP32C_CV_lpe.spi |grep CTOP|grep XRES | perl -e 'while(<>){@ar = split(/\s+/); $$c = $$ar[-1]; $$c =~ s/fF//ig; m/XRES(\d+)\w?\//ig; $$m = $$1; printf("%-2d\t%.3f %.3f\n",$$m,$$c,($$c/$$m));}'

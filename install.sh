@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
 
+git clone git@github.com:wulffern/cicpy.git
+cd cicpy
+pip3 install -r requirements.txt --user
+pip3 install --user -e .
 git clone git@github.com:wulffern/cicsim.git
 cd cicsim
 git checkout develop
