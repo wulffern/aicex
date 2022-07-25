@@ -16,11 +16,11 @@ Library with digital cells, and standard transistors
 
 | What               | Path                                    | Comment          |
 |:-------------------|:----------------------------------------|:-----------------|
-| Schematic          | design/SUN_TR_SKY130NM/SUNTR_SUN_TR.sch | Not fully tested |
-| Layout             | design/SUN_TR_SKY130NM/SUNTR_SUN_TR.mag |                  |
-| Verilog            | design/SUN_TR_SKY130NM.v                | Not tested       |
-| Simulation netlist | design/SUN_TR_SKY130NM.spice            |                  |
-| LVS netlist        | design/SUN_TR_SKY130NM.spi              |                  |
+| Schematic          | [design/SUN_TR_SKY130NM/SUNTR_SUN_TR.sch](design/SUN_TR_SKY130NM/SUNTR_SUN_TR.sch) | Not fully tested |
+| Layout             | [design/SUN_TR_SKY130NM/SUNTR_SUN_TR.mag](design/SUN_TR_SKY130NM/SUNTR_SUN_TR.mag) |                  |
+| Verilog            | [design/SUN_TR_SKY130NM.v](design/SUN_TR_SKY130NM.v)                | Not tested       |
+| Simulation netlist | [design/SUN_TR_SKY130NM.spice](design/SUN_TR_SKY130NM.spice)            |                  |
+| LVS netlist        | [design/SUN_TR_SKY130NM.spi](design/SUN_TR_SKY130NM.spi)              |                  |
 
 
 

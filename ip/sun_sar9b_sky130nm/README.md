@@ -30,18 +30,11 @@ cic
 # What
 | What               | Path                                   | Comment          |
 |:-------------------|:---------------------------------------|:-----------------|
-| Schematic          | design/SUN_SAR9B_SKY130NM/SAR9B_CV.sch | Not fully tested |
-| Layout             | design/SUN_SAR9B_SKY130NM/SAR9B_CV.mag |                  |
-| Verilog            | design/SUN_SAR9B_SKY130NM.v            | Not tested       |
-| Simulation netlist | design/SUN_SAR9B_SKY130NM.spice        |                  |
-| LVS netlist        | design/SUN_SAR9B_SKY130NM.spi          |                  |
-
-
-# Changelog/Plan
-| Version | Status             | Comment         |
-|:--------|:-------------------|:----------------|
-| 0.1.0   | :white_check_mark: | Initial version |
-|         |                    |                 |
+| Schematic          | [design/SUN_SAR9B_SKY130NM/SAR9B_CV.sch](design/SUN_SAR9B_SKY130NM/SAR9B_CV.sch) | Not fully tested |
+| Layout             | [design/SUN_SAR9B_SKY130NM/SAR9B_CV.mag](design/SUN_SAR9B_SKY130NM/SAR9B_CV.mag) |                  |
+| Verilog            | [design/SUN_SAR9B_SKY130NM.v](design/SUN_SAR9B_SKY130NM.v)            | Not tested       |
+| Simulation netlist | [design/SUN_SAR9B_SKY130NM.spice](design/SUN_SAR9B_SKY130NM.spice)        |                  |
+| LVS netlist        | [design/SUN_SAR9B_SKY130NM.spi](design/SUN_SAR9B_SKY130NM.spi)          |                  |
 
 
 # Compiling ADC
