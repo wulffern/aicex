@@ -68,6 +68,8 @@ make test
 
 # TODO
 - LVS only works with a flat hierarchy
+- Caps in SARBSSW are a bit wide
+- Add walden FOM extraction
 
 ![magic layout](media/SAR9B_CV.png)
 

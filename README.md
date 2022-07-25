@@ -6,21 +6,18 @@ Files for Advanced Integrated Circuits
 
 This repository is a collection of IPs in Skywater 130nm technology. 
 
-``` sh
-├── ip                                      # IP directory
-│   ├── sun_sar9b_sky130nm                  # 9-bit successive approximation analog-to-digital converter
-│   └── sun_tr_sky130nm                     # Standard cell libraries for analog schematics
-├── models
-│   └── skywater-pdk-libs-sky130_fd_pr      # Skywater spice models
-├── sim
-│   ├── CHAR_GMID                           # Example of simulation'
-└── tech                                    # Technology files
-    ├── cic                                 #   for [ciccreator](https://github.com/wulffern/ciccreator) and [cicpy](https://github.com/wulffern/cicpy)
-    ├── cicsim                              #   for [cicsim](https://github.com/wulffern/cicsim)
-    ├── magic                               #   for Magic VLSI
-    ├── make                                #   Makefiles to run netlist, gds, lvs, drc, lpe and ip compile 
-    └── ngspice                             #   spice files to setup corners 
-```
+
+|ip                                     | IP directory|
+|ip/sun_sar9b_sky130nm                  | 9-bit successive approximation analog-to-digital converter|
+|ip/un_tr_sky130nm                     | Standard cell libraries for analog schematics|
+/models/ skywater-pdk-libs-sky130_fd_pr      | Skywater spice models. Git submodule|
+|sim/CHAR_GMID                           |Example of simulation|
+|tech                                    |Technology files|
+|tech/cic                                 |   [ciccreator](https://github.com/wulffern/ciccreator) and [cicpy](https://github.com/wulffern/cicpy)|
+|tech/cicsim                              |    [cicsim](https://github.com/wulffern/cicsim)|
+|tech/ magic                               |  Magic VLSI color and tcl scripts|
+|tech/make                                |  Makefiles to run netlist, gds, lvs, drc, lpe and ip compile| 
+|tech/ngspice                             |  files for corner setup| 
 
 
 ## Requirements

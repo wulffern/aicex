@@ -95,3 +95,7 @@ Some cells may come in multiple drive strengths.
 
 
 
+# TODO
+- Reset issue with DFRNQNX1_CV. If reset enabled, and disabled, it is equivalent
+  to toggling the clock. Works OK for registers, and shift registers. Fails as
+  PDF in PLL. 
