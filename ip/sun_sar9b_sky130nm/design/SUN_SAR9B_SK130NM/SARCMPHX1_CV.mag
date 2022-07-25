@@ -1,0 +1,154 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1658775803
+<< checkpaint >>
+rect 0 0 2520 2464
+<< poly >>
+rect 324 2270 2196 2306
+rect 324 158 2196 194
+<< locali >>
+rect 2058 1554 2118 2318
+rect 402 498 462 1966
+rect 864 586 1032 646
+rect 864 1290 1032 1350
+rect 864 1994 1032 2054
+rect 1032 586 1656 646
+rect 1032 586 1092 2054
+rect 636 234 864 294
+rect 636 938 864 998
+rect 636 1642 864 1702
+rect 636 234 696 1702
+rect 864 234 1032 294
+rect 1032 58 1656 118
+rect 1032 58 1092 294
+rect 1428 1290 1656 1350
+rect 1428 1994 1656 2054
+rect 864 2346 1428 2406
+rect 1428 1290 1488 2406
+rect 2088 146 2256 206
+rect 2088 498 2256 558
+rect 2088 1202 2256 1262
+rect 2256 146 2316 1262
+rect 834 234 894 470
+rect 834 586 894 822
+rect 834 938 894 1174
+rect 834 1290 894 1526
+rect 834 1642 894 1878
+rect 834 1994 894 2230
+rect 1626 234 1686 470
+rect 1626 586 1686 822
+rect 1626 938 1686 1174
+rect 1626 1290 1686 1526
+rect 1626 1642 1686 1878
+rect 1626 1994 1686 2230
+rect 2412 132 2628 220
+rect -108 132 108 220
+rect 756 1642 972 1702
+rect 756 1994 972 2054
+rect 324 498 540 558
+rect 324 146 540 206
+rect 756 2346 972 2406
+rect 324 2258 540 2318
+<< m3 >>
+rect 1656 938 1836 1014
+rect 1836 850 2088 926
+rect 1836 850 1912 1014
+rect 1548 0 1748 2464
+rect 756 0 956 2464
+rect 1548 0 1748 2464
+rect 756 0 956 2464
+use NCHDL MN0
+transform 1 0 0 0 1 0
+box 0 0 1260 352
+use NCHDL MN1
+transform 1 0 0 0 1 352
+box 0 352 1260 704
+use NCHDL MN2
+transform 1 0 0 0 1 704
+box 0 704 1260 1056
+use NCHDL MN3
+transform 1 0 0 0 1 1056
+box 0 1056 1260 1408
+use NCHDL MN4
+transform 1 0 0 0 1 1408
+box 0 1408 1260 1760
+use NCHDL MN5
+transform 1 0 0 0 1 1760
+box 0 1760 1260 2112
+use NCHDL MN6
+transform 1 0 0 0 1 2112
+box 0 2112 1260 2464
+use PCHDL MP0
+transform 1 0 1260 0 1 0
+box 1260 0 2520 352
+use PCHDL MP1
+transform 1 0 1260 0 1 352
+box 1260 352 2520 704
+use PCHDL MP2
+transform 1 0 1260 0 1 704
+box 1260 704 2520 1056
+use PCHDL MP3
+transform 1 0 1260 0 1 1056
+box 1260 1056 2520 1408
+use PCHDL MP4
+transform 1 0 1260 0 1 1408
+box 1260 1408 2520 1760
+use PCHDL MP5
+transform 1 0 1260 0 1 1760
+box 1260 1760 2520 2112
+use PCHDL MP6
+transform 1 0 1260 0 1 2112
+box 1260 2112 2520 2464
+use cut_M1M4_2x1 
+transform 1 0 1548 0 1 938
+box 1548 938 1748 1014
+use cut_M1M4_2x1 
+transform 1 0 1980 0 1 850
+box 1980 850 2180 926
+use cut_M1M4_2x1 
+transform 1 0 1548 0 1 234
+box 1548 234 1748 310
+use cut_M1M4_2x1 
+transform 1 0 1548 0 1 410
+box 1548 410 1748 486
+use cut_M1M4_2x1 
+transform 1 0 1548 0 1 938
+box 1548 938 1748 1014
+use cut_M1M4_2x1 
+transform 1 0 1548 0 1 1114
+box 1548 1114 1748 1190
+use cut_M1M4_2x1 
+transform 1 0 1548 0 1 1642
+box 1548 1642 1748 1718
+use cut_M1M4_2x1 
+transform 1 0 1548 0 1 1818
+box 1548 1818 1748 1894
+use cut_M1M4_2x1 
+transform 1 0 1548 0 1 2346
+box 1548 2346 1748 2422
+use cut_M1M4_2x1 
+transform 1 0 756 0 1 58
+box 756 58 956 134
+<< labels >>
+flabel locali s 2412 132 2628 220 0 FreeSans 400 0 0 0 BULKP
+port 7 nsew
+flabel locali s -108 132 108 220 0 FreeSans 400 0 0 0 BULKN
+port 8 nsew
+flabel locali s 756 1642 972 1702 0 FreeSans 400 0 0 0 N1
+port 5 nsew
+flabel locali s 756 1994 972 2054 0 FreeSans 400 0 0 0 N2
+port 6 nsew
+flabel locali s 324 498 540 558 0 FreeSans 400 0 0 0 CI
+port 1 nsew
+flabel locali s 324 146 540 206 0 FreeSans 400 0 0 0 CK
+port 2 nsew
+flabel locali s 756 2346 972 2406 0 FreeSans 400 0 0 0 CO
+port 3 nsew
+flabel locali s 324 2258 540 2318 0 FreeSans 400 0 0 0 VMR
+port 4 nsew
+flabel m3 s 1548 0 1748 2464 0 FreeSans 400 0 0 0 AVDD
+port 9 nsew
+flabel m3 s 756 0 956 2464 0 FreeSans 400 0 0 0 AVSS
+port 10 nsew
+<< end >>

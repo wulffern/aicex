@@ -1,0 +1,15 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1658777854
+<< checkpaint >>
+rect 0 0 184 68
+<< locali >>
+rect 0 0 184 68
+<< viali >>
+rect 12 6 68 62
+rect 116 6 172 62
+<< m1 >>
+rect 0 0 184 68
+<< labels >>
+<< end >>

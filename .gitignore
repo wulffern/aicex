@@ -11,6 +11,8 @@ __pycache__/
 *.ext
 *.gds
 output*/
+
+work/
 # Distribution / packaging
 .Python
 build/

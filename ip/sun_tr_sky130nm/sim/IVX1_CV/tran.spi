@@ -1,0 +1,101 @@
+* SAR testbench
+**********************************************************************
+**        Copyright (c) 2022 Carsten Wulff Software, Norway
+** *******************************************************************
+** Created       : wulff at 2022-5-16
+** *******************************************************************
+**  The MIT License (MIT)
+**
+**  Permission is hereby granted, free of charge, to any person obtaining a copy
+**  of this software and associated documentation files (the "Software"), to deal
+**  in the Software without restriction, including without limitation the rights
+**  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+**  copies of the Software, and to permit persons to whom the Software is
+**  furnished to do so, subject to the following conditions:
+**
+**  The above copyright notice and this permission notice shall be included in all
+**  copies or substantial portions of the Software.
+**
+**  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+**  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+**  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+**  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+**  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+**  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+**  SOFTWARE.
+**
+**********************************************************************
+
+
+*----------------------------------------------------------------
+* Include
+*----------------------------------------------------------------
+
+#ifdef Lay
+* No layout view planned
+#else
+.include ../../../design/SUN_TR_SKY130NM.spice
+#endif
+
+
+*----------------------------------------------------------------
+* Options
+*----------------------------------------------------------------
+
+.option reltol=1e-6 srcsteps=1 ramptime=10n noopiter keepopinfo
+
+*----------------------------------------------------------------
+* PARAMETERS
+*----------------------------------------------------------------
+.param TRF = 10p
+
+*- Analog parameters
+.param AVDD = 1.5
+
+*- 10 MHz clock frequency
+.param PERIOD_CLK = 100n
+
+*- 25% duty-cycle clock
+.param PW_CLK = PERIOD_CLK/4
+
+*- Sampling frequency
+.param fs = 1/PERIOD_CLK
+
+*----------------------------------------------------------------
+* Sources
+*----------------------------------------------------------------
+VSS  AVSS 0 dc 0
+VDD  AVDD AVSS dc {AVDD}
+VREF VREF AVSS dc {AVDD}
+
+
+*- Control signals
+VCLK CLK 0 dc 0 pulse (0 {AVDD} 0 {TRF} {TRF} {PW_CLK} {PERIOD_CLK})
+
+X2 CLK CK_SAMPLE AVDD AVSS SUNTR_IVX1_CV
+X1 CK_SAMPLE  NC1 AVDD AVSS SUNTR_IVX1_CV
+
+.probe v(CLK) v(CK_SAMPLE) V(EN)
+
+
+.measure tran tpdr trig v(CLK) val='AVDD/2' fall=1 targ v(CK_SAMPLE) val='AVDD/2' rise=1
+.measure tran tpdf trig v(CLK) val='AVDD/2' rise=1 targ v(CK_SAMPLE) val='AVDD/2' fall=1
+.measure tran tpd param='(tpdr+tpdf)/2'
+
+.control
+
+set color0=white
+set color1=black
+unset askquit
+
+tran 1n 300n 1n 5n
+
+*plot v(CLK) v(CK_SAMPLE) v(EN)
+
+write
+
+quit
+
+.endc
+
+.end

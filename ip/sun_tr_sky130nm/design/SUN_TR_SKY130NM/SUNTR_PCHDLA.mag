@@ -1,0 +1,49 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1658777854
+<< checkpaint >>
+rect 0 0 1260 1232
+<< locali >>
+rect 168 58 396 118
+rect 168 410 396 470
+rect 168 762 396 822
+rect 168 1114 396 1174
+rect 168 58 228 1174
+rect 396 234 564 294
+rect 396 586 564 646
+rect 396 938 564 998
+rect 564 234 624 998
+rect 798 146 858 1086
+rect 1152 132 1368 220
+rect 288 234 504 294
+rect 720 146 936 206
+rect 288 58 504 118
+use SUNTR_PCHDL M0
+transform 1 0 0 0 1 0
+box 0 0 1260 352
+use SUNTR_PCHDL M1
+transform 1 0 0 0 1 176
+box 0 176 1260 528
+use SUNTR_PCHDL M2
+transform 1 0 0 0 1 352
+box 0 352 1260 704
+use SUNTR_PCHDL M3
+transform 1 0 0 0 1 528
+box 0 528 1260 880
+use SUNTR_PCHDL M4
+transform 1 0 0 0 1 704
+box 0 704 1260 1056
+use SUNTR_PCHDL M5
+transform 1 0 0 0 1 880
+box 0 880 1260 1232
+<< labels >>
+flabel locali s 1152 132 1368 220 0 FreeSans 400 0 0 0 B
+port 4 nsew
+flabel locali s 288 234 504 294 0 FreeSans 400 0 0 0 D
+port 1 nsew
+flabel locali s 720 146 936 206 0 FreeSans 400 0 0 0 G
+port 2 nsew
+flabel locali s 288 58 504 118 0 FreeSans 400 0 0 0 S
+port 3 nsew
+<< end >>

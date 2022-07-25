@@ -1,5 +1,5 @@
 
-TB=idgm_lvt
+TB=idgm
 #VIEW=Sch
 VIEW=Sch
 #VIEW=Ver

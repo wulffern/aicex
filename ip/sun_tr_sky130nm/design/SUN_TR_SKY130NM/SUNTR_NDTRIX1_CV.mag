@@ -1,0 +1,73 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1658777854
+<< checkpaint >>
+rect 0 0 2520 1056
+<< locali >>
+rect 834 234 894 470
+rect 834 586 894 822
+rect 1626 586 1686 822
+rect 864 938 1032 998
+rect 1032 938 1656 998
+rect 1032 938 1092 998
+rect 1428 58 1656 118
+rect 1428 586 1656 646
+rect 1428 58 1488 646
+rect 756 586 1764 646
+rect 324 498 540 558
+rect 1980 850 2196 910
+rect 324 850 540 910
+rect 324 146 540 206
+rect 756 938 972 998
+<< poly >>
+rect 324 510 2196 546
+rect 324 158 2196 194
+<< m3 >>
+rect 1548 0 1748 1056
+rect 756 0 956 1056
+rect 1548 0 1748 1056
+rect 756 0 956 1056
+use SUNTR_NCHDL MN2
+transform 1 0 0 0 1 0
+box 0 0 1260 352
+use SUNTR_NCHDL MN0
+transform 1 0 0 0 1 352
+box 0 352 1260 704
+use SUNTR_NCHDL MN1
+transform 1 0 0 0 1 704
+box 0 704 1260 1056
+use SUNTR_PCHDL MP2
+transform 1 0 1260 0 1 0
+box 1260 0 2520 352
+use SUNTR_PCHDL MP0
+transform 1 0 1260 0 1 352
+box 1260 352 2520 704
+use SUNTR_PCHDL MP1
+transform 1 0 1260 0 1 704
+box 1260 704 2520 1056
+use SUNTR_cut_M1M4_2x1 
+transform 1 0 1548 0 1 234
+box 1548 234 1748 310
+use SUNTR_cut_M1M4_2x1 
+transform 1 0 1548 0 1 410
+box 1548 410 1748 486
+use SUNTR_cut_M1M4_2x1 
+transform 1 0 756 0 1 58
+box 756 58 956 134
+<< labels >>
+flabel locali s 324 498 540 558 0 FreeSans 400 0 0 0 A
+port 1 nsew
+flabel locali s 1980 850 2196 910 0 FreeSans 400 0 0 0 CN
+port 3 nsew
+flabel locali s 324 850 540 910 0 FreeSans 400 0 0 0 C
+port 2 nsew
+flabel locali s 324 146 540 206 0 FreeSans 400 0 0 0 RN
+port 4 nsew
+flabel locali s 756 938 972 998 0 FreeSans 400 0 0 0 Y
+port 5 nsew
+flabel m3 s 1548 0 1748 1056 0 FreeSans 400 0 0 0 AVDD
+port 6 nsew
+flabel m3 s 756 0 956 1056 0 FreeSans 400 0 0 0 AVSS
+port 7 nsew
+<< end >>

@@ -1,0 +1,71 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1658775803
+<< checkpaint >>
+rect 0 0 2520 1056
+<< locali >>
+rect 864 938 1032 998
+rect 1032 938 1656 998
+rect 1032 938 1092 998
+rect 2058 146 2118 910
+rect 834 234 894 470
+rect 834 586 894 822
+rect 1626 234 1686 470
+rect 1626 586 1686 822
+rect 2412 132 2628 220
+rect -108 132 108 220
+rect 324 146 540 206
+rect 1980 850 2196 910
+rect 324 850 540 910
+rect 324 498 540 558
+rect 756 938 972 998
+<< m3 >>
+rect 1548 0 1748 1056
+rect 756 0 956 1056
+rect 1548 0 1748 1056
+rect 756 0 956 1056
+use NCHDL MN0
+transform 1 0 0 0 1 0
+box 0 0 1260 352
+use NCHDL MN1
+transform 1 0 0 0 1 352
+box 0 352 1260 704
+use NCHDL MN2
+transform 1 0 0 0 1 704
+box 0 704 1260 1056
+use PCHDL MP0
+transform 1 0 1260 0 1 0
+box 1260 0 2520 352
+use PCHDL MP1
+transform 1 0 1260 0 1 352
+box 1260 352 2520 704
+use PCHDL MP2
+transform 1 0 1260 0 1 704
+box 1260 704 2520 1056
+use cut_M1M4_2x1 
+transform 1 0 1548 0 1 58
+box 1548 58 1748 134
+use cut_M1M4_2x1 
+transform 1 0 756 0 1 58
+box 756 58 956 134
+<< labels >>
+flabel locali s 2412 132 2628 220 0 FreeSans 400 0 0 0 BULKP
+port 6 nsew
+flabel locali s -108 132 108 220 0 FreeSans 400 0 0 0 BULKN
+port 7 nsew
+flabel locali s 324 146 540 206 0 FreeSans 400 0 0 0 A
+port 1 nsew
+flabel locali s 1980 850 2196 910 0 FreeSans 400 0 0 0 RST_N
+port 3 nsew
+flabel locali s 324 850 540 910 0 FreeSans 400 0 0 0 EN
+port 4 nsew
+flabel locali s 324 498 540 558 0 FreeSans 400 0 0 0 LCK_N
+port 5 nsew
+flabel locali s 756 938 972 998 0 FreeSans 400 0 0 0 CHL
+port 2 nsew
+flabel m3 s 1548 0 1748 1056 0 FreeSans 400 0 0 0 AVDD
+port 8 nsew
+flabel m3 s 756 0 956 1056 0 FreeSans 400 0 0 0 AVSS
+port 9 nsew
+<< end >>

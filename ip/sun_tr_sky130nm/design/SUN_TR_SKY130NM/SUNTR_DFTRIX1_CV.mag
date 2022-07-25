@@ -1,0 +1,48 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1658777854
+<< checkpaint >>
+rect 0 0 2520 6336
+<< locali >>
+rect 432 5778 600 5838
+rect 600 5162 864 5222
+rect 600 5162 660 5838
+rect 204 4370 432 4430
+rect 204 6130 432 6190
+rect 204 4370 264 6190
+rect 324 1906 540 1966
+rect 324 6130 540 6190
+rect 324 850 540 910
+rect 1980 6130 2196 6190
+rect 756 6218 972 6278
+<< m3 >>
+rect 1548 0 1748 6336
+rect 756 0 956 6336
+rect 1548 0 1748 6336
+rect 756 0 956 6336
+use SUNTR_TAPCELLB_CV XA3
+transform 1 0 0 0 1 0
+box 0 0 2520 352
+use SUNTR_DFRNQNX1_CV XA2
+transform 1 0 0 0 1 352
+box 0 352 2520 5632
+use SUNTR_IVTRIX1_CV XA0
+transform 1 0 0 0 1 5632
+box 0 5632 2520 6336
+<< labels >>
+flabel locali s 324 1906 540 1966 0 FreeSans 400 0 0 0 D
+port 1 nsew
+flabel locali s 324 6130 540 6190 0 FreeSans 400 0 0 0 C
+port 3 nsew
+flabel locali s 324 850 540 910 0 FreeSans 400 0 0 0 CK
+port 2 nsew
+flabel locali s 1980 6130 2196 6190 0 FreeSans 400 0 0 0 CN
+port 4 nsew
+flabel locali s 756 6218 972 6278 0 FreeSans 400 0 0 0 Y
+port 5 nsew
+flabel m3 s 1548 0 1748 6336 0 FreeSans 400 0 0 0 AVDD
+port 6 nsew
+flabel m3 s 756 0 956 6336 0 FreeSans 400 0 0 0 AVSS
+port 7 nsew
+<< end >>

@@ -1,9 +1,9 @@
-*idgm
+*idgm_lvt
 
 *----------------------------------------------------------------
 * Include
 *----------------------------------------------------------------
-.include ../../../lib/SUN_TR_SKY130N.spi
+.include ../../../ip/sun_tr_sky130nm/design/SUN_TR_SKY130NM.spice
 
 *----------------------------------------------------------------
 * Options
@@ -14,7 +14,10 @@
 * Sources
 *----------------------------------------------------------------
 VSS VSS 0 dc 0
-INN 0 N1 dc 1.0u
+INN 0 N1_REF dc 1u
+VREF N1_REF 0 dc 0.5
+
+BINN 0 N1 i=i(VREF) tc1=0
 
 E0 EN0 0 N1 0 1
 E1 EN1 0 N1 0 1
@@ -23,9 +26,9 @@ VD1 N2 N1 dc 1u
 *----------------------------------------------------------------
 * DUT
 *----------------------------------------------------------------
-XM1 N1 N1 VSS VSS NCH
-XM2 EN0 N1 VSS VSS NCH
-XM3 EN1 N2 VSS VSS NCH
+XM1 N1 N1 VSS VSS SUNTR_NCHDL
+XM2 EN0 N1 VSS VSS SUNTR_NCHDL
+XM3 EN1 N2 VSS VSS SUNTR_NCHDL
 
 B1 gm 0 v=(i(E0) - i(E1))/1u
 B2 idsq 0 v=i(INN)/3

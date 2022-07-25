@@ -1,0 +1,38 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1658777854
+<< checkpaint >>
+rect 0 0 2520 352
+<< locali >>
+rect 1656 234 1824 294
+rect 1824 146 2088 206
+rect 1824 146 1884 294
+rect 756 234 972 294
+<< poly >>
+rect 324 158 2196 194
+<< m3 >>
+rect 1548 0 1748 352
+rect 756 0 956 352
+rect 1548 0 1748 352
+rect 756 0 956 352
+use SUNTR_NCHDL MN0
+transform 1 0 0 0 1 0
+box 0 0 1260 352
+use SUNTR_PCHDL MP0
+transform 1 0 1260 0 1 0
+box 1260 0 2520 352
+use SUNTR_cut_M1M4_2x1 
+transform 1 0 1548 0 1 58
+box 1548 58 1748 134
+use SUNTR_cut_M1M4_2x1 
+transform 1 0 756 0 1 58
+box 756 58 956 134
+<< labels >>
+flabel locali s 756 234 972 294 0 FreeSans 400 0 0 0 Y
+port 1 nsew
+flabel m3 s 1548 0 1748 352 0 FreeSans 400 0 0 0 AVDD
+port 2 nsew
+flabel m3 s 756 0 956 352 0 FreeSans 400 0 0 0 AVSS
+port 3 nsew
+<< end >>
