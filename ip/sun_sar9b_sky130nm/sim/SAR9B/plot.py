@@ -65,7 +65,7 @@ for f in files:
     (data1,ydB1) = scc.fft(sigixx.to_numpy())
     (data3,ydB3) = scc.fft(saroxx.to_numpy())
 
-    axes[0].plot(ydB1,label=f + " v(in):" +paramToStr(data1),linestyle='solid',marker="d")
+    #axes[0].plot(ydB1,label=f + " v(in):" +paramToStr(data1),linestyle='solid',marker="d")
     axes[0].plot(ydB3,label=f + " v(ro):" + paramToStr(data3),linestyle='solid',marker="o")
     #axes[0].stem(ydB1,label=f + " v(in):" +paramToStr(data1),linefmt='-.',bottom=-100)
     #axes[0].stem(ydB3,label=f + " v(ro):" + paramToStr(data3),linefmt=':',bottom=-100)
