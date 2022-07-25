@@ -7,7 +7,7 @@ Files for Advanced Integrated Circuits
 This repository is a collection of IPs in Skywater 130nm technology. 
 
 | Directory                               | Notes                                                                                               |
-|:---------------------------------------:|-----------------------------------------------------------------------------------------------------|
+|---------------------------------------|-----------------------------------------------------------------------------------------------------|
 | ip                                      | IP directory                                                                                        |
 | ip/sun_sar9b_sky130nm                   | 9-bit successive approximation analog-to-digital converter                                          |
 | ip/un_tr_sky130nm                       | Standard cell libraries for analog schematics                                                       |
