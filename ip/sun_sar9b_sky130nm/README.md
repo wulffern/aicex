@@ -106,7 +106,7 @@ make test
 
 # Results
 
-![64 point FFT of SAR output](media/tran_SchGtMttRtCtTtVtDtBt.png)
+![128 point FFT of SAR output](media/tran.png)
 
 
 # TODO

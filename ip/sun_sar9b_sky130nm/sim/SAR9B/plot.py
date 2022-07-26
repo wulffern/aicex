@@ -8,6 +8,11 @@ import matplotlib.pyplot as plt
 import glob
 import os
 import sys
+import seaborn as sns
+
+
+sns.set_style("whitegrid")
+sns.set_context("talk")
 
 
 
@@ -39,9 +44,10 @@ f,ax = plt.subplots(1,1,sharex=False)
 axes = list()
 axes.append(ax)
 f.set_figheight(8)
-f.set_figwidth(17)
+f.set_figwidth(15)
 for f in files:
     dfs = cs.toDataFrames(cs.ngRawRead(f))
+    fn = f.replace(".raw","")
     df = dfs[0]
 
     df.set_index("time",inplace=True)
@@ -64,13 +70,16 @@ for f in files:
     scc = cs.SimCalc()
     (data1,ydB1) = scc.fft(sigixx.to_numpy())
     (data3,ydB3) = scc.fft(saroxx.to_numpy())
+    #(data1,ydB1) = scc.fftWithHanning(sigixx.to_numpy())
+    #(data3,ydB3) = scc.fftWithHanning(saroxx.to_numpy())
 
     #axes[0].plot(ydB1,label=f + " v(in):" +paramToStr(data1),linestyle='solid',marker="d")
-    axes[0].plot(ydB3,label=f + " v(ro):" + paramToStr(data3),linestyle='solid',marker="o")
+    axes[0].plot(ydB3,label=fn + " v(ro):" + paramToStr(data3),linestyle='solid',marker="o")
     #axes[0].stem(ydB1,label=f + " v(in):" +paramToStr(data1),linefmt='-.',bottom=-100)
     #axes[0].stem(ydB3,label=f + " v(ro):" + paramToStr(data3),linefmt=':',bottom=-100)
 
 axes[0].set_ylabel("Power Spectrum [dBFS]")
+axes[0].set_xlabel(" FFT bin")
 axes[0].grid()
 axes[0].legend()
 axes[0].axis([0,len(ydB3),-100,10])
@@ -79,5 +88,4 @@ plt.tight_layout()
 if(len(sys.argv)> 2):
     plt.show()
 else:
-    plt.savefig(runfile.replace(".run",".pdf"))
-
+    plt.savefig(runfile.replace(".run",".png"))
