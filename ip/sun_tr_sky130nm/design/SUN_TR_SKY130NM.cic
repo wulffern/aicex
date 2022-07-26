@@ -59,7 +59,7 @@
                 }
             ],
             "class": "cIcCore::Cell",
-            "has_pr": true,
+            "has_pr": false,
             "layer": "PR",
             "meta": {
             },
@@ -3896,7 +3896,7 @@
                 }
             },
             "class": "cIcCore::LayoutCell",
-            "has_pr": false,
+            "has_pr": true,
             "layer": "PR",
             "meta": {
             },
@@ -4206,7 +4206,7 @@
                 }
             },
             "class": "cIcCore::LayoutCell",
-            "has_pr": false,
+            "has_pr": true,
             "layer": "PR",
             "meta": {
             },
@@ -5191,7 +5191,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "meta": {
                     },
@@ -6069,7 +6069,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": true,
+                    "has_pr": false,
                     "layer": "PR",
                     "meta": {
                     },
@@ -6105,7 +6105,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": true,
+                    "has_pr": false,
                     "layer": "PR",
                     "meta": {
                     },
@@ -6141,7 +6141,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": true,
+                    "has_pr": false,
                     "layer": "PR",
                     "meta": {
                     },
@@ -26865,7 +26865,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "meta": {
                     },
@@ -29459,7 +29459,7 @@
                 }
             },
             "class": "cIcCore::LayoutCell",
-            "has_pr": true,
+            "has_pr": false,
             "layer": "PR",
             "meta": {
             },
@@ -36502,7 +36502,7 @@
                 }
             },
             "class": "cIcCore::LayoutCell",
-            "has_pr": true,
+            "has_pr": false,
             "layer": "PR",
             "meta": {
             },

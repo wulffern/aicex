@@ -113,6 +113,7 @@ make test
 - LVS only works with a flat hierarchy
 - Caps in SARBSSW are a bit wide
 - Add walden FOM extraction
+- Fix name, is SK130NM, should be SKY130NM
 
 ![magic layout](media/SAR9B_CV.png)
 

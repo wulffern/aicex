@@ -2,9 +2,13 @@
 dirs:
   - cic
   - design
+  - design/${IP}
   - documents
   - sim
   - work
+
+copy:
+  - cic/dmos_sky130nm_core.json
 
 create:
   work/Makefile: |
@@ -94,4 +98,6 @@ do:
   - cd cic && cp ../../../tech/cic/sky130.tech .
   - ln -s ../../tech
   - ln -s ../../models
-  - git add -f *
+
+echo: |
+  Remember to add design/${IP} to xschemrc

@@ -1,0 +1,109 @@
+* ROSC testbench
+**********************************************************************
+**        Copyright (c) 2022 Carsten Wulff Software, Norway
+** *******************************************************************
+** Created       : wulff at 2022-7-27
+** *******************************************************************
+**  The MIT License (MIT)
+**
+**  Permission is hereby granted, free of charge, to any person obtaining a copy
+**  of this software and associated documentation files (the "Software"), to deal
+**  in the Software without restriction, including without limitation the rights
+**  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+**  copies of the Software, and to permit persons to whom the Software is
+**  furnished to do so, subject to the following conditions:
+**
+**  The above copyright notice and this permission notice shall be included in all
+**  copies or substantial portions of the Software.
+**
+**  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+**  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+**  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+**  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+**  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+**  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+**  SOFTWARE.
+**
+**********************************************************************
+
+
+*----------------------------------------------------------------
+* Include
+*----------------------------------------------------------------
+
+#ifdef Lay
+
+#else
+.include ../SUN_PLL_ROSC.spice
+#endif
+
+
+
+*----------------------------------------------------------------
+* Options
+*----------------------------------------------------------------
+#ifdef Debug
+.option reltol=1e-3 srcsteps=1 ramptime=10n noopiter keepopinfo gmin=1e-12
+#else
+.option reltol=1e-5 srcsteps=1 ramptime=10n noopiter keepopinfo gmin=1e-15
+#endif
+
+*----------------------------------------------------------------
+* PARAMETERS
+*----------------------------------------------------------------
+.param TRF = 10p
+
+*- Analog parameters
+.param AVDD = {vdda}
+
+*----------------------------------------------------------------
+* Sources
+*----------------------------------------------------------------
+VSS  AVSS 0 dc 0
+VDD  VDD_1V8 AVSS dc {AVDD}
+VROSC VDD_ROSC AVSS dc {AVDD}
+VPWR PWRUP_1V8 AVSS dc {AVDD}
+
+*----------------------------------------------------------------
+* DUT
+*----------------------------------------------------------------
+
+*----------------------------------------------------------------
+* Measures
+*----------------------------------------------------------------
+.measure tran tclk trig v(CK) val='AVDD/2' rise=1 targ v(CK) val='AVDD/2' rise=1
+
+*----------------------------------------------------------------
+* NGSPICE control
+*----------------------------------------------------------------
+
+#ifdef Debug
+.probe v(CK) v(CKUP)
+#else
+.probe v(SARN) v(SARP) v(RO) v(SAR_IP) v(SAR_IN) V(DONE) v(CK_SAMPLE)
+#endif
+
+
+.control
+set num_threads=8
+set color0=white
+set color1=black
+unset askquit
+
+#ifdef Debug
+tran 1n 100n
+
+hardcopy {cicfname}.ps allv
+*quit
+#else
+*nbpt=64 => 8u
+*tran 1n 8.5u
+*npbt=128 => 16u
+tran 1n 16.5u
+write
+quit
+#endif
+
+.endc
+
+.end
