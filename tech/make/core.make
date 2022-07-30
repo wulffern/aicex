@@ -52,12 +52,12 @@ PDKPATH=${PDK_ROOT}/sky130A
 
 CIC=${HOME}/pro/cic/ciccreator/bin/cic
 CICPY = python3 ${HOME}/pro/cicpy/cicpy/cic.py
-
+CICVIEWS =  --spice --verilog --xschem --magic
 
 
 ip:
 	cd ${BUILD};${CIC} --nogds --spi --I ../cic ../cic/ip.json  ../cic/sky130.tech ${LIB} ${CICOPT}
-	cd ${BUILD}; ${CICPY}  transpile ${LIB}.cic ../cic/sky130.tech ${LIB}  --spice --verilog --xschem --magic --smash "(P|N)CHIOA" --exclude "${CICEXCLUDE}"
+	cd ${BUILD}; ${CICPY}  transpile ${LIB}.cic ../cic/sky130.tech ${LIB}  ${CICVIEWS} --smash "(P|N)CHIOA" --exclude "${CICEXCLUDE}"
 
 gds:
 	@echo "load ${NCELL}.mag\ncalma write gds/${PRCELL}.gds \nquit" > gds/${PRCELL}.tcl

@@ -1,0 +1,67 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1659198123
+<< checkpaint >>
+rect 0 0 7560 2464
+<< m3 >>
+rect 3292 1408 3492 2112
+rect 4084 2112 4284 2464
+<< locali >>
+rect 756 234 972 294
+rect 324 146 540 206
+rect 4068 2346 4284 2406
+use SUNTR_IVX1_CV xa1[7]
+transform 1 0 0 0 1 0
+box 0 0 2520 352
+use SUNTR_IVX1_CV xa1[6]
+transform 1 0 0 0 1 352
+box 0 352 2520 704
+use SUNTR_IVX1_CV xa1[5]
+transform 1 0 0 0 1 704
+box 0 704 2520 1056
+use SUNTR_IVX1_CV xa1[4]
+transform 1 0 0 0 1 1056
+box 0 1056 2520 1408
+use SUNTR_IVX1_CV xb1[3]
+transform -1 0 5040 0 1 0
+box 5040 0 7560 352
+use SUNTR_IVX1_CV xb1[2]
+transform -1 0 5040 0 1 352
+box 5040 352 7560 704
+use SUNTR_IVX1_CV xb1[1]
+transform -1 0 5040 0 1 704
+box 5040 704 7560 1056
+use SUNTR_IVX1_CV xb1[0]
+transform -1 0 5040 0 1 1056
+box 5040 1056 7560 1408
+use SUNTR_NDX1_CV xb1
+transform -1 0 5040 0 1 1408
+box 5040 1408 7560 2112
+use SUNTR_IVX1_CV xb6
+transform -1 0 5040 0 1 2112
+box 5040 2112 7560 2464
+use SUNTR_PCHDL xc2
+transform 1 0 5040 0 1 0
+box 5040 0 6300 352
+use SUNTR_PCHDL xc3
+transform 1 0 5040 0 1 352
+box 5040 352 6300 704
+use SUNTR_NCHDLA xd4
+transform -1 0 7560 0 1 0
+box 7560 0 8820 528
+use SUNTR_NCHDLA xd5
+transform -1 0 7560 0 1 528
+box 7560 528 8820 1056
+<< labels >>
+flabel m3 s 3292 1408 3492 2112 0 FreeSans 400 0 0 0 PWRUP_1V8
+port 1 nsew
+flabel locali s 756 234 972 294 0 FreeSans 400 0 0 0 VDD_ROSC
+port 2 nsew
+flabel locali s 324 146 540 206 0 FreeSans 400 0 0 0 AVSS
+port 3 nsew
+flabel locali s 4068 2346 4284 2406 0 FreeSans 400 0 0 0 VDD_1V8
+port 4 nsew
+flabel m3 s 4084 2112 4284 2464 0 FreeSans 400 0 0 0 CK
+port 5 nsew
+<< end >>
