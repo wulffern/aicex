@@ -9,6 +9,9 @@
 
         { "name" : "NCHDLCM",
           "setYoffsetHalf" : 1,
+          "meta" : {
+              "symbol" : "nch"
+          },
           "class" : "Layout::LayoutDigitalCell",
           "beforeRoute" : {
               "addConnectivityRoutes" : [
@@ -21,6 +24,9 @@
         }
          ,
         { "name" : "PCHDLCM",
+          "meta" : {
+              "symbol" : "pch"
+          },
           "setYoffsetHalf" : 1,
           "class" : "Layout::LayoutDigitalCell",
           "beforeRoute" : {
@@ -34,6 +40,9 @@
         }
          ,
         { "name" : "NCHDLA",
+          "meta" : {
+              "symbol" : "nch"
+          },
           "setYoffsetHalf" : 1,
           "class" : "Layout::LayoutDigitalCell",
           "beforeRoute" : {
@@ -48,6 +57,9 @@
         }
          ,
         { "name" : "PCHDLA",
+          "meta" : {
+              "symbol" : "pch"
+          },
           "setYoffsetHalf" : 1,
           "class" : "Layout::LayoutDigitalCell",
           "beforeRoute" : {

@@ -1,7 +1,8 @@
 {
 	"options" :
 	{
-		"ignoreSetYoffsetHalf" : false
+		"ignoreSetYoffsetHalf" : false,
+		"prefix" : "SUNTR_"
 	},
 	"include" : [
 		"dmos_sky130nm_core.json",

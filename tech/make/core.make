@@ -38,6 +38,7 @@ dirs:
 	-mkdir lpe
 	-mkdir cdl
 	-mkdir gds
+	-mkdir xsch
 
 #----------------------------------------------------------------------------
 # VERIFICATION
@@ -53,9 +54,10 @@ CIC=${HOME}/pro/cic/ciccreator/bin/cic
 CICPY = python3 ${HOME}/pro/cicpy/cicpy/cic.py
 
 
+
 ip:
-	cd ${BUILD};${CIC} --nogds --spi  --I ../cic ../cic/ip.json  ../cic/sky130.tech ${LIB}
-	cd ${BUILD}; ${CICPY}  transpile ${LIB}.cic ../cic/sky130.tech ${LIB}  --spice --verilog --xschem --magic --smash "(P|N)CHIOA" --prefix "${PREFIX}"
+	cd ${BUILD};${CIC} --nogds --spi --prefix "${PREFIX}" --I ../cic ../cic/ip.json  ../cic/sky130.tech ${LIB} ${CICOPT}
+	cd ${BUILD}; ${CICPY}  transpile ${LIB}.cic ../cic/sky130.tech ${LIB}  --spice --verilog --xschem --magic --smash "(P|N)CHIOA"
 
 gds:
 	@echo "load ${NCELL}.mag\ncalma write gds/${PRCELL}.gds \nquit" > gds/${PRCELL}.tcl

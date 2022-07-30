@@ -138,14 +138,15 @@ B2 RO 0 V = V(RO_VDD)/V(VDD)
 *----------------------------------------------------------------
 .measure tran tpd_done trig v(CK_SAMPLE) val='AVDD/2' rise=1 targ v(DONE) val='AVDD/2' rise=1
 .measure tran iavdd AVG i(VDD) TD='PERIOD_CLK'
+.measure tran ivref AVG i(VREF) TD='PERIOD_CLK'
 *----------------------------------------------------------------
 * NGSPICE control
 *----------------------------------------------------------------
 
 #ifdef Debug
-.probe v(SARN) v(SARP) v(RO) v(SAR_IP) v(SAR_IN) V(DONE) v(CK_SAMPLE) v(XDUT.CMP_OP) v(XDUT.CMP_ON) i(VDD)
+.probe v(SARN) v(SARP) v(RO) v(SAR_IP) v(SAR_IN) V(DONE) v(CK_SAMPLE) v(XDUT.CMP_OP) v(XDUT.CMP_ON) i(VDD) i(VREF)
 #else
-.probe v(SARN) v(SARP) v(RO) v(SAR_IP) v(SAR_IN) V(DONE) v(CK_SAMPLE)
+.probe v(SARN) v(SARP) v(RO) v(SAR_IP) v(SAR_IN) V(DONE) v(CK_SAMPLE) i(VDD) i(VREF)
 #endif
 
 

@@ -18,9 +18,9 @@ L 4 10 -50 10 -40 {}
 L 4 10 -40 20 -50 {}
 L 4 20 -50 20 -40 {}
 L 4 20 -40 30 -40 {}
-B 5 -4 -84 4 -76 {name=AVDD dir=inout pinnumber=}
 B 5 36 -44 44 -36 {name=Y dir=inout pinnumber=1}
-B 5 -4 -4 4 4 {name=AVSS dir=inout pinnumber=2}
+B 5 -4 -84 4 -76 {name=AVDD dir=inout pinnumber=2}
+B 5 -4 -4 4 4 {name=AVSS dir=inout pinnumber=3}
 T {@name} 10 -30 0 0 0.15 0.15 { vcenter=true}
 T {@symname} 10 -20 0 0 0.15 0.15 { vcenter=true}
 T {Y} 29 -40 0 0 0.15 0.15 { vcenter=true}

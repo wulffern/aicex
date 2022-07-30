@@ -149,35 +149,33 @@ C {devices/lab_pin.sym} 760.0 920.0 0 0  {name=l60 sig_type=std_logic lab=AVDD }
 N 760.0 940.0 780.0 940.0{lab=AVSS}
 C {devices/lab_pin.sym} 760.0 940.0 0 0  {name=l61 sig_type=std_logic lab=AVSS }
 C {SUN_TR_SKY130NM/SUNTR_SWX2_CV.sym} 800 1000.0 0 0 {name=XXF13}
-N 760.0 1000.0 780.0 1000.0{lab=A13}
-C {devices/lab_pin.sym} 760.0 1000.0 0 0  {name=l62 sig_type=std_logic lab=A13 }
-N 760.0 1020.0 780.0 1020.0{lab=Y13}
-C {devices/lab_pin.sym} 760.0 1020.0 0 0  {name=l63 sig_type=std_logic lab=Y13 }
-N 760.0 1040.0 780.0 1040.0{lab=V13}
-C {devices/lab_pin.sym} 760.0 1040.0 0 0  {name=l64 sig_type=std_logic lab=V13 }
-N 760.0 1060.0 780.0 1060.0{lab=AVDD}
-C {devices/lab_pin.sym} 760.0 1060.0 0 0  {name=l65 sig_type=std_logic lab=AVDD }
-N 760.0 1080.0 780.0 1080.0{lab=AVSS}
-C {devices/lab_pin.sym} 760.0 1080.0 0 0  {name=l66 sig_type=std_logic lab=AVSS }
+N 780.0 1000.0 800.0 1000.0{lab=A13}
+C {devices/lab_pin.sym} 780.0 1000.0 0 0  {name=l62 sig_type=std_logic lab=A13 }
+N 900.0 1000.0 880.0 1000.0{lab=Y13}
+C {devices/lab_pin.sym} 900.0 1000.0 2 0  {name=l63 sig_type=std_logic lab=Y13 }
+N 860.0 960.0 840.0 960.0{lab=AVDD}
+C {devices/lab_pin.sym} 860.0 960.0 2 0  {name=l64 sig_type=std_logic lab=AVDD }
+N 860.0 1040.0 840.0 1040.0{lab=AVSS}
+C {devices/lab_pin.sym} 860.0 1040.0 2 0  {name=l65 sig_type=std_logic lab=AVSS }
 C {SUN_TR_SKY130NM/SUNTR_SWX4_CV.sym} 1200 0 0 0 {name=XXF14}
 N 1160.0 0.0 1180.0 0.0{lab=A14}
-C {devices/lab_pin.sym} 1160.0 0.0 0 0  {name=l67 sig_type=std_logic lab=A14 }
+C {devices/lab_pin.sym} 1160.0 0.0 0 0  {name=l66 sig_type=std_logic lab=A14 }
 N 1160.0 20.0 1180.0 20.0{lab=Y14}
-C {devices/lab_pin.sym} 1160.0 20.0 0 0  {name=l68 sig_type=std_logic lab=Y14 }
+C {devices/lab_pin.sym} 1160.0 20.0 0 0  {name=l67 sig_type=std_logic lab=Y14 }
 N 1160.0 40.0 1180.0 40.0{lab=V14}
-C {devices/lab_pin.sym} 1160.0 40.0 0 0  {name=l69 sig_type=std_logic lab=V14 }
+C {devices/lab_pin.sym} 1160.0 40.0 0 0  {name=l68 sig_type=std_logic lab=V14 }
 N 1160.0 60.0 1180.0 60.0{lab=AVDD}
-C {devices/lab_pin.sym} 1160.0 60.0 0 0  {name=l70 sig_type=std_logic lab=AVDD }
+C {devices/lab_pin.sym} 1160.0 60.0 0 0  {name=l69 sig_type=std_logic lab=AVDD }
 N 1160.0 80.0 1180.0 80.0{lab=AVSS}
-C {devices/lab_pin.sym} 1160.0 80.0 0 0  {name=l71 sig_type=std_logic lab=AVSS }
+C {devices/lab_pin.sym} 1160.0 80.0 0 0  {name=l70 sig_type=std_logic lab=AVSS }
 C {SUN_TR_SKY130NM/SUNTR_TGPD_CV.sym} 1200 140 0 0 {name=XXF15}
 N 1160.0 140.0 1180.0 140.0{lab=A15}
-C {devices/lab_pin.sym} 1160.0 140.0 0 0  {name=l72 sig_type=std_logic lab=A15 }
+C {devices/lab_pin.sym} 1160.0 140.0 0 0  {name=l71 sig_type=std_logic lab=A15 }
 N 1160.0 160.0 1180.0 160.0{lab=Y15}
-C {devices/lab_pin.sym} 1160.0 160.0 0 0  {name=l73 sig_type=std_logic lab=Y15 }
+C {devices/lab_pin.sym} 1160.0 160.0 0 0  {name=l72 sig_type=std_logic lab=Y15 }
 N 1160.0 180.0 1180.0 180.0{lab=V15}
-C {devices/lab_pin.sym} 1160.0 180.0 0 0  {name=l74 sig_type=std_logic lab=V15 }
+C {devices/lab_pin.sym} 1160.0 180.0 0 0  {name=l73 sig_type=std_logic lab=V15 }
 N 1160.0 200.0 1180.0 200.0{lab=AVDD}
-C {devices/lab_pin.sym} 1160.0 200.0 0 0  {name=l75 sig_type=std_logic lab=AVDD }
+C {devices/lab_pin.sym} 1160.0 200.0 0 0  {name=l74 sig_type=std_logic lab=AVDD }
 N 1160.0 220.0 1180.0 220.0{lab=AVSS}
-C {devices/lab_pin.sym} 1160.0 220.0 0 0  {name=l76 sig_type=std_logic lab=AVSS }
+C {devices/lab_pin.sym} 1160.0 220.0 0 0  {name=l75 sig_type=std_logic lab=AVSS }

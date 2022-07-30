@@ -79,11 +79,18 @@ make test
 
 
 # Key parameters
-| Parameter           | Min     | Typ           | Max     | Unit  |
-| :---                | :-:     | :-:           | :-:     | :---: |
-| Technology          |         | SK130NM  |         |       |
-| AVDD                | 1.7    | 1.8           | 1.9    | V     |
-| Temperature         | -40     | 27            | 125     | C     |
+| Parameter                             | Min  | Typ     | Max   | Unit |
+|:--------------------------------------|:----:|:-------:|:-----:|:----:|
+| Technology                            |      | SK130NM |       |      |
+| AVDD                                  | 1.7  | 1.8     | 1.9   | V    |
+| Temperature                           | -40  | 27      | 125   | C    |
+| Sampling frequency 25% DTC CK_SMAMPLE |      |         | 8     | MHz  |
+| Average current AVDD                  |      | 68      |       | uA   |
+| Average current VREF                  |      | 34      |       | uA   |
+| Power consumption                     |      | 183     |       | uW   |
+| SNDR without device noise             | 48.8 | 50.4    | 50.87 | dBFS |
+| SFDR                                  | 57   | 59      | 61    | dBc  |
+| ENOB without device noise             | 7.8  | 8.08    | 8.16  | bit  |
 
 
 

@@ -186,6 +186,9 @@
         { "name" : "PCHDL",
 		  "xoffset" : 0.0,
           "inherit" : "DMOS_BULKP",
+          "meta" : {
+              "symbol" : "pch"
+          },
           "abstract" : 0,
           "type" : "pch_lvt",
           "beforePlace" :{
@@ -197,6 +200,9 @@
 
         { "name" : "NCHDL",
           "inherit" : "DMOS_BULKN",
+          "meta" : {
+              "symbol" : "nch"
+          },
           "xoffset" : -1.5,
           "abstract" : 0,
           "afterNew" : {
