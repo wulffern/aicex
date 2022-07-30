@@ -10,9 +10,14 @@
 # -----------------------------------------------------------
 include ../../../tech/make/core.make
 
-PREFIX=
 LIB=SUN_PLL_SKY130NM
 CELL=SUN_PLL
 
+CICEXCLUDE="^SUNTR_"
+
 #- Provide cells you want to check for the lvsall drcall commands
 CELLS = SUN_PLL
+
+ip:
+	cd ${BUILD};${CIC} --nogds --spi --I ../cic ../cic/ip.json  ../cic/sky130.tech ${LIB} ${CICOPT}
+	cd ${BUILD}; ${CICPY}  transpile ${LIB}.cic ../cic/sky130.tech ${LIB}  --spice --verilog --magic --smash "(P|N)CHIOA" --exclude "${CICEXCLUDE}"

@@ -465,7 +465,7 @@
                 }
             ],
             "class": "cIcCore::Cell",
-            "has_pr": true,
+            "has_pr": false,
             "layer": "PR",
             "meta": {
             },
@@ -5592,7 +5592,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": true,
+                    "has_pr": false,
                     "layer": "PR",
                     "meta": {
                     },
@@ -24022,7 +24022,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "meta": {
                     },
@@ -36954,7 +36954,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "meta": {
                             },
@@ -37037,7 +37037,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "meta": {
                             },
@@ -43274,7 +43274,7 @@
         "includepaths": "../cic",
         "libpaths": "",
         "library": "SUN_TR_SKY130NM",
-        "prefix": "SUNTR_",
+        "prefix": "",
         "rules": "../cic/sky130.tech",
         "version": "0.1.4 built on Sat Jul 30 16:22:02 CEST 2022"
     }

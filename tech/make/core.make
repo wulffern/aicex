@@ -56,8 +56,8 @@ CICPY = python3 ${HOME}/pro/cicpy/cicpy/cic.py
 
 
 ip:
-	cd ${BUILD};${CIC} --nogds --spi --prefix "${PREFIX}" --I ../cic ../cic/ip.json  ../cic/sky130.tech ${LIB} ${CICOPT}
-	cd ${BUILD}; ${CICPY}  transpile ${LIB}.cic ../cic/sky130.tech ${LIB}  --spice --verilog --xschem --magic --smash "(P|N)CHIOA"
+	cd ${BUILD};${CIC} --nogds --spi --I ../cic ../cic/ip.json  ../cic/sky130.tech ${LIB} ${CICOPT}
+	cd ${BUILD}; ${CICPY}  transpile ${LIB}.cic ../cic/sky130.tech ${LIB}  --spice --verilog --xschem --magic --smash "(P|N)CHIOA" --exclude "${CICEXCLUDE}"
 
 gds:
 	@echo "load ${NCELL}.mag\ncalma write gds/${PRCELL}.gds \nquit" > gds/${PRCELL}.tcl
