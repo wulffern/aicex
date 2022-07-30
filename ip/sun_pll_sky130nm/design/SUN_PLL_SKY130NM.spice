@@ -1,0 +1,6 @@
+
+*-------------------------------------------------------------
+* SUN_PLL_ROSC <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUN_PLL_ROSC PWRUP_1V8 VDD_ROSC AVSS VDD_1V8 CK
+.ENDS
