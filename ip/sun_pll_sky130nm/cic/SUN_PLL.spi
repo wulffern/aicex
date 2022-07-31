@@ -1,0 +1,4 @@
+** sch_path: /Users/wulff/pro/aicex/ip/sun_pll_sky130nm/work/../design/SUN_PLL_SKY130NM/SUN_PLL.sch
+.subckt SUN_PLL
+.ends
+.end

@@ -67,7 +67,7 @@
                   ["AVDD","X","bottom"],
 				  ["AVSS","X","bottom"]
               ]
-          },
+         },
           "afterRoute" : {
               "trimRouteRings" : [
                   [ "Y","top","r"]

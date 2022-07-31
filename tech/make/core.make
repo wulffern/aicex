@@ -100,3 +100,7 @@ doc:
 
 clean:
 	-rm -rf lvs drc lpe cdl gds
+
+spi:
+	xschem -q -x -b -s -n ../design/${LIB}/${CELL}.sch
+	cat xsch/${CELL}.spice| ../tech/script/fixspi > ../cic/${CELL}.spi

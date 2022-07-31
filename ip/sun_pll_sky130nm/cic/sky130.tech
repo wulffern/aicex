@@ -70,7 +70,7 @@
 
 
 
-        "TXT" : { "alias" : "","number" : 58, "datatype" :-1 , "material" : "marker" , "color" : "black","fill" : "fill"}
+        "TXT" : { "alias" : "","number" : 58, "datatype" :-1 , "material" : "metal" , "color" : "black","fill" : "fill"}
     },
     "technology" :{
         "gamma" : 200,

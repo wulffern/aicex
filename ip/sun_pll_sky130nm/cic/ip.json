@@ -5,25 +5,15 @@
         "prefix" : ""
 
 	},
-	"include" : [
-	],
     "library" : [
         "../../sun_tr_sky130nm/design/SUN_TR_SKY130NM.cic"
     ],
-    "cells" : [
-        {
-            "name" : "SUN_PLL_ROSC",
-            "class" : "cIcCore::LayoutCell",
-            "boundaryIgnoreRouting" : 0,
-            "composite" : 1,
-            "noPowerRoute" : 1,
-            "alternateGroup" : 1,
-            "beforeRoute" :{
-                "addConnectivityRoutes" : [
-                  //["M1","QN$","-|--","onTopL"]
-              ]
-            }
+	"include" : [
+        "SUN_PLL_LSCORE.json",
+        "SUN_PLL_ROSC.json"
 
-        }
+	],
+
+    "cells" : [
     ]
 }

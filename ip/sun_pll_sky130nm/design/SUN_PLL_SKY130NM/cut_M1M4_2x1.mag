@@ -1,25 +1,22 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1659285988
+timestamp 1659289004
 << checkpaint >>
 rect 0 0 200 76
 << locali >>
 rect 0 0 184 68
-<< viali >>
-rect 12 6 68 62
-rect 116 6 172 62
 << m1 >>
 rect 0 0 184 68
-<< v1 >>
-rect 12 6 68 62
-rect 116 6 172 62
 << m2 >>
 rect 0 0 200 76
-<< v2 >>
-rect 12 6 76 70
-rect 124 6 188 70
 << m3 >>
 rect 0 0 200 76
+<< viali >>
+rect 12 6 172 62
+<< v1 >>
+rect 12 6 172 62
+<< v2 >>
+rect 12 6 188 70
 << labels >>
 << end >>

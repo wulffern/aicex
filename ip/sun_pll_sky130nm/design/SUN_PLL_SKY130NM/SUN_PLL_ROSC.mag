@@ -1,67 +1,171 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1659198123
+timestamp 1659289004
 << checkpaint >>
-rect 0 0 7560 2464
-<< m3 >>
-rect 3292 1408 3492 2112
-rect 4084 2112 4284 2464
+rect 0 -720 5040 3784
 << locali >>
-rect 756 234 972 294
-rect 324 146 540 206
-rect 4068 2346 4284 2406
-use SUNTR_IVX1_CV xa1[7]
+rect 0 -720 5040 -520
+rect 0 -720 5040 -520
+rect 0 3592 5040 3652
+rect 0 3724 5040 3784
+rect 4176 1642 4344 1702
+rect 4344 1202 4608 1262
+rect 4344 1202 4404 1702
+rect 4176 2346 4344 2406
+rect 4344 1906 4608 1966
+rect 4344 1906 4404 2406
+rect 4176 3050 4344 3110
+rect 4344 2610 4608 2670
+rect 4344 2610 4404 3110
+rect 4224 646 4776 706
+rect 4608 3314 4776 3374
+rect 4776 646 4836 3374
+rect 636 1350 816 1410
+rect 432 1554 636 1614
+rect 636 1350 696 1614
+rect 756 1290 864 1350
+rect 4500 146 4716 206
+rect 756 1642 972 1702
+<< m3 >>
+rect 756 -720 956 1760
+rect 4084 -720 4284 704
+rect 4084 -720 4284 1056
+rect 4084 -720 4284 1408
+rect 4084 -720 4284 1760
+rect 4084 -720 4284 2112
+rect 4084 -720 4284 2464
+rect 4084 -720 4284 2816
+rect 4084 -720 4284 3168
+rect 4084 -720 4284 3520
+rect 3292 0 3492 704
+rect 1548 0 1748 1408
+<< m1 >>
+rect 4146 586 4206 3784
+rect 4578 3314 4638 3784
+rect 4176 3402 4344 3462
+rect 4344 2962 4608 3022
+rect 4344 2962 4404 3470
+rect 4176 1994 4344 2054
+rect 4344 1554 4608 1614
+rect 4344 1554 4404 2062
+rect 4176 2698 4344 2758
+rect 4344 2258 4608 2318
+rect 4344 2258 4404 2766
+rect 4176 1290 4344 1350
+rect 4344 850 4608 910
+rect 4344 850 4404 1358
+use SUN_PLL_LSCORE xa3
 transform 1 0 0 0 1 0
-box 0 0 2520 352
-use SUNTR_IVX1_CV xa1[6]
-transform 1 0 0 0 1 352
-box 0 352 2520 704
-use SUNTR_IVX1_CV xa1[5]
-transform 1 0 0 0 1 704
-box 0 704 2520 1056
-use SUNTR_IVX1_CV xa1[4]
-transform 1 0 0 0 1 1056
-box 0 1056 2520 1408
-use SUNTR_IVX1_CV xb1[3]
+box 0 0 2520 1408
+use SUNTR_IVX1_CV xa4
+transform 1 0 0 0 1 1408
+box 0 1408 2520 1760
+use SUNTR_TAPCELLB_CV xa5
+transform 1 0 0 0 1 1760
+box 0 1760 2520 2112
+use SUNTR_NDX1_CV xb1
 transform -1 0 5040 0 1 0
-box 5040 0 7560 352
-use SUNTR_IVX1_CV xb1[2]
-transform -1 0 5040 0 1 352
-box 5040 352 7560 704
-use SUNTR_IVX1_CV xb1[1]
+box 5040 0 7560 704
+use SUNTR_IVX1_CV xb2_0
 transform -1 0 5040 0 1 704
 box 5040 704 7560 1056
-use SUNTR_IVX1_CV xb1[0]
+use SUNTR_IVX1_CV xb2_1
 transform -1 0 5040 0 1 1056
 box 5040 1056 7560 1408
-use SUNTR_NDX1_CV xb1
+use SUNTR_IVX1_CV xb2_2
 transform -1 0 5040 0 1 1408
-box 5040 1408 7560 2112
-use SUNTR_IVX1_CV xb6
+box 5040 1408 7560 1760
+use SUNTR_IVX1_CV xb2_3
+transform -1 0 5040 0 1 1760
+box 5040 1760 7560 2112
+use SUNTR_IVX1_CV xb2_4
 transform -1 0 5040 0 1 2112
 box 5040 2112 7560 2464
-use SUNTR_PCHDL xc2
-transform 1 0 5040 0 1 0
-box 5040 0 6300 352
-use SUNTR_PCHDL xc3
-transform 1 0 5040 0 1 352
-box 5040 352 6300 704
-use SUNTR_NCHDLA xd4
-transform -1 0 7560 0 1 0
-box 7560 0 8820 528
-use SUNTR_NCHDLA xd5
-transform -1 0 7560 0 1 528
-box 7560 528 8820 1056
+use SUNTR_IVX1_CV xb2_5
+transform -1 0 5040 0 1 2464
+box 5040 2464 7560 2816
+use SUNTR_IVX1_CV xb2_6
+transform -1 0 5040 0 1 2816
+box 5040 2816 7560 3168
+use SUNTR_IVX1_CV xb2_7
+transform -1 0 5040 0 1 3168
+box 5040 3168 7560 3520
+use cut_M1M4_2x2 
+transform 1 0 756 0 1 -720
+box 756 -720 956 -520
+use cut_M1M4_2x2 
+transform 1 0 4084 0 1 -720
+box 4084 -720 4284 -520
+use cut_M1M4_2x2 
+transform 1 0 4084 0 1 -720
+box 4084 -720 4284 -520
+use cut_M1M4_2x2 
+transform 1 0 4084 0 1 -720
+box 4084 -720 4284 -520
+use cut_M1M4_2x2 
+transform 1 0 4084 0 1 -720
+box 4084 -720 4284 -520
+use cut_M1M4_2x2 
+transform 1 0 4084 0 1 -720
+box 4084 -720 4284 -520
+use cut_M1M4_2x2 
+transform 1 0 4084 0 1 -720
+box 4084 -720 4284 -520
+use cut_M1M4_2x2 
+transform 1 0 4084 0 1 -720
+box 4084 -720 4284 -520
+use cut_M1M4_2x2 
+transform 1 0 4084 0 1 -720
+box 4084 -720 4284 -520
+use cut_M1M4_2x2 
+transform 1 0 4084 0 1 -720
+box 4084 -720 4284 -520
+use cut_M1M2_2x1 
+transform 1 0 4084 0 1 586
+box 4084 586 4268 654
+use cut_M1M2_2x1 
+transform 1 0 4084 0 1 3724
+box 4084 3724 4268 3792
+use cut_M1M2_2x1 
+transform 1 0 4516 0 1 3314
+box 4516 3314 4700 3382
+use cut_M1M2_2x1 
+transform 1 0 4516 0 1 3724
+box 4516 3724 4700 3792
+use cut_M1M2_2x1 
+transform 1 0 4068 0 1 3402
+box 4068 3402 4252 3470
+use cut_M1M2_2x1 
+transform 1 0 4500 0 1 2962
+box 4500 2962 4684 3030
+use cut_M1M2_2x1 
+transform 1 0 4068 0 1 1994
+box 4068 1994 4252 2062
+use cut_M1M2_2x1 
+transform 1 0 4500 0 1 1554
+box 4500 1554 4684 1622
+use cut_M1M2_2x1 
+transform 1 0 4068 0 1 2698
+box 4068 2698 4252 2766
+use cut_M1M2_2x1 
+transform 1 0 4500 0 1 2258
+box 4500 2258 4684 2326
+use cut_M1M2_2x1 
+transform 1 0 4068 0 1 1290
+box 4068 1290 4252 1358
+use cut_M1M2_2x1 
+transform 1 0 4500 0 1 850
+box 4500 850 4684 918
 << labels >>
-flabel m3 s 3292 1408 3492 2112 0 FreeSans 400 0 0 0 PWRUP_1V8
-port 1 nsew
-flabel locali s 756 234 972 294 0 FreeSans 400 0 0 0 VDD_ROSC
-port 2 nsew
-flabel locali s 324 146 540 206 0 FreeSans 400 0 0 0 AVSS
+flabel locali s 0 -720 5040 -520 0 FreeSans 400 0 0 0 AVSS
 port 3 nsew
-flabel locali s 4068 2346 4284 2406 0 FreeSans 400 0 0 0 VDD_1V8
+flabel locali s 4500 146 4716 206 0 FreeSans 400 0 0 0 PWRUP_1V8
+port 1 nsew
+flabel m3 s 3292 0 3492 704 0 FreeSans 400 0 0 0 VDD_ROSC
+port 2 nsew
+flabel m3 s 1548 0 1748 1408 0 FreeSans 400 0 0 0 VDD_1V8
 port 4 nsew
-flabel m3 s 4084 2112 4284 2464 0 FreeSans 400 0 0 0 CK
+flabel locali s 756 1642 972 1702 0 FreeSans 400 0 0 0 CK
 port 5 nsew
 << end >>
