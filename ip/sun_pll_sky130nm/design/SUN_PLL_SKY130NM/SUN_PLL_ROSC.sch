@@ -146,3 +146,4 @@ C {devices/lab_pin.sym} 570 -160 1 0 {name=l8 sig_type=std_logic lab=NC1
 }
 C {SUN_TRB_SKY130NM/SUNTRB_NDX1_CV.sym} -400 10 0 0 {name=xb1}
 C {SUN_TRB_SKY130NM/SUNTRB_TAPCELLBAVSS_CV.sym} 100 -160 0 0 {name=xb3}
+C {cborder/border_s.sym} 550 220 0 0 {user="Carsten Wulff" company="Carsten Wulff Software"}

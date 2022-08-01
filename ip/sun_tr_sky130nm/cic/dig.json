@@ -316,6 +316,8 @@
         { "name": "SWX2_CV" ,
           "class" : "Layout::LayoutDigitalCell",
           "inherit" : "IVX2_CV",
+          "meta" : {
+          },
           "beforeRoute" : [
               {"addVias" :  [
                   ["M3","M4","MP1:D",2,2,8,"CUST_VREF"]

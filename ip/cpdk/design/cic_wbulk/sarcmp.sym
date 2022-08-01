@@ -1,0 +1,43 @@
+v {xschem version=3.0.0 file_version=1.2 }
+L 4 40 -20 40 180 {}
+L 4 40 180 260 180 {}
+L 4 260 180 260 -20 {}
+L 4 260 -20 40 -20 {}
+L 4 110 50 120 50 {}
+L 4 120 50 120 30 {}
+L 4 120 30 140 30 {}
+L 4 90 60 70 60 {}
+L 4 90 20 70 20 {}
+L 4 220 60 160 60 {}
+L 4 220 20 160 20 {}
+L 4 100 0 100 80 {}
+L 4 100 80 180 40 {}
+L 4 180 40 100 0 {}
+L 4 0 160 40 160 {}
+L 4 0 0 40 0 {}
+L 4 0 140 40 140 {}
+L 4 0 100 40 100 {}
+L 4 0 120 40 120 {}
+L 4 300 60 260 60 {}
+L 4 300 20 260 20 {}
+L 4 0 60 40 60 {}
+L 4 0 20 40 20 {}
+T {AVSS} 46 160 0 0 0.25 0.25 { vcenter=true}
+T {AVDD} 46 0 0 0 0.25 0.25 { vcenter=true}
+T {DONE} 46 140 0 0 0.25 0.25 { vcenter=true}
+T {CK_SAMPLE} 46 100 0 0 0.25 0.25 { vcenter=true}
+T {CK_CMP} 46 120 0 0 0.25 0.25 { vcenter=true}
+T {CNO} 254 60 2 0 0.25 0.25 { vcenter=true}
+T {CPO} 254 20 2 0 0.25 0.25 { vcenter=true}
+T {CNI} 46 60 0 0 0.25 0.25 { vcenter=true}
+T {CPI} 46 20 0 0 0.25 0.25 { vcenter=true}
+T {@symname} 40 190 0 0 0.25 0.25 { vcenter=true}
+B 5 -4 24 4 16 {name=CPI dir=inout pinnumber=}
+B 5 -4 64 4 56 {name=CNI dir=inout pinnumber=1}
+B 5 296 24 304 16 {name=CPO dir=inout pinnumber=2}
+B 5 296 64 304 56 {name=CNO dir=inout pinnumber=3}
+B 5 -4 124 4 116 {name=CK_CMP dir=inout pinnumber=4}
+B 5 -4 104 4 96 {name=CK_SAMPLE dir=inout pinnumber=5}
+B 5 -4 144 4 136 {name=DONE dir=inout pinnumber=6}
+B 5 -4 4 4 -4 {name=AVDD dir=inout pinnumber=7}
+B 5 -4 164 4 156 {name=AVSS dir=inout pinnumber=8}

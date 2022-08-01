@@ -103,7 +103,7 @@
 
         },
         "symbol_lib" : "cpdk",
-        "symbol_libs" : ["/Users/wulff/pro/cicpy/xschem/cic",
+        "symbol_libs" : ["../../cpdk/design/cic",
                          "/Users/wulff/github/skywater-pdk/sky130A/libs.tech/xschem/sky130_fd_pr"
                         ]
     },

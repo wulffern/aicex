@@ -1,0 +1,15 @@
+v {xschem version=3.0.0 file_version=1.2 }
+G {}
+K {}
+V {}
+S {}
+E {}
+L 4 0 -25 0 0 {}
+L 4 0 -60 0 -35 {}
+L 4 -10 -25 10 -25 {}
+L 4 -10 -35 10 -35 {}
+B 5 -4 -4 4 4 {name=B dir=in pinnumber=}
+B 5 -4 -64 4 -56 {name=A dir=in pinnumber=1}
+T {B} -10 -6 1 0 0.25 0.25 { vcenter=true}
+T {A} -10 -54 3 0 0.25 0.25 { vcenter=true}
+T {@symname} 22 -50 1 0 0.15 0.15 { vcenter=true}

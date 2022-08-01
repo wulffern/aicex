@@ -4,11 +4,11 @@ K {}
 V {}
 S {}
 E {}
-C {devices/ipin.sym} 0 0 0 0{name=p0 lab=A}
-C {devices/opin.sym} 0 20 0 0{name=p1 lab=Y}
+C {devices/iopin.sym} 0 0 0 0{name=p0 lab=A}
+C {devices/iopin.sym} 0 20 0 0{name=p1 lab=Y}
 C {devices/iopin.sym} 0 40 0 0{name=p2 lab=VREF}
-C {devices/ipin.sym} 0 60 0 0{name=p3 lab=AVDD}
-C {devices/ipin.sym} 0 80 0 0{name=p4 lab=AVSS}
+C {devices/iopin.sym} 0 60 0 0{name=p3 lab=AVDD}
+C {devices/iopin.sym} 0 80 0 0{name=p4 lab=AVSS}
 C {SUN_TR_SKY130NM/SUNTR_NCHDL.sym} 400 0 0 0 {name=XMN0}
 N 460.0 -30.0 440.0 -30.0{lab=Y}
 C {devices/lab_pin.sym} 460.0 -30.0 2 0  {name=l0 sig_type=std_logic lab=Y }

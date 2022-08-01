@@ -1,0 +1,20 @@
+v {xschem version=3.0.0 file_version=1.2 }
+L 4 40 20 40 5 {}
+L 4 70 0 80 0 {}
+L 4 10 0 0 0 {}
+L 4 28 7 52 7 {}
+L 4 64 0 70 0 {}
+L 4 10 0 16 0 {}
+L 4 16 0 19 6 {}
+L 4 19 6 25 -6 {}
+L 4 25 -6 31 6 {}
+L 4 31 6 37 -6 {}
+L 4 37 -6 43 6 {}
+L 4 43 6 49 -6 {}
+L 4 49 -6 55 6 {}
+L 4 55 6 61 -6 {}
+L 4 61 -6 64 0 {}
+T {@symname} 10 -30 0 0 0.15 0.15 { vcenter=true}
+B 5 76 4 84 -4 {name=N dir=inout pinnumber=}
+B 5 -4 4 4 -4 {name=P dir=inout pinnumber=1}
+B 5 36 24 44 16 {name=B dir=inout pinnumber=2}
