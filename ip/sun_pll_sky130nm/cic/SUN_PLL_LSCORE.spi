@@ -1,6 +1,6 @@
 ** sch_path:
 *+ /Users/wulff/pro/aicex/ip/sun_pll_sky130nm/work/../design/SUN_PLL_SKY130NM/SUN_PLL_LSCORE.sch
-.subckt SUN_PLL_LSCORE AVDD A AN Y YN AVSS
+.subckt SUN_PLL_LSCORE A AN YN Y  AVDD  AVSS
 *.ipin AVDD
 *.ipin A
 *.ipin AN

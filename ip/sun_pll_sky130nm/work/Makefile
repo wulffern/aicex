@@ -14,7 +14,10 @@ LIB=SUN_PLL_SKY130NM
 CELL=SUN_PLL
 
 
-CICEXCLUDE="^SUNTR_"
+
+
+
+CICEXCLUDE="^SUNTRB?_"
 CICVIEWS = --spice --verilog --magic
 
 #- Provide cells you want to check for the lvsall drcall commands

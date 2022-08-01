@@ -1,0 +1,380 @@
+//--------------------------------------------------------------------
+//        Copyright (c) 2016 Carsten Wulff Software, Norway
+//--------------------------------------------------------------------
+// Created       : wulff at 2016-11-16
+//--------------------------------------------------------------------
+
+{
+    "options" :
+    {
+        "ignoreSetYoffsetHalf" : true,
+        "metalUnderMetalRes" : false,
+        "prefix" : "SUNTRB_"
+
+    },
+    "include" : [
+        "dmos_sky130nm_core.json"
+
+    ],
+    "noPortTranslation" : 1,
+
+    "cells":
+    [
+        //-----------------------------------------------------------------------------
+        // Tie cells
+        // -----------------------------------------------------------------------------
+
+        { "name": "TIEH_CV",
+          "class" : "Layout::LayoutDigitalCell",
+          "meta" : {
+              "symbol" : "cic_wbulk/tieh"
+          },
+          "beforeRoute" : {
+              "addDirectedRoutes" : [ ["M1","A","MN0:G-|--MN0:D"],
+                                      ["PO","A","MN0:G-MP0:G"] ]
+          },
+          "afterRoute"  : {
+              "addPortOnRects" : [  ["Y","M1", "MP0:D"] ]
+          }
+        },
+
+        { "name": "TIEL_CV",
+          "class" : "Layout::LayoutDigitalCell",
+          "meta" : {
+              "symbol" : "cic_wbulk/tiel"
+          },
+          "beforeRoute" : {
+              "addDirectedRoutes" : [ ["M1","A","MP:D-|--MP:G"],
+                                      ["PO","A","MN:G-MP:G"] ]
+          },
+          "afterRoute"  : {
+              "addPortOnRects" : [  ["Y","M1", "MN0:D"] ]
+          }
+        },
+
+
+        //-----------------------------------------------------------------------------
+        // Inverters/Buffers
+        //-----------------------------------------------------------------------------
+        { "name": "IVX1_CV" ,
+          "class" : "Layout::LayoutDigitalCell",
+          "meta" : {
+              "symbol" : "cic_wbulk/iv"
+          },
+          "beforeRoute" : {
+              "addDirectedRoutes" : [
+                  ["PO","A","MN:G-MP:G"]
+              ],
+              "addConnectivityRoutes" : [
+                  ["M1","^Y$","-|--","onTopL"],
+                  ["M1","^A$","||","onTopL","","MN"],
+                  ["M1","^A$","||","onTopL","","MP"]
+              ]
+          },
+          "afterRoute"  : {
+              "addPortOnRects" : [  ["A","M1", "MN0:G"] , ["Y", "M1", "MN0:D"], ["BULKP","M1","MP0:B"], ["BULKN","M1","MN0:B"] ]
+          }
+        },
+        { "name": "IVX2_CV", "inherit" : "IVX1_CV", "setYoffsetHalf" : 1},
+        { "name": "IVX4_CV", "inherit" : "IVX2_CV"},
+        { "name": "IVX8_CV" ,"inherit" : "IVX2_CV"},
+
+        { "name": "BFX1_CV" ,
+          "class" : "Layout::LayoutDigitalCell",
+          "meta" : {
+              "symbol" : "cic_wbulk/bf"
+          },
+          "setYoffsetHalf" : 1,
+          "beforeRoute" : {
+              "addDirectedRoutes" : [ ["M1","B","MN1:G-|--MN0:S"],
+                                      ["PO","A","MN0:G-MP0:G"] ,
+                                      ["PO","B","MN1:G-MP1:G"] ,
+                                      ["M1","B","MN0:S-|--MP0:S"],
+                                      ["M1","Y","MN1:D-|--MP1:D"]
+                                    ]
+          },
+          "afterRoute"  : {
+              "addPortOnRects" : [ ["A","M1","MN0:G"], ["Y","M1","MN1:D"], ["BULKP","M1","MP0:B"], ["BULKN","M1","MN0:B"] ]
+          }
+        },
+
+
+        //-----------------------------------------------------------------------------
+        // NAND/NOR
+        //-----------------------------------------------------------------------------
+        { "name": "NRX1_CV",
+          "class" : "Layout::LayoutDigitalCell",
+          "meta" : {
+              "symbol" : "cic_wbulk/nr"
+          },
+          "setYoffsetHalf" :  1 ,
+          "beforeRoute" : {
+              "addDirectedRoutes" : [ ["M1","Y","MN0:D,MN1:S-|--MP1:D"],
+                                      ["M1","N1","MP0:D||MP1:S"],
+                                      ["PO","A","MN0:G-MP0:G"],
+                                      ["PO","B","MN1:G-MP1:G"]
+                                    ]
+          },
+          "afterRoute" : {
+              "addPortOnRects" : [ ["A", "M1" ,"MN0:G"], ["B", "M1", "MN1:G"], ["Y", "M1", "MN1:S" ], ["BULKP","M1","MP0:B"], ["BULKN","M1","MN0:B"]]
+          }
+        },
+        { "name": "NDX1_CV" ,
+          "class" : "Layout::LayoutDigitalCell",
+          "meta" : {
+              "symbol" : "cic_wbulk/nd"
+          },
+          "setYoffsetHalf" :  1 ,
+          "beforeRoute" : {
+              "addDirectedRoutes" : [ ["M1","Y","MN1:D-|--MP1:S,MP0:D"],
+                                      ["M1","N1","MN0:D||MN1:S"],
+                                      ["PO","A","MN0:G-MP0:G"],
+                                      ["PO","B","MN1:G-MP1:G"]
+                                    ]
+          },
+          "afterRoute" : {
+              "addPortOnRects" : [ ["A", "M1" ,"MN0:G"], ["B", "M1", "MN1:G"], ["Y", "M1", "MN1:D" ], ["BULKP","M1","MP0:B"], ["BULKN","M1","MN0:B"]]
+          }
+        },
+
+
+
+        //-----------------------------------------------------------------------------
+        // AND/OR
+        //-----------------------------------------------------------------------------
+        { "name": "ORX1_CV",
+          "class" : "Layout::LayoutDigitalCell",
+          "meta" : {
+              "symbol" : "cic_wbulk/or"
+          },
+          "composite" : 1,
+          "beforeRoute" : {
+              "addConnectivityRoutes" : [ ["M1", "^YN$","-|--"]]
+          },
+          "afterRoute" : {
+              "addPortOnRects" : [ ["A", "M1" ,"XA1:MN0:G"], ["B", "M1", "XA1:MN1:G"] ]
+          }
+        },
+        { "name" : "ORX2_CV", "inherit" : "ORX1_CV", "spiceRegex" : [ ["IVX1","IVX2"] ]     },
+        { "name" : "ORX4_CV", "inherit" : "ORX1_CV", "spiceRegex" : [ ["IVX1","IVX4"] ] },
+        { "name": "ANX1_CV",
+          "class" : "Layout::LayoutDigitalCell",
+          "meta" : {
+              "symbol" : "cic_wbulk/an"
+          },
+          "composite" : 1,
+          "beforeRoute" : {
+              "addDirectedRoutes" : [ ["M1","YN","XA2:MN0:G-|--XA1:MN1:D"]
+                                    ]
+          },
+          "afterRoute" : {
+              "addPortOnRects" : [ ["A", "M1" ,"XA1:MN0:G"], ["B", "M1", "XA1:MN1:G"], ["Y", "M1", "XA2:MN0:D" ]]
+          }
+        },
+        { "name" : "ANX2_CV", "inherit" : "ANX1_CV", "spiceRegex" : [ ["IVX1","IVX2"] ]},
+        { "name" : "ANX4_CV", "inherit" : "ANX1_CV", "spiceRegex" : [ ["IVX1","IVX4"] ]},
+        { "name" : "ANX8_CV", "inherit" : "ANX1_CV", "spiceRegex" : [ ["IVX1","IVX8"] ]},
+
+
+        //-----------------------------------------------------------------------------
+        // Flip-flop
+        //-----------------------------------------------------------------------------
+        { "name": "IVTRIX1_CV",
+          "class" : "Layout::LayoutDigitalCell",
+          "setYoffsetHalf" :  1 ,
+          "description" : "Tristate inverter, Y = A if C, Y =HiZ if CN",
+          "beforeRoute" : {
+              "addDirectedRoutes" : [ ["M1","Y","MN1:D-|--MP1:D"],
+                                      ["PO","A","MN0:G-MP0:G"]
+                                    ],
+              "addConnectivityRoutes" : [
+                  ["M1","^N(1|2)$","||","onTopL"]
+              ]
+          },
+          "afterRoute" : {
+              "addPortOnRects" : [ ["A", "M1","MN0:G"], ["CN", "M1"], ["C", "M1"] ,["Y","M1","MN1:D"], ["BULKP","M1","MP0:B"], ["BULKN","M1","MN0:B"]]
+          }
+        },
+        { "name": "NDTRIX1_CV",
+          "class" : "Layout::LayoutDigitalCell",
+          "setYoffsetHalf" :  1 ,
+          "description" : "Tristate nand, Y = !A if C and !RN, Y =HiZ if CN",
+          "beforeRoute" : {
+              "addDirectedRoutes" : [ ["M1","Y","MN1:D-|--MP1:D"],
+                                      ["M1","N2","MP2:S|-MP0:D"],
+                                      ["M1","N2","MN0:D-MP0:D"],
+                                      ["PO","A","MN0:G-MP0:G"],
+                                      ["PO","RN","MN2:G-MP2:G"]
+                                    ],
+              "addConnectivityRoutes" : [
+                  ["M1","^N1$","||","onTopL"],
+                  ["M1","^N2$","||","onTopL","","MN"],
+                  ["M1","^N2$","||","onTopL","","MP(0|1)"]
+              ]
+
+          },
+          "afterRoute" : {
+              "addPortOnRects" : [ ["A", "M1","MN0:G"], ["CN", "M1"], ["C", "M1"], ["RN","M1","MN2:G" ],["Y","M1","MN1:D"], ["BULKP","M1","MP0:B"], ["BULKN","M1","MN0:B"]]
+          }
+        },
+
+        { "name": "DFRNQNX1_CV",
+          "class" : "Layout::LayoutDigitalCell",
+          "meta" : {
+              "symbol" : "cic_wbulk/dfqrn"
+          },
+          "composite" : 1,
+          "description" : "D-flip-flop with QN output, and active low reset",
+          "beforeRoute" : {
+              "addDirectedRoutes" : [ ["M1","CKN","XA1:MP0:D-|--XA2:MP0:G","offsetlowend"],
+                                      ["M1","CKB","XA2:MP0:D-|--XA3:CN,XA7:CN"],
+                                      ["M1","CKB","XA4:C-|--XA2:MN0:D"],
+                                      ["M1","CKB","XA6:C-|--XA2:MN0:D","offsetlow"],
+                                      ["M2","CKN","XA4:CN,XA6:CN-|--XA1:MP0:D"],
+                                      ["M2","CKN","XA3:C-|--XA1:MN1:D","offsetlow"],
+                                      ["M3","CKN","XA7:C-|--XA6:CN"],
+                                      ["M1","A0","XA3:Y-|XA4:Y"],
+                                      ["M2","A0","XA6:Y-|--XA7:Y"],
+                                      ["M2","A0","XA5:MN0:G-|--XA4:MN1:D"],
+                                      ["M2","A1","XA5:MP0:D-|--XA4:MP0:G,XA6:MP0:G"],
+                                      ["M1","QN","XA8:MN0:G-|--XA7:MN1:D"],
+                                      ["M2","Q","XA8:MP0:D-|--XA7:MP0:G"],
+                                      ["M2","RN","XA1:MN1:G|-XA7:MN2:G"]
+                                    ],
+              "addConnectivityRoutes" : [
+
+              ]
+          },
+          "afterRoute" : {
+              "addPortOnRects" : [ ["D", "M1"], ["CK", "M1"], ["Q", "M1","XA8:MN0:D"],["QN","M1","XA7:MN1:D"] ,["RN","M2","XA1:MN1:G"]]
+          }
+        },
+
+        //-----------------------------------------------------------------------------
+        // Other
+        //-----------------------------------------------------------------------------
+        { "name" : "SCX1_CV",
+          "rows" : 5,
+          "class" : "Layout::LayoutDigitalCell",
+          "boundaryIgnoreRouting" : 0,
+          "beforeRoute" : {
+              "addDirectedRoutes" :[
+                  ["M1","NC","XA4b:D-|--XB4:S"],
+                  ["M1","NC","XB3a:S-|--XB3b:S"],
+                  ["M2","NC","XA5:S-|--XB3b:S","nostart"],
+                  ["M2","NC","XA3:D-|--XB1:D",""],
+                  ["PO","A","XA2:G-XB0:G"],
+                  ["PO","A","XA3:G-XB1:G"]
+              ],
+              "addConnectivityRoutes" : [
+                  ["M1","N1","-|--","",2,""],
+                  ["M1","N2","--|-","",2,""],
+                  ["M1","A$","||","onTopL",2,"NCH"],
+                  ["M1","SCO","-|--","onTopR",2,"PCH"],
+                  ["M1","SCO","--|-","onTopL",2,"NCH"],
+                  ["M1","AVDD","--|-","onTopL",2,"NCH"],
+                  ["M1","Y","-|--","onTopL",2]
+
+              ]
+
+          }
+        },
+
+
+        { "name": "SWX2_CV" ,
+          "class" : "Layout::LayoutDigitalCell",
+          "symbol" : "",
+          "inherit" : "IVX2_CV",
+          "beforeRoute" : [
+              {"addVias" :  [
+                  ["M3","M4","MP1:D",2,2,8,"CUST_VREF"]
+              ]},
+              {"addDirectedRoutes" : [
+                  ["M3","VREF","MP0:S,MP1:D-|--CUST_VREF","noendcut"]
+              ]}
+          ],
+          "afterRoute"  : {
+              "addPortOnRects" : [  ["VREF","M4","CUST_VREF"]]
+          }
+        },
+        { "name": "SWX4_CV" ,
+          "class" : "Layout::LayoutDigitalCell",
+          "symbol" : "",
+          "setYoffsetHalf" :  1 ,
+          "decorator" : [
+              {"ConnectSourceDrain" : ["M1","||",""]}
+          ],
+
+          "rows" : 4,
+          "beforeRoute" : [
+              {"addVias" :  [
+                  ["M3","M4","MP1:D",2,2,8,"CUST_VREF"]
+              ]},
+              {"addDirectedRoutes" : [ ["M1","Y","MN0:D,MN2:D-|--MP0:D,MP2:D"],
+                                       ["PO","A","MN:G-MP:G"] ,
+                                       ["M1","A","MN0:G||MN3:G"] ,
+                                       ["M1","A","MP0:G||MP3:G"],
+                                       ["M3","VREF","MP0:S,MP1:D,MP3:D-|--CUST_VREF","noendcut"]
+                                     ]}
+          ],
+          "afterRoute"  : {
+
+              "addPortOnRects" : [  ["A","M1", "MN0:G"] , ["Y", "M1", "MN0:D"],["VREF","M4","CUST_VREF"]]
+          }
+        },
+        { "name": "TGPD_CV" ,
+          "class" : "Layout::LayoutDigitalCell",
+          "setYoffsetHalf" : 1,
+          "decorator" : [
+              {"ConnectSourceDrain" : ["M1","||",""]}
+          ],
+
+          "rows": 3,
+          "beforeRoute" : {
+              "addDirectedRoutes" : [ ["M1","C","MN0:S-|--MP0:S"],
+                                      ["PO","C","MN0:G-MP0:G"],
+                                      ["M1","A","MN2:D-|--MP2:D"],
+                                      ["M1","B","MN2:S-|--MP2:S"],
+                                      ["M1","C","MN0:G||MN1:G"],
+                                      ["M1","CN","MN2:G-|--MN0:S"],
+                                      ["M1","C","MP0:G-|MP2:G"],
+                                      ["M4","NC","MP1:S-|--MP1:G"]
+                                    ]
+          },
+          "afterRoute"  : {
+              "addPortOnRects" : [  ["C","M1", "MP0:G"],["B","M1","MP2:S"],["A","M1","MN2:D"]
+                                 ]
+          }
+        },
+
+        { "name": "TAPCELLB_CV",
+          "class" : "Layout::LayoutDigitalCell",
+          "boundaryIgnoreRouting" : 1,
+          "beforeRoute" : {
+              "addDirectedRoutes" : [ ["M1","BULKN","MN1:B->MN1:G"],
+                                      ["M1","BULKN","MN1:G-|--MN1:S"],
+                                      ["M1","BULKN","MN1:G-|--MN1:D"],
+                                      ["M1","BULKP","MP:S-|--MP:G"],
+                                      ["M1","BULKP","MP:D-|--MP:G"],
+                                      ["M1","BULKP","MP:G->MP:B"]
+                                    ]
+
+          }
+
+        },
+        { "name": "TAPCELLBAVSS_CV",
+          "class" : "Layout::LayoutDigitalCell",
+          "boundaryIgnoreRouting" : 1,
+          "beforeRoute" : {
+              "addDirectedRoutes" : [ ["M1","BULKN","MN1:B->MN1:G"],
+                                      ["M1","BULKN","MN1:G-|--MN1:S"],
+                                      ["M1","BULKN","MN1:G-|--MN1:D"],
+                                      ["M1","BULKP","MP:S-|--MP:G"],
+                                      ["M1","BULKP","MP:D-|--MP:G"]
+                                    ]
+
+          }
+
+        }
+    ]
+}

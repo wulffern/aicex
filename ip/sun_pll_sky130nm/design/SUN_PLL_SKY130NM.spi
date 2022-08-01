@@ -415,9 +415,291 @@ XF15 A15 Y15 V15 AVDD AVSS SUNTR_TGPD_CV
 .ENDS
 
 *-------------------------------------------------------------
+* SUNTRB_PCHDL <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTRB_PCHDL D G S B
+XMM1 D G S B sky130_fd_pr__pfet_01v8  l=0.18  nf=1  w=1.08  
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTRB_NCHDL <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTRB_NCHDL D G S B
+XMM1 D G S B sky130_fd_pr__nfet_01v8  l=0.18  nf=1  w=1.08  
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTRB_NCHDLR <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTRB_NCHDLR D G S B
+XMM1 D G S B sky130_fd_pr__nfet_01v8  l=0.18  nf=1  w=1.08  
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTRB_TIEH_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTRB_TIEH_CV Y BULKP BULKN AVDD AVSS
+XMN0 A A AVSS BULKN SUNTRB_NCHDL
+XMP0 Y A AVDD BULKP SUNTRB_PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTRB_TIEL_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTRB_TIEL_CV Y BULKP BULKN AVDD AVSS
+XMN0 Y A AVSS BULKN SUNTRB_NCHDL
+XMP0 A A AVDD BULKP SUNTRB_PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTRB_IVX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTRB_IVX1_CV A Y BULKP BULKN AVDD AVSS
+XMN0 Y A AVSS BULKN SUNTRB_NCHDL
+XMP0 Y A AVDD BULKP SUNTRB_PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTRB_IVX2_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTRB_IVX2_CV A Y BULKP BULKN AVDD AVSS
+XMN0 Y A AVSS BULKN SUNTRB_NCHDL
+XMN1 AVSS A Y BULKN SUNTRB_NCHDL
+XMP0 Y A AVDD BULKP SUNTRB_PCHDL
+XMP1 AVDD A Y BULKP SUNTRB_PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTRB_IVX4_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTRB_IVX4_CV A Y BULKP BULKN AVDD AVSS
+XMN0 Y A AVSS BULKN SUNTRB_NCHDL
+XMN1 AVSS A Y BULKN SUNTRB_NCHDL
+XMN2 Y A AVSS BULKN SUNTRB_NCHDL
+XMN3 AVSS A Y BULKN SUNTRB_NCHDL
+XMP0 Y A AVDD BULKP SUNTRB_PCHDL
+XMP1 AVDD A Y BULKP SUNTRB_PCHDL
+XMP2 Y A AVDD BULKP SUNTRB_PCHDL
+XMP3 AVDD A Y BULKP SUNTRB_PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTRB_IVX8_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTRB_IVX8_CV A Y BULKP BULKN AVDD AVSS
+XMN0 Y A AVSS BULKN SUNTRB_NCHDL
+XMN1 AVSS A Y BULKN SUNTRB_NCHDL
+XMN2 Y A AVSS BULKN SUNTRB_NCHDL
+XMN3 AVSS A Y BULKN SUNTRB_NCHDL
+XMN4 Y A AVSS BULKN SUNTRB_NCHDL
+XMN5 AVSS A Y BULKN SUNTRB_NCHDL
+XMN6 Y A AVSS BULKN SUNTRB_NCHDL
+XMN7 AVSS A Y BULKN SUNTRB_NCHDL
+XMP0 Y A AVDD BULKP SUNTRB_PCHDL
+XMP1 AVDD A Y BULKP SUNTRB_PCHDL
+XMP2 Y A AVDD BULKP SUNTRB_PCHDL
+XMP3 AVDD A Y BULKP SUNTRB_PCHDL
+XMP4 Y A AVDD BULKP SUNTRB_PCHDL
+XMP5 AVDD A Y BULKP SUNTRB_PCHDL
+XMP6 Y A AVDD BULKP SUNTRB_PCHDL
+XMP7 AVDD A Y BULKP SUNTRB_PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTRB_BFX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTRB_BFX1_CV A Y BULKP BULKN AVDD AVSS
+XMN0 AVSS A B BULKN SUNTRB_NCHDL
+XMN1 Y B AVSS BULKN SUNTRB_NCHDL
+XMP0 AVDD A B BULKP SUNTRB_PCHDL
+XMP1 Y B AVDD BULKP SUNTRB_PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTRB_NRX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTRB_NRX1_CV A B Y BULKP BULKN AVDD AVSS
+XMN0 Y A AVSS BULKN SUNTRB_NCHDL
+XMN1 AVSS B Y BULKN SUNTRB_NCHDL
+XMP0 N1 A AVDD BULKP SUNTRB_PCHDL
+XMP1 Y B N1 BULKP SUNTRB_PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTRB_NDX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTRB_NDX1_CV A B Y BULKP BULKN AVDD AVSS
+XMN0 N1 A AVSS BULKN SUNTRB_NCHDL
+XMN1 Y B N1 BULKN SUNTRB_NCHDL
+XMP0 Y A AVDD BULKP SUNTRB_PCHDL
+XMP1 AVDD B Y BULKP SUNTRB_PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTRB_ORX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTRB_ORX1_CV A B Y BULKP BULKN AVDD AVSS
+XA1 A B YN BULKP BULKN AVDD AVSS SUNTRB_NRX1_CV
+XA2 YN Y BULKP BULKN AVDD AVSS SUNTRB_IVX1_CV
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTRB_ORX2_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTRB_ORX2_CV A B Y BULKP BULKN AVDD AVSS
+XA1 A B YN BULKP BULKN AVDD AVSS SUNTRB_NRX1_CV
+XA2 YN Y BULKP BULKN AVDD AVSS SUNTRB_IVX2_CV
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTRB_ORX4_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTRB_ORX4_CV A B Y BULKP BULKN AVDD AVSS
+XA1 A B YN BULKP BULKN AVDD AVSS SUNTRB_NRX1_CV
+XA2 YN Y BULKP BULKN AVDD AVSS SUNTRB_IVX4_CV
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTRB_ANX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTRB_ANX1_CV A B Y BULKP BULKN AVDD AVSS
+XA1 A B YN BULKP BULKN AVDD AVSS SUNTRB_NDX1_CV
+XA2 YN Y BULKP BULKN AVDD AVSS SUNTRB_IVX1_CV
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTRB_ANX2_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTRB_ANX2_CV A B Y BULKP BULKN AVDD AVSS
+XA1 A B YN BULKP BULKN AVDD AVSS SUNTRB_NDX1_CV
+XA2 YN Y BULKP BULKN AVDD AVSS SUNTRB_IVX2_CV
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTRB_ANX4_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTRB_ANX4_CV A B Y BULKP BULKN AVDD AVSS
+XA1 A B YN BULKP BULKN AVDD AVSS SUNTRB_NDX1_CV
+XA2 YN Y BULKP BULKN AVDD AVSS SUNTRB_IVX4_CV
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTRB_ANX8_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTRB_ANX8_CV A B Y BULKP BULKN AVDD AVSS
+XA1 A B YN BULKP BULKN AVDD AVSS SUNTRB_NDX1_CV
+XA2 YN Y BULKP BULKN AVDD AVSS SUNTRB_IVX8_CV
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTRB_IVTRIX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTRB_IVTRIX1_CV A C CN Y BULKP BULKN AVDD AVSS
+XMN0 N1 A AVSS BULKN SUNTRB_NCHDL
+XMN1 Y C N1 BULKN SUNTRB_NCHDL
+XMP0 N2 A AVDD BULKP SUNTRB_PCHDL
+XMP1 Y CN N2 BULKP SUNTRB_PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTRB_NDTRIX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTRB_NDTRIX1_CV A C CN RN Y BULKP BULKN AVDD AVSS
+XMN2 N1 RN AVSS BULKN SUNTRB_NCHDL
+XMN0 N2 A N1 BULKN SUNTRB_NCHDL
+XMN1 Y C N2 BULKN SUNTRB_NCHDL
+XMP2 AVDD RN N2 BULKP SUNTRB_PCHDL
+XMP0 N2 A AVDD BULKP SUNTRB_PCHDL
+XMP1 Y CN N2 BULKP SUNTRB_PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTRB_DFRNQNX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTRB_DFRNQNX1_CV D CK RN Q QN BULKP BULKN AVDD AVSS
+XA0 BULKP BULKN SUNTRB_TAPCELLB_CV
+XA1 CK RN CKN BULKP BULKN AVDD AVSS SUNTRB_NDX1_CV
+XA2 CKN CKB BULKP BULKN AVDD AVSS SUNTRB_IVX1_CV
+XA3 D CKN CKB A0 BULKP BULKN AVDD AVSS SUNTRB_IVTRIX1_CV
+XA4 A1 CKB CKN A0 BULKP BULKN AVDD AVSS SUNTRB_IVTRIX1_CV
+XA5 A0 A1 BULKP BULKN AVDD AVSS SUNTRB_IVX1_CV
+XA6 A1 CKB CKN QN BULKP BULKN AVDD AVSS SUNTRB_IVTRIX1_CV
+XA7 Q CKN CKB RN QN BULKP BULKN AVDD AVSS SUNTRB_NDTRIX1_CV
+XA8 QN Q BULKP BULKN AVDD AVSS SUNTRB_IVX1_CV
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTRB_SCX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTRB_SCX1_CV A Y BULKP BULKN AVDD AVSS
+XA2 N1 A AVSS BULKN SUNTRB_NCHDL
+XA3 SCO A N1 BULKN SUNTRB_NCHDL
+XA4a AVDD SCO N1 BULKN SUNTRB_NCHDL
+XA4b AVDD SCO N1 BULKN SUNTRB_NCHDL
+XA5 Y SCO AVSS BULKN SUNTRB_NCHDL
+XB0 N2 A AVDD BULKP SUNTRB_PCHDL
+XB1 SCO A N2 BULKP SUNTRB_PCHDL
+XB3a N2 SCO AVSS BULKP SUNTRB_PCHDL
+XB3b N2 SCO AVSS BULKP SUNTRB_PCHDL
+XB4 Y SCO AVDD AVSS SUNTRB_PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTRB_SWX2_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTRB_SWX2_CV A Y VREF AVSS BULKP BULKN
+XMN0 Y A AVSS BULKN SUNTRB_NCHDL
+XMN1 AVSS A Y BULKN SUNTRB_NCHDL
+XMP0 Y A VREF BULKP SUNTRB_PCHDL
+XMP1 VREF A Y BULKP SUNTRB_PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTRB_SWX4_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTRB_SWX4_CV A Y VREF AVSS BULKP BULKN
+XMN0 Y A AVSS BULKN SUNTRB_NCHDL
+XMN1 AVSS A Y BULKN SUNTRB_NCHDL
+XMN2 Y A AVSS BULKN SUNTRB_NCHDL
+XMN3 AVSS A Y BULKN SUNTRB_NCHDL
+XMP0 Y A VREF BULKP SUNTRB_PCHDL
+XMP1 VREF A Y BULKP SUNTRB_PCHDL
+XMP2 Y A VREF BULKP SUNTRB_PCHDL
+XMP3 VREF A Y BULKP SUNTRB_PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTRB_TGPD_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTRB_TGPD_CV C A B BULKP BULKN AVDD AVSS
+XMN0 AVSS C CN BULKN SUNTRB_NCHDL
+XMN1 B C AVSS BULKN SUNTRB_NCHDL
+XMN2 A CN B BULKN SUNTRB_NCHDL
+XMP0 AVDD C CN BULKP SUNTRB_PCHDL
+XMP1_DMY B AVDD AVDD BULKP SUNTRB_PCHDL
+XMP2 A C B BULKP SUNTRB_PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTRB_TAPCELLB_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTRB_TAPCELLB_CV AVDD AVSS
+XMN1 AVSS AVSS AVSS AVSS SUNTRB_NCHDL
+XMP1 AVDD AVDD AVDD AVDD SUNTRB_PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTRB_TAPCELLBAVSS_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTRB_TAPCELLBAVSS_CV AVDD AVSS
+XMN1 AVSS AVSS AVSS AVSS SUNTRB_NCHDL
+XMP1 NC1 NC1 NC1 AVDD SUNTRB_PCHDL
+.ENDS
+
+*-------------------------------------------------------------
 * SUN_PLL_LSCORE <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
-.SUBCKT SUN_PLL_LSCORE AVDD A AN Y YN AVSS
+.SUBCKT SUN_PLL_LSCORE A AN YN Y AVDD AVSS
 xb1_0 Y AN AVSS AVSS SUNTR_NCHDL
 xb1_1 Y AN AVSS AVSS SUNTR_NCHDL
 xb2_0 YN A AVSS AVSS SUNTR_NCHDL
@@ -432,16 +714,17 @@ xc2b YN Y net1 AVDD SUNTR_PCHDL
 * SUN_PLL_ROSC <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
 .SUBCKT SUN_PLL_ROSC PWRUP_1V8 VDD_ROSC AVSS VDD_1V8 CK
-xa3 VDD_1V8 CKUP __UNCONNECTED_PIN__0 NI N_7 AVSS SUN_PLL_LSCORE
+xa3 N_2 N_1 CKUP NC1 VDD_1V8 AVSS SUN_PLL_LSCORE
 xa4 CKUP CK VDD_1V8 AVSS SUNTR_IVX1_CV
 xa5 VDD_1V8 AVSS SUNTR_TAPCELLB_CV
-xb1 PWRUP_1V8 N_0 NI VDD_ROSC AVSS SUNTR_NDX1_CV
-xb2_0 N_1 N_0 VDD_ROSC AVSS SUNTR_IVX1_CV
-xb2_1 N_2 N_1 VDD_ROSC AVSS SUNTR_IVX1_CV
-xb2_2 N_3 N_2 VDD_ROSC AVSS SUNTR_IVX1_CV
-xb2_3 N_4 N_3 VDD_ROSC AVSS SUNTR_IVX1_CV
-xb2_4 N_5 N_4 VDD_ROSC AVSS SUNTR_IVX1_CV
-xb2_5 N_6 N_5 VDD_ROSC AVSS SUNTR_IVX1_CV
-xb2_6 N_7 N_6 VDD_ROSC AVSS SUNTR_IVX1_CV
-xb2_7 NI N_7 VDD_ROSC AVSS SUNTR_IVX1_CV
+xb1 PWRUP_1V8 N_0 NI VDD_1V8 AVSS VDD_ROSC AVSS SUNTRB_NDX1_CV
+xb2_0 NI N_7 VDD_1V8 AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV
+xb2_1 N_7 N_6 VDD_1V8 AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV
+xb2_2 N_6 N_5 VDD_1V8 AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV
+xb2_3 N_5 N_4 VDD_1V8 AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV
+xb2_4 N_4 N_3 VDD_1V8 AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV
+xb2_5 N_3 N_2 VDD_1V8 AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV
+xb2_6 N_2 N_1 VDD_1V8 AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV
+xb2_7 N_1 N_0 VDD_1V8 AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV
+xb3 VDD_1V8 AVSS SUNTRB_TAPCELLBAVSS_CV
 .ENDS

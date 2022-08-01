@@ -9,29 +9,19 @@
             "alternateGroup" : 1,
             "beforeRoute" :{
                 "addConnectivityRoutes" : [
-                    ["M1","^N_[246]","-|--","","","(IVX|NDX)"],
-                    ["M2","^N_[357]","-|--","","","(IVX|NDX)"],
-                    ["M2","^N_1","-|--","","",""],
-                    ["M1","^NI","-|","onTopB,offsethigh","","(IVX|NDX)"],
-                    ["M1","^CKUP","--|-","onTopB,offsethigh","",""]
+                    ["M1","^N_[^0]","-|--","offsethigh","","(IVX|NDX)"],
+                    ["M1","^NI","-|--","offsethigh","","(IVX|NDX)"],
+                    ["M1","^CKUP","--|-","onTopB,offsethigh","",""],
+                    ["M2","^N_2","--|-","","","xb2_5|SUN_PLL_LSCORE"],
+                    ["M3","^N_1","-|--","","","xb2_6|SUN_PLL_LSCORE"],
+                    ["M3","^N_0","-|--","","",""]
                 ],
-
-                "addRouteConnections" : [
-                    ["^NI$","X","top","M2"],
-                    ["^N_7$","X","top","M2"]
-                ],
-
                 "addPowerConnections" : [
                     ["AVSS","X","bottom"]
                 ]
 
             },
             "afterPlace" : {
-                "addRouteRings" : [
-                    ["M1","NI","t",1,1],
-                    ["M1","NI","t",1,1]
-
-                ],
                 "addPowerRings" :[
                     ["M1","AVSS","b"]
                 ]

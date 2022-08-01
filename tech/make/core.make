@@ -47,6 +47,8 @@ dirs:
 NCELL=../design/${LIB}/${PRCELL}
 MCELL=${NCELL}.mag
 
+SUB=BULKN
+
 BUILD=../design/
 PDKPATH=${PDK_ROOT}/sky130A
 
@@ -64,14 +66,17 @@ gds:
 	@magic -noconsole -dnull gds/${PRCELL}.tcl 2>&1 > gds/${PRCELL}.log
 
 cdl:
-	@echo "set VDD AVDD\nset GND AVSS\nset SUB BULKN\nload ${NCELL}.mag\nextract all\n\next2spice lvs\next2spice hierarchy off\next2spice subcircuits off\next2spice -o cdl/${PRCELL}.spi\nquit" > cdl/${PRCELL}.tcl
+	@echo "set VDD AVDD\nset GND AVSS\nset SUB ${SUB}\nload ${NCELL}.mag\nextract all\n\next2spice lvs\next2spice hierarchy off\next2spice subcircuits off\next2spice -o cdl/${PRCELL}.spi\nquit" > cdl/${PRCELL}.tcl
+	@magic -noconsole -dnull cdl/${PRCELL}.tcl 2>&1 > cdl/${PRCELL}.log
+
+cdlh:
+	@echo "set VDD AVDD\nset GND AVSS\nset SUB ${SUB}\nload ${NCELL}.mag\nextract all\n\next2spice lvs\next2spice subcircuits off\next2spice -o cdl/${PRCELL}.spi\nquit" > cdl/${PRCELL}.tcl
 	@magic -noconsole -dnull cdl/${PRCELL}.tcl 2>&1 > cdl/${PRCELL}.log
 
 #- Run flat LVS
 lvs:
 	@netgen -batch lvs "cdl/${PRCELL}.spi ${PRCELL}"  "${BUILD}/${LIB}.spi ${PRCELL}" ${PDKPATH}/libs.tech/netgen/sky130A_setup.tcl lvs/${PRCELL}_lvs.log > lvs/${PRCELL}_netgen_lvs.log
 	@tail -n 1 lvs/${PRCELL}_lvs.log|perl -ne "use Term::ANSIColor;print(sprintf(\"%-40s\t[ \",${PRCELL}));if(m/match uniquely/ig){print(color('green').'LVS OK  '.color('reset'));}else{print(color('red').'LVS FAIL'.color('reset'));};print(\" ]\n\");"
-
 
 
 #- Run DRC

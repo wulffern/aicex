@@ -48,3 +48,8 @@ make test
 
 
 
+# Notes
+
+## xschem
+- netlisting seems to be done not by pin number, but by order of B's in .sym.
+  Also, I've experienced different ordering for subckts, and for top cell
