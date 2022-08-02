@@ -1,0 +1,14 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1659452639
+<< checkpaint >>
+rect 0 0 0 0
+use SUNSAR_ MN0
+transform 1 0 0 0 1 0
+box 0 0 0 0
+use SUNSAR_ MP0
+transform 1 0 0 0 1 0
+box 0 0 0 0
+<< labels >>
+<< end >>

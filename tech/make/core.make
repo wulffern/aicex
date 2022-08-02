@@ -58,7 +58,7 @@ CICVIEWS =  --spice --verilog --xschem --magic
 
 
 ip:
-	cd ${BUILD};${CIC} --nogds --spi --I ../cic ../cic/ip.json  ../cic/sky130.tech ${LIB} ${CICOPT}
+	cd ${BUILD};${CIC} --nogds  --I ../cic ../cic/ip.json  ../cic/sky130.tech ${LIB} ${CICOPT}
 	cd ${BUILD}; ${CICPY}  transpile ${LIB}.cic ../cic/sky130.tech ${LIB}  ${CICVIEWS} --smash "(P|N)CHIOA" --exclude "${CICEXCLUDE}"
 
 gds:
@@ -91,7 +91,7 @@ lpe:
 	@magic -noconsole -dnull lpe/${PRCELL}_lpe.tcl 2>&1 | tee lpe/${PRCELL}_magic_lpe.log
 
 lvsall:
-	${foreach b, ${CELLS}, make lvsf CELL=$b;}
+	${foreach b, ${CELLS}, make cdl lvs CELL=$b;}
 
 lpeall:
 	${foreach b, ${CELLS}, make lpe CELL=$b;}
@@ -101,7 +101,7 @@ drcall:
 
 
 doc:
-	pandoc -s ../README.md -o README.html
+	pandoc -s ../README.md -o ../README.html
 
 clean:
 	-rm -rf lvs drc lpe cdl gds

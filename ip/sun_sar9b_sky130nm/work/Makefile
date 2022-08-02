@@ -28,14 +28,16 @@
 
 include ../../../tech/make/core.make
 
-LIB=SUN_SAR9B_SK130NM
-CELL=SAR9B_CV
+LIB=SUN_SAR9B_SKY130NM
+CELL=SUNSAR_SAR9B_CV
+
+CICVIEWS = --spice --verilog --magic
 
 #----------------------------------------------------------------------------
 # REGRESSION
 #----------------------------------------------------------------------------
 
-CELLS = SARDIGEX4_CV SARCMPX1_CV SARBSSW_CV CAP32C_CV CDAC8_CV SAR9B_CV
+CELLS = SUNSAR_SARDIGEX4_CV SUNSAR_SARCMPX1_CV SUNSAR_SARBSSW_CV SUNSAR_CAP32C_CV SUNSAR_CDAC8_CV SUNSAR_SAR9B_CV
 
 calccap:
-	cat lpe/CAP32C_CV_lpe.spi |grep CTOP|grep XRES | perl -e 'while(<>){@ar = split(/\s+/); $$c = $$ar[-1]; $$c =~ s/fF//ig; m/XRES(\d+)\w?\//ig; $$m = $$1; printf("%-2d\t%.3f %.3f\n",$$m,$$c,($$c/$$m));}'
+	cat lpe/SUNSAR_CAP32C_CV_lpe.spi |grep CTOP|grep XRES | perl -e 'while(<>){@ar = split(/\s+/); $$c = $$ar[-1]; $$c =~ s/fF//ig; m/XRES(\d+)\w?\//ig; $$m = $$1; printf("%-2d\t%.3f %.3f\n",$$m,$$c,($$c/$$m));}'

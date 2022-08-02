@@ -1,0 +1,30 @@
+v {xschem version=3.0.0 file_version=1.2 }
+G {}
+K {}
+V {}
+S {}
+E {}
+L 4 30 0 40 0 {}
+L 4 0 -40 0 -30 {}
+L 4 0 30 0 40 {}
+L 4 0 10 0 30 {}
+L 4 0 -30 0 -10 {}
+L 4 0 -10 10 -10 {}
+L 4 10 -10 10 0 {}
+L 4 10 0 20 -10 {}
+L 4 20 -10 20 0 {}
+L 4 20 0 30 0 {}
+L 4 20 -40 20 -20 {}
+L 4 20 10 20 40 {}
+B 5 36 -4 44 4 {name=Y dir=inout pinnumber=1}
+B 5 16 -44 24 -36 {name=BULKP dir=in pinnumber=2}
+B 5 16 36 24 44 {name=BULKN dir=in pinnumber=3}
+B 5 -4 -44 4 -36 {name=AVDD dir=inout pinnumber=4}
+B 5 -4 36 4 44 {name=AVSS dir=inout pinnumber=5}
+T {@name} 30 10 0 0 0.15 0.15 { vcenter=true}
+T {@symname} 30 20 0 0 0.15 0.15 { vcenter=true}
+T {Y} 29 -10 0 0 0.15 0.15 { vcenter=true}
+T {AVDD} -10 -34 3 0 0.1 0.1 { vcenter=true}
+T {AVSS} -10 34 1 0 0.1 0.1 { vcenter=true}
+T {BULKN} 30 34 1 0 0.1 0.1 { vcenter=true}
+T {BULKP} 30 -34 3 0 0.1 0.1 { vcenter=true}

@@ -1,4 +1,4 @@
-# SUN_SAR9B_SK130NM
+# SUN_SAR9B_SKY130NM
 
 # Who
 Carsten Wulff carsten@wulff.no
@@ -30,17 +30,17 @@ cic
 # What
 | What               | Path                                   | Comment          |
 |:-------------------|:---------------------------------------|:-----------------|
-| Schematic          | [design/SUN_SAR9B_SK130NM/SAR9B_CV.sch](design/SUN_SAR9B_SK130NM/SAR9B_CV.sch) | Not fully tested |
-| Layout             | [design/SUN_SAR9B_SK130NM/SAR9B_CV.mag](design/SUN_SAR9B_SK130NM/SAR9B_CV.mag) |                  |
-| Verilog            | [design/SUN_SAR9B_SK130NM.v](design/SUN_SAR9B_SK130NM.v)            | Not tested       |
-| Simulation netlist | [design/SUN_SAR9B_SK130NM.spice](design/SUN_SAR9B_SK130NM.spice)        |                  |
-| LVS netlist        | [design/SUN_SAR9B_SK130NM.spi](design/SUN_SAR9B_SK130NM.spi)          |                  |
+| Schematic          | [design/SUN_SAR9B_SKY130NM/SUNSAR_SAR9B_CV.sch](design/SUN_SAR9B_SKY130NM/SUNSAR_SAR9B_CV.sch) | Not fully tested |
+| Layout             | [design/SUN_SAR9B_SKY130NM/SUNSAR_SAR9B_CV.mag](design/SUN_SAR9B_SKY130NM/SUNSAR_SAR9B_CV.mag) |                  |
+| Verilog            | [design/SUN_SAR9B_SKY130NM.v](design/SUN_SAR9B_SKY130NM.v)            | Not tested       |
+| Simulation netlist | [design/SUN_SAR9B_SKY130NM.spice](design/SUN_SAR9B_SKY130NM.spice)        |                  |
+| LVS netlist        | [design/SUN_SAR9B_SKY130NM.spi](design/SUN_SAR9B_SKY130NM.spi)          |                  |
 
 
 # Compiling ADC
 The SAR is pre-compiled, so you don't really need to compile it. The compiled files are
 in the `design/` directory, so if all you want is to simulate on a SAR, then
-`design/SUN_SAR9B_SK130NM.spice` should suffice.
+`design/SUN_SAR9B_SKY130NM.spice` should suffice.
 
 To compile the ADC you need
 
@@ -81,7 +81,7 @@ make test
 # Key parameters
 | Parameter                             | Min  | Typ     | Max   | Unit |
 |:--------------------------------------|:----:|:-------:|:-----:|:----:|
-| Technology                            |      | SK130NM |       |      |
+| Technology                            |      | SKY130NM |       |      |
 | AVDD                                  | 1.7  | 1.8     | 1.9   | V    |
 | Temperature                           | -40  | 27      | 125   | C    |
 | Sampling frequency 25% DTC CK_SMAMPLE |      |         | 8     | MHz  |
@@ -120,7 +120,8 @@ make test
 - LVS only works with a flat hierarchy
 - Caps in SARBSSW are a bit wide
 - Add walden FOM extraction
-- Fix name, is SK130NM, should be SKY130NM
 
+
+![schematic ](media/SUNSAR_SAR9B_CV.png)
 ![magic layout](media/SAR9B_CV.png)
 

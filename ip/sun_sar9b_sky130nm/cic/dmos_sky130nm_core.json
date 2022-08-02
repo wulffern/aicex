@@ -186,6 +186,9 @@
         { "name" : "PCHDL",
 		  "xoffset" : 0.0,
           "inherit" : "DMOS_BULKP",
+          "meta" : {
+              "symbol" : "cic_wbulk/pch"
+          },
           "abstract" : 0,
           "type" : "pch_lvt",
           "beforePlace" :{
@@ -199,6 +202,9 @@
           "inherit" : "DMOS_BULKN",
           "xoffset" : -1.5,
           "abstract" : 0,
+          "meta" : {
+              "symbol" : "cic_wbulk/nch"
+          },
           "afterNew" : {
               "mirrorPatternString" : 1
           },

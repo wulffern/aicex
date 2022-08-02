@@ -8,17 +8,19 @@
     "options" :
     {
         "ignoreSetYoffsetHalf" : true,
-        "metalUnderMetalRes" : false
+        "metalUnderMetalRes" : false,
+        "prefix" : "SUNSAR_",
+        "topcells" : [
+            "SAR9B_CV"
+
+        ]
 
     },
     "include" : [
         "dmos_sky130nm_core.json",
         "capacitor.json"
-
     ],
     "noPortTranslation" : 1,
-
-
     "cells":
     [
         { "name": "RM1" , "class" : "cIcCore::PatternResistor",
@@ -48,7 +50,8 @@
           "getRuleForHorizontalGrid" : ["M3","cap_width"],
           "getRuleForVerticalGrid" : ["M3","cap_width"],
           "meta" : {
-              "spice" : "C1 A B 5f"
+              "spice" : "C1 A B 5f",
+              "symbol" : "cic/cap"
           },
           "afterNew" :{
               "copyColumns" :[
@@ -58,6 +61,9 @@
         },
         { "name" : "CAP_BSSW5_CV",
           "class" : "Layout::LayoutDigitalCell",
+          "meta" : {
+              "symbol" : "cic/cap"
+          },
           "beforeRoute":{
               "addConnectivityRoutes" : [
                   ["M4","^A$","|-","onTopL"],
@@ -83,6 +89,9 @@
 
         { "name": "TIEH_CV",
           "class" : "Layout::LayoutDigitalCell",
+           "meta" : {
+              "symbol" : "cic_wbulk/tieh"
+          },
           "beforeRoute" : {
               "addDirectedRoutes" : [ ["M1","A","MN0:G-|--MN0:D"],
                                       ["PO","A","MN0:G-MP0:G"] ]
@@ -94,6 +103,9 @@
 
         { "name": "TIEL_CV",
           "class" : "Layout::LayoutDigitalCell",
+           "meta" : {
+              "symbol" : "cic_wbulk/tiel"
+          },
           "beforeRoute" : {
               "addDirectedRoutes" : [ ["M1","A","MP:D-|--MP:G"],
                                       ["PO","A","MN:G-MP:G"] ]
@@ -109,6 +121,9 @@
         //-----------------------------------------------------------------------------
         { "name": "IVX1_CV" ,
           "class" : "Layout::LayoutDigitalCell",
+           "meta" : {
+              "symbol" : "cic_wbulk/iv"
+          },
           "beforeRoute" : {
               "addDirectedRoutes" : [
                   ["PO","A","MN:G-MP:G"]
@@ -129,6 +144,9 @@
 
         { "name": "BFX1_CV" ,
           "class" : "Layout::LayoutDigitalCell",
+          "meta" : {
+              "symbol" : "cic_wbulk/bf"
+          },
           "setYoffsetHalf" : 1,
           "beforeRoute" : {
               "addDirectedRoutes" : [ ["M1","B","MN1:G-|--MN0:S"],
@@ -149,6 +167,9 @@
         //-----------------------------------------------------------------------------
         { "name": "NRX1_CV",
           "class" : "Layout::LayoutDigitalCell",
+          "meta" : {
+              "symbol" : "cic_wbulk/nr"
+          },
           "setYoffsetHalf" :  1 ,
           "beforeRoute" : {
               "addDirectedRoutes" : [ ["M1","Y","MN0:D,MN1:S-|--MP1:D"],
@@ -163,6 +184,9 @@
         },
         { "name": "NDX1_CV" ,
           "class" : "Layout::LayoutDigitalCell",
+          "meta" : {
+              "symbol" : "cic_wbulk/nd"
+          },
           "setYoffsetHalf" :  1 ,
           "beforeRoute" : {
               "addDirectedRoutes" : [ ["M1","Y","MN1:D-|--MP1:S,MP0:D"],
@@ -183,6 +207,9 @@
         //-----------------------------------------------------------------------------
         { "name": "ORX1_CV",
           "class" : "Layout::LayoutDigitalCell",
+          "meta" : {
+              "symbol" : "cic_wbulk/or"
+          },
           "composite" : 1,
           "beforeRoute" : {
               "addConnectivityRoutes" : [ ["M1", "^YN$","-|--"]]
@@ -195,6 +222,9 @@
         { "name" : "ORX4_CV", "inherit" : "ORX1_CV", "spiceRegex" : [ ["IVX1","IVX4"] ] },
         { "name": "ANX1_CV",
           "class" : "Layout::LayoutDigitalCell",
+          "meta" : {
+              "symbol" : "cic_wbulk/an"
+          },
           "composite" : 1,
           "beforeRoute" : {
               "addDirectedRoutes" : [ ["M1","YN","XA2:MN0:G-|--XA1:MN1:D"]
@@ -253,6 +283,9 @@
 
         { "name": "DFRNQNX1_CV",
           "class" : "Layout::LayoutDigitalCell",
+          "meta" : {
+              "symbol" : "cic_wbulk/dfqrn"
+          },
           "composite" : 1,
           "description" : "D-flip-flop with QN output, and active low reset",
           "beforeRoute" : {
@@ -313,8 +346,11 @@
 
         { "name": "SWX2_CV" ,
           "class" : "Layout::LayoutDigitalCell",
-          "symbol" : "",
           "inherit" : "IVX2_CV",
+          "meta" : {
+              "symbol" : "cic_wbulk/sw"
+          },
+
           "beforeRoute" : [
               {"addVias" :  [
                   ["M3","M4","MP1:D",2,2,8,"CUST_VREF"]
@@ -329,7 +365,9 @@
         },
         { "name": "SWX4_CV" ,
           "class" : "Layout::LayoutDigitalCell",
-          "symbol" : "",
+          "meta" : {
+              "symbol" : "cic_wbulk/sw"
+          },
           "setYoffsetHalf" :  1 ,
           "decorator" : [
               {"ConnectSourceDrain" : ["M1","||",""]}
@@ -379,6 +417,9 @@
 
         { "name": "TAPCELLB_CV",
           "class" : "Layout::LayoutDigitalCell",
+          "meta" : {
+              "symbol" : "cic_wbulk/tap"
+          },
           "boundaryIgnoreRouting" : 1,
           "beforeRoute" : {
               "addDirectedRoutes" : [ ["M1","BULKN","MN1:B->MN1:G"],
@@ -545,7 +586,9 @@
         { "name": "SARCMPX1_CV",
           "class" : "Layout::LayoutDigitalCell",
           "description" : "Strong-arm comparator",
-          "symbol" : "SARCMP",
+          "meta" : {
+              "symbol" : "cic_wbulk/sarcmp"
+          },
           "composite" : 1,
           "beforeRoute" : {
 
@@ -576,6 +619,9 @@
 
 
         { "name" : "SARBSSW_CV", "class" : "Layout::LayoutDigitalCell",
+          "meta" : {
+              "symbol" : "cic_wbulk/sarbssw"
+          },
           "composite" : 1,
           "beforeRoute" : [
               {"addVias" : [ ["M1","M2","XA4:GNG",2],
@@ -666,6 +712,9 @@
           "abstract": 0,
           "description" : "Extention of SARDIG, it also gives an clock enable out (CEO) on C(N|P)(1|0) that can be used in the comparator delay loop. CEIN and CEO should be daisy chained (NOR chain)",
           "inherit" : "SARDIGX1_CV",
+          "meta" : {
+              "symbol" : "cic_wbulk/sardigex"
+          },
           "composite" : 1,
           "beforeRoute" : {
               "addDirectedRoutes" : [ ["M2","ENO","XA7:MP0:G-|--XA1$:ENO"],
@@ -701,7 +750,11 @@
               ["SWX2_CV","SWX4_CV"]
           ]
         },
-        { "name": "CDAC8_CV", "class" : "Layout::LayoutCDACSmall"},
+        { "name": "CDAC8_CV", "class" : "Layout::LayoutCDACSmall",
+          "meta" : {
+              "symbol" : "cic_wbulk/cdac8"
+          }
+        },
         {"name": "SAR9B_CV_NOROUTE",
          "class" : "Layout::LayoutSARCDAC"},
 

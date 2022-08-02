@@ -2,7 +2,11 @@
 	"options" :
 	{
 		"ignoreSetYoffsetHalf" : false,
-        "prefix" : ""
+        "prefix" : "",
+        "topcells" :[
+            "SUN_PLL_ROSC"
+        ]
+
 
 	},
     "library" : [

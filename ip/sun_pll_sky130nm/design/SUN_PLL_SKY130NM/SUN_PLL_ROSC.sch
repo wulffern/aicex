@@ -4,7 +4,7 @@ K {}
 V {}
 S {}
 E {}
-T {Ring oscillator with level shifter. } -425 -335 0 0 0.4 0.4 {}
+T {Ring oscillator with level shifter. } -345 -565 0 0 1 1 {}
 N -70 -10 -10 -10 {
 lab=NI,N[7:1]}
 N 30 -90 30 -50 {

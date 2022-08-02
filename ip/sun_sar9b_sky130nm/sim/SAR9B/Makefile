@@ -29,7 +29,7 @@
 #----------------------------------------------------------------------------
 
 test:
-	${make} typical OPT="Debug"
+	${MAKE} typical OPT="Debug"
 
 TB=tran
 VIEW=Sch
