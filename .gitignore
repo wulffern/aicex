@@ -10,6 +10,8 @@ __pycache__/
 *.pdf
 *.ext
 *.gds
+.DS_Store
+*.html
 output*/
 
 work/
