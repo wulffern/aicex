@@ -6,17 +6,18 @@ This repository is a collection of IPs in Skywater 130nm technology.
 
 | Directory                               | Notes                                                                                               |
 |---------------------------------------|-----------------------------------------------------------------------------------------------------|
-| ip                                      | IP directory                                                                                        |
-| ip/sun_sar9b_sky130nm                   | 9-bit successive approximation analog-to-digital converter                                          |
-| ip/sun_tr_sky130nm                       | Standard cell libraries for analog schematics                                                       |
+| [ip](ip)                                      | IP directory                                                                                        |
+| [ip/sun_sar9b_sky130nm](ip/sun_sar9b_sky130nm)                   | 9-bit successive approximation analog-to-digital converter                                          |
+| [ip/sun_pll_sky130nm](ip/sun_pll_sky130nm)                   | General purpose PLL                                        |
+| [ip/sun_tr_sky130nm](ip/sun_tr_sky130nm)                       | Standard cell libraries for analog schematics                                                       |
+| [ip/sun_trb_sky130nm](ip/sun_trb_sky130nm)                       | Standard cell libraries for analog schematics with separate bulk connections                                                    |
 | models/skywater-pdk-libs-sky130_fd_pr | Skywater spice models. Git submodule                                                                |
-| sim/CHAR_GMID                           | Example of simulation                                                                               |
-| tech                                    | Technology files                                                                                    |
-| tech/cic                                | [ciccreator](https://github.com/wulffern/ciccreator) and [cicpy](https://github.com/wulffern/cicpy) |
-| tech/cicsim                             | [cicsim](https://github.com/wulffern/cicsim)                                                        |
-| tech/ magic                             | Magic VLSI color and tcl scripts                                                                    |
-| tech/make                               | Makefiles to run netlist, gds, lvs, drc, lpe and ip compile                                         |
-| tech/ngspice                            | files for corner setup                                                                              |
+| [tech](tech)                                    | Technology files                                                                                    |
+| [tech/cic](tech/cic)                                | [ciccreator](https://github.com/wulffern/ciccreator) and [cicpy](https://github.com/wulffern/cicpy) |
+| [tech/cicsim](tech/cicsim)                             | [cicsim](https://github.com/wulffern/cicsim)                                                        |
+| [tech/magic](tech/magic)                             | Magic VLSI color and tcl scripts                                                                    |
+| [tech/make](tech/make)                               | Makefiles to run netlist, gds, lvs, drc, lpe and ip compile                                         |
+| [tech/ngspice](tech/ngspice)                            | files for corner setup                                                                              |
 
 
 ## Requirements
