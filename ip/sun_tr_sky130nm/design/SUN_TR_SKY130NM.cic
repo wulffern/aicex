@@ -335,7 +335,7 @@
                 }
             ],
             "class": "cIcCore::Cell",
-            "has_pr": true,
+            "has_pr": false,
             "layer": "PR",
             "libcell": false,
             "meta": {
@@ -1484,7 +1484,7 @@
         {
             "abstract": false,
             "boundaryIgnoreRouting": false,
-            "cellused": true,
+            "cellused": false,
             "children": [
                 {
                     "class": "Rect",
@@ -1991,7 +1991,7 @@
         {
             "abstract": false,
             "boundaryIgnoreRouting": false,
-            "cellused": true,
+            "cellused": false,
             "children": [
                 {
                     "class": "Rect",
@@ -3006,7 +3006,7 @@
             "abstract": false,
             "alternateGroup": false,
             "boundaryIgnoreRouting": true,
-            "cellused": true,
+            "cellused": false,
             "children": [
                 {
                     "angle": "",
@@ -4078,7 +4078,7 @@
             "abstract": false,
             "alternateGroup": false,
             "boundaryIgnoreRouting": true,
-            "cellused": true,
+            "cellused": false,
             "children": [
                 {
                     "angle": "",
@@ -4415,7 +4415,7 @@
             "abstract": false,
             "alternateGroup": false,
             "boundaryIgnoreRouting": true,
-            "cellused": true,
+            "cellused": false,
             "children": [
                 {
                     "angle": "",
@@ -4809,7 +4809,7 @@
             "abstract": false,
             "alternateGroup": false,
             "boundaryIgnoreRouting": true,
-            "cellused": true,
+            "cellused": false,
             "children": [
                 {
                     "angle": "",
@@ -5518,7 +5518,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "meta": {
@@ -5707,7 +5707,7 @@
             "abstract": false,
             "alternateGroup": false,
             "boundaryIgnoreRouting": true,
-            "cellused": true,
+            "cellused": false,
             "children": [
                 {
                     "angle": "",
@@ -6140,7 +6140,7 @@
             "abstract": false,
             "alternateGroup": false,
             "boundaryIgnoreRouting": true,
-            "cellused": true,
+            "cellused": false,
             "children": [
                 {
                     "angle": "",
@@ -7390,7 +7390,7 @@
             "abstract": false,
             "alternateGroup": false,
             "boundaryIgnoreRouting": true,
-            "cellused": true,
+            "cellused": false,
             "children": [
                 {
                     "angle": "",
@@ -8038,6 +8038,7 @@
             "layer": "PR",
             "libcell": false,
             "meta": {
+                "symbol": "cic_wbulk/tap"
             },
             "name": "SUNTR_TAPCELLB_CV",
             "net": "",
@@ -8053,7 +8054,7 @@
             "abstract": false,
             "alternateGroup": false,
             "boundaryIgnoreRouting": true,
-            "cellused": true,
+            "cellused": false,
             "children": [
                 {
                     "angle": "",
@@ -8486,7 +8487,7 @@
             "abstract": false,
             "alternateGroup": false,
             "boundaryIgnoreRouting": true,
-            "cellused": true,
+            "cellused": false,
             "children": [
                 {
                     "angle": "",
@@ -8919,7 +8920,7 @@
             "abstract": false,
             "alternateGroup": false,
             "boundaryIgnoreRouting": true,
-            "cellused": true,
+            "cellused": false,
             "children": [
                 {
                     "angle": "",
@@ -9425,7 +9426,7 @@
             "abstract": false,
             "alternateGroup": false,
             "boundaryIgnoreRouting": true,
-            "cellused": true,
+            "cellused": false,
             "children": [
                 {
                     "angle": "",
@@ -10220,7 +10221,7 @@
             "abstract": false,
             "alternateGroup": false,
             "boundaryIgnoreRouting": true,
-            "cellused": true,
+            "cellused": false,
             "children": [
                 {
                     "angle": "",
@@ -11557,7 +11558,7 @@
             "abstract": false,
             "alternateGroup": false,
             "boundaryIgnoreRouting": true,
-            "cellused": true,
+            "cellused": false,
             "children": [
                 {
                     "angle": "",
@@ -13208,7 +13209,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "meta": {
@@ -13978,7 +13979,7 @@
             "abstract": false,
             "alternateGroup": false,
             "boundaryIgnoreRouting": true,
-            "cellused": true,
+            "cellused": false,
             "children": [
                 {
                     "angle": "",
@@ -14519,7 +14520,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": true,
+                    "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
                     "meta": {
@@ -14821,7 +14822,7 @@
             "abstract": false,
             "alternateGroup": false,
             "boundaryIgnoreRouting": true,
-            "cellused": true,
+            "cellused": false,
             "children": [
                 {
                     "angle": "",
@@ -15594,7 +15595,7 @@
             "abstract": false,
             "alternateGroup": false,
             "boundaryIgnoreRouting": true,
-            "cellused": true,
+            "cellused": false,
             "children": [
                 {
                     "angle": "",
@@ -16367,7 +16368,7 @@
             "abstract": false,
             "alternateGroup": false,
             "boundaryIgnoreRouting": true,
-            "cellused": true,
+            "cellused": false,
             "children": [
                 {
                     "angle": "",
@@ -17567,7 +17568,7 @@
             "abstract": false,
             "alternateGroup": false,
             "boundaryIgnoreRouting": true,
-            "cellused": true,
+            "cellused": false,
             "children": [
                 {
                     "angle": "",
@@ -19006,7 +19007,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": true,
+                    "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
                     "meta": {
@@ -19167,7 +19168,1139 @@
             "abstract": false,
             "alternateGroup": false,
             "boundaryIgnoreRouting": true,
-            "cellused": true,
+            "cellused": false,
+            "children": [
+                {
+                    "angle": "",
+                    "cell": "SUNTR_NCHDL",
+                    "children": [
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "N1",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": 37800,
+                            "x2": 48600,
+                            "y1": 11700,
+                            "y2": 14700
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "D",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": 16200,
+                            "x2": 27000,
+                            "y1": 7300,
+                            "y2": 10300
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "AVSS",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": 37800,
+                            "x2": 48600,
+                            "y1": 2900,
+                            "y2": 5900
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "AVSS",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": -5400,
+                            "x2": 5400,
+                            "y1": 6600,
+                            "y2": 11000
+                        },
+                        {
+                            "class": "Text",
+                            "layer": "TXT",
+                            "name": "MN0",
+                            "net": "",
+                            "x1": 31500,
+                            "x2": 31500,
+                            "y1": 8800,
+                            "y2": 8800
+                        }
+                    ],
+                    "class": "Instance",
+                    "instanceName": "MN0",
+                    "layer": "PR",
+                    "name": "SUNTR_NCHDL",
+                    "net": "",
+                    "subcktInstance": {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "MN",
+                        "name": "MN0",
+                        "nodes": [
+                            "N1",
+                            "D",
+                            "AVSS",
+                            "AVSS"
+                        ],
+                        "properties": {
+                        },
+                        "subcktName": "SUNTR_NCHDL"
+                    },
+                    "x1": 0,
+                    "x2": 63000,
+                    "xcell": 0,
+                    "y1": 0,
+                    "y2": 17600,
+                    "ycell": 0
+                },
+                {
+                    "angle": "",
+                    "cell": "SUNTR_NCHDL",
+                    "children": [
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "N2",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": 37800,
+                            "x2": 48600,
+                            "y1": 29300,
+                            "y2": 32300
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "CK",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": 16200,
+                            "x2": 27000,
+                            "y1": 24900,
+                            "y2": 27900
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "Q",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": 37800,
+                            "x2": 48600,
+                            "y1": 20500,
+                            "y2": 23500
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "AVSS",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": -5400,
+                            "x2": 5400,
+                            "y1": 24200,
+                            "y2": 28600
+                        },
+                        {
+                            "class": "Text",
+                            "layer": "TXT",
+                            "name": "MN2",
+                            "net": "",
+                            "x1": 31500,
+                            "x2": 31500,
+                            "y1": 26400,
+                            "y2": 26400
+                        }
+                    ],
+                    "class": "Instance",
+                    "instanceName": "MN2",
+                    "layer": "PR",
+                    "name": "SUNTR_NCHDL",
+                    "net": "",
+                    "subcktInstance": {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "MN",
+                        "name": "MN2",
+                        "nodes": [
+                            "N2",
+                            "CK",
+                            "Q",
+                            "AVSS"
+                        ],
+                        "properties": {
+                        },
+                        "subcktName": "SUNTR_NCHDL"
+                    },
+                    "x1": 0,
+                    "x2": 63000,
+                    "xcell": 0,
+                    "y1": 17600,
+                    "y2": 35200,
+                    "ycell": 0
+                },
+                {
+                    "angle": "",
+                    "cell": "SUNTR_NCHDL",
+                    "children": [
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "AVSS",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": 37800,
+                            "x2": 48600,
+                            "y1": 46900,
+                            "y2": 49900
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "N1",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": 16200,
+                            "x2": 27000,
+                            "y1": 42500,
+                            "y2": 45500
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "N2",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": 37800,
+                            "x2": 48600,
+                            "y1": 38100,
+                            "y2": 41100
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "AVSS",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": -5400,
+                            "x2": 5400,
+                            "y1": 41800,
+                            "y2": 46200
+                        },
+                        {
+                            "class": "Text",
+                            "layer": "TXT",
+                            "name": "MN1",
+                            "net": "",
+                            "x1": 31500,
+                            "x2": 31500,
+                            "y1": 44000,
+                            "y2": 44000
+                        }
+                    ],
+                    "class": "Instance",
+                    "instanceName": "MN1",
+                    "layer": "PR",
+                    "name": "SUNTR_NCHDL",
+                    "net": "",
+                    "subcktInstance": {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "MN",
+                        "name": "MN1",
+                        "nodes": [
+                            "AVSS",
+                            "N1",
+                            "N2",
+                            "AVSS"
+                        ],
+                        "properties": {
+                        },
+                        "subcktName": "SUNTR_NCHDL"
+                    },
+                    "x1": 0,
+                    "x2": 63000,
+                    "xcell": 0,
+                    "y1": 35200,
+                    "y2": 52800,
+                    "ycell": 0
+                },
+                {
+                    "angle": "",
+                    "cell": "SUNTR_PCHDL",
+                    "children": [
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "N3",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": 77400,
+                            "x2": 88200,
+                            "y1": 11700,
+                            "y2": 14700
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "D",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": 99000,
+                            "x2": 109800,
+                            "y1": 7300,
+                            "y2": 10300
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "AVDD",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": 77400,
+                            "x2": 88200,
+                            "y1": 2900,
+                            "y2": 5900
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "AVDD",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": 120600,
+                            "x2": 131400,
+                            "y1": 6600,
+                            "y2": 11000
+                        },
+                        {
+                            "class": "Text",
+                            "layer": "TXT",
+                            "name": "MP1",
+                            "net": "",
+                            "x1": 94500,
+                            "x2": 94500,
+                            "y1": 8800,
+                            "y2": 8800
+                        }
+                    ],
+                    "class": "Instance",
+                    "instanceName": "MP1",
+                    "layer": "PR",
+                    "name": "SUNTR_PCHDL",
+                    "net": "",
+                    "subcktInstance": {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "MP",
+                        "name": "MP1",
+                        "nodes": [
+                            "N3",
+                            "D",
+                            "AVDD",
+                            "AVDD"
+                        ],
+                        "properties": {
+                        },
+                        "subcktName": "SUNTR_PCHDL"
+                    },
+                    "x1": 63000,
+                    "x2": 126000,
+                    "xcell": 0,
+                    "y1": 0,
+                    "y2": 17600,
+                    "ycell": 0
+                },
+                {
+                    "angle": "",
+                    "cell": "SUNTR_PCHDL",
+                    "children": [
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "N1",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": 77400,
+                            "x2": 88200,
+                            "y1": 29300,
+                            "y2": 32300
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "CK",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": 99000,
+                            "x2": 109800,
+                            "y1": 24900,
+                            "y2": 27900
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "N3",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": 77400,
+                            "x2": 88200,
+                            "y1": 20500,
+                            "y2": 23500
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "AVDD",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": 120600,
+                            "x2": 131400,
+                            "y1": 24200,
+                            "y2": 28600
+                        },
+                        {
+                            "class": "Text",
+                            "layer": "TXT",
+                            "name": "MP0",
+                            "net": "",
+                            "x1": 94500,
+                            "x2": 94500,
+                            "y1": 26400,
+                            "y2": 26400
+                        }
+                    ],
+                    "class": "Instance",
+                    "instanceName": "MP0",
+                    "layer": "PR",
+                    "name": "SUNTR_PCHDL",
+                    "net": "",
+                    "subcktInstance": {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "MP",
+                        "name": "MP0",
+                        "nodes": [
+                            "N1",
+                            "CK",
+                            "N3",
+                            "AVDD"
+                        ],
+                        "properties": {
+                        },
+                        "subcktName": "SUNTR_PCHDL"
+                    },
+                    "x1": 63000,
+                    "x2": 126000,
+                    "xcell": 0,
+                    "y1": 17600,
+                    "y2": 35200,
+                    "ycell": 0
+                },
+                {
+                    "angle": "",
+                    "cell": "SUNTR_PCHDL",
+                    "children": [
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "Q",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": 77400,
+                            "x2": 88200,
+                            "y1": 46900,
+                            "y2": 49900
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "N1",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": 99000,
+                            "x2": 109800,
+                            "y1": 42500,
+                            "y2": 45500
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "AVDD",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": 77400,
+                            "x2": 88200,
+                            "y1": 38100,
+                            "y2": 41100
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "AVDD",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": 120600,
+                            "x2": 131400,
+                            "y1": 41800,
+                            "y2": 46200
+                        },
+                        {
+                            "class": "Text",
+                            "layer": "TXT",
+                            "name": "MP2",
+                            "net": "",
+                            "x1": 94500,
+                            "x2": 94500,
+                            "y1": 44000,
+                            "y2": 44000
+                        }
+                    ],
+                    "class": "Instance",
+                    "instanceName": "MP2",
+                    "layer": "PR",
+                    "name": "SUNTR_PCHDL",
+                    "net": "",
+                    "subcktInstance": {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "MP",
+                        "name": "MP2",
+                        "nodes": [
+                            "Q",
+                            "N1",
+                            "AVDD",
+                            "AVDD"
+                        ],
+                        "properties": {
+                        },
+                        "subcktName": "SUNTR_PCHDL"
+                    },
+                    "x1": 63000,
+                    "x2": 126000,
+                    "xcell": 0,
+                    "y1": 35200,
+                    "y2": 52800,
+                    "ycell": 0
+                },
+                {
+                    "abstract": false,
+                    "boundaryIgnoreRouting": false,
+                    "cellused": false,
+                    "children": [
+                        {
+                            "class": "Rect",
+                            "layer": "M1",
+                            "net": "",
+                            "x1": 41700,
+                            "x2": 44700,
+                            "y1": 29300,
+                            "y2": 41100
+                        },
+                        {
+                            "class": "Text",
+                            "layer": "TXT",
+                            "name": "N2",
+                            "net": "",
+                            "x1": 37800,
+                            "x2": 37800,
+                            "y1": 29300,
+                            "y2": 29300
+                        }
+                    ],
+                    "class": "cIcCore::Route",
+                    "has_pr": false,
+                    "layer": "PR",
+                    "libcell": false,
+                    "meta": {
+                    },
+                    "name": "N2",
+                    "net": "",
+                    "physicalOnly": false,
+                    "x1": 37800,
+                    "x2": 44700,
+                    "y1": 29300,
+                    "y2": 41100
+                },
+                {
+                    "abstract": false,
+                    "boundaryIgnoreRouting": false,
+                    "cellused": false,
+                    "children": [
+                        {
+                            "class": "Rect",
+                            "layer": "M1",
+                            "net": "",
+                            "x1": 81300,
+                            "x2": 84300,
+                            "y1": 11700,
+                            "y2": 23500
+                        },
+                        {
+                            "class": "Text",
+                            "layer": "TXT",
+                            "name": "N3",
+                            "net": "",
+                            "x1": 77400,
+                            "x2": 77400,
+                            "y1": 11700,
+                            "y2": 11700
+                        }
+                    ],
+                    "class": "cIcCore::Route",
+                    "has_pr": false,
+                    "layer": "PR",
+                    "libcell": false,
+                    "meta": {
+                    },
+                    "name": "N3",
+                    "net": "",
+                    "physicalOnly": false,
+                    "x1": 77400,
+                    "x2": 84300,
+                    "y1": 11700,
+                    "y2": 23500
+                },
+                {
+                    "abstract": false,
+                    "boundaryIgnoreRouting": false,
+                    "cellused": false,
+                    "children": [
+                        {
+                            "class": "Rect",
+                            "layer": "M1",
+                            "net": "",
+                            "x1": 43200,
+                            "x2": 51600,
+                            "y1": 20500,
+                            "y2": 23500
+                        },
+                        {
+                            "class": "Rect",
+                            "layer": "M1",
+                            "net": "",
+                            "x1": 51600,
+                            "x2": 82800,
+                            "y1": 46900,
+                            "y2": 49900
+                        },
+                        {
+                            "class": "Rect",
+                            "layer": "M1",
+                            "net": "",
+                            "x1": 51600,
+                            "x2": 54600,
+                            "y1": 20500,
+                            "y2": 49900
+                        },
+                        {
+                            "class": "Text",
+                            "layer": "TXT",
+                            "name": "Q",
+                            "net": "",
+                            "x1": 37800,
+                            "x2": 37800,
+                            "y1": 20500,
+                            "y2": 20500
+                        }
+                    ],
+                    "class": "cIcCore::Route",
+                    "has_pr": false,
+                    "layer": "PR",
+                    "libcell": false,
+                    "meta": {
+                    },
+                    "name": "Q",
+                    "net": "",
+                    "physicalOnly": false,
+                    "x1": 37800,
+                    "x2": 82800,
+                    "y1": 20500,
+                    "y2": 49900
+                },
+                {
+                    "abstract": false,
+                    "boundaryIgnoreRouting": false,
+                    "cellused": false,
+                    "children": [
+                        {
+                            "class": "Rect",
+                            "layer": "PO",
+                            "net": "",
+                            "x1": 16200,
+                            "x2": 109800,
+                            "y1": 7900,
+                            "y2": 9700
+                        },
+                        {
+                            "class": "Rect",
+                            "layer": "PO",
+                            "net": "",
+                            "x1": 16200,
+                            "x2": 109800,
+                            "y1": 25500,
+                            "y2": 27300
+                        },
+                        {
+                            "class": "Rect",
+                            "layer": "PO",
+                            "net": "",
+                            "x1": 16200,
+                            "x2": 109800,
+                            "y1": 43100,
+                            "y2": 44900
+                        },
+                        {
+                            "class": "Text",
+                            "layer": "TXT",
+                            "name": "A",
+                            "net": "",
+                            "x1": 16200,
+                            "x2": 16200,
+                            "y1": 7900,
+                            "y2": 7900
+                        }
+                    ],
+                    "class": "cIcCore::Route",
+                    "has_pr": false,
+                    "layer": "PR",
+                    "libcell": false,
+                    "meta": {
+                    },
+                    "name": "A",
+                    "net": "",
+                    "physicalOnly": false,
+                    "x1": 16200,
+                    "x2": 109800,
+                    "y1": 7900,
+                    "y2": 44900
+                },
+                {
+                    "abstract": false,
+                    "boundaryIgnoreRouting": false,
+                    "cellused": false,
+                    "children": [
+                        {
+                            "class": "Rect",
+                            "layer": "M1",
+                            "net": "",
+                            "x1": 10200,
+                            "x2": 21600,
+                            "y1": 42500,
+                            "y2": 45500
+                        },
+                        {
+                            "class": "Rect",
+                            "layer": "M1",
+                            "net": "",
+                            "x1": 10200,
+                            "x2": 40800,
+                            "y1": 14700,
+                            "y2": 17700
+                        },
+                        {
+                            "class": "Rect",
+                            "layer": "M1",
+                            "net": "",
+                            "x1": 10200,
+                            "x2": 13200,
+                            "y1": 14700,
+                            "y2": 45500
+                        },
+                        {
+                            "class": "Rect",
+                            "layer": "M1",
+                            "net": "",
+                            "x1": 37800,
+                            "x2": 43200,
+                            "y1": 11700,
+                            "y2": 14700
+                        },
+                        {
+                            "class": "Text",
+                            "layer": "TXT",
+                            "name": "N1",
+                            "net": "",
+                            "x1": 16200,
+                            "x2": 16200,
+                            "y1": 42500,
+                            "y2": 42500
+                        }
+                    ],
+                    "class": "cIcCore::Route",
+                    "has_pr": false,
+                    "layer": "PR",
+                    "libcell": false,
+                    "meta": {
+                    },
+                    "name": "N1",
+                    "net": "",
+                    "physicalOnly": false,
+                    "x1": 10200,
+                    "x2": 43200,
+                    "y1": 11700,
+                    "y2": 45500
+                },
+                {
+                    "abstract": false,
+                    "boundaryIgnoreRouting": false,
+                    "cellused": false,
+                    "children": [
+                        {
+                            "class": "Rect",
+                            "layer": "M1",
+                            "net": "",
+                            "x1": 43200,
+                            "x2": 58200,
+                            "y1": 11700,
+                            "y2": 14700
+                        },
+                        {
+                            "class": "Rect",
+                            "layer": "M1",
+                            "net": "",
+                            "x1": 58200,
+                            "x2": 82800,
+                            "y1": 29300,
+                            "y2": 32300
+                        },
+                        {
+                            "class": "Rect",
+                            "layer": "M1",
+                            "net": "",
+                            "x1": 58200,
+                            "x2": 61200,
+                            "y1": 11700,
+                            "y2": 32300
+                        },
+                        {
+                            "class": "Text",
+                            "layer": "TXT",
+                            "name": "N1",
+                            "net": "",
+                            "x1": 37800,
+                            "x2": 37800,
+                            "y1": 11700,
+                            "y2": 11700
+                        }
+                    ],
+                    "class": "cIcCore::Route",
+                    "has_pr": false,
+                    "layer": "PR",
+                    "libcell": false,
+                    "meta": {
+                    },
+                    "name": "N1",
+                    "net": "",
+                    "physicalOnly": false,
+                    "x1": 37800,
+                    "x2": 82800,
+                    "y1": 11700,
+                    "y2": 32300
+                },
+                {
+                    "class": "Port",
+                    "layer": "M1",
+                    "name": "D",
+                    "net": "",
+                    "pinLayer": "M1_pin",
+                    "spicePort": true,
+                    "x1": 16200,
+                    "x2": 27000,
+                    "y1": 7300,
+                    "y2": 10300
+                },
+                {
+                    "class": "Port",
+                    "layer": "M1",
+                    "name": "CK",
+                    "net": "",
+                    "pinLayer": "M1_pin",
+                    "spicePort": true,
+                    "x1": 16200,
+                    "x2": 27000,
+                    "y1": 24900,
+                    "y2": 27900
+                },
+                {
+                    "class": "Port",
+                    "layer": "M1",
+                    "name": "Q",
+                    "net": "",
+                    "pinLayer": "M1_pin",
+                    "spicePort": true,
+                    "x1": 37800,
+                    "x2": 48600,
+                    "y1": 20500,
+                    "y2": 23500
+                },
+                {
+                    "class": "Port",
+                    "layer": "M4",
+                    "name": "AVDD",
+                    "net": "",
+                    "pinLayer": "M4_pin",
+                    "spicePort": true,
+                    "x1": 77400,
+                    "x2": 87400,
+                    "y1": 0,
+                    "y2": 52800
+                },
+                {
+                    "class": "Port",
+                    "layer": "M4",
+                    "name": "AVSS",
+                    "net": "",
+                    "pinLayer": "M4_pin",
+                    "spicePort": true,
+                    "x1": 37800,
+                    "x2": 47800,
+                    "y1": 0,
+                    "y2": 52800
+                },
+                {
+                    "angle": "",
+                    "cell": "SUNTR_cut_M1M4_2x1",
+                    "children": [
+                    ],
+                    "class": "Instance",
+                    "instanceName": "",
+                    "layer": "PR",
+                    "name": "SUNTR_cut_M1M4_2x1",
+                    "net": "",
+                    "x1": 77400,
+                    "x2": 87400,
+                    "xcell": 0,
+                    "y1": 2900,
+                    "y2": 6700,
+                    "ycell": 0
+                },
+                {
+                    "angle": "",
+                    "cell": "SUNTR_cut_M1M4_2x1",
+                    "children": [
+                    ],
+                    "class": "Instance",
+                    "instanceName": "",
+                    "layer": "PR",
+                    "name": "SUNTR_cut_M1M4_2x1",
+                    "net": "",
+                    "x1": 77400,
+                    "x2": 87400,
+                    "xcell": 0,
+                    "y1": 38100,
+                    "y2": 41900,
+                    "ycell": 0
+                },
+                {
+                    "class": "Rect",
+                    "layer": "M4",
+                    "net": "",
+                    "x1": 77400,
+                    "x2": 87400,
+                    "y1": 0,
+                    "y2": 52800
+                },
+                {
+                    "angle": "",
+                    "cell": "SUNTR_cut_M1M4_2x1",
+                    "children": [
+                    ],
+                    "class": "Instance",
+                    "instanceName": "",
+                    "layer": "PR",
+                    "name": "SUNTR_cut_M1M4_2x1",
+                    "net": "",
+                    "x1": 37800,
+                    "x2": 47800,
+                    "xcell": 0,
+                    "y1": 2900,
+                    "y2": 6700,
+                    "ycell": 0
+                },
+                {
+                    "angle": "",
+                    "cell": "SUNTR_cut_M1M4_2x1",
+                    "children": [
+                    ],
+                    "class": "Instance",
+                    "instanceName": "",
+                    "layer": "PR",
+                    "name": "SUNTR_cut_M1M4_2x1",
+                    "net": "",
+                    "x1": 37800,
+                    "x2": 47800,
+                    "xcell": 0,
+                    "y1": 46900,
+                    "y2": 50700,
+                    "ycell": 0
+                },
+                {
+                    "class": "Rect",
+                    "layer": "M4",
+                    "net": "",
+                    "x1": 37800,
+                    "x2": 47800,
+                    "y1": 0,
+                    "y2": 52800
+                }
+            ],
+            "ckt": {
+                "class": "cIcCore::LayoutCell",
+                "devices": [
+                ],
+                "instances": [
+                    {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "MN",
+                        "name": "MN0",
+                        "nodes": [
+                            "N1",
+                            "D",
+                            "AVSS",
+                            "AVSS"
+                        ],
+                        "properties": {
+                        },
+                        "subcktName": "SUNTR_NCHDL"
+                    },
+                    {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "MN",
+                        "name": "MN2",
+                        "nodes": [
+                            "N2",
+                            "CK",
+                            "Q",
+                            "AVSS"
+                        ],
+                        "properties": {
+                        },
+                        "subcktName": "SUNTR_NCHDL"
+                    },
+                    {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "MN",
+                        "name": "MN1",
+                        "nodes": [
+                            "AVSS",
+                            "N1",
+                            "N2",
+                            "AVSS"
+                        ],
+                        "properties": {
+                        },
+                        "subcktName": "SUNTR_NCHDL"
+                    },
+                    {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "MP",
+                        "name": "MP1",
+                        "nodes": [
+                            "N3",
+                            "D",
+                            "AVDD",
+                            "AVDD"
+                        ],
+                        "properties": {
+                        },
+                        "subcktName": "SUNTR_PCHDL"
+                    },
+                    {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "MP",
+                        "name": "MP0",
+                        "nodes": [
+                            "N1",
+                            "CK",
+                            "N3",
+                            "AVDD"
+                        ],
+                        "properties": {
+                        },
+                        "subcktName": "SUNTR_PCHDL"
+                    },
+                    {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "MP",
+                        "name": "MP2",
+                        "nodes": [
+                            "Q",
+                            "N1",
+                            "AVDD",
+                            "AVDD"
+                        ],
+                        "properties": {
+                        },
+                        "subcktName": "SUNTR_PCHDL"
+                    }
+                ],
+                "name": "SUNTR_DFTSPCX1_CV",
+                "nodes": [
+                    "D",
+                    "CK",
+                    "Q",
+                    "AVDD",
+                    "AVSS"
+                ],
+                "properties": {
+                }
+            },
+            "class": "cIcCore::LayoutCell",
+            "has_pr": false,
+            "layer": "PR",
+            "libcell": false,
+            "meta": {
+                "symbol": "cic/dfq"
+            },
+            "name": "SUNTR_DFTSPCX1_CV",
+            "net": "",
+            "noPowerRoute": false,
+            "physicalOnly": false,
+            "useHalfHeight": false,
+            "x1": 0,
+            "x2": 126000,
+            "y1": 0,
+            "y2": 52800
+        },
+        {
+            "abstract": false,
+            "alternateGroup": false,
+            "boundaryIgnoreRouting": true,
+            "cellused": false,
             "children": [
                 {
                     "angle": "",
@@ -19926,7 +21059,7 @@
             "abstract": false,
             "alternateGroup": false,
             "boundaryIgnoreRouting": true,
-            "cellused": true,
+            "cellused": false,
             "children": [
                 {
                     "angle": "",
@@ -22076,7 +23209,7 @@
             "abstract": false,
             "alternateGroup": false,
             "boundaryIgnoreRouting": true,
-            "cellused": true,
+            "cellused": false,
             "children": [
                 {
                     "angle": "",
@@ -24436,7 +25569,7 @@
             "abstract": false,
             "alternateGroup": false,
             "boundaryIgnoreRouting": false,
-            "cellused": true,
+            "cellused": false,
             "children": [
                 {
                     "angle": "",
@@ -26540,7 +27673,7 @@
             "abstract": false,
             "alternateGroup": false,
             "boundaryIgnoreRouting": true,
-            "cellused": true,
+            "cellused": false,
             "children": [
                 {
                     "angle": "",
@@ -27409,7 +28542,7 @@
             "abstract": false,
             "alternateGroup": false,
             "boundaryIgnoreRouting": true,
-            "cellused": true,
+            "cellused": false,
             "children": [
                 {
                     "angle": "",
@@ -28480,7 +29613,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "meta": {
@@ -29010,7 +30143,7 @@
             "abstract": false,
             "alternateGroup": false,
             "boundaryIgnoreRouting": true,
-            "cellused": true,
+            "cellused": false,
             "children": [
                 {
                     "angle": "",
@@ -30419,7 +31552,7 @@
             "abstract": false,
             "alternateGroup": false,
             "boundaryIgnoreRouting": true,
-            "cellused": true,
+            "cellused": false,
             "children": [
                 {
                     "angle": "",
@@ -41126,15 +42259,15 @@
     ],
     "info": {
         "--gds": false,
-        "--spi": true,
+        "--spi": false,
         "arguments": "/Users/wulff/pro/cic/ciccreator/bin/darwin/cic.app/Contents/MacOS/cic ../cic/ip.json ../cic/sky130.tech SUN_TR_SKY130NM",
         "file": "../cic/ip.json",
-        "hash": "0.1.3-11-g01ed70c",
+        "hash": "0.1.3-12-g998525a",
         "includepaths": "../cic",
         "libpaths": "",
         "library": "SUN_TR_SKY130NM",
         "prefix": "",
         "rules": "../cic/sky130.tech",
-        "version": "0.1.4 built on Mon Aug 1 22:05:48 CEST 2022"
+        "version": "0.1.4 built on Tue Aug 2 10:15:55 CEST 2022"
     }
 }

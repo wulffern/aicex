@@ -260,6 +260,18 @@ XA2 YN Y AVDD AVSS SUNTR_IVX1_CV
 .ENDS
 
 *-------------------------------------------------------------
+* SUNTR_DFTSPCX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTR_DFTSPCX1_CV D CK Q AVDD AVSS
+XMN0 N1 D AVSS AVSS SUNTR_NCHDL
+XMN2 N2 CK Q AVSS SUNTR_NCHDL
+XMN1 AVSS N1 N2 AVSS SUNTR_NCHDL
+XMP1 N3 D AVDD AVDD SUNTR_PCHDL
+XMP0 N1 CK N3 AVDD SUNTR_PCHDL
+XMP2 Q N1 AVDD AVDD SUNTR_PCHDL
+.ENDS
+
+*-------------------------------------------------------------
 * SUNTR_IVTRIX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
 .SUBCKT SUNTR_IVTRIX1_CV A C CN Y AVDD AVSS

@@ -2,7 +2,7 @@ v {xschem version=3.0.0 file_version=1.2 }
 K {type=subcircuit
 format="@name @pinlist @symname"
 template="name=x1"
-} 
+}
 T {B} 26 0 0 0 0.15 0.15 { vcenter=true}
 T {A} 26 -20 0 0 0.15 0.15 { vcenter=true}
 T {AVSS} 45 24 1 0 0.125 0.125 { vcenter=true}

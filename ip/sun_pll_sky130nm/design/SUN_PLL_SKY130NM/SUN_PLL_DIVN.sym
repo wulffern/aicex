@@ -1,0 +1,30 @@
+v {xschem version=3.0.0 file_version=1.2 }
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 -110 -90 -110 -70 {}
+L 4 30 0 50 0 {}
+L 4 -150 -10 -130 -10 {}
+L 4 -50 60 -50 80 {}
+L 4 -110 60 -110 80 {}
+L 4 -130 -70 -130 60 {}
+L 4 -130 60 30 60 {}
+L 4 30 -70 30 60 {}
+L 4 -130 -70 30 -70 {}
+B 5 -112.5 -92.5 -107.5 -87.5 {name=AVDD dir=in }
+B 5 47.5 -2.5 52.5 2.5 {name=CK_FB dir=out }
+B 5 -152.5 -12.5 -147.5 -7.5 {name=CK dir=in }
+B 5 -52.5 77.5 -47.5 82.5 {name=PWRUP_1V8 dir=in }
+B 5 -112.5 77.5 -107.5 82.5 {name=AVSS dir=in }
+T {@symname} -82 -36 0 0 0.3 0.3 {}
+T {@name} -85 -52 0 0 0.2 0.2 {}
+T {AVDD} -106 -65 1 0 0.2 0.2 {}
+T {CK_FB} 25 -4 0 1 0.2 0.2 {}
+T {CK} -125 -14 0 0 0.2 0.2 {}
+T {PWRUP_1V8} -54 55 3 0 0.2 0.2 {}
+T {AVSS} -114 55 3 0 0.2 0.2 {}

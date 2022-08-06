@@ -4,7 +4,9 @@
 		"ignoreSetYoffsetHalf" : false,
         "prefix" : "",
         "topcells" :[
-            "SUN_PLL_ROSC"
+            "SUN_PLL_ROSC",
+            "SUN_PLL_DIVN",
+            "SUN_PLL_PFD"
         ]
 
 
@@ -15,7 +17,9 @@
     ],
 	"include" : [
         "SUN_PLL_LSCORE.json",
-        "SUN_PLL_ROSC.json"
+        "SUN_PLL_ROSC.json",
+        "SUN_PLL_PFD.json",
+        "SUN_PLL_DIVN.json"
 
 	],
 

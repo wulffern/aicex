@@ -12,6 +12,7 @@
                     ["M1","^N_[^0]","-|--","offsethigh","","(IVX|NDX)"],
                     ["M1","^NI","-|--","offsethigh","","(IVX|NDX)"],
                     ["M1","^CKUP","--|-","onTopB,offsethigh","",""],
+                    ["M2","^CKDWN","--|-","onTopB,offsethigh","",""],
                     ["M2","^N_2","--|-","","","xb2_5|SUN_PLL_LSCORE"],
                     ["M3","^N_1","-|--","","","xb2_6|SUN_PLL_LSCORE"],
                     ["M3","^N_0","-|--","","",""]

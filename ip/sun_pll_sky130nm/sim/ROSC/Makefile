@@ -29,13 +29,17 @@
 #----------------------------------------------------------------------------
 
 test:
-	${make} typical OPT="Debug"
+	${MAKE} typical OPT="Debug"
 
 TB=tran
 VIEW=Sch
 
 OPT=
 
+
+all:
+	${MAKE} tfs VIEW=Lay
+	python3 kvco.py tran_LayGtMttMssMffRlClBsDsTtThTlVt.run
 
 typical:
 	cicsim runng ${TB} ${OPT} ${VIEW} Gt Mtt Rt Ct Tt Vt Dt Bt
@@ -48,6 +52,7 @@ fast:
 
 tfs:
 	cicsim runng ${TB} ${OPT} ${VIEW} Gt "Mtt,Mss,Mff" Rl Cl Bs Ds "Tt,Th,Tl" Vt
+
 
 ttffss:
 	cicsim runng ${TB} ${OPT} ${VIEW} Gt "Mtt,Mss,Mff" Rl Cl Bs Ds "Tt" Vt

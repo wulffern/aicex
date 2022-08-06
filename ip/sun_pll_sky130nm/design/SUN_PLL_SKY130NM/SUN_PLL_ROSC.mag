@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1659428166
+timestamp 1659815255
 << checkpaint >>
 rect 0 -720 5148 3872
 << locali >>
@@ -56,6 +56,7 @@ rect 4500 146 4716 206
 rect 756 1642 972 1702
 << m3 >>
 rect 756 -720 956 1760
+rect 756 -720 956 2112
 rect 4084 -720 4284 704
 rect 4084 -720 4284 1056
 rect 4084 -720 4284 1408
@@ -68,6 +69,10 @@ rect 4084 -720 4284 3520
 rect 3292 0 3492 704
 rect 1548 0 1748 1408
 << m1 >>
+rect 636 294 816 354
+rect 432 1906 636 1966
+rect 636 234 696 1974
+rect 756 234 864 294
 rect 204 850 432 910
 rect 204 2698 4176 2758
 rect 204 850 264 2766
@@ -84,9 +89,12 @@ box 0 0 2520 1408
 use SUNTR_IVX1_CV xa4
 transform 1 0 0 0 1 1408
 box 0 1408 2520 1760
-use SUNTR_TAPCELLB_CV xa5
+use SUNTR_IVX1_CV xa5
 transform 1 0 0 0 1 1760
 box 0 1760 2520 2112
+use SUNTR_TAPCELLB_CV xa6
+transform 1 0 0 0 1 2112
+box 0 2112 2520 2464
 use SUNTRB_NDX1_CV xb1
 transform -1 0 5040 0 1 0
 box 5040 0 7560 704
@@ -117,6 +125,9 @@ box 5040 3168 7560 3520
 use SUNTRB_TAPCELLBAVSS_CV xb3
 transform -1 0 5040 0 1 3520
 box 5040 3520 7560 3872
+use cut_M1M4_2x2 
+transform 1 0 756 0 1 -720
+box 756 -720 956 -520
 use cut_M1M4_2x2 
 transform 1 0 756 0 1 -720
 box 756 -720 956 -520
@@ -174,6 +185,12 @@ box 4084 -720 4284 -520
 use cut_M1M4_2x2 
 transform 1 0 4084 0 1 -720
 box 4084 -720 4284 -520
+use cut_M1M2_2x1 
+transform 1 0 788 0 1 234
+box 788 234 972 302
+use cut_M1M2_2x1 
+transform 1 0 356 0 1 1906
+box 356 1906 540 1974
 use cut_M1M2_2x1 
 transform 1 0 356 0 1 850
 box 356 850 540 918

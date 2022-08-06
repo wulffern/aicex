@@ -94,7 +94,7 @@ lab=VDD_1V8}
 N -340 40 -340 130 {
 lab=AVSS}
 N 550 -160 580 -160 {
-lab=NC1}
+lab=CKUP}
 N 80 -140 80 -100 {
 lab=AVSS}
 N 80 -100 110 -100 {
@@ -103,6 +103,18 @@ N 110 -100 110 130 {
 lab=AVSS}
 N 50 -160 80 -160 {
 lab=VDD_1V8}
+N 580 -300 620 -300 {
+lab=CKUP}
+N 580 -300 580 -160 {
+lab=CKUP}
+N 660 -260 660 130 {
+lab=AVSS}
+N 660 -390 660 -340 {
+lab=VDD_1V8}
+N 660 -400 660 -390 {
+lab=VDD_1V8}
+N 700 -300 730 -300 {
+lab=NC1}
 C {devices/lab_pin.sym} 150 -10 2 0 {name=l5 sig_type=std_logic lab=N[7:0]
 
 }
@@ -138,12 +150,18 @@ C {SUN_TR_SKY130NM/SUNTR_IVX1_CV.sym} 700 -160 0 0 {name=xa4
 
 }
 C {SUN_PLL_SKY130NM/SUN_PLL_LSCORE.sym} 580 -150 0 0 {name=xa3}
-C {SUN_TR_SKY130NM/SUNTR_TAPCELLB_CV.sym} 240 -330 0 0 {name=xa5}
+C {SUN_TR_SKY130NM/SUNTR_TAPCELLB_CV.sym} 240 -330 0 0 {name=xa6
+}
 C {devices/lab_pin.sym} 390 -140 0 0 {name=l4 sig_type=std_logic lab=N[1]
 }
 C {SUN_TRB_SKY130NM/SUNTRB_IVX1_CV.sym} 0 -10 0 0 {name=xb2[0:7]}
-C {devices/lab_pin.sym} 570 -160 1 0 {name=l8 sig_type=std_logic lab=NC1
+C {devices/lab_pin.sym} 730 -300 1 0 {name=l8 sig_type=std_logic lab=NC1
 }
 C {SUN_TRB_SKY130NM/SUNTRB_NDX1_CV.sym} -400 10 0 0 {name=xb1}
 C {SUN_TRB_SKY130NM/SUNTRB_TAPCELLBAVSS_CV.sym} 100 -160 0 0 {name=xb3}
 C {cborder/border_s.sym} 550 220 0 0 {user="Carsten Wulff" company="Carsten Wulff Software"}
+C {SUN_TR_SKY130NM/SUNTR_IVX1_CV.sym} 620 -300 0 0 {name=xa5
+
+}
+C {devices/lab_pin.sym} 580 -250 0 0 {name=l10 sig_type=std_logic lab=CKDWN
+}

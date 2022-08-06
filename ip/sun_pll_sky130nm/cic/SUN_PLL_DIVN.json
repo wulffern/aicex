@@ -1,0 +1,49 @@
+{
+    "cells" : [
+        {
+            "name" : "SUN_PLL_DIVN",
+            "class" : "cIcCore::LayoutCell",
+            "boundaryIgnoreRouting" : 0,
+            "composite" : 1,
+            "alternateGroup" : 1,
+            "noPowerRoute" : 1,
+            "beforeRoute" :{
+                "addDirectedRoutes" : [
+                    ["M3","N","xa:XA8:MN0:G--|-xa:D"],
+                    ["M3","N","xb:XA8:MN0:G-|--xb:D"],
+                    ["M3","N","xc:XA8:MN0:G--|-xc:D"],
+                    ["M3","N","xd:XA8:MN0:G-|--xd:D"],
+                    ["M3","N","xe:XA8:MN0:G--|-xe:D"],
+                    ["M3","N","xf:XA8:MN0:G-|--xf:D"],
+                    ["M3","N","xg:XA8:MN0:G--|-xg:D"]
+
+                ],
+
+                "addConnectivityRoutes" : [
+                    ["M3","D[531]","-|--","track2,offsethighend","",""],
+                    ["M3","D[420]","-|--","track25,offsethigh,offsethighend","",""]
+
+                ],
+                "addRouteConnections" : [
+                  ["PWRUP","X","bottom","M4"]
+                ],
+
+                "addPowerConnections" : [
+                  ["AVDD","X","bottom"],
+				  ["AVSS","X","bottom"]
+              ]
+
+            },
+            "afterPlace"  : [
+                {"addRouteRings" :[
+                  ["M1","PWRUP_1V8","b",1,2]
+                ]},
+                {"addPowerRings" :[
+                  ["M1","AVSS","b"],
+                  ["M1","AVDD","b"]
+                ]}
+
+            ]
+        }
+    ]
+}

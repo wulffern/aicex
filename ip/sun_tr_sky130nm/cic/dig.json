@@ -25,6 +25,10 @@
 
         { "name": "TAPCELLB_CV",
           "class" : "Layout::LayoutDigitalCell",
+          "meta" : {
+              "symbol" : "cic_wbulk/tap"
+          },
+
           "boundaryIgnoreRouting" : 1,
           "beforeRoute" : {
               "addDirectedRoutes" : [ ["M1","AVSS","MN1:B->MN1:G"],
@@ -49,7 +53,7 @@
           "meta" : {
               "symbol" : "cic/tieh"
           },
-          "afterRoute"  : {
+         "afterRoute"  : {
               "addPortOnRects" : [  ["Y","M1", "MP0:D"] ]
           }
         },
@@ -195,6 +199,26 @@
         //-----------------------------------------------------------------------------
         // Flip-flop
         //-----------------------------------------------------------------------------
+        { "name" : "DFTSPCX1_CV",
+          "class" : "Layout::LayoutDigitalCell",
+          "meta" : {
+              "symbol" : "cic/dfq"
+          },
+          "beforeRoute" : {
+              "addDirectedRoutes" : [
+                  ["PO","A","MN:G-MP:G"],
+                  ["M1","N1","MN1:G--|-MN0:D","offsethighend"],
+                  ["M1","N1","MN0:D-|--MP0:D","track1"]
+
+              ],
+              "addConnectivityRoutes" : [
+
+                  ["M1","N(2|3)","||",""],
+                  ["M1","Q","-|--",""]
+                  //["M1","N","-|--",""]
+              ]
+          }
+        },
         { "name": "IVTRIX1_CV",
           "class" : "Layout::LayoutDigitalCell",
           "setYoffsetHalf" :  "" ,

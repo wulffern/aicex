@@ -32,9 +32,9 @@
 *----------------------------------------------------------------
 
 #ifdef Lay
-
+.include ../../../work/lpe/SUN_PLL_ROSC_lpe.spi
 #else
-.include ../SUN_PLL_ROSC.spice
+.include ../../../design/SUN_PLL_SKY130NM.spice
 #endif
 
 
@@ -43,7 +43,7 @@
 * Options
 *----------------------------------------------------------------
 #ifdef Debug
-.option reltol=1e-3 srcsteps=1 ramptime=10n noopiter keepopinfo gmin=1e-12
+.option reltol=1e-4 srcsteps=1 ramptime=10n noopiter keepopinfo gmin=1e-12
 #else
 .option reltol=1e-5 srcsteps=1 ramptime=10n noopiter keepopinfo gmin=1e-15
 #endif
@@ -60,7 +60,7 @@
 * Sources
 *----------------------------------------------------------------
 VSS  AVSS 0 dc 0
-VDD  VDD_1V8 AVSS dc {AVDD}
+VDD  VDD_1V8 AVSS pwl 0 0 10n {AVDD}
 VROSC VDD_ROSC AVSS dc {AVDD}
 VPWR PWRUP_1V8 AVSS dc {AVDD}
 
@@ -68,19 +68,22 @@ VPWR PWRUP_1V8 AVSS dc {AVDD}
 * DUT
 *----------------------------------------------------------------
 
+XDUT PWRUP_1V8 VDD_ROSC AVSS VDD_1V8 CK SUN_PLL_ROSC
+
 *----------------------------------------------------------------
 * Measures
 *----------------------------------------------------------------
-.measure tran tclk trig v(CK) val='AVDD/2' rise=1 targ v(CK) val='AVDD/2' rise=1
+
+
 
 *----------------------------------------------------------------
 * NGSPICE control
 *----------------------------------------------------------------
 
 #ifdef Debug
-.probe v(CK) v(CKUP)
+.probe v(CK) v(xdut.N_1) v(xdut.CKUP) v(xdut.CKDWN) v(xdut .*)
 #else
-.probe v(SARN) v(SARP) v(RO) v(SAR_IP) v(SAR_IN) V(DONE) v(CK_SAMPLE)
+.probe v(CK) v(VDD_ROSC)
 #endif
 
 
@@ -91,7 +94,7 @@ set color1=black
 unset askquit
 
 #ifdef Debug
-tran 1n 100n
+tran 10p 50n 1p
 
 hardcopy {cicfname}.ps allv
 *quit
@@ -99,8 +102,21 @@ hardcopy {cicfname}.ps allv
 *nbpt=64 => 8u
 *tran 1n 8.5u
 *npbt=128 => 16u
-tran 1n 16.5u
-write
+
+let start_v = 1.2
+let stop_v = 1.7
+let delta_v = 0.1
+let v_act = start_v
+* loop
+while v_act le stop_v
+alter VROSC v_act
+tran 1p 40n
+meas tran vrosc avg v(VDD_ROSC)
+meas tran tpd trig v(CK) val='0.8' rise=10 targ v(CK) val='0.8' rise=11
+let v_act = v_act + delta_v
+end
+
+
 quit
 #endif
 

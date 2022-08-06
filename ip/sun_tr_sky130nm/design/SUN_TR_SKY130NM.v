@@ -378,6 +378,23 @@ SUNTR_IVX1_CV XA2 (YN,Y,AVDD,AVSS);
 endmodule
 
 //-------------------------------------------------------------
+// SUNTR_DFTSPCX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module SUNTR_DFTSPCX1_CV(D,CK,Q,AVDD,AVSS);
+input logic D;
+input logic CK;
+input logic Q;
+input logic AVDD;
+input logic AVSS;
+SUNTR_NCHDL MN0 (N1,D,AVSS,AVSS);
+SUNTR_NCHDL MN2 (N2,CK,Q,AVSS);
+SUNTR_NCHDL MN1 (AVSS,N1,N2,AVSS);
+SUNTR_PCHDL MP1 (N3,D,AVDD,AVDD);
+SUNTR_PCHDL MP0 (N1,CK,N3,AVDD);
+SUNTR_PCHDL MP2 (Q,N1,AVDD,AVDD);
+endmodule
+
+//-------------------------------------------------------------
 // SUNTR_IVTRIX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
 //-------------------------------------------------------------
 module SUNTR_IVTRIX1_CV(A,C,CN,Y,AVDD,AVSS);

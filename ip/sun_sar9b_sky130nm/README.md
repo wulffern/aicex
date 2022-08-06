@@ -84,7 +84,7 @@ make test
 | Technology                            |      | SKY130NM |       |      |
 | AVDD                                  | 1.7  | 1.8     | 1.9   | V    |
 | Temperature                           | -40  | 27      | 125   | C    |
-| Sampling frequency 25% DTC CK_SMAMPLE |      |         | 8     | MHz  |
+| Sampling frequency 25% DTC CK_SAMPLE |      |         | 8     | MHz  |
 | Average current AVDD                  |      | 68      |       | uA   |
 | Average current VREF                  |      | 34      |       | uA   |
 | Power consumption                     |      | 183     |       | uW   |

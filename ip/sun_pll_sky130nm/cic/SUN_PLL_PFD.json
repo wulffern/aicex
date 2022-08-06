@@ -1,0 +1,22 @@
+{
+    "cells" : [
+        {
+            "name" : "SUN_PLL_PFD",
+            "class" : "cIcCore::LayoutCell",
+            "beforeRoute" :{
+                "addDirectedRoutes" : [
+                ],
+
+                "addConnectivityRoutes" : [
+                    ["M1","CP_UP_N","-|--","","",""],
+                    ["M2","CP_DOWN_N","-|--","","",""],
+                    ["M2","CFB","--|-","onTopL,offsetlowend","",""]
+
+                ]
+            },
+            "afterRoute"  : {
+
+            }
+        }
+    ]
+}
