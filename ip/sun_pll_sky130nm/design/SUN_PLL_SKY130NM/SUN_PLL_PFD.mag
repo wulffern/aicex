@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1659815255
+timestamp 1660085871
 << checkpaint >>
 rect 0 0 2520 3872
 << locali >>
@@ -9,6 +9,8 @@ rect 432 1554 600 1614
 rect 600 762 864 822
 rect 432 1906 600 1966
 rect 600 762 660 1966
+rect 864 1642 1032 1702
+rect 1032 1642 1092 1702
 rect 324 2962 540 3022
 rect 324 850 540 910
 rect 756 1642 972 1702
@@ -29,22 +31,22 @@ rect 1548 0 1748 3872
 rect 756 0 956 3872
 rect 1548 0 1748 3872
 rect 756 0 956 3872
-use SUNTR_TAPCELLB_CV xa0
+use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_TAPCELLB_CV xa0
 transform 1 0 0 0 1 0
 box 0 0 2520 352
-use SUNTR_DFTSPCX1_CV xa1
+use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_DFTSPCX1_CV xa1
 transform 1 0 0 0 1 352
 box 0 352 2520 1408
-use SUNTR_IVX1_CV xa2
+use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_IVX1_CV xa2
 transform 1 0 0 0 1 1408
 box 0 1408 2520 1760
-use SUNTR_NRX1_CV xa3
+use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_NRX1_CV xa3
 transform 1 0 0 0 1 1760
 box 0 1760 2520 2464
-use SUNTR_DFTSPCX1_CV xa5
+use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_DFTSPCX1_CV xa5
 transform 1 0 0 0 1 2464
 box 0 2464 2520 3520
-use SUNTR_IVX1_CV xa6
+use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_IVX1_CV xa6
 transform 1 0 0 0 1 3520
 box 0 3520 2520 3872
 use cut_M1M2_2x1 

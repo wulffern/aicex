@@ -94,7 +94,7 @@ lab=VDD_1V8}
 N -340 40 -340 130 {
 lab=AVSS}
 N 550 -160 580 -160 {
-lab=CKUP}
+lab=CKDWN}
 N 80 -140 80 -100 {
 lab=AVSS}
 N 80 -100 110 -100 {
@@ -104,9 +104,9 @@ lab=AVSS}
 N 50 -160 80 -160 {
 lab=VDD_1V8}
 N 580 -300 620 -300 {
-lab=CKUP}
+lab=CKDWN}
 N 580 -300 580 -160 {
-lab=CKUP}
+lab=CKDWN}
 N 660 -260 660 130 {
 lab=AVSS}
 N 660 -390 660 -340 {

@@ -1,7 +1,7 @@
 v {xschem version=3.0.0 file_version=1.2 }
 K {type=subcircuit
-format="@name @pinlist @symname"
-template="name=x1"
+format="@name @pinlist @symname xoffset=@xoffset yoffset=@yoffset angle=@angle M=@M"
+template="name=x1 xoffset=0 yoffset=0 angle=0 M=1"
 } 
 A 4 70 -10 5 0 360 {}
 A 4 39 -3 27 15.0684881594922 72.8104154438463 {}

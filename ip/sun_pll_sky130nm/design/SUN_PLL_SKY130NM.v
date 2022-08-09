@@ -79,3 +79,109 @@ SUNTR_DFRNQNX1_CV xe (N4,D4,PWRUP_1V8,D3,N4,AVDD,AVSS);
 SUNTR_DFRNQNX1_CV xf (N5,D5,PWRUP_1V8,D4,N5,AVDD,AVSS);
 SUNTR_DFRNQNX1_CV xg (N6,CK,PWRUP_1V8,D5,N6,AVDD,AVSS);
 endmodule
+
+//-------------------------------------------------------------
+// SUN_PLL_BUF <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module SUN_PLL_BUF(AVDD,VBN,AVSS,VI,VO,VFB);
+input logic AVSS;
+input logic AVDD;
+input logic VBN;
+input logic VI;
+input logic VO;
+input logic VFB;
+SUNTR_NCHDLCM xa1 (VS,VBN,AVSS,AVSS);
+SUNTR_NCHDLA xa2 (VDP,VFB,VS,AVSS);
+SUNTR_NCHDLA xa4 (VGP,VI,VS,AVSS);
+SUNTR_PCHDLA xc1 (VGP,VDP,AVDD,AVDD);
+SUNTR_PCHDLA xc2 (VDP,VDP,AVDD,AVDD);
+SUNTR_PCHDLA xc3_0 (VO,VGP,AVDD,AVDD);
+SUNTR_PCHDLA xc3_1 (VO,VGP,AVDD,AVDD);
+SUNTR_PCHDLA xc3_2 (VO,VGP,AVDD,AVDD);
+SUNTR_PCHDLA xc3_3 (VO,VGP,AVDD,AVDD);
+SUNTR_PCHDLA xc3_4 (VO,VGP,AVDD,AVDD);
+SUNTR_PCHDLA xc3_5 (VO,VGP,AVDD,AVDD);
+SUNSAR_CAP_BSSW_CV xd20 (VO,AVSS);
+SUNSAR_CAP_BSSW_CV xd30 (VO,AVSS);
+SUNSAR_CAP_BSSW_CV xd31 (VO,AVSS);
+SUNSAR_CAP_BSSW_CV xd32 (VO,AVSS);
+SUNSAR_CAP_BSSW_CV xd33 (VO,AVSS);
+SUNSAR_CAP_BSSW_CV xd34 (VO,AVSS);
+SUNSAR_CAP_BSSW_CV xd35 (VO,AVSS);
+SUNSAR_CAP_BSSW_CV xd36 (VO,AVSS);
+SUNSAR_CAP_BSSW_CV xd37 (VO,AVSS);
+SUNSAR_CAP_BSSW_CV xd38 (VO,AVSS);
+endmodule
+
+//-------------------------------------------------------------
+// SUN_PLL_CP <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module SUN_PLL_CP(AVDD,CP_UP_N,CP_DOWN,VBN,AVSS,LPF);
+input logic AVSS;
+input logic AVDD;
+input logic CP_UP_N;
+input logic CP_DOWN;
+input logic VBN;
+input logic LPF;
+SUNTR_NCHDLCM xa10 (VBP,VBN,AVSS,AVSS);
+SUNTR_NCHDLCM xa20 (VNS,VBN,AVSS,AVSS);
+SUNTR_NCHDL xa30 (LPF,CP_DOWN,VNS,AVSS);
+SUNTR_PCHDLCM xb10 (VBP,VBP,AVDD,AVDD);
+SUNTR_PCHDLCM xb20 (VPS,VBP,AVDD,AVDD);
+SUNTR_PCHDL xb30 (LPF,CP_UP_N,VPS,AVDD);
+endmodule
+
+//-------------------------------------------------------------
+// SUN_PLL_BIAS <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module SUN_PLL_BIAS(IBPSR_1U,AVDD,PWRUP_1V8,AVSS);
+input logic AVSS;
+input logic AVDD;
+input logic IBPSR_1U;
+input logic PWRUP_1V8;
+SUNTR_TAPCELLB_CV xa00 (AVDD,AVSS);
+SUNTR_IVX1_CV xa10 (PWRUP_1V8,PWRUP_1V8_N,AVDD,AVSS);
+SUNTR_NCHDL xa20 (IBPSR_1U,PWRUP_1V8_N,AVSS,AVSS);
+SUNTR_NCHDLCM xa30 (IBPSR_1U,IBPSR_1U,AVSS,AVSS);
+endmodule
+
+//-------------------------------------------------------------
+// SUN_PLL_LPF <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module SUN_PLL_LPF(VLPF,AVSS);
+input logic AVSS;
+input logic VLPF;
+SUNTR_RPPO_12k xa30 (VN1,VLPF,AVSS);
+SUNSAR_CAP_BSSW_CV xb10 (VLPF,AVSS);
+SUNSAR_CAP_BSSW_CV xb30 (VLPF,AVSS);
+SUNSAR_CAP_BSSW_CV xb31 (VLPF,AVSS);
+SUNSAR_CAP_BSSW_CV xb40 (VN1,AVSS);
+SUNSAR_CAP_BSSW_CV xb41 (VN1,AVSS);
+SUNSAR_CAP_BSSW_CV xb42 (VN1,AVSS);
+SUNSAR_CAP_BSSW_CV xb43 (VN1,AVSS);
+SUNSAR_CAP_BSSW_CV xb44 (VN1,AVSS);
+SUNSAR_CAP_BSSW_CV xb45 (VN1,AVSS);
+SUNSAR_CAP_BSSW_CV xb46 (VN1,AVSS);
+SUNSAR_CAP_BSSW_CV xb47 (VN1,AVSS);
+SUNSAR_CAP_BSSW_CV xb48 (VN1,AVSS);
+SUNSAR_CAP_BSSW_CV xb49 (VN1,AVSS);
+endmodule
+
+//-------------------------------------------------------------
+// SUN_PLL <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module SUN_PLL(AVDD,AVSS,PWRUP_1V8,CK_REF,CK,IBSPR_1U);
+input logic AVDD;
+input logic AVSS;
+input logic PWRUP_1V8;
+input logic CK_REF;
+input logic CK;
+input logic IBSPR_1U;
+SUN_PLL_LPF xa1 (net2,AVSS);
+SUN_PLL_BUF xb1 (AVDD,VDD_ROSC_N,net2,VDD_ROSC_N,IBSPR_1U,AVSS);
+SUN_PLL_DIVN xh1 (AVDD,net1,CK,PWRUP_1V8,AVSS);
+SUN_PLL_ROSC xh2 (AVDD,CK,VDD_ROSC_N,PWRUP_1V8,AVSS);
+SUN_PLL_PFD xj1 (AVDD,CP_UP_N,CK_REF,CP_DOWN,net1,AVSS);
+SUN_PLL_CP xk1 (AVDD,CP_UP_N,net2,CP_DOWN,IBSPR_1U,AVSS);
+SUN_PLL_BIAS xl2 (IBSPR_1U,AVDD,PWRUP_1V8,AVSS);
+endmodule

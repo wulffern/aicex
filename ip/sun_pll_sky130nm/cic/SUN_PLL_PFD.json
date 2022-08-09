@@ -8,7 +8,8 @@
                 ],
 
                 "addConnectivityRoutes" : [
-                    ["M1","CP_UP_N","-|--","","",""],
+                    ["M1","CP_DUP_N","-|--","","",""],
+                    ["M1","CP_UP","-|--","","",""],
                     ["M2","CP_DOWN_N","-|--","","",""],
                     ["M2","CFB","--|-","onTopL,offsetlowend","",""]
 

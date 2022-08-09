@@ -52,6 +52,7 @@ SUB=BULKN
 BUILD=../design/
 PDKPATH=${PDK_ROOT}/sky130A
 
+CICEXCLUDE?=""
 CIC=${HOME}/pro/cic/ciccreator/bin/cic
 CICPY = python3 ${HOME}/pro/cicpy/cicpy/cic.py
 CICVIEWS =  --spice --verilog --xschem --magic
@@ -59,7 +60,7 @@ CICVIEWS =  --spice --verilog --xschem --magic
 
 ip:
 	cd ${BUILD};${CIC} --nogds  --I ../cic ../cic/ip.json  ../cic/sky130.tech ${LIB} ${CICOPT}
-	cd ${BUILD}; ${CICPY}  transpile ${LIB}.cic ../cic/sky130.tech ${LIB}  ${CICVIEWS} --smash "(P|N)CHIOA" --exclude "${CICEXCLUDE}"
+	cd ${BUILD}; ${CICPY}  transpile ${LIB}.cic ../cic/sky130.tech ${LIB}  ${CICVIEWS} --smash "(P|N)CHIOA" --exclude ${CICEXCLUDE}
 
 gds:
 	@echo "load ${NCELL}.mag\ncalma write gds/${PRCELL}.gds \nquit" > gds/${PRCELL}.tcl
@@ -77,7 +78,6 @@ cdlh:
 lvs:
 	@netgen -batch lvs "cdl/${PRCELL}.spi ${PRCELL}"  "${BUILD}/${LIB}.spi ${PRCELL}" ${PDKPATH}/libs.tech/netgen/sky130A_setup.tcl lvs/${PRCELL}_lvs.log > lvs/${PRCELL}_netgen_lvs.log
 	@tail -n 1 lvs/${PRCELL}_lvs.log|perl -ne "use Term::ANSIColor;print(sprintf(\"%-40s\t[ \",${PRCELL}));if(m/match uniquely/ig){print(color('green').'LVS OK  '.color('reset'));}else{print(color('red').'LVS FAIL'.color('reset'));};print(\" ]\n\");"
-
 
 #- Run DRC
 drc:

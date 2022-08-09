@@ -1,0 +1,44 @@
+{
+    "cells" : [
+        {
+            "name" : "SUN_PLL_BIAS",
+            "class" : "cIcCore::LayoutCell",
+            "boundaryIgnoreRouting" : 0,
+            "composite" : 1,
+            "alternateGroup" : 1,
+            "noPowerRoute" : 1,
+            "afterPlace"  : [
+                {"addRouteRings" :[
+                    ["M3","AVSS","b",4,2],
+                    ["M3","AVDD","b",4,2]
+
+                ]},
+                {"addPowerRings" :[
+
+                ]}
+
+            ],
+            "beforeRoute" :{
+                "addDirectedRoutes" : [
+                    ["M2","AVSS","xa:S-|xa1:AVSS","noendcut"],
+                    ["M1","AVSS","xa:B||xa1:AVSS","routeWidth=wide_width"]
+                ],
+
+                "addConnectivityRoutes" : [
+                    ["M1","PWRUP_1V8_N","-|--","","",""],
+                    ["M1","IBPSR_1U","--|-","onTopB,offsethigh","",""]
+
+
+                ],
+                 "addRouteConnections" : [
+				    ["AVSS","xa1","bottom","M4","nostartcut,onTopT,routeWidth=wide_width"],
+                    ["AVDD","xa1","bottom","M4","nostartcut,onTopT,routeWidth=wide_width"]
+                ]
+            },
+
+            "afterRoute"  : {
+
+            }
+        }
+    ]
+}

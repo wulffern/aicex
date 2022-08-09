@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1659815255
+timestamp 1660085871
 << checkpaint >>
 rect 0 -720 5148 3872
 << locali >>
@@ -86,43 +86,43 @@ rect 4348 498 4424 3478
 use SUN_PLL_LSCORE xa3
 transform 1 0 0 0 1 0
 box 0 0 2520 1408
-use SUNTR_IVX1_CV xa4
+use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_IVX1_CV xa4
 transform 1 0 0 0 1 1408
 box 0 1408 2520 1760
-use SUNTR_IVX1_CV xa5
+use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_IVX1_CV xa5
 transform 1 0 0 0 1 1760
 box 0 1760 2520 2112
-use SUNTR_TAPCELLB_CV xa6
+use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_TAPCELLB_CV xa6
 transform 1 0 0 0 1 2112
 box 0 2112 2520 2464
-use SUNTRB_NDX1_CV xb1
+use ../../sun_trb_sky130nm/design/SUN_TRB_SKY130NM/SUNTRB_NDX1_CV xb1
 transform -1 0 5040 0 1 0
 box 5040 0 7560 704
-use SUNTRB_IVX1_CV xb2_0
+use ../../sun_trb_sky130nm/design/SUN_TRB_SKY130NM/SUNTRB_IVX1_CV xb2_0
 transform -1 0 5040 0 1 704
 box 5040 704 7560 1056
-use SUNTRB_IVX1_CV xb2_1
+use ../../sun_trb_sky130nm/design/SUN_TRB_SKY130NM/SUNTRB_IVX1_CV xb2_1
 transform -1 0 5040 0 1 1056
 box 5040 1056 7560 1408
-use SUNTRB_IVX1_CV xb2_2
+use ../../sun_trb_sky130nm/design/SUN_TRB_SKY130NM/SUNTRB_IVX1_CV xb2_2
 transform -1 0 5040 0 1 1408
 box 5040 1408 7560 1760
-use SUNTRB_IVX1_CV xb2_3
+use ../../sun_trb_sky130nm/design/SUN_TRB_SKY130NM/SUNTRB_IVX1_CV xb2_3
 transform -1 0 5040 0 1 1760
 box 5040 1760 7560 2112
-use SUNTRB_IVX1_CV xb2_4
+use ../../sun_trb_sky130nm/design/SUN_TRB_SKY130NM/SUNTRB_IVX1_CV xb2_4
 transform -1 0 5040 0 1 2112
 box 5040 2112 7560 2464
-use SUNTRB_IVX1_CV xb2_5
+use ../../sun_trb_sky130nm/design/SUN_TRB_SKY130NM/SUNTRB_IVX1_CV xb2_5
 transform -1 0 5040 0 1 2464
 box 5040 2464 7560 2816
-use SUNTRB_IVX1_CV xb2_6
+use ../../sun_trb_sky130nm/design/SUN_TRB_SKY130NM/SUNTRB_IVX1_CV xb2_6
 transform -1 0 5040 0 1 2816
 box 5040 2816 7560 3168
-use SUNTRB_IVX1_CV xb2_7
+use ../../sun_trb_sky130nm/design/SUN_TRB_SKY130NM/SUNTRB_IVX1_CV xb2_7
 transform -1 0 5040 0 1 3168
 box 5040 3168 7560 3520
-use SUNTRB_TAPCELLBAVSS_CV xb3
+use ../../sun_trb_sky130nm/design/SUN_TRB_SKY130NM/SUNTRB_TAPCELLBAVSS_CV xb3
 transform -1 0 5040 0 1 3520
 box 5040 3520 7560 3872
 use cut_M1M4_2x2 

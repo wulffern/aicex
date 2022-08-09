@@ -8,7 +8,7 @@
         "NTAPC"  : { "alias" : "ntapc", "number" : 33, "datatype" : -1,  "material" : "cut",       "previous" : "PDIFF",  "next" : "M1", "color" : "yellow"},
         "PCO"  : { "alias" : "pcontact", "number" : 33, "datatype" : -1,  "material" : "cut",       "previous" : "PO",  "next" : "M1", "color" : "yellow"},
 
-        "OD"  : { "alias" : "","number" : 22,  "datatype" : -1,  "material" : "diffusion", "previous" : "",  "next" : "CO", "pin" : "OD_pin", "color" : "green" },
+        "OD"  : { "alias" : "","number" : 22,  "datatype" : -1,  "material" : "diffusion", "previous" : "",  "next" : "PTAPC", "pin" : "OD_pin", "color" : "green" },
         "PDIFF"  : { "alias" : "pdiff","number" : 22,  "datatype" : -1,  "material" : "diffusion", "previous" : "",  "next" : "CO", "pin" : "OD_pin", "color" : "green" },
         "PTAP"  : { "alias" : "ptap","number" : 22,  "datatype" : -1,  "material" : "diffusion", "previous" : "",  "next" : "CO", "pin" : "OD_pin", "color" : "green" },
         "NTAP"  : { "alias" : "ntap","number" : 22,  "datatype" : -1,  "material" : "diffusion", "previous" : "",  "next" : "CO", "pin" : "OD_pin", "color" : "green" },
@@ -16,8 +16,15 @@
         "NDIFF"  : { "alias" : "ndiff","number" : 22,  "datatype" : -1,  "material" : "diffusion", "previous" : "",  "next" : "CO", "pin" : "OD_pin", "color" : "green" },
         "NDIFFB"  : { "alias" : "ndiff","number" : 22,  "datatype" : -1,  "material" : "diffusion", "previous" : "",  "next" : "CO", "pin" : "OD_pin", "color" : "green" },
 
+        "DMYPO"  : { "alias" : "poly","number" : 30,  "datatype" : -1,  "material" : "poly",      "previous" : "",  "next" : "CO", "pin" : "PO_pin" , "color" : "red"},
         "PO"  : { "alias" : "poly","number" : 30,  "datatype" : -1,  "material" : "poly",      "previous" : "",  "next" : "CO", "pin" : "PO_pin" , "color" : "red"},
+        "OP"  : { "alias" : "","number" : 30,  "datatype" : -1,  "material" : "poly",      "previous" : "",  "next" : "CO", "pin" : "PO_pin" , "color" : "yellow"},
         "POB"  : { "alias" : "poly","number" : 30,  "datatype" : -1,  "material" : "implant",      "previous" : "",  "next" : "CO", "pin" : "PO_pin" , "color" : "red"},
+
+        "POXR"  : { "alias" : "xpolyres","number" : 30,  "datatype" : -1,  "material" : "poly",      "previous" : "",  "next" : "CO", "pin" : "PO_pin" , "color" : "red"},
+        "CPOXR"  : { "alias" : "xpolycontact","number" : 30,  "datatype" : -1,  "material" : "poly",      "previous" : "",  "next" : "CO", "pin" : "PO_pin" , "color" : "red"},
+        "POR"  : { "alias" : "ppolyres","number" : 30,  "datatype" : -1,  "material" : "poly",      "previous" : "",  "next" : "CO", "pin" : "PO_pin" , "color" : "red"},
+        "CPOR"  : { "alias" : "polycontact","number" : 30,  "datatype" : -1,  "material" : "poly",      "previous" : "",  "next" : "CO", "pin" : "PO_pin" , "color" : "red"},
 
         "PO_pin" : { "alias" : "","number" : 30, "datatype" : -1 },
         "M1" : { "alias" : "locali",
@@ -78,6 +85,14 @@
         "spiceunit":1,
         "techlib" : "sky130A",
         "devices" : {
+             "rppo" : { "name" : "sky130_fd_pr__res_high_po",
+                         "devicetype" : "XR",
+                         "ports" : ["P","M","B"],
+                         "propertymap" : {
+                             "l" : { "name" : "length", "str" : ""},
+                             "w" : { "name" : "width", "str" : ""}
+                         }
+                       },
             "mresM1" : { "name" : "sky130_fd_pr__res_generic_m1",
                          "devicetype" : "R",
                          "ports" : ["PLUS","MINUS"],
@@ -122,11 +137,13 @@
 
 
         "CO"   : { "space" : 10, "width" : 8 , "height" : 8},
+        "PTAPC"   : { "space" : 0, "width" : 20 , "height" : 20},
         "VIA1" : { "space" : 12, "width" : 14 , "height" : 14},
         "VIA2" : { "space" : 12, "width" : 14 , "height" : 14},
         "VIA3" : { "space" : 12, "width" : 16 , "height" : 16},
         "VIA4" : { "space" : 12, "width" : 16 , "height" : 16},
         "VIA5" : { "space" : 12, "width" : 16 , "height" : 16},
+
 
         "PO"   : { "space" : 30, "width" : 9 , "mingatelength" : 9, "enclosure" : 2},
         "POB"   : { "space" : 30, "width" : 9 , "mingatelength" : 9, "enclosure" : 2},
@@ -137,7 +154,7 @@
         "NDIFFC"   : { "width" : 10},
         "PDIFFC"   : { "width" : 10},
 
-        "M1"   : { "space" : 15, "ana_width": 15, "cap_width" : 15, "width" : 15, "minwidth":15,  "VIA1enclosure" : 1.5, "VIA1encOpposite" : 3, "capspace" : 16},
+        "M1"   : { "space" : 15, "ana_width": 15, "cap_width" : 15, "width" : 15, "minwidth":15,  "VIA1enclosure" : 1.5, "VIA1encOpposite" : 3, "capspace" : 16, "PTAPCenclosure": 0},
         "M2"   : { "space" : 15, "width" : 15, "minwidth":15,  "VIA1encOpposite" : 3, "VIA1enclosure" : 1.5, "VIA2encOpposite" : 3, "VIA2enclosure" : 1.5, "capspace" : 16},
         "M3"   : { "space" : 16, "width" : 19, "minwidth":15 , "VIA2enclosure" : 1.5, "VIA2encOpposite" : 3, "VIA3enclosure" : 1.5,"VIA3encOpposite" : 3, "capspace" : 16},
         "M4"   : { "space" : 18, "width" : 19, "minwidth":15 , "cap_width" : 20, "VIA3enclosure" : 1.5, "VIA3encOpposite" : 3,"VIA4enclosure" : 1.5, "VIA4encOpposite" : 3, "capspace" : 16},

@@ -1,0 +1,13 @@
+** sch_path:
+*+ /Users/wulff/pro/aicex/ip/sun_pll_sky130nm/work/../design/SUN_PLL_SKY130NM/SUN_PLL_BIAS.sch
+.subckt SUN_PLL_BIAS IBPSR_1U AVDD PWRUP_1V8 AVSS
+*.ipin IBPSR_1U
+*.ipin AVDD
+*.ipin PWRUP_1V8
+*.ipin AVSS
+xa0 AVDD AVSS SUNTR_TAPCELLB_CV xoffset=0 yoffset=0 angle=0 M=1
+xa1 PWRUP_1V8 PWRUP_1V8_N AVDD AVSS SUNTR_IVX1_CV xoffset=0 yoffset=0 angle=0 M=1
+xa2 IBPSR_1U PWRUP_1V8_N AVSS AVSS SUNTR_NCHDL xoffset=0 yoffset=2 angle=0 M=1
+xa3 IBPSR_1U IBPSR_1U AVSS AVSS SUNTR_NCHDLCM xoffset=0 yoffset=0 angle=0 M=1
+.ends
+.end

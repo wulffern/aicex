@@ -1,0 +1,28 @@
+v {xschem version=3.0.0 file_version=1.2 }
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname xoffset=@xoffset yoffset=@yoffset angle=@angle "
+template="name=x1 xoffset=0 yoffset=0 angle=0 "
+}
+V {}
+S {}
+E {}
+L 4 -130 -40 90 -40 {}
+L 4 -130 40 90 40 {}
+L 4 -130 -40 -130 40 {}
+L 4 90 -40 90 40 {}
+L 4 -40 -60 -40 -40 {}
+L 4 -100 -60 -100 -40 {}
+L 4 -80 40 -80 60 {}
+L 4 -100 40 -100 60 {}
+B 5 -42.5 -62.5 -37.5 -57.5 {name=IBPSR_1U dir=in }
+B 5 -102.5 -62.5 -97.5 -57.5 {name=AVDD dir=in }
+B 5 -82.5 57.5 -77.5 62.5 {name=PWRUP_1V8 dir=in }
+B 5 -102.5 57.5 -97.5 62.5 {name=AVSS dir=in }
+T {@symname} -72 44 0 0 0.3 0.3 {}
+T {@name} 65 -52 0 0 0.2 0.2 {}
+T {IBPSR_1U} -36 -35 1 0 0.2 0.2 {}
+T {AVDD} -96 -35 1 0 0.2 0.2 {}
+T {PWRUP_1V8} -84 35 3 0 0.2 0.2 {}
+T {AVSS} -104 35 3 0 0.2 0.2 {}
+T {BIAS} -30 -30 0 0 1 1 {}

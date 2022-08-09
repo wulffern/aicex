@@ -1,0 +1,11 @@
+** sch_path:
+*+ /Users/wulff/pro/aicex/ip/sun_pll_sky130nm/work/../design/SUN_PLL_SKY130NM/SUN_PLL_LPF.sch
+.subckt SUN_PLL_LPF VLPF AVSS
+*.ipin VLPF
+*.ipin AVSS
+xa3 VN1 VLPF AVSS SUNTR_RPPO_12k xoffset=0 yoffset=5 angle=0 M=1
+xb1 VLPF AVSS SUNSAR_CAP_BSSW_CV xoffset=10 yoffset=0 angle=0 M=1
+xb3 VLPF AVSS SUNSAR_CAP_BSSW_CV xoffset=0 yoffset=0 angle=0 M=2
+xb4 VN1 AVSS SUNSAR_CAP_BSSW_CV xoffset=0 yoffset=0 angle=0 M=10
+.ends
+.end

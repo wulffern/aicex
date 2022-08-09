@@ -1,8 +1,8 @@
 v {xschem version=3.0.0 file_version=1.2 }
 G {}
 K {type=subcircuit
-format="@name @pinlist @symname"
-template="name=x1"
+format="@name @pinlist @symname xoffset=@xoffset yoffset=@yoffset angle=@angle "
+template="name=x1 xoffset=0 yoffset=0 angle=0 "
 }
 V {}
 S {}
@@ -28,7 +28,7 @@ B 5 -112.5 77.5 -107.5 82.5 {name=AVSS dir=in }
 A 4 -25 -11.66666666666667 19.0029237516523 105.2551187030578 360 {}
 A 4 -30 -10 5 0 180 {}
 A 4 -20 -10 5 180 180 {}
-T {@symname} -82 -76 0 0 0.3 0.3 {}
+T {@symname} -72 64 0 0 0.3 0.3 {}
 T {@name} -20 -112 0 0 0.2 0.2 {}
 T {VDD_1V8} -106 -95 1 0 0.2 0.2 {}
 T {CK} 25 -14 0 1 0.2 0.2 {}

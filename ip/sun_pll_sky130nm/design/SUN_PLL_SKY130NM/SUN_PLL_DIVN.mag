@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1659815255
+timestamp 1660085871
 << checkpaint >>
 rect 0 -1644 17640 5314
 << locali >>
@@ -84,25 +84,25 @@ rect 14860 1554 14936 5150
 rect 15304 5074 15552 5150
 rect 15304 1554 15552 1630
 rect 15304 1554 15380 5150
-use SUNTR_DFRNQNX1_CV xa
+use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_DFRNQNX1_CV xa
 transform 1 0 0 0 1 0
 box 0 0 2520 5280
-use SUNTR_DFRNQNX1_CV xb
+use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_DFRNQNX1_CV xb
 transform -1 0 5040 0 1 0
 box 5040 0 7560 5280
-use SUNTR_DFRNQNX1_CV xc
+use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_DFRNQNX1_CV xc
 transform 1 0 5040 0 1 0
 box 5040 0 7560 5280
-use SUNTR_DFRNQNX1_CV xd
+use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_DFRNQNX1_CV xd
 transform -1 0 10080 0 1 0
 box 10080 0 12600 5280
-use SUNTR_DFRNQNX1_CV xe
+use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_DFRNQNX1_CV xe
 transform 1 0 10080 0 1 0
 box 10080 0 12600 5280
-use SUNTR_DFRNQNX1_CV xf
+use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_DFRNQNX1_CV xf
 transform -1 0 15120 0 1 0
 box 15120 0 17640 5280
-use SUNTR_DFRNQNX1_CV xg
+use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_DFRNQNX1_CV xg
 transform 1 0 15120 0 1 0
 box 15120 0 17640 5280
 use cut_M1M4_2x1 

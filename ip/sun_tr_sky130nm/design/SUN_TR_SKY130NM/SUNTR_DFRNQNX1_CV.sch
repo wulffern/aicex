@@ -1,8 +1,9 @@
 v {xschem version=3.0.0 file_version=1.2 }
-K {type=subcircuit
-format="@name @pinlist @symname"
-template="name=x1"
-}
+G {}
+K {}
+V {}
+S {}
+E {}
 C {devices/iopin.sym} 0 0 0 0{name=p0 lab=D}
 C {devices/iopin.sym} 0 20 0 0{name=p1 lab=CK}
 C {devices/iopin.sym} 0 40 0 0{name=p2 lab=RN}

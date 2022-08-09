@@ -96,6 +96,38 @@ XM1 D CG CS B SUNTR_NCHDLA
 .ENDS
 
 *-------------------------------------------------------------
+* SUNTR_RES12 <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTR_RES12 N P B
+XRR1_0 N INT_0 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
+XRR1_1 INT_0 P B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTR_RES25 <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTR_RES25 N P B
+XRR1_0 N INT_0 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
+XRR1_1 INT_0 INT_1 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
+XRR1_2 INT_1 INT_2 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
+XRR1_3 INT_2 P B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTR_RPPO_12k <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTR_RPPO_12k P N B
+XA1 N P B SUNTR_RES12
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTR_RPPO_25k <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTR_RPPO_25k P N B
+XA1 N P B SUNTR_RES25
+.ENDS
+
+*-------------------------------------------------------------
 * SUNTR_TAPCELLB_CV <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
 .SUBCKT SUNTR_TAPCELLB_CV AVDD AVSS

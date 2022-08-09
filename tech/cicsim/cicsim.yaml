@@ -64,3 +64,23 @@ corner:
     .lib "../../../tech/ngspice/bjt.spi" Bf
   Bs: |
     .lib "../../../tech/ngspice/bjt.spi" Bs
+
+#- All corners
+  Att: |
+    .lib  "../../../models/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" tt
+  Asf: |
+    .lib  "../../../models/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" sf
+  Afs: |
+    .lib  "../../../models/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" fs
+  Aff: |
+    .lib  "../../../models/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" ff
+  Ass: |
+    .lib  "../../../models/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" ss
+  All: |
+    .lib  "../../../models/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" ll
+  Ahh: |
+    .lib  "../../../models/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" hh
+  Ahl: |
+    .lib  "../../../models/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" hl
+  Alh: |
+    .lib  "../../../models/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" lh

@@ -14,6 +14,64 @@ XMM1 D G S B sky130_fd_pr__nfet_01v8  l=0.18  nf=1  w=1.08
 .ENDS
 
 *-------------------------------------------------------------
+* SUNTR_NCHDLCM <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTR_NCHDLCM D G S B
+XM0 N0 G S B SUNTR_NCHDL
+XM1 N1 G N0 B SUNTR_NCHDL
+XM2 N2 G N1 B SUNTR_NCHDL
+XM3 N3 G N2 B SUNTR_NCHDL
+XM4 N4 G N3 B SUNTR_NCHDL
+XM5 N5 G N4 B SUNTR_NCHDL
+XM6 N6 G N5 B SUNTR_NCHDL
+XM7 N7 G N6 B SUNTR_NCHDL
+XM8 D G N7 B SUNTR_NCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTR_PCHDLCM <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTR_PCHDLCM D G S B
+XM0 N0 G S B SUNTR_PCHDL
+XM7 D G N0 B SUNTR_PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTR_NCHDLA <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTR_NCHDLA D G S B
+XM0 D G S B SUNTR_NCHDL
+XM1 S G D B SUNTR_NCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTR_PCHDLA <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTR_PCHDLA D G S B
+XM0 D G S B SUNTR_PCHDL
+XM1 S G D B SUNTR_PCHDL
+XM2 D G S B SUNTR_PCHDL
+XM3 S G D B SUNTR_PCHDL
+XM4 D G S B SUNTR_PCHDL
+XM5 S G D B SUNTR_PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTR_RES12 <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTR_RES12 N P B
+XRR1_0 N INT_0 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
+XRR1_1 INT_0 P B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTR_RPPO_12k <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTR_RPPO_12k P N B
+XA1 N P B SUNTR_RES12
+.ENDS
+
+*-------------------------------------------------------------
 * SUNTR_TAPCELLB_CV <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
 .SUBCKT SUNTR_TAPCELLB_CV AVDD AVSS
@@ -139,6 +197,13 @@ XMP1 NC1 NC1 NC1 AVDD SUNTRB_PCHDL
 .ENDS
 
 *-------------------------------------------------------------
+* SUNSAR_CAP_BSSW_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNSAR_CAP_BSSW_CV A B
+C1 A B 5f
+.ENDS
+
+*-------------------------------------------------------------
 * SUN_PLL_LSCORE <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
 .SUBCKT SUN_PLL_LSCORE A AN YN Y AVDD AVSS
@@ -195,4 +260,86 @@ xd N3 D3 PWRUP_1V8 D2 N3 AVDD AVSS SUNTR_DFRNQNX1_CV
 xe N4 D4 PWRUP_1V8 D3 N4 AVDD AVSS SUNTR_DFRNQNX1_CV
 xf N5 D5 PWRUP_1V8 D4 N5 AVDD AVSS SUNTR_DFRNQNX1_CV
 xg N6 CK PWRUP_1V8 D5 N6 AVDD AVSS SUNTR_DFRNQNX1_CV
+.ENDS
+
+*-------------------------------------------------------------
+* SUN_PLL_BUF <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUN_PLL_BUF AVDD VBN AVSS VI VO VFB
+xa1 VS VBN AVSS AVSS SUNTR_NCHDLCM
+xa2 VDP VFB VS AVSS SUNTR_NCHDLA
+xa4 VGP VI VS AVSS SUNTR_NCHDLA
+xc1 VGP VDP AVDD AVDD SUNTR_PCHDLA
+xc2 VDP VDP AVDD AVDD SUNTR_PCHDLA
+xc3_0 VO VGP AVDD AVDD SUNTR_PCHDLA
+xc3_1 VO VGP AVDD AVDD SUNTR_PCHDLA
+xc3_2 VO VGP AVDD AVDD SUNTR_PCHDLA
+xc3_3 VO VGP AVDD AVDD SUNTR_PCHDLA
+xc3_4 VO VGP AVDD AVDD SUNTR_PCHDLA
+xc3_5 VO VGP AVDD AVDD SUNTR_PCHDLA
+xd20 VO AVSS SUNSAR_CAP_BSSW_CV
+xd30 VO AVSS SUNSAR_CAP_BSSW_CV
+xd31 VO AVSS SUNSAR_CAP_BSSW_CV
+xd32 VO AVSS SUNSAR_CAP_BSSW_CV
+xd33 VO AVSS SUNSAR_CAP_BSSW_CV
+xd34 VO AVSS SUNSAR_CAP_BSSW_CV
+xd35 VO AVSS SUNSAR_CAP_BSSW_CV
+xd36 VO AVSS SUNSAR_CAP_BSSW_CV
+xd37 VO AVSS SUNSAR_CAP_BSSW_CV
+xd38 VO AVSS SUNSAR_CAP_BSSW_CV
+.ENDS
+
+*-------------------------------------------------------------
+* SUN_PLL_CP <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUN_PLL_CP AVDD CP_UP_N CP_DOWN VBN AVSS LPF
+xa10 VBP VBN AVSS AVSS SUNTR_NCHDLCM
+xa20 VNS VBN AVSS AVSS SUNTR_NCHDLCM
+xa30 LPF CP_DOWN VNS AVSS SUNTR_NCHDL
+xb10 VBP VBP AVDD AVDD SUNTR_PCHDLCM
+xb20 VPS VBP AVDD AVDD SUNTR_PCHDLCM
+xb30 LPF CP_UP_N VPS AVDD SUNTR_PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SUN_PLL_BIAS <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUN_PLL_BIAS IBPSR_1U AVDD PWRUP_1V8 AVSS
+xa00 AVDD AVSS SUNTR_TAPCELLB_CV
+xa10 PWRUP_1V8 PWRUP_1V8_N AVDD AVSS SUNTR_IVX1_CV
+xa20 IBPSR_1U PWRUP_1V8_N AVSS AVSS SUNTR_NCHDL
+xa30 IBPSR_1U IBPSR_1U AVSS AVSS SUNTR_NCHDLCM
+.ENDS
+
+*-------------------------------------------------------------
+* SUN_PLL_LPF <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUN_PLL_LPF VLPF AVSS
+xa30 VN1 VLPF AVSS SUNTR_RPPO_12k
+xb10 VLPF AVSS SUNSAR_CAP_BSSW_CV
+xb30 VLPF AVSS SUNSAR_CAP_BSSW_CV
+xb31 VLPF AVSS SUNSAR_CAP_BSSW_CV
+xb40 VN1 AVSS SUNSAR_CAP_BSSW_CV
+xb41 VN1 AVSS SUNSAR_CAP_BSSW_CV
+xb42 VN1 AVSS SUNSAR_CAP_BSSW_CV
+xb43 VN1 AVSS SUNSAR_CAP_BSSW_CV
+xb44 VN1 AVSS SUNSAR_CAP_BSSW_CV
+xb45 VN1 AVSS SUNSAR_CAP_BSSW_CV
+xb46 VN1 AVSS SUNSAR_CAP_BSSW_CV
+xb47 VN1 AVSS SUNSAR_CAP_BSSW_CV
+xb48 VN1 AVSS SUNSAR_CAP_BSSW_CV
+xb49 VN1 AVSS SUNSAR_CAP_BSSW_CV
+.ENDS
+
+*-------------------------------------------------------------
+* SUN_PLL <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUN_PLL AVDD AVSS PWRUP_1V8 CK_REF CK IBSPR_1U
+xa1 net2 AVSS SUN_PLL_LPF
+xb1 AVDD VDD_ROSC_N net2 VDD_ROSC_N IBSPR_1U AVSS SUN_PLL_BUF
+xh1 AVDD net1 CK PWRUP_1V8 AVSS SUN_PLL_DIVN
+xh2 AVDD CK VDD_ROSC_N PWRUP_1V8 AVSS SUN_PLL_ROSC
+xj1 AVDD CP_UP_N CK_REF CP_DOWN net1 AVSS SUN_PLL_PFD
+xk1 AVDD CP_UP_N net2 CP_DOWN IBSPR_1U AVSS SUN_PLL_CP
+xl2 IBSPR_1U AVDD PWRUP_1V8 AVSS SUN_PLL_BIAS
 .ENDS

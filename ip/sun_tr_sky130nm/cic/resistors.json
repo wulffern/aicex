@@ -1,0 +1,131 @@
+{
+    "cells" : [
+        { "name" : "RES12",
+          "class" : "Gds::GdsPatternHighResistor",
+          "yoffset": -0.5,
+          "xoffset": -0.5,
+          "polyWidthAdjust" : 0,
+
+          "afterNew" :{
+              "horizontalGridMultiplier" : 1.5,
+              "verticalGridMultiplier" : 2.5
+          },
+          "fillCoordinatesFromStrings" : [
+              [   "POR",
+                  "-------",
+                  "-------",
+                  "--X-X--",
+                  "--X-X--",
+                  "--X-X--",
+                  "--X-X--",
+                  "--X-X--",
+                  "--X-X--",
+                  "--X-X--",
+                  "--X-X--",
+                  "--X-X--",
+                  "--X-X--",
+                  "--X-X--",
+                  "--X-X--"
+              ],
+              [   "DMYPO",
+                  "-------",
+                  "-------",
+                  "X-----X",
+                  "X-----X",
+                  "X-----X",
+                  "X-----X",
+                  "X-----X",
+                  "X-----X",
+                  "X-----X",
+                  "X-----X",
+                  "X-----X",
+                  "X-----X",
+                  "X-----X",
+                  "X-----X"
+              ],
+              [   "CPOXR",
+                  "-------",
+                  "-------",
+                  "--X-X--",
+                  "--X-X--",
+                  "-------",
+                  "-------",
+                  "-------",
+                  "-------",
+                  "-------",
+                  "-------",
+                  "-------",
+                  "-------",
+                  "--X-X--",
+                  "--X-X--"
+              ],
+              [ "M1",
+                "NXX-XXP",
+                "--X-X--",
+                "--X-X--",
+                "--X-X--",
+                "-------",
+                "-------",
+                "-------",
+                "-------",
+                "-------",
+                "-------",
+                "-------",
+                "-------",
+                "--XXX--",
+                "--XXX--"
+              ]
+
+          ],
+          "beforePlace" :{
+              "addEnclosuresByRectangle" : [
+                  ["PO",[0,1,"width",8],["OP"]],
+                  ["PO",["self"],["PWT"]]
+              ]
+          }
+        },
+        {
+            "name" : "RES25",
+            "inherit" : "RES12",
+            "afterNew" : {
+            "copyColumns" :[
+                  { "count" : 1, "offset" : 1,"length" : 4}
+              ]
+                }
+        },
+        { "name" : "RPPO_12k",
+          "class" : "Layout::LayoutDigitalCell",
+          "meta" : {
+              "symbol" : "cic/res"
+          },
+          "spice": [".subckt RPPO_12k P N B",
+                    "XA1 N P B RES12",
+                    ".ends"
+                   ],
+          "beforeRoute" : {
+              "addGuard" : [ "B", 6 , ["PTAP"] ]
+          },
+          "afterRoute"  : {
+              "addPortOnRects" : [  ["P","M1"] , ["N", "M1"]]
+          }
+
+        },
+        { "name" : "RPPO_25k",
+          "class" : "Layout::LayoutDigitalCell",
+          "meta" : {
+              "symbol" : "cic/res"
+          },
+          "spice": [".subckt RPPO_25k P N B",
+                    "XA1 N P B RES25",
+                    ".ends"
+                   ],
+          "beforeRoute" : {
+              "addGuard" : [ "B", 6 , ["PTAP"] ]
+          },
+          "afterRoute"  : {
+              "addPortOnRects" : [  ["P","M1"] , ["N", "M1"]]
+          }
+
+        }
+    ]
+}

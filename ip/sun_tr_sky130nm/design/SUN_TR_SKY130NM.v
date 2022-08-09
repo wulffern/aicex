@@ -141,6 +141,42 @@ SUNTR_NCHDLA M1 (D,CG,CS,B);
 endmodule
 
 //-------------------------------------------------------------
+// SUNTR_RES12 <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module SUNTR_RES12(N,P,B);
+input logic N;
+input logic P;
+endmodule
+
+//-------------------------------------------------------------
+// SUNTR_RES25 <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module SUNTR_RES25(N,P,B);
+input logic N;
+input logic P;
+endmodule
+
+//-------------------------------------------------------------
+// SUNTR_RPPO_12k <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module SUNTR_RPPO_12k(P,N,B);
+input logic B;
+input logic P;
+input logic N;
+SUNTR_RES12 XA1 (N,P,B);
+endmodule
+
+//-------------------------------------------------------------
+// SUNTR_RPPO_25k <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module SUNTR_RPPO_25k(P,N,B);
+input logic B;
+input logic P;
+input logic N;
+SUNTR_RES25 XA1 (N,P,B);
+endmodule
+
+//-------------------------------------------------------------
 // SUNTR_TAPCELLB_CV <class 'cicpy.core.layoutcell.LayoutCell'>
 //-------------------------------------------------------------
 module SUNTR_TAPCELLB_CV(AVDD,AVSS);
