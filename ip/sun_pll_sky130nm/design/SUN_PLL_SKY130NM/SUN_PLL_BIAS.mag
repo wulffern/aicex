@@ -1,39 +1,39 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1660117866
+timestamp 1660135282
 << checkpaint >>
-rect -768 -768 3288 3760
+rect -768 -768 3288 3584
 << locali >>
-rect 2664 -384 2904 3376
+rect 2664 -384 2904 3200
 rect -384 -384 2904 -144
-rect -384 3136 2904 3376
-rect -384 -384 -144 3376
-rect 2664 -384 2904 3376
-rect 3048 -768 3288 3760
+rect -384 2960 2904 3200
+rect -384 -384 -144 3200
+rect 2664 -384 2904 3200
+rect 3048 -768 3288 3584
 rect -768 -768 3288 -528
-rect -768 3520 3288 3760
-rect -768 -768 -528 3760
-rect 3048 -768 3288 3760
-rect 432 1026 600 1086
+rect -768 3344 3288 3584
+rect -768 -768 -528 3584
+rect 3048 -768 3288 3584
+rect 432 850 600 910
 rect 600 586 864 646
-rect 600 586 660 1086
-rect 636 1174 816 1234
-rect 636 2874 864 2934
-rect 432 1378 636 1438
-rect 636 1174 696 2934
-rect 756 1114 864 1174
-rect -108 352 108 1452
-rect 756 1114 972 1174
+rect 600 586 660 910
+rect 636 998 816 1058
+rect 636 2698 864 2758
+rect 432 1202 636 1262
+rect 636 998 696 2758
+rect 756 938 864 998
+rect -108 352 108 1276
+rect 756 938 972 998
 rect 324 498 540 558
 << m3 >>
 rect 748 -384 964 704
 rect 1540 -768 1756 704
 << m1 >>
-rect 864 938 1032 998
-rect 864 1290 1032 1350
+rect 864 762 1032 822
+rect 864 1114 1032 1174
 rect 856 352 1032 412
-rect 1032 352 1092 1358
+rect 1032 352 1092 1182
 use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_TAPCELLB_CV xa00
 transform 1 0 0 0 1 0
 box 0 0 2520 352
@@ -41,11 +41,11 @@ use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_IVX1_CV xa10
 transform 1 0 0 0 1 352
 box 0 352 2520 704
 use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_NCHDL xa20
-transform 1 0 0 0 1 880
-box 0 880 1260 1232
+transform 1 0 0 0 1 704
+box 0 704 1260 1056
 use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_NCHDLCM xa30
-transform 1 0 0 0 1 1232
-box 0 1232 1260 2992
+transform 1 0 0 0 1 1056
+box 0 1056 1260 2816
 use cut_M1M4_2x1 
 transform 1 0 756 0 1 -384
 box 756 -384 956 -308
@@ -53,20 +53,20 @@ use cut_M1M4_2x1
 transform 1 0 1548 0 1 -768
 box 1548 -768 1748 -692
 use cut_M1M2_2x1 
-transform 1 0 788 0 1 938
-box 788 938 972 1006
+transform 1 0 788 0 1 762
+box 788 762 972 830
 use cut_M1M2_2x1 
-transform 1 0 788 0 1 1290
-box 788 1290 972 1358
+transform 1 0 788 0 1 1114
+box 788 1114 972 1182
 use cut_M1M4_1x2 
 transform 1 0 -38 0 1 352
 box -38 352 38 552
 << labels >>
-flabel locali s 2664 -384 2904 3376 0 FreeSans 400 0 0 0 AVSS
+flabel locali s 2664 -384 2904 3200 0 FreeSans 400 0 0 0 AVSS
 port 4 nsew
-flabel locali s 3048 -768 3288 3760 0 FreeSans 400 0 0 0 AVDD
+flabel locali s 3048 -768 3288 3584 0 FreeSans 400 0 0 0 AVDD
 port 2 nsew
-flabel locali s 756 1114 972 1174 0 FreeSans 400 0 0 0 IBPSR_1U
+flabel locali s 756 938 972 998 0 FreeSans 400 0 0 0 IBPSR_1U
 port 1 nsew
 flabel locali s 324 498 540 558 0 FreeSans 400 0 0 0 PWRUP_1V8
 port 3 nsew

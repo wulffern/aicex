@@ -1,6 +1,346 @@
 {
     "cells" : [
+
         {
+            "name" : "SUN_PLL_BIAS",
+            "class" : "cIcCore::LayoutCell",
+            "boundaryIgnoreRouting" : 0,
+            "meta" : {
+                "noSchematic" : true
+            },
+            "composite" : 1,
+            "alternateGroup" : 1,
+            "noPowerRoute" : 1,
+            "afterPlace"  : [
+                {"addRouteRings" :[
+                    ["M1","AVSS","tbrl",4,2],
+                    ["M1","AVDD","tbrl",4,2]
+
+                ]},
+                {"addPowerRings" :[
+
+                ]}
+
+            ],
+            "beforeRoute" :{
+                "addDirectedRoutes" : [
+                    ["M2","AVSS","xa:S-|xa1:AVSS","noendcut"],
+                    ["M1","AVSS","xa:B||xa1:AVSS","routeWidth=wide_width"]
+                ],
+
+                "addConnectivityRoutes" : [
+                    ["M1","PWRUP_1V8_N","-|--","","",""],
+                    ["M1","IBPSR_1U","--|-","onTopB,offsethigh","",""]
+
+
+                ],
+                 "addRouteConnections" : [
+				    ["AVSS","xa1","bottom","M4","nostartcut,onTopT,routeWidth=wide_width"],
+                    ["AVDD","xa1","bottom","M4","nostartcut,onTopT,routeWidth=wide_width"]
+                ]
+            },
+
+            "afterRoute"  : {
+
+            }
+        },
+        {
+            "name" : "SUN_PLL_BUF",
+            "class" : "cIcCore::LayoutCell",
+            "boundaryIgnoreRouting" : 0,
+            "meta" : {
+                "noSchematic" : true
+            },
+            "composite" : 1,
+            "alternateGroup" : 1,
+            "noPowerRoute" : 1,
+            "beforeRoute" :{
+                "addDirectedRoutes" : [
+                    ["M1","AVSS","xc:S-|xc:S"],
+                    ["M4","AVSS","xd:B-|xd:B","track2"]
+
+                ],
+
+                "addConnectivityRoutes" : [
+                    ["M1","^VS","-|","","",""],
+                    ["M2","^VGP","-|--","onTopT","",""],
+                    ["M3","^VDP","-|--","onTopB","",""],
+                    ["M4","^VO","-|--","","",""]
+                    //["M1","AVSS","-|--","","","xc"]
+
+
+                ],
+                "addRouteConnections" : [
+                    ["AVDD","xc1","bottom","M1","routeWidth=wide_width"],
+				    ["AVSS","xa","bottom","M1","routeWidth=wide_width"],
+                    ["AVSS","xd2","bottom","M4","routeWidth=wide_width"]
+                ],
+
+                "addPowerConnections" : [
+              ]
+
+            },
+            "afterPlace"  : [
+                {"addRouteRings" :[
+                    ["M1","AVSS","tbrl",4,2],
+                    ["M1","AVDD","tbrl",4,2]
+
+                ]},
+                {"addPowerRings" :[
+
+                ]}
+
+            ]
+        },
+                {
+            "name" : "SUN_PLL_CP",
+            "class" : "cIcCore::LayoutCell",
+            "boundaryIgnoreRouting" : 0,
+            "meta" : {
+                "noSchematic" : true
+            },
+            "composite" : 1,
+            "alternateGroup" : 1,
+            "noPowerRoute" : 1,
+            "beforeRoute" :{
+                "addDirectedRoutes" : [
+                    ["M1","AVSS","xa1:S-|xa2:S"],
+                    ["M1","AVDD","xb1:S-|xb2:S"]
+                    //["M4","AVSS","xd:B-|xd:B","track2"]
+
+                ],
+
+                "addConnectivityRoutes" : [
+                    //["M1","^VS","-|","","",""],
+                    //["M1","AVSS","-|--","","","xa"],
+                    ["M1","VPS","-|--","","",""],
+                    ["M1","VBN","||","","",""],
+                    ["M2","VBP","-|--","onTopB","",""],
+                    ["M3","LPF","-|--","onTopR","",""],
+                    ["M1","VNS","-|--","","",""]
+
+
+                ],
+                "addRouteConnections" : [
+                    ["AVDD","xb1","bottom","M2","routeWidth=wide_width"],
+                    ["AVSS","xa1","bottom","M2","routeWidth=wide_width"]
+
+                ],
+
+                "addPowerConnections" : [
+              ]
+
+            },
+            "afterPlace"  : [
+                {"addRouteRings" :[
+                    ["M1","AVSS","tbrl",4,2],
+                    ["M1","AVDD","tbrl",4,2]
+
+                ]},
+                {"addPowerRings" :[
+
+                ]}
+
+            ]
+        },
+
+        {
+            "name" : "SUN_PLL_DIVN",
+            "class" : "cIcCore::LayoutCell",
+            "boundaryIgnoreRouting" : 0,
+            "meta" : {
+                "noSchematic" : true
+            },
+            "composite" : 1,
+            "alternateGroup" : 1,
+            "noPowerRoute" : 1,
+            "beforeRoute" :{
+                "addDirectedRoutes" : [
+                    ["M3","N","xa:XA8:MN0:G--|-xa:D"],
+                    ["M3","N","xb:XA8:MN0:G-|--xb:D"],
+                    ["M3","N","xc:XA8:MN0:G--|-xc:D"],
+                    ["M3","N","xd:XA8:MN0:G-|--xd:D"],
+                    ["M3","N","xe:XA8:MN0:G--|-xe:D"],
+                    ["M3","N","xf:XA8:MN0:G-|--xf:D"],
+                    ["M3","N","xg:XA8:MN0:G--|-xg:D"]
+
+                ],
+
+                "addConnectivityRoutes" : [
+                    ["M3","D[531]","-|--","track2,offsethighend","",""],
+                    ["M3","D[420]","-|--","track25,offsethigh,offsethighend","",""]
+
+                ],
+                "addRouteConnections" : [
+                  ["PWRUP","X","bottom","M4"]
+                ],
+
+                "addPowerConnections" : [
+                  ["AVDD","X","bottom"],
+				  ["AVSS","X","bottom"]
+              ]
+
+            },
+            "afterPlace"  : [
+                {"addRouteRings" :[
+                  ["M1","PWRUP_1V8","b",1,2]
+                ]},
+                {"addPowerRings" :[
+                  ["M1","AVSS","tbrl"],
+                  ["M1","AVDD","tbrl"]
+                ]}
+
+            ]
+        },
+        {
+            "name" : "SUN_PLL_LPF",
+            "class" : "cIcCore::LayoutCell",
+            "boundaryIgnoreRouting" : 0,
+            "meta" : {
+                "noSchematic" : true
+            },
+            "composite" : 1,
+            "alternateGroup" : 1,
+            "noPowerRoute" : 1,
+            "beforeRoute" :{
+                "addDirectedRoutes" : [
+                    //["M1","AVSS","xc:S-|xc:S"],
+                    //["M4","AVSS","xd:B-|xd:B","track2"]
+
+                ],
+
+                "addConnectivityRoutes" : [
+
+                    ["M2","VN1","-|--","","",""],
+                    ["M3","LPF","-|--","","",""],
+                    ["M4","AVSS","-|--","","","xb"]
+
+
+                ],
+                "addRouteConnections" : [
+                    ["AVSS","xb1","bottom","M4","routeWidth=wide_width"],
+                    ["AVSS","xa","bottom","M1","routeWidth=wide_width"]
+
+                ],
+
+                "addPowerConnections" : [
+              ]
+
+            },
+            "afterPlace"  : [
+                {"addRouteRings" :[
+                    ["M1","AVSS","tbrl",4,6]
+
+                ]},
+                {"addPowerRings" :[
+
+                ]}
+
+            ]
+        },
+
+        {
+            "name" : "SUN_PLL_LSCORE",
+            "class" : "cIcCore::LayoutCell",
+            "meta" : {
+                "noSchematic" : true
+            },
+            "beforeRoute" :{
+                "addDirectedRoutes" : [
+                    ["M1","DONE","xb1_1:D-|--xc1b:D"],
+                    ["M1","DONE","xb2_1:D-|--xc2b:D"]
+                ],
+
+                "addConnectivityRoutes" : [
+                    ["M1","^net","||","","",""],
+                    ["M1","^YN","-|--","","","SUNTR_PCH"],
+                    ["M1","^YN","-|--","","","SUNTR_NCH"],
+                    ["M1","^Y$","-|--","","","SUNTR_NCH"],
+                    ["M2","^Y$","-|--","","","SUNTR_PCH"],
+                    ["M1","^(AN|A)$","-|--","","",""]
+                ]
+            },
+            "afterRoute"  : {
+                "addPortOnRects" : [  ["YN","M1", "xb2_1:D"]]
+            }
+
+
+
+        },
+        {
+            "name" : "SUN_PLL_PFD",
+            "class" : "cIcCore::LayoutCell",
+            "meta" : {
+                "noSchematic" : true
+            },
+            "boundaryIgnoreRouting" : 0,
+            "composite" : 1,
+             "afterPlace"  : [
+                {"addRouteRings" :[
+                    ["M1","AVSS","tbrl",4,2],
+                    ["M1","AVDD","tbrl",4,2]
+
+                ]},
+                {"addPowerRings" :[
+
+                ]}
+
+            ],
+            "beforeRoute" :{
+                "addDirectedRoutes" : [
+                ],
+
+                "addConnectivityRoutes" : [
+                    ["M1","CP_DUP_N","-|--","","",""],
+                    ["M1","CP_UP","-|--","","",""],
+                    ["M2","CP_DOWN_N","-|--","","",""],
+                    ["M2","CFB","--|-","onTopL,offsetlowend","",""]
+
+                ],
+                "addRouteConnections" : [
+				    ["AVSS","xa1","bottom","M4","nostartcut,onTopT,routeWidth=wide_width"],
+                    ["AVDD","xa1","bottom","M4","nostartcut,onTopT,routeWidth=wide_width"]
+                ]
+            },
+            "afterRoute"  : {
+
+            }
+        },
+        {
+            "name" : "SUN_PLL_ROSC",
+            "class" : "cIcCore::LayoutCell",
+            "meta" : {
+                "noSchematic" : true
+            },
+            "boundaryIgnoreRouting" : 0,
+            "composite" : 1,
+            "noPowerRoute" : 1,
+            "alternateGroup" : 1,
+            "beforeRoute" :{
+                "addConnectivityRoutes" : [
+                    ["M1","^N_[^0]","-|--","offsethigh","","(IVX|NDX)"],
+                    ["M1","^NI","-|--","offsethigh","","(IVX|NDX)"],
+                    ["M1","^CKUP","--|-","onTopB,offsethigh","",""],
+                    ["M2","^CKDWN","--|-","onTopB,offsethigh","",""],
+                    ["M2","^N_2","--|-","","","xb2_5|SUN_PLL_LSCORE"],
+                    ["M3","^N_1","-|--","","","xb2_6|SUN_PLL_LSCORE"],
+                    ["M3","^N_0","-|--","","",""]
+                ],
+                "addRouteConnections" : [
+				    ["AVSS","xb1|xa3","bottom","M4","nostartcut,onTopT,routeWidth=wide_width"],
+                    ["AVDD","xa3","bottom","M4","nostartcut,onTopT,routeWidth=wide_width"]
+                ]
+            },
+            "afterPlace" : [
+                 {"addRouteRings" :[
+                    ["M1","AVSS","tbrl",4,2],
+                    ["M1","AVDD","tbrl",4,2]
+                ]}
+            ]
+
+        },
+        {
+
             "name" : "SUN_PLL",
             "class" : "cIcCore::LayoutCell",
             "boundaryIgnoreRouting" : 0,

@@ -4,14 +4,6 @@
 		"ignoreSetYoffsetHalf" : false,
         "prefix" : "",
         "topcells" :[
-            "CAP_LPF",
-            "SUN_PLL_ROSC",
-            "SUN_PLL_DIVN",
-            "SUN_PLL_PFD",
-            "SUN_PLL_BUF",
-            "SUN_PLL_CP",
-            "SUN_PLL_BIAS",
-            "SUN_PLL_LPF",
             "SUN_PLL"
 
 
@@ -23,15 +15,7 @@
         "../../sun_sar9b_sky130nm/design/SUN_SAR9B_SKY130NM.cic"
     ],
 	"include" : [
-        "SUN_PLL_LSCORE.json",
-        "SUN_PLL_ROSC.json",
-        "SUN_PLL_PFD.json",
-        "SUN_PLL_DIVN.json",
-        "SUN_PLL_BUF.json",
-        "SUN_PLL_CP.json",
-        "SUN_PLL_BIAS.json",
         "capacitor.json",
-        "SUN_PLL_LPF.json",
         "SUN_PLL.json"
 	],
 

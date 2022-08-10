@@ -1,64 +1,70 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1660117866
+timestamp 1660135282
 << checkpaint >>
-rect -768 -768 3288 4640
+rect -768 -768 3288 4992
 << m3 >>
-rect 756 -768 956 4640
+rect 756 -768 956 4992
 rect 748 -384 964 1408
-rect 1548 -768 1748 4640
+rect 1548 -768 1748 4992
 rect 1540 -768 1756 1408
-rect 1548 -768 1748 4640
-rect 756 -768 956 4640
+rect 1548 -768 1748 4992
+rect 756 -768 956 4992
 << locali >>
 rect -384 -384 2904 -144
-rect -384 4016 2904 4256
-rect -384 -384 -144 4256
-rect 2664 -384 2904 4256
+rect -384 4368 2904 4608
+rect -384 -384 -144 4608
+rect 2664 -384 2904 4608
 rect -768 -768 3288 -528
-rect -768 4400 3288 4640
-rect -768 -768 -528 4640
-rect 3048 -768 3288 4640
+rect -768 4752 3288 4992
+rect -768 -768 -528 4992
+rect 3048 -768 3288 4992
 rect 432 1554 600 1614
 rect 600 762 864 822
-rect 432 1906 600 1966
-rect 600 762 660 1966
-rect 864 1642 1032 1702
-rect 1032 1642 1092 1702
-rect 324 2962 540 3022
-rect 324 850 540 910
-rect 756 1642 972 1702
-rect 756 3754 972 3814
-<< m1 >>
 rect 432 2258 600 2318
-rect 600 2874 864 2934
-rect 432 3666 600 3726
-rect 600 2258 660 3734
+rect 600 762 660 2318
+rect 432 1906 600 1966
+rect 600 1642 864 1702
+rect 600 1642 660 1966
+rect 864 1994 1032 2054
+rect 1032 1994 1092 2054
+rect 756 1994 972 2054
+rect 324 850 540 910
+rect 756 4106 972 4166
+rect 324 3314 540 3374
+<< m1 >>
+rect 432 2610 600 2670
+rect 600 3226 864 3286
+rect 432 4018 600 4078
+rect 600 2610 660 4086
 rect 204 498 432 558
-rect 204 2110 816 2170
-rect 204 2550 384 2610
-rect 204 498 264 2678
-rect 756 2170 864 2230
-rect 324 2610 432 2670
-use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_TAPCELLB_CV xa0
+rect 204 2462 816 2522
+rect 204 2902 384 2962
+rect 204 498 264 3030
+rect 756 2522 864 2582
+rect 324 2962 432 3022
+use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_TAPCELLB_CV xa00
 transform 1 0 0 0 1 0
 box 0 0 2520 352
-use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_DFTSPCX1_CV xa1
+use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_DFTSPCX1_CV xa10
 transform 1 0 0 0 1 352
 box 0 352 2520 1408
-use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_IVX1_CV xa2
+use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_IVX1_CV xa20
 transform 1 0 0 0 1 1408
 box 0 1408 2520 1760
-use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_NRX1_CV xa3
+use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_IVX1_CV xa2a0
 transform 1 0 0 0 1 1760
-box 0 1760 2520 2464
-use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_DFTSPCX1_CV xa5
-transform 1 0 0 0 1 2464
-box 0 2464 2520 3520
-use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_IVX1_CV xa6
-transform 1 0 0 0 1 3520
-box 0 3520 2520 3872
+box 0 1760 2520 2112
+use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_NRX1_CV xa30
+transform 1 0 0 0 1 2112
+box 0 2112 2520 2816
+use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_DFTSPCX1_CV xa50
+transform 1 0 0 0 1 2816
+box 0 2816 2520 3872
+use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_IVX1_CV xa60
+transform 1 0 0 0 1 3872
+box 0 3872 2520 4224
 use cut_M1M4_2x1 
 transform 1 0 756 0 1 -384
 box 756 -384 956 -308
@@ -66,34 +72,34 @@ use cut_M1M4_2x1
 transform 1 0 1548 0 1 -768
 box 1548 -768 1748 -692
 use cut_M1M2_2x1 
-transform 1 0 324 0 1 2258
-box 324 2258 508 2326
+transform 1 0 324 0 1 2610
+box 324 2610 508 2678
 use cut_M1M2_2x1 
-transform 1 0 756 0 1 2874
-box 756 2874 940 2942
+transform 1 0 756 0 1 3226
+box 756 3226 940 3294
 use cut_M1M2_2x1 
-transform 1 0 324 0 1 3666
-box 324 3666 508 3734
+transform 1 0 324 0 1 4018
+box 324 4018 508 4086
 use cut_M1M2_2x1 
 transform 1 0 356 0 1 498
 box 356 498 540 566
 use cut_M1M2_2x1 
-transform 1 0 788 0 1 2170
-box 788 2170 972 2238
+transform 1 0 788 0 1 2522
+box 788 2522 972 2590
 use cut_M1M2_2x1 
-transform 1 0 356 0 1 2610
-box 356 2610 540 2678
+transform 1 0 356 0 1 2962
+box 356 2962 540 3030
 << labels >>
-flabel m3 s 756 -768 956 4640 0 FreeSans 400 0 0 0 AVSS
+flabel m3 s 756 -768 956 4992 0 FreeSans 400 0 0 0 AVSS
 port 6 nsew
-flabel m3 s 1548 -768 1748 4640 0 FreeSans 400 0 0 0 AVDD
-port 5 nsew
-flabel locali s 324 2962 540 3022 0 FreeSans 400 0 0 0 CK_FB
+flabel m3 s 1548 -768 1748 4992 0 FreeSans 400 0 0 0 AVDD
 port 1 nsew
-flabel locali s 324 850 540 910 0 FreeSans 400 0 0 0 CK_REF
+flabel locali s 756 1994 972 2054 0 FreeSans 400 0 0 0 CP_UP_N
 port 2 nsew
-flabel locali s 756 1642 972 1702 0 FreeSans 400 0 0 0 CP_UP
+flabel locali s 324 850 540 910 0 FreeSans 400 0 0 0 CK_REF
 port 3 nsew
-flabel locali s 756 3754 972 3814 0 FreeSans 400 0 0 0 CP_DOWN
+flabel locali s 756 4106 972 4166 0 FreeSans 400 0 0 0 CP_DOWN
 port 4 nsew
+flabel locali s 324 3314 540 3374 0 FreeSans 400 0 0 0 CK_FB
+port 5 nsew
 << end >>

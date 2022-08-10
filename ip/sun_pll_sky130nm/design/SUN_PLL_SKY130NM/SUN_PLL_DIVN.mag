@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1660117866
+timestamp 1660135282
 << checkpaint >>
 rect -1440 -1644 19080 6720
 << locali >>
@@ -17,8 +17,8 @@ rect -1440 -1644 19080 -1444
 rect -1440 6520 19080 6720
 rect -1440 -1644 -1240 6720
 rect 18880 -1644 19080 6720
-rect 15444 498 15660 558
 rect 756 5162 972 5222
+rect 15444 498 15660 558
 << m3 >>
 rect 394 -204 470 4078
 rect 4570 -204 4646 4078
@@ -90,25 +90,25 @@ rect 14860 1554 14936 5150
 rect 15304 5074 15552 5150
 rect 15304 1554 15552 1630
 rect 15304 1554 15380 5150
-use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_DFRNQNX1_CV xa
+use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_DFRNQNX1_CV xa0
 transform 1 0 0 0 1 0
 box 0 0 2520 5280
-use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_DFRNQNX1_CV xb
+use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_DFRNQNX1_CV xb0
 transform -1 0 5040 0 1 0
 box 5040 0 7560 5280
-use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_DFRNQNX1_CV xc
+use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_DFRNQNX1_CV xc0
 transform 1 0 5040 0 1 0
 box 5040 0 7560 5280
-use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_DFRNQNX1_CV xd
+use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_DFRNQNX1_CV xd0
 transform -1 0 10080 0 1 0
 box 10080 0 12600 5280
-use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_DFRNQNX1_CV xe
+use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_DFRNQNX1_CV xe0
 transform 1 0 10080 0 1 0
 box 10080 0 12600 5280
-use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_DFRNQNX1_CV xf
+use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_DFRNQNX1_CV xf0
 transform -1 0 15120 0 1 0
 box 15120 0 17640 5280
-use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_DFRNQNX1_CV xg
+use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_DFRNQNX1_CV xg0
 transform 1 0 15120 0 1 0
 box 15120 0 17640 5280
 use cut_M1M4_2x1 
@@ -275,13 +275,13 @@ transform 1 0 15460 0 1 1554
 box 15460 1554 15660 1630
 << labels >>
 flabel locali s 0 -204 17640 -144 0 FreeSans 400 0 0 0 PWRUP_1V8
-port 1 nsew
-flabel locali s 18160 -924 18360 6000 0 FreeSans 400 0 0 0 AVSS
 port 4 nsew
-flabel locali s 18880 -1644 19080 6720 0 FreeSans 400 0 0 0 AVDD
-port 3 nsew
-flabel locali s 15444 498 15660 558 0 FreeSans 400 0 0 0 CK
-port 2 nsew
-flabel locali s 756 5162 972 5222 0 FreeSans 400 0 0 0 CK_FB
+flabel locali s 18160 -924 18360 6000 0 FreeSans 400 0 0 0 AVSS
 port 5 nsew
+flabel locali s 18880 -1644 19080 6720 0 FreeSans 400 0 0 0 AVDD
+port 1 nsew
+flabel locali s 756 5162 972 5222 0 FreeSans 400 0 0 0 CK_FB
+port 2 nsew
+flabel locali s 15444 498 15660 558 0 FreeSans 400 0 0 0 CK
+port 3 nsew
 << end >>
