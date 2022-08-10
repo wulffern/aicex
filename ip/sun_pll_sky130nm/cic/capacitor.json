@@ -68,7 +68,7 @@
           "getRuleForHorizontalGrid" : ["M3","cap_width"],
           "getRuleForVerticalGrid" : ["M3","cap_width"],
           "meta" : {
-              "spice" : "C1 A B 200f",
+              "spice" : "C1 A B 78f",
               "symbol" : "cic/cap"
           },
           "afterNew" :{

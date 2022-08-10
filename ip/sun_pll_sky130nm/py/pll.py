@@ -33,21 +33,27 @@ s = 1j*2*np.pi*f
 Kvco = 2*np.pi*1.6e9
 
 #- Current divided by 2 pi
-Kpd = 100e-9/(2*np.pi)
+Kpd = 1e-6/(2*np.pi)
 
-R = 550e3
-C1 = 10e-12
-C2 = 1e-12
+R = 50e3
+C1 = 5e-12
+C2 = 0.3e-12
 
 Klp = 1/C1
 
 N = 128
 
+#- Fix PLL
+# Set Q=0.1
+# Choose w3db=0.1wpll
+
 wpll = np.sqrt(Kpd*Klp*Kvco/N)
 wz = 1/(R*C1)
 w3db = wpll**2/wz
+
 print(" wpll=%.2g"%wpll)
 print(" w3db=%.2g"%w3db)
+print(" w3db/wpll = %.2g" %(w3db/wpll))
 
 KlpHlp = 1/np.multiply((C1 + C2),s)* \
     (1 + np.multiply(s,(R*C1)))/(1 + np.multiply(s,R*(C1*C2)/(C1 + C2)))
@@ -57,8 +63,10 @@ Ls = np.divide(Kvco*Kpd*KlpHlp, N*s)
 Cs = np.divide(1,1 + Ls)
 
 #- Plot stuff
-plot(f,Ls,"Loop ")
-plot(f,Cs,"Closed Loop")
+doPlot = True
+if(doPlot):
+    plot(f,Ls,"Loop")
+    plot(f,Cs,"Closed Loop")
 
-plt.savefig("pll.pdf")
-plt.show()
+    plt.savefig("pll.pdf")
+    plt.show()

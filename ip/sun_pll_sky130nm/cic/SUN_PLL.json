@@ -71,8 +71,8 @@
 
                 ],
                 "addRouteConnections" : [
-                    ["AVDD","xc1","bottom","M1","routeWidth=wide_width"],
-				    ["AVSS","xa","bottom","M1","routeWidth=wide_width"],
+                    ["AVDD","xc1","bottom","M2","routeWidth=wide_width"],
+				    ["AVSS","xa","bottom","M2","routeWidth=wide_width"],
                     ["AVSS","xd2","bottom","M4","routeWidth=wide_width"]
                 ],
 
@@ -211,15 +211,16 @@
 
                 "addConnectivityRoutes" : [
 
-                    ["M2","VN1","-|--","","",""],
-                    ["M3","LPF","-|--","","",""],
+                    ["M2","VN1","-|--","onTopL","",""],
+                    ["M2","VN2","-|--","onTopL","",""],
+                    ["M3","LPF","-|--","onTopL","",""],
                     ["M4","AVSS","-|--","","","xb"]
 
 
                 ],
                 "addRouteConnections" : [
                     ["AVSS","xb1","bottom","M4","routeWidth=wide_width"],
-                    ["AVSS","xa","bottom","M1","routeWidth=wide_width"]
+                    ["AVSS","xa","left","M1","routeWidth=wide_width"]
 
                 ],
 
@@ -292,7 +293,7 @@
 
                 "addConnectivityRoutes" : [
                     ["M1","CP_DUP_N","-|--","","",""],
-                    ["M1","CP_UP","-|--","","",""],
+                    ["M2","CP_UP$","-|--","","",""],
                     ["M2","CP_DOWN_N","-|--","","",""],
                     ["M2","CFB","--|-","onTopL,offsetlowend","",""]
 

@@ -1,9 +1,9 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1660135282
+timestamp 1660163113
 << checkpaint >>
-rect 360 -592 37672 22976
+rect 360 -592 42016 29616
 << locali >>
 rect 14064 -592 14304 11504
 rect 13680 -208 13920 11120
@@ -15,8 +15,8 @@ use SUN_PLL_BUF xb1
 transform 1 0 360 0 1 176
 box 360 176 15072 12272
 use SUN_PLL_LPF xb2
-transform 1 0 360 0 1 14912
-box 360 14912 37312 22976
+transform 1 0 360 0 1 15792
+box 360 15792 37312 29616
 use SUN_PLL_DIVN xh1
 transform 1 0 17152 0 1 1056
 box 17152 1056 37672 9420
@@ -29,9 +29,9 @@ box 24088 9416 28144 15176
 use SUN_PLL_CP xk1
 transform 1 0 28864 0 1 9416
 box 28864 9416 32920 14824
-use SUN_PLL_BIAS xl2
-transform 1 0 33208 0 1 9416
-box 33208 9416 37264 13768
+use SUN_PLL_BIAS xm1
+transform 1 0 37960 0 1 0
+box 37960 0 42016 20192
 << labels >>
 flabel locali s 14064 -592 14304 11504 0 FreeSans 400 0 0 0 AVDD
 port 1 nsew
@@ -43,6 +43,6 @@ flabel locali s 24412 10266 24628 10326 0 FreeSans 400 0 0 0 CK_REF
 port 4 nsew
 flabel locali s 32596 1554 32812 1614 0 FreeSans 400 0 0 0 CK
 port 5 nsew
-flabel locali s 684 322 900 382 0 FreeSans 400 0 0 0 IBSPR_1U
+flabel locali s 684 322 900 382 0 FreeSans 400 0 0 0 IBPSR_1U
 port 6 nsew
 << end >>
