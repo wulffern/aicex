@@ -9,8 +9,8 @@
             "noPowerRoute" : 1,
             "afterPlace"  : [
                 {"addRouteRings" :[
-                    ["M3","AVSS","b",4,2],
-                    ["M3","AVDD","b",4,2]
+                    ["M1","AVSS","tbrl",4,2],
+                    ["M1","AVDD","tbrl",4,2]
 
                 ]},
                 {"addPowerRings" :[

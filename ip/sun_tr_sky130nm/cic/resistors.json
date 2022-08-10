@@ -95,6 +95,8 @@
         },
         { "name" : "RPPO_12k",
           "class" : "Layout::LayoutDigitalCell",
+          "boundaryIgnoreRouting" : 0,
+          "composite" : 1,
           "meta" : {
               "symbol" : "cic/res"
           },
@@ -112,6 +114,8 @@
         },
         { "name" : "RPPO_25k",
           "class" : "Layout::LayoutDigitalCell",
+          "boundaryIgnoreRouting" : 0,
+            "composite" : 1,
           "meta" : {
               "symbol" : "cic/res"
           },

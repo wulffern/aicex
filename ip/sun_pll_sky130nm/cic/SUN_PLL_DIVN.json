@@ -39,8 +39,8 @@
                   ["M1","PWRUP_1V8","b",1,2]
                 ]},
                 {"addPowerRings" :[
-                  ["M1","AVSS","b"],
-                  ["M1","AVDD","b"]
+                  ["M1","AVSS","tbrl"],
+                  ["M1","AVDD","tbrl"]
                 ]}
 
             ]

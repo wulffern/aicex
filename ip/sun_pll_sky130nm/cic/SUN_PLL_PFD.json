@@ -3,6 +3,19 @@
         {
             "name" : "SUN_PLL_PFD",
             "class" : "cIcCore::LayoutCell",
+            "boundaryIgnoreRouting" : 0,
+            "composite" : 1,
+             "afterPlace"  : [
+                {"addRouteRings" :[
+                    ["M1","AVSS","tbrl",4,2],
+                    ["M1","AVDD","tbrl",4,2]
+
+                ]},
+                {"addPowerRings" :[
+
+                ]}
+
+            ],
             "beforeRoute" :{
                 "addDirectedRoutes" : [
                 ],
@@ -13,6 +26,10 @@
                     ["M2","CP_DOWN_N","-|--","","",""],
                     ["M2","CFB","--|-","onTopL,offsetlowend","",""]
 
+                ],
+                "addRouteConnections" : [
+				    ["AVSS","xa1","bottom","M4","nostartcut,onTopT,routeWidth=wide_width"],
+                    ["AVDD","xa1","bottom","M4","nostartcut,onTopT,routeWidth=wide_width"]
                 ]
             },
             "afterRoute"  : {

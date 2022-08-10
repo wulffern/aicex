@@ -17,16 +17,17 @@
                     ["M3","^N_1","-|--","","","xb2_6|SUN_PLL_LSCORE"],
                     ["M3","^N_0","-|--","","",""]
                 ],
-                "addPowerConnections" : [
-                    ["AVSS","X","bottom"]
+                "addRouteConnections" : [
+				    ["AVSS","xb1|xa3","bottom","M4","nostartcut,onTopT,routeWidth=wide_width"],
+                    ["AVDD","xa3","bottom","M4","nostartcut,onTopT,routeWidth=wide_width"]
                 ]
-
             },
-            "afterPlace" : {
-                "addPowerRings" :[
-                    ["M1","AVSS","b"]
-                ]
-            }
+            "afterPlace" : [
+                 {"addRouteRings" :[
+                    ["M1","AVSS","tbrl",4,2],
+                    ["M1","AVDD","tbrl",4,2]
+                ]}
+            ]
 
         }
     ]

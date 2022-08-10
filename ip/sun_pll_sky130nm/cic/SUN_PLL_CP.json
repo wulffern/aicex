@@ -20,15 +20,15 @@
                     //["M1","AVSS","-|--","","","xa"],
                     ["M1","VPS","-|--","","",""],
                     ["M1","VBN","||","","",""],
-                    ["M2","VBP","-|--","","",""],
+                    ["M2","VBP","-|--","onTopB","",""],
                     ["M3","LPF","-|--","onTopR","",""],
                     ["M1","VNS","-|--","","",""]
 
 
                 ],
                 "addRouteConnections" : [
-                    ["AVDD","xb1","bottom","M1","routeWidth=wide_width"],
-                    ["AVSS","xa1","bottom","M1","routeWidth=wide_width"]
+                    ["AVDD","xb1","bottom","M2","routeWidth=wide_width"],
+                    ["AVSS","xa1","bottom","M2","routeWidth=wide_width"]
 
                 ],
 
@@ -38,8 +38,8 @@
             },
             "afterPlace"  : [
                 {"addRouteRings" :[
-                    ["M3","AVSS","b",4,2],
-                    ["M3","AVDD","b",4,2]
+                    ["M1","AVSS","tbrl",4,2],
+                    ["M1","AVDD","tbrl",4,2]
 
                 ]},
                 {"addPowerRings" :[

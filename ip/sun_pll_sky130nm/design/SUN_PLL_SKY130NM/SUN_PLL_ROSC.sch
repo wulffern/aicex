@@ -40,9 +40,9 @@ lab=N[2]}
 N 390 -140 430 -140 {
 lab=N[1]}
 N 370 -400 550 -400 {
-lab=VDD_1V8}
+lab=AVDD}
 N 210 -400 370 -400 {
-lab=VDD_1V8}
+lab=AVDD}
 N -360 -160 -360 -80 {
 lab=VDD_ROSC}
 N -520 -160 -360 -160 {
@@ -58,11 +58,11 @@ lab=AVSS}
 N 550 130 740 130 {
 lab=AVSS}
 N 740 -400 740 -200 {
-lab=VDD_1V8}
+lab=AVDD}
 N 550 -400 740 -400 {
-lab=VDD_1V8}
+lab=AVDD}
 N 430 -400 430 -180 {
-lab=VDD_1V8}
+lab=AVDD}
 N 430 -120 430 130 {
 lab=AVSS}
 N 550 -140 600 -140 {
@@ -72,9 +72,9 @@ lab=CKUP}
 N 600 -160 700 -160 {
 lab=CKUP}
 N 120 -400 210 -400 {
-lab=VDD_1V8}
+lab=AVDD}
 N 220 -400 220 -330 {
-lab=VDD_1V8}
+lab=AVDD}
 N 170 -310 220 -310 {
 lab=AVSS}
 N -10 -10 0 -10 {
@@ -82,15 +82,15 @@ lab=NI,N[7:1]}
 N 50 30 50 130 {
 lab=AVSS}
 N 10 -400 120 -400 {
-lab=VDD_1V8}
+lab=AVDD}
 N 50 -400 50 -50 {
-lab=VDD_1V8}
+lab=AVDD}
 N 80 -10 150 -10 {
 lab=N[7:0]}
 N -340 -100 -340 -40 {
-lab=VDD_1V8}
+lab=AVDD}
 N -340 -100 50 -100 {
-lab=VDD_1V8}
+lab=AVDD}
 N -340 40 -340 130 {
 lab=AVSS}
 N 550 -160 580 -160 {
@@ -102,7 +102,7 @@ lab=AVSS}
 N 110 -100 110 130 {
 lab=AVSS}
 N 50 -160 80 -160 {
-lab=VDD_1V8}
+lab=AVDD}
 N 580 -300 620 -300 {
 lab=CKDWN}
 N 580 -300 580 -160 {
@@ -110,9 +110,9 @@ lab=CKDWN}
 N 660 -260 660 130 {
 lab=AVSS}
 N 660 -390 660 -340 {
-lab=VDD_1V8}
+lab=AVDD}
 N 660 -400 660 -390 {
-lab=VDD_1V8}
+lab=AVDD}
 N 700 -300 730 -300 {
 lab=NC1}
 C {devices/lab_pin.sym} 150 -10 2 0 {name=l5 sig_type=std_logic lab=N[7:0]
@@ -141,7 +141,7 @@ C {devices/lab_pin.sym} 390 -160 0 0 {name=l1 sig_type=std_logic lab=N[2]
 }
 C {devices/lab_pin.sym} 170 -310 0 0 {name=l3 sig_type=std_logic lab=AVSS
 }
-C {devices/ipin.sym} 20 -400 2 1 {name=p4 lab=VDD_1V8
+C {devices/ipin.sym} 20 -400 2 1 {name=p4 lab=AVDD
 }
 C {devices/opin.sym} 850 -160 0 0 {name=p5 lab=CK}
 C {devices/lab_pin.sym} 630 -160 1 0 {name=l2 sig_type=std_logic lab=CKUP

@@ -6,13 +6,13 @@
 *.ipin CK_REF
 *.opin CK
 *.ipin IBSPR_1U
-xa1 net2 AVSS SUN_PLL_LPF xoffset=0 yoffset=0 angle=0
-xb1 AVDD VDD_ROSC_N net2 VDD_ROSC_N IBSPR_1U AVSS SUN_PLL_BUF xoffset=4 yoffset=0 angle=0
-xh1 AVDD net1 CK PWRUP_1V8 AVSS SUN_PLL_DIVN xoffset=4 yoffset=0 angle=0
+xb1 AVDD VDD_ROSC_N net2 VDD_ROSC_N IBSPR_1U AVSS SUN_PLL_BUF xoffset=5 yoffset=2 angle=0
+xb2 net2 AVSS SUN_PLL_LPF xoffset=0 yoffset=0 angle=0
+xh1 AVDD net1 CK PWRUP_1V8 AVSS SUN_PLL_DIVN xoffset=12 yoffset=12 angle=0
 xh2 AVDD CK VDD_ROSC_N PWRUP_1V8 AVSS SUN_PLL_ROSC xoffset=0 yoffset=0 angle=0
-xj1 AVDD CP_UP_N CK_REF CP_DOWN net1 AVSS SUN_PLL_PFD xoffset=5 yoffset=80 angle=0
-xk1 AVDD CP_UP_N net2 CP_DOWN IBSPR_1U AVSS SUN_PLL_CP xoffset=4 yoffset=80 angle=0
-xl2 IBSPR_1U AVDD PWRUP_1V8 AVSS SUN_PLL_BIAS xoffset=4 yoffset=80 angle=0
+xj1 AVDD CP_UP_N CK_REF CP_DOWN net1 AVSS SUN_PLL_PFD xoffset=5 yoffset=107 angle=0
+xk1 AVDD CP_UP_N net2 CP_DOWN IBSPR_1U AVSS SUN_PLL_CP xoffset=10 yoffset=107 angle=0
+xl2 IBSPR_1U AVDD PWRUP_1V8 AVSS SUN_PLL_BIAS xoffset=4 yoffset=107 angle=0
 .ends
 
 * expanding   symbol:  SUN_PLL_SKY130NM/SUN_PLL_ROSC.sym # of pins=5
@@ -20,26 +20,26 @@ xl2 IBSPR_1U AVDD PWRUP_1V8 AVSS SUN_PLL_BIAS xoffset=4 yoffset=80 angle=0
 *+ /Users/wulff/Documents/pro/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_ROSC.sym
 ** sch_path:
 *+ /Users/wulff/Documents/pro/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_ROSC.sch
-.subckt SUN_PLL_ROSC  VDD_1V8 CK VDD_ROSC PWRUP_1V8 AVSS   xoffset=0 yoffset=0 angle=0
+.subckt SUN_PLL_ROSC  AVDD CK VDD_ROSC PWRUP_1V8 AVSS   xoffset=0 yoffset=0 angle=0
 *.ipin PWRUP_1V8
 *.ipin VDD_ROSC
 *.ipin AVSS
-*.ipin VDD_1V8
+*.ipin AVDD
 *.opin CK
-xa3 N_2 N_1 CKUP CKDWN VDD_1V8 AVSS SUN_PLL_LSCORE
-xa4 CKUP CK VDD_1V8 AVSS SUNTR_IVX1_CV xoffset=0 yoffset=0 angle=0 M=1
-xa5 CKDWN NC1 VDD_1V8 AVSS SUNTR_IVX1_CV xoffset=0 yoffset=0 angle=0 M=1
-xa6 VDD_1V8 AVSS SUNTR_TAPCELLB_CV xoffset=0 yoffset=0 angle=0 M=1
-xb1 PWRUP_1V8 N_0 NI VDD_1V8 AVSS VDD_ROSC AVSS SUNTRB_NDX1_CV xoffset=0 yoffset=0 angle=0
-xb2_0 NI N_7 VDD_1V8 AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
-xb2_1 N_7 N_6 VDD_1V8 AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
-xb2_2 N_6 N_5 VDD_1V8 AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
-xb2_3 N_5 N_4 VDD_1V8 AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
-xb2_4 N_4 N_3 VDD_1V8 AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
-xb2_5 N_3 N_2 VDD_1V8 AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
-xb2_6 N_2 N_1 VDD_1V8 AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
-xb2_7 N_1 N_0 VDD_1V8 AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
-xb3 VDD_1V8 AVSS SUNTRB_TAPCELLBAVSS_CV xoffset=0 yoffset=0 angle=0
+xa3 N_2 N_1 CKUP CKDWN AVDD AVSS SUN_PLL_LSCORE
+xa4 CKUP CK AVDD AVSS SUNTR_IVX1_CV xoffset=0 yoffset=0 angle=0 M=1
+xa5 CKDWN NC1 AVDD AVSS SUNTR_IVX1_CV xoffset=0 yoffset=0 angle=0 M=1
+xa6 AVDD AVSS SUNTR_TAPCELLB_CV xoffset=0 yoffset=0 angle=0 M=1
+xb1 PWRUP_1V8 N_0 NI AVDD AVSS VDD_ROSC AVSS SUNTRB_NDX1_CV xoffset=0 yoffset=0 angle=0
+xb2_0 NI N_7 AVDD AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
+xb2_1 N_7 N_6 AVDD AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
+xb2_2 N_6 N_5 AVDD AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
+xb2_3 N_5 N_4 AVDD AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
+xb2_4 N_4 N_3 AVDD AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
+xb2_5 N_3 N_2 AVDD AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
+xb2_6 N_2 N_1 AVDD AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
+xb2_7 N_1 N_0 AVDD AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
+xb3 AVDD AVSS SUNTRB_TAPCELLBAVSS_CV xoffset=0 yoffset=0 angle=0
 .ends
 
 

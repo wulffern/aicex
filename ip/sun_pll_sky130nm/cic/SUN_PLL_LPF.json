@@ -34,7 +34,7 @@
             },
             "afterPlace"  : [
                 {"addRouteRings" :[
-                    ["M3","AVSS","b",4,4]
+                    ["M1","AVSS","tbrl",4,6]
 
                 ]},
                 {"addPowerRings" :[

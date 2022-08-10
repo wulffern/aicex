@@ -1,25 +1,25 @@
 ** sch_path:
 *+ /Users/wulff/pro/aicex/ip/sun_pll_sky130nm/work/../design/SUN_PLL_SKY130NM/SUN_PLL_ROSC.sch
-.subckt SUN_PLL_ROSC PWRUP_1V8 VDD_ROSC AVSS VDD_1V8 CK
+.subckt SUN_PLL_ROSC PWRUP_1V8 VDD_ROSC AVSS AVDD CK
 *.ipin PWRUP_1V8
 *.ipin VDD_ROSC
 *.ipin AVSS
-*.ipin VDD_1V8
+*.ipin AVDD
 *.opin CK
-xa3 N_2 N_1 CKUP CKDWN VDD_1V8 AVSS SUN_PLL_LSCORE
-xa4 CKUP CK VDD_1V8 AVSS SUNTR_IVX1_CV xoffset=0 yoffset=0 angle=0
-xa5 CKDWN NC1 VDD_1V8 AVSS SUNTR_IVX1_CV xoffset=0 yoffset=0 angle=0
-xa6 VDD_1V8 AVSS SUNTR_TAPCELLB_CV xoffset=0 yoffset=0 angle=0
-xb1 PWRUP_1V8 N_0 NI VDD_1V8 AVSS VDD_ROSC AVSS SUNTRB_NDX1_CV xoffset=0 yoffset=0 angle=0
-xb2_0 NI N_7 VDD_1V8 AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
-xb2_1 N_7 N_6 VDD_1V8 AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
-xb2_2 N_6 N_5 VDD_1V8 AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
-xb2_3 N_5 N_4 VDD_1V8 AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
-xb2_4 N_4 N_3 VDD_1V8 AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
-xb2_5 N_3 N_2 VDD_1V8 AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
-xb2_6 N_2 N_1 VDD_1V8 AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
-xb2_7 N_1 N_0 VDD_1V8 AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
-xb3 VDD_1V8 AVSS SUNTRB_TAPCELLBAVSS_CV xoffset=0 yoffset=0 angle=0
+xa3 N_2 N_1 CKUP CKDWN AVDD AVSS SUN_PLL_LSCORE
+xa4 CKUP CK AVDD AVSS SUNTR_IVX1_CV xoffset=0 yoffset=0 angle=0 M=1
+xa5 CKDWN NC1 AVDD AVSS SUNTR_IVX1_CV xoffset=0 yoffset=0 angle=0 M=1
+xa6 AVDD AVSS SUNTR_TAPCELLB_CV xoffset=0 yoffset=0 angle=0 M=1
+xb1 PWRUP_1V8 N_0 NI AVDD AVSS VDD_ROSC AVSS SUNTRB_NDX1_CV xoffset=0 yoffset=0 angle=0
+xb2_0 NI N_7 AVDD AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
+xb2_1 N_7 N_6 AVDD AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
+xb2_2 N_6 N_5 AVDD AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
+xb2_3 N_5 N_4 AVDD AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
+xb2_4 N_4 N_3 AVDD AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
+xb2_5 N_3 N_2 AVDD AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
+xb2_6 N_2 N_1 AVDD AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
+xb2_7 N_1 N_0 AVDD AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
+xb3 AVDD AVSS SUNTRB_TAPCELLBAVSS_CV xoffset=0 yoffset=0 angle=0
 .ends
 
 * expanding   symbol:  SUN_PLL_SKY130NM/SUN_PLL_LSCORE.sym # of pins=6
@@ -34,14 +34,14 @@ xb3 VDD_1V8 AVSS SUNTRB_TAPCELLBAVSS_CV xoffset=0 yoffset=0 angle=0
 *.opin Y
 *.opin YN
 *.ipin AVSS
-xb1_0 Y AN AVSS AVSS SUNTR_NCHDL xoffset=0 yoffset=0 angle=0
-xb1_1 Y AN AVSS AVSS SUNTR_NCHDL xoffset=0 yoffset=0 angle=0
-xb2_0 YN A AVSS AVSS SUNTR_NCHDL xoffset=0 yoffset=0 angle=0
-xb2_1 YN A AVSS AVSS SUNTR_NCHDL xoffset=0 yoffset=0 angle=0
-xc1a net2 YN AVDD AVDD SUNTR_PCHDL xoffset=0 yoffset=0 angle=0
-xc1b Y YN net2 AVDD SUNTR_PCHDL xoffset=0 yoffset=0 angle=0
-xc2a net1 Y AVDD AVDD SUNTR_PCHDL xoffset=0 yoffset=0 angle=0
-xc2b YN Y net1 AVDD SUNTR_PCHDL xoffset=0 yoffset=0 angle=0
+xb1_0 Y AN AVSS AVSS SUNTR_NCHDL xoffset=0 yoffset=0 angle=0 M=1
+xb1_1 Y AN AVSS AVSS SUNTR_NCHDL xoffset=0 yoffset=0 angle=0 M=1
+xb2_0 YN A AVSS AVSS SUNTR_NCHDL xoffset=0 yoffset=0 angle=0 M=1
+xb2_1 YN A AVSS AVSS SUNTR_NCHDL xoffset=0 yoffset=0 angle=0 M=1
+xc1a net2 YN AVDD AVDD SUNTR_PCHDL xoffset=0 yoffset=0 angle=0 M=1
+xc1b Y YN net2 AVDD SUNTR_PCHDL xoffset=0 yoffset=0 angle=0 M=1
+xc2a net1 Y AVDD AVDD SUNTR_PCHDL xoffset=0 yoffset=0 angle=0 M=1
+xc2b YN Y net1 AVDD SUNTR_PCHDL xoffset=0 yoffset=0 angle=0 M=1
 .ends
 
 .end
