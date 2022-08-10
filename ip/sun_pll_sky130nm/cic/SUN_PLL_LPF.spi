@@ -4,8 +4,21 @@
 *.ipin VLPF
 *.ipin AVSS
 xa3 VN1 VLPF AVSS SUNTR_RPPO_12k xoffset=0 yoffset=5 angle=0 M=1
-xb1 VLPF AVSS SUNSAR_CAP_BSSW_CV xoffset=10 yoffset=0 angle=0 M=1
-xb3 VLPF AVSS SUNSAR_CAP_BSSW_CV xoffset=0 yoffset=0 angle=0 M=2
-xb4 VN1 AVSS SUNSAR_CAP_BSSW_CV xoffset=0 yoffset=0 angle=0 M=10
+xb1 VLPF AVSS CAP_LPF xoffset=0 yoffset=0 angle=0 M=1
+xb2 VLPF AVSS CAP_LPF xoffset=0 yoffset=0 angle=0 M=1
+xb3 VN1 AVSS CAP_LPF xoffset=0 yoffset=0 angle=0 M=5
 .ends
+
+* expanding   symbol:  SUN_PLL_SKY130NM/CAP_LPF.sym # of pins=2
+** sym_path:
+*+ /Users/wulff/Documents/pro/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/CAP_LPF.sym
+** sch_path:
+*+ /Users/wulff/Documents/pro/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/CAP_LPF.sch
+.subckt CAP_LPF  A B   xoffset=0 yoffset=0 angle=0 M=1
+*.iopin A
+*.iopin B
+R1 A NC0 sky130_fd_pr__res_generic_m1 W=0.4 L=0.4 m=1
+R2 B NC1 sky130_fd_pr__res_generic_m1 W=0.4 L=0.4 m=1
+.ends
+
 .end

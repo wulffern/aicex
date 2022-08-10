@@ -3,6 +3,9 @@
         {
             "name" : "SUN_PLL_ROSC",
             "class" : "cIcCore::LayoutCell",
+            "meta" : {
+                "noSchematic" : true
+            },
             "boundaryIgnoreRouting" : 0,
             "composite" : 1,
             "noPowerRoute" : 1,

@@ -4,6 +4,9 @@
             "name" : "SUN_PLL_CP",
             "class" : "cIcCore::LayoutCell",
             "boundaryIgnoreRouting" : 0,
+            "meta" : {
+                "noSchematic" : true
+            },
             "composite" : 1,
             "alternateGroup" : 1,
             "noPowerRoute" : 1,

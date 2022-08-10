@@ -3,6 +3,9 @@
         {
             "name" : "SUN_PLL_LSCORE",
             "class" : "cIcCore::LayoutCell",
+            "meta" : {
+                "noSchematic" : true
+            },
             "beforeRoute" :{
                 "addDirectedRoutes" : [
                     ["M1","DONE","xb1_1:D-|--xc1b:D"],

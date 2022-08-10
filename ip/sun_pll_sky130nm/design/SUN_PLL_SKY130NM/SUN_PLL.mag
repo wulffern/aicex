@@ -1,0 +1,48 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1660117866
+<< checkpaint >>
+rect 360 -592 37672 22976
+<< locali >>
+rect 14064 -592 14304 11504
+rect 13680 -208 13920 11120
+rect 17152 852 34792 912
+rect 24412 10266 24628 10326
+rect 32596 1554 32812 1614
+rect 684 322 900 382
+use SUN_PLL_BUF xb1
+transform 1 0 360 0 1 176
+box 360 176 15072 12272
+use SUN_PLL_LPF xb2
+transform 1 0 360 0 1 14912
+box 360 14912 37312 22976
+use SUN_PLL_DIVN xh1
+transform 1 0 17152 0 1 1056
+box 17152 1056 37672 9420
+use SUN_PLL_ROSC xh2
+transform 1 0 17152 0 1 9420
+box 17152 9420 23728 14828
+use SUN_PLL_PFD xj1
+transform 1 0 24088 0 1 9416
+box 24088 9416 28144 14824
+use SUN_PLL_CP xk1
+transform 1 0 28864 0 1 9416
+box 28864 9416 32920 14824
+use SUN_PLL_BIAS xl2
+transform 1 0 33208 0 1 9416
+box 33208 9416 37264 13944
+<< labels >>
+flabel locali s 14064 -592 14304 11504 0 FreeSans 400 0 0 0 AVDD
+port 1 nsew
+flabel locali s 13680 -208 13920 11120 0 FreeSans 400 0 0 0 AVSS
+port 2 nsew
+flabel locali s 17152 852 34792 912 0 FreeSans 400 0 0 0 PWRUP_1V8
+port 3 nsew
+flabel locali s 24412 10266 24628 10326 0 FreeSans 400 0 0 0 CK_REF
+port 4 nsew
+flabel locali s 32596 1554 32812 1614 0 FreeSans 400 0 0 0 CK
+port 5 nsew
+flabel locali s 684 322 900 382 0 FreeSans 400 0 0 0 IBSPR_1U
+port 6 nsew
+<< end >>
