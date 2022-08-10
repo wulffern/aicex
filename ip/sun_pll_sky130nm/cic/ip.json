@@ -2,7 +2,7 @@
 	"options" :
 	{
 		"ignoreSetYoffsetHalf" : false,
-        "prefix" : "SUNPLL_",
+        "prefix" : "",
         "topcells" :[
             "CAP_LPF",
             "SUN_PLL_ROSC",

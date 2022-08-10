@@ -200,8 +200,8 @@ XMP1 NC1 NC1 NC1 AVDD SUNPLL_SUNTRB_PCHDL
 * SUNPLL_SUNSAR_CAP_BSSW_CV <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
 .SUBCKT SUNPLL_SUNSAR_CAP_BSSW_CV A B
-RR1 A NC0 sky130_fd_pr__res_generic_m3  l=0.36  w=0.44  
-RR2 B NC1 sky130_fd_pr__res_generic_m3  l=0.36  w=0.44  
+RR1 A NC0 sky130_fd_pr__res_generic_m1  l=0.36  w=0.44  
+RR2 B NC1 sky130_fd_pr__res_generic_m1  l=0.36  w=0.44  
 .ENDS
 
 *-------------------------------------------------------------
@@ -316,8 +316,8 @@ xa30 IBPSR_1U IBPSR_1U AVSS AVSS SUNPLL_SUNTR_NCHDLCM
 * SUNPLL_CAP_LPF <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
 .SUBCKT SUNPLL_CAP_LPF A B
-RR1 A NC0 sky130_fd_pr__res_generic_m3  l=0.4  w=0.4  
-RR2 B NC1 sky130_fd_pr__res_generic_m3  l=0.4  w=0.4  
+RR1 A NC0 sky130_fd_pr__res_generic_m1  l=0.4  w=0.4  
+RR2 B NC1 sky130_fd_pr__res_generic_m1  l=0.4  w=0.4  
 .ENDS
 
 *-------------------------------------------------------------

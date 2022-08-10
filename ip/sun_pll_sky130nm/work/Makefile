@@ -15,7 +15,7 @@ CELL=SUN_PLL
 
 
 
-PREFIX=SUNPLL_
+PREFIX=
 
 CICEXCLUDE="^(${PREFIX}SUNTRB?_|${PREFIX}SUNSAR_)"
 CICVIEWS = --spice --verilog --magic
