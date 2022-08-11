@@ -90,6 +90,10 @@ lpe:
 	@echo "set VDD AVDD\nset GND AVSS\nset SUB 0\nload ${NCELL}.mag\nextract all\n\next2spice resistor off\next2spice capacitance on\next2spice cthresh 0.4\next2spice format ngspice	\next2spice hierarchy off\next2spice subcircuits off\next2spice -o lpe/${PRCELL}_lpe.spi\nquit" > lpe/${PRCELL}_lpe.tcl
 	@magic -noconsole -dnull lpe/${PRCELL}_lpe.tcl 2>&1 | tee lpe/${PRCELL}_magic_lpe.log
 
+lpeh:
+	@echo "set VDD AVDD\nset GND AVSS\nset SUB 0\nload ${NCELL}.mag\nextract all\n\next2spice resistor off\next2spice capacitance on\next2spice cthresh 0.4\next2spice format ngspice\next2spice subcircuits off\next2spice -o lpe/${PRCELL}_lpe.spi\nquit" > lpe/${PRCELL}_lpe.tcl
+	@magic -noconsole -dnull lpe/${PRCELL}_lpe.tcl 2>&1 | tee lpe/${PRCELL}_magic_lpe.log
+
 lvsall:
 	${foreach b, ${CELLS}, make cdl lvs CELL=$b;}
 

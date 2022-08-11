@@ -24,9 +24,11 @@ with open(runfile) as fi:
     for l in fi:
         files.append(l.strip() + ".csv")
 
+Meg = 1e6
 
 for f in files:
     df = pd.read_csv(f)
     freq = 1/df["tpd"]
     kvco = np.mean(freq.diff()/df["vrosc"].diff())
-    print("%20s KVCO = %.3g Hz/V" %(f,kvco))
+
+    print("%20s KVCO = %5.3g Hz/V, fmax = %8.3g MHz, fmin = %8.3g MHz, vmin = %2.2g, vmax = %2.2g" %(f,kvco,freq.max()/Meg,freq.min()/Meg,df["vrosc"].min(),df["vrosc"].max()))

@@ -210,10 +210,12 @@
                 ],
 
                 "addConnectivityRoutes" : [
-
-                    ["M2","VN1","-|--","onTopL","",""],
-                    ["M2","VN2","-|--","onTopL","",""],
-                    ["M3","LPF","-|--","onTopL","",""],
+                    ["M2","VN5","-|--","onTopL,track0","",""],
+                    ["M3","VN4","-|--","onTopL,track0","",""],
+                    ["M2","VN3","-|--","onTopL,track2","",""],
+                    ["M3","VN2","-|--","onTopL,track4","",""],
+                    ["M2","VLPFZ","-|--","onTopL","",""],
+                    ["M3","^VLPF$","-|--","onTopL","",""],
                     ["M4","AVSS","-|--","","","xb"]
 
 
@@ -230,7 +232,7 @@
             },
             "afterPlace"  : [
                 {"addRouteRings" :[
-                    ["M1","AVSS","tbrl",4,6]
+                    ["M1","AVSS","tbrl",4,12]
 
                 ]},
                 {"addPowerRings" :[
@@ -267,6 +269,44 @@
 
 
 
+        },
+        {
+            "name" : "SUN_PLL_KICK",
+            "class" : "cIcCore::LayoutCell",
+            "meta" : {
+                "noSchematic" : true
+            },
+            "boundaryIgnoreRouting" : 0,
+            "composite" : 1,
+             "afterPlace"  : [
+                {"addRouteRings" :[
+                    ["M1","AVSS","tbrl",4,2],
+                    ["M1","AVDD","tbrl",4,2]
+
+                ]},
+                {"addPowerRings" :[
+
+                ]}
+
+            ],
+            "beforeRoute" :{
+                "addDirectedRoutes" : [
+                ],
+
+                "addConnectivityRoutes" : [
+                    ["M1","N[0-6]","-|--","offsetlow","","IVX"],
+                    ["M1","N7","-|--","offsetlow","",""],
+                    ["M2","^KICK$","-|--","","",""],
+                    ["M2","^N0$","|-","","",""]
+                ],
+                "addRouteConnections" : [
+				    ["AVSS","xa1","bottom","M4","nostartcut,onTopT,routeWidth=wide_width"],
+                    ["AVDD","xa1","bottom","M4","nostartcut,onTopT,routeWidth=wide_width"]
+                ]
+            },
+            "afterRoute"  : {
+
+            }
         },
         {
             "name" : "SUN_PLL_PFD",

@@ -93,6 +93,24 @@
               ]
                 }
         },
+        {
+            "name" : "RES100",
+            "inherit" : "RES12",
+            "afterNew" : {
+            "copyColumns" :[
+                  { "count" : 4, "offset" : 1,"length" : 4}
+              ]
+                }
+        },
+        {
+            "name" : "RES200",
+            "inherit" : "RES12",
+            "afterNew" : {
+            "copyColumns" :[
+                  { "count" : 8, "offset" : 1,"length" : 4}
+              ]
+                }
+        },
         { "name" : "RPPO_12k",
           "class" : "Layout::LayoutDigitalCell",
           "boundaryIgnoreRouting" : 0,
@@ -130,6 +148,45 @@
               "addPortOnRects" : [  ["P","M1"] , ["N", "M1"]]
           }
 
+        },
+         { "name" : "RPPO_100k",
+          "class" : "Layout::LayoutDigitalCell",
+          "boundaryIgnoreRouting" : 0,
+            "composite" : 1,
+          "meta" : {
+              "symbol" : "cic/res"
+          },
+          "spice": [".subckt RPPO_100k P N B",
+                    "XA1 N P B RES100",
+                    ".ends"
+                   ],
+          "beforeRoute" : {
+              "addGuard" : [ "B", 6 , ["PTAP"] ]
+          },
+          "afterRoute"  : {
+              "addPortOnRects" : [  ["P","M1"] , ["N", "M1"]]
+          }
+
+        },
+         { "name" : "RPPO_200k",
+          "class" : "Layout::LayoutDigitalCell",
+          "boundaryIgnoreRouting" : 0,
+            "composite" : 1,
+          "meta" : {
+              "symbol" : "cic/res"
+          },
+          "spice": [".subckt RPPO_200k P N B",
+                    "XA1 N P B RES200",
+                    ".ends"
+                   ],
+          "beforeRoute" : {
+              "addGuard" : [ "B", 6 , ["PTAP"] ]
+          },
+          "afterRoute"  : {
+              "addPortOnRects" : [  ["P","M1"] , ["N", "M1"]]
+          }
+
         }
+
     ]
 }
