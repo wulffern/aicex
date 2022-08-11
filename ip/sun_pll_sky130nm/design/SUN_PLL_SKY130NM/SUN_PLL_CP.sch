@@ -73,6 +73,38 @@ N 130 100 320 100 {
 lab=LPF}
 N -70 350 -60 350 {
 lab=AVSS}
+N 290 -200 290 -130 {
+lab=AVDD}
+N 160 -200 290 -200 {
+lab=AVDD}
+N 290 -70 290 100 {
+lab=LPF}
+N 290 -100 350 -100 {
+lab=AVDD}
+N 350 -200 350 -100 {
+lab=AVDD}
+N 290 -200 350 -200 {
+lab=AVDD}
+N -210 -60 250 -60 {
+lab=PWRUP_1V8}
+N 250 -100 250 -60 {
+lab=PWRUP_1V8}
+N 280 260 280 350 {
+lab=AVSS}
+N 160 350 280 350 {
+lab=AVSS}
+N 280 230 310 230 {
+lab=AVSS}
+N 310 230 310 350 {
+lab=AVSS}
+N 280 350 310 350 {
+lab=AVSS}
+N 280 170 280 200 {
+lab=LPFZ}
+N 280 170 330 170 {
+lab=LPFZ}
+N -210 230 240 230 {
+lab=KICK}
 C {SUN_TR_SKY130NM/SUNTR_PCHDLCM.sym} 90 -170 0 0 {name=xb2 xoffset=0 yoffset=0 angle=0 M=1}
 C {SUN_TR_SKY130NM/SUNTR_PCHDLCM.sym} -20 -170 0 1 {name=xb1 xoffset=0 yoffset=0 angle=0 M=1}
 C {SUN_TR_SKY130NM/SUNTR_PCHDL.sym} 90 30 0 0 {name=xb3 xoffset=0 yoffset=0 angle=0 M=1}
@@ -89,3 +121,8 @@ C {cborder/border_s.sym} 420 340 0 0 {user="Carsten Wulff" company="Carsten Wulf
 C {devices/lab_pin.sym} -60 -80 0 0 {name=l1 sig_type=std_logic lab=VBP}
 C {devices/lab_pin.sym} 130 -90 0 0 {name=l2 sig_type=std_logic lab=VPS}
 C {devices/lab_pin.sym} 130 250 0 0 {name=l3 sig_type=std_logic lab=VNS}
+C {SUN_TR_SKY130NM/SUNTR_PCHDL.sym} 250 -100 0 0 {name=xb4 xoffset=0 yoffset=0 angle=0 M=1}
+C {devices/ipin.sym} -200 -60 0 0 {name=p7 lab=PWRUP_1V8}
+C {devices/opin.sym} 320 170 0 0 {name=p8 lab=LPFZ}
+C {SUN_TR_SKY130NM/SUNTR_NCHDLA.sym} 240 230 0 0 {name=xa4 xoffset=0 yoffset=0 angle=0 M=10}
+C {devices/ipin.sym} -200 230 0 0 {name=p9 lab=KICK}

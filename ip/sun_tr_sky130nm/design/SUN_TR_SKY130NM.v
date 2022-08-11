@@ -157,6 +157,22 @@ input logic P;
 endmodule
 
 //-------------------------------------------------------------
+// SUNTR_RES100 <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module SUNTR_RES100(N,P,B);
+input logic N;
+input logic P;
+endmodule
+
+//-------------------------------------------------------------
+// SUNTR_RES200 <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module SUNTR_RES200(N,P,B);
+input logic N;
+input logic P;
+endmodule
+
+//-------------------------------------------------------------
 // SUNTR_RPPO_12k <class 'cicpy.core.layoutcell.LayoutCell'>
 //-------------------------------------------------------------
 module SUNTR_RPPO_12k(P,N,B);
@@ -174,6 +190,26 @@ input logic B;
 input logic P;
 input logic N;
 SUNTR_RES25 XA1 (N,P,B);
+endmodule
+
+//-------------------------------------------------------------
+// SUNTR_RPPO_100k <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module SUNTR_RPPO_100k(P,N,B);
+input logic B;
+input logic P;
+input logic N;
+SUNTR_RES100 XA1 (N,P,B);
+endmodule
+
+//-------------------------------------------------------------
+// SUNTR_RPPO_200k <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module SUNTR_RPPO_200k(P,N,B);
+input logic B;
+input logic P;
+input logic N;
+SUNTR_RES200 XA1 (N,P,B);
 endmodule
 
 //-------------------------------------------------------------
