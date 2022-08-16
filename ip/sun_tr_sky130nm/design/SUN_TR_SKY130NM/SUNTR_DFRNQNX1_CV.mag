@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1660215182
+timestamp 1660667507
 << checkpaint >>
 rect 0 0 2520 5280
 << locali >>
@@ -26,7 +26,7 @@ rect 1032 1994 1092 2758
 rect 432 5074 600 5134
 rect 600 4810 864 4870
 rect 600 4810 660 5134
-rect 324 1554 540 1614
+rect 1980 1554 2196 1614
 rect 324 498 540 558
 rect 756 5162 972 5222
 rect 756 4810 972 4870
@@ -147,7 +147,7 @@ use SUNTR_cut_M1M2_2x1
 transform 1 0 324 0 1 4018
 box 324 4018 508 4086
 << labels >>
-flabel locali s 324 1554 540 1614 0 FreeSans 400 0 0 0 D
+flabel locali s 1980 1554 2196 1614 0 FreeSans 400 0 0 0 D
 port 1 nsew
 flabel locali s 324 498 540 558 0 FreeSans 400 0 0 0 CK
 port 2 nsew
@@ -155,10 +155,10 @@ flabel locali s 756 5162 972 5222 0 FreeSans 400 0 0 0 Q
 port 4 nsew
 flabel locali s 756 4810 972 4870 0 FreeSans 400 0 0 0 QN
 port 5 nsew
-flabel locali s 324 4018 540 4078 0 FreeSans 400 0 0 0 RN
-port 3 nsew
 flabel m3 s 1548 0 1748 5280 0 FreeSans 400 0 0 0 AVDD
 port 6 nsew
 flabel m3 s 756 0 956 5280 0 FreeSans 400 0 0 0 AVSS
 port 7 nsew
+flabel locali s 324 4018 540 4078 0 FreeSans 400 0 0 0 RN
+port 3 nsew
 << end >>

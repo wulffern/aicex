@@ -304,7 +304,7 @@
               ]
           },
           "afterRoute" : {
-              "addPortOnRects" : [ ["D", "M1"], ["CK", "M1"], ["Q", "M1","XA8:MN0:D"],["QN","M1","XA7:MN1:D"] ,["RN","M2","XA1:MN1:G"]]
+              "addPortOnRects" : [ ["D", "M1","XA3:MP0:G"], ["CK", "M1"], ["Q", "M1","XA8:MN0:D"],["QN","M1","XA7:MN1:D"] ,["RN","M2","XA1:MN1:G"],["AVDD","M4"],["AVSS","M4"]]
           }
         },
 

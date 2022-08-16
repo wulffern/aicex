@@ -161,39 +161,36 @@
             "alternateGroup" : 1,
             "noPowerRoute" : 1,
             "beforeRoute" :{
-                "addDirectedRoutes" : [
-                    ["M3","N","xa:XA8:MN0:G--|-xa:D"],
-                    ["M3","N","xb:XA8:MN0:G-|--xb:D"],
-                    ["M3","N","xc:XA8:MN0:G--|-xc:D"],
-                    ["M3","N","xd:XA8:MN0:G-|--xd:D"],
-                    ["M3","N","xe:XA8:MN0:G--|-xe:D"],
-                    ["M3","N","xf:XA8:MN0:G-|--xf:D"],
-                    ["M3","N","xg:XA8:MN0:G--|-xg:D"]
-
-                ],
-
                 "addConnectivityRoutes" : [
+                    ["M2","^N[246]$","-|--","nostartcut,onTopT,offsethighend","",""],
+                    ["M2","^N[135]$","--|-","nostartcut,onTopT,offsethighend","",""],
                     ["M3","D[531]","-|--","track2,offsethighend","",""],
                     ["M3","D[420]","-|--","track25,offsethigh,offsethighend","",""]
 
                 ],
                 "addRouteConnections" : [
-                  ["PWRUP","X","bottom","M4"]
+                  ["PWRUP","X","top","M4","onTopB"],
+                    ["AVSS","x","bottom","M4","nostartcut,onTopT,routeWidth=wide_width"],
+                    ["AVDD","x","bottom","M4","nostartcut,onTopT,routeWidth=wide_width"]
                 ],
 
                 "addPowerConnections" : [
-                  ["AVDD","X","bottom"],
-				  ["AVSS","X","bottom"]
+                  //["AVDD","X","bottom"],
+				  //["AVSS","X","bottom"]
               ]
 
             },
             "afterPlace"  : [
                 {"addRouteRings" :[
-                  ["M1","PWRUP_1V8","b",1,2]
+                    ["M1","AVSS","tbrl",4,2],
+                    ["M1","AVDD","tbrl",4,2],
+                  ["M1","PWRUP_1V8","t",1,2]
+                    
+
                 ]},
                 {"addPowerRings" :[
-                  ["M1","AVSS","tbrl"],
-                  ["M1","AVDD","tbrl"]
+                  //["M1","AVSS","tbrl"],
+                  //["M1","AVDD","tbrl"]
                 ]}
 
             ]
@@ -300,8 +297,8 @@
                 ],
 
                 "addConnectivityRoutes" : [
-                    ["M1","N[0-6]","-|--","offsetlow","","IVX"],
-                    ["M1","N7","-|--","offsetlow","",""],
+                    ["M1","N[0-6]","--|-","onTopB,offsethigh","","IVX"],
+                    ["M1","N7","--|-","onTopB,offsethigh","",""],
                     ["M2","^KICK$","-|--","","",""],
                     ["M2","^N0$","|-","","",""]
                 ],

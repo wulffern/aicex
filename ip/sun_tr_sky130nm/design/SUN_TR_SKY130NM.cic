@@ -948,11 +948,11 @@
                         ],
                         "properties": {
                             "drainWidth": 0.44,
-                            "length": 0.17999999999999999,
+                            "length": 0.18,
                             "multiplier": 1,
                             "nf": 1,
                             "sourceWidth": 0.44,
-                            "width": 1.0800000000000001
+                            "width": 1.08
                         }
                     }
                 ],
@@ -1446,11 +1446,11 @@
                         ],
                         "properties": {
                             "drainWidth": 0.44,
-                            "length": 0.17999999999999999,
+                            "length": 0.18,
                             "multiplier": 1,
                             "nf": 1,
                             "sourceWidth": 0.44,
-                            "width": 1.0800000000000001
+                            "width": 1.08
                         }
                     }
                 ],
@@ -1953,11 +1953,11 @@
                         ],
                         "properties": {
                             "drainWidth": 0.44,
-                            "length": 0.17999999999999999,
+                            "length": 0.18,
                             "multiplier": 1,
                             "nf": 1,
                             "sourceWidth": 0.44,
-                            "width": 1.0800000000000001
+                            "width": 1.08
                         }
                     }
                 ],
@@ -2461,11 +2461,11 @@
                         ],
                         "properties": {
                             "drainWidth": 0.44,
-                            "length": 0.17999999999999999,
+                            "length": 0.18,
                             "multiplier": 1,
                             "nf": 1,
                             "sourceWidth": 0.44,
-                            "width": 1.0800000000000001
+                            "width": 1.08
                         }
                     }
                 ],
@@ -2969,11 +2969,11 @@
                         ],
                         "properties": {
                             "drainWidth": 0.44,
-                            "length": 0.17999999999999999,
+                            "length": 0.18,
                             "multiplier": 1,
                             "nf": 1,
                             "sourceWidth": 0.44,
-                            "width": 1.0800000000000001
+                            "width": 1.08
                         }
                     }
                 ],
@@ -3863,7 +3863,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -4309,7 +4309,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -4668,7 +4668,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -4708,7 +4708,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -5449,7 +5449,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -5556,7 +5556,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -6015,7 +6015,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -6055,7 +6055,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -6414,7 +6414,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -6472,7 +6472,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -6512,7 +6512,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -6552,7 +6552,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -8102,9 +8102,9 @@
                             "B"
                         ],
                         "properties": {
-                            "length": 8.8000000000000007,
+                            "length": 8.8,
                             "nf": 2,
-                            "width": 0.54000000000000004
+                            "width": 0.54
                         }
                     }
                 ],
@@ -9165,9 +9165,9 @@
                             "B"
                         ],
                         "properties": {
-                            "length": 8.8000000000000007,
+                            "length": 8.8,
                             "nf": 4,
-                            "width": 0.54000000000000004
+                            "width": 0.54
                         }
                     }
                 ],
@@ -11335,9 +11335,9 @@
                             "B"
                         ],
                         "properties": {
-                            "length": 8.8000000000000007,
+                            "length": 8.8,
                             "nf": 10,
-                            "width": 0.54000000000000004
+                            "width": 0.54
                         }
                     }
                 ],
@@ -14981,9 +14981,9 @@
                             "B"
                         ],
                         "properties": {
-                            "length": 8.8000000000000007,
+                            "length": 8.8,
                             "nf": 18,
-                            "width": 0.54000000000000004
+                            "width": 0.54
                         }
                     }
                 ],
@@ -18621,7 +18621,7 @@
                 }
             },
             "class": "cIcCore::LayoutCell",
-            "has_pr": false,
+            "has_pr": true,
             "layer": "PR",
             "libcell": false,
             "libpath": "",
@@ -20763,7 +20763,7 @@
                 }
             },
             "class": "cIcCore::LayoutCell",
-            "has_pr": false,
+            "has_pr": true,
             "layer": "PR",
             "libcell": false,
             "libpath": "",
@@ -23301,7 +23301,7 @@
                 }
             },
             "class": "cIcCore::LayoutCell",
-            "has_pr": false,
+            "has_pr": true,
             "layer": "PR",
             "libcell": false,
             "libpath": "",
@@ -23532,7 +23532,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -23590,7 +23590,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -23648,7 +23648,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -23706,7 +23706,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -23764,7 +23764,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -23804,7 +23804,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -23978,7 +23978,7 @@
                 }
             },
             "class": "cIcCore::LayoutCell",
-            "has_pr": false,
+            "has_pr": true,
             "layer": "PR",
             "libcell": false,
             "libpath": "",
@@ -24227,7 +24227,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -24267,7 +24267,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -24667,7 +24667,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -24707,7 +24707,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -25107,7 +25107,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -25209,7 +25209,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -25822,7 +25822,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -25951,7 +25951,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -27030,7 +27030,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -27110,7 +27110,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -27177,7 +27177,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -29188,7 +29188,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -29268,7 +29268,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -29371,7 +29371,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -30428,7 +30428,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -30468,7 +30468,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -30508,7 +30508,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -30566,7 +30566,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -30624,7 +30624,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -31294,7 +31294,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -31334,7 +31334,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -31374,7 +31374,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -31414,7 +31414,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -32079,7 +32079,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -32119,7 +32119,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -32159,7 +32159,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -32199,7 +32199,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -32686,7 +32686,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -33090,7 +33090,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -33494,7 +33494,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -33898,7 +33898,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -34302,7 +34302,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -34706,7 +34706,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -35110,7 +35110,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -35847,7 +35847,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -35887,7 +35887,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -36070,7 +36070,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -36128,7 +36128,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -36814,7 +36814,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -36854,7 +36854,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -36912,7 +36912,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -36952,7 +36952,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -37766,7 +37766,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -37846,7 +37846,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -37904,7 +37904,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -37962,7 +37962,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -38002,7 +38002,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -38042,7 +38042,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -38082,7 +38082,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -38975,7 +38975,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -39015,7 +39015,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -39055,7 +39055,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -40352,7 +40352,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -40419,7 +40419,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -40477,7 +40477,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -40544,7 +40544,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -40665,7 +40665,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -40768,7 +40768,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -40862,7 +40862,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -40920,7 +40920,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -41014,7 +41014,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -41108,7 +41108,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -41229,7 +41229,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -41287,7 +41287,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -41475,7 +41475,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -41496,8 +41496,8 @@
                     "net": "",
                     "pinLayer": "M1_pin",
                     "spicePort": true,
-                    "x1": 16200,
-                    "x2": 27000,
+                    "x1": 99000,
+                    "x2": 109800,
                     "y1": 77700,
                     "y2": 80700
                 },
@@ -41539,18 +41539,6 @@
                 },
                 {
                     "class": "Port",
-                    "layer": "M1",
-                    "name": "RN",
-                    "net": "",
-                    "pinLayer": "M1_pin",
-                    "spicePort": true,
-                    "x1": 16200,
-                    "x2": 27000,
-                    "y1": 200900,
-                    "y2": 203900
-                },
-                {
-                    "class": "Port",
                     "layer": "M4",
                     "name": "AVDD",
                     "net": "",
@@ -41572,6 +41560,18 @@
                     "x2": 47800,
                     "y1": 0,
                     "y2": 264000
+                },
+                {
+                    "class": "Port",
+                    "layer": "M1",
+                    "name": "RN",
+                    "net": "",
+                    "pinLayer": "M1_pin",
+                    "spicePort": true,
+                    "x1": 16200,
+                    "x2": 27000,
+                    "y1": 200900,
+                    "y2": 203900
                 },
                 {
                     "class": "Rect",
@@ -42750,7 +42750,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -42826,7 +42826,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -42969,7 +42969,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -43246,7 +43246,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -43398,7 +43398,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -43492,7 +43492,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -43532,7 +43532,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -43572,7 +43572,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -44340,7 +44340,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -44469,7 +44469,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -44590,7 +44590,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -45606,7 +45606,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -45673,7 +45673,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -45713,7 +45713,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -45753,7 +45753,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -45883,7 +45883,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -45923,7 +45923,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -45963,7 +45963,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -46043,7 +46043,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -46083,7 +46083,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -46123,7 +46123,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -47017,7 +47017,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -47057,7 +47057,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -47115,7 +47115,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -47173,7 +47173,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -47213,7 +47213,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -47271,7 +47271,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -47329,7 +47329,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -47423,7 +47423,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -47463,7 +47463,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -47583,7 +47583,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -47936,8 +47936,8 @@
                             "net": "",
                             "pinLayer": "M1_pin",
                             "spicePort": true,
-                            "x1": 16200,
-                            "x2": 27000,
+                            "x1": 99000,
+                            "x2": 109800,
                             "y1": 95300,
                             "y2": 98300
                         },
@@ -48216,7 +48216,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -48274,7 +48274,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -48295,8 +48295,8 @@
                     "net": "",
                     "pinLayer": "M1_pin",
                     "spicePort": true,
-                    "x1": 16200,
-                    "x2": 27000,
+                    "x1": 99000,
+                    "x2": 109800,
                     "y1": 95300,
                     "y2": 98300
                 },
@@ -48492,8 +48492,8 @@
                             "net": "",
                             "pinLayer": "M1_pin",
                             "spicePort": true,
-                            "x1": 16200,
-                            "x2": 27000,
+                            "x1": 99000,
+                            "x2": 109800,
                             "y1": 95300,
                             "y2": 98300
                         },
@@ -48622,8 +48622,8 @@
                             "net": "",
                             "pinLayer": "M1_pin",
                             "spicePort": true,
-                            "x1": 225000,
-                            "x2": 235800,
+                            "x1": 142200,
+                            "x2": 153000,
                             "y1": 95300,
                             "y2": 98300
                         },
@@ -48752,8 +48752,8 @@
                             "net": "",
                             "pinLayer": "M1_pin",
                             "spicePort": true,
-                            "x1": 268200,
-                            "x2": 279000,
+                            "x1": 351000,
+                            "x2": 361800,
                             "y1": 95300,
                             "y2": 98300
                         },
@@ -48882,8 +48882,8 @@
                             "net": "",
                             "pinLayer": "M1_pin",
                             "spicePort": true,
-                            "x1": 477000,
-                            "x2": 487800,
+                            "x1": 394200,
+                            "x2": 405000,
                             "y1": 95300,
                             "y2": 98300
                         },
@@ -49012,8 +49012,8 @@
                             "net": "",
                             "pinLayer": "M1_pin",
                             "spicePort": true,
-                            "x1": 520200,
-                            "x2": 531000,
+                            "x1": 603000,
+                            "x2": 613800,
                             "y1": 95300,
                             "y2": 98300
                         },
@@ -49142,8 +49142,8 @@
                             "net": "",
                             "pinLayer": "M1_pin",
                             "spicePort": true,
-                            "x1": 729000,
-                            "x2": 739800,
+                            "x1": 646200,
+                            "x2": 657000,
                             "y1": 95300,
                             "y2": 98300
                         },
@@ -49272,8 +49272,8 @@
                             "net": "",
                             "pinLayer": "M1_pin",
                             "spicePort": true,
-                            "x1": 772200,
-                            "x2": 783000,
+                            "x1": 855000,
+                            "x2": 865800,
                             "y1": 95300,
                             "y2": 98300
                         },
@@ -49402,8 +49402,8 @@
                             "net": "",
                             "pinLayer": "M1_pin",
                             "spicePort": true,
-                            "x1": 981000,
-                            "x2": 991800,
+                            "x1": 898200,
+                            "x2": 909000,
                             "y1": 95300,
                             "y2": 98300
                         },
@@ -49532,8 +49532,8 @@
                             "net": "",
                             "pinLayer": "M1_pin",
                             "spicePort": true,
-                            "x1": 1024200,
-                            "x2": 1035000,
+                            "x1": 1107000,
+                            "x2": 1117800,
                             "y1": 95300,
                             "y2": 98300
                         },
@@ -49662,8 +49662,8 @@
                             "net": "",
                             "pinLayer": "M1_pin",
                             "spicePort": true,
-                            "x1": 1233000,
-                            "x2": 1243800,
+                            "x1": 1150200,
+                            "x2": 1161000,
                             "y1": 95300,
                             "y2": 98300
                         },
@@ -49792,8 +49792,8 @@
                             "net": "",
                             "pinLayer": "M1_pin",
                             "spicePort": true,
-                            "x1": 1276200,
-                            "x2": 1287000,
+                            "x1": 1359000,
+                            "x2": 1369800,
                             "y1": 95300,
                             "y2": 98300
                         },
@@ -49922,8 +49922,8 @@
                             "net": "",
                             "pinLayer": "M1_pin",
                             "spicePort": true,
-                            "x1": 1485000,
-                            "x2": 1495800,
+                            "x1": 1402200,
+                            "x2": 1413000,
                             "y1": 95300,
                             "y2": 98300
                         },
@@ -50393,7 +50393,7 @@
                         }
                     ],
                     "class": "cIcCore::RouteRing",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -50759,7 +50759,7 @@
                         }
                     ],
                     "class": "cIcCore::RouteRing",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -50937,7 +50937,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -51013,7 +51013,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -51089,7 +51089,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -51165,7 +51165,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -51241,7 +51241,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -51317,7 +51317,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -51393,7 +51393,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -51469,7 +51469,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -51545,7 +51545,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -51621,7 +51621,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -51697,7 +51697,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -51713,7 +51713,7 @@
                         }
                     ],
                     "class": "cIcCore::RouteRing",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -51891,7 +51891,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -51967,7 +51967,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -52043,7 +52043,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -52119,7 +52119,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -52195,7 +52195,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -52271,7 +52271,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -52347,7 +52347,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -52423,7 +52423,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -52499,7 +52499,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -52575,7 +52575,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -52651,7 +52651,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -52667,7 +52667,7 @@
                         }
                     ],
                     "class": "cIcCore::RouteRing",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -52921,7 +52921,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -52997,7 +52997,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -53073,7 +53073,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -53149,7 +53149,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -53225,7 +53225,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -53301,7 +53301,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -53377,7 +53377,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -53453,7 +53453,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -53605,7 +53605,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -53621,7 +53621,7 @@
                         }
                     ],
                     "class": "cIcCore::RouteRing",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -53723,7 +53723,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": false,
+                            "has_pr": true,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -53857,7 +53857,7 @@
                         }
                     ],
                     "class": "cIcCore::RouteRing",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -53975,7 +53975,7 @@
                         }
                     ],
                     "class": "cIcCore::RouteRing",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -55058,8 +55058,8 @@
                     "net": "",
                     "pinLayer": "M1_pin",
                     "spicePort": true,
-                    "x1": 16200,
-                    "x2": 27000,
+                    "x1": 99000,
+                    "x2": 109800,
                     "y1": 95300,
                     "y2": 98300
                 },
@@ -55070,8 +55070,8 @@
                     "net": "",
                     "pinLayer": "M1_pin",
                     "spicePort": true,
-                    "x1": 225000,
-                    "x2": 235800,
+                    "x1": 142200,
+                    "x2": 153000,
                     "y1": 95300,
                     "y2": 98300
                 },
@@ -55082,8 +55082,8 @@
                     "net": "",
                     "pinLayer": "M1_pin",
                     "spicePort": true,
-                    "x1": 268200,
-                    "x2": 279000,
+                    "x1": 351000,
+                    "x2": 361800,
                     "y1": 95300,
                     "y2": 98300
                 },
@@ -55094,8 +55094,8 @@
                     "net": "",
                     "pinLayer": "M1_pin",
                     "spicePort": true,
-                    "x1": 477000,
-                    "x2": 487800,
+                    "x1": 394200,
+                    "x2": 405000,
                     "y1": 95300,
                     "y2": 98300
                 },
@@ -55106,8 +55106,8 @@
                     "net": "",
                     "pinLayer": "M1_pin",
                     "spicePort": true,
-                    "x1": 520200,
-                    "x2": 531000,
+                    "x1": 603000,
+                    "x2": 613800,
                     "y1": 95300,
                     "y2": 98300
                 },
@@ -55118,8 +55118,8 @@
                     "net": "",
                     "pinLayer": "M1_pin",
                     "spicePort": true,
-                    "x1": 729000,
-                    "x2": 739800,
+                    "x1": 646200,
+                    "x2": 657000,
                     "y1": 95300,
                     "y2": 98300
                 },
@@ -55130,8 +55130,8 @@
                     "net": "",
                     "pinLayer": "M1_pin",
                     "spicePort": true,
-                    "x1": 772200,
-                    "x2": 783000,
+                    "x1": 855000,
+                    "x2": 865800,
                     "y1": 95300,
                     "y2": 98300
                 },
@@ -55142,8 +55142,8 @@
                     "net": "",
                     "pinLayer": "M1_pin",
                     "spicePort": true,
-                    "x1": 981000,
-                    "x2": 991800,
+                    "x1": 898200,
+                    "x2": 909000,
                     "y1": 95300,
                     "y2": 98300
                 },
@@ -55154,8 +55154,8 @@
                     "net": "",
                     "pinLayer": "M1_pin",
                     "spicePort": true,
-                    "x1": 1024200,
-                    "x2": 1035000,
+                    "x1": 1107000,
+                    "x2": 1117800,
                     "y1": 95300,
                     "y2": 98300
                 },
@@ -55166,8 +55166,8 @@
                     "net": "",
                     "pinLayer": "M1_pin",
                     "spicePort": true,
-                    "x1": 1233000,
-                    "x2": 1243800,
+                    "x1": 1150200,
+                    "x2": 1161000,
                     "y1": 95300,
                     "y2": 98300
                 },
@@ -55178,8 +55178,8 @@
                     "net": "",
                     "pinLayer": "M1_pin",
                     "spicePort": true,
-                    "x1": 1276200,
-                    "x2": 1287000,
+                    "x1": 1359000,
+                    "x2": 1369800,
                     "y1": 95300,
                     "y2": 98300
                 },
@@ -55190,8 +55190,8 @@
                     "net": "",
                     "pinLayer": "M1_pin",
                     "spicePort": true,
-                    "x1": 1485000,
-                    "x2": 1495800,
+                    "x1": 1402200,
+                    "x2": 1413000,
                     "y1": 95300,
                     "y2": 98300
                 }
@@ -57894,7 +57894,7 @@
                         }
                     ],
                     "class": "cIcCore::RouteRing",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -58476,7 +58476,7 @@
                         }
                     ],
                     "class": "cIcCore::RouteRing",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -58834,14 +58834,14 @@
     "info": {
         "--gds": false,
         "--spi": false,
-        "arguments": "/Users/wulff/pro/cic/ciccreator/bin/darwin/cic.app/Contents/MacOS/cic ../cic/ip.json ../cic/sky130.tech SUN_TR_SKY130NM",
+        "arguments": "/mnt/c/Users/cawu/pro/cic/ciccreator/bin/linux/cic ../cic/ip.json ../cic/sky130.tech SUN_TR_SKY130NM",
         "file": "../cic/ip.json",
-        "hash": "0.1.3-13-g538c2b5",
+        "hash": "0.1.0-53-gedefd51",
         "includepaths": "../cic",
         "libpaths": "",
         "library": "SUN_TR_SKY130NM",
         "prefix": "",
         "rules": "../cic/sky130.tech",
-        "version": "0.1.4 built on Tue Aug 9 22:27:57 CEST 2022"
+        "version": "0.1.4 built on Tue Aug 16 16:35:28 CEST 2022"
     }
 }

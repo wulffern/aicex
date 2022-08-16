@@ -1,0 +1,5 @@
+** sch_path:
+*+ /mnt/c/Users/cawu/pro/aicex/ip/sun_pll_sky130nm/work/../design/SUN_PLL_SKY130NM/SUN_PCH.sch
+.subckt SUN_PCH
+.ends
+.end

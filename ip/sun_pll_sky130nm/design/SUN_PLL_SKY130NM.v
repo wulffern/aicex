@@ -93,9 +93,9 @@ endmodule
 // SUN_PLL_DIVN <class 'cicpy.core.layoutcell.LayoutCell'>
 //-------------------------------------------------------------
 module SUN_PLL_DIVN(AVDD,CK_FB,CK,PWRUP_1V8,AVSS);
-input logic PWRUP_1V8;
 input logic AVSS;
 input logic AVDD;
+input logic PWRUP_1V8;
 input logic CK_FB;
 input logic CK;
 SUNTR_DFRNQNX1_CV xc0 (N2,D2,PWRUP_1V8,CK_FB,N2,AVDD,AVSS);
