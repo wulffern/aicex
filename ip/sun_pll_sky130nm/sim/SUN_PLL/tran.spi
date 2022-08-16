@@ -5,12 +5,13 @@
 *----------------------------------------------------------------
 #ifdef Lay
 .include ../../../work/lpe/SUN_PLL_lpe.spi
-#else
 .include ../../../work/lpe/SUN_PLL_LPF_lpe.spi
 .include ../../../work/lpe/SUN_PLL_BUF_lpe.spi
 .include ../../../work/lpe/SUN_PLL_ROSC_lpe.spi
 .include ../../../work/lpe/SUN_PLL_PFD_lpe.spi
 .include ../../../work/lpe/SUN_PLL_CP_lpe.spi
+.include ../../../design/SUN_PLL_SKY130NM.spice
+#else
 .include ../../../design/SUN_PLL_SKY130NM.spice
 #endif
 
