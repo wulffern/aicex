@@ -50,7 +50,7 @@
           "getRuleForHorizontalGrid" : ["M3","cap_width"],
           "getRuleForVerticalGrid" : ["M3","cap_width"],
           "meta" : {
-              "spice" : "C1 A B 5f",
+              "spice" : "C1 A B 100f",
               "symbol" : "cic/cap"
           },
           "afterNew" :{
@@ -582,7 +582,6 @@
               ]
           }
         },
-        {"name": "CAPPH", "class": "cIcCells::PhCapCell"},
         { "name": "SARCMPX1_CV",
           "class" : "Layout::LayoutDigitalCell",
           "description" : "Strong-arm comparator",

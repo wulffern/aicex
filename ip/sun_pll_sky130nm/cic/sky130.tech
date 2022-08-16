@@ -54,7 +54,7 @@
         "VIA3" : { "alias" : "v2","number" : 40, "datatype" : -1, "material" : "cut", "previous" : "M3", "next" : "M4" },
         "VIA4" : { "alias" : "v3","number" : 41, "datatype" : -1, "material" : "cut", "previous" : "M4", "next" : "M5" },
         "VIA5" : { "alias" : "v4","number" : 82, "datatype" : -1, "material" : "cut", "previous" : "M5", "next" : "M6" },
-        "PR" : { "alias" : "","number" : 0, "datatype" : 20 ,"fill" : "nofill","color" : "red"},
+        "PR" : { "alias" : "","number" : 0, "datatype" : 20 , "fill" : "nofill","color" : "red"},
 
         "NW" : { "alias" : "nwell","number" : 21, "datatype" : -1 , "material" : "implant", "color" : "red","fill" : "nofill"},
         "PP" : { "alias" : "pdiff","number" : 31, "datatype" : -1 , "material" : "implant", "color" : "pink","fill" : "nofill"},
@@ -111,7 +111,8 @@
         "symbol_lib" : "cpdk",
         "symbol_libs" : ["../../cpdk/design/cic",
                          "../../cpdk/design/cic_wbulk",
-                         "/Users/wulff/github/skywater-pdk/sky130A/libs.tech/xschem/sky130_fd_pr"
+                         "/Users/wulff/github/skywater-pdk/sky130A/libs.tech/xschem/sky130_fd_pr",
+                         "/mnt/c/pro/github/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr"
                         ]
     },
     "rules" : {

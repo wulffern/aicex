@@ -1,0 +1,33 @@
+v {xschem version=3.0.0 file_version=1.2 }
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname xoffset=@xoffset yoffset=@yoffset angle=@angle "
+template="name=x1 xoffset=0 yoffset=0 angle=0 "
+}
+V {}
+S {}
+E {}
+L 4 -130 -30 30 -30 {}
+L 4 -130 30 30 30 {}
+L 4 -130 -30 -130 30 {}
+L 4 30 -30 30 30 {}
+L 4 -150 -20 -130 -20 {}
+L 4 30 -20 50 -20 {}
+L 4 30 0 50 0 {}
+L 4 -150 0 -130 0 {}
+L 4 -150 20 -130 20 {}
+L 4 30 20 50 20 {}
+B 5 -152.5 -22.5 -147.5 -17.5 {name=AVDD dir=in }
+B 5 47.5 -22.5 52.5 -17.5 {name=KICK dir=out }
+B 5 47.5 -2.5 52.5 2.5 {name=KICK_N dir=out }
+B 5 -152.5 -2.5 -147.5 2.5 {name=PWRUP_1V8 dir=in }
+B 5 -152.5 17.5 -147.5 22.5 {name=AVSS dir=in }
+B 5 47.5 17.5 52.5 22.5 {name=PWRUP_1V8_N dir=out }
+T {@symname} -132 34 0 0 0.3 0.3 {}
+T {@name} 35 -42 0 0 0.2 0.2 {}
+T {AVDD} -125 -24 0 0 0.2 0.2 {}
+T {KICK} 25 -24 0 1 0.2 0.2 {}
+T {KICK_N} 25 -4 0 1 0.2 0.2 {}
+T {PWRUP_1V8} -125 -4 0 0 0.2 0.2 {}
+T {AVSS} -125 16 0 0 0.2 0.2 {}
+T {PWRUP_1V8_N} 25 16 0 1 0.2 0.2 {}

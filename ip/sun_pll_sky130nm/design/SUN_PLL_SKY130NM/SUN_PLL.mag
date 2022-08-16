@@ -1,48 +1,59 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1660163113
+timestamp 1660660914
 << checkpaint >>
-rect 360 -592 42016 29616
+rect -1560 -1920 48004 43024
 << locali >>
-rect 14064 -592 14304 11504
-rect 13680 -208 13920 11120
-rect 17152 852 34792 912
-rect 24412 10266 24628 10326
-rect 32596 1554 32812 1614
-rect 684 322 900 382
+rect 47236 -1392 47476 42496
+rect -1032 -1392 47476 -1152
+rect -1032 42256 47476 42496
+rect -1032 -1392 -792 42496
+rect 47236 -1392 47476 42496
+rect 47764 -1920 48004 43024
+rect -1560 -1920 48004 -1680
+rect -1560 42784 48004 43024
+rect -1560 -1920 -1320 43024
+rect 47764 -1920 48004 43024
+rect 16144 852 28744 912
+rect 39964 26626 40180 26686
+rect 26548 1554 26764 1614
+rect 684 146 900 206
 use SUN_PLL_BUF xb1
-transform 1 0 360 0 1 176
-box 360 176 15072 12272
+transform 1 0 360 0 1 0
+box 360 0 15072 12096
 use SUN_PLL_LPF xb2
-transform 1 0 360 0 1 15792
-box 360 15792 37312 29616
-use SUN_PLL_DIVN xh1
-transform 1 0 17152 0 1 1056
-box 17152 1056 37672 9420
-use SUN_PLL_ROSC xh2
-transform 1 0 17152 0 1 9420
-box 17152 9420 23728 14828
-use SUN_PLL_PFD xj1
-transform 1 0 24088 0 1 9416
-box 24088 9416 28144 15176
-use SUN_PLL_CP xk1
-transform 1 0 28864 0 1 9416
-box 28864 9416 32920 14824
-use SUN_PLL_BIAS xm1
-transform 1 0 37960 0 1 0
-box 37960 0 42016 20192
+transform 1 0 360 0 1 12976
+box 360 12976 39904 41104
+use SUN_PLL_DIVN xc1
+transform 1 0 16144 0 1 1056
+box 16144 1056 31624 9420
+use SUN_PLL_ROSC xd1
+transform 1 0 31624 0 1 0
+box 31624 0 38200 5408
+use SUN_PLL_KICK xk1
+transform 1 0 39640 0 1 0
+box 39640 0 43696 14208
+use SUN_PLL_CP xk2
+transform 1 0 39640 0 1 15088
+box 39640 15088 44056 25776
+use SUN_PLL_PFD xk3
+transform 1 0 39640 0 1 25776
+box 39640 25776 43696 31536
+use SUN_PLL_BIAS xl1
+transform 1 0 44056 0 1 0
+box 44056 0 46084 18720
 << labels >>
-flabel locali s 14064 -592 14304 11504 0 FreeSans 400 0 0 0 AVDD
-port 1 nsew
-flabel locali s 13680 -208 13920 11120 0 FreeSans 400 0 0 0 AVSS
+flabel locali s 47236 -1392 47476 42496 0 FreeSans 400 0 0 0 AVSS
 port 2 nsew
-flabel locali s 17152 852 34792 912 0 FreeSans 400 0 0 0 PWRUP_1V8
+flabel locali s 47764 -1920 48004 43024 0 FreeSans 400 0 0 0 AVDD
+port 1 nsew
+flabel locali s 16144 852 28744 912 0 FreeSans 400 0 0 0 PWRUP_1V8
 port 3 nsew
-flabel locali s 24412 10266 24628 10326 0 FreeSans 400 0 0 0 CK_REF
+flabel locali s 39964 26626 40180 26686 0 FreeSans 400 0 0 0 CK_REF
 port 4 nsew
-flabel locali s 32596 1554 32812 1614 0 FreeSans 400 0 0 0 CK
+flabel locali s 26548 1554 26764 1614 0 FreeSans 400 0 0 0 CK
 port 5 nsew
-flabel locali s 684 322 900 382 0 FreeSans 400 0 0 0 IBPSR_1U
+flabel locali s 684 146 900 206 0 FreeSans 400 0 0 0 IBPSR_1U
 port 6 nsew
 << end >>

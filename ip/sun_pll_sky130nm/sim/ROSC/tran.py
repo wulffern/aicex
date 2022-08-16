@@ -37,6 +37,8 @@ def main(fname):
             if(re.search("No. of Data Rows",l)):
                 analysis = True
 
+
+    
     df = pd.DataFrame(data)
     df.to_csv(fname + ".csv")
 

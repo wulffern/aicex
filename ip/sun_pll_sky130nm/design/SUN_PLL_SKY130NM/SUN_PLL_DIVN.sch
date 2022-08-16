@@ -4,7 +4,7 @@ K {}
 V {}
 S {}
 E {}
-T {Divide by 128} -350 250 0 0 2 2 {}
+T {Divide by 32} -350 250 0 0 2 2 {}
 N -400 -510 -400 -470 {
 lab=AVDD}
 N -400 -350 -400 -310 {
@@ -79,44 +79,14 @@ N -500 -80 -470 -80 {
 lab=N2}
 N -500 -20 -470 -20 {
 lab=D2}
-N -370 -80 -340 -80 {
-lab=D1}
 N -370 -20 -340 -20 {
 lab=N2}
 N -440 50 -440 90 {
 lab=PWRUP_1V8}
-N -70 -140 -70 -100 {
-lab=AVDD}
-N -70 20 -70 60 {
-lab=AVSS}
-N -100 20 -100 60 {
-lab=PWRUP_1V8}
-N -160 -70 -130 -70 {
-lab=N1}
-N -160 -10 -130 -10 {
-lab=D1}
-N -30 -70 0 -70 {
-lab=D0}
-N -30 -10 0 -10 {
-lab=N1}
-N -100 60 -100 100 {
-lab=PWRUP_1V8}
-N 220 -140 220 -100 {
-lab=AVDD}
-N 220 20 220 60 {
-lab=AVSS}
-N 190 20 190 60 {
-lab=PWRUP_1V8}
-N 130 -70 160 -70 {
-lab=N0}
-N 130 -10 160 -10 {
-lab=D0}
-N 260 -70 290 -70 {
+N -370 -80 -340 -80 {
 lab=CK_FB}
-N 260 -10 290 -10 {
-lab=N0}
-N 190 60 190 100 {
-lab=PWRUP_1V8}
+N -370 -80 -340 -80 {
+lab=CK_FB}
 C {devices/lab_pin.sym} -400 -510 0 0 {name=l1 sig_type=std_logic lab=AVDD}
 C {devices/lab_pin.sym} -400 -310 2 0 {name=l2 sig_type=std_logic lab=AVSS}
 C {devices/ipin.sym} -630 40 0 0 {name=p1 lab=PWRUP_1V8}
@@ -161,23 +131,7 @@ C {devices/lab_pin.sym} -410 -150 0 0 {name=l29 sig_type=std_logic lab=AVDD}
 C {devices/lab_pin.sym} -410 50 2 0 {name=l30 sig_type=std_logic lab=AVSS}
 C {devices/lab_pin.sym} -500 -20 0 0 {name=l31 sig_type=std_logic lab=D2}
 C {devices/lab_pin.sym} -500 -80 0 0 {name=l32 sig_type=std_logic lab=N2}
-C {devices/lab_pin.sym} -340 -80 2 0 {name=l33 sig_type=std_logic lab=D1}
 C {devices/lab_pin.sym} -340 -20 2 0 {name=l34 sig_type=std_logic lab=N2}
 C {SUN_TR_SKY130NM/SUNTR_DFRNQNX1_CV.sym} -470 -20 0 0 {name=xc}
 C {devices/lab_pin.sym} -440 90 2 0 {name=l35 sig_type=std_logic lab=PWRUP_1V8}
-C {devices/lab_pin.sym} -70 -140 0 0 {name=l36 sig_type=std_logic lab=AVDD}
-C {devices/lab_pin.sym} -70 60 2 0 {name=l37 sig_type=std_logic lab=AVSS}
-C {devices/lab_pin.sym} -160 -10 0 0 {name=l38 sig_type=std_logic lab=D1}
-C {devices/lab_pin.sym} -160 -70 0 0 {name=l39 sig_type=std_logic lab=N1}
-C {devices/lab_pin.sym} 0 -70 2 0 {name=l40 sig_type=std_logic lab=D0}
-C {devices/lab_pin.sym} 0 -10 2 0 {name=l41 sig_type=std_logic lab=N1}
-C {SUN_TR_SKY130NM/SUNTR_DFRNQNX1_CV.sym} -130 -10 0 0 {name=xb}
-C {devices/lab_pin.sym} -100 100 2 0 {name=l42 sig_type=std_logic lab=PWRUP_1V8}
-C {devices/lab_pin.sym} 220 -140 0 0 {name=l43 sig_type=std_logic lab=AVDD}
-C {devices/lab_pin.sym} 220 60 2 0 {name=l44 sig_type=std_logic lab=AVSS}
-C {devices/lab_pin.sym} 130 -10 0 0 {name=l45 sig_type=std_logic lab=D0}
-C {devices/lab_pin.sym} 130 -70 0 0 {name=l46 sig_type=std_logic lab=N0}
-C {devices/lab_pin.sym} 290 -70 2 0 {name=l47 sig_type=std_logic lab=CK_FB}
-C {devices/lab_pin.sym} 290 -10 2 0 {name=l48 sig_type=std_logic lab=N0}
-C {SUN_TR_SKY130NM/SUNTR_DFRNQNX1_CV.sym} 160 -10 0 0 {name=xa}
-C {devices/lab_pin.sym} 190 100 2 0 {name=l49 sig_type=std_logic lab=PWRUP_1V8}
+C {devices/lab_pin.sym} -340 -80 2 0 {name=l50 sig_type=std_logic lab=CK_FB}
