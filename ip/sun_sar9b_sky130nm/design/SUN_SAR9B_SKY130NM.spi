@@ -24,15 +24,15 @@ XMM1 D G S B sky130_fd_pr__nfet_01v8  l=0.18  nf=1  w=1.08
 * SUNSAR_RM1 <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
 .SUBCKT SUNSAR_RM1 A B
-RR1 A B sky130_fd_pr__res_generic_m1  l=0.3  w=0.38  
+RR1 A B sky130_fd_pr__res_generic_l1  l=0.3  w=0.38  
 .ENDS
 
 *-------------------------------------------------------------
 * SUNSAR_CAP_BSSW_CV <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
 .SUBCKT SUNSAR_CAP_BSSW_CV A B
-RR1 A NC0 sky130_fd_pr__res_generic_m1  l=0.36  w=0.44  
-RR2 B NC1 sky130_fd_pr__res_generic_m1  l=0.36  w=0.44  
+RR1 A NC0 sky130_fd_pr__res_generic_m3  l=0.36  w=0.44  
+RR2 B NC1 sky130_fd_pr__res_generic_m3  l=0.36  w=0.44  
 .ENDS
 
 *-------------------------------------------------------------

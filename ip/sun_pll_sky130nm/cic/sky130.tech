@@ -111,7 +111,8 @@
         "symbol_lib" : "cpdk",
         "symbol_libs" : ["../../cpdk/design/cic",
                          "../../cpdk/design/cic_wbulk",
-                         "/Users/wulff/github/skywater-pdk/sky130A/libs.tech/xschem/sky130_fd_pr"
+                         "/Users/wulff/github/skywater-pdk/sky130A/libs.tech/xschem/sky130_fd_pr",
+                         "/mnt/c/pro/github/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr"
                         ]
     },
     "rules" : {

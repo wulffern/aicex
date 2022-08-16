@@ -16,6 +16,8 @@
 .include ../../../design/SUN_PLL_SKY130NM.spice
 #else
 .include ../../../design/SUN_PLL_SKY130NM.spice
+#else
+.include ../../../design/SUN_PLL_SKY130NM.spice
 #endif
 
 *-----------------------------------------------------------------

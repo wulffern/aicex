@@ -582,7 +582,6 @@
               ]
           }
         },
-        {"name": "CAPPH", "class": "cIcCells::PhCapCell"},
         { "name": "SARCMPX1_CV",
           "class" : "Layout::LayoutDigitalCell",
           "description" : "Strong-arm comparator",
