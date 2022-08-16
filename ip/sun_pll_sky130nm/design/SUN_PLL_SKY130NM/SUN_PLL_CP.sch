@@ -106,7 +106,7 @@ lab=LPFZ}
 N -210 230 240 230 {
 lab=KICK}
 C {SUN_TR_SKY130NM/SUNTR_PCHDLCM.sym} 90 -170 0 0 {name=xb2 xoffset=0 yoffset=0 angle=0 M=1}
-C {SUN_TR_SKY130NM/SUNTR_PCHDLCM.sym} -20 -170 0 1 {name=xb1 xoffset=0 yoffset=0 angle=0 M=1}
+C {SUN_TR_SKY130NM/SUNTR_PCHDLCM.sym} -20 -170 0 1 {name=xb1 xoffset=5 yoffset=0 angle=0 M=1}
 C {SUN_TR_SKY130NM/SUNTR_PCHDL.sym} 90 30 0 0 {name=xb3 xoffset=0 yoffset=0 angle=0 M=1}
 C {SUN_TR_SKY130NM/SUNTR_NCHDL.sym} 90 180 0 0 {name=xa3 xoffset=0 yoffset=0 angle=0 M=1}
 C {SUN_TR_SKY130NM/SUNTR_NCHDLCM.sym} 90 320 0 0 {name=xa2 xoffset=0 yoffset=0 angle=0 M=1}

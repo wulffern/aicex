@@ -10,13 +10,10 @@ endmodule
 //-------------------------------------------------------------
 // SUN_PLL_BIAS <class 'cicpy.core.layoutcell.LayoutCell'>
 //-------------------------------------------------------------
-module SUN_PLL_BIAS(IBPSR_1U,AVDD,PWRUP_1V8,AVSS);
+module SUN_PLL_BIAS(IBPSR_1U,PWRUP_1V8_N,AVSS);
 input logic AVSS;
-input logic AVDD;
 input logic IBPSR_1U;
-input logic PWRUP_1V8;
-SUNTR_TAPCELLB_CV xa00 (AVDD,AVSS);
-SUNTR_IVX1_CV xa10 (PWRUP_1V8,PWRUP_1V8_N,AVDD,AVSS);
+input logic PWRUP_1V8_N;
 SUNTR_NCHDL xa20 (IBPSR_1U,PWRUP_1V8_N,AVSS,AVSS);
 SUNTR_NCHDLCM xa30 (IBPSR_1U,IBPSR_1U,AVSS,AVSS);
 SUNTR_NCHDLCM xa31 (IBPSR_1U,IBPSR_1U,AVSS,AVSS);
@@ -172,15 +169,16 @@ endmodule
 //-------------------------------------------------------------
 // SUN_PLL_KICK <class 'cicpy.core.layoutcell.LayoutCell'>
 //-------------------------------------------------------------
-module SUN_PLL_KICK(AVDD,KICK,KICK_N,PWRUP_1V8,AVSS);
+module SUN_PLL_KICK(AVDD,KICK,KICK_N,PWRUP_1V8,AVSS,PWRUP_1V8_N);
 input logic AVSS;
 input logic AVDD;
 input logic KICK;
 input logic KICK_N;
 input logic PWRUP_1V8;
+input logic PWRUP_1V8_N;
 SUNTR_TAPCELLB_CV xa1a0 (AVDD,AVSS);
-SUNTR_IVX1_CV xa1b0 (PWRUP_1V8,N0,AVDD,AVSS);
-SUNTR_IVX1_CV xa1c0 (N0,N1,AVDD,AVSS);
+SUNTR_IVX1_CV xa1b0 (PWRUP_1V8,PWRUP_1V8_N,AVDD,AVSS);
+SUNTR_IVX1_CV xa1c0 (PWRUP_1V8_N,N1,AVDD,AVSS);
 SUNTR_IVX8_CV xa1d0 (N1,__UNCONNECTED_PIN__1,AVDD,AVSS);
 SUNTR_IVX1_CV xa20 (N1,N2,AVDD,AVSS);
 SUNTR_IVX1_CV xa3a0 (N2,N3,AVDD,AVSS);
@@ -190,7 +188,7 @@ SUNTR_IVX1_CV xa5a0 (N4,N5,AVDD,AVSS);
 SUNTR_IVX8_CV xa5b0 (N5,__UNCONNECTED_PIN__3,AVDD,AVSS);
 SUNTR_IVX1_CV xa60 (N5,N6,AVDD,AVSS);
 SUNTR_IVX1_CV xa70 (N6,N7,AVDD,AVSS);
-SUNTR_NRX1_CV xa80 (N0,N7,KICK,AVDD,AVSS);
+SUNTR_NRX1_CV xa80 (PWRUP_1V8_N,N7,KICK,AVDD,AVSS);
 SUNTR_IVX1_CV xa90 (KICK,KICK_N,AVDD,AVSS);
 endmodule
 
@@ -242,18 +240,18 @@ endmodule
 // SUN_PLL <class 'cicpy.core.layoutcell.LayoutCell'>
 //-------------------------------------------------------------
 module SUN_PLL(AVDD,AVSS,PWRUP_1V8,CK_REF,CK,IBPSR_1U);
-input logic AVDD;
 input logic AVSS;
+input logic AVDD;
 input logic PWRUP_1V8;
 input logic CK_REF;
 input logic CK;
 input logic IBPSR_1U;
-SUN_PLL_KICK x1 (AVDD,KICK,__UNCONNECTED_PIN__0,PWRUP_1V8,AVSS);
-SUN_PLL_BIAS x2 (IBPSR_1U,AVDD,PWRUP_1V8,AVSS);
 SUN_PLL_BUF xb1 (AVDD,VDD_ROSC,VLPF,VDD_ROSC,IBPSR_1U,AVSS);
 SUN_PLL_LPF xb2 (VLPFZ,AVSS,VLPF);
-SUN_PLL_DIVN xh1 (AVDD,CK_FB,CK,PWRUP_1V8,AVSS);
-SUN_PLL_ROSC xh2 (AVDD,CK,VDD_ROSC,PWRUP_1V8,AVSS);
-SUN_PLL_PFD xj1 (AVDD,CP_UP_N,CK_REF,CP_DOWN,CK_FB,AVSS);
-SUN_PLL_CP xk1 (AVDD,CP_UP_N,VLPF,CP_DOWN,IBPSR_1U,AVSS,VLPFZ,PWRUP_1V8,KICK);
+SUN_PLL_DIVN xc1 (AVDD,CK_FB,CK,PWRUP_1V8,AVSS);
+SUN_PLL_ROSC xd1 (AVDD,CK,VDD_ROSC,PWRUP_1V8,AVSS);
+SUN_PLL_KICK xk1 (AVDD,KICK,__UNCONNECTED_PIN__0,PWRUP_1V8,AVSS,PWRUP_1V8_N);
+SUN_PLL_CP xk2 (AVDD,CP_UP_N,VLPF,CP_DOWN,IBPSR_1U,AVSS,VLPFZ,PWRUP_1V8,KICK);
+SUN_PLL_PFD xk3 (AVDD,CP_UP_N,CK_REF,CP_DOWN,CK_FB,AVSS);
+SUN_PLL_BIAS xl1 (IBPSR_1U,PWRUP_1V8_N,AVSS);
 endmodule

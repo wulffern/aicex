@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1660244192
+timestamp 1660305041
 << checkpaint >>
 rect -768 -768 3288 13440
 << m3 >>
@@ -26,10 +26,6 @@ rect -768 -768 3288 -528
 rect -768 13200 3288 13440
 rect -768 -768 -528 13440
 rect 3048 -768 3288 13440
-rect 480 790 600 850
-rect 600 586 864 646
-rect 600 586 660 850
-rect 432 850 540 910
 rect 480 1142 600 1202
 rect 600 938 864 998
 rect 432 4018 600 4078
@@ -64,14 +60,11 @@ rect 432 12114 540 12174
 rect 756 12026 972 12086
 rect 756 12554 972 12614
 rect 324 498 540 558
+rect 756 586 972 646
 << m1 >>
 rect 432 12466 600 12526
 rect 600 12026 864 12086
 rect 600 12026 660 12534
-rect 204 850 432 910
-rect 204 586 864 646
-rect 204 11762 432 11822
-rect 204 586 264 11830
 use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_TAPCELLB_CV xa1a0
 transform 1 0 0 0 1 0
 box 0 0 2520 352
@@ -144,15 +137,6 @@ box 324 12466 508 12534
 use cut_M1M2_2x1 
 transform 1 0 756 0 1 12026
 box 756 12026 940 12094
-use cut_M1M2_2x1 
-transform 1 0 324 0 1 850
-box 324 850 508 918
-use cut_M1M2_2x1 
-transform 1 0 756 0 1 586
-box 756 586 940 654
-use cut_M1M2_2x1 
-transform 1 0 324 0 1 11762
-box 324 11762 508 11830
 << labels >>
 flabel m3 s 756 -768 956 13440 0 FreeSans 400 0 0 0 AVSS
 port 5 nsew
@@ -164,4 +148,6 @@ flabel locali s 756 12554 972 12614 0 FreeSans 400 0 0 0 KICK_N
 port 3 nsew
 flabel locali s 324 498 540 558 0 FreeSans 400 0 0 0 PWRUP_1V8
 port 4 nsew
+flabel locali s 756 586 972 646 0 FreeSans 400 0 0 0 PWRUP_1V8_N
+port 6 nsew
 << end >>

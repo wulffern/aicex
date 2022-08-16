@@ -54,6 +54,7 @@ PDKPATH=${PDK_ROOT}/sky130A
 
 CICEXCLUDE?=""
 CIC=${HOME}/pro/cic/ciccreator/bin/cic
+CICGUI=${HOME}/pro/cic/ciccreator/bin/cic-gui
 CICPY = python3 ${HOME}/pro/cicpy/cicpy/cic.py
 CICVIEWS =  --spice --verilog --xschem --magic
 
@@ -61,6 +62,9 @@ CICVIEWS =  --spice --verilog --xschem --magic
 ip:
 	cd ${BUILD};${CIC} --nogds  --I ../cic ../cic/ip.json  ../cic/sky130.tech ${LIB} ${CICOPT}
 	cd ${BUILD}; ${CICPY}  transpile ${LIB}.cic ../cic/sky130.tech ${LIB}  ${CICVIEWS} --smash "(P|N)CHIOA" --exclude ${CICEXCLUDE}
+
+view:
+	cd ${BUILD}; ${CICGUI} ${LIB}.cic ../cic/sky130.tech
 
 gds:
 	@echo "load ${NCELL}.mag\ncalma write gds/${PRCELL}.gds \nquit" > gds/${PRCELL}.tcl
