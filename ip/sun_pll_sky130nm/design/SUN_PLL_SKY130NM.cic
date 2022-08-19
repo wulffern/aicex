@@ -29215,122 +29215,6 @@
                                     "x1": 37800,
                                     "x2": 48600,
                                     "y1": -19200,
-                                    "y2": 5900
-                                },
-                                {
-                                    "class": "Text",
-                                    "layer": "TXT",
-                                    "name": "AVSS",
-                                    "net": "",
-                                    "x1": 37800,
-                                    "x2": 37800,
-                                    "y1": 2900,
-                                    "y2": 2900
-                                }
-                            ],
-                            "class": "cIcCore::Route",
-                            "has_pr": true,
-                            "layer": "PR",
-                            "libcell": false,
-                            "libpath": "",
-                            "meta": {
-                            },
-                            "name": "AVSS",
-                            "net": "",
-                            "physicalOnly": false,
-                            "x1": 37800,
-                            "x2": 48600,
-                            "y1": -19200,
-                            "y2": 5900
-                        },
-                        {
-                            "abstract": false,
-                            "boundaryIgnoreRouting": false,
-                            "cellused": true,
-                            "children": [
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M4_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M4_2x1",
-                                    "net": "",
-                                    "x1": -5000,
-                                    "x2": 5000,
-                                    "xcell": 0,
-                                    "y1": -19200,
-                                    "y2": -15400,
-                                    "ycell": 0
-                                },
-                                {
-                                    "class": "Rect",
-                                    "layer": "M4",
-                                    "net": "",
-                                    "x1": -5400,
-                                    "x2": 5400,
-                                    "y1": -19200,
-                                    "y2": 11000
-                                },
-                                {
-                                    "class": "Text",
-                                    "layer": "TXT",
-                                    "name": "AVSS",
-                                    "net": "",
-                                    "x1": -5400,
-                                    "x2": -5400,
-                                    "y1": 6600,
-                                    "y2": 6600
-                                }
-                            ],
-                            "class": "cIcCore::Route",
-                            "has_pr": true,
-                            "layer": "PR",
-                            "libcell": false,
-                            "libpath": "",
-                            "meta": {
-                            },
-                            "name": "AVSS",
-                            "net": "",
-                            "physicalOnly": false,
-                            "x1": -5400,
-                            "x2": 5400,
-                            "y1": -19200,
-                            "y2": 11000
-                        },
-                        {
-                            "abstract": false,
-                            "boundaryIgnoreRouting": false,
-                            "cellused": true,
-                            "children": [
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M4_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M4_2x1",
-                                    "net": "",
-                                    "x1": 38200,
-                                    "x2": 48200,
-                                    "xcell": 0,
-                                    "y1": -19200,
-                                    "y2": -15400,
-                                    "ycell": 0
-                                },
-                                {
-                                    "class": "Rect",
-                                    "layer": "M4",
-                                    "net": "",
-                                    "x1": 37800,
-                                    "x2": 48600,
-                                    "y1": -19200,
                                     "y2": 23500
                                 },
                                 {
@@ -29416,238 +29300,6 @@
                             "x2": 5400,
                             "y1": -19200,
                             "y2": 28600
-                        },
-                        {
-                            "abstract": false,
-                            "boundaryIgnoreRouting": false,
-                            "cellused": true,
-                            "children": [
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M4_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M4_2x1",
-                                    "net": "",
-                                    "x1": 38200,
-                                    "x2": 48200,
-                                    "xcell": 0,
-                                    "y1": -19200,
-                                    "y2": -15400,
-                                    "ycell": 0
-                                },
-                                {
-                                    "class": "Rect",
-                                    "layer": "M4",
-                                    "net": "",
-                                    "x1": 37800,
-                                    "x2": 48600,
-                                    "y1": -19200,
-                                    "y2": 23500
-                                },
-                                {
-                                    "class": "Text",
-                                    "layer": "TXT",
-                                    "name": "AVSS",
-                                    "net": "",
-                                    "x1": 37800,
-                                    "x2": 37800,
-                                    "y1": 20500,
-                                    "y2": 20500
-                                }
-                            ],
-                            "class": "cIcCore::Route",
-                            "has_pr": true,
-                            "layer": "PR",
-                            "libcell": false,
-                            "libpath": "",
-                            "meta": {
-                            },
-                            "name": "AVSS",
-                            "net": "",
-                            "physicalOnly": false,
-                            "x1": 37800,
-                            "x2": 48600,
-                            "y1": -19200,
-                            "y2": 23500
-                        },
-                        {
-                            "abstract": false,
-                            "boundaryIgnoreRouting": false,
-                            "cellused": true,
-                            "children": [
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M4_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M4_2x1",
-                                    "net": "",
-                                    "x1": -5000,
-                                    "x2": 5000,
-                                    "xcell": 0,
-                                    "y1": -19200,
-                                    "y2": -15400,
-                                    "ycell": 0
-                                },
-                                {
-                                    "class": "Rect",
-                                    "layer": "M4",
-                                    "net": "",
-                                    "x1": -5400,
-                                    "x2": 5400,
-                                    "y1": -19200,
-                                    "y2": 28600
-                                },
-                                {
-                                    "class": "Text",
-                                    "layer": "TXT",
-                                    "name": "AVSS",
-                                    "net": "",
-                                    "x1": -5400,
-                                    "x2": -5400,
-                                    "y1": 24200,
-                                    "y2": 24200
-                                }
-                            ],
-                            "class": "cIcCore::Route",
-                            "has_pr": true,
-                            "layer": "PR",
-                            "libcell": false,
-                            "libpath": "",
-                            "meta": {
-                            },
-                            "name": "AVSS",
-                            "net": "",
-                            "physicalOnly": false,
-                            "x1": -5400,
-                            "x2": 5400,
-                            "y1": -19200,
-                            "y2": 28600
-                        },
-                        {
-                            "abstract": false,
-                            "boundaryIgnoreRouting": false,
-                            "cellused": true,
-                            "children": [
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M4_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M4_2x1",
-                                    "net": "",
-                                    "x1": 38200,
-                                    "x2": 48200,
-                                    "xcell": 0,
-                                    "y1": -19200,
-                                    "y2": -15400,
-                                    "ycell": 0
-                                },
-                                {
-                                    "class": "Rect",
-                                    "layer": "M4",
-                                    "net": "",
-                                    "x1": 37800,
-                                    "x2": 48600,
-                                    "y1": -19200,
-                                    "y2": 111500
-                                },
-                                {
-                                    "class": "Text",
-                                    "layer": "TXT",
-                                    "name": "AVSS",
-                                    "net": "",
-                                    "x1": 37800,
-                                    "x2": 37800,
-                                    "y1": 108500,
-                                    "y2": 108500
-                                }
-                            ],
-                            "class": "cIcCore::Route",
-                            "has_pr": true,
-                            "layer": "PR",
-                            "libcell": false,
-                            "libpath": "",
-                            "meta": {
-                            },
-                            "name": "AVSS",
-                            "net": "",
-                            "physicalOnly": false,
-                            "x1": 37800,
-                            "x2": 48600,
-                            "y1": -19200,
-                            "y2": 111500
-                        },
-                        {
-                            "abstract": false,
-                            "boundaryIgnoreRouting": false,
-                            "cellused": true,
-                            "children": [
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M4_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M4_2x1",
-                                    "net": "",
-                                    "x1": -5000,
-                                    "x2": 5000,
-                                    "xcell": 0,
-                                    "y1": -19200,
-                                    "y2": -15400,
-                                    "ycell": 0
-                                },
-                                {
-                                    "class": "Rect",
-                                    "layer": "M4",
-                                    "net": "",
-                                    "x1": -5400,
-                                    "x2": 5400,
-                                    "y1": -19200,
-                                    "y2": 116600
-                                },
-                                {
-                                    "class": "Text",
-                                    "layer": "TXT",
-                                    "name": "AVSS",
-                                    "net": "",
-                                    "x1": -5400,
-                                    "x2": -5400,
-                                    "y1": 112200,
-                                    "y2": 112200
-                                }
-                            ],
-                            "class": "cIcCore::Route",
-                            "has_pr": true,
-                            "layer": "PR",
-                            "libcell": false,
-                            "libpath": "",
-                            "meta": {
-                            },
-                            "name": "AVSS",
-                            "net": "",
-                            "physicalOnly": false,
-                            "x1": -5400,
-                            "x2": 5400,
-                            "y1": -19200,
-                            "y2": 116600
                         },
                         {
                             "abstract": false,
@@ -29911,122 +29563,6 @@
                                     "x1": 37800,
                                     "x2": 48600,
                                     "y1": -19200,
-                                    "y2": 199500
-                                },
-                                {
-                                    "class": "Text",
-                                    "layer": "TXT",
-                                    "name": "AVSS",
-                                    "net": "",
-                                    "x1": 37800,
-                                    "x2": 37800,
-                                    "y1": 196500,
-                                    "y2": 196500
-                                }
-                            ],
-                            "class": "cIcCore::Route",
-                            "has_pr": true,
-                            "layer": "PR",
-                            "libcell": false,
-                            "libpath": "",
-                            "meta": {
-                            },
-                            "name": "AVSS",
-                            "net": "",
-                            "physicalOnly": false,
-                            "x1": 37800,
-                            "x2": 48600,
-                            "y1": -19200,
-                            "y2": 199500
-                        },
-                        {
-                            "abstract": false,
-                            "boundaryIgnoreRouting": false,
-                            "cellused": true,
-                            "children": [
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M4_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M4_2x1",
-                                    "net": "",
-                                    "x1": -5000,
-                                    "x2": 5000,
-                                    "xcell": 0,
-                                    "y1": -19200,
-                                    "y2": -15400,
-                                    "ycell": 0
-                                },
-                                {
-                                    "class": "Rect",
-                                    "layer": "M4",
-                                    "net": "",
-                                    "x1": -5400,
-                                    "x2": 5400,
-                                    "y1": -19200,
-                                    "y2": 204600
-                                },
-                                {
-                                    "class": "Text",
-                                    "layer": "TXT",
-                                    "name": "AVSS",
-                                    "net": "",
-                                    "x1": -5400,
-                                    "x2": -5400,
-                                    "y1": 200200,
-                                    "y2": 200200
-                                }
-                            ],
-                            "class": "cIcCore::Route",
-                            "has_pr": true,
-                            "layer": "PR",
-                            "libcell": false,
-                            "libpath": "",
-                            "meta": {
-                            },
-                            "name": "AVSS",
-                            "net": "",
-                            "physicalOnly": false,
-                            "x1": -5400,
-                            "x2": 5400,
-                            "y1": -19200,
-                            "y2": 204600
-                        },
-                        {
-                            "abstract": false,
-                            "boundaryIgnoreRouting": false,
-                            "cellused": true,
-                            "children": [
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M4_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M4_2x1",
-                                    "net": "",
-                                    "x1": 38200,
-                                    "x2": 48200,
-                                    "xcell": 0,
-                                    "y1": -19200,
-                                    "y2": -15400,
-                                    "ycell": 0
-                                },
-                                {
-                                    "class": "Rect",
-                                    "layer": "M4",
-                                    "net": "",
-                                    "x1": 37800,
-                                    "x2": 48600,
-                                    "y1": -19200,
                                     "y2": 287500
                                 },
                                 {
@@ -30112,238 +29648,6 @@
                             "x2": 5400,
                             "y1": -19200,
                             "y2": 292600
-                        },
-                        {
-                            "abstract": false,
-                            "boundaryIgnoreRouting": false,
-                            "cellused": true,
-                            "children": [
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M4_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M4_2x1",
-                                    "net": "",
-                                    "x1": 38200,
-                                    "x2": 48200,
-                                    "xcell": 0,
-                                    "y1": -19200,
-                                    "y2": -15400,
-                                    "ycell": 0
-                                },
-                                {
-                                    "class": "Rect",
-                                    "layer": "M4",
-                                    "net": "",
-                                    "x1": 37800,
-                                    "x2": 48600,
-                                    "y1": -19200,
-                                    "y2": 287500
-                                },
-                                {
-                                    "class": "Text",
-                                    "layer": "TXT",
-                                    "name": "AVSS",
-                                    "net": "",
-                                    "x1": 37800,
-                                    "x2": 37800,
-                                    "y1": 284500,
-                                    "y2": 284500
-                                }
-                            ],
-                            "class": "cIcCore::Route",
-                            "has_pr": true,
-                            "layer": "PR",
-                            "libcell": false,
-                            "libpath": "",
-                            "meta": {
-                            },
-                            "name": "AVSS",
-                            "net": "",
-                            "physicalOnly": false,
-                            "x1": 37800,
-                            "x2": 48600,
-                            "y1": -19200,
-                            "y2": 287500
-                        },
-                        {
-                            "abstract": false,
-                            "boundaryIgnoreRouting": false,
-                            "cellused": true,
-                            "children": [
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M4_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M4_2x1",
-                                    "net": "",
-                                    "x1": -5000,
-                                    "x2": 5000,
-                                    "xcell": 0,
-                                    "y1": -19200,
-                                    "y2": -15400,
-                                    "ycell": 0
-                                },
-                                {
-                                    "class": "Rect",
-                                    "layer": "M4",
-                                    "net": "",
-                                    "x1": -5400,
-                                    "x2": 5400,
-                                    "y1": -19200,
-                                    "y2": 292600
-                                },
-                                {
-                                    "class": "Text",
-                                    "layer": "TXT",
-                                    "name": "AVSS",
-                                    "net": "",
-                                    "x1": -5400,
-                                    "x2": -5400,
-                                    "y1": 288200,
-                                    "y2": 288200
-                                }
-                            ],
-                            "class": "cIcCore::Route",
-                            "has_pr": true,
-                            "layer": "PR",
-                            "libcell": false,
-                            "libpath": "",
-                            "meta": {
-                            },
-                            "name": "AVSS",
-                            "net": "",
-                            "physicalOnly": false,
-                            "x1": -5400,
-                            "x2": 5400,
-                            "y1": -19200,
-                            "y2": 292600
-                        },
-                        {
-                            "abstract": false,
-                            "boundaryIgnoreRouting": false,
-                            "cellused": true,
-                            "children": [
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M4_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M4_2x1",
-                                    "net": "",
-                                    "x1": 38200,
-                                    "x2": 48200,
-                                    "xcell": 0,
-                                    "y1": -19200,
-                                    "y2": -15400,
-                                    "ycell": 0
-                                },
-                                {
-                                    "class": "Rect",
-                                    "layer": "M4",
-                                    "net": "",
-                                    "x1": 37800,
-                                    "x2": 48600,
-                                    "y1": -19200,
-                                    "y2": 375500
-                                },
-                                {
-                                    "class": "Text",
-                                    "layer": "TXT",
-                                    "name": "AVSS",
-                                    "net": "",
-                                    "x1": 37800,
-                                    "x2": 37800,
-                                    "y1": 372500,
-                                    "y2": 372500
-                                }
-                            ],
-                            "class": "cIcCore::Route",
-                            "has_pr": true,
-                            "layer": "PR",
-                            "libcell": false,
-                            "libpath": "",
-                            "meta": {
-                            },
-                            "name": "AVSS",
-                            "net": "",
-                            "physicalOnly": false,
-                            "x1": 37800,
-                            "x2": 48600,
-                            "y1": -19200,
-                            "y2": 375500
-                        },
-                        {
-                            "abstract": false,
-                            "boundaryIgnoreRouting": false,
-                            "cellused": true,
-                            "children": [
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M4_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M4_2x1",
-                                    "net": "",
-                                    "x1": -5000,
-                                    "x2": 5000,
-                                    "xcell": 0,
-                                    "y1": -19200,
-                                    "y2": -15400,
-                                    "ycell": 0
-                                },
-                                {
-                                    "class": "Rect",
-                                    "layer": "M4",
-                                    "net": "",
-                                    "x1": -5400,
-                                    "x2": 5400,
-                                    "y1": -19200,
-                                    "y2": 380600
-                                },
-                                {
-                                    "class": "Text",
-                                    "layer": "TXT",
-                                    "name": "AVSS",
-                                    "net": "",
-                                    "x1": -5400,
-                                    "x2": -5400,
-                                    "y1": 376200,
-                                    "y2": 376200
-                                }
-                            ],
-                            "class": "cIcCore::Route",
-                            "has_pr": true,
-                            "layer": "PR",
-                            "libcell": false,
-                            "libpath": "",
-                            "meta": {
-                            },
-                            "name": "AVSS",
-                            "net": "",
-                            "physicalOnly": false,
-                            "x1": -5400,
-                            "x2": 5400,
-                            "y1": -19200,
-                            "y2": 380600
                         },
                         {
                             "abstract": false,
@@ -30607,238 +29911,6 @@
                                     "x1": 37800,
                                     "x2": 48600,
                                     "y1": -19200,
-                                    "y2": 463500
-                                },
-                                {
-                                    "class": "Text",
-                                    "layer": "TXT",
-                                    "name": "AVSS",
-                                    "net": "",
-                                    "x1": 37800,
-                                    "x2": 37800,
-                                    "y1": 460500,
-                                    "y2": 460500
-                                }
-                            ],
-                            "class": "cIcCore::Route",
-                            "has_pr": true,
-                            "layer": "PR",
-                            "libcell": false,
-                            "libpath": "",
-                            "meta": {
-                            },
-                            "name": "AVSS",
-                            "net": "",
-                            "physicalOnly": false,
-                            "x1": 37800,
-                            "x2": 48600,
-                            "y1": -19200,
-                            "y2": 463500
-                        },
-                        {
-                            "abstract": false,
-                            "boundaryIgnoreRouting": false,
-                            "cellused": true,
-                            "children": [
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M4_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M4_2x1",
-                                    "net": "",
-                                    "x1": -5000,
-                                    "x2": 5000,
-                                    "xcell": 0,
-                                    "y1": -19200,
-                                    "y2": -15400,
-                                    "ycell": 0
-                                },
-                                {
-                                    "class": "Rect",
-                                    "layer": "M4",
-                                    "net": "",
-                                    "x1": -5400,
-                                    "x2": 5400,
-                                    "y1": -19200,
-                                    "y2": 468600
-                                },
-                                {
-                                    "class": "Text",
-                                    "layer": "TXT",
-                                    "name": "AVSS",
-                                    "net": "",
-                                    "x1": -5400,
-                                    "x2": -5400,
-                                    "y1": 464200,
-                                    "y2": 464200
-                                }
-                            ],
-                            "class": "cIcCore::Route",
-                            "has_pr": true,
-                            "layer": "PR",
-                            "libcell": false,
-                            "libpath": "",
-                            "meta": {
-                            },
-                            "name": "AVSS",
-                            "net": "",
-                            "physicalOnly": false,
-                            "x1": -5400,
-                            "x2": 5400,
-                            "y1": -19200,
-                            "y2": 468600
-                        },
-                        {
-                            "abstract": false,
-                            "boundaryIgnoreRouting": false,
-                            "cellused": true,
-                            "children": [
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M4_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M4_2x1",
-                                    "net": "",
-                                    "x1": 38200,
-                                    "x2": 48200,
-                                    "xcell": 0,
-                                    "y1": -19200,
-                                    "y2": -15400,
-                                    "ycell": 0
-                                },
-                                {
-                                    "class": "Rect",
-                                    "layer": "M4",
-                                    "net": "",
-                                    "x1": 37800,
-                                    "x2": 48600,
-                                    "y1": -19200,
-                                    "y2": 551500
-                                },
-                                {
-                                    "class": "Text",
-                                    "layer": "TXT",
-                                    "name": "AVSS",
-                                    "net": "",
-                                    "x1": 37800,
-                                    "x2": 37800,
-                                    "y1": 548500,
-                                    "y2": 548500
-                                }
-                            ],
-                            "class": "cIcCore::Route",
-                            "has_pr": true,
-                            "layer": "PR",
-                            "libcell": false,
-                            "libpath": "",
-                            "meta": {
-                            },
-                            "name": "AVSS",
-                            "net": "",
-                            "physicalOnly": false,
-                            "x1": 37800,
-                            "x2": 48600,
-                            "y1": -19200,
-                            "y2": 551500
-                        },
-                        {
-                            "abstract": false,
-                            "boundaryIgnoreRouting": false,
-                            "cellused": true,
-                            "children": [
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M4_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M4_2x1",
-                                    "net": "",
-                                    "x1": -5000,
-                                    "x2": 5000,
-                                    "xcell": 0,
-                                    "y1": -19200,
-                                    "y2": -15400,
-                                    "ycell": 0
-                                },
-                                {
-                                    "class": "Rect",
-                                    "layer": "M4",
-                                    "net": "",
-                                    "x1": -5400,
-                                    "x2": 5400,
-                                    "y1": -19200,
-                                    "y2": 556600
-                                },
-                                {
-                                    "class": "Text",
-                                    "layer": "TXT",
-                                    "name": "AVSS",
-                                    "net": "",
-                                    "x1": -5400,
-                                    "x2": -5400,
-                                    "y1": 552200,
-                                    "y2": 552200
-                                }
-                            ],
-                            "class": "cIcCore::Route",
-                            "has_pr": true,
-                            "layer": "PR",
-                            "libcell": false,
-                            "libpath": "",
-                            "meta": {
-                            },
-                            "name": "AVSS",
-                            "net": "",
-                            "physicalOnly": false,
-                            "x1": -5400,
-                            "x2": 5400,
-                            "y1": -19200,
-                            "y2": 556600
-                        },
-                        {
-                            "abstract": false,
-                            "boundaryIgnoreRouting": false,
-                            "cellused": true,
-                            "children": [
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M4_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M4_2x1",
-                                    "net": "",
-                                    "x1": 38200,
-                                    "x2": 48200,
-                                    "xcell": 0,
-                                    "y1": -19200,
-                                    "y2": -15400,
-                                    "ycell": 0
-                                },
-                                {
-                                    "class": "Rect",
-                                    "layer": "M4",
-                                    "net": "",
-                                    "x1": 37800,
-                                    "x2": 48600,
-                                    "y1": -19200,
                                     "y2": 551500
                                 },
                                 {
@@ -31071,122 +30143,6 @@
                                     "x1": 37800,
                                     "x2": 48600,
                                     "y1": -19200,
-                                    "y2": 639500
-                                },
-                                {
-                                    "class": "Text",
-                                    "layer": "TXT",
-                                    "name": "AVSS",
-                                    "net": "",
-                                    "x1": 37800,
-                                    "x2": 37800,
-                                    "y1": 636500,
-                                    "y2": 636500
-                                }
-                            ],
-                            "class": "cIcCore::Route",
-                            "has_pr": true,
-                            "layer": "PR",
-                            "libcell": false,
-                            "libpath": "",
-                            "meta": {
-                            },
-                            "name": "AVSS",
-                            "net": "",
-                            "physicalOnly": false,
-                            "x1": 37800,
-                            "x2": 48600,
-                            "y1": -19200,
-                            "y2": 639500
-                        },
-                        {
-                            "abstract": false,
-                            "boundaryIgnoreRouting": false,
-                            "cellused": true,
-                            "children": [
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M4_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M4_2x1",
-                                    "net": "",
-                                    "x1": -5000,
-                                    "x2": 5000,
-                                    "xcell": 0,
-                                    "y1": -19200,
-                                    "y2": -15400,
-                                    "ycell": 0
-                                },
-                                {
-                                    "class": "Rect",
-                                    "layer": "M4",
-                                    "net": "",
-                                    "x1": -5400,
-                                    "x2": 5400,
-                                    "y1": -19200,
-                                    "y2": 644600
-                                },
-                                {
-                                    "class": "Text",
-                                    "layer": "TXT",
-                                    "name": "AVSS",
-                                    "net": "",
-                                    "x1": -5400,
-                                    "x2": -5400,
-                                    "y1": 640200,
-                                    "y2": 640200
-                                }
-                            ],
-                            "class": "cIcCore::Route",
-                            "has_pr": true,
-                            "layer": "PR",
-                            "libcell": false,
-                            "libpath": "",
-                            "meta": {
-                            },
-                            "name": "AVSS",
-                            "net": "",
-                            "physicalOnly": false,
-                            "x1": -5400,
-                            "x2": 5400,
-                            "y1": -19200,
-                            "y2": 644600
-                        },
-                        {
-                            "abstract": false,
-                            "boundaryIgnoreRouting": false,
-                            "cellused": true,
-                            "children": [
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M4_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M4_2x1",
-                                    "net": "",
-                                    "x1": 38200,
-                                    "x2": 48200,
-                                    "xcell": 0,
-                                    "y1": -19200,
-                                    "y2": -15400,
-                                    "ycell": 0
-                                },
-                                {
-                                    "class": "Rect",
-                                    "layer": "M4",
-                                    "net": "",
-                                    "x1": 37800,
-                                    "x2": 48600,
-                                    "y1": -19200,
                                     "y2": 727500
                                 },
                                 {
@@ -31272,238 +30228,6 @@
                             "x2": 5400,
                             "y1": -19200,
                             "y2": 732600
-                        },
-                        {
-                            "abstract": false,
-                            "boundaryIgnoreRouting": false,
-                            "cellused": true,
-                            "children": [
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M4_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M4_2x1",
-                                    "net": "",
-                                    "x1": 38200,
-                                    "x2": 48200,
-                                    "xcell": 0,
-                                    "y1": -19200,
-                                    "y2": -15400,
-                                    "ycell": 0
-                                },
-                                {
-                                    "class": "Rect",
-                                    "layer": "M4",
-                                    "net": "",
-                                    "x1": 37800,
-                                    "x2": 48600,
-                                    "y1": -19200,
-                                    "y2": 727500
-                                },
-                                {
-                                    "class": "Text",
-                                    "layer": "TXT",
-                                    "name": "AVSS",
-                                    "net": "",
-                                    "x1": 37800,
-                                    "x2": 37800,
-                                    "y1": 724500,
-                                    "y2": 724500
-                                }
-                            ],
-                            "class": "cIcCore::Route",
-                            "has_pr": true,
-                            "layer": "PR",
-                            "libcell": false,
-                            "libpath": "",
-                            "meta": {
-                            },
-                            "name": "AVSS",
-                            "net": "",
-                            "physicalOnly": false,
-                            "x1": 37800,
-                            "x2": 48600,
-                            "y1": -19200,
-                            "y2": 727500
-                        },
-                        {
-                            "abstract": false,
-                            "boundaryIgnoreRouting": false,
-                            "cellused": true,
-                            "children": [
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M4_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M4_2x1",
-                                    "net": "",
-                                    "x1": -5000,
-                                    "x2": 5000,
-                                    "xcell": 0,
-                                    "y1": -19200,
-                                    "y2": -15400,
-                                    "ycell": 0
-                                },
-                                {
-                                    "class": "Rect",
-                                    "layer": "M4",
-                                    "net": "",
-                                    "x1": -5400,
-                                    "x2": 5400,
-                                    "y1": -19200,
-                                    "y2": 732600
-                                },
-                                {
-                                    "class": "Text",
-                                    "layer": "TXT",
-                                    "name": "AVSS",
-                                    "net": "",
-                                    "x1": -5400,
-                                    "x2": -5400,
-                                    "y1": 728200,
-                                    "y2": 728200
-                                }
-                            ],
-                            "class": "cIcCore::Route",
-                            "has_pr": true,
-                            "layer": "PR",
-                            "libcell": false,
-                            "libpath": "",
-                            "meta": {
-                            },
-                            "name": "AVSS",
-                            "net": "",
-                            "physicalOnly": false,
-                            "x1": -5400,
-                            "x2": 5400,
-                            "y1": -19200,
-                            "y2": 732600
-                        },
-                        {
-                            "abstract": false,
-                            "boundaryIgnoreRouting": false,
-                            "cellused": true,
-                            "children": [
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M4_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M4_2x1",
-                                    "net": "",
-                                    "x1": 38200,
-                                    "x2": 48200,
-                                    "xcell": 0,
-                                    "y1": -19200,
-                                    "y2": -15400,
-                                    "ycell": 0
-                                },
-                                {
-                                    "class": "Rect",
-                                    "layer": "M4",
-                                    "net": "",
-                                    "x1": 37800,
-                                    "x2": 48600,
-                                    "y1": -19200,
-                                    "y2": 815500
-                                },
-                                {
-                                    "class": "Text",
-                                    "layer": "TXT",
-                                    "name": "AVSS",
-                                    "net": "",
-                                    "x1": 37800,
-                                    "x2": 37800,
-                                    "y1": 812500,
-                                    "y2": 812500
-                                }
-                            ],
-                            "class": "cIcCore::Route",
-                            "has_pr": true,
-                            "layer": "PR",
-                            "libcell": false,
-                            "libpath": "",
-                            "meta": {
-                            },
-                            "name": "AVSS",
-                            "net": "",
-                            "physicalOnly": false,
-                            "x1": 37800,
-                            "x2": 48600,
-                            "y1": -19200,
-                            "y2": 815500
-                        },
-                        {
-                            "abstract": false,
-                            "boundaryIgnoreRouting": false,
-                            "cellused": true,
-                            "children": [
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M4_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M4_2x1",
-                                    "net": "",
-                                    "x1": -5000,
-                                    "x2": 5000,
-                                    "xcell": 0,
-                                    "y1": -19200,
-                                    "y2": -15400,
-                                    "ycell": 0
-                                },
-                                {
-                                    "class": "Rect",
-                                    "layer": "M4",
-                                    "net": "",
-                                    "x1": -5400,
-                                    "x2": 5400,
-                                    "y1": -19200,
-                                    "y2": 820600
-                                },
-                                {
-                                    "class": "Text",
-                                    "layer": "TXT",
-                                    "name": "AVSS",
-                                    "net": "",
-                                    "x1": -5400,
-                                    "x2": -5400,
-                                    "y1": 816200,
-                                    "y2": 816200
-                                }
-                            ],
-                            "class": "cIcCore::Route",
-                            "has_pr": true,
-                            "layer": "PR",
-                            "libcell": false,
-                            "libpath": "",
-                            "meta": {
-                            },
-                            "name": "AVSS",
-                            "net": "",
-                            "physicalOnly": false,
-                            "x1": -5400,
-                            "x2": 5400,
-                            "y1": -19200,
-                            "y2": 820600
                         },
                         {
                             "abstract": false,
@@ -31672,7 +30396,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": true,
+                    "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -31910,7 +30634,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -33081,7 +31805,7 @@
                             "AVSS"
                         ],
                         "properties": {
-                            "M": "9",
+                            "M": "20",
                             "angle": "0",
                             "xoffset": "0",
                             "yoffset": "0"
@@ -33150,7 +31874,7 @@
                             "AVSS"
                         ],
                         "properties": {
-                            "M": "9",
+                            "M": "20",
                             "angle": "0",
                             "xoffset": "0",
                             "yoffset": "0"
@@ -33219,7 +31943,7 @@
                             "AVSS"
                         ],
                         "properties": {
-                            "M": "9",
+                            "M": "20",
                             "angle": "0",
                             "xoffset": "0",
                             "yoffset": "0"
@@ -33288,7 +32012,7 @@
                             "AVSS"
                         ],
                         "properties": {
-                            "M": "9",
+                            "M": "20",
                             "angle": "0",
                             "xoffset": "0",
                             "yoffset": "0"
@@ -33357,7 +32081,7 @@
                             "AVSS"
                         ],
                         "properties": {
-                            "M": "9",
+                            "M": "20",
                             "angle": "0",
                             "xoffset": "0",
                             "yoffset": "0"
@@ -33426,7 +32150,7 @@
                             "AVSS"
                         ],
                         "properties": {
-                            "M": "9",
+                            "M": "20",
                             "angle": "0",
                             "xoffset": "0",
                             "yoffset": "0"
@@ -33495,7 +32219,7 @@
                             "AVSS"
                         ],
                         "properties": {
-                            "M": "9",
+                            "M": "20",
                             "angle": "0",
                             "xoffset": "0",
                             "yoffset": "0"
@@ -33564,7 +32288,7 @@
                             "AVSS"
                         ],
                         "properties": {
-                            "M": "9",
+                            "M": "20",
                             "angle": "0",
                             "xoffset": "0",
                             "yoffset": "0"
@@ -33633,7 +32357,7 @@
                             "AVSS"
                         ],
                         "properties": {
-                            "M": "9",
+                            "M": "20",
                             "angle": "0",
                             "xoffset": "0",
                             "yoffset": "0"
@@ -33648,6 +32372,765 @@
                     "ycell": 0
                 },
                 {
+                    "angle": "",
+                    "cell": "SUNSAR_CAP_BSSW_CV",
+                    "children": [
+                        {
+                            "class": "Port",
+                            "layer": "M4",
+                            "name": "VO",
+                            "net": "",
+                            "pinLayer": "M4_pin",
+                            "spicePort": true,
+                            "x1": 156600,
+                            "x2": 657000,
+                            "y1": 569800,
+                            "y2": 574200
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M4",
+                            "name": "AVSS",
+                            "net": "",
+                            "pinLayer": "M4_pin",
+                            "spicePort": true,
+                            "x1": 156600,
+                            "x2": 657000,
+                            "y1": 525800,
+                            "y2": 530200
+                        },
+                        {
+                            "class": "Text",
+                            "layer": "TXT",
+                            "name": "xd39",
+                            "net": "",
+                            "x1": 405000,
+                            "x2": 405000,
+                            "y1": 554400,
+                            "y2": 554400
+                        }
+                    ],
+                    "class": "Instance",
+                    "instanceName": "xd39",
+                    "layer": "PR",
+                    "libpath": "../../sun_sar9b_sky130nm/design/SUN_SAR9B_SKY130NM",
+                    "name": "SUNSAR_CAP_BSSW_CV",
+                    "net": "",
+                    "subcktInstance": {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "xd",
+                        "name": "xd39",
+                        "nodes": [
+                            "VO",
+                            "AVSS"
+                        ],
+                        "properties": {
+                            "M": "20",
+                            "angle": "0",
+                            "xoffset": "0",
+                            "yoffset": "0"
+                        },
+                        "subcktName": "SUNSAR_CAP_BSSW_CV"
+                    },
+                    "x1": 151200,
+                    "x2": 658800,
+                    "xcell": 0,
+                    "y1": 528000,
+                    "y2": 580800,
+                    "ycell": 0
+                },
+                {
+                    "angle": "",
+                    "cell": "SUNSAR_CAP_BSSW_CV",
+                    "children": [
+                        {
+                            "class": "Port",
+                            "layer": "M4",
+                            "name": "VO",
+                            "net": "",
+                            "pinLayer": "M4_pin",
+                            "spicePort": true,
+                            "x1": 156600,
+                            "x2": 657000,
+                            "y1": 622600,
+                            "y2": 627000
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M4",
+                            "name": "AVSS",
+                            "net": "",
+                            "pinLayer": "M4_pin",
+                            "spicePort": true,
+                            "x1": 156600,
+                            "x2": 657000,
+                            "y1": 578600,
+                            "y2": 583000
+                        },
+                        {
+                            "class": "Text",
+                            "layer": "TXT",
+                            "name": "xd310",
+                            "net": "",
+                            "x1": 405000,
+                            "x2": 405000,
+                            "y1": 607200,
+                            "y2": 607200
+                        }
+                    ],
+                    "class": "Instance",
+                    "instanceName": "xd310",
+                    "layer": "PR",
+                    "libpath": "../../sun_sar9b_sky130nm/design/SUN_SAR9B_SKY130NM",
+                    "name": "SUNSAR_CAP_BSSW_CV",
+                    "net": "",
+                    "subcktInstance": {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "xd",
+                        "name": "xd310",
+                        "nodes": [
+                            "VO",
+                            "AVSS"
+                        ],
+                        "properties": {
+                            "M": "20",
+                            "angle": "0",
+                            "xoffset": "0",
+                            "yoffset": "0"
+                        },
+                        "subcktName": "SUNSAR_CAP_BSSW_CV"
+                    },
+                    "x1": 151200,
+                    "x2": 658800,
+                    "xcell": 0,
+                    "y1": 580800,
+                    "y2": 633600,
+                    "ycell": 0
+                },
+                {
+                    "angle": "",
+                    "cell": "SUNSAR_CAP_BSSW_CV",
+                    "children": [
+                        {
+                            "class": "Port",
+                            "layer": "M4",
+                            "name": "VO",
+                            "net": "",
+                            "pinLayer": "M4_pin",
+                            "spicePort": true,
+                            "x1": 156600,
+                            "x2": 657000,
+                            "y1": 675400,
+                            "y2": 679800
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M4",
+                            "name": "AVSS",
+                            "net": "",
+                            "pinLayer": "M4_pin",
+                            "spicePort": true,
+                            "x1": 156600,
+                            "x2": 657000,
+                            "y1": 631400,
+                            "y2": 635800
+                        },
+                        {
+                            "class": "Text",
+                            "layer": "TXT",
+                            "name": "xd311",
+                            "net": "",
+                            "x1": 405000,
+                            "x2": 405000,
+                            "y1": 660000,
+                            "y2": 660000
+                        }
+                    ],
+                    "class": "Instance",
+                    "instanceName": "xd311",
+                    "layer": "PR",
+                    "libpath": "../../sun_sar9b_sky130nm/design/SUN_SAR9B_SKY130NM",
+                    "name": "SUNSAR_CAP_BSSW_CV",
+                    "net": "",
+                    "subcktInstance": {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "xd",
+                        "name": "xd311",
+                        "nodes": [
+                            "VO",
+                            "AVSS"
+                        ],
+                        "properties": {
+                            "M": "20",
+                            "angle": "0",
+                            "xoffset": "0",
+                            "yoffset": "0"
+                        },
+                        "subcktName": "SUNSAR_CAP_BSSW_CV"
+                    },
+                    "x1": 151200,
+                    "x2": 658800,
+                    "xcell": 0,
+                    "y1": 633600,
+                    "y2": 686400,
+                    "ycell": 0
+                },
+                {
+                    "angle": "",
+                    "cell": "SUNSAR_CAP_BSSW_CV",
+                    "children": [
+                        {
+                            "class": "Port",
+                            "layer": "M4",
+                            "name": "VO",
+                            "net": "",
+                            "pinLayer": "M4_pin",
+                            "spicePort": true,
+                            "x1": 156600,
+                            "x2": 657000,
+                            "y1": 728200,
+                            "y2": 732600
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M4",
+                            "name": "AVSS",
+                            "net": "",
+                            "pinLayer": "M4_pin",
+                            "spicePort": true,
+                            "x1": 156600,
+                            "x2": 657000,
+                            "y1": 684200,
+                            "y2": 688600
+                        },
+                        {
+                            "class": "Text",
+                            "layer": "TXT",
+                            "name": "xd312",
+                            "net": "",
+                            "x1": 405000,
+                            "x2": 405000,
+                            "y1": 712800,
+                            "y2": 712800
+                        }
+                    ],
+                    "class": "Instance",
+                    "instanceName": "xd312",
+                    "layer": "PR",
+                    "libpath": "../../sun_sar9b_sky130nm/design/SUN_SAR9B_SKY130NM",
+                    "name": "SUNSAR_CAP_BSSW_CV",
+                    "net": "",
+                    "subcktInstance": {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "xd",
+                        "name": "xd312",
+                        "nodes": [
+                            "VO",
+                            "AVSS"
+                        ],
+                        "properties": {
+                            "M": "20",
+                            "angle": "0",
+                            "xoffset": "0",
+                            "yoffset": "0"
+                        },
+                        "subcktName": "SUNSAR_CAP_BSSW_CV"
+                    },
+                    "x1": 151200,
+                    "x2": 658800,
+                    "xcell": 0,
+                    "y1": 686400,
+                    "y2": 739200,
+                    "ycell": 0
+                },
+                {
+                    "angle": "",
+                    "cell": "SUNSAR_CAP_BSSW_CV",
+                    "children": [
+                        {
+                            "class": "Port",
+                            "layer": "M4",
+                            "name": "VO",
+                            "net": "",
+                            "pinLayer": "M4_pin",
+                            "spicePort": true,
+                            "x1": 156600,
+                            "x2": 657000,
+                            "y1": 781000,
+                            "y2": 785400
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M4",
+                            "name": "AVSS",
+                            "net": "",
+                            "pinLayer": "M4_pin",
+                            "spicePort": true,
+                            "x1": 156600,
+                            "x2": 657000,
+                            "y1": 737000,
+                            "y2": 741400
+                        },
+                        {
+                            "class": "Text",
+                            "layer": "TXT",
+                            "name": "xd313",
+                            "net": "",
+                            "x1": 405000,
+                            "x2": 405000,
+                            "y1": 765600,
+                            "y2": 765600
+                        }
+                    ],
+                    "class": "Instance",
+                    "instanceName": "xd313",
+                    "layer": "PR",
+                    "libpath": "../../sun_sar9b_sky130nm/design/SUN_SAR9B_SKY130NM",
+                    "name": "SUNSAR_CAP_BSSW_CV",
+                    "net": "",
+                    "subcktInstance": {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "xd",
+                        "name": "xd313",
+                        "nodes": [
+                            "VO",
+                            "AVSS"
+                        ],
+                        "properties": {
+                            "M": "20",
+                            "angle": "0",
+                            "xoffset": "0",
+                            "yoffset": "0"
+                        },
+                        "subcktName": "SUNSAR_CAP_BSSW_CV"
+                    },
+                    "x1": 151200,
+                    "x2": 658800,
+                    "xcell": 0,
+                    "y1": 739200,
+                    "y2": 792000,
+                    "ycell": 0
+                },
+                {
+                    "angle": "",
+                    "cell": "SUNSAR_CAP_BSSW_CV",
+                    "children": [
+                        {
+                            "class": "Port",
+                            "layer": "M4",
+                            "name": "VO",
+                            "net": "",
+                            "pinLayer": "M4_pin",
+                            "spicePort": true,
+                            "x1": 156600,
+                            "x2": 657000,
+                            "y1": 833800,
+                            "y2": 838200
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M4",
+                            "name": "AVSS",
+                            "net": "",
+                            "pinLayer": "M4_pin",
+                            "spicePort": true,
+                            "x1": 156600,
+                            "x2": 657000,
+                            "y1": 789800,
+                            "y2": 794200
+                        },
+                        {
+                            "class": "Text",
+                            "layer": "TXT",
+                            "name": "xd314",
+                            "net": "",
+                            "x1": 405000,
+                            "x2": 405000,
+                            "y1": 818400,
+                            "y2": 818400
+                        }
+                    ],
+                    "class": "Instance",
+                    "instanceName": "xd314",
+                    "layer": "PR",
+                    "libpath": "../../sun_sar9b_sky130nm/design/SUN_SAR9B_SKY130NM",
+                    "name": "SUNSAR_CAP_BSSW_CV",
+                    "net": "",
+                    "subcktInstance": {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "xd",
+                        "name": "xd314",
+                        "nodes": [
+                            "VO",
+                            "AVSS"
+                        ],
+                        "properties": {
+                            "M": "20",
+                            "angle": "0",
+                            "xoffset": "0",
+                            "yoffset": "0"
+                        },
+                        "subcktName": "SUNSAR_CAP_BSSW_CV"
+                    },
+                    "x1": 151200,
+                    "x2": 658800,
+                    "xcell": 0,
+                    "y1": 792000,
+                    "y2": 844800,
+                    "ycell": 0
+                },
+                {
+                    "angle": "",
+                    "cell": "SUNSAR_CAP_BSSW_CV",
+                    "children": [
+                        {
+                            "class": "Port",
+                            "layer": "M4",
+                            "name": "VO",
+                            "net": "",
+                            "pinLayer": "M4_pin",
+                            "spicePort": true,
+                            "x1": 156600,
+                            "x2": 657000,
+                            "y1": 886600,
+                            "y2": 891000
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M4",
+                            "name": "AVSS",
+                            "net": "",
+                            "pinLayer": "M4_pin",
+                            "spicePort": true,
+                            "x1": 156600,
+                            "x2": 657000,
+                            "y1": 842600,
+                            "y2": 847000
+                        },
+                        {
+                            "class": "Text",
+                            "layer": "TXT",
+                            "name": "xd315",
+                            "net": "",
+                            "x1": 405000,
+                            "x2": 405000,
+                            "y1": 871200,
+                            "y2": 871200
+                        }
+                    ],
+                    "class": "Instance",
+                    "instanceName": "xd315",
+                    "layer": "PR",
+                    "libpath": "../../sun_sar9b_sky130nm/design/SUN_SAR9B_SKY130NM",
+                    "name": "SUNSAR_CAP_BSSW_CV",
+                    "net": "",
+                    "subcktInstance": {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "xd",
+                        "name": "xd315",
+                        "nodes": [
+                            "VO",
+                            "AVSS"
+                        ],
+                        "properties": {
+                            "M": "20",
+                            "angle": "0",
+                            "xoffset": "0",
+                            "yoffset": "0"
+                        },
+                        "subcktName": "SUNSAR_CAP_BSSW_CV"
+                    },
+                    "x1": 151200,
+                    "x2": 658800,
+                    "xcell": 0,
+                    "y1": 844800,
+                    "y2": 897600,
+                    "ycell": 0
+                },
+                {
+                    "angle": "",
+                    "cell": "SUNSAR_CAP_BSSW_CV",
+                    "children": [
+                        {
+                            "class": "Port",
+                            "layer": "M4",
+                            "name": "VO",
+                            "net": "",
+                            "pinLayer": "M4_pin",
+                            "spicePort": true,
+                            "x1": 156600,
+                            "x2": 657000,
+                            "y1": 939400,
+                            "y2": 943800
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M4",
+                            "name": "AVSS",
+                            "net": "",
+                            "pinLayer": "M4_pin",
+                            "spicePort": true,
+                            "x1": 156600,
+                            "x2": 657000,
+                            "y1": 895400,
+                            "y2": 899800
+                        },
+                        {
+                            "class": "Text",
+                            "layer": "TXT",
+                            "name": "xd316",
+                            "net": "",
+                            "x1": 405000,
+                            "x2": 405000,
+                            "y1": 924000,
+                            "y2": 924000
+                        }
+                    ],
+                    "class": "Instance",
+                    "instanceName": "xd316",
+                    "layer": "PR",
+                    "libpath": "../../sun_sar9b_sky130nm/design/SUN_SAR9B_SKY130NM",
+                    "name": "SUNSAR_CAP_BSSW_CV",
+                    "net": "",
+                    "subcktInstance": {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "xd",
+                        "name": "xd316",
+                        "nodes": [
+                            "VO",
+                            "AVSS"
+                        ],
+                        "properties": {
+                            "M": "20",
+                            "angle": "0",
+                            "xoffset": "0",
+                            "yoffset": "0"
+                        },
+                        "subcktName": "SUNSAR_CAP_BSSW_CV"
+                    },
+                    "x1": 151200,
+                    "x2": 658800,
+                    "xcell": 0,
+                    "y1": 897600,
+                    "y2": 950400,
+                    "ycell": 0
+                },
+                {
+                    "angle": "",
+                    "cell": "SUNSAR_CAP_BSSW_CV",
+                    "children": [
+                        {
+                            "class": "Port",
+                            "layer": "M4",
+                            "name": "VO",
+                            "net": "",
+                            "pinLayer": "M4_pin",
+                            "spicePort": true,
+                            "x1": 156600,
+                            "x2": 657000,
+                            "y1": 992200,
+                            "y2": 996600
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M4",
+                            "name": "AVSS",
+                            "net": "",
+                            "pinLayer": "M4_pin",
+                            "spicePort": true,
+                            "x1": 156600,
+                            "x2": 657000,
+                            "y1": 948200,
+                            "y2": 952600
+                        },
+                        {
+                            "class": "Text",
+                            "layer": "TXT",
+                            "name": "xd317",
+                            "net": "",
+                            "x1": 405000,
+                            "x2": 405000,
+                            "y1": 976800,
+                            "y2": 976800
+                        }
+                    ],
+                    "class": "Instance",
+                    "instanceName": "xd317",
+                    "layer": "PR",
+                    "libpath": "../../sun_sar9b_sky130nm/design/SUN_SAR9B_SKY130NM",
+                    "name": "SUNSAR_CAP_BSSW_CV",
+                    "net": "",
+                    "subcktInstance": {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "xd",
+                        "name": "xd317",
+                        "nodes": [
+                            "VO",
+                            "AVSS"
+                        ],
+                        "properties": {
+                            "M": "20",
+                            "angle": "0",
+                            "xoffset": "0",
+                            "yoffset": "0"
+                        },
+                        "subcktName": "SUNSAR_CAP_BSSW_CV"
+                    },
+                    "x1": 151200,
+                    "x2": 658800,
+                    "xcell": 0,
+                    "y1": 950400,
+                    "y2": 1003200,
+                    "ycell": 0
+                },
+                {
+                    "angle": "",
+                    "cell": "SUNSAR_CAP_BSSW_CV",
+                    "children": [
+                        {
+                            "class": "Port",
+                            "layer": "M4",
+                            "name": "VO",
+                            "net": "",
+                            "pinLayer": "M4_pin",
+                            "spicePort": true,
+                            "x1": 156600,
+                            "x2": 657000,
+                            "y1": 1045000,
+                            "y2": 1049400
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M4",
+                            "name": "AVSS",
+                            "net": "",
+                            "pinLayer": "M4_pin",
+                            "spicePort": true,
+                            "x1": 156600,
+                            "x2": 657000,
+                            "y1": 1001000,
+                            "y2": 1005400
+                        },
+                        {
+                            "class": "Text",
+                            "layer": "TXT",
+                            "name": "xd318",
+                            "net": "",
+                            "x1": 405000,
+                            "x2": 405000,
+                            "y1": 1029600,
+                            "y2": 1029600
+                        }
+                    ],
+                    "class": "Instance",
+                    "instanceName": "xd318",
+                    "layer": "PR",
+                    "libpath": "../../sun_sar9b_sky130nm/design/SUN_SAR9B_SKY130NM",
+                    "name": "SUNSAR_CAP_BSSW_CV",
+                    "net": "",
+                    "subcktInstance": {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "xd",
+                        "name": "xd318",
+                        "nodes": [
+                            "VO",
+                            "AVSS"
+                        ],
+                        "properties": {
+                            "M": "20",
+                            "angle": "0",
+                            "xoffset": "0",
+                            "yoffset": "0"
+                        },
+                        "subcktName": "SUNSAR_CAP_BSSW_CV"
+                    },
+                    "x1": 151200,
+                    "x2": 658800,
+                    "xcell": 0,
+                    "y1": 1003200,
+                    "y2": 1056000,
+                    "ycell": 0
+                },
+                {
+                    "angle": "",
+                    "cell": "SUNSAR_CAP_BSSW_CV",
+                    "children": [
+                        {
+                            "class": "Port",
+                            "layer": "M4",
+                            "name": "VO",
+                            "net": "",
+                            "pinLayer": "M4_pin",
+                            "spicePort": true,
+                            "x1": 156600,
+                            "x2": 657000,
+                            "y1": 1097800,
+                            "y2": 1102200
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M4",
+                            "name": "AVSS",
+                            "net": "",
+                            "pinLayer": "M4_pin",
+                            "spicePort": true,
+                            "x1": 156600,
+                            "x2": 657000,
+                            "y1": 1053800,
+                            "y2": 1058200
+                        },
+                        {
+                            "class": "Text",
+                            "layer": "TXT",
+                            "name": "xd319",
+                            "net": "",
+                            "x1": 405000,
+                            "x2": 405000,
+                            "y1": 1082400,
+                            "y2": 1082400
+                        }
+                    ],
+                    "class": "Instance",
+                    "instanceName": "xd319",
+                    "layer": "PR",
+                    "libpath": "../../sun_sar9b_sky130nm/design/SUN_SAR9B_SKY130NM",
+                    "name": "SUNSAR_CAP_BSSW_CV",
+                    "net": "",
+                    "subcktInstance": {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "xd",
+                        "name": "xd319",
+                        "nodes": [
+                            "VO",
+                            "AVSS"
+                        ],
+                        "properties": {
+                            "M": "20",
+                            "angle": "0",
+                            "xoffset": "0",
+                            "yoffset": "0"
+                        },
+                        "subcktName": "SUNSAR_CAP_BSSW_CV"
+                    },
+                    "x1": 151200,
+                    "x2": 658800,
+                    "xcell": 0,
+                    "y1": 1056000,
+                    "y2": 1108800,
+                    "ycell": 0
+                },
+                {
                     "class": "Port",
                     "layer": "M1",
                     "name": "AVSS",
@@ -33657,7 +33140,7 @@
                     "x1": 666000,
                     "x2": 678000,
                     "y1": -19200,
-                    "y2": 547200
+                    "y2": 1128000
                 },
                 {
                     "abstract": false,
@@ -33679,8 +33162,8 @@
                             "net": "",
                             "x1": -19200,
                             "x2": 678000,
-                            "y1": 535200,
-                            "y2": 547200
+                            "y1": 1116000,
+                            "y2": 1128000
                         },
                         {
                             "class": "Rect",
@@ -33689,7 +33172,7 @@
                             "x1": -19200,
                             "x2": -7200,
                             "y1": -19200,
-                            "y2": 547200
+                            "y2": 1128000
                         },
                         {
                             "class": "Rect",
@@ -33698,159 +33181,7 @@
                             "x1": 666000,
                             "x2": 678000,
                             "y1": -19200,
-                            "y2": 547200
-                        },
-                        {
-                            "abstract": false,
-                            "boundaryIgnoreRouting": false,
-                            "cellused": true,
-                            "children": [
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M2_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M2_2x1",
-                                    "net": "",
-                                    "x1": 38600,
-                                    "x2": 47800,
-                                    "xcell": 0,
-                                    "y1": 2900,
-                                    "y2": 6300,
-                                    "ycell": 0
-                                },
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M2_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M2_2x1",
-                                    "net": "",
-                                    "x1": 38600,
-                                    "x2": 47800,
-                                    "xcell": 0,
-                                    "y1": -19200,
-                                    "y2": -15800,
-                                    "ycell": 0
-                                },
-                                {
-                                    "class": "Rect",
-                                    "layer": "M2",
-                                    "net": "",
-                                    "x1": 37800,
-                                    "x2": 48600,
-                                    "y1": -19200,
-                                    "y2": 5900
-                                },
-                                {
-                                    "class": "Text",
-                                    "layer": "TXT",
-                                    "name": "AVSS",
-                                    "net": "",
-                                    "x1": 37800,
-                                    "x2": 37800,
-                                    "y1": 2900,
-                                    "y2": 2900
-                                }
-                            ],
-                            "class": "cIcCore::Route",
-                            "has_pr": true,
-                            "layer": "PR",
-                            "libcell": false,
-                            "libpath": "",
-                            "meta": {
-                            },
-                            "name": "AVSS",
-                            "net": "",
-                            "physicalOnly": false,
-                            "x1": 37800,
-                            "x2": 48600,
-                            "y1": -19200,
-                            "y2": 6300
-                        },
-                        {
-                            "abstract": false,
-                            "boundaryIgnoreRouting": false,
-                            "cellused": true,
-                            "children": [
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M2_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M2_2x1",
-                                    "net": "",
-                                    "x1": -4600,
-                                    "x2": 4600,
-                                    "xcell": 0,
-                                    "y1": 6600,
-                                    "y2": 10000,
-                                    "ycell": 0
-                                },
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M2_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M2_2x1",
-                                    "net": "",
-                                    "x1": -4600,
-                                    "x2": 4600,
-                                    "xcell": 0,
-                                    "y1": -19200,
-                                    "y2": -15800,
-                                    "ycell": 0
-                                },
-                                {
-                                    "class": "Rect",
-                                    "layer": "M2",
-                                    "net": "",
-                                    "x1": -5400,
-                                    "x2": 5400,
-                                    "y1": -19200,
-                                    "y2": 11000
-                                },
-                                {
-                                    "class": "Text",
-                                    "layer": "TXT",
-                                    "name": "AVSS",
-                                    "net": "",
-                                    "x1": -5400,
-                                    "x2": -5400,
-                                    "y1": 6600,
-                                    "y2": 6600
-                                }
-                            ],
-                            "class": "cIcCore::Route",
-                            "has_pr": true,
-                            "layer": "PR",
-                            "libcell": false,
-                            "libpath": "",
-                            "meta": {
-                            },
-                            "name": "AVSS",
-                            "net": "",
-                            "physicalOnly": false,
-                            "x1": -5400,
-                            "x2": 5400,
-                            "y1": -19200,
-                            "y2": 11000
+                            "y2": 1128000
                         },
                         {
                             "abstract": false,
@@ -34228,7 +33559,7 @@
                     "x1": -19200,
                     "x2": 678000,
                     "y1": -19200,
-                    "y2": 547200
+                    "y2": 1128000
                 },
                 {
                     "class": "Port",
@@ -34240,7 +33571,7 @@
                     "x1": 685200,
                     "x2": 697200,
                     "y1": -38400,
-                    "y2": 566400
+                    "y2": 1147200
                 },
                 {
                     "abstract": false,
@@ -34262,8 +33593,8 @@
                             "net": "",
                             "x1": -38400,
                             "x2": 697200,
-                            "y1": 554400,
-                            "y2": 566400
+                            "y1": 1135200,
+                            "y2": 1147200
                         },
                         {
                             "class": "Rect",
@@ -34272,7 +33603,7 @@
                             "x1": -38400,
                             "x2": -26400,
                             "y1": -38400,
-                            "y2": 566400
+                            "y2": 1147200
                         },
                         {
                             "class": "Rect",
@@ -34281,159 +33612,7 @@
                             "x1": 685200,
                             "x2": 697200,
                             "y1": -38400,
-                            "y2": 566400
-                        },
-                        {
-                            "abstract": false,
-                            "boundaryIgnoreRouting": false,
-                            "cellused": true,
-                            "children": [
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M2_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M2_2x1",
-                                    "net": "",
-                                    "x1": 119600,
-                                    "x2": 128800,
-                                    "xcell": 0,
-                                    "y1": 2900,
-                                    "y2": 6300,
-                                    "ycell": 0
-                                },
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M2_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M2_2x1",
-                                    "net": "",
-                                    "x1": 119600,
-                                    "x2": 128800,
-                                    "xcell": 0,
-                                    "y1": -38400,
-                                    "y2": -35000,
-                                    "ycell": 0
-                                },
-                                {
-                                    "class": "Rect",
-                                    "layer": "M2",
-                                    "net": "",
-                                    "x1": 118800,
-                                    "x2": 129600,
-                                    "y1": -38400,
-                                    "y2": 5900
-                                },
-                                {
-                                    "class": "Text",
-                                    "layer": "TXT",
-                                    "name": "AVDD",
-                                    "net": "",
-                                    "x1": 118800,
-                                    "x2": 118800,
-                                    "y1": 2900,
-                                    "y2": 2900
-                                }
-                            ],
-                            "class": "cIcCore::Route",
-                            "has_pr": true,
-                            "layer": "PR",
-                            "libcell": false,
-                            "libpath": "",
-                            "meta": {
-                            },
-                            "name": "AVDD",
-                            "net": "",
-                            "physicalOnly": false,
-                            "x1": 118800,
-                            "x2": 129600,
-                            "y1": -38400,
-                            "y2": 6300
-                        },
-                        {
-                            "abstract": false,
-                            "boundaryIgnoreRouting": false,
-                            "cellused": true,
-                            "children": [
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M2_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M2_2x1",
-                                    "net": "",
-                                    "x1": 76400,
-                                    "x2": 85600,
-                                    "xcell": 0,
-                                    "y1": 6600,
-                                    "y2": 10000,
-                                    "ycell": 0
-                                },
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M2_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M2_2x1",
-                                    "net": "",
-                                    "x1": 76400,
-                                    "x2": 85600,
-                                    "xcell": 0,
-                                    "y1": -38400,
-                                    "y2": -35000,
-                                    "ycell": 0
-                                },
-                                {
-                                    "class": "Rect",
-                                    "layer": "M2",
-                                    "net": "",
-                                    "x1": 75600,
-                                    "x2": 86400,
-                                    "y1": -38400,
-                                    "y2": 11000
-                                },
-                                {
-                                    "class": "Text",
-                                    "layer": "TXT",
-                                    "name": "AVDD",
-                                    "net": "",
-                                    "x1": 75600,
-                                    "x2": 75600,
-                                    "y1": 6600,
-                                    "y2": 6600
-                                }
-                            ],
-                            "class": "cIcCore::Route",
-                            "has_pr": true,
-                            "layer": "PR",
-                            "libcell": false,
-                            "libpath": "",
-                            "meta": {
-                            },
-                            "name": "AVDD",
-                            "net": "",
-                            "physicalOnly": false,
-                            "x1": 75600,
-                            "x2": 86400,
-                            "y1": -38400,
-                            "y2": 11000
+                            "y2": 1147200
                         },
                         {
                             "abstract": false,
@@ -34601,7 +33780,7 @@
                     "x1": -38400,
                     "x2": 697200,
                     "y1": -38400,
-                    "y2": 566400
+                    "y2": 1147200
                 },
                 {
                     "abstract": false,
@@ -34923,42 +34102,6 @@
                             "ycell": 0
                         },
                         {
-                            "angle": "",
-                            "cell": "cut_M1M3_2x1",
-                            "children": [
-                            ],
-                            "class": "Instance",
-                            "instanceName": "",
-                            "layer": "PR",
-                            "libpath": "",
-                            "name": "cut_M1M3_2x1",
-                            "net": "",
-                            "x1": 118800,
-                            "x2": 128800,
-                            "xcell": 0,
-                            "y1": 73300,
-                            "y2": 77100,
-                            "ycell": 0
-                        },
-                        {
-                            "angle": "",
-                            "cell": "cut_M1M3_2x1",
-                            "children": [
-                            ],
-                            "class": "Instance",
-                            "instanceName": "",
-                            "layer": "PR",
-                            "libpath": "",
-                            "name": "cut_M1M3_2x1",
-                            "net": "",
-                            "x1": 97200,
-                            "x2": 107200,
-                            "xcell": 0,
-                            "y1": 68900,
-                            "y2": 72700,
-                            "ycell": 0
-                        },
-                        {
                             "class": "Rect",
                             "layer": "M3",
                             "net": "",
@@ -35210,9 +34353,108 @@
                             "layer": "M4",
                             "net": "",
                             "x1": 133200,
+                            "x2": 406800,
+                            "y1": 569800,
+                            "y2": 573600
+                        },
+                        {
+                            "class": "Rect",
+                            "layer": "M4",
+                            "net": "",
+                            "x1": 133200,
+                            "x2": 406800,
+                            "y1": 622600,
+                            "y2": 626400
+                        },
+                        {
+                            "class": "Rect",
+                            "layer": "M4",
+                            "net": "",
+                            "x1": 133200,
+                            "x2": 406800,
+                            "y1": 675400,
+                            "y2": 679200
+                        },
+                        {
+                            "class": "Rect",
+                            "layer": "M4",
+                            "net": "",
+                            "x1": 133200,
+                            "x2": 406800,
+                            "y1": 728200,
+                            "y2": 732000
+                        },
+                        {
+                            "class": "Rect",
+                            "layer": "M4",
+                            "net": "",
+                            "x1": 133200,
+                            "x2": 406800,
+                            "y1": 781000,
+                            "y2": 784800
+                        },
+                        {
+                            "class": "Rect",
+                            "layer": "M4",
+                            "net": "",
+                            "x1": 133200,
+                            "x2": 406800,
+                            "y1": 833800,
+                            "y2": 837600
+                        },
+                        {
+                            "class": "Rect",
+                            "layer": "M4",
+                            "net": "",
+                            "x1": 133200,
+                            "x2": 406800,
+                            "y1": 886600,
+                            "y2": 890400
+                        },
+                        {
+                            "class": "Rect",
+                            "layer": "M4",
+                            "net": "",
+                            "x1": 133200,
+                            "x2": 406800,
+                            "y1": 939400,
+                            "y2": 943200
+                        },
+                        {
+                            "class": "Rect",
+                            "layer": "M4",
+                            "net": "",
+                            "x1": 133200,
+                            "x2": 406800,
+                            "y1": 992200,
+                            "y2": 996000
+                        },
+                        {
+                            "class": "Rect",
+                            "layer": "M4",
+                            "net": "",
+                            "x1": 133200,
+                            "x2": 406800,
+                            "y1": 1045000,
+                            "y2": 1048800
+                        },
+                        {
+                            "class": "Rect",
+                            "layer": "M4",
+                            "net": "",
+                            "x1": 133200,
+                            "x2": 406800,
+                            "y1": 1097800,
+                            "y2": 1101600
+                        },
+                        {
+                            "class": "Rect",
+                            "layer": "M4",
+                            "net": "",
+                            "x1": 133200,
                             "x2": 137000,
                             "y1": 41800,
-                            "y2": 520800
+                            "y2": 1101600
                         },
                         {
                             "class": "Text",
@@ -35226,7 +34468,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -35238,7 +34480,7 @@
                     "x1": 118800,
                     "x2": 406800,
                     "y1": 41800,
-                    "y2": 520800
+                    "y2": 1101600
                 },
                 {
                     "abstract": false,
@@ -35311,7 +34553,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -35424,10 +34666,109 @@
                             "class": "Rect",
                             "layer": "M4",
                             "net": "",
+                            "x1": 406800,
+                            "x2": 671400,
+                            "y1": 525800,
+                            "y2": 529600
+                        },
+                        {
+                            "class": "Rect",
+                            "layer": "M4",
+                            "net": "",
+                            "x1": 406800,
+                            "x2": 671400,
+                            "y1": 578600,
+                            "y2": 582400
+                        },
+                        {
+                            "class": "Rect",
+                            "layer": "M4",
+                            "net": "",
+                            "x1": 406800,
+                            "x2": 671400,
+                            "y1": 631400,
+                            "y2": 635200
+                        },
+                        {
+                            "class": "Rect",
+                            "layer": "M4",
+                            "net": "",
+                            "x1": 406800,
+                            "x2": 671400,
+                            "y1": 684200,
+                            "y2": 688000
+                        },
+                        {
+                            "class": "Rect",
+                            "layer": "M4",
+                            "net": "",
+                            "x1": 406800,
+                            "x2": 671400,
+                            "y1": 737000,
+                            "y2": 740800
+                        },
+                        {
+                            "class": "Rect",
+                            "layer": "M4",
+                            "net": "",
+                            "x1": 406800,
+                            "x2": 671400,
+                            "y1": 789800,
+                            "y2": 793600
+                        },
+                        {
+                            "class": "Rect",
+                            "layer": "M4",
+                            "net": "",
+                            "x1": 406800,
+                            "x2": 671400,
+                            "y1": 842600,
+                            "y2": 846400
+                        },
+                        {
+                            "class": "Rect",
+                            "layer": "M4",
+                            "net": "",
+                            "x1": 406800,
+                            "x2": 671400,
+                            "y1": 895400,
+                            "y2": 899200
+                        },
+                        {
+                            "class": "Rect",
+                            "layer": "M4",
+                            "net": "",
+                            "x1": 406800,
+                            "x2": 671400,
+                            "y1": 948200,
+                            "y2": 952000
+                        },
+                        {
+                            "class": "Rect",
+                            "layer": "M4",
+                            "net": "",
+                            "x1": 406800,
+                            "x2": 671400,
+                            "y1": 1001000,
+                            "y2": 1004800
+                        },
+                        {
+                            "class": "Rect",
+                            "layer": "M4",
+                            "net": "",
+                            "x1": 406800,
+                            "x2": 671400,
+                            "y1": 1053800,
+                            "y2": 1057600
+                        },
+                        {
+                            "class": "Rect",
+                            "layer": "M4",
+                            "net": "",
                             "x1": 671400,
                             "x2": 675200,
                             "y1": -2200,
-                            "y2": 476800
+                            "y2": 1057600
                         },
                         {
                             "class": "Text",
@@ -35453,7 +34794,7 @@
                     "x1": 156600,
                     "x2": 675200,
                     "y1": -2200,
-                    "y2": 476800
+                    "y2": 1057600
                 },
                 {
                     "class": "Port",
@@ -35688,7 +35029,7 @@
                             "AVSS"
                         ],
                         "properties": {
-                            "M": "9",
+                            "M": "20",
                             "angle": "0",
                             "xoffset": "0",
                             "yoffset": "0"
@@ -35705,7 +35046,7 @@
                             "AVSS"
                         ],
                         "properties": {
-                            "M": "9",
+                            "M": "20",
                             "angle": "0",
                             "xoffset": "0",
                             "yoffset": "0"
@@ -35722,7 +35063,7 @@
                             "AVSS"
                         ],
                         "properties": {
-                            "M": "9",
+                            "M": "20",
                             "angle": "0",
                             "xoffset": "0",
                             "yoffset": "0"
@@ -35739,7 +35080,7 @@
                             "AVSS"
                         ],
                         "properties": {
-                            "M": "9",
+                            "M": "20",
                             "angle": "0",
                             "xoffset": "0",
                             "yoffset": "0"
@@ -35756,7 +35097,7 @@
                             "AVSS"
                         ],
                         "properties": {
-                            "M": "9",
+                            "M": "20",
                             "angle": "0",
                             "xoffset": "0",
                             "yoffset": "0"
@@ -35773,7 +35114,7 @@
                             "AVSS"
                         ],
                         "properties": {
-                            "M": "9",
+                            "M": "20",
                             "angle": "0",
                             "xoffset": "0",
                             "yoffset": "0"
@@ -35790,7 +35131,7 @@
                             "AVSS"
                         ],
                         "properties": {
-                            "M": "9",
+                            "M": "20",
                             "angle": "0",
                             "xoffset": "0",
                             "yoffset": "0"
@@ -35807,7 +35148,7 @@
                             "AVSS"
                         ],
                         "properties": {
-                            "M": "9",
+                            "M": "20",
                             "angle": "0",
                             "xoffset": "0",
                             "yoffset": "0"
@@ -35824,7 +35165,194 @@
                             "AVSS"
                         ],
                         "properties": {
-                            "M": "9",
+                            "M": "20",
+                            "angle": "0",
+                            "xoffset": "0",
+                            "yoffset": "0"
+                        },
+                        "subcktName": "SUNSAR_CAP_BSSW_CV"
+                    },
+                    {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "xd",
+                        "name": "xd39",
+                        "nodes": [
+                            "VO",
+                            "AVSS"
+                        ],
+                        "properties": {
+                            "M": "20",
+                            "angle": "0",
+                            "xoffset": "0",
+                            "yoffset": "0"
+                        },
+                        "subcktName": "SUNSAR_CAP_BSSW_CV"
+                    },
+                    {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "xd",
+                        "name": "xd310",
+                        "nodes": [
+                            "VO",
+                            "AVSS"
+                        ],
+                        "properties": {
+                            "M": "20",
+                            "angle": "0",
+                            "xoffset": "0",
+                            "yoffset": "0"
+                        },
+                        "subcktName": "SUNSAR_CAP_BSSW_CV"
+                    },
+                    {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "xd",
+                        "name": "xd311",
+                        "nodes": [
+                            "VO",
+                            "AVSS"
+                        ],
+                        "properties": {
+                            "M": "20",
+                            "angle": "0",
+                            "xoffset": "0",
+                            "yoffset": "0"
+                        },
+                        "subcktName": "SUNSAR_CAP_BSSW_CV"
+                    },
+                    {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "xd",
+                        "name": "xd312",
+                        "nodes": [
+                            "VO",
+                            "AVSS"
+                        ],
+                        "properties": {
+                            "M": "20",
+                            "angle": "0",
+                            "xoffset": "0",
+                            "yoffset": "0"
+                        },
+                        "subcktName": "SUNSAR_CAP_BSSW_CV"
+                    },
+                    {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "xd",
+                        "name": "xd313",
+                        "nodes": [
+                            "VO",
+                            "AVSS"
+                        ],
+                        "properties": {
+                            "M": "20",
+                            "angle": "0",
+                            "xoffset": "0",
+                            "yoffset": "0"
+                        },
+                        "subcktName": "SUNSAR_CAP_BSSW_CV"
+                    },
+                    {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "xd",
+                        "name": "xd314",
+                        "nodes": [
+                            "VO",
+                            "AVSS"
+                        ],
+                        "properties": {
+                            "M": "20",
+                            "angle": "0",
+                            "xoffset": "0",
+                            "yoffset": "0"
+                        },
+                        "subcktName": "SUNSAR_CAP_BSSW_CV"
+                    },
+                    {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "xd",
+                        "name": "xd315",
+                        "nodes": [
+                            "VO",
+                            "AVSS"
+                        ],
+                        "properties": {
+                            "M": "20",
+                            "angle": "0",
+                            "xoffset": "0",
+                            "yoffset": "0"
+                        },
+                        "subcktName": "SUNSAR_CAP_BSSW_CV"
+                    },
+                    {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "xd",
+                        "name": "xd316",
+                        "nodes": [
+                            "VO",
+                            "AVSS"
+                        ],
+                        "properties": {
+                            "M": "20",
+                            "angle": "0",
+                            "xoffset": "0",
+                            "yoffset": "0"
+                        },
+                        "subcktName": "SUNSAR_CAP_BSSW_CV"
+                    },
+                    {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "xd",
+                        "name": "xd317",
+                        "nodes": [
+                            "VO",
+                            "AVSS"
+                        ],
+                        "properties": {
+                            "M": "20",
+                            "angle": "0",
+                            "xoffset": "0",
+                            "yoffset": "0"
+                        },
+                        "subcktName": "SUNSAR_CAP_BSSW_CV"
+                    },
+                    {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "xd",
+                        "name": "xd318",
+                        "nodes": [
+                            "VO",
+                            "AVSS"
+                        ],
+                        "properties": {
+                            "M": "20",
+                            "angle": "0",
+                            "xoffset": "0",
+                            "yoffset": "0"
+                        },
+                        "subcktName": "SUNSAR_CAP_BSSW_CV"
+                    },
+                    {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "xd",
+                        "name": "xd319",
+                        "nodes": [
+                            "VO",
+                            "AVSS"
+                        ],
+                        "properties": {
+                            "M": "20",
                             "angle": "0",
                             "xoffset": "0",
                             "yoffset": "0"
@@ -35860,7 +35388,7 @@
             "x1": -38400,
             "x2": 697200,
             "y1": -38400,
-            "y2": 566400
+            "y2": 1147200
         },
         {
             "abstract": false,
@@ -37687,158 +37215,6 @@
                             "x2": 5400,
                             "y1": -19200,
                             "y2": 11000
-                        },
-                        {
-                            "abstract": false,
-                            "boundaryIgnoreRouting": false,
-                            "cellused": true,
-                            "children": [
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M2_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M2_2x1",
-                                    "net": "",
-                                    "x1": 38600,
-                                    "x2": 47800,
-                                    "xcell": 0,
-                                    "y1": 2900,
-                                    "y2": 6300,
-                                    "ycell": 0
-                                },
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M2_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M2_2x1",
-                                    "net": "",
-                                    "x1": 38600,
-                                    "x2": 47800,
-                                    "xcell": 0,
-                                    "y1": -19200,
-                                    "y2": -15800,
-                                    "ycell": 0
-                                },
-                                {
-                                    "class": "Rect",
-                                    "layer": "M2",
-                                    "net": "",
-                                    "x1": 37800,
-                                    "x2": 48600,
-                                    "y1": -19200,
-                                    "y2": 5900
-                                },
-                                {
-                                    "class": "Text",
-                                    "layer": "TXT",
-                                    "name": "AVSS",
-                                    "net": "",
-                                    "x1": 37800,
-                                    "x2": 37800,
-                                    "y1": 2900,
-                                    "y2": 2900
-                                }
-                            ],
-                            "class": "cIcCore::Route",
-                            "has_pr": true,
-                            "layer": "PR",
-                            "libcell": false,
-                            "libpath": "",
-                            "meta": {
-                            },
-                            "name": "AVSS",
-                            "net": "",
-                            "physicalOnly": false,
-                            "x1": 37800,
-                            "x2": 48600,
-                            "y1": -19200,
-                            "y2": 6300
-                        },
-                        {
-                            "abstract": false,
-                            "boundaryIgnoreRouting": false,
-                            "cellused": true,
-                            "children": [
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M2_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M2_2x1",
-                                    "net": "",
-                                    "x1": -4600,
-                                    "x2": 4600,
-                                    "xcell": 0,
-                                    "y1": 6600,
-                                    "y2": 10000,
-                                    "ycell": 0
-                                },
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M2_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M2_2x1",
-                                    "net": "",
-                                    "x1": -4600,
-                                    "x2": 4600,
-                                    "xcell": 0,
-                                    "y1": -19200,
-                                    "y2": -15800,
-                                    "ycell": 0
-                                },
-                                {
-                                    "class": "Rect",
-                                    "layer": "M2",
-                                    "net": "",
-                                    "x1": -5400,
-                                    "x2": 5400,
-                                    "y1": -19200,
-                                    "y2": 11000
-                                },
-                                {
-                                    "class": "Text",
-                                    "layer": "TXT",
-                                    "name": "AVSS",
-                                    "net": "",
-                                    "x1": -5400,
-                                    "x2": -5400,
-                                    "y1": 6600,
-                                    "y2": 6600
-                                }
-                            ],
-                            "class": "cIcCore::Route",
-                            "has_pr": true,
-                            "layer": "PR",
-                            "libcell": false,
-                            "libpath": "",
-                            "meta": {
-                            },
-                            "name": "AVSS",
-                            "net": "",
-                            "physicalOnly": false,
-                            "x1": -5400,
-                            "x2": 5400,
-                            "y1": -19200,
-                            "y2": 11000
                         }
                     ],
                     "class": "cIcCore::RouteRing",
@@ -37971,159 +37347,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": true,
-                            "layer": "PR",
-                            "libcell": false,
-                            "libpath": "",
-                            "meta": {
-                            },
-                            "name": "AVDD",
-                            "net": "",
-                            "physicalOnly": false,
-                            "x1": 118800,
-                            "x2": 129600,
-                            "y1": -38400,
-                            "y2": 6300
-                        },
-                        {
-                            "abstract": false,
-                            "boundaryIgnoreRouting": false,
-                            "cellused": true,
-                            "children": [
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M2_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M2_2x1",
-                                    "net": "",
-                                    "x1": 76400,
-                                    "x2": 85600,
-                                    "xcell": 0,
-                                    "y1": 6600,
-                                    "y2": 10000,
-                                    "ycell": 0
-                                },
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M2_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M2_2x1",
-                                    "net": "",
-                                    "x1": 76400,
-                                    "x2": 85600,
-                                    "xcell": 0,
-                                    "y1": -38400,
-                                    "y2": -35000,
-                                    "ycell": 0
-                                },
-                                {
-                                    "class": "Rect",
-                                    "layer": "M2",
-                                    "net": "",
-                                    "x1": 75600,
-                                    "x2": 86400,
-                                    "y1": -38400,
-                                    "y2": 11000
-                                },
-                                {
-                                    "class": "Text",
-                                    "layer": "TXT",
-                                    "name": "AVDD",
-                                    "net": "",
-                                    "x1": 75600,
-                                    "x2": 75600,
-                                    "y1": 6600,
-                                    "y2": 6600
-                                }
-                            ],
-                            "class": "cIcCore::Route",
-                            "has_pr": true,
-                            "layer": "PR",
-                            "libcell": false,
-                            "libpath": "",
-                            "meta": {
-                            },
-                            "name": "AVDD",
-                            "net": "",
-                            "physicalOnly": false,
-                            "x1": 75600,
-                            "x2": 86400,
-                            "y1": -38400,
-                            "y2": 11000
-                        },
-                        {
-                            "abstract": false,
-                            "boundaryIgnoreRouting": false,
-                            "cellused": true,
-                            "children": [
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M2_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M2_2x1",
-                                    "net": "",
-                                    "x1": 119600,
-                                    "x2": 128800,
-                                    "xcell": 0,
-                                    "y1": 2900,
-                                    "y2": 6300,
-                                    "ycell": 0
-                                },
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M2_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M2_2x1",
-                                    "net": "",
-                                    "x1": 119600,
-                                    "x2": 128800,
-                                    "xcell": 0,
-                                    "y1": -38400,
-                                    "y2": -35000,
-                                    "ycell": 0
-                                },
-                                {
-                                    "class": "Rect",
-                                    "layer": "M2",
-                                    "net": "",
-                                    "x1": 118800,
-                                    "x2": 129600,
-                                    "y1": -38400,
-                                    "y2": 5900
-                                },
-                                {
-                                    "class": "Text",
-                                    "layer": "TXT",
-                                    "name": "AVDD",
-                                    "net": "",
-                                    "x1": 118800,
-                                    "x2": 118800,
-                                    "y1": 2900,
-                                    "y2": 2900
-                                }
-                            ],
-                            "class": "cIcCore::Route",
-                            "has_pr": true,
+                            "has_pr": false,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -38514,42 +37738,6 @@
                             "xcell": 0,
                             "y1": 82100,
                             "y2": 85500,
-                            "ycell": 0
-                        },
-                        {
-                            "angle": "",
-                            "cell": "cut_M1M2_2x1",
-                            "children": [
-                            ],
-                            "class": "Instance",
-                            "instanceName": "",
-                            "layer": "PR",
-                            "libpath": "",
-                            "name": "cut_M1M2_2x1",
-                            "net": "",
-                            "x1": 118800,
-                            "x2": 128000,
-                            "xcell": 0,
-                            "y1": 20500,
-                            "y2": 23900,
-                            "ycell": 0
-                        },
-                        {
-                            "angle": "",
-                            "cell": "cut_M1M2_2x1",
-                            "children": [
-                            ],
-                            "class": "Instance",
-                            "instanceName": "",
-                            "layer": "PR",
-                            "libpath": "",
-                            "name": "cut_M1M2_2x1",
-                            "net": "",
-                            "x1": 97200,
-                            "x2": 106400,
-                            "xcell": 0,
-                            "y1": 7300,
-                            "y2": 10700,
                             "ycell": 0
                         },
                         {
@@ -39058,7 +38246,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": true,
+                    "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -41022,7 +40210,7 @@
                                 }
                             ],
                             "class": "cIcCore::Route",
-                            "has_pr": true,
+                            "has_pr": false,
                             "layer": "PR",
                             "libcell": false,
                             "libpath": "",
@@ -41730,42 +40918,6 @@
                             "ycell": 0
                         },
                         {
-                            "angle": "",
-                            "cell": "cut_M1M2_2x1",
-                            "children": [
-                            ],
-                            "class": "Instance",
-                            "instanceName": "",
-                            "layer": "PR",
-                            "libpath": "",
-                            "name": "cut_M1M2_2x1",
-                            "net": "",
-                            "x1": 99000,
-                            "x2": 108200,
-                            "xcell": 0,
-                            "y1": 77700,
-                            "y2": 81100,
-                            "ycell": 0
-                        },
-                        {
-                            "angle": "",
-                            "cell": "cut_M1M2_2x1",
-                            "children": [
-                            ],
-                            "class": "Instance",
-                            "instanceName": "",
-                            "layer": "PR",
-                            "libpath": "",
-                            "name": "cut_M1M2_2x1",
-                            "net": "",
-                            "x1": 37800,
-                            "x2": 47000,
-                            "xcell": 0,
-                            "y1": 240500,
-                            "y2": 243900,
-                            "ycell": 0
-                        },
-                        {
                             "class": "Rect",
                             "layer": "M2",
                             "net": "",
@@ -41787,19 +40939,10 @@
                             "class": "Rect",
                             "layer": "M2",
                             "net": "",
-                            "x1": 45600,
-                            "x2": 51600,
-                            "y1": 243500,
-                            "y2": 246500
-                        },
-                        {
-                            "class": "Rect",
-                            "layer": "M2",
-                            "net": "",
                             "x1": 51600,
                             "x2": 54600,
                             "y1": 77700,
-                            "y2": 246500
+                            "y2": 243500
                         },
                         {
                             "class": "Rect",
@@ -41809,15 +40952,6 @@
                             "x2": 104400,
                             "y1": 77700,
                             "y2": 80700
-                        },
-                        {
-                            "class": "Rect",
-                            "layer": "M2",
-                            "net": "",
-                            "x1": 43200,
-                            "x2": 48600,
-                            "y1": 240500,
-                            "y2": 243500
                         },
                         {
                             "class": "Text",
@@ -41831,7 +40965,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -41843,7 +40977,7 @@
                     "x1": 37800,
                     "x2": 108200,
                     "y1": 77700,
-                    "y2": 246500
+                    "y2": 243500
                 },
                 {
                     "abstract": false,
@@ -41869,42 +41003,6 @@
                             "ycell": 0
                         },
                         {
-                            "angle": "",
-                            "cell": "cut_M1M2_2x1",
-                            "children": [
-                            ],
-                            "class": "Instance",
-                            "instanceName": "",
-                            "layer": "PR",
-                            "libpath": "",
-                            "name": "cut_M1M2_2x1",
-                            "net": "",
-                            "x1": 351000,
-                            "x2": 360200,
-                            "xcell": 0,
-                            "y1": 77700,
-                            "y2": 81100,
-                            "ycell": 0
-                        },
-                        {
-                            "angle": "",
-                            "cell": "cut_M1M2_2x1",
-                            "children": [
-                            ],
-                            "class": "Instance",
-                            "instanceName": "",
-                            "layer": "PR",
-                            "libpath": "",
-                            "name": "cut_M1M2_2x1",
-                            "net": "",
-                            "x1": 289800,
-                            "x2": 299000,
-                            "xcell": 0,
-                            "y1": 240500,
-                            "y2": 243900,
-                            "ycell": 0
-                        },
-                        {
                             "class": "Rect",
                             "layer": "M2",
                             "net": "",
@@ -41926,19 +41024,10 @@
                             "class": "Rect",
                             "layer": "M2",
                             "net": "",
-                            "x1": 297600,
-                            "x2": 303600,
-                            "y1": 243500,
-                            "y2": 246500
-                        },
-                        {
-                            "class": "Rect",
-                            "layer": "M2",
-                            "net": "",
                             "x1": 303600,
                             "x2": 306600,
                             "y1": 77700,
-                            "y2": 246500
+                            "y2": 243500
                         },
                         {
                             "class": "Rect",
@@ -41948,15 +41037,6 @@
                             "x2": 356400,
                             "y1": 77700,
                             "y2": 80700
-                        },
-                        {
-                            "class": "Rect",
-                            "layer": "M2",
-                            "net": "",
-                            "x1": 295200,
-                            "x2": 300600,
-                            "y1": 240500,
-                            "y2": 243500
                         },
                         {
                             "class": "Text",
@@ -41982,7 +41062,7 @@
                     "x1": 289800,
                     "x2": 360200,
                     "y1": 77700,
-                    "y2": 246500
+                    "y2": 243500
                 },
                 {
                     "abstract": false,
@@ -42005,42 +41085,6 @@
                             "xcell": 0,
                             "y1": 77700,
                             "y2": 81100,
-                            "ycell": 0
-                        },
-                        {
-                            "angle": "",
-                            "cell": "cut_M1M2_2x1",
-                            "children": [
-                            ],
-                            "class": "Instance",
-                            "instanceName": "",
-                            "layer": "PR",
-                            "libpath": "",
-                            "name": "cut_M1M2_2x1",
-                            "net": "",
-                            "x1": 603000,
-                            "x2": 612200,
-                            "xcell": 0,
-                            "y1": 77700,
-                            "y2": 81100,
-                            "ycell": 0
-                        },
-                        {
-                            "angle": "",
-                            "cell": "cut_M1M2_2x1",
-                            "children": [
-                            ],
-                            "class": "Instance",
-                            "instanceName": "",
-                            "layer": "PR",
-                            "libpath": "",
-                            "name": "cut_M1M2_2x1",
-                            "net": "",
-                            "x1": 541800,
-                            "x2": 551000,
-                            "xcell": 0,
-                            "y1": 240500,
-                            "y2": 243900,
                             "ycell": 0
                         },
                         {
@@ -42065,19 +41109,10 @@
                             "class": "Rect",
                             "layer": "M2",
                             "net": "",
-                            "x1": 549600,
-                            "x2": 555600,
-                            "y1": 243500,
-                            "y2": 246500
-                        },
-                        {
-                            "class": "Rect",
-                            "layer": "M2",
-                            "net": "",
                             "x1": 555600,
                             "x2": 558600,
                             "y1": 77700,
-                            "y2": 246500
+                            "y2": 243500
                         },
                         {
                             "class": "Rect",
@@ -42087,15 +41122,6 @@
                             "x2": 608400,
                             "y1": 77700,
                             "y2": 80700
-                        },
-                        {
-                            "class": "Rect",
-                            "layer": "M2",
-                            "net": "",
-                            "x1": 547200,
-                            "x2": 552600,
-                            "y1": 240500,
-                            "y2": 243500
                         },
                         {
                             "class": "Text",
@@ -42109,7 +41135,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -42121,7 +41147,7 @@
                     "x1": 541800,
                     "x2": 612200,
                     "y1": 77700,
-                    "y2": 246500
+                    "y2": 243500
                 },
                 {
                     "abstract": false,
@@ -42144,42 +41170,6 @@
                             "xcell": 0,
                             "y1": 77700,
                             "y2": 81100,
-                            "ycell": 0
-                        },
-                        {
-                            "angle": "",
-                            "cell": "cut_M1M2_2x1",
-                            "children": [
-                            ],
-                            "class": "Instance",
-                            "instanceName": "",
-                            "layer": "PR",
-                            "libpath": "",
-                            "name": "cut_M1M2_2x1",
-                            "net": "",
-                            "x1": 143800,
-                            "x2": 153000,
-                            "xcell": 0,
-                            "y1": 77700,
-                            "y2": 81100,
-                            "ycell": 0
-                        },
-                        {
-                            "angle": "",
-                            "cell": "cut_M1M2_2x1",
-                            "children": [
-                            ],
-                            "class": "Instance",
-                            "instanceName": "",
-                            "layer": "PR",
-                            "libpath": "",
-                            "name": "cut_M1M2_2x1",
-                            "net": "",
-                            "x1": 205000,
-                            "x2": 214200,
-                            "xcell": 0,
-                            "y1": 240500,
-                            "y2": 243900,
                             "ycell": 0
                         },
                         {
@@ -42205,18 +41195,9 @@
                             "layer": "M2",
                             "net": "",
                             "x1": 197400,
-                            "x2": 206400,
-                            "y1": 243500,
-                            "y2": 246500
-                        },
-                        {
-                            "class": "Rect",
-                            "layer": "M2",
-                            "net": "",
-                            "x1": 197400,
                             "x2": 200400,
                             "y1": 77700,
-                            "y2": 246500
+                            "y2": 243500
                         },
                         {
                             "class": "Rect",
@@ -42226,15 +41207,6 @@
                             "x2": 153000,
                             "y1": 77700,
                             "y2": 80700
-                        },
-                        {
-                            "class": "Rect",
-                            "layer": "M2",
-                            "net": "",
-                            "x1": 203400,
-                            "x2": 208800,
-                            "y1": 240500,
-                            "y2": 243500
                         },
                         {
                             "class": "Text",
@@ -42248,7 +41220,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": true,
+                    "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -42258,9 +41230,9 @@
                     "net": "",
                     "physicalOnly": false,
                     "x1": 143800,
-                    "x2": 214200,
+                    "x2": 208800,
                     "y1": 77700,
-                    "y2": 246500
+                    "y2": 243500
                 },
                 {
                     "abstract": false,
@@ -42286,42 +41258,6 @@
                             "ycell": 0
                         },
                         {
-                            "angle": "",
-                            "cell": "cut_M1M2_2x1",
-                            "children": [
-                            ],
-                            "class": "Instance",
-                            "instanceName": "",
-                            "layer": "PR",
-                            "libpath": "",
-                            "name": "cut_M1M2_2x1",
-                            "net": "",
-                            "x1": 395800,
-                            "x2": 405000,
-                            "xcell": 0,
-                            "y1": 77700,
-                            "y2": 81100,
-                            "ycell": 0
-                        },
-                        {
-                            "angle": "",
-                            "cell": "cut_M1M2_2x1",
-                            "children": [
-                            ],
-                            "class": "Instance",
-                            "instanceName": "",
-                            "layer": "PR",
-                            "libpath": "",
-                            "name": "cut_M1M2_2x1",
-                            "net": "",
-                            "x1": 457000,
-                            "x2": 466200,
-                            "xcell": 0,
-                            "y1": 240500,
-                            "y2": 243900,
-                            "ycell": 0
-                        },
-                        {
                             "class": "Rect",
                             "layer": "M2",
                             "net": "",
@@ -42344,18 +41280,9 @@
                             "layer": "M2",
                             "net": "",
                             "x1": 449400,
-                            "x2": 458400,
-                            "y1": 243500,
-                            "y2": 246500
-                        },
-                        {
-                            "class": "Rect",
-                            "layer": "M2",
-                            "net": "",
-                            "x1": 449400,
                             "x2": 452400,
                             "y1": 77700,
-                            "y2": 246500
+                            "y2": 243500
                         },
                         {
                             "class": "Rect",
@@ -42365,15 +41292,6 @@
                             "x2": 405000,
                             "y1": 77700,
                             "y2": 80700
-                        },
-                        {
-                            "class": "Rect",
-                            "layer": "M2",
-                            "net": "",
-                            "x1": 455400,
-                            "x2": 460800,
-                            "y1": 240500,
-                            "y2": 243500
                         },
                         {
                             "class": "Text",
@@ -42387,7 +41305,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": true,
+                    "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -42397,9 +41315,9 @@
                     "net": "",
                     "physicalOnly": false,
                     "x1": 395800,
-                    "x2": 466200,
+                    "x2": 460800,
                     "y1": 77700,
-                    "y2": 246500
+                    "y2": 243500
                 },
                 {
                     "abstract": false,
@@ -42490,7 +41408,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": true,
+                    "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -42593,7 +41511,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": true,
+                    "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -42817,7 +41735,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -51559,7 +50477,7 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": true,
+                    "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
                     "libpath": "",
@@ -55741,122 +54659,6 @@
                             "x2": 214600,
                             "y1": -19200,
                             "y2": 35200
-                        },
-                        {
-                            "abstract": false,
-                            "boundaryIgnoreRouting": false,
-                            "cellused": true,
-                            "children": [
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M4_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M4_2x1",
-                                    "net": "",
-                                    "x1": 247000,
-                                    "x2": 257000,
-                                    "xcell": 0,
-                                    "y1": -19200,
-                                    "y2": -15400,
-                                    "ycell": 0
-                                },
-                                {
-                                    "class": "Rect",
-                                    "layer": "M4",
-                                    "net": "",
-                                    "x1": 246600,
-                                    "x2": 257400,
-                                    "y1": -19200,
-                                    "y2": 11000
-                                },
-                                {
-                                    "class": "Text",
-                                    "layer": "TXT",
-                                    "name": "AVSS",
-                                    "net": "",
-                                    "x1": 246600,
-                                    "x2": 246600,
-                                    "y1": 6600,
-                                    "y2": 6600
-                                }
-                            ],
-                            "class": "cIcCore::Route",
-                            "has_pr": true,
-                            "layer": "PR",
-                            "libcell": false,
-                            "libpath": "",
-                            "meta": {
-                            },
-                            "name": "AVSS",
-                            "net": "",
-                            "physicalOnly": false,
-                            "x1": 246600,
-                            "x2": 257400,
-                            "y1": -19200,
-                            "y2": 11000
-                        },
-                        {
-                            "abstract": false,
-                            "boundaryIgnoreRouting": false,
-                            "cellused": true,
-                            "children": [
-                                {
-                                    "angle": "",
-                                    "cell": "cut_M1M4_2x1",
-                                    "children": [
-                                    ],
-                                    "class": "Instance",
-                                    "instanceName": "",
-                                    "layer": "PR",
-                                    "libpath": "",
-                                    "name": "cut_M1M4_2x1",
-                                    "net": "",
-                                    "x1": 204200,
-                                    "x2": 214200,
-                                    "xcell": 0,
-                                    "y1": -19200,
-                                    "y2": -15400,
-                                    "ycell": 0
-                                },
-                                {
-                                    "class": "Rect",
-                                    "layer": "M4",
-                                    "net": "",
-                                    "x1": 203800,
-                                    "x2": 214600,
-                                    "y1": -19200,
-                                    "y2": 35200
-                                },
-                                {
-                                    "class": "Text",
-                                    "layer": "TXT",
-                                    "name": "AVSS",
-                                    "net": "",
-                                    "x1": 204200,
-                                    "x2": 204200,
-                                    "y1": 0,
-                                    "y2": 0
-                                }
-                            ],
-                            "class": "cIcCore::Route",
-                            "has_pr": true,
-                            "layer": "PR",
-                            "libcell": false,
-                            "libpath": "",
-                            "meta": {
-                            },
-                            "name": "AVSS",
-                            "net": "",
-                            "physicalOnly": false,
-                            "x1": 203800,
-                            "x2": 214600,
-                            "y1": -19200,
-                            "y2": 35200
                         }
                     ],
                     "class": "cIcCore::RouteRing",
@@ -57350,7 +56152,7 @@
                             "x1": 703200,
                             "x2": 715200,
                             "y1": -38400,
-                            "y2": 566400
+                            "y2": 1147200
                         },
                         {
                             "class": "Port",
@@ -57410,7 +56212,7 @@
                             "x1": 684000,
                             "x2": 696000,
                             "y1": -19200,
-                            "y2": 547200
+                            "y2": 1128000
                         },
                         {
                             "class": "Text",
@@ -57419,8 +56221,8 @@
                             "net": "",
                             "x1": 385800,
                             "x2": 385800,
-                            "y1": 302400,
-                            "y2": 302400
+                            "y1": 592800,
+                            "y2": 592800
                         }
                     ],
                     "class": "Instance",
@@ -57453,7 +56255,7 @@
                     "x2": 753600,
                     "xcell": 0,
                     "y1": 0,
-                    "y2": 604800,
+                    "y2": 1185600,
                     "ycell": 0
                 },
                 {
@@ -57469,8 +56271,8 @@
                             "spicePort": true,
                             "x1": 123300,
                             "x2": 139500,
-                            "y1": 1724300,
-                            "y2": 1735300
+                            "y1": 2305100,
+                            "y2": 2316100
                         },
                         {
                             "class": "Port",
@@ -57481,8 +56283,8 @@
                             "spicePort": true,
                             "x1": 1928000,
                             "x2": 1940000,
-                            "y1": 593600,
-                            "y2": 2000000
+                            "y1": 1174400,
+                            "y2": 2580800
                         },
                         {
                             "class": "Port",
@@ -57493,8 +56295,8 @@
                             "spicePort": true,
                             "x1": 15300,
                             "x2": 31500,
-                            "y1": 808300,
-                            "y2": 819300
+                            "y1": 1389100,
+                            "y2": 1400100
                         },
                         {
                             "class": "Text",
@@ -57503,8 +56305,8 @@
                             "net": "",
                             "x1": 1006600,
                             "x2": 1006600,
-                            "y1": 1352000,
-                            "y2": 1352000
+                            "y1": 1932800,
+                            "y2": 1932800
                         }
                     ],
                     "class": "Instance",
@@ -57533,8 +56335,8 @@
                     "x1": 18000,
                     "x2": 1995200,
                     "xcell": 0,
-                    "y1": 648800,
-                    "y2": 2055200,
+                    "y1": 1229600,
+                    "y2": 2636000,
                     "ycell": 0
                 },
                 {
@@ -58239,7 +57041,7 @@
                     "x1": 2294600,
                     "x2": 2306600,
                     "y1": -69600,
-                    "y2": 2124800
+                    "y2": 2705600
                 },
                 {
                     "abstract": false,
@@ -58261,8 +57063,8 @@
                             "net": "",
                             "x1": -51600,
                             "x2": 2306600,
-                            "y1": 2112800,
-                            "y2": 2124800
+                            "y1": 2693600,
+                            "y2": 2705600
                         },
                         {
                             "class": "Rect",
@@ -58271,7 +57073,7 @@
                             "x1": -51600,
                             "x2": -39600,
                             "y1": -69600,
-                            "y2": 2124800
+                            "y2": 2705600
                         },
                         {
                             "class": "Rect",
@@ -58280,7 +57082,7 @@
                             "x1": 2294600,
                             "x2": 2306600,
                             "y1": -69600,
-                            "y2": 2124800
+                            "y2": 2705600
                         }
                     ],
                     "class": "cIcCore::RouteRing",
@@ -58296,7 +57098,7 @@
                     "x1": -51600,
                     "x2": 2306600,
                     "y1": -69600,
-                    "y2": 2124800
+                    "y2": 2705600
                 },
                 {
                     "class": "Port",
@@ -58308,7 +57110,7 @@
                     "x1": 2321000,
                     "x2": 2333000,
                     "y1": -96000,
-                    "y2": 2151200
+                    "y2": 2732000
                 },
                 {
                     "abstract": false,
@@ -58330,8 +57132,8 @@
                             "net": "",
                             "x1": -78000,
                             "x2": 2333000,
-                            "y1": 2139200,
-                            "y2": 2151200
+                            "y1": 2720000,
+                            "y2": 2732000
                         },
                         {
                             "class": "Rect",
@@ -58340,7 +57142,7 @@
                             "x1": -78000,
                             "x2": -66000,
                             "y1": -96000,
-                            "y2": 2151200
+                            "y2": 2732000
                         },
                         {
                             "class": "Rect",
@@ -58349,7 +57151,7 @@
                             "x1": 2321000,
                             "x2": 2333000,
                             "y1": -96000,
-                            "y2": 2151200
+                            "y2": 2732000
                         }
                     ],
                     "class": "cIcCore::RouteRing",
@@ -58365,7 +57167,7 @@
                     "x1": -78000,
                     "x2": 2333000,
                     "y1": -96000,
-                    "y2": 2151200
+                    "y2": 2732000
                 },
                 {
                     "class": "Port",
@@ -58603,7 +57405,7 @@
             "x1": -78000,
             "x2": 2333000,
             "y1": -96000,
-            "y2": 2151200
+            "y2": 2732000
         }
     ],
     "info": {
@@ -58617,6 +57419,6 @@
         "library": "SUN_PLL_SKY130NM",
         "prefix": "",
         "rules": "../cic/sky130.tech",
-        "version": "0.1.4 built on Tue Aug 16 16:35:28 CEST 2022"
+        "version": "0.1.4 built on Fri Aug 19 15:31:21 CEST 2022"
     }
 }

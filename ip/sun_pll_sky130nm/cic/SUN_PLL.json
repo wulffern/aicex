@@ -184,7 +184,7 @@
                 {"addRouteRings" :[
                     ["M1","AVSS","tbrl",4,2],
                     ["M1","AVDD","tbrl",4,2],
-                  ["M1","PWRUP_1V8","t",1,2]
+                    ["M1","PWRUP_1V8","t",1,2]
                     
 
                 ]},

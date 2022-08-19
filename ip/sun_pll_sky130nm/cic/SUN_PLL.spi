@@ -98,7 +98,7 @@ xc3_0 VO VGP AVDD AVDD SUNTR_PCHDLA xoffset=0 yoffset=0 angle=0 M=1
 xc3_1 VO VGP AVDD AVDD SUNTR_PCHDLA xoffset=0 yoffset=0 angle=0 M=1
 xc3_2 VO VGP AVDD AVDD SUNTR_PCHDLA xoffset=0 yoffset=0 angle=0 M=1
 xd2 VO AVSS SUNSAR_CAP_BSSW_CV xoffset=2 yoffset=0 angle=0 M=1
-xd3 VO AVSS SUNSAR_CAP_BSSW_CV xoffset=0 yoffset=0 angle=0 M=9
+xd3 VO AVSS SUNSAR_CAP_BSSW_CV xoffset=0 yoffset=0 angle=0 M=20
 .ends
 
 
@@ -224,6 +224,7 @@ xc2b YN Y net1 AVDD SUNTR_PCHDL xoffset=0 yoffset=0 angle=0 M=1
 *.iopin A
 *.iopin B
 *  R1 -  res_generic_m3  IS MISSING !!!!
+*  R2 -  res_generic_m3  IS MISSING !!!!
 .ends
 
 .end

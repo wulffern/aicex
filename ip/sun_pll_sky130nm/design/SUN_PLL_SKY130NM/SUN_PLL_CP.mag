@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1660667839
+timestamp 1660916687
 << checkpaint >>
 rect -768 -768 3648 9920
 << locali >>
@@ -64,10 +64,6 @@ rect 324 4018 540 4078
 << m1 >>
 rect 756 -384 972 118
 rect -108 -384 108 220
-rect 756 -384 972 118
-rect -108 -384 108 220
-rect 2376 -768 2592 118
-rect 1512 -768 1728 220
 rect 2376 -768 2592 118
 rect 1512 -768 1728 220
 rect 2052 146 2220 206
@@ -155,30 +151,6 @@ use cut_M1M2_2x1
 transform 1 0 -92 0 1 -384
 box -92 -384 92 -316
 use cut_M1M2_2x1 
-transform 1 0 772 0 1 58
-box 772 58 956 126
-use cut_M1M2_2x1 
-transform 1 0 772 0 1 -384
-box 772 -384 956 -316
-use cut_M1M2_2x1 
-transform 1 0 -92 0 1 132
-box -92 132 92 200
-use cut_M1M2_2x1 
-transform 1 0 -92 0 1 -384
-box -92 -384 92 -316
-use cut_M1M2_2x1 
-transform 1 0 2392 0 1 58
-box 2392 58 2576 126
-use cut_M1M2_2x1 
-transform 1 0 2392 0 1 -768
-box 2392 -768 2576 -700
-use cut_M1M2_2x1 
-transform 1 0 1528 0 1 132
-box 1528 132 1712 200
-use cut_M1M2_2x1 
-transform 1 0 1528 0 1 -768
-box 1528 -768 1712 -700
-use cut_M1M2_2x1 
 transform 1 0 2392 0 1 58
 box 2392 58 2576 126
 use cut_M1M2_2x1 
@@ -199,12 +171,6 @@ box 2376 410 2560 478
 use cut_M1M2_2x1 
 transform 1 0 756 0 1 1642
 box 756 1642 940 1710
-use cut_M1M2_2x1 
-transform 1 0 2376 0 1 410
-box 2376 410 2560 478
-use cut_M1M2_2x1 
-transform 1 0 1944 0 1 146
-box 1944 146 2128 214
 use cut_M1M2_2x1 
 transform 1 0 1944 0 1 674
 box 1944 674 2128 742

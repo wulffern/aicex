@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1660667839
+timestamp 1660916687
 << checkpaint >>
 rect -768 -768 5808 4640
 << locali >>
@@ -55,8 +55,6 @@ rect 756 1642 972 1702
 rect 4500 146 4716 206
 << m3 >>
 rect 748 -384 964 1408
-rect 4932 -384 5148 220
-rect 4076 -384 4292 704
 rect 4932 -384 5148 220
 rect 4076 -384 4292 704
 rect 1540 -768 1756 1408
@@ -121,12 +119,6 @@ box 5040 3520 7560 3872
 use cut_M1M4_2x1 
 transform 1 0 756 0 1 -384
 box 756 -384 956 -308
-use cut_M1M4_2x1 
-transform 1 0 4940 0 1 -384
-box 4940 -384 5140 -308
-use cut_M1M4_2x1 
-transform 1 0 4084 0 1 -384
-box 4084 -384 4284 -308
 use cut_M1M4_2x1 
 transform 1 0 4940 0 1 -384
 box 4940 -384 5140 -308
