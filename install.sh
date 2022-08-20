@@ -12,16 +12,16 @@ cd ../../
 #- Get cicpy
 git clone https://github.com/wulffern/cicpy.git
 cd cicpy
-pip3 install -r requirements.txt --user
-pip3 install --user -e .
+python3 -m pip install -r requirements.txt --user
+python3 -m pip install --user -e .
 cd ..
 
 #- Get cicsim
 git clone https://github.com/wulffern/cicsim.git
 cd cicsim
 git checkout develop
-pip3 install -r requirements.txt --user
-pip3 install --user -e .
+python3 -m pip install -r requirements.txt --user
+python3 -m pip install --user -e .
 cd ..
 
 #- Get aicex
