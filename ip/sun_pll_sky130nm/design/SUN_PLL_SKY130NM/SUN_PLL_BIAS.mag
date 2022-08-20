@@ -1,235 +1,235 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1661019234
+timestamp 1661026409
 << checkpaint >>
-rect -384 -384 1644 18336
+rect 0 0 2028 18720
 << locali >>
-rect 1404 -384 1644 18336
-rect -384 -384 1644 -144
-rect -384 18096 1644 18336
-rect -384 -384 -144 18336
-rect 1404 -384 1644 18336
-rect 432 146 600 206
-rect 600 146 660 206
-rect 636 294 816 354
-rect 636 1994 864 2054
-rect 432 498 636 558
-rect 636 3754 864 3814
-rect 432 2258 636 2318
-rect 636 5514 864 5574
-rect 432 4018 636 4078
-rect 636 7274 864 7334
-rect 432 5778 636 5838
-rect 636 9034 864 9094
-rect 432 7538 636 7598
-rect 636 10794 864 10854
-rect 432 9298 636 9358
-rect 636 12554 864 12614
-rect 432 11058 636 11118
-rect 636 14314 864 14374
-rect 432 12818 636 12878
-rect 636 16074 864 16134
-rect 432 14578 636 14638
-rect 636 17834 864 17894
-rect 432 16338 636 16398
-rect 636 294 696 17894
-rect 756 234 864 294
-rect 756 234 972 294
-rect 324 146 540 206
+rect 1788 0 2028 18720
+rect 0 0 2028 240
+rect 0 18480 2028 18720
+rect 0 0 240 18720
+rect 1788 0 2028 18720
+rect 816 530 984 590
+rect 984 530 1044 590
+rect 1020 678 1200 738
+rect 1020 2378 1248 2438
+rect 816 882 1020 942
+rect 1020 4138 1248 4198
+rect 816 2642 1020 2702
+rect 1020 5898 1248 5958
+rect 816 4402 1020 4462
+rect 1020 7658 1248 7718
+rect 816 6162 1020 6222
+rect 1020 9418 1248 9478
+rect 816 7922 1020 7982
+rect 1020 11178 1248 11238
+rect 816 9682 1020 9742
+rect 1020 12938 1248 12998
+rect 816 11442 1020 11502
+rect 1020 14698 1248 14758
+rect 816 13202 1020 13262
+rect 1020 16458 1248 16518
+rect 816 14962 1020 15022
+rect 1020 18218 1248 18278
+rect 816 16722 1020 16782
+rect 1020 678 1080 18278
+rect 1140 618 1248 678
+rect 1140 618 1356 678
+rect 708 530 924 590
 << m3 >>
-rect 756 -384 972 118
-rect -108 -384 108 220
-rect 756 -384 972 470
-rect -108 -384 108 572
-rect 756 -384 972 2230
-rect -108 -384 108 2332
-rect 756 -384 972 3990
-rect -108 -384 108 4092
-rect 756 -384 972 5750
-rect -108 -384 108 5852
-rect 756 -384 972 7510
-rect -108 -384 108 7612
-rect 756 -384 972 9270
-rect -108 -384 108 9372
-rect 756 -384 972 11030
-rect -108 -384 108 11132
-rect 756 -384 972 12790
-rect -108 -384 108 12892
-rect 756 -384 972 14550
-rect -108 -384 108 14652
-rect 756 -384 972 16310
-rect -108 -384 108 16412
+rect 1140 0 1356 502
+rect 276 0 492 604
+rect 1140 0 1356 854
+rect 276 0 492 956
+rect 1140 0 1356 2614
+rect 276 0 492 2716
+rect 1140 0 1356 4374
+rect 276 0 492 4476
+rect 1140 0 1356 6134
+rect 276 0 492 6236
+rect 1140 0 1356 7894
+rect 276 0 492 7996
+rect 1140 0 1356 9654
+rect 276 0 492 9756
+rect 1140 0 1356 11414
+rect 276 0 492 11516
+rect 1140 0 1356 13174
+rect 276 0 492 13276
+rect 1140 0 1356 14934
+rect 276 0 492 15036
+rect 1140 0 1356 16694
+rect 276 0 492 16796
 use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_NCHDL xa20
-transform 1 0 0 0 1 0
-box 0 0 1260 352
+transform 1 0 384 0 1 384
+box 384 384 1644 736
 use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_NCHDLCM xa30
-transform 1 0 0 0 1 352
-box 0 352 1260 2112
+transform 1 0 384 0 1 736
+box 384 736 1644 2496
 use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_NCHDLCM xa31
-transform 1 0 0 0 1 2112
-box 0 2112 1260 3872
+transform 1 0 384 0 1 2496
+box 384 2496 1644 4256
 use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_NCHDLCM xa32
-transform 1 0 0 0 1 3872
-box 0 3872 1260 5632
+transform 1 0 384 0 1 4256
+box 384 4256 1644 6016
 use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_NCHDLCM xa33
-transform 1 0 0 0 1 5632
-box 0 5632 1260 7392
+transform 1 0 384 0 1 6016
+box 384 6016 1644 7776
 use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_NCHDLCM xa34
-transform 1 0 0 0 1 7392
-box 0 7392 1260 9152
+transform 1 0 384 0 1 7776
+box 384 7776 1644 9536
 use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_NCHDLCM xa35
-transform 1 0 0 0 1 9152
-box 0 9152 1260 10912
+transform 1 0 384 0 1 9536
+box 384 9536 1644 11296
 use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_NCHDLCM xa36
-transform 1 0 0 0 1 10912
-box 0 10912 1260 12672
+transform 1 0 384 0 1 11296
+box 384 11296 1644 13056
 use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_NCHDLCM xa37
-transform 1 0 0 0 1 12672
-box 0 12672 1260 14432
+transform 1 0 384 0 1 13056
+box 384 13056 1644 14816
 use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_NCHDLCM xa38
-transform 1 0 0 0 1 14432
-box 0 14432 1260 16192
+transform 1 0 384 0 1 14816
+box 384 14816 1644 16576
 use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_NCHDLCM xa39
-transform 1 0 0 0 1 16192
-box 0 16192 1260 17952
+transform 1 0 384 0 1 16576
+box 384 16576 1644 18336
 use cut_M1M4_2x1 
-transform 1 0 764 0 1 58
-box 764 58 964 134
+transform 1 0 1148 0 1 442
+box 1148 442 1348 518
 use cut_M1M4_2x1 
-transform 1 0 764 0 1 -384
-box 764 -384 964 -308
+transform 1 0 1148 0 1 0
+box 1148 0 1348 76
 use cut_M1M4_2x1 
-transform 1 0 -100 0 1 132
-box -100 132 100 208
+transform 1 0 284 0 1 516
+box 284 516 484 592
 use cut_M1M4_2x1 
-transform 1 0 -100 0 1 -384
-box -100 -384 100 -308
+transform 1 0 284 0 1 0
+box 284 0 484 76
 use cut_M1M4_2x1 
-transform 1 0 764 0 1 410
-box 764 410 964 486
+transform 1 0 1148 0 1 794
+box 1148 794 1348 870
 use cut_M1M4_2x1 
-transform 1 0 764 0 1 -384
-box 764 -384 964 -308
+transform 1 0 1148 0 1 0
+box 1148 0 1348 76
 use cut_M1M4_2x1 
-transform 1 0 -100 0 1 484
-box -100 484 100 560
+transform 1 0 284 0 1 868
+box 284 868 484 944
 use cut_M1M4_2x1 
-transform 1 0 -100 0 1 -384
-box -100 -384 100 -308
+transform 1 0 284 0 1 0
+box 284 0 484 76
 use cut_M1M4_2x1 
-transform 1 0 764 0 1 2170
-box 764 2170 964 2246
+transform 1 0 1148 0 1 2554
+box 1148 2554 1348 2630
 use cut_M1M4_2x1 
-transform 1 0 764 0 1 -384
-box 764 -384 964 -308
+transform 1 0 1148 0 1 0
+box 1148 0 1348 76
 use cut_M1M4_2x1 
-transform 1 0 -100 0 1 2244
-box -100 2244 100 2320
+transform 1 0 284 0 1 2628
+box 284 2628 484 2704
 use cut_M1M4_2x1 
-transform 1 0 -100 0 1 -384
-box -100 -384 100 -308
+transform 1 0 284 0 1 0
+box 284 0 484 76
 use cut_M1M4_2x1 
-transform 1 0 764 0 1 3930
-box 764 3930 964 4006
+transform 1 0 1148 0 1 4314
+box 1148 4314 1348 4390
 use cut_M1M4_2x1 
-transform 1 0 764 0 1 -384
-box 764 -384 964 -308
+transform 1 0 1148 0 1 0
+box 1148 0 1348 76
 use cut_M1M4_2x1 
-transform 1 0 -100 0 1 4004
-box -100 4004 100 4080
+transform 1 0 284 0 1 4388
+box 284 4388 484 4464
 use cut_M1M4_2x1 
-transform 1 0 -100 0 1 -384
-box -100 -384 100 -308
+transform 1 0 284 0 1 0
+box 284 0 484 76
 use cut_M1M4_2x1 
-transform 1 0 764 0 1 5690
-box 764 5690 964 5766
+transform 1 0 1148 0 1 6074
+box 1148 6074 1348 6150
 use cut_M1M4_2x1 
-transform 1 0 764 0 1 -384
-box 764 -384 964 -308
+transform 1 0 1148 0 1 0
+box 1148 0 1348 76
 use cut_M1M4_2x1 
-transform 1 0 -100 0 1 5764
-box -100 5764 100 5840
+transform 1 0 284 0 1 6148
+box 284 6148 484 6224
 use cut_M1M4_2x1 
-transform 1 0 -100 0 1 -384
-box -100 -384 100 -308
+transform 1 0 284 0 1 0
+box 284 0 484 76
 use cut_M1M4_2x1 
-transform 1 0 764 0 1 7450
-box 764 7450 964 7526
+transform 1 0 1148 0 1 7834
+box 1148 7834 1348 7910
 use cut_M1M4_2x1 
-transform 1 0 764 0 1 -384
-box 764 -384 964 -308
+transform 1 0 1148 0 1 0
+box 1148 0 1348 76
 use cut_M1M4_2x1 
-transform 1 0 -100 0 1 7524
-box -100 7524 100 7600
+transform 1 0 284 0 1 7908
+box 284 7908 484 7984
 use cut_M1M4_2x1 
-transform 1 0 -100 0 1 -384
-box -100 -384 100 -308
+transform 1 0 284 0 1 0
+box 284 0 484 76
 use cut_M1M4_2x1 
-transform 1 0 764 0 1 9210
-box 764 9210 964 9286
+transform 1 0 1148 0 1 9594
+box 1148 9594 1348 9670
 use cut_M1M4_2x1 
-transform 1 0 764 0 1 -384
-box 764 -384 964 -308
+transform 1 0 1148 0 1 0
+box 1148 0 1348 76
 use cut_M1M4_2x1 
-transform 1 0 -100 0 1 9284
-box -100 9284 100 9360
+transform 1 0 284 0 1 9668
+box 284 9668 484 9744
 use cut_M1M4_2x1 
-transform 1 0 -100 0 1 -384
-box -100 -384 100 -308
+transform 1 0 284 0 1 0
+box 284 0 484 76
 use cut_M1M4_2x1 
-transform 1 0 764 0 1 10970
-box 764 10970 964 11046
+transform 1 0 1148 0 1 11354
+box 1148 11354 1348 11430
 use cut_M1M4_2x1 
-transform 1 0 764 0 1 -384
-box 764 -384 964 -308
+transform 1 0 1148 0 1 0
+box 1148 0 1348 76
 use cut_M1M4_2x1 
-transform 1 0 -100 0 1 11044
-box -100 11044 100 11120
+transform 1 0 284 0 1 11428
+box 284 11428 484 11504
 use cut_M1M4_2x1 
-transform 1 0 -100 0 1 -384
-box -100 -384 100 -308
+transform 1 0 284 0 1 0
+box 284 0 484 76
 use cut_M1M4_2x1 
-transform 1 0 764 0 1 12730
-box 764 12730 964 12806
+transform 1 0 1148 0 1 13114
+box 1148 13114 1348 13190
 use cut_M1M4_2x1 
-transform 1 0 764 0 1 -384
-box 764 -384 964 -308
+transform 1 0 1148 0 1 0
+box 1148 0 1348 76
 use cut_M1M4_2x1 
-transform 1 0 -100 0 1 12804
-box -100 12804 100 12880
+transform 1 0 284 0 1 13188
+box 284 13188 484 13264
 use cut_M1M4_2x1 
-transform 1 0 -100 0 1 -384
-box -100 -384 100 -308
+transform 1 0 284 0 1 0
+box 284 0 484 76
 use cut_M1M4_2x1 
-transform 1 0 764 0 1 14490
-box 764 14490 964 14566
+transform 1 0 1148 0 1 14874
+box 1148 14874 1348 14950
 use cut_M1M4_2x1 
-transform 1 0 764 0 1 -384
-box 764 -384 964 -308
+transform 1 0 1148 0 1 0
+box 1148 0 1348 76
 use cut_M1M4_2x1 
-transform 1 0 -100 0 1 14564
-box -100 14564 100 14640
+transform 1 0 284 0 1 14948
+box 284 14948 484 15024
 use cut_M1M4_2x1 
-transform 1 0 -100 0 1 -384
-box -100 -384 100 -308
+transform 1 0 284 0 1 0
+box 284 0 484 76
 use cut_M1M4_2x1 
-transform 1 0 764 0 1 16250
-box 764 16250 964 16326
+transform 1 0 1148 0 1 16634
+box 1148 16634 1348 16710
 use cut_M1M4_2x1 
-transform 1 0 764 0 1 -384
-box 764 -384 964 -308
+transform 1 0 1148 0 1 0
+box 1148 0 1348 76
 use cut_M1M4_2x1 
-transform 1 0 -100 0 1 16324
-box -100 16324 100 16400
+transform 1 0 284 0 1 16708
+box 284 16708 484 16784
 use cut_M1M4_2x1 
-transform 1 0 -100 0 1 -384
-box -100 -384 100 -308
+transform 1 0 284 0 1 0
+box 284 0 484 76
 << labels >>
-flabel locali s 1404 -384 1644 18336 0 FreeSans 400 0 0 0 AVSS
+flabel locali s 1788 0 2028 18720 0 FreeSans 400 0 0 0 AVSS
 port 3 nsew
-flabel locali s 756 234 972 294 0 FreeSans 400 0 0 0 IBPSR_1U
+flabel locali s 1140 618 1356 678 0 FreeSans 400 0 0 0 IBPSR_1U
 port 1 nsew
-flabel locali s 324 146 540 206 0 FreeSans 400 0 0 0 PWRUP_1V8_N
+flabel locali s 708 530 924 590 0 FreeSans 400 0 0 0 PWRUP_1V8_N
 port 2 nsew
 << end >>

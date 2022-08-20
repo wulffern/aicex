@@ -40,6 +40,9 @@
 
             "afterRoute"  : {
 
+            },
+            "afterPaint" :{
+              "resetOrigin" : 1
             }
         },
         {
@@ -88,7 +91,10 @@
 
                 ]}
 
-            ]
+            ],
+            "afterPaint" :{
+              "resetOrigin" : 1
+            }
         },
                 {
             "name" : "SUN_PLL_CP",
@@ -144,7 +150,10 @@
 
                 ]}
 
-            ]
+            ],
+            "afterPaint" :{
+              "resetOrigin" : 1
+            }
         },
 
         {
@@ -190,7 +199,10 @@
                   //["M1","AVDD","tbrl"]
                 ]}
 
-            ]
+            ],
+            "afterPaint" :{
+              "resetOrigin" : 1
+            }
         },
         {
             "name" : "SUN_PLL_LPF",
@@ -200,7 +212,7 @@
                 "noSchematic" : true
             },
             "composite" : 1,
-            "alternateGroup" : 1,
+            "alternateGroup" : 0,
             "noPowerRoute" : 1,
             "beforeRoute" :{
                 "addDirectedRoutes" : [
@@ -221,8 +233,8 @@
 
                 ],
                 "addRouteConnections" : [
-                    ["AVSS","xb1","bottom","M4","routeWidth=wide_width"],
-                    ["AVSS","xa","left","M1","routeWidth=wide_width"]
+                    ["AVSS","xb1","bottom","M4","routeWidth=wide_width"]
+                    //["AVSS","xa","left","M1","routeWidth=wide_width"]
 
                 ],
 
@@ -232,14 +244,17 @@
             },
             "afterPlace"  : [
                 {"addRouteRings" :[
-                    ["M1","AVSS","tbrl",4,12]
+                    ["M1","AVSS","tbrl",4,0]
 
                 ]},
                 {"addPowerRings" :[
 
                 ]}
 
-            ]
+            ],
+            "afterPaint" :{
+              "resetOrigin" : 1
+            }
         },
 
         {
@@ -265,6 +280,9 @@
             },
             "afterRoute"  : {
                 "addPortOnRects" : [  ["YN","M1", "xb2_1:D"]]
+            },
+            "afterPaint" :{
+              "resetOrigin" : 1
             }
 
 
@@ -297,7 +315,8 @@
                     ["M1","N[0-6]","--|-","onTopB,offsethigh","","IVX"],
                     ["M1","N7","--|-","onTopB,offsethigh","",""],
                     ["M2","^KICK$","-|--","","",""],
-                    ["M2","^N0$","|-","","",""]
+                    ["M2","^N0$","|-","","",""],
+                    ["M2","^PWRUP_1V8_N$","|-","","",""]
                 ],
                 "addRouteConnections" : [
 				    ["AVSS","xa1","bottom","M4","nostartcut,onTopT,routeWidth=wide_width"],
@@ -306,6 +325,9 @@
             },
             "afterRoute"  : {
 
+            },
+            "afterPaint" :{
+              "resetOrigin" : 1
             }
         },
         {
@@ -345,6 +367,9 @@
             },
             "afterRoute"  : {
 
+            },
+            "afterPaint" :{
+              "resetOrigin" : 1
             }
         },
         {
@@ -377,7 +402,10 @@
                     ["M1","AVSS","tbrl",4,2],
                     ["M1","AVDD","tbrl",4,2]
                 ]}
-            ]
+            ],
+            "afterPaint" :{
+              "resetOrigin" : 1
+            }
 
         },
         {
@@ -421,7 +449,7 @@
             },
             "afterPlace"  : [
                 {"addRouteRings" :[
-                    ["M1","AVSS","tbrl",4,16],
+                    ["M1","AVSS","tbrl",4,4],
                     ["M1","AVDD","tbrl",4,4]
 
                 ]},
@@ -429,7 +457,10 @@
 
                 ]}
 
-            ]
+            ],
+            "afterPaint" :{
+              "resetOrigin" : 1
+            }
         }
     ]
 }

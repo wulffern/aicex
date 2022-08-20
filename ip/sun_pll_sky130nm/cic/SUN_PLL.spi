@@ -7,13 +7,13 @@
 *.opin CK
 *.ipin IBPSR_1U
 + angle=0
-xb1 AVDD VDD_ROSC VLPF VDD_ROSC IBPSR_1U AVSS SUN_PLL_BUF xoffset=5 yoffset=0 angle=0
-xb2 VLPFZ AVSS VLPF SUN_PLL_LPF xoffset=0 yoffset=10 angle=0
-xc1 AVDD CK_FB CK PWRUP_1V8 AVSS SUN_PLL_DIVN xoffset=-330 yoffset=0 angle=0
+xb1 AVDD VDD_ROSC VLPF VDD_ROSC IBPSR_1U AVSS SUN_PLL_BUF xoffset=0 yoffset=0 angle=0
+xb2 VLPFZ AVSS VLPF SUN_PLL_LPF xoffset=0 yoffset=5 angle=0
+xc1 AVDD CK_FB CK PWRUP_1V8 AVSS SUN_PLL_DIVN xoffset=-310 yoffset=0 angle=0
 xd1 AVDD CK VDD_ROSC PWRUP_1V8 AVSS SUN_PLL_ROSC xoffset=5 yoffset=0 angle=0
 xk1 AVDD KICK __UNCONNECTED_PIN__0 PWRUP_1V8 AVSS PWRUP_1V8_N SUN_PLL_KICK xoffset=20 yoffset=0
-xk2 AVDD CP_UP_N VLPF CP_DOWN IBPSR_1U AVSS VLPFZ PWRUP_1V8 KICK SUN_PLL_CP xoffset=0 yoffset=10
-xk3 AVDD CP_UP_N CK_REF CP_DOWN CK_FB AVSS SUN_PLL_PFD xoffset=0 yoffset=0 angle=0
+xk2 AVDD CP_UP_N VLPF CP_DOWN IBPSR_1U AVSS VLPFZ PWRUP_1V8 KICK SUN_PLL_CP xoffset=0 yoffset=5
+xk3 AVDD CP_UP_N CK_REF CP_DOWN CK_FB AVSS SUN_PLL_PFD xoffset=0 yoffset=5 angle=0
 xl1 IBPSR_1U PWRUP_1V8_N AVSS SUN_PLL_BIAS xoffset=5 yoffset=0 angle=0
 .ends
 
@@ -32,16 +32,16 @@ xa3 N_2 N_1 CKUP CKDWN AVDD AVSS SUN_PLL_LSCORE
 xa4 CKUP CK AVDD AVSS SUNTR_IVX1_CV xoffset=0 yoffset=0 angle=0 M=1
 xa5 CKDWN NC1 AVDD AVSS SUNTR_IVX1_CV xoffset=0 yoffset=0 angle=0 M=1
 xa6 AVDD AVSS SUNTR_TAPCELLB_CV xoffset=0 yoffset=0 angle=0 M=1
-xb1 PWRUP_1V8 N_0 NI AVDD AVSS VDD_ROSC AVSS SUNTRB_NDX1_CV xoffset=0 yoffset=0 angle=0
-xb2_0 NI N_7 AVDD AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
-xb2_1 N_7 N_6 AVDD AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
-xb2_2 N_6 N_5 AVDD AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
-xb2_3 N_5 N_4 AVDD AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
-xb2_4 N_4 N_3 AVDD AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
-xb2_5 N_3 N_2 AVDD AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
-xb2_6 N_2 N_1 AVDD AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
-xb2_7 N_1 N_0 AVDD AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0
-xb3 AVDD AVSS SUNTRB_TAPCELLBAVSS_CV xoffset=0 yoffset=0 angle=0
+xb1 PWRUP_1V8 N_0 NI AVDD AVSS VDD_ROSC AVSS SUNTRB_NDX1_CV xoffset=0 yoffset=0 angle=0 M=1
+xb2_0 NI N_7 AVDD AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0 M=1
+xb2_1 N_7 N_6 AVDD AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0 M=1
+xb2_2 N_6 N_5 AVDD AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0 M=1
+xb2_3 N_5 N_4 AVDD AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0 M=1
+xb2_4 N_4 N_3 AVDD AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0 M=1
+xb2_5 N_3 N_2 AVDD AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0 M=1
+xb2_6 N_2 N_1 AVDD AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0 M=1
+xb2_7 N_1 N_0 AVDD AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0 M=1
+xb3 AVDD AVSS SUNTRB_TAPCELLBAVSS_CV xoffset=0 yoffset=0 angle=0 M=1
 .ends
 
 
@@ -112,11 +112,11 @@ xd3 VO AVSS SUNSAR_CAP_BSSW_CV xoffset=0 yoffset=0 angle=0 M=8
 *.ipin VLPF
 *.ipin AVSS
 *.ipin VLPFZ
-xa1 VN5 VLPF AVSS SUNTR_RPPO_100k xoffset=0 yoffset=5 angle=0 M=1
-xa2 VN4 VN5 AVSS SUNTR_RPPO_100k xoffset=0 yoffset=5 angle=0 M=1
-xa3 VN3 VN4 AVSS SUNTR_RPPO_100k xoffset=0 yoffset=5 angle=0 M=1
-xa4 VN2 VN3 AVSS SUNTR_RPPO_100k xoffset=0 yoffset=5 angle=0 M=1
-xa5 VLPFZ VN2 AVSS SUNTR_RPPO_100k xoffset=0 yoffset=5 angle=0 M=1
+xa1 VN5 VLPF AVSS SUNTR_RPPO_100k xoffset=0 yoffset=2 angle=0 M=1
+xa2 VN4 VN5 AVSS SUNTR_RPPO_100k xoffset=0 yoffset=2 angle=0 M=1
+xa3 VN3 VN4 AVSS SUNTR_RPPO_100k xoffset=0 yoffset=2 angle=0 M=1
+xa4 VN2 VN3 AVSS SUNTR_RPPO_100k xoffset=0 yoffset=2 angle=0 M=1
+xa5 VLPFZ VN2 AVSS SUNTR_RPPO_100k xoffset=0 yoffset=2 angle=0 M=1
 xb1 VLPF AVSS CAP_LPF xoffset=0 yoffset=0 angle=0 M=1
 xb2 VLPF AVSS CAP_LPF xoffset=0 yoffset=0 angle=0 M=2
 xb3 VLPFZ AVSS CAP_LPF xoffset=0 yoffset=0 angle=0 M=24

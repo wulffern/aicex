@@ -122,70 +122,39 @@
                     "XA1 N P B RES12",
                     ".ends"
                    ],
-          "beforeRoute" : {
+          "afterPlace" : {
               "addGuard" : [ "B", 6 , ["PTAP"] ]
           },
           "afterRoute"  : {
               "addPortOnRects" : [  ["P","M1"] , ["N", "M1"]]
+          },
+          "afterPaint" :{
+              "resetOrigin" : 1
           }
-
         },
         { "name" : "RPPO_25k",
           "class" : "Layout::LayoutDigitalCell",
-          "boundaryIgnoreRouting" : 0,
-            "composite" : 1,
-          "meta" : {
-              "symbol" : "cic/res"
-          },
+          "leech" :"RPPO_12k",
           "spice": [".subckt RPPO_25k P N B",
                     "XA1 N P B RES25",
                     ".ends"
-                   ],
-          "beforeRoute" : {
-              "addGuard" : [ "B", 6 , ["PTAP"] ]
-          },
-          "afterRoute"  : {
-              "addPortOnRects" : [  ["P","M1"] , ["N", "M1"]]
-          }
-
+                   ]
         },
          { "name" : "RPPO_100k",
-          "class" : "Layout::LayoutDigitalCell",
-          "boundaryIgnoreRouting" : 0,
-            "composite" : 1,
-          "meta" : {
-              "symbol" : "cic/res"
-          },
+          "class" : "cIcCore::LayoutCell",
+           "leech" :"RPPO_12k",
           "spice": [".subckt RPPO_100k P N B",
                     "XA1 N P B RES100",
                     ".ends"
-                   ],
-          "beforeRoute" : {
-              "addGuard" : [ "B", 6 , ["PTAP"] ]
-          },
-          "afterRoute"  : {
-              "addPortOnRects" : [  ["P","M1"] , ["N", "M1"]]
-          }
-
+                   ]
         },
          { "name" : "RPPO_200k",
           "class" : "Layout::LayoutDigitalCell",
-          "boundaryIgnoreRouting" : 0,
-            "composite" : 1,
-          "meta" : {
-              "symbol" : "cic/res"
-          },
+           "leech" :"RPPO_12k",
           "spice": [".subckt RPPO_200k P N B",
                     "XA1 N P B RES200",
                     ".ends"
-                   ],
-          "beforeRoute" : {
-              "addGuard" : [ "B", 6 , ["PTAP"] ]
-          },
-          "afterRoute"  : {
-              "addPortOnRects" : [  ["P","M1"] , ["N", "M1"]]
-          }
-
+                   ]
         }
 
     ]

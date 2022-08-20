@@ -64,6 +64,7 @@
             "has_pr": false,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
             },
             "name": "SUNTRB_cut_M3M4_2x2",
@@ -174,6 +175,7 @@
             "has_pr": false,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
             },
             "name": "SUNTRB_cut_M1M4_2x1",
@@ -257,6 +259,7 @@
             "has_pr": false,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
             },
             "name": "SUNTRB_cut_M1M3_2x1",
@@ -313,6 +316,7 @@
             "has_pr": false,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
             },
             "name": "SUNTRB_cut_M1M2_2x1",
@@ -804,6 +808,7 @@
             "heightoffset": 0,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
             },
             "name": "SUNTRB_DMOS_BULKP",
@@ -1301,6 +1306,7 @@
             "heightoffset": 0,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
             },
             "name": "SUNTRB_DMOS_BULKN",
@@ -1807,6 +1813,7 @@
             "heightoffset": 0,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
                 "symbol": "cic_wbulk/pch"
             },
@@ -2314,6 +2321,7 @@
             "heightoffset": 0,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
                 "symbol": "cic_wbulk/nch"
             },
@@ -2821,6 +2829,7 @@
             "heightoffset": 0,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
                 "symbol": "cic_wbulk/nch"
             },
@@ -2910,6 +2919,7 @@
                     "class": "Instance",
                     "instanceName": "MN0",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -3000,6 +3010,7 @@
                     "class": "Instance",
                     "instanceName": "MP0",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -3071,6 +3082,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A",
@@ -3110,6 +3122,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A",
@@ -3164,6 +3177,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 77400,
@@ -3190,6 +3204,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -3260,6 +3275,7 @@
             "has_pr": false,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
                 "symbol": "cic_wbulk/tieh"
             },
@@ -3345,6 +3361,7 @@
                     "class": "Instance",
                     "instanceName": "MN0",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -3435,6 +3452,7 @@
                     "class": "Instance",
                     "instanceName": "MP0",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -3506,6 +3524,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A",
@@ -3545,6 +3564,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A",
@@ -3599,6 +3619,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 77400,
@@ -3625,6 +3646,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -3695,6 +3717,7 @@
             "has_pr": false,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
                 "symbol": "cic_wbulk/tiel"
             },
@@ -3780,6 +3803,7 @@
                     "class": "Instance",
                     "instanceName": "MN0",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -3870,6 +3894,7 @@
                     "class": "Instance",
                     "instanceName": "MP0",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -3941,6 +3966,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "Y",
@@ -3971,6 +3997,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A",
@@ -4001,6 +4028,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A",
@@ -4040,6 +4068,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A",
@@ -4130,6 +4159,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 77400,
@@ -4156,6 +4186,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -4227,6 +4258,7 @@
             "has_pr": false,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
                 "symbol": "cic_wbulk/iv"
             },
@@ -4312,6 +4344,7 @@
                     "class": "Instance",
                     "instanceName": "MN0",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -4402,6 +4435,7 @@
                     "class": "Instance",
                     "instanceName": "MN1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -4492,6 +4526,7 @@
                     "class": "Instance",
                     "instanceName": "MP0",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -4582,6 +4617,7 @@
                     "class": "Instance",
                     "instanceName": "MP1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -4671,6 +4707,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "Y",
@@ -4707,9 +4744,10 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": true,
+                    "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A",
@@ -4749,6 +4787,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A",
@@ -4797,6 +4836,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A",
@@ -4887,6 +4927,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 77400,
@@ -4904,6 +4945,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 77400,
@@ -4930,6 +4972,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -4947,6 +4990,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -5048,6 +5092,7 @@
             "has_pr": false,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
                 "symbol": "cic_wbulk/iv"
             },
@@ -5133,6 +5178,7 @@
                     "class": "Instance",
                     "instanceName": "MN0",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -5223,6 +5269,7 @@
                     "class": "Instance",
                     "instanceName": "MN1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -5313,6 +5360,7 @@
                     "class": "Instance",
                     "instanceName": "MN2",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -5403,6 +5451,7 @@
                     "class": "Instance",
                     "instanceName": "MN3",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -5493,6 +5542,7 @@
                     "class": "Instance",
                     "instanceName": "MP0",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -5583,6 +5633,7 @@
                     "class": "Instance",
                     "instanceName": "MP1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -5673,6 +5724,7 @@
                     "class": "Instance",
                     "instanceName": "MP2",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -5763,6 +5815,7 @@
                     "class": "Instance",
                     "instanceName": "MP3",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -5888,6 +5941,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "Y",
@@ -5927,6 +5981,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A",
@@ -5966,6 +6021,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A",
@@ -6032,6 +6088,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A",
@@ -6122,6 +6179,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 77400,
@@ -6139,6 +6197,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 77400,
@@ -6156,6 +6215,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 77400,
@@ -6173,6 +6233,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 77400,
@@ -6199,6 +6260,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -6216,6 +6278,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -6233,6 +6296,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -6250,6 +6314,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -6411,6 +6476,7 @@
             "has_pr": false,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
                 "symbol": "cic_wbulk/iv"
             },
@@ -6496,6 +6562,7 @@
                     "class": "Instance",
                     "instanceName": "MN0",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -6586,6 +6653,7 @@
                     "class": "Instance",
                     "instanceName": "MN1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -6676,6 +6744,7 @@
                     "class": "Instance",
                     "instanceName": "MN2",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -6766,6 +6835,7 @@
                     "class": "Instance",
                     "instanceName": "MN3",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -6856,6 +6926,7 @@
                     "class": "Instance",
                     "instanceName": "MN4",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -6946,6 +7017,7 @@
                     "class": "Instance",
                     "instanceName": "MN5",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -7036,6 +7108,7 @@
                     "class": "Instance",
                     "instanceName": "MN6",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -7126,6 +7199,7 @@
                     "class": "Instance",
                     "instanceName": "MN7",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -7216,6 +7290,7 @@
                     "class": "Instance",
                     "instanceName": "MP0",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -7306,6 +7381,7 @@
                     "class": "Instance",
                     "instanceName": "MP1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -7396,6 +7472,7 @@
                     "class": "Instance",
                     "instanceName": "MP2",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -7486,6 +7563,7 @@
                     "class": "Instance",
                     "instanceName": "MP3",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -7576,6 +7654,7 @@
                     "class": "Instance",
                     "instanceName": "MP4",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -7666,6 +7745,7 @@
                     "class": "Instance",
                     "instanceName": "MP5",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -7756,6 +7836,7 @@
                     "class": "Instance",
                     "instanceName": "MP6",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -7846,6 +7927,7 @@
                     "class": "Instance",
                     "instanceName": "MP7",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -8043,6 +8125,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "Y",
@@ -8082,6 +8165,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A",
@@ -8121,6 +8205,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A",
@@ -8223,6 +8308,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A",
@@ -8313,6 +8399,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 77400,
@@ -8330,6 +8417,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 77400,
@@ -8347,6 +8435,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 77400,
@@ -8364,6 +8453,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 77400,
@@ -8381,6 +8471,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 77400,
@@ -8398,6 +8489,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 77400,
@@ -8415,6 +8507,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 77400,
@@ -8432,6 +8525,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 77400,
@@ -8458,6 +8552,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -8475,6 +8570,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -8492,6 +8588,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -8509,6 +8606,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -8526,6 +8624,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -8543,6 +8642,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -8560,6 +8660,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -8577,6 +8678,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -8858,6 +8960,7 @@
             "has_pr": false,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
                 "symbol": "cic_wbulk/iv"
             },
@@ -8943,6 +9046,7 @@
                     "class": "Instance",
                     "instanceName": "MN0",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -9033,6 +9137,7 @@
                     "class": "Instance",
                     "instanceName": "MN1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -9123,6 +9228,7 @@
                     "class": "Instance",
                     "instanceName": "MP0",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -9213,6 +9319,7 @@
                     "class": "Instance",
                     "instanceName": "MP1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -9284,6 +9391,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "B",
@@ -9323,6 +9431,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A",
@@ -9362,6 +9471,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "B",
@@ -9419,6 +9529,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "B",
@@ -9476,6 +9587,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "Y",
@@ -9566,6 +9678,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 77400,
@@ -9583,6 +9696,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 77400,
@@ -9609,6 +9723,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -9626,6 +9741,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -9727,6 +9843,7 @@
             "has_pr": false,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
                 "symbol": "cic_wbulk/bf"
             },
@@ -9812,6 +9929,7 @@
                     "class": "Instance",
                     "instanceName": "MN0",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -9902,6 +10020,7 @@
                     "class": "Instance",
                     "instanceName": "MN1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -9992,6 +10111,7 @@
                     "class": "Instance",
                     "instanceName": "MP0",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -10082,6 +10202,7 @@
                     "class": "Instance",
                     "instanceName": "MP1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -10162,6 +10283,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "Y",
@@ -10201,6 +10323,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "N1",
@@ -10240,6 +10363,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A",
@@ -10279,6 +10403,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "B",
@@ -10381,6 +10506,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 77400,
@@ -10407,6 +10533,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -10424,6 +10551,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -10526,6 +10654,7 @@
             "has_pr": false,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
                 "symbol": "cic_wbulk/nr"
             },
@@ -10611,6 +10740,7 @@
                     "class": "Instance",
                     "instanceName": "MN0",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -10701,6 +10831,7 @@
                     "class": "Instance",
                     "instanceName": "MN1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -10791,6 +10922,7 @@
                     "class": "Instance",
                     "instanceName": "MP0",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -10881,6 +11013,7 @@
                     "class": "Instance",
                     "instanceName": "MP1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -10961,6 +11094,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "Y",
@@ -11000,6 +11134,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "N1",
@@ -11039,6 +11174,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A",
@@ -11078,6 +11214,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "B",
@@ -11180,6 +11317,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 77400,
@@ -11197,6 +11335,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 77400,
@@ -11223,6 +11362,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -11325,6 +11465,7 @@
             "has_pr": false,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
                 "symbol": "cic_wbulk/nd"
             },
@@ -11446,6 +11587,7 @@
                     "class": "Instance",
                     "instanceName": "XA1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NRX1_CV",
                     "net": "",
                     "subcktInstance": {
@@ -11563,6 +11705,7 @@
                     "class": "Instance",
                     "instanceName": "XA2",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_IVX1_CV",
                     "net": "",
                     "subcktInstance": {
@@ -11636,6 +11779,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "YN",
@@ -11807,6 +11951,7 @@
             "has_pr": false,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
                 "symbol": "cic_wbulk/or"
             },
@@ -11928,6 +12073,7 @@
                     "class": "Instance",
                     "instanceName": "XA1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NRX1_CV",
                     "net": "",
                     "subcktInstance": {
@@ -12045,6 +12191,7 @@
                     "class": "Instance",
                     "instanceName": "XA2",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_IVX2_CV",
                     "net": "",
                     "subcktInstance": {
@@ -12118,6 +12265,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "YN",
@@ -12289,6 +12437,7 @@
             "has_pr": false,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
                 "symbol": "cic_wbulk/or"
             },
@@ -12410,6 +12559,7 @@
                     "class": "Instance",
                     "instanceName": "XA1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NRX1_CV",
                     "net": "",
                     "subcktInstance": {
@@ -12527,6 +12677,7 @@
                     "class": "Instance",
                     "instanceName": "XA2",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_IVX4_CV",
                     "net": "",
                     "subcktInstance": {
@@ -12600,6 +12751,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "YN",
@@ -12771,6 +12923,7 @@
             "has_pr": false,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
                 "symbol": "cic_wbulk/or"
             },
@@ -12892,6 +13045,7 @@
                     "class": "Instance",
                     "instanceName": "XA1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NDX1_CV",
                     "net": "",
                     "subcktInstance": {
@@ -13009,6 +13163,7 @@
                     "class": "Instance",
                     "instanceName": "XA2",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_IVX1_CV",
                     "net": "",
                     "subcktInstance": {
@@ -13082,6 +13237,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "YN",
@@ -13253,6 +13409,7 @@
             "has_pr": false,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
                 "symbol": "cic_wbulk/an"
             },
@@ -13374,6 +13531,7 @@
                     "class": "Instance",
                     "instanceName": "XA1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NDX1_CV",
                     "net": "",
                     "subcktInstance": {
@@ -13491,6 +13649,7 @@
                     "class": "Instance",
                     "instanceName": "XA2",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_IVX2_CV",
                     "net": "",
                     "subcktInstance": {
@@ -13564,6 +13723,7 @@
                     "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "YN",
@@ -13735,6 +13895,7 @@
             "has_pr": false,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
                 "symbol": "cic_wbulk/an"
             },
@@ -13856,6 +14017,7 @@
                     "class": "Instance",
                     "instanceName": "XA1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NDX1_CV",
                     "net": "",
                     "subcktInstance": {
@@ -13973,6 +14135,7 @@
                     "class": "Instance",
                     "instanceName": "XA2",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_IVX4_CV",
                     "net": "",
                     "subcktInstance": {
@@ -14046,6 +14209,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "YN",
@@ -14217,6 +14381,7 @@
             "has_pr": false,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
                 "symbol": "cic_wbulk/an"
             },
@@ -14338,6 +14503,7 @@
                     "class": "Instance",
                     "instanceName": "XA1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NDX1_CV",
                     "net": "",
                     "subcktInstance": {
@@ -14455,6 +14621,7 @@
                     "class": "Instance",
                     "instanceName": "XA2",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_IVX8_CV",
                     "net": "",
                     "subcktInstance": {
@@ -14528,6 +14695,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "YN",
@@ -14699,6 +14867,7 @@
             "has_pr": false,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
                 "symbol": "cic_wbulk/an"
             },
@@ -14784,6 +14953,7 @@
                     "class": "Instance",
                     "instanceName": "MN0",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -14874,6 +15044,7 @@
                     "class": "Instance",
                     "instanceName": "MN1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -14964,6 +15135,7 @@
                     "class": "Instance",
                     "instanceName": "MP0",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -15054,6 +15226,7 @@
                     "class": "Instance",
                     "instanceName": "MP1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -15107,6 +15280,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "N1",
@@ -15146,6 +15320,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "N2",
@@ -15203,6 +15378,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "Y",
@@ -15242,6 +15418,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A",
@@ -15356,6 +15533,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 77400,
@@ -15382,6 +15560,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -15485,6 +15664,7 @@
             "has_pr": false,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
             },
             "name": "SUNTRB_IVTRIX1_CV",
@@ -15569,6 +15749,7 @@
                     "class": "Instance",
                     "instanceName": "MN2",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -15659,6 +15840,7 @@
                     "class": "Instance",
                     "instanceName": "MN0",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -15749,6 +15931,7 @@
                     "class": "Instance",
                     "instanceName": "MN1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -15839,6 +16022,7 @@
                     "class": "Instance",
                     "instanceName": "MP2",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -15929,6 +16113,7 @@
                     "class": "Instance",
                     "instanceName": "MP0",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -16019,6 +16204,7 @@
                     "class": "Instance",
                     "instanceName": "MP1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -16072,6 +16258,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "N1",
@@ -16111,6 +16298,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "N2",
@@ -16150,6 +16338,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "N2",
@@ -16207,6 +16396,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "Y",
@@ -16264,6 +16454,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "N2",
@@ -16303,6 +16494,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "N2",
@@ -16342,6 +16534,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A",
@@ -16381,6 +16574,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "RN",
@@ -16507,6 +16701,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 77400,
@@ -16524,6 +16719,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 77400,
@@ -16550,6 +16746,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -16684,6 +16881,7 @@
             "has_pr": false,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
             },
             "name": "SUNTRB_NDTRIX1_CV",
@@ -16720,6 +16918,7 @@
                     "class": "Instance",
                     "instanceName": "XA0",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_",
                     "net": "",
                     "subcktInstance": {
@@ -16844,6 +17043,7 @@
                     "class": "Instance",
                     "instanceName": "XA1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NDX1_CV",
                     "net": "",
                     "subcktInstance": {
@@ -16961,6 +17161,7 @@
                     "class": "Instance",
                     "instanceName": "XA2",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_IVX1_CV",
                     "net": "",
                     "subcktInstance": {
@@ -17101,6 +17302,7 @@
                     "class": "Instance",
                     "instanceName": "XA3",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_IVTRIX1_CV",
                     "net": "",
                     "subcktInstance": {
@@ -17243,6 +17445,7 @@
                     "class": "Instance",
                     "instanceName": "XA4",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_IVTRIX1_CV",
                     "net": "",
                     "subcktInstance": {
@@ -17361,6 +17564,7 @@
                     "class": "Instance",
                     "instanceName": "XA5",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_IVX1_CV",
                     "net": "",
                     "subcktInstance": {
@@ -17501,6 +17705,7 @@
                     "class": "Instance",
                     "instanceName": "XA6",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_IVTRIX1_CV",
                     "net": "",
                     "subcktInstance": {
@@ -17655,6 +17860,7 @@
                     "class": "Instance",
                     "instanceName": "XA7",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NDTRIX1_CV",
                     "net": "",
                     "subcktInstance": {
@@ -17774,6 +17980,7 @@
                     "class": "Instance",
                     "instanceName": "XA8",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_IVX1_CV",
                     "net": "",
                     "subcktInstance": {
@@ -17856,6 +18063,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "CKN",
@@ -17919,9 +18127,10 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": true,
+                    "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "CKB",
@@ -17979,6 +18188,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "CKB",
@@ -18045,6 +18255,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "CKB",
@@ -18068,6 +18279,7 @@
                             "class": "Instance",
                             "instanceName": "",
                             "layer": "PR",
+                            "libpath": "",
                             "name": "SUNTRB_cut_M1M2_2x1",
                             "net": "",
                             "x1": 99000,
@@ -18085,6 +18297,7 @@
                             "class": "Instance",
                             "instanceName": "",
                             "layer": "PR",
+                            "libpath": "",
                             "name": "SUNTRB_cut_M1M2_2x1",
                             "net": "",
                             "x1": 99000,
@@ -18102,6 +18315,7 @@
                             "class": "Instance",
                             "instanceName": "",
                             "layer": "PR",
+                            "libpath": "",
                             "name": "SUNTRB_cut_M1M2_2x1",
                             "net": "",
                             "x1": 77400,
@@ -18162,6 +18376,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "CKN",
@@ -18185,6 +18400,7 @@
                             "class": "Instance",
                             "instanceName": "",
                             "layer": "PR",
+                            "libpath": "",
                             "name": "SUNTRB_cut_M1M2_2x1",
                             "net": "",
                             "x1": 16200,
@@ -18202,6 +18418,7 @@
                             "class": "Instance",
                             "instanceName": "",
                             "layer": "PR",
+                            "libpath": "",
                             "name": "SUNTRB_cut_M1M2_2x1",
                             "net": "",
                             "x1": 37800,
@@ -18262,6 +18479,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "CKN",
@@ -18285,6 +18503,7 @@
                             "class": "Instance",
                             "instanceName": "",
                             "layer": "PR",
+                            "libpath": "",
                             "name": "SUNTRB_cut_M1M3_2x1",
                             "net": "",
                             "x1": 16200,
@@ -18302,6 +18521,7 @@
                             "class": "Instance",
                             "instanceName": "",
                             "layer": "PR",
+                            "libpath": "",
                             "name": "SUNTRB_cut_M1M3_2x1",
                             "net": "",
                             "x1": 99000,
@@ -18353,6 +18573,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "CKN",
@@ -18410,6 +18631,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A0",
@@ -18433,6 +18655,7 @@
                             "class": "Instance",
                             "instanceName": "",
                             "layer": "PR",
+                            "libpath": "",
                             "name": "SUNTRB_cut_M1M2_2x1",
                             "net": "",
                             "x1": 37800,
@@ -18450,6 +18673,7 @@
                             "class": "Instance",
                             "instanceName": "",
                             "layer": "PR",
+                            "libpath": "",
                             "name": "SUNTRB_cut_M1M2_2x1",
                             "net": "",
                             "x1": 37800,
@@ -18501,6 +18725,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A0",
@@ -18524,6 +18749,7 @@
                             "class": "Instance",
                             "instanceName": "",
                             "layer": "PR",
+                            "libpath": "",
                             "name": "SUNTRB_cut_M1M2_2x1",
                             "net": "",
                             "x1": 16200,
@@ -18541,6 +18767,7 @@
                             "class": "Instance",
                             "instanceName": "",
                             "layer": "PR",
+                            "libpath": "",
                             "name": "SUNTRB_cut_M1M2_2x1",
                             "net": "",
                             "x1": 37800,
@@ -18592,6 +18819,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A0",
@@ -18615,6 +18843,7 @@
                             "class": "Instance",
                             "instanceName": "",
                             "layer": "PR",
+                            "libpath": "",
                             "name": "SUNTRB_cut_M1M2_2x1",
                             "net": "",
                             "x1": 77400,
@@ -18632,6 +18861,7 @@
                             "class": "Instance",
                             "instanceName": "",
                             "layer": "PR",
+                            "libpath": "",
                             "name": "SUNTRB_cut_M1M2_2x1",
                             "net": "",
                             "x1": 99000,
@@ -18649,6 +18879,7 @@
                             "class": "Instance",
                             "instanceName": "",
                             "layer": "PR",
+                            "libpath": "",
                             "name": "SUNTRB_cut_M1M2_2x1",
                             "net": "",
                             "x1": 99000,
@@ -18709,6 +18940,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A1",
@@ -18766,6 +18998,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "QN",
@@ -18789,6 +19022,7 @@
                             "class": "Instance",
                             "instanceName": "",
                             "layer": "PR",
+                            "libpath": "",
                             "name": "SUNTRB_cut_M1M2_2x1",
                             "net": "",
                             "x1": 77400,
@@ -18806,6 +19040,7 @@
                             "class": "Instance",
                             "instanceName": "",
                             "layer": "PR",
+                            "libpath": "",
                             "name": "SUNTRB_cut_M1M2_2x1",
                             "net": "",
                             "x1": 99000,
@@ -18857,6 +19092,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "Q",
@@ -18880,6 +19116,7 @@
                             "class": "Instance",
                             "instanceName": "",
                             "layer": "PR",
+                            "libpath": "",
                             "name": "SUNTRB_cut_M1M2_2x1",
                             "net": "",
                             "x1": 16200,
@@ -18897,6 +19134,7 @@
                             "class": "Instance",
                             "instanceName": "",
                             "layer": "PR",
+                            "libpath": "",
                             "name": "SUNTRB_cut_M1M2_2x1",
                             "net": "",
                             "x1": 16200,
@@ -18948,6 +19186,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "RN",
@@ -19269,6 +19508,7 @@
             "has_pr": false,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
                 "symbol": "cic_wbulk/dfqrn"
             },
@@ -19354,6 +19594,7 @@
                     "class": "Instance",
                     "instanceName": "XA2",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -19444,6 +19685,7 @@
                     "class": "Instance",
                     "instanceName": "XA3",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -19534,6 +19776,7 @@
                     "class": "Instance",
                     "instanceName": "XA4a",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -19624,6 +19867,7 @@
                     "class": "Instance",
                     "instanceName": "XA4b",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -19714,6 +19958,7 @@
                     "class": "Instance",
                     "instanceName": "XA5",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -19804,6 +20049,7 @@
                     "class": "Instance",
                     "instanceName": "XB0",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -19894,6 +20140,7 @@
                     "class": "Instance",
                     "instanceName": "XB1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -19984,6 +20231,7 @@
                     "class": "Instance",
                     "instanceName": "XB3a",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -20074,6 +20322,7 @@
                     "class": "Instance",
                     "instanceName": "XB3b",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -20164,6 +20413,7 @@
                     "class": "Instance",
                     "instanceName": "XB4",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -20253,6 +20503,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "N1",
@@ -20328,6 +20579,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "N2",
@@ -20367,6 +20619,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A",
@@ -20442,6 +20695,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "SCO",
@@ -20517,6 +20771,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "SCO",
@@ -20574,6 +20829,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "AVDD",
@@ -20631,6 +20887,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "Y",
@@ -20688,6 +20945,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "NC",
@@ -20745,6 +21003,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "NC",
@@ -20768,6 +21027,7 @@
                             "class": "Instance",
                             "instanceName": "",
                             "layer": "PR",
+                            "libpath": "",
                             "name": "SUNTRB_cut_M1M2_2x1",
                             "net": "",
                             "x1": 37800,
@@ -20785,6 +21045,7 @@
                             "class": "Instance",
                             "instanceName": "",
                             "layer": "PR",
+                            "libpath": "",
                             "name": "SUNTRB_cut_M1M2_2x1",
                             "net": "",
                             "x1": 77400,
@@ -20836,6 +21097,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "NC",
@@ -20859,6 +21121,7 @@
                             "class": "Instance",
                             "instanceName": "",
                             "layer": "PR",
+                            "libpath": "",
                             "name": "SUNTRB_cut_M1M2_2x1",
                             "net": "",
                             "x1": 37800,
@@ -20876,6 +21139,7 @@
                             "class": "Instance",
                             "instanceName": "",
                             "layer": "PR",
+                            "libpath": "",
                             "name": "SUNTRB_cut_M1M2_2x1",
                             "net": "",
                             "x1": 77400,
@@ -20927,6 +21191,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "NC",
@@ -20966,6 +21231,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A",
@@ -21005,6 +21271,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A",
@@ -21071,6 +21338,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 77400,
@@ -21088,6 +21356,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 77400,
@@ -21114,6 +21383,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -21131,6 +21401,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -21322,6 +21593,7 @@
             "has_pr": false,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
             },
             "name": "SUNTRB_SCX1_CV",
@@ -21406,6 +21678,7 @@
                     "class": "Instance",
                     "instanceName": "MN0",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -21496,6 +21769,7 @@
                     "class": "Instance",
                     "instanceName": "MN1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -21586,6 +21860,7 @@
                     "class": "Instance",
                     "instanceName": "MP0",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -21676,6 +21951,7 @@
                     "class": "Instance",
                     "instanceName": "MP1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -21765,6 +22041,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "Y",
@@ -21804,6 +22081,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A",
@@ -21843,6 +22121,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A",
@@ -21891,6 +22170,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A",
@@ -21909,6 +22189,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M3M4_2x2",
                     "net": "",
                     "x1": 106200,
@@ -21931,6 +22212,7 @@
                             "class": "Instance",
                             "instanceName": "",
                             "layer": "PR",
+                            "libpath": "",
                             "name": "SUNTRB_cut_M1M3_2x1",
                             "net": "",
                             "x1": 77400,
@@ -21948,6 +22230,7 @@
                             "class": "Instance",
                             "instanceName": "",
                             "layer": "PR",
+                            "libpath": "",
                             "name": "SUNTRB_cut_M1M3_2x1",
                             "net": "",
                             "x1": 77400,
@@ -22008,6 +22291,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "VREF",
@@ -22098,6 +22382,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -22115,6 +22400,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -22216,6 +22502,7 @@
             "has_pr": false,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
                 "symbol": "cic_wbulk/iv"
             },
@@ -22301,6 +22588,7 @@
                     "class": "Instance",
                     "instanceName": "MN0",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -22391,6 +22679,7 @@
                     "class": "Instance",
                     "instanceName": "MN1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -22481,6 +22770,7 @@
                     "class": "Instance",
                     "instanceName": "MN2",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -22571,6 +22861,7 @@
                     "class": "Instance",
                     "instanceName": "MN3",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -22661,6 +22952,7 @@
                     "class": "Instance",
                     "instanceName": "MP0",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -22751,6 +23043,7 @@
                     "class": "Instance",
                     "instanceName": "MP1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -22841,6 +23134,7 @@
                     "class": "Instance",
                     "instanceName": "MP2",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -22931,6 +23225,7 @@
                     "class": "Instance",
                     "instanceName": "MP3",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -22963,6 +23258,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M3M4_2x2",
                     "net": "",
                     "x1": 106200,
@@ -23037,6 +23333,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "Y",
@@ -23103,6 +23400,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A",
@@ -23142,6 +23440,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A",
@@ -23181,6 +23480,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A",
@@ -23204,6 +23504,7 @@
                             "class": "Instance",
                             "instanceName": "",
                             "layer": "PR",
+                            "libpath": "",
                             "name": "SUNTRB_cut_M1M3_2x1",
                             "net": "",
                             "x1": 77400,
@@ -23221,6 +23522,7 @@
                             "class": "Instance",
                             "instanceName": "",
                             "layer": "PR",
+                            "libpath": "",
                             "name": "SUNTRB_cut_M1M3_2x1",
                             "net": "",
                             "x1": 77400,
@@ -23238,6 +23540,7 @@
                             "class": "Instance",
                             "instanceName": "",
                             "layer": "PR",
+                            "libpath": "",
                             "name": "SUNTRB_cut_M1M3_2x1",
                             "net": "",
                             "x1": 77400,
@@ -23307,6 +23610,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "VREF",
@@ -23346,6 +23650,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "SD1",
@@ -23385,6 +23690,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "SD2",
@@ -23424,6 +23730,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "SD3",
@@ -23463,6 +23770,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "SD5",
@@ -23502,6 +23810,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "SD6",
@@ -23541,6 +23850,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "SD7",
@@ -23607,6 +23917,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -23624,6 +23935,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -23641,6 +23953,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -23658,6 +23971,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -23819,6 +24133,7 @@
             "has_pr": false,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
             },
             "name": "SUNTRB_SWX4_CV",
@@ -23903,6 +24218,7 @@
                     "class": "Instance",
                     "instanceName": "MN0",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -23993,6 +24309,7 @@
                     "class": "Instance",
                     "instanceName": "MN1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -24083,6 +24400,7 @@
                     "class": "Instance",
                     "instanceName": "MN2",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -24173,6 +24491,7 @@
                     "class": "Instance",
                     "instanceName": "MP0",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -24263,6 +24582,7 @@
                     "class": "Instance",
                     "instanceName": "MP1_DMY",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -24353,6 +24673,7 @@
                     "class": "Instance",
                     "instanceName": "MP2",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -24421,9 +24742,10 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": false,
+                    "has_pr": true,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "C",
@@ -24463,6 +24785,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "C",
@@ -24520,6 +24843,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "A",
@@ -24577,6 +24901,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "B",
@@ -24616,6 +24941,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "C",
@@ -24673,6 +24999,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "CN",
@@ -24730,6 +25057,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "C",
@@ -24753,6 +25081,7 @@
                             "class": "Instance",
                             "instanceName": "",
                             "layer": "PR",
+                            "libpath": "",
                             "name": "SUNTRB_cut_M1M4_2x1",
                             "net": "",
                             "x1": 77400,
@@ -24770,6 +25099,7 @@
                             "class": "Instance",
                             "instanceName": "",
                             "layer": "PR",
+                            "libpath": "",
                             "name": "SUNTRB_cut_M1M4_2x1",
                             "net": "",
                             "x1": 99000,
@@ -24821,6 +25151,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "NC",
@@ -24860,6 +25191,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "SD1",
@@ -24899,6 +25231,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "SD2",
@@ -24938,6 +25271,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "SD4",
@@ -24977,6 +25311,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "SD5",
@@ -25055,6 +25390,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 77400,
@@ -25081,6 +25417,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -25098,6 +25435,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -25230,6 +25568,7 @@
             "has_pr": false,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
             },
             "name": "SUNTRB_TGPD_CV",
@@ -25314,6 +25653,7 @@
                     "class": "Instance",
                     "instanceName": "MN1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -25404,6 +25744,7 @@
                     "class": "Instance",
                     "instanceName": "MP1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -25457,6 +25798,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "BULKN",
@@ -25514,6 +25856,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "BULKN",
@@ -25571,6 +25914,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "BULKN",
@@ -25628,6 +25972,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "BULKP",
@@ -25685,6 +26030,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "BULKP",
@@ -25724,6 +26070,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "BULKP",
@@ -25766,6 +26113,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 77400,
@@ -25783,6 +26131,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 77400,
@@ -25809,6 +26158,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -25826,6 +26176,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -25893,6 +26244,7 @@
             "has_pr": false,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
             },
             "name": "SUNTRB_TAPCELLB_CV",
@@ -25977,6 +26329,7 @@
                     "class": "Instance",
                     "instanceName": "MN1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_NCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -26067,6 +26420,7 @@
                     "class": "Instance",
                     "instanceName": "MP1",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_PCHDL",
                     "net": "",
                     "subcktInstance": {
@@ -26120,6 +26474,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "BULKN",
@@ -26177,6 +26532,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "BULKN",
@@ -26234,6 +26590,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "BULKN",
@@ -26288,9 +26645,10 @@
                         }
                     ],
                     "class": "cIcCore::Route",
-                    "has_pr": true,
+                    "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "BULKP",
@@ -26348,6 +26706,7 @@
                     "has_pr": false,
                     "layer": "PR",
                     "libcell": false,
+                    "libpath": "",
                     "meta": {
                     },
                     "name": "BULKP",
@@ -26378,6 +26737,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -26395,6 +26755,7 @@
                     "class": "Instance",
                     "instanceName": "",
                     "layer": "PR",
+                    "libpath": "",
                     "name": "SUNTRB_cut_M1M4_2x1",
                     "net": "",
                     "x1": 37800,
@@ -26462,6 +26823,7 @@
             "has_pr": false,
             "layer": "PR",
             "libcell": false,
+            "libpath": "",
             "meta": {
             },
             "name": "SUNTRB_TAPCELLBAVSS_CV",
@@ -26480,12 +26842,12 @@
         "--spi": false,
         "arguments": "/Users/wulff/pro/cic/ciccreator/bin/darwin/cic.app/Contents/MacOS/cic ../cic/ip.json ../cic/sky130.tech SUN_TRB_SKY130NM",
         "file": "../cic/ip.json",
-        "hash": "0.1.3-13-g538c2b5",
+        "hash": "0.1.3-18-g5a7e692",
         "includepaths": "../cic",
         "libpaths": "",
         "library": "SUN_TRB_SKY130NM",
         "prefix": "",
         "rules": "../cic/sky130.tech",
-        "version": "0.1.4 built on Mon Aug 8 23:53:50 CEST 2022"
+        "version": "0.1.4 built on Sat Aug 20 20:13:34 CEST 2022"
     }
 }
