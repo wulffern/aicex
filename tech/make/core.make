@@ -32,14 +32,6 @@ PDKPATH=${PDK_ROOT}/sky130A
 
 .PHONY: drc lvs lpe gds cdl
 
-dirs:
-	-mkdir lvs
-	-mkdir drc
-	-mkdir lpe
-	-mkdir cdl
-	-mkdir gds
-	-mkdir xsch
-
 #----------------------------------------------------------------------------
 # VERIFICATION
 #----------------------------------------------------------------------------
@@ -67,34 +59,41 @@ view:
 	cd ${BUILD}; ${CICGUI} ${LIB}.cic ../cic/sky130.tech
 
 gds:
+	test -d gds || mkdir gds
 	@echo "load ${NCELL}.mag\ncalma write gds/${PRCELL}.gds \nquit" > gds/${PRCELL}.tcl
 	@magic -noconsole -dnull gds/${PRCELL}.tcl 2>&1 > gds/${PRCELL}.log
 
 cdl:
+	test -d cdl || mkdir cdl
 	@echo "set VDD AVDD\nset GND AVSS\nset SUB ${SUB}\nload ${NCELL}.mag\nextract all\n\next2spice lvs\next2spice hierarchy off\next2spice subcircuits off\next2spice -o cdl/${PRCELL}.spi\nquit" > cdl/${PRCELL}.tcl
-	@magic -noconsole -dnull cdl/${PRCELL}.tcl > cdl/${PRCELL}.log 2>&1
+	@magic -noconsole -dnull cdl/${PRCELL}.tcl 2>&1 > cdl/${PRCELL}.log
 
 cdlh:
+	test -d cdl || mkdir cdl
 	@echo "set VDD AVDD\nset GND AVSS\nset SUB ${SUB}\nload ${NCELL}.mag\nextract all\n\next2spice lvs\next2spice subcircuits off\next2spice -o cdl/${PRCELL}.spi\nquit" > cdl/${PRCELL}.tcl
-	@magic -noconsole -dnull cdl/${PRCELL}.tcl > cdl/${PRCELL}.log 2>&1
+	@magic -noconsole -dnull cdl/${PRCELL}.tcl 2>&1 > cdl/${PRCELL}.log
 
 #- Run flat LVS
 lvs:
+	test -d lvs || mkdir lvs
 	@netgen -batch lvs "cdl/${PRCELL}.spi ${PRCELL}"  "${BUILD}/${LIB}.spi ${PRCELL}" ${PDKPATH}/libs.tech/netgen/sky130A_setup.tcl lvs/${PRCELL}_lvs.log > lvs/${PRCELL}_netgen_lvs.log
 	@tail -n 1 lvs/${PRCELL}_lvs.log|perl -ne "use Term::ANSIColor;print(sprintf(\"%-40s\t[ \",${PRCELL}));if(m/match uniquely/ig){print(color('green').'LVS OK  '.color('reset'));}else{print(color('red').'LVS FAIL'.color('reset'));};print(\" ]\n\");"
 
 #- Run DRC
 drc:
+	test -d drc || mkdir drc
 	@echo "load ${NCELL}.mag\nlogcommands drc/${PRCELL}_drc.log\nset b [view bbox]\nbox values [lindex \$$b 0] [lindex \$$b 1] [lindex \$$b 2] [lindex \$$b 3]\ndrc catchup\ndrc why\ndrc count total\nquit\n" > drc/${PRCELL}_drc.tcl
-	@magic -noconsole -dnull drc/${PRCELL}_drc.tcl  > drc/${PRCELL}_drc.log 2>&1
+	@magic -noconsole -dnull drc/${PRCELL}_drc.tcl 2>&1 > drc/${PRCELL}_drc.log
 	@tail -n 1 drc/${PRCELL}_drc.log|perl -ne "\$$exit = 0;use Term::ANSIColor;print(sprintf(\"%-40s\t[ \",${PRCELL}));if(m/:\s+0\n/ig){print(color('green').'DRC OK  '.color('reset'));}else{print(color('red').'DRC FAIL'.color('reset'));\$$exit = 1;};print(\" ]\n\");exit \$$exit;" || tail -n 10 drc/${PRCELL}_drc.log
 
 #- Run parasitic extraction
 lpe:
+	test -d lpe || mkdir lpe
 	@echo "set VDD AVDD\nset GND AVSS\nset SUB 0\nload ${NCELL}.mag\nextract all\n\next2spice resistor off\next2spice capacitance on\next2spice cthresh 0.4\next2spice format ngspice	\next2spice hierarchy off\next2spice subcircuits off\next2spice -o lpe/${PRCELL}_lpe.spi\nquit" > lpe/${PRCELL}_lpe.tcl
 	@magic -noconsole -dnull lpe/${PRCELL}_lpe.tcl 2>&1 | tee lpe/${PRCELL}_magic_lpe.log
 
 lpeh:
+	test -d lpe || -mkdir lpe
 	@echo "set VDD AVDD\nset GND AVSS\nset SUB 0\nload ${NCELL}.mag\nextract all\n\next2spice resistor off\next2spice capacitance on\next2spice cthresh 0.4\next2spice format ngspice\next2spice subcircuits off\next2spice -o lpe/${PRCELL}_lpe.spi\nquit" > lpe/${PRCELL}_lpe.tcl
 	@magic -noconsole -dnull lpe/${PRCELL}_lpe.tcl 2>&1 | tee lpe/${PRCELL}_magic_lpe.log
 
@@ -115,5 +114,6 @@ clean:
 	-rm -rf lvs drc lpe cdl gds
 
 spi:
+	test -d xsch || mkdir xsch
 	xschem -q -x -b -s -n ../design/${LIB}/${CELL}.sch
 	cat xsch/${CELL}.spice| ../tech/script/fixspi > ../cic/${CELL}.spi

@@ -18,4 +18,4 @@ lvs:
 	${foreach d, ${IPS}, cd ${d}/work ; make lvsall ; cd ${PWD};}
 
 drc:
-	${foreach d, ${IPS}, cd ${d}/work && make drcall;}
+	${foreach d, ${IPS}, cd ${d}/work ; make drcall ; cd ${PWD};}
