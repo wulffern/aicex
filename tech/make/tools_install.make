@@ -7,7 +7,8 @@ all: apt tcl tk cmagic cxschem cnetgen cngspice
 
 apt:
 	echo "Install apt-stuff"
-	sudo apt install -y csh flex bison tk8.6 tk8.6-dev libxpm-dev libxcb-render-util0-dev libx11-xcb-dev libcairo2-dev
+	sudo apt install -y csh flex bison tk8.6 tk8.6-dev libxpm-dev libxcb-render-util0-dev libx11-xcb-dev \
+		libcairo2-dev autoconf libtool automake libc6-dev libomp-dev libxaw7-dev lib32readline-dev libreadline-dev
 
 tclver=tcl8.6.10
 tkver=tk8.6.10
@@ -62,11 +63,10 @@ cngspice: ngspice
 	--x-includes=/opt/X11/include \
 	--x-libraries=/opt/X11/lib \
 	--enable-xspice  \
-	--enable-openmp \
 	--enable-pss \
+	--enable-openmp \
 	--enable-cider \
-	--with-readline=/usr/local/opt/readline \
-	--disable-debug CFLAGS=" -O2 -I/opt/X11/include/freetype2 -I/usr/local/include -I/usr/local/opt/readline/include " \
-	LDFLAGS=" -L/usr/local/opt/readline/lib -L/usr/local/lib -lomp" \
+	CFLAGS=" -O2 -I/opt/X11/include/freetype2 -I/usr/local/include  " \
+	LDFLAGS="-L/usr/local/lib" \
 	&& make -j8
 	cd ngspice &&  sudo make install
