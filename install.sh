@@ -4,7 +4,9 @@
 mkdir cic
 cd cic
 git clone git@github.com:wulffern/ciccreator.git
-cd ..
+cd ciccreator
+git branch develop
+cd ../../
 git clone git@github.com:wulffern/cicpy.git
 cd cicpy
 pip3 install -r requirements.txt --user
