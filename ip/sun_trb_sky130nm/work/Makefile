@@ -13,6 +13,7 @@ include ../../../tech/make/core.make
 PREFIX=
 LIB=SUN_TRB_SKY130NM
 CELL=SUN_TRB
+PREFIX=SUNTRB_
 
 #- Provide cells you want to check for the lvsall drcall commands
 CELLS = SUN_TRB
