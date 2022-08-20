@@ -2,12 +2,12 @@
 
 #- Makefile made for LTS 20.4
 
-all: apt tcl tk cmagic cxschem cnetgen
+all: apt tcl tk cmagic cxschem cnetgen cngspice
 
 
 apt:
 	echo "Install apt-stuff"
-	sudo apt install -y csh
+	sudo apt install -y csh flex bison tk8.6 tk8.6-dev libxpm-dev libxcb-render-util0-dev libx11-xcb-dev libcairo2-dev
 
 tclver=tcl8.6.10
 tkver=tk8.6.10
@@ -40,7 +40,7 @@ xschem:
 cxschem: xschem
 	cd xschem && ./configure --prefix=/usr/local/eda
 	perl -ibak -pe "s/CFLAGS/#CFLAGS/ig;s/LDFLAGS/#LDFLAGS/ig" xschem/Makefile.conf
-	echo "CFLAGS=-I/opt/X11/include -I/opt/X11/include/cairo -I/usr/local/opt2/tcl-tk/include -O2\n LDFLAGS= -L/usr/local/opt2/tcl-tk/lib -L/opt/X11/lib -lm   -lX11 -lXrender -lxcb -lxcb-render -lX11-xcb -lXpm -ltcl8.6 -ltk8.6" >> xschem/Makefile.conf
+	echo "CFLAGS=-I/opt/X11/include -I/opt/X11/include/cairo -I/usr/local/opt2/tcl-tk/include -O2\n LDFLAGS= -L/usr/local/opt2/tcl-tk/lib -L/opt/X11/lib -lm  -lcairo -lX11 -lXrender -lxcb -lxcb-render -lX11-xcb -lXpm -ltcl8.6 -ltk8.6" >> xschem/Makefile.conf
 	cd xschem && make
 	cd xschem && sudo make install
 
