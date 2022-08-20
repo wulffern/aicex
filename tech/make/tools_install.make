@@ -40,7 +40,7 @@ xschem:
 cxschem: xschem
 	cd xschem && ./configure --prefix=/usr/local/eda
 	perl -ibak -pe "s/CFLAGS/#CFLAGS/ig;s/LDFLAGS/#LDFLAGS/ig" xschem/Makefile.conf
-	echo "CFLAGS=-I/opt/X11/include  -I/usr/local/opt2/tcl-tk/include -O2\n LDFLAGS= -L/usr/local/opt2/tcl-tk/lib -L/opt/X11/lib -lm  -lcairo -lX11 -lXrender -lxcb -lxcb-render -lX11-xcb -lXpm -ltcl8.6 -ltk8.6" >> xschem/Makefile.conf
+	echo "CFLAGS=-I/opt/X11/include -I/usr/include/cairo/ -I/usr/local/opt2/tcl-tk/include -O2\n LDFLAGS= -L/usr/local/opt2/tcl-tk/lib -L/opt/X11/lib -lm  -lcairo -lX11 -lXrender -lxcb -lxcb-render -lX11-xcb -lXpm -ltcl8.6 -ltk8.6" >> xschem/Makefile.conf
 	cd xschem && make
 	cd xschem && sudo make install
 
@@ -55,7 +55,7 @@ ngspice:
 	git clone https://git.code.sf.net/p/ngspice/ngspice ngspice
 
 # Pre-requisites
-cngspice:
+cngspice: ngspice
 	cd ngspice && ./autogen.sh && ./configure \
 	--prefix /usr/local/eda/ \
 	--with-x \
