@@ -2,7 +2,11 @@
 
 #- Makefile made for LTS 20.4
 
-all: tcl tk cmagic cxschem cnetgen
+all: apt tcl tk cmagic cxschem cnetgen
+
+
+apt:
+	echo "Install apt-stuff"
 
 tclver=tcl8.6.10
 tkver=tk8.6.10
@@ -20,7 +24,6 @@ tcl: ${tclver}
 
 tk: ${tkver}
 	cd ${tkver}/unix && ./configure --prefix=/usr/local/opt2/tcl-tk --with-tcl=/usr/local/opt2/tcl-tk/lib --with-x --x-includes=/opt/X11/include --x-libraries=/opt/X11/lib   && make && sudo make install
-	cd /usr/local/opt2/tcl-tk/bin/ && sudo install_name_tool -change /usr/local/opt2/tcl-tk/lib:/opt/X11/lib/libtk8.6.dylib /usr/local/opt2/tcl-tk/lib/libtk8.6.dylib wish8.6
 
 magic:
 	git clone https://github.com/RTimothyEdwards/magic

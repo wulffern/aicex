@@ -12,11 +12,13 @@ cd cic
 git clone https://github.com/wulffern/ciccreator.git
 cd ciccreator
 git checkout develop
+git pull
 cd ../../
 
 #- Get cicpy
 git clone https://github.com/wulffern/cicpy.git
 cd cicpy
+git pull
 python3 -m pip install -r requirements.txt --user
 python3 -m pip install --user -e .
 cd ..
@@ -25,12 +27,14 @@ cd ..
 git clone https://github.com/wulffern/cicsim.git
 cd cicsim
 git checkout develop
+git pull
 python3 -m pip install --user -e .
 cd ..
 
 #- Get aicex
 git clone https://github.com/wulffern/aicex.git
 cd aicex
+git pull
 git submodule init
 git submodule update
 cd ..
