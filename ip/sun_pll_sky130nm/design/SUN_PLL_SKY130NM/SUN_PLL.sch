@@ -141,8 +141,8 @@ C {devices/lab_pin.sym} -520 -90 1 0 {name=l1 sig_type=std_logic lab=CP_UP_N}
 C {devices/lab_pin.sym} -520 -70 3 0 {name=l2 sig_type=std_logic lab=CP_DOWN}
 C {devices/lab_pin.sym} 140 -90 1 0 {name=l3 sig_type=std_logic lab=VDD_ROSC}
 C {devices/ipin.sym} -850 110 0 0 {name=p6 lab=IBPSR_1U}
-C {SUN_PLL_SKY130NM/SUN_PLL_ROSC.sym} 340 -60 0 0 {name=xd1 xoffset=0 yoffset=0 angle=0 }
-C {SUN_PLL_SKY130NM/SUN_PLL_DIVN.sym} 320 150 0 1 {name=xc1 xoffset=-330 yoffset=12 angle=0 }
+C {SUN_PLL_SKY130NM/SUN_PLL_ROSC.sym} 340 -60 0 0 {name=xd1 xoffset=5 yoffset=0 angle=0 }
+C {SUN_PLL_SKY130NM/SUN_PLL_DIVN.sym} 320 150 0 1 {name=xc1 xoffset=-330 yoffset=0 angle=0 }
 C {SUN_PLL_SKY130NM/SUN_PLL_BIAS.sym} -360 240 0 1 {name=xl1 xoffset=5 yoffset=0 angle=0 }
 C {SUN_PLL_SKY130NM/SUN_PLL_BUF.sym} -100 -70 0 0 {name=xb1 xoffset=5 yoffset=0 angle=0 }
 C {SUN_PLL_SKY130NM/SUN_PLL_LPF.sym} -60 60 0 0 {name=xb2 xoffset=0 yoffset=10 angle=0 }

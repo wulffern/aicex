@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1660916687
+timestamp 1661001370
 << checkpaint >>
 rect -384 -384 1644 18336
 << locali >>
@@ -94,68 +94,134 @@ use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_NCHDLCM xa39
 transform 1 0 0 0 1 16192
 box 0 16192 1260 17952
 use cut_M1M4_2x1 
+transform 1 0 764 0 1 58
+box 764 58 964 134
+use cut_M1M4_2x1 
 transform 1 0 764 0 1 -384
 box 764 -384 964 -308
+use cut_M1M4_2x1 
+transform 1 0 -100 0 1 132
+box -100 132 100 208
 use cut_M1M4_2x1 
 transform 1 0 -100 0 1 -384
 box -100 -384 100 -308
 use cut_M1M4_2x1 
+transform 1 0 764 0 1 410
+box 764 410 964 486
+use cut_M1M4_2x1 
 transform 1 0 764 0 1 -384
 box 764 -384 964 -308
+use cut_M1M4_2x1 
+transform 1 0 -100 0 1 484
+box -100 484 100 560
 use cut_M1M4_2x1 
 transform 1 0 -100 0 1 -384
 box -100 -384 100 -308
 use cut_M1M4_2x1 
+transform 1 0 764 0 1 2170
+box 764 2170 964 2246
+use cut_M1M4_2x1 
 transform 1 0 764 0 1 -384
 box 764 -384 964 -308
+use cut_M1M4_2x1 
+transform 1 0 -100 0 1 2244
+box -100 2244 100 2320
 use cut_M1M4_2x1 
 transform 1 0 -100 0 1 -384
 box -100 -384 100 -308
 use cut_M1M4_2x1 
+transform 1 0 764 0 1 3930
+box 764 3930 964 4006
+use cut_M1M4_2x1 
 transform 1 0 764 0 1 -384
 box 764 -384 964 -308
+use cut_M1M4_2x1 
+transform 1 0 -100 0 1 4004
+box -100 4004 100 4080
 use cut_M1M4_2x1 
 transform 1 0 -100 0 1 -384
 box -100 -384 100 -308
 use cut_M1M4_2x1 
+transform 1 0 764 0 1 5690
+box 764 5690 964 5766
+use cut_M1M4_2x1 
 transform 1 0 764 0 1 -384
 box 764 -384 964 -308
+use cut_M1M4_2x1 
+transform 1 0 -100 0 1 5764
+box -100 5764 100 5840
 use cut_M1M4_2x1 
 transform 1 0 -100 0 1 -384
 box -100 -384 100 -308
 use cut_M1M4_2x1 
+transform 1 0 764 0 1 7450
+box 764 7450 964 7526
+use cut_M1M4_2x1 
 transform 1 0 764 0 1 -384
 box 764 -384 964 -308
+use cut_M1M4_2x1 
+transform 1 0 -100 0 1 7524
+box -100 7524 100 7600
 use cut_M1M4_2x1 
 transform 1 0 -100 0 1 -384
 box -100 -384 100 -308
 use cut_M1M4_2x1 
+transform 1 0 764 0 1 9210
+box 764 9210 964 9286
+use cut_M1M4_2x1 
 transform 1 0 764 0 1 -384
 box 764 -384 964 -308
+use cut_M1M4_2x1 
+transform 1 0 -100 0 1 9284
+box -100 9284 100 9360
 use cut_M1M4_2x1 
 transform 1 0 -100 0 1 -384
 box -100 -384 100 -308
 use cut_M1M4_2x1 
+transform 1 0 764 0 1 10970
+box 764 10970 964 11046
+use cut_M1M4_2x1 
 transform 1 0 764 0 1 -384
 box 764 -384 964 -308
+use cut_M1M4_2x1 
+transform 1 0 -100 0 1 11044
+box -100 11044 100 11120
 use cut_M1M4_2x1 
 transform 1 0 -100 0 1 -384
 box -100 -384 100 -308
 use cut_M1M4_2x1 
+transform 1 0 764 0 1 12730
+box 764 12730 964 12806
+use cut_M1M4_2x1 
 transform 1 0 764 0 1 -384
 box 764 -384 964 -308
+use cut_M1M4_2x1 
+transform 1 0 -100 0 1 12804
+box -100 12804 100 12880
 use cut_M1M4_2x1 
 transform 1 0 -100 0 1 -384
 box -100 -384 100 -308
 use cut_M1M4_2x1 
+transform 1 0 764 0 1 14490
+box 764 14490 964 14566
+use cut_M1M4_2x1 
 transform 1 0 764 0 1 -384
 box 764 -384 964 -308
+use cut_M1M4_2x1 
+transform 1 0 -100 0 1 14564
+box -100 14564 100 14640
 use cut_M1M4_2x1 
 transform 1 0 -100 0 1 -384
 box -100 -384 100 -308
 use cut_M1M4_2x1 
+transform 1 0 764 0 1 16250
+box 764 16250 964 16326
+use cut_M1M4_2x1 
 transform 1 0 764 0 1 -384
 box 764 -384 964 -308
+use cut_M1M4_2x1 
+transform 1 0 -100 0 1 16324
+box -100 16324 100 16400
 use cut_M1M4_2x1 
 transform 1 0 -100 0 1 -384
 box -100 -384 100 -308

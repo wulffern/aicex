@@ -107,4 +107,4 @@ C {devices/lab_pin.sym} 40 -330 0 0 {name=l1 sig_type=std_logic lab=VS}
 C {devices/lab_pin.sym} -40 -460 0 0 {name=l2 sig_type=std_logic lab=VGP}
 C {devices/lab_pin.sym} 120 -460 0 0 {name=l3 sig_type=std_logic lab=VDP}
 C {SUN_SAR9B_SKY130NM/SUNSAR_CAP_BSSW_CV.sym} 330 -280 0 0 {name=xd2 xoffset=2 yoffset=0 angle=0 M=1}
-C {SUN_SAR9B_SKY130NM/SUNSAR_CAP_BSSW_CV.sym} 630 -270 0 0 {name=xd3 xoffset=0 yoffset=0 angle=0 M=9}
+C {SUN_SAR9B_SKY130NM/SUNSAR_CAP_BSSW_CV.sym} 630 -270 0 0 {name=xd3 xoffset=0 yoffset=0 angle=0 M=8}

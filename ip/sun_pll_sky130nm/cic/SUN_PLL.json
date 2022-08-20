@@ -14,8 +14,6 @@
             "afterPlace"  : [
                 {"addRouteRings" :[
                     ["M1","AVSS","tbrl",4,2]
-//                    ["M1","AVDD","tbrl",4,2]
-
                 ]},
                 {"addPowerRings" :[
 
@@ -35,9 +33,8 @@
 
                 ],
                  "addRouteConnections" : [
-				    ["AVSS","","bottom","M4","nostartcut,onTopT,routeWidth=wide_width"]
-                    // ["AVSS","","bottom","M4","nostartcut,onTopT,routeWidth=wide_width"]
-                    //["AVDD","xa1","bottom","M4","nostartcut,onTopT,routeWidth=wide_width"]
+                    // ["AVSS","","right","M1","strap"]
+				    ["AVSS","","bottom","M4","onTopT,routeWidth=wide_width"]
                 ]
             },
 
@@ -169,7 +166,7 @@
 
                 ],
                 "addRouteConnections" : [
-                  ["PWRUP","X","top","M4","onTopB"],
+                    ["PWRUP","X","top","M4","onTopB,startLayer=M2"],
                     ["AVSS","x","bottom","M4","nostartcut,onTopT,routeWidth=wide_width"],
                     ["AVDD","x","bottom","M4","nostartcut,onTopT,routeWidth=wide_width"]
                 ],
