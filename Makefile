@@ -12,5 +12,6 @@ test:
 ci:
 	docker build -f Dockerfile .
 
-cirun:
+
+cish:
 	docker run --rm -it -i wulffern/aicex bash --login

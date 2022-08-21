@@ -29,20 +29,17 @@
                 "addConnectivityRoutes" : [
                     ["M1","PWRUP_1V8_N","-|--","","",""],
                     ["M1","IBPSR_1U","--|-","onTopB,offsethigh","",""]
-
-
                 ],
                  "addRouteConnections" : [
                     // ["AVSS","","right","M1","strap"]
 				    ["AVSS","","bottom","M4","onTopT,routeWidth=wide_width"]
-                ]
+                 ]
             },
 
             "afterRoute"  : {
-
             },
             "afterPaint" :{
-              "resetOrigin" : 1
+                "resetOrigin" : 1
             }
         },
         {
@@ -388,8 +385,8 @@
                     ["M1","^NI","-|--","offsethigh","","(IVX|NDX)"],
                     ["M1","^CKUP","--|-","onTopB,offsethigh","",""],
                     ["M2","^CKDWN","--|-","onTopB,offsethigh","",""],
-                    ["M2","^N_2","--|-","","","xb2_5|SUN_PLL_LSCORE"],
-                    ["M3","^N_1","-|--","","","xb2_6|SUN_PLL_LSCORE"],
+                    ["M3","^N_2","-|--","","onTopL","xb2_5|SUN_PLL_LSCORE"],
+                    ["M3","^N_1","--|-","","onTopL","xb2_6|SUN_PLL_LSCORE"],
                     ["M3","^N_0","-|--","","",""]
                 ],
                 "addRouteConnections" : [
@@ -404,9 +401,13 @@
                 ]}
             ],
             "afterPaint" :{
-              "resetOrigin" : 1
+                "resetOrigin" : 1,
+                "addPortOnEdges" :[
+                    ["M2","PWRUP_1V8","bottom","-|--",""],
+                    ["M2","CK","top","-|--",""],
+                    ["M4","VDD_ROSC","top","||","routeWidth=wide_width"]
+                ]
             }
-
         },
         {
 

@@ -29,8 +29,8 @@ xl1 IBPSR_1U PWRUP_1V8_N AVSS SUN_PLL_BIAS xoffset=5 yoffset=0 angle=0
 *.ipin AVDD
 *.opin CK
 xa3 N_2 N_1 CKUP CKDWN AVDD AVSS SUN_PLL_LSCORE
-xa4 CKUP CK AVDD AVSS SUNTR_IVX1_CV xoffset=0 yoffset=0 angle=0 M=1
-xa5 CKDWN NC1 AVDD AVSS SUNTR_IVX1_CV xoffset=0 yoffset=0 angle=0 M=1
+xa4 CKDWN NC1 AVDD AVSS SUNTR_IVX1_CV xoffset=0 yoffset=0 angle=0 M=1
+xa5 CKUP CK AVDD AVSS SUNTR_IVX1_CV xoffset=0 yoffset=0 angle=0 M=1
 xa6 AVDD AVSS SUNTR_TAPCELLB_CV xoffset=0 yoffset=0 angle=0 M=1
 xb1 PWRUP_1V8 N_0 NI AVDD AVSS VDD_ROSC AVSS SUNTRB_NDX1_CV xoffset=0 yoffset=0 angle=0 M=1
 xb2_0 NI N_7 AVDD AVSS VDD_ROSC AVSS SUNTRB_IVX1_CV xoffset=0 yoffset=0 angle=0 M=1
