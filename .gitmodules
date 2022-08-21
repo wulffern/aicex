@@ -3,4 +3,4 @@
 	url = https://github.com/google/skywater-pdk-libs-sky130_fd_pr.git
 [submodule "externals/xschem_sky130"]
 	path = externals/xschem_sky130
-	url = https://github.com/wulffern/xschem_sky130.git
+	url = https://github.com/StefanSchippers/xschem_sky130.git
