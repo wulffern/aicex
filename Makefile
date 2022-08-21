@@ -7,3 +7,10 @@ cwd = ${shell pwd}
 
 test:
 	${foreach d, ${dirs}, cd ${cwd}; cd ${d} && make test ;}
+
+
+ci:
+	docker build -f Dockerfile .
+
+cirun:
+	docker run --rm -it -i wulffern/aicex bash --login

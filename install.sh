@@ -3,7 +3,7 @@
 
 if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     # make sure pip is installed
-    sudo apt install -y python3-pip
+    sudo apt install -y python3-pip git
 fi
 
 #- Get cIcCreator
