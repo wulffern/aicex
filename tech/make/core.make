@@ -35,8 +35,8 @@ PDKPATH=${PDK_ROOT}/sky130A
 #----------------------------------------------------------------------------
 # VERIFICATION
 #----------------------------------------------------------------------------
-
-NCELL=../design/${LIB}/${PRCELL}
+LMAG=?../design/${LIB}
+NCELL=${LMAG}/${PRCELL}
 MCELL=${NCELL}.mag
 
 SUB=BULKN

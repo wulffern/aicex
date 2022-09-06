@@ -10,6 +10,16 @@ input logic D;
 endmodule
 
 //-------------------------------------------------------------
+// SUNTR_PCHDL2 <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module SUNTR_PCHDL2(D,G,S,B);
+input logic G;
+input logic S;
+input logic B;
+input logic D;
+endmodule
+
+//-------------------------------------------------------------
 // SUNTR_NCHDL <class 'cicpy.core.layoutcell.LayoutCell'>
 //-------------------------------------------------------------
 module SUNTR_NCHDL(D,G,S,B);

@@ -197,6 +197,10 @@
               ]
           }
         },
+         { "name" : "PCHDL2",
+          "inherit" : "PCHDL",
+           "minPolyLength" : 18.0
+        },
 
         { "name" : "NCHDL",
           "inherit" : "DMOS_BULKN",

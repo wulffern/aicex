@@ -22,8 +22,9 @@
             ],
             "beforeRoute" :{
                 "addDirectedRoutes" : [
-                    ["M2","AVSS","xa:S-|xa1:AVSS","noendcut"],
-                    ["M1","AVSS","xa:B||xa1:AVSS","routeWidth=wide_width"]
+                    //["M2","AVSS","xa:S-|xa1:AVSS","noendcut"],
+                    ["M1","AVSS","xa:S-|--rail_r_AVSS","strap"],
+                    ["M1","AVSS","rail_l_AVSS-xa:B","strap"]
                 ],
 
                 "addConnectivityRoutes" : [
@@ -31,15 +32,20 @@
                     ["M1","IBPSR_1U","--|-","onTopB,offsethigh","",""]
                 ],
                  "addRouteConnections" : [
-                    // ["AVSS","","right","M1","strap"]
-				    ["AVSS","","bottom","M4","onTopT,routeWidth=wide_width"]
+                     //["AVSS","","right","M1","strap"],
+				    //["AVSS","","bottom","M4","onTopT,routeWidth=wide_width"]
                  ]
             },
 
             "afterRoute"  : {
             },
             "afterPaint" :{
-                "resetOrigin" : 1
+                "resetOrigin" : 1,
+                "addPortOnEdges" :[
+                    ["M3","IBPSR_1U","right","--|-",""],
+                    ["M3","PWRUP_1V8_N","left","--|-",""]
+                ]
+
             }
         },
         {
@@ -90,7 +96,13 @@
 
             ],
             "afterPaint" :{
-              "resetOrigin" : 1
+                "resetOrigin" : 1,
+                 "addPortOnEdges" :[
+                    ["M3","VBN","left","--|-",""],
+                     ["M3","VFB","left","--|-",""],
+                     ["M3","VI","left","--|-",""],
+                     ["M3","VO","left","--|-",""]
+                ]
             }
         },
                 {
@@ -121,7 +133,7 @@
                     ["M1","VPS","-|--","","",""],
                     ["M1","VBN","||","","",""],
                     ["M2","VBP","-|--","onTopB","",""],
-                    ["M3","LPF","-|--","onTopR","",""],
+                    ["M2","LPF","-|--","onTopR","",""],
                     ["M1","VNS","-|--","","",""]
 
 
@@ -149,7 +161,16 @@
 
             ],
             "afterPaint" :{
-              "resetOrigin" : 1
+                "resetOrigin" : 1,
+                "addPortOnEdges" :[
+                    ["M3","PWRUP_1V8","left","--|-","startoffsetcutlow"],
+                    ["M3","KICK","left","--|-",""],
+                    ["M3","VBN","left","--|-",""],
+                    ["M3","LPF","right","-|--",""],
+                    ["M3","LPFZ","right","-|--",""],
+                    ["M3","CP_UP_N","left","--|-",""],
+                    ["M3","CP_DOWN","left","--|-",""]
+                ]
             }
         },
 
@@ -198,7 +219,12 @@
 
             ],
             "afterPaint" :{
-              "resetOrigin" : 1
+                "resetOrigin" : 1,
+                "addPortOnEdges" :[
+                    ["M2","CK","bottom","--|-",""],
+                    ["M2","CK_FB","top","--|-",""]
+
+                ]
             }
         },
         {
@@ -250,7 +276,8 @@
 
             ],
             "afterPaint" :{
-              "resetOrigin" : 1
+                "resetOrigin" : 1
+
             }
         },
 
@@ -366,7 +393,14 @@
 
             },
             "afterPaint" :{
-              "resetOrigin" : 1
+                "resetOrigin" : 1,
+                "addPortOnEdges" :[
+                    ["M3","CK_REF","left","--|-",""],
+                    ["M3","CK_FB","left","--|-",""],
+                    ["M3","CP_UP_N","right","-|--",""],
+                    ["M3","CP_DOWN","right","-|--",""]
+                ]
+
             }
         },
         {

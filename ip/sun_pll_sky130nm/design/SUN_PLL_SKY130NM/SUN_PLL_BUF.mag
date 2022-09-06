@@ -25,10 +25,6 @@ rect 3252 3290 3420 3350
 rect 3252 4522 3420 4582
 rect 3252 5754 3420 5814
 rect 3420 826 3480 5814
-rect 1092 2674 1308 2734
-rect 1092 3202 1308 3262
-rect 3144 3466 3360 3526
-rect 1092 914 1308 974
 << m1 >>
 rect 1524 384 1740 886
 rect 660 384 876 988
@@ -73,6 +69,26 @@ rect 1632 2762 2992 2838
 rect 2992 2234 3252 2310
 rect 2820 2146 2992 2222
 rect 2992 914 3068 2838
+rect 0 2674 216 2734
+rect 0 3202 216 3262
+rect 0 3466 216 3526
+rect 0 914 216 974
+rect 0 914 216 974
+rect 952 914 1200 990
+rect 108 914 952 990
+rect 952 914 1028 990
+rect 0 2674 216 2734
+rect 952 2674 1200 2750
+rect 108 2674 952 2750
+rect 952 2674 1028 2750
+rect 0 3202 216 3262
+rect 952 3202 1200 3278
+rect 108 3202 952 3278
+rect 952 3202 1028 3278
+rect 0 3466 216 3526
+rect 3004 3466 3252 3542
+rect 108 3466 3004 3542
+rect 3004 3466 3080 3542
 use ../../sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_NCHDLCM xa10
 transform 1 0 768 0 1 768
 box 768 768 2028 2528
@@ -199,17 +215,29 @@ box 3144 4698 3344 4774
 use cut_M1M4_2x1 
 transform 1 0 3144 0 1 5930
 box 3144 5930 3344 6006
+use cut_M1M3_2x1 
+transform 1 0 1108 0 1 914
+box 1108 914 1308 990
+use cut_M1M3_2x1 
+transform 1 0 1108 0 1 2674
+box 1108 2674 1308 2750
+use cut_M1M3_2x1 
+transform 1 0 1108 0 1 3202
+box 1108 3202 1308 3278
+use cut_M1M3_2x1 
+transform 1 0 3160 0 1 3466
+box 3160 3466 3360 3542
 << labels >>
 flabel locali s 14088 384 14328 10656 0 FreeSans 400 0 0 0 AVSS
 port 6 nsew
 flabel locali s 14472 0 14712 11040 0 FreeSans 400 0 0 0 AVDD
 port 1 nsew
-flabel locali s 1092 2674 1308 2734 0 FreeSans 400 0 0 0 VFB
+flabel m2 s 0 2674 216 2734 0 FreeSans 400 0 0 0 VFB
 port 2 nsew
-flabel locali s 1092 3202 1308 3262 0 FreeSans 400 0 0 0 VI
+flabel m2 s 0 3202 216 3262 0 FreeSans 400 0 0 0 VI
 port 3 nsew
-flabel locali s 3144 3466 3360 3526 0 FreeSans 400 0 0 0 VO
+flabel m2 s 0 3466 216 3526 0 FreeSans 400 0 0 0 VO
 port 4 nsew
-flabel locali s 1092 914 1308 974 0 FreeSans 400 0 0 0 VBN
+flabel m2 s 0 914 216 974 0 FreeSans 400 0 0 0 VBN
 port 5 nsew
 << end >>

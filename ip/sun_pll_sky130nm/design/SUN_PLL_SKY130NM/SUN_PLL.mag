@@ -16,9 +16,11 @@ rect 0 39752 46564 39992
 rect 0 0 240 39992
 rect 46324 0 46564 39992
 rect 16552 8016 30688 8076
-rect 40156 28450 40372 28510
-rect 27724 2322 27940 2382
-rect 2148 1970 2364 2030
+<< m2 >>
+rect 39064 28450 39280 28510
+rect 1056 1970 1272 2030
+<< m1 >>
+rect 27724 1056 27940 1116
 use SUN_PLL_BUF xb1
 transform 1 0 1056 0 1 1056
 box 1056 1056 15768 12096
@@ -50,10 +52,10 @@ flabel locali s 46324 0 46564 39992 0 FreeSans 400 0 0 0 AVDD
 port 1 nsew
 flabel locali s 16552 8016 30688 8076 0 FreeSans 400 0 0 0 PWRUP_1V8
 port 3 nsew
-flabel locali s 40156 28450 40372 28510 0 FreeSans 400 0 0 0 CK_REF
+flabel m2 s 39064 28450 39280 28510 0 FreeSans 400 0 0 0 CK_REF
 port 4 nsew
-flabel locali s 27724 2322 27940 2382 0 FreeSans 400 0 0 0 CK
+flabel m1 s 27724 1056 27940 1116 0 FreeSans 400 0 0 0 CK
 port 5 nsew
-flabel locali s 2148 1970 2364 2030 0 FreeSans 400 0 0 0 IBPSR_1U
+flabel m2 s 1056 1970 1272 2030 0 FreeSans 400 0 0 0 IBPSR_1U
 port 6 nsew
 << end >>

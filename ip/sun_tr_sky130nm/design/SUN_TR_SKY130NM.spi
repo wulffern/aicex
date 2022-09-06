@@ -7,6 +7,13 @@ XMM1 D G S B sky130_fd_pr__pfet_01v8  l=0.18  nf=1  w=1.08
 .ENDS
 
 *-------------------------------------------------------------
+* SUNTR_PCHDL2 <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTR_PCHDL2 D G S B
+XMM1 D G S B sky130_fd_pr__pfet_01v8  l=0.18  nf=1  w=1.08  
+.ENDS
+
+*-------------------------------------------------------------
 * SUNTR_NCHDL <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
 .SUBCKT SUNTR_NCHDL D G S B
