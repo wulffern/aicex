@@ -103,89 +103,85 @@ XM1 D CG CS B SUNTR_NCHDLA
 .ENDS
 
 *-------------------------------------------------------------
-* SUNTR_RES12 <class 'cicpy.core.layoutcell.LayoutCell'>
+* SUNTR_RES2 <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
-.SUBCKT SUNTR_RES12 N P B
-XRR1_0 N INT_0 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_1 INT_0 P B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
+.SUBCKT SUNTR_RES2 N P B
+XRR1_0 N INT_0 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_1 INT_0 P B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
 .ENDS
 
 *-------------------------------------------------------------
-* SUNTR_RES25 <class 'cicpy.core.layoutcell.LayoutCell'>
+* SUNTR_RES4 <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
-.SUBCKT SUNTR_RES25 N P B
-XRR1_0 N INT_0 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_1 INT_0 INT_1 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_2 INT_1 INT_2 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_3 INT_2 P B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
+.SUBCKT SUNTR_RES4 N P B
+XRR1_0 N INT_0 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_1 INT_0 INT_1 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_2 INT_1 INT_2 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_3 INT_2 P B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
 .ENDS
 
 *-------------------------------------------------------------
-* SUNTR_RES100 <class 'cicpy.core.layoutcell.LayoutCell'>
+* SUNTR_RES8 <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
-.SUBCKT SUNTR_RES100 N P B
-XRR1_0 N INT_0 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_1 INT_0 INT_1 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_2 INT_1 INT_2 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_3 INT_2 INT_3 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_4 INT_3 INT_4 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_5 INT_4 INT_5 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_6 INT_5 INT_6 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_7 INT_6 INT_7 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_8 INT_7 INT_8 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_9 INT_8 P B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
+.SUBCKT SUNTR_RES8 N P B
+XRR1_0 N INT_0 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_1 INT_0 INT_1 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_2 INT_1 INT_2 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_3 INT_2 INT_3 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_4 INT_3 INT_4 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_5 INT_4 INT_5 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_6 INT_5 INT_6 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_7 INT_6 P B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
 .ENDS
 
 *-------------------------------------------------------------
-* SUNTR_RES200 <class 'cicpy.core.layoutcell.LayoutCell'>
+* SUNTR_RES16 <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
-.SUBCKT SUNTR_RES200 N P B
-XRR1_0 N INT_0 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_1 INT_0 INT_1 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_2 INT_1 INT_2 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_3 INT_2 INT_3 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_4 INT_3 INT_4 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_5 INT_4 INT_5 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_6 INT_5 INT_6 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_7 INT_6 INT_7 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_8 INT_7 INT_8 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_9 INT_8 INT_9 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_10 INT_9 INT_10 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_11 INT_10 INT_11 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_12 INT_11 INT_12 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_13 INT_12 INT_13 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_14 INT_13 INT_14 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_15 INT_14 INT_15 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_16 INT_15 INT_16 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_17 INT_16 P B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
+.SUBCKT SUNTR_RES16 N P B
+XRR1_0 N INT_0 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_1 INT_0 INT_1 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_2 INT_1 INT_2 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_3 INT_2 INT_3 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_4 INT_3 INT_4 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_5 INT_4 INT_5 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_6 INT_5 INT_6 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_7 INT_6 INT_7 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_8 INT_7 INT_8 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_9 INT_8 INT_9 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_10 INT_9 INT_10 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_11 INT_10 INT_11 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_12 INT_11 INT_12 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_13 INT_12 INT_13 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_14 INT_13 INT_14 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_15 INT_14 P B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
 .ENDS
 
 *-------------------------------------------------------------
-* SUNTR_RPPO_12k <class 'cicpy.core.layoutcell.LayoutCell'>
+* SUNTR_RPPO2 <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
-.SUBCKT SUNTR_RPPO_12k P N B
-XA1 N P B SUNTR_RES12
+.SUBCKT SUNTR_RPPO2 P N B
+XA1 N P B SUNTR_RES2
 .ENDS
 
 *-------------------------------------------------------------
-* SUNTR_RPPO_25k <class 'cicpy.core.layoutcell.LayoutCell'>
+* SUNTR_RPPO4 <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
-.SUBCKT SUNTR_RPPO_25k P N B
-XA1 N P B SUNTR_RES25
+.SUBCKT SUNTR_RPPO4 P N B
+XA1 N P B SUNTR_RES4
 .ENDS
 
 *-------------------------------------------------------------
-* SUNTR_RPPO_100k <class 'cicpy.core.layoutcell.LayoutCell'>
+* SUNTR_RPPO8 <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
-.SUBCKT SUNTR_RPPO_100k P N B
-XA1 N P B SUNTR_RES100
+.SUBCKT SUNTR_RPPO8 P N B
+XA1 N P B SUNTR_RES8
 .ENDS
 
 *-------------------------------------------------------------
-* SUNTR_RPPO_200k <class 'cicpy.core.layoutcell.LayoutCell'>
+* SUNTR_RPPO16 <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
-.SUBCKT SUNTR_RPPO_200k P N B
-XA1 N P B SUNTR_RES200
+.SUBCKT SUNTR_RPPO16 P N B
+XA1 N P B SUNTR_RES16
 .ENDS
 
 *-------------------------------------------------------------

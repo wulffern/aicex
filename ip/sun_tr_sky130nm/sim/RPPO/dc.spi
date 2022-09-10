@@ -59,12 +59,14 @@ VD P AVSS dc 1
 * XDUT
 *----------------------------------------------------------------
 
-XDUT P AVSS AVSS SUNTR_RPPO
+XDUT P AVSS AVSS SUNTR_RPPO16
 
+B1 res 0 V=-v(P)/i(VD)
 
 .measure dc iavdd AVG i(VD)
+.measure dc res1 max v(res)
 
-.probe i(VD)
+.probe i(VD) v(P) v(res)
 
 .control
 
@@ -72,14 +74,14 @@ set color0=white
 set color1=black
 unset askquit
 
-*op
+op
 
-dc VD 0 1 0.1
+dc VD 0.9 1 0.1
 *plot v(CLK) v(CK_SAMPLE) v(EN)
 
 *write
 
-*quit
+quit
 
 .endc
 

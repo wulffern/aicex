@@ -144,11 +144,14 @@
         "VIA4" : { "space" : 12, "width" : 16 , "height" : 16},
         "VIA5" : { "space" : 12, "width" : 16 , "height" : 16},
 
+        "PDIFF" :{ "PTAPCencOpposite" : 4, "enclosure" : 4,"PTAPCenclosure" : 4},
+        "PTAP" :{ "PTAPCencOpposite" : 4, "enclosure" : 4,"PTAPCenclosure" : 4},
+
 
         "PO"   : { "space" : 30, "width" : 9 , "mingatelength" : 9, "enclosure" : 2},
         "POB"   : { "space" : 30, "width" : 9 , "mingatelength" : 9, "enclosure" : 2},
 
-        "OD"   : { "space" : 14, "enclosure" : 4, "COencOpposite" : 4},
+        "OD"   : { "space" : 14, "enclosure" : 4, "PTAPCenclosure" : 4, "COencOpposite" : 4, "PTAPCencOpposite" : 4},
         "ODB"   : { "space" : 14, "enclosure" : 4, "COencOpposite" : 4},
 
         "NDIFFC"   : { "width" : 10},

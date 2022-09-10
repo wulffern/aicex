@@ -1,0 +1,17 @@
+v {xschem version=3.0.0 file_version=1.2 }
+K {type=subcircuit
+format="@name @pinlist @symname xoffset=@xoffset yoffset=@yoffset angle=@angle M=@M"
+template="name=x1 xoffset=0 yoffset=0 angle=0 M=1"
+} 
+B 5 -22.5 -2.5  -17.5 2.5 {name=P dir=inout }
+L 4 -20 0 0 0 {}
+T {P} 5 -5 0 0 0.2 0.2  {}
+B 5 -22.5 17.5  -17.5 22.5 {name=N dir=inout }
+L 4 -20 20 0 20 {}
+T {N} 5 15 0 0 0.2 0.2  {}
+B 5 -22.5 37.5  -17.5 42.5 {name=B dir=inout }
+L 4 -20 40 0 40 {}
+T {B} 5 35 0 0 0.2 0.2  {}
+P 4 5 0 -10 180 -10 180 50 0 50 0 -10 {}
+T {@symname}  50 10.0  0 0 0.25 0.25 {}
+T {@name} 0 -25 0 0 0.2 0.2 {}

@@ -62,21 +62,21 @@ C {devices/ipin.sym} -610 50 0 0 {name=p1 lab=VLPF
 }
 C {devices/ipin.sym} -610 280 0 0 {name=p2 lab=AVSS}
 C {cborder/border_s.sym} 410 250 0 0 {}
-C {SUN_TR_SKY130NM/SUNTR_RPPO_100k.sym} 0 50 1 0 {name=xa5 xoffset=0 yoffset=2 angle=0 M=1}
+C {SUN_TR_SKY130NM/SUNTR_RPPO16.sym} 0 50 1 0 {name=xa5 xoffset=0 yoffset=2 angle=0 M=1}
 C {SUN_PLL_SKY130NM/CAP_LPF.sym} 0 270 0 0 {name=xb3 xoffset=0 yoffset=0 angle=0 M=24}
 C {SUN_PLL_SKY130NM/CAP_LPF.sym} -290 270 0 0 {name=xb2 xoffset=0 yoffset=0 angle=0 M=2
 }
 C {SUN_PLL_SKY130NM/CAP_LPF.sym} -520 270 0 0 {name=xb1 xoffset=0 yoffset=0 angle=0 M=1}
-C {SUN_TR_SKY130NM/SUNTR_RPPO_100k.sym} 0 -70 1 0 {name=xa4 xoffset=0 yoffset=2 angle=0 M=1}
+C {SUN_TR_SKY130NM/SUNTR_RPPO16.sym} 0 -70 1 0 {name=xa4 xoffset=0 yoffset=2 angle=0 M=1}
 C {devices/lab_pin.sym} 0 30 2 0 {name=l2 sig_type=std_logic lab=VN2
 }
-C {SUN_TR_SKY130NM/SUNTR_RPPO_100k.sym} 0 -180 1 0 {name=xa3 xoffset=0 yoffset=2 angle=0 M=1}
-C {SUN_TR_SKY130NM/SUNTR_RPPO_100k.sym} 0 -290 1 0 {name=xa2 xoffset=0 yoffset=2 angle=0 M=1}
+C {SUN_TR_SKY130NM/SUNTR_RPPO16.sym} 0 -180 1 0 {name=xa3 xoffset=0 yoffset=2 angle=0 M=1}
+C {SUN_TR_SKY130NM/SUNTR_RPPO16.sym} 0 -290 1 0 {name=xa2 xoffset=0 yoffset=2 angle=0 M=1}
 C {devices/lab_pin.sym} 0 -90 2 0 {name=l3 sig_type=std_logic lab=VN3
 }
 C {devices/lab_pin.sym} 0 -190 2 0 {name=l4 sig_type=std_logic lab=VN4
 }
-C {SUN_TR_SKY130NM/SUNTR_RPPO_100k.sym} 0 -410 1 0 {name=xa1 xoffset=0 yoffset=2 angle=0 M=1}
+C {SUN_TR_SKY130NM/SUNTR_RPPO16.sym} 0 -410 1 0 {name=xa1 xoffset=0 yoffset=2 angle=0 M=1}
 C {devices/lab_pin.sym} 0 -310 2 0 {name=l5 sig_type=std_logic lab=VN5
 }
 C {devices/ipin.sym} -610 180 0 0 {name=p3 lab=VLPFZ

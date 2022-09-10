@@ -241,6 +241,7 @@
                 "addDirectedRoutes" : [
                     //["M1","AVSS","xc:S-|xc:S"],
                     //["M4","AVSS","xd:B-|xd:B","track2"]
+                    ["M4","AVSS","xb:B--rail_r_AVSS","strap"]
 
                 ],
 
@@ -250,14 +251,14 @@
                     ["M2","VN3","-|--","onTopL,track2","",""],
                     ["M3","VN2","-|--","onTopL,track4","",""],
                     ["M2","VLPFZ","-|--","onTopL","",""],
-                    ["M3","^VLPF$","-|--","onTopL","",""],
-                    ["M4","AVSS","-|--","","","xb"]
+                    ["M3","^VLPF$","-|--","onTopL","",""]
+                    //["M4","AVSS","-|--","","","xb"]
 
 
                 ],
                 "addRouteConnections" : [
-                    ["AVSS","xb1","bottom","M4","routeWidth=wide_width"]
-                    //["AVSS","xa","left","M1","routeWidth=wide_width"]
+                    ["AVSS","xb1","bottom","M4","routeWidth=wide_width"],
+                    ["AVSS","xa","left","M1","routeWidth=wide_width"]
 
                 ],
 
@@ -267,7 +268,7 @@
             },
             "afterPlace"  : [
                 {"addRouteRings" :[
-                    ["M1","AVSS","tbrl",4,0]
+                    ["M1","AVSS","tbrl",5,2]
 
                 ]},
                 {"addPowerRings" :[

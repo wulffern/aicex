@@ -1,14 +1,11 @@
 {
     "cells" : [
-        { "name" : "RES12",
+        { "name" : "RES2",
           "class" : "Gds::GdsPatternHighResistor",
           "yoffset": -0.5,
           "xoffset": -0.5,
           "polyWidthAdjust" : 0,
-
           "afterNew" :{
-              "horizontalGridMultiplier" : 1.5,
-              "verticalGridMultiplier" : 2.5
           },
           "fillCoordinatesFromStrings" : [
               [   "POR",
@@ -77,49 +74,58 @@
               ]
 
           ],
+          "afterNew" :{
+              "horizontalGridMultiplier" : 2,
+              "verticalGridMultiplier" : 2.5,
+               "copyColumns": [
+                   {"count": 1,"offset": 1,"length": 1},
+                   {"count": 1,"offset": 4,"length": 1},
+                   {"count": 1,"offset": 7,"length": 1}
+                ]
+          },
           "beforePlace" :{
               "addEnclosuresByRectangle" : [
-                  ["PO",[0,1,"width",8],["OP"]],
+                  ["PO",[0,2,"width",8],["OP"]],
                   ["PO",["self"],["PWT"]]
               ]
           }
         },
         {
-            "name" : "RES25",
-            "inherit" : "RES12",
+            "name" : "RES4",
+            "inherit" : "RES2",
             "afterNew" : {
             "copyColumns" :[
-                  { "count" : 1, "offset" : 1,"length" : 4}
+                  { "count" : 1, "offset" : 1,"length" : 6}
               ]
                 }
         },
         {
-            "name" : "RES100",
-            "inherit" : "RES12",
+            "name" : "RES8",
+            "inherit" : "RES2",
             "afterNew" : {
             "copyColumns" :[
-                  { "count" : 4, "offset" : 1,"length" : 4}
+                  { "count" : 3, "offset" : 1,"length" : 6}
               ]
                 }
         },
         {
-            "name" : "RES200",
-            "inherit" : "RES12",
+            "name" : "RES16",
+            "inherit" : "RES2",
             "afterNew" : {
             "copyColumns" :[
-                  { "count" : 8, "offset" : 1,"length" : 4}
+                  { "count" : 7, "offset" : 1,"length" : 6}
               ]
                 }
         },
-        { "name" : "RPPO_12k",
+        { "name" : "RPPO2",
           "class" : "Layout::LayoutDigitalCell",
           "boundaryIgnoreRouting" : 0,
           "composite" : 1,
           "meta" : {
               "symbol" : "cic/res"
           },
-          "spice": [".subckt RPPO_12k P N B",
-                    "XA1 N P B RES12",
+          "spice": [".subckt RPPO2 P N B",
+                    "XA1 N P B RES2",
                     ".ends"
                    ],
           "afterPlace" : {
@@ -132,27 +138,27 @@
               "resetOrigin" : 1
           }
         },
-        { "name" : "RPPO_25k",
+        { "name" : "RPPO4",
           "class" : "Layout::LayoutDigitalCell",
-          "leech" :"RPPO_12k",
-          "spice": [".subckt RPPO_25k P N B",
-                    "XA1 N P B RES25",
+          "leech" :"RPPO2",
+          "spice": [".subckt RPPO4 P N B",
+                    "XA1 N P B RES4",
                     ".ends"
                    ]
         },
-         { "name" : "RPPO_100k",
+         { "name" : "RPPO8",
           "class" : "cIcCore::LayoutCell",
-           "leech" :"RPPO_12k",
-          "spice": [".subckt RPPO_100k P N B",
-                    "XA1 N P B RES100",
+           "leech" :"RPPO8",
+          "spice": [".subckt RPPO8 P N B",
+                    "XA1 N P B RES8",
                     ".ends"
                    ]
         },
-         { "name" : "RPPO_200k",
+         { "name" : "RPPO16",
           "class" : "Layout::LayoutDigitalCell",
-           "leech" :"RPPO_12k",
-          "spice": [".subckt RPPO_200k P N B",
-                    "XA1 N P B RES200",
+           "leech" :"RPPO2",
+          "spice": [".subckt RPPO16 P N B",
+                    "XA1 N P B RES16",
                     ".ends"
                    ]
         }

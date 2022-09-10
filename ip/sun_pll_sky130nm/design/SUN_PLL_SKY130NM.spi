@@ -60,16 +60,16 @@ XM5 S G D B SUNTR_PCHDL
 * SUNTR_RES100 <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
 .SUBCKT SUNTR_RES100 N P B
-XRR1_0 N INT_0 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_1 INT_0 INT_1 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_2 INT_1 INT_2 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_3 INT_2 INT_3 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_4 INT_3 INT_4 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_5 INT_4 INT_5 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_6 INT_5 INT_6 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_7 INT_6 INT_7 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_8 INT_7 INT_8 B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
-XRR1_9 INT_8 P B sky130_fd_pr__res_high_po  l=8.8  w=0.54  
+XRR1_0 N INT_0 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_1 INT_0 INT_1 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_2 INT_1 INT_2 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_3 INT_2 INT_3 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_4 INT_3 INT_4 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_5 INT_4 INT_5 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_6 INT_5 INT_6 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_7 INT_6 INT_7 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_8 INT_7 INT_8 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_9 INT_8 P B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
 .ENDS
 
 *-------------------------------------------------------------

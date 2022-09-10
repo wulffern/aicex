@@ -12,6 +12,7 @@ __pycache__/
 *.gds
 .DS_Store
 *.html
+tools
 output*/
 
 work/
