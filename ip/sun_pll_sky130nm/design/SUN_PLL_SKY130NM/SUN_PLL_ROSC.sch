@@ -148,7 +148,7 @@ C {devices/lab_pin.sym} 630 -160 1 0 {name=l2 sig_type=std_logic lab=CKUP
 }
 C {SUN_TR_SKY130NM/SUNTR_IVX1_CV.sym} 700 -160 0 0 {name=xa5}
 C {SUN_PLL_SKY130NM/SUN_PLL_LSCORE.sym} 580 -150 0 0 {name=xa3}
-C {SUN_TR_SKY130NM/SUNTR_TAPCELLB_CV.sym} 240 -330 0 0 {name=xa6}
+C {SUN_TR_SKY130NM/SUNTR_TAPCELLB_CV.sym} 220 -330 0 0 {name=xa6}
 C {devices/lab_pin.sym} 390 -140 0 0 {name=l4 sig_type=std_logic lab=N[1]}
 C {SUN_TRB_SKY130NM/SUNTRB_IVX1_CV.sym} 0 -10 0 0 {name=xb2[0:7]}
 C {devices/lab_pin.sym} 730 -300 1 0 {name=l8 sig_type=std_logic lab=NC1}

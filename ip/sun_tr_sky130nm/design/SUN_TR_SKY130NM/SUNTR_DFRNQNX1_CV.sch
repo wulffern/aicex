@@ -12,65 +12,65 @@ C {devices/iopin.sym} 0 80 0 0{name=p4 lab=QN}
 C {devices/iopin.sym} 0 100 0 0{name=p5 lab=AVDD}
 C {devices/iopin.sym} 0 120 0 0{name=p6 lab=AVSS}
 C {SUN_TR_SKY130NM/SUNTR_TAPCELLB_CV.sym} 400 0 0 0 {name=XXA0}
-N 360.0 0.0 380.0 0.0{lab=AVDD}
-C {devices/lab_pin.sym} 360.0 0.0 0 0  {name=l0 sig_type=std_logic lab=AVDD }
-N 360.0 20.0 380.0 20.0{lab=AVSS}
-C {devices/lab_pin.sym} 360.0 20.0 0 0  {name=l1 sig_type=std_logic lab=AVSS }
-C {SUN_TR_SKY130NM/SUNTR_NDX1_CV.sym} 400 140.0 0 0 {name=XXA1}
-N 380.0 120.0 400.0 120.0{lab=CK}
-C {devices/lab_pin.sym} 380.0 120.0 0 0  {name=l2 sig_type=std_logic lab=CK }
-N 380.0 140.0 400.0 140.0{lab=RN}
-C {devices/lab_pin.sym} 380.0 140.0 0 0  {name=l3 sig_type=std_logic lab=RN }
-N 510.0 130.0 490.0 130.0{lab=CKN}
-C {devices/lab_pin.sym} 510.0 130.0 2 0  {name=l4 sig_type=std_logic lab=CKN }
-N 420.0 90.0 440.0 90.0{lab=AVDD}
-C {devices/lab_pin.sym} 420.0 90.0 0 0  {name=l5 sig_type=std_logic lab=AVDD }
-N 420.0 170.0 440.0 170.0{lab=AVSS}
-C {devices/lab_pin.sym} 420.0 170.0 0 0  {name=l6 sig_type=std_logic lab=AVSS }
-C {SUN_TR_SKY130NM/SUNTR_IVX1_CV.sym} 400 330.0 0 0 {name=XXA2}
-N 380.0 330.0 400.0 330.0{lab=CKN}
-C {devices/lab_pin.sym} 380.0 330.0 0 0  {name=l7 sig_type=std_logic lab=CKN }
-N 500.0 330.0 480.0 330.0{lab=CKB}
-C {devices/lab_pin.sym} 500.0 330.0 2 0  {name=l8 sig_type=std_logic lab=CKB }
-N 460.0 290.0 440.0 290.0{lab=AVDD}
-C {devices/lab_pin.sym} 460.0 290.0 2 0  {name=l9 sig_type=std_logic lab=AVDD }
-N 460.0 370.0 440.0 370.0{lab=AVSS}
-C {devices/lab_pin.sym} 460.0 370.0 2 0  {name=l10 sig_type=std_logic lab=AVSS }
-C {SUN_TR_SKY130NM/SUNTR_IVTRIX1_CV.sym} 400 520.0 0 0 {name=XXA3}
-N 360.0 520.0 380.0 520.0{lab=D}
-C {devices/lab_pin.sym} 360.0 520.0 0 0  {name=l11 sig_type=std_logic lab=D }
-N 360.0 540.0 380.0 540.0{lab=CKN}
-C {devices/lab_pin.sym} 360.0 540.0 0 0  {name=l12 sig_type=std_logic lab=CKN }
-N 360.0 560.0 380.0 560.0{lab=CKB}
-C {devices/lab_pin.sym} 360.0 560.0 0 0  {name=l13 sig_type=std_logic lab=CKB }
-N 360.0 580.0 380.0 580.0{lab=A0}
-C {devices/lab_pin.sym} 360.0 580.0 0 0  {name=l14 sig_type=std_logic lab=A0 }
-N 360.0 600.0 380.0 600.0{lab=AVDD}
-C {devices/lab_pin.sym} 360.0 600.0 0 0  {name=l15 sig_type=std_logic lab=AVDD }
-N 360.0 620.0 380.0 620.0{lab=AVSS}
-C {devices/lab_pin.sym} 360.0 620.0 0 0  {name=l16 sig_type=std_logic lab=AVSS }
-C {SUN_TR_SKY130NM/SUNTR_IVTRIX1_CV.sym} 400 740.0 0 0 {name=XXA4}
-N 360.0 740.0 380.0 740.0{lab=A1}
-C {devices/lab_pin.sym} 360.0 740.0 0 0  {name=l17 sig_type=std_logic lab=A1 }
-N 360.0 760.0 380.0 760.0{lab=CKB}
-C {devices/lab_pin.sym} 360.0 760.0 0 0  {name=l18 sig_type=std_logic lab=CKB }
-N 360.0 780.0 380.0 780.0{lab=CKN}
-C {devices/lab_pin.sym} 360.0 780.0 0 0  {name=l19 sig_type=std_logic lab=CKN }
-N 360.0 800.0 380.0 800.0{lab=A0}
-C {devices/lab_pin.sym} 360.0 800.0 0 0  {name=l20 sig_type=std_logic lab=A0 }
-N 360.0 820.0 380.0 820.0{lab=AVDD}
-C {devices/lab_pin.sym} 360.0 820.0 0 0  {name=l21 sig_type=std_logic lab=AVDD }
-N 360.0 840.0 380.0 840.0{lab=AVSS}
-C {devices/lab_pin.sym} 360.0 840.0 0 0  {name=l22 sig_type=std_logic lab=AVSS }
-C {SUN_TR_SKY130NM/SUNTR_IVX1_CV.sym} 400 960.0 0 0 {name=XXA5}
-N 380.0 960.0 400.0 960.0{lab=A0}
-C {devices/lab_pin.sym} 380.0 960.0 0 0  {name=l23 sig_type=std_logic lab=A0 }
-N 500.0 960.0 480.0 960.0{lab=A1}
-C {devices/lab_pin.sym} 500.0 960.0 2 0  {name=l24 sig_type=std_logic lab=A1 }
-N 460.0 920.0 440.0 920.0{lab=AVDD}
-C {devices/lab_pin.sym} 460.0 920.0 2 0  {name=l25 sig_type=std_logic lab=AVDD }
-N 460.0 1000.0 440.0 1000.0{lab=AVSS}
-C {devices/lab_pin.sym} 460.0 1000.0 2 0  {name=l26 sig_type=std_logic lab=AVSS }
+N 420.0 -20.0 400.0 -20.0{lab=AVDD}
+C {devices/lab_pin.sym} 420.0 -20.0 2 0  {name=l0 sig_type=std_logic lab=AVDD }
+N 420.0 20.0 400.0 20.0{lab=AVSS}
+C {devices/lab_pin.sym} 420.0 20.0 2 0  {name=l1 sig_type=std_logic lab=AVSS }
+C {SUN_TR_SKY130NM/SUNTR_NDX1_CV.sym} 400 150.0 0 0 {name=XXA1}
+N 380.0 130.0 400.0 130.0{lab=CK}
+C {devices/lab_pin.sym} 380.0 130.0 0 0  {name=l2 sig_type=std_logic lab=CK }
+N 380.0 150.0 400.0 150.0{lab=RN}
+C {devices/lab_pin.sym} 380.0 150.0 0 0  {name=l3 sig_type=std_logic lab=RN }
+N 510.0 140.0 490.0 140.0{lab=CKN}
+C {devices/lab_pin.sym} 510.0 140.0 2 0  {name=l4 sig_type=std_logic lab=CKN }
+N 420.0 100.0 440.0 100.0{lab=AVDD}
+C {devices/lab_pin.sym} 420.0 100.0 0 0  {name=l5 sig_type=std_logic lab=AVDD }
+N 420.0 180.0 440.0 180.0{lab=AVSS}
+C {devices/lab_pin.sym} 420.0 180.0 0 0  {name=l6 sig_type=std_logic lab=AVSS }
+C {SUN_TR_SKY130NM/SUNTR_IVX1_CV.sym} 400 340.0 0 0 {name=XXA2}
+N 380.0 340.0 400.0 340.0{lab=CKN}
+C {devices/lab_pin.sym} 380.0 340.0 0 0  {name=l7 sig_type=std_logic lab=CKN }
+N 500.0 340.0 480.0 340.0{lab=CKB}
+C {devices/lab_pin.sym} 500.0 340.0 2 0  {name=l8 sig_type=std_logic lab=CKB }
+N 460.0 300.0 440.0 300.0{lab=AVDD}
+C {devices/lab_pin.sym} 460.0 300.0 2 0  {name=l9 sig_type=std_logic lab=AVDD }
+N 460.0 380.0 440.0 380.0{lab=AVSS}
+C {devices/lab_pin.sym} 460.0 380.0 2 0  {name=l10 sig_type=std_logic lab=AVSS }
+C {SUN_TR_SKY130NM/SUNTR_IVTRIX1_CV.sym} 400 530.0 0 0 {name=XXA3}
+N 360.0 530.0 380.0 530.0{lab=D}
+C {devices/lab_pin.sym} 360.0 530.0 0 0  {name=l11 sig_type=std_logic lab=D }
+N 360.0 550.0 380.0 550.0{lab=CKN}
+C {devices/lab_pin.sym} 360.0 550.0 0 0  {name=l12 sig_type=std_logic lab=CKN }
+N 360.0 570.0 380.0 570.0{lab=CKB}
+C {devices/lab_pin.sym} 360.0 570.0 0 0  {name=l13 sig_type=std_logic lab=CKB }
+N 360.0 590.0 380.0 590.0{lab=A0}
+C {devices/lab_pin.sym} 360.0 590.0 0 0  {name=l14 sig_type=std_logic lab=A0 }
+N 360.0 610.0 380.0 610.0{lab=AVDD}
+C {devices/lab_pin.sym} 360.0 610.0 0 0  {name=l15 sig_type=std_logic lab=AVDD }
+N 360.0 630.0 380.0 630.0{lab=AVSS}
+C {devices/lab_pin.sym} 360.0 630.0 0 0  {name=l16 sig_type=std_logic lab=AVSS }
+C {SUN_TR_SKY130NM/SUNTR_IVTRIX1_CV.sym} 400 750.0 0 0 {name=XXA4}
+N 360.0 750.0 380.0 750.0{lab=A1}
+C {devices/lab_pin.sym} 360.0 750.0 0 0  {name=l17 sig_type=std_logic lab=A1 }
+N 360.0 770.0 380.0 770.0{lab=CKB}
+C {devices/lab_pin.sym} 360.0 770.0 0 0  {name=l18 sig_type=std_logic lab=CKB }
+N 360.0 790.0 380.0 790.0{lab=CKN}
+C {devices/lab_pin.sym} 360.0 790.0 0 0  {name=l19 sig_type=std_logic lab=CKN }
+N 360.0 810.0 380.0 810.0{lab=A0}
+C {devices/lab_pin.sym} 360.0 810.0 0 0  {name=l20 sig_type=std_logic lab=A0 }
+N 360.0 830.0 380.0 830.0{lab=AVDD}
+C {devices/lab_pin.sym} 360.0 830.0 0 0  {name=l21 sig_type=std_logic lab=AVDD }
+N 360.0 850.0 380.0 850.0{lab=AVSS}
+C {devices/lab_pin.sym} 360.0 850.0 0 0  {name=l22 sig_type=std_logic lab=AVSS }
+C {SUN_TR_SKY130NM/SUNTR_IVX1_CV.sym} 400 970.0 0 0 {name=XXA5}
+N 380.0 970.0 400.0 970.0{lab=A0}
+C {devices/lab_pin.sym} 380.0 970.0 0 0  {name=l23 sig_type=std_logic lab=A0 }
+N 500.0 970.0 480.0 970.0{lab=A1}
+C {devices/lab_pin.sym} 500.0 970.0 2 0  {name=l24 sig_type=std_logic lab=A1 }
+N 460.0 930.0 440.0 930.0{lab=AVDD}
+C {devices/lab_pin.sym} 460.0 930.0 2 0  {name=l25 sig_type=std_logic lab=AVDD }
+N 460.0 1010.0 440.0 1010.0{lab=AVSS}
+C {devices/lab_pin.sym} 460.0 1010.0 2 0  {name=l26 sig_type=std_logic lab=AVSS }
 C {SUN_TR_SKY130NM/SUNTR_IVTRIX1_CV.sym} 900 0 0 0 {name=XXA6}
 N 860.0 0.0 880.0 0.0{lab=A1}
 C {devices/lab_pin.sym} 860.0 0.0 0 0  {name=l27 sig_type=std_logic lab=A1 }

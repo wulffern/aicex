@@ -55,9 +55,9 @@ N 660 -590 660 -560 {
 lab=AVSS}
 N 560 -680 560 -520 {
 lab=CFB}
-N 1450 -760 1450 -730 {
+N 1470 -780 1470 -750 {
 lab=AVDD}
-N 1450 -710 1450 -680 {
+N 1470 -710 1470 -680 {
 lab=AVSS}
 N 1160 -750 1160 -720 {
 lab=AVDD}
@@ -91,8 +91,8 @@ C {devices/lab_pin.sym} 820 -680 1 0 {name=l11 sig_type=std_logic lab=CP_DUP_N}
 C {devices/lab_pin.sym} 860 -410 3 0 {name=l12 sig_type=std_logic lab=CP_DOWN_N}
 C {devices/lab_pin.sym} 560 -550 2 0 {name=l13 sig_type=std_logic lab=CFB}
 C {SUN_TR_SKY130NM/SUNTR_TAPCELLB_CV.sym} 1470 -730 0 0 {name=xa0}
-C {devices/lab_pin.sym} 1450 -760 0 0 {name=l14 sig_type=std_logic lab=AVDD}
-C {devices/lab_pin.sym} 1450 -680 2 0 {name=l15 sig_type=std_logic lab=AVSS}
+C {devices/lab_pin.sym} 1470 -780 0 0 {name=l14 sig_type=std_logic lab=AVDD}
+C {devices/lab_pin.sym} 1470 -680 2 0 {name=l15 sig_type=std_logic lab=AVSS}
 C {SUN_TR_SKY130NM/SUNTR_IVX1_CV.sym} 1120 -680 0 0 {name=xa2a}
 C {devices/lab_pin.sym} 1160 -750 0 0 {name=l16 sig_type=std_logic lab=AVDD}
 C {devices/lab_pin.sym} 1160 -610 2 0 {name=l17 sig_type=std_logic lab=AVSS}

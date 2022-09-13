@@ -59,7 +59,7 @@ VD P AVSS dc 1
 * XDUT
 *----------------------------------------------------------------
 
-XDUT P AVSS AVSS SUNTR_RPPO16
+XDUT P AVSS AVSS SUNTR_RPPO2
 
 B1 res 0 V=-v(P)/i(VD)
 

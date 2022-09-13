@@ -35,9 +35,9 @@ Kvco = 2*np.pi*1.6e9
 #- Current divided by 2 pi
 Kpd = 0.1e-6/(2*np.pi)
 
-R = 500e3
-C1 = 3e-12
-C2 = 0.3e-12
+R = 40*8e3
+C1 = 8.4e-12
+C2 = 0.48e-12
 
 Klp = 1/C1
 
@@ -52,6 +52,7 @@ wz = 1/(R*C1)
 w3db = wpll**2/wz
 
 Q = wz/wpll
+print(" R=%.2g"%R)
 print(" Q=%.2g"%Q)
 print(" wpll=%.2g"%wpll)
 print(" w3db=%.2g"%w3db)

@@ -3,15 +3,23 @@ K {type=subcircuit
 format="@name @pinlist @symname xoffset=@xoffset yoffset=@yoffset angle=@angle M=@M"
 template="name=x1 xoffset=0 yoffset=0 angle=0 M=1"
 } 
-B 5 -22.5 -2.5  -17.5 2.5 {name=P dir=inout }
-L 4 -20 0 0 0 {}
-T {P} 5 -5 0 0 0.2 0.2  {}
-B 5 -22.5 17.5  -17.5 22.5 {name=N dir=inout }
-L 4 -20 20 0 20 {}
-T {N} 5 15 0 0 0.2 0.2  {}
-B 5 -22.5 37.5  -17.5 42.5 {name=B dir=inout }
-L 4 -20 40 0 40 {}
-T {B} 5 35 0 0 0.2 0.2  {}
-P 4 5 0 -10 180 -10 180 50 0 50 0 -10 {}
-T {@symname}  50 10.0  0 0 0.25 0.25 {}
-T {@name} 0 -25 0 0 0.2 0.2 {}
+L 4 40 20 40 5 {}
+L 4 70 0 80 0 {}
+L 4 10 0 0 0 {}
+L 4 28 7 52 7 {}
+L 4 64 0 70 0 {}
+L 4 10 0 16 0 {}
+L 4 16 0 19 6 {}
+L 4 19 6 25 -6 {}
+L 4 25 -6 31 6 {}
+L 4 31 6 37 -6 {}
+L 4 37 -6 43 6 {}
+L 4 43 6 49 -6 {}
+L 4 49 -6 55 6 {}
+L 4 55 6 61 -6 {}
+L 4 61 -6 64 0 {}
+T {@name} 10 -20 0 0 0.15 0.15 { vcenter=true}
+T {@symname} 10 -30 0 0 0.15 0.15 { vcenter=true}
+B 5 76 4 84 -4 {name=N dir=inout pinnumber=2}
+B 5 -4 4 4 -4 {name=P dir=inout pinnumber=1}
+B 5 36 24 44 16 {name=B dir=inout pinnumber=3}

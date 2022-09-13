@@ -148,7 +148,7 @@
         },
          { "name" : "RPPO8",
           "class" : "cIcCore::LayoutCell",
-           "leech" :"RPPO8",
+           "leech" :"RPPO2",
           "spice": [".subckt RPPO8 P N B",
                     "XA1 N P B RES8",
                     ".ends"

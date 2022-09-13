@@ -1,0 +1,43 @@
+{
+    "cells":
+    [
+        { "name" : "DCAPX1_CV" ,
+          "class" : "Gds::GdsPatternCapacitor",
+          "yoffset": -0.5,
+          "xoffset": -1.5,
+          "widthoffset" : -1,
+          "metalUnderMetalRes" : 0,
+          "meta" : {
+              "spice" : "C1 A B 78f",
+              "symbol" : "cic/cap"
+          },
+          "fillCoordinatesFromStrings" : [
+              ["M1",
+               "xxx--------------------------------xxx",
+               "xxx--------------------------------xxx",
+               "xxx---------XAXXXXXXXXXXXXXXXX-----xxx",
+               "xxx---------X----------------------xxx",
+               "xxx---XXXXXXX-XXXXXXXXXXXXXXXXXX---xxx",
+               "xxx---X------------------------X---xxx",
+               "xxx---XXXXXXXXXXXXXXXXXXXXrXXX-X---xxx",
+               "xxx---X------------------------X---xxx",
+               "xxx---X-XXXXXXXXXXXXXXXXXXXXXXXX---xxx",
+               "xxx---X------------------------X---xxx",
+               "xxx---XXXXXXXXXXXXXXXXXXXXXXXX-X---xxx",
+               "xxx---X------------------------X---xxx",
+               "xxx---X-XXrXXXXXXXXXXXXXXXXXXXXX---xxx",
+               "xxx---X------------------------X---xxx",
+               "xxx---XXXXXXXXXXXXXXXXXXXXX-XXXX---xxx",
+               "xxx-------------------------X------xxx",
+               "xxx----------------------XBXX------xxx",
+               "xxx--------------------------------xxx",
+               "xxx--------------------------------xxx"
+              ]
+          ],
+          "afterNew" : {
+              "copyLayers" : [["M2","M3"],["VIA1","VIA2"]]
+          }
+        }
+    ]
+
+}

@@ -56,10 +56,10 @@
         "M5_pin" : { "alias" : "","number" : 81, "datatype" : 237, "material" : "implant","fill":"fill","color" : "brown"},
         "M5_res" : { "alias" : "rm4","number" : 110, "datatype" : 15, "material" : "metalres"},
 
-        "VIA1" : { "alias" : "viali","number" : 35, "datatype" : -1, "material" : "cut", "previous" : "M1", "next" : "M2" },
-        "VIA2" : { "alias" : "v1","number" : 38, "datatype" : -1, "material" : "cut", "previous" : "M2", "next" : "M3" },
-        "VIA3" : { "alias" : "v2","number" : 40, "datatype" : -1, "material" : "cut", "previous" : "M3", "next" : "M4" },
-        "VIA4" : { "alias" : "v3","number" : 41, "datatype" : -1, "material" : "cut", "previous" : "M4", "next" : "M5" },
+        "VIA1" : { "alias" : "viali","number" : 35, "datatype" : -1, "material" : "cut", "previous" : "M1", "next" : "M2" ,"color" : "darkBlue","fill" : "fill"},
+        "VIA2" : { "alias" : "v1","number" : 38, "datatype" : -1, "material" : "cut", "previous" : "M2", "next" : "M3" ,"color" : "darkYellow","fill" : "fill"},
+        "VIA3" : { "alias" : "v2","number" : 40, "datatype" : -1, "material" : "cut", "previous" : "M3", "next" : "M4" ,"color" : "darkCyan","fill" : "fill"},
+        "VIA4" : { "alias" : "v3","number" : 41, "datatype" : -1, "material" : "cut", "previous" : "M4", "next" : "M5" ,"color" : "darkGreen","fill" : "fill"},
         "VIA5" : { "alias" : "v4","number" : 82, "datatype" : -1, "material" : "cut", "previous" : "M5", "next" : "M6" },
         "PR" : { "alias" : "","number" : 0, "datatype" : 20 ,"fill" : "nofill","color" : "red"},
 
@@ -93,19 +93,17 @@
                              "w" : { "name" : "width", "str" : ""}
                          }
                        },
-            "mresM1" : { "name" : "sky130_fd_pr__res_generic_m1",
+             "mresM1" : { "name" : "sky130_fd_pr__res_generic_l1",
                          "devicetype" : "R",
-                         "ports" : ["PLUS","MINUS"],
+                         "ports" : ["M","P"],
                          "propertymap" : {
-                             "l" : { "name" : "length", "str" : "u"},
-                             "w" : { "name" : "width", "str" : "u"}
+                             "l" : { "name" : "length", "str" : ""},
+                             "w" : { "name" : "width", "str" : ""}
                          }
-
-
                        },
-            "mresM2" : { "inherit" : "mresM1", "name" : "sky130_fd_pr__res_generic_m2"},
-            "mresM3" : { "inherit" : "mresM1", "name" : "sky130_fd_pr__res_generic_m3"},
-            "mresM4" : { "inherit" : "mresM1", "name" : "sky130_fd_pr__res_generic_m4"},
+            "mresM2" : { "inherit" : "mresM1", "name" : "sky130_fd_pr__res_generic_m1"},
+            "mresM3" : { "inherit" : "mresM1", "name" : "sky130_fd_pr__res_generic_m2"},
+            "mresM4" : { "inherit" : "mresM1", "name" : "sky130_fd_pr__res_generic_m3"},
             "nch_lvt" : { "name" : "sky130_fd_pr__nfet_01v8",    "ports" : ["D","G","S","B"],
                           "devicetype" : "XM",
                           "propertymap" : {
@@ -119,6 +117,7 @@
         },
         "symbol_lib" : "cpdk",
         "symbol_libs" : ["../../cpdk/design/cic",
+                         "../../cpdk/design/cic_wbulk",
                          "../../../externals/xschem_sky130/sky130_fd_pr"
                         ]
     },

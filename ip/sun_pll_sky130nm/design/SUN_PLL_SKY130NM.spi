@@ -14,6 +14,14 @@ XMM1 D G S B sky130_fd_pr__nfet_01v8  l=0.18  nf=1  w=1.08
 .ENDS
 
 *-------------------------------------------------------------
+* SUNTR_DCAPX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTR_DCAPX1_CV A B
+RR1 A NC0 sky130_fd_pr__res_generic_l1  l=0.36  w=0.44  
+RR2 B NC1 sky130_fd_pr__res_generic_l1  l=0.36  w=0.44  
+.ENDS
+
+*-------------------------------------------------------------
 * SUNTR_NCHDLCM <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
 .SUBCKT SUNTR_NCHDLCM D G S B
@@ -57,9 +65,9 @@ XM5 S G D B SUNTR_PCHDL
 .ENDS
 
 *-------------------------------------------------------------
-* SUNTR_RES100 <class 'cicpy.core.layoutcell.LayoutCell'>
+* SUNTR_RES8 <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
-.SUBCKT SUNTR_RES100 N P B
+.SUBCKT SUNTR_RES8 N P B
 XRR1_0 N INT_0 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
 XRR1_1 INT_0 INT_1 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
 XRR1_2 INT_1 INT_2 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
@@ -67,16 +75,14 @@ XRR1_3 INT_2 INT_3 B sky130_fd_pr__res_high_po  l=8.8  w=0.72
 XRR1_4 INT_3 INT_4 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
 XRR1_5 INT_4 INT_5 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
 XRR1_6 INT_5 INT_6 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
-XRR1_7 INT_6 INT_7 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
-XRR1_8 INT_7 INT_8 B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
-XRR1_9 INT_8 P B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
+XRR1_7 INT_6 P B sky130_fd_pr__res_high_po  l=8.8  w=0.72  
 .ENDS
 
 *-------------------------------------------------------------
-* SUNTR_RPPO_100k <class 'cicpy.core.layoutcell.LayoutCell'>
+* SUNTR_RPPO8 <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
-.SUBCKT SUNTR_RPPO_100k P N B
-XA1 N P B SUNTR_RES100
+.SUBCKT SUNTR_RPPO8 P N B
+XA1 N P B SUNTR_RES8
 .ENDS
 
 *-------------------------------------------------------------
@@ -93,28 +99,6 @@ XMP1 AVDD AVDD AVDD AVDD SUNTR_PCHDL
 .SUBCKT SUNTR_IVX1_CV A Y AVDD AVSS
 XMN0 Y A AVSS AVSS SUNTR_NCHDL
 XMP0 Y A AVDD AVDD SUNTR_PCHDL
-.ENDS
-
-*-------------------------------------------------------------
-* SUNTR_IVX8_CV <class 'cicpy.core.layoutcell.LayoutCell'>
-*-------------------------------------------------------------
-.SUBCKT SUNTR_IVX8_CV A Y AVDD AVSS
-XMN0 Y A AVSS AVSS SUNTR_NCHDL
-XMN1 AVSS A Y AVSS SUNTR_NCHDL
-XMN2 Y A AVSS AVSS SUNTR_NCHDL
-XMN3 AVSS A Y AVSS SUNTR_NCHDL
-XMN4 Y A AVSS AVSS SUNTR_NCHDL
-XMN5 AVSS A Y AVSS SUNTR_NCHDL
-XMN6 Y A AVSS AVSS SUNTR_NCHDL
-XMN7 AVSS A Y AVSS SUNTR_NCHDL
-XMP0 Y A AVDD AVDD SUNTR_PCHDL
-XMP1 AVDD A Y AVDD SUNTR_PCHDL
-XMP2 Y A AVDD AVDD SUNTR_PCHDL
-XMP3 AVDD A Y AVDD SUNTR_PCHDL
-XMP4 Y A AVDD AVDD SUNTR_PCHDL
-XMP5 AVDD A Y AVDD SUNTR_PCHDL
-XMP6 Y A AVDD AVDD SUNTR_PCHDL
-XMP7 AVDD A Y AVDD SUNTR_PCHDL
 .ENDS
 
 *-------------------------------------------------------------
@@ -320,11 +304,11 @@ xg0 N6 CK PWRUP_1V8 D5 N6 AVDD AVSS SUNTR_DFRNQNX1_CV
 * SUN_PLL_LPF <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
 .SUBCKT SUN_PLL_LPF VLPFZ AVSS VLPF
-xa10 VN5 VLPF AVSS SUNTR_RPPO_100k
-xa20 VN4 VN5 AVSS SUNTR_RPPO_100k
-xa30 VN3 VN4 AVSS SUNTR_RPPO_100k
-xa40 VN2 VN3 AVSS SUNTR_RPPO_100k
-xa50 VLPFZ VN2 AVSS SUNTR_RPPO_100k
+xa10 VN5 VLPF AVSS SUNTR_RPPO8
+xa20 VN4 VN5 AVSS SUNTR_RPPO8
+xa30 VN3 VN4 AVSS SUNTR_RPPO8
+xa40 VN2 VN3 AVSS SUNTR_RPPO8
+xa50 VLPFZ VN2 AVSS SUNTR_RPPO8
 xb10 VLPF AVSS CAP_LPF
 xb20 VLPF AVSS CAP_LPF
 xb21 VLPF AVSS CAP_LPF
@@ -352,6 +336,30 @@ xb320 VLPFZ AVSS CAP_LPF
 xb321 VLPFZ AVSS CAP_LPF
 xb322 VLPFZ AVSS CAP_LPF
 xb323 VLPFZ AVSS CAP_LPF
+xb324 VLPFZ AVSS CAP_LPF
+xb325 VLPFZ AVSS CAP_LPF
+xb326 VLPFZ AVSS CAP_LPF
+xb327 VLPFZ AVSS CAP_LPF
+xb328 VLPFZ AVSS CAP_LPF
+xb329 VLPFZ AVSS CAP_LPF
+xb330 VLPFZ AVSS CAP_LPF
+xb331 VLPFZ AVSS CAP_LPF
+xb332 VLPFZ AVSS CAP_LPF
+xb333 VLPFZ AVSS CAP_LPF
+xb334 VLPFZ AVSS CAP_LPF
+xb335 VLPFZ AVSS CAP_LPF
+xb336 VLPFZ AVSS CAP_LPF
+xb337 VLPFZ AVSS CAP_LPF
+xb338 VLPFZ AVSS CAP_LPF
+xb339 VLPFZ AVSS CAP_LPF
+xb340 VLPFZ AVSS CAP_LPF
+xb341 VLPFZ AVSS CAP_LPF
+xb342 VLPFZ AVSS CAP_LPF
+xb343 VLPFZ AVSS CAP_LPF
+xb344 VLPFZ AVSS CAP_LPF
+xb345 VLPFZ AVSS CAP_LPF
+xb346 VLPFZ AVSS CAP_LPF
+xb347 VLPFZ AVSS CAP_LPF
 .ENDS
 
 *-------------------------------------------------------------
@@ -375,13 +383,13 @@ xc2b0 YN Y net1 AVDD SUNTR_PCHDL
 xa1a0 AVDD AVSS SUNTR_TAPCELLB_CV
 xa1b0 PWRUP_1V8 PWRUP_1V8_N AVDD AVSS SUNTR_IVX1_CV
 xa1c0 PWRUP_1V8_N N1 AVDD AVSS SUNTR_IVX1_CV
-xa1d0 N1 __UNCONNECTED_PIN__1 AVDD AVSS SUNTR_IVX8_CV
+xa1capd0 AVSS N1 SUNTR_DCAPX1_CV
 xa20 N1 N2 AVDD AVSS SUNTR_IVX1_CV
 xa3a0 N2 N3 AVDD AVSS SUNTR_IVX1_CV
-xa3b0 N3 __UNCONNECTED_PIN__2 AVDD AVSS SUNTR_IVX8_CV
+xa3capb0 AVSS N3 SUNTR_DCAPX1_CV
 xa40 N3 N4 AVDD AVSS SUNTR_IVX1_CV
 xa5a0 N4 N5 AVDD AVSS SUNTR_IVX1_CV
-xa5b0 N5 __UNCONNECTED_PIN__3 AVDD AVSS SUNTR_IVX8_CV
+xa5capb0 AVSS N5 SUNTR_DCAPX1_CV
 xa60 N5 N6 AVDD AVSS SUNTR_IVX1_CV
 xa70 N6 N7 AVDD AVSS SUNTR_IVX1_CV
 xa80 PWRUP_1V8_N N7 KICK AVDD AVSS SUNTR_NRX1_CV
@@ -429,7 +437,7 @@ xb1 AVDD VDD_ROSC VLPF VDD_ROSC IBPSR_1U AVSS SUN_PLL_BUF
 xb2 VLPFZ AVSS VLPF SUN_PLL_LPF
 xc1 AVDD CK_FB CK PWRUP_1V8 AVSS SUN_PLL_DIVN
 xd1 AVDD CK VDD_ROSC PWRUP_1V8 AVSS SUN_PLL_ROSC
-xk1 AVDD KICK __UNCONNECTED_PIN__0 PWRUP_1V8 AVSS PWRUP_1V8_N SUN_PLL_KICK
+xk1 AVDD KICK net1 PWRUP_1V8 AVSS PWRUP_1V8_N SUN_PLL_KICK
 xk2 AVDD CP_UP_N VLPF CP_DOWN IBPSR_1U AVSS VLPFZ PWRUP_1V8 KICK SUN_PLL_CP
 xk3 AVDD CP_UP_N CK_REF CP_DOWN CK_FB AVSS SUN_PLL_PFD
 xl1 IBPSR_1U PWRUP_1V8_N AVSS SUN_PLL_BIAS

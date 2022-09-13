@@ -1,12 +1,12 @@
 
 #- Loosely based on the sky130A default xschemr
 
-set CAD_PATH $env(HOME)/cad/share/pdk/sky130A/libs.tech/xschem
+#set CAD_PATH $env(HOME)/cad/share/pdk/sky130A/libs.tech/xschem
 
 #### Flush any previous definition
 set XSCHEM_LIBRARY_PATH {}
 append XSCHEM_LIBRARY_PATH ${XSCHEM_SHAREDIR}/xschem_library
-append XSCHEM_LIBRARY_PATH :${CAD_PATH}
+#append XSCHEM_LIBRARY_PATH :${CAD_PATH}
 append XSCHEM_LIBRARY_PATH :$USER_CONF_DIR/xschem_library
 
 ###########################################################################
@@ -171,17 +171,18 @@ if {[info exists PDK_ROOT]} {
 # This overrides some of the variables set above.
 
 set XSCHEM_START_WINDOW ${PDK_ROOT}/${PDK}/libs.tech/xschem/sky130_tests/top.sch
-append XSCHEM_LIBRARY_PATH :${PDK_ROOT}/${PDK}/libs.tech/xschem
+#append XSCHEM_LIBRARY_PATH :${PDK_ROOT}/${PDK}/libs.tech/xschem
 
 #----------------------------------------------------------------------------------------
 # Libraries to include
 #----------------------------------------------------------------------------------------
-
+append XSCHEM_LIBRARY_PATH :../../../externals/xschem_sky130/
 append XSCHEM_LIBRARY_PATH :../../sun_tr_sky130nm/design
 append XSCHEM_LIBRARY_PATH :../../sun_trb_sky130nm/design
 append XSCHEM_LIBRARY_PATH :../../sun_sar9b_sky130nm/design
 append XSCHEM_LIBRARY_PATH :../../cpdk/design
 append XSCHEM_LIBRARY_PATH :../design
+
 
 
 ###########################################################################

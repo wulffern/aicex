@@ -321,6 +321,7 @@
             },
             "boundaryIgnoreRouting" : 0,
             "composite" : 1,
+            "noPowerRoute": 1,
              "afterPlace"  : [
                 {"addRouteRings" :[
                     ["M1","AVSS","tbrl",4,2],
@@ -330,22 +331,24 @@
                 {"addPowerRings" :[
 
                 ]}
-
             ],
             "beforeRoute" :{
                 "addDirectedRoutes" : [
+                    ["M4","AVSS","x:AVSS||rail_b_AVSS","routeWidth=wide_width"],
+                    ["M4","AVSS","xa.?cap:A||rail_b_AVSS","noendcut,routeWidth=wide_width"],
+                    ["M4","AVDD","x:AVDD||rail_t_AVDD","routeWidth=wide_width"]
                 ],
 
                 "addConnectivityRoutes" : [
-                    ["M1","N[0-6]","--|-","onTopB,offsethigh","","IVX"],
+                    ["M2","N[0-6]","--|-","onTopB,offsethigh","",""],
                     ["M1","N7","--|-","onTopB,offsethigh","",""],
                     ["M2","^KICK$","-|--","","",""],
                     ["M2","^N0$","|-","","",""],
                     ["M2","^PWRUP_1V8_N$","|-","","",""]
                 ],
                 "addRouteConnections" : [
-				    ["AVSS","xa1","bottom","M4","nostartcut,onTopT,routeWidth=wide_width"],
-                    ["AVDD","xa1","bottom","M4","nostartcut,onTopT,routeWidth=wide_width"]
+				    //["AVSS","xa1","bottom","M4","onTopT,routeWidth=wide_width"],
+                    //["AVDD","xa1","bottom","M4","onTopT,routeWidth=wide_width"]
                 ]
             },
             "afterRoute"  : {
@@ -362,6 +365,7 @@
                 "noSchematic" : true
             },
             "boundaryIgnoreRouting" : 0,
+            "noPowerRoute" : 1,
             "composite" : 1,
              "afterPlace"  : [
                 {"addRouteRings" :[
@@ -376,6 +380,8 @@
             ],
             "beforeRoute" :{
                 "addDirectedRoutes" : [
+                    ["M4","AVSS","x:AVSS||rail_b_AVSS","routeWidth=wide_width"],
+                    ["M4","AVDD","x:AVDD||rail_t_AVDD","routeWidth=wide_width"]
                 ],
 
                 "addConnectivityRoutes" : [
@@ -386,8 +392,8 @@
 
                 ],
                 "addRouteConnections" : [
-				    ["AVSS","xa1","bottom","M4","nostartcut,onTopT,routeWidth=wide_width"],
-                    ["AVDD","xa1","bottom","M4","nostartcut,onTopT,routeWidth=wide_width"]
+				    //["AVSS","xa1","bottom","M4","nostartcut,onTopT,routeWidth=wide_width"],
+                    //["AVDD","xa1","bottom","M4","nostartcut,onTopT,routeWidth=wide_width"]
                 ]
             },
             "afterRoute"  : {

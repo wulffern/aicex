@@ -40,6 +40,14 @@ input logic D;
 endmodule
 
 //-------------------------------------------------------------
+// SUNTR_DCAPX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module SUNTR_DCAPX1_CV(A,B);
+input logic B;
+input logic A;
+endmodule
+
+//-------------------------------------------------------------
 // SUNTR_NCHDLCM <class 'cicpy.core.layoutcell.LayoutCell'>
 //-------------------------------------------------------------
 module SUNTR_NCHDLCM(D,G,S,B);
@@ -206,6 +214,7 @@ endmodule
 // SUNTR_RPPO8 <class 'cicpy.core.layoutcell.LayoutCell'>
 //-------------------------------------------------------------
 module SUNTR_RPPO8(P,N,B);
+input logic B;
 input logic P;
 input logic N;
 SUNTR_RES8 XA1 (N,P,B);

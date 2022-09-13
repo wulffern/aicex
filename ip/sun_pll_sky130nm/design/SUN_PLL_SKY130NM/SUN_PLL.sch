@@ -130,7 +130,9 @@ lab=AVSS}
 N -260 300 -260 390 {
 lab=AVSS}
 N -480 260 -470 260 {
-lab=KICK}
+lab=PWRUP_1V8_N}
+N -480 240 -470 240 {
+lab=#net1}
 C {cborder/border_s.sym} 250 290 0 0 {user="Carsten Wulff" company="Carsten Wulff Software"}
 C {devices/ipin.sym} -870 -420 0 0 {name=p1 lab=AVDD}
 C {devices/ipin.sym} -850 390 0 0 {name=p2 lab=AVSS}

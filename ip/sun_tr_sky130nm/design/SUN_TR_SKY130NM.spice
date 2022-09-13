@@ -28,6 +28,13 @@ XMM1 D G S B sky130_fd_pr__nfet_01v8  l=0.18  nf=1  w=1.08
 .ENDS
 
 *-------------------------------------------------------------
+* SUNTR_DCAPX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTR_DCAPX1_CV A B
+C1 A B 78f
+.ENDS
+
+*-------------------------------------------------------------
 * SUNTR_NCHDLCM <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
 .SUBCKT SUNTR_NCHDLCM D G S B
