@@ -17,3 +17,8 @@ PREFIX=SUNTRB_
 
 #- Provide cells you want to check for the lvsall drcall commands
 CELLS = DFRNQNX1_CV
+
+test:
+	make ip
+	make drcall
+	make lvsall

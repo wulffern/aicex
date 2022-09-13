@@ -21,4 +21,10 @@ CICEXCLUDE="^(${PREFIX}SUNTRB?_|${PREFIX}SUNSAR_)"
 CICVIEWS = --spice --verilog --magic --xschem
 
 #- Provide cells you want to check for the lvsall drcall commands
-CELLS = SUN_PLL_BIAS SUN_PLL_CP SUN_PLL_DIVN SUN_PLL_KICK SUN_PLL_LPF SUN_PLL_PFD SUN_PLL_ROSC SUN_PLL
+CELLS = SUN_PLL_BIAS SUN_PLL_CP SUN_PLL_DIVN SUN_PLL_KICK SUN_PLL_LPF SUN_PLL_PFD SUN_PLL_ROSC
+
+
+test:
+	make spi ip CELL=SUN_PLL
+	make drcall
+	make lvsall
