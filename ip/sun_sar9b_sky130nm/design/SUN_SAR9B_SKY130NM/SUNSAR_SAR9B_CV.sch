@@ -1,4 +1,4 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2 }
 G {}
 K {}
 V {}
@@ -12,6 +12,7 @@ Switches} 380 40 0 0 1 1 {}
 T {Comparator} 1220 480 0 0 1 1 {}
 T {CDAC} 930 -210 0 0 1 1 {}
 T {9-bit successive approximation analog-to-digital converter} 130 -370 0 0 1.5 1.5 {}
+T {CDAC} 925 825 0 0 1 1 {}
 N 520 480 540 480 {lab=SAR_IP}
 N 520 510 540 510 {lab=CK_SAMPLE_BSSW}
 N 520 530 540 530 {lab=NCCA}

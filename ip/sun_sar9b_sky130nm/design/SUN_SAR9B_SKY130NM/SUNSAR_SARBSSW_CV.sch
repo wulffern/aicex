@@ -1,10 +1,15 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2 }
 G {}
 K {}
 V {}
 S {}
 E {}
 T {Bootstrapped switch} 420 -50 0 0 1 1 {}
+T {Floating cap, and switch to VI} 1030 385 0 0 0.4 0.4 {}
+T {Main switch} 475 245 0 0 0.4 0.4 {}
+T {Dummy switch. Main purpose is to provide a differential path of similar parasitic capacitance
+to the CDAC top plates such that a dV/dt on VI does not lead to a voltage change across the 
+differential CDAC} 200 765 0 0 0.4 0.4 {}
 N 210 400 210 420 {lab=VI}
 N 240 340 240 360 {lab=GN}
 N 270 400 270 420 {lab=VO1}
@@ -74,8 +79,8 @@ N 770 60 790 60 {lab=AVDD}
 N 770 140 790 140 {lab=AVSS}
 N 1260 90 1280 90 {lab=AVDD}
 N 1260 130 1280 130 {lab=AVSS}
-N 100 230 120 230 {lab=GNG}
-N 100 300 120 300 {lab=VS}
+N 1275 265 1295 265 {lab=GNG}
+N 1275 335 1295 335 {lab=VS}
 C {devices/iopin.sym} 0 0 0 0 {name=p0 lab=VI}
 C {devices/iopin.sym} 0 20 0 0 {name=p1 lab=CK}
 C {devices/iopin.sym} 0 40 0 0 {name=p2 lab=CKN}
@@ -169,7 +174,7 @@ C {devices/lab_pin.sym} 770 140 0 0 {name=l66 sig_type=std_logic lab=AVSS }
 C {SUN_SAR9B_SKY130NM/SUNSAR_TAPCELLB_CV.sym} 1260 110 0 0 {name=XXA5}
 C {devices/lab_pin.sym} 1280 90 2 0 {name=l67 sig_type=std_logic lab=AVDD }
 C {devices/lab_pin.sym} 1280 130 2 0 {name=l68 sig_type=std_logic lab=AVSS }
-C {SUN_SAR9B_SKY130NM/SUNSAR_CAP_BSSW5_CV.sym} 120 270 0 0 {name=XXCAPB1}
-C {devices/lab_pin.sym} 100 230 0 0 {name=l69 sig_type=std_logic lab=GNG }
-C {devices/lab_pin.sym} 100 300 0 0 {name=l70 sig_type=std_logic lab=VS }
-C {cborder/border_s.sym} 1140 800 0 0 {}
+C {SUN_SAR9B_SKY130NM/SUNSAR_CAP_BSSW5_CV.sym} 1295 305 0 0 {name=XXCAPB1}
+C {devices/lab_pin.sym} 1275 265 0 0 {name=l69 sig_type=std_logic lab=GNG }
+C {devices/lab_pin.sym} 1275 335 0 0 {name=l70 sig_type=std_logic lab=VS }
+C {cborder/border_s.sym} 1140 800 0 0 {user="Carsten Wulff" company="Carsten Wulff Software"}

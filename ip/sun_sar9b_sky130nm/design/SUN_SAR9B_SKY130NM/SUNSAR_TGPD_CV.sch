@@ -1,9 +1,10 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2 }
 G {}
 K {}
 V {}
 S {}
 E {}
+T {Transmission gate with pull down} 365 -150 0 0 0.4 0.4 {}
 N 330 270 350 270 {lab=AVSS}
 N 270 240 290 240 {lab=C}
 N 330 210 350 210 {lab=CN}
@@ -65,3 +66,4 @@ C {devices/lab_pin.sym} 490 110 3 0 {name=l20 sig_type=std_logic lab=A }
 C {devices/lab_pin.sym} 520 30 1 0 {name=l21 sig_type=std_logic lab=C }
 C {devices/lab_pin.sym} 550 110 3 0 {name=l22 sig_type=std_logic lab=B }
 C {devices/lab_pin.sym} 520 110 3 0 {name=l23 sig_type=std_logic lab=BULKP }
+C {cborder/border_s.sym} 790 430 0 0 {user="Carsten Wulff" company="Carsten Wulff Software"}
