@@ -42,7 +42,13 @@ ECHO=echo
 endif
 
 ifeq ($(UNAME_S),Linux)
+
+#- Seems to be a difference between centos and ubuntu here. Ubuntu does not like echo -e
+ifeq ($(shell lsb_release -si),Ubuntu)
+ECHO=echo
+else
 ECHO=echo -e
+endif
 endif
 
 #----------------------------------------------------------------------------
@@ -65,9 +71,15 @@ CIC=../../../tools/ciccreator/bin/cic
 CICGUI=../../../tools/ciccreator/bin/cic-gui
 CICPY=python3 ../../../tools/cicpy/cicpy/cic.py
 else
+ifeq ($(UNAME_S),Linux)
+CIC=cic
+CICGUI=cic-gui
+CICPY=cicpy
+else
 CIC=${HOME}/pro/cic/ciccreator/bin/cic
 CICGUI=${HOME}/pro/cic/ciccreator/bin/cic-gui
 CICPY = python3 ${HOME}/pro/cicpy/cicpy/cic.py
+endif
 endif
 
 CICVIEWS =  --spice --verilog --xschem --magic
@@ -99,14 +111,14 @@ cdlh:
 lvs:
 	@test -d lvs || mkdir lvs
 	@netgen -batch lvs "cdl/${PRCELL}.spi ${PRCELL}"  "${BUILD}/${LIB}.spi ${PRCELL}" ${PDKPATH}/libs.tech/netgen/sky130A_setup.tcl lvs/${PRCELL}_lvs.log > lvs/${PRCELL}_netgen_lvs.log
-	@tail -n 1 lvs/${PRCELL}_lvs.log|perl -ne "use Term::ANSIColor;print(sprintf(\"%-40s\t[ \",${PRCELL}));if(m/match uniquely/ig){print(color('green').'LVS OK  '.color('reset'));}else{print(color('red').'LVS FAIL'.color('reset'));};print(\" ]\n\");"
+	@tail -n 2 lvs/${PRCELL}_lvs.log| perl -ne "if(m/Final result/ig){print;}"|perl -ne "use Term::ANSIColor;print(sprintf(\"%-40s\t[ \",${PRCELL}));if(m/match uniquely/ig){print(color('green').'LVS OK  '.color('reset'));}else{print(color('red').'LVS FAIL'.color('reset'));};print(\" ]\n\");"
 
 #- Run DRC
 drc:
 	@test -d drc || mkdir drc
 	@${ECHO} "load ${NCELL}.mag\nlogcommands drc/${PRCELL}_drc.log\nset b [view bbox]\nbox values [lindex \$$b 0] [lindex \$$b 1] [lindex \$$b 2] [lindex \$$b 3]\ndrc catchup\ndrc why\ndrc count total\nquit\n" > drc/${PRCELL}_drc.tcl
-	@magic -noconsole -dnull drc/${PRCELL}_drc.tcl  > drc/${PRCELL}_drc.log 2>&1
-	@tail -n 1 drc/${PRCELL}_drc.log|perl -ne "\$$exit = 0;use Term::ANSIColor;print(sprintf(\"%-40s\t[ \",${PRCELL}));if(m/:\s+0\n/ig){print(color('green').'DRC OK  '.color('reset'));}else{print(color('red').'DRC FAIL'.color('reset'));\$$exit = 1;};print(\" ]\n\");exit \$$exit;" || tail -n 10 drc/${PRCELL}_drc.log
+	@magic -noconsole -dnull drc/${PRCELL}_drc.tcl > drc/${PRCELL}_drc.log
+	@tail -n 1 drc/${PRCELL}_drc.log| perl -ne "if(m/Final result:/){print $$_}"|perl -ne "\$$exit = 0;use Term::ANSIColor;print(sprintf(\"%-40s\t[ \",${PRCELL}));if(m/:\s+0\n/ig){print(color('green').'DRC OK  '.color('reset'));}else{print(color('red').'DRC FAIL'.color('reset'));\$$exit = 1;};print(\" ]\n\");exit \$$exit;" || tail -n 10 drc/${PRCELL}_drc.log
 
 #- Run parasitic extraction
 lpe:
