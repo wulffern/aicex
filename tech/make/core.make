@@ -117,8 +117,8 @@ lvs:
 drc:
 	@test -d drc || mkdir drc
 	@${ECHO} "load ${NCELL}.mag\nlogcommands drc/${PRCELL}_drc.log\nset b [view bbox]\nbox values [lindex \$$b 0] [lindex \$$b 1] [lindex \$$b 2] [lindex \$$b 3]\ndrc catchup\ndrc why\ndrc count total\nquit\n" > drc/${PRCELL}_drc.tcl
-	@magic -noconsole -dnull drc/${PRCELL}_drc.tcl > drc/${PRCELL}_drc.log
-	@tail -n 1 drc/${PRCELL}_drc.log| perl -ne "if(m/Final result:/){print $$_}"|perl -ne "\$$exit = 0;use Term::ANSIColor;print(sprintf(\"%-40s\t[ \",${PRCELL}));if(m/:\s+0\n/ig){print(color('green').'DRC OK  '.color('reset'));}else{print(color('red').'DRC FAIL'.color('reset'));\$$exit = 1;};print(\" ]\n\");exit \$$exit;" || tail -n 10 drc/${PRCELL}_drc.log
+	@magic -noconsole -dnull drc/${PRCELL}_drc.tcl > drc/${PRCELL}_drc.log 2>&1
+	@tail -n 1 drc/${PRCELL}_drc.log| perl -ne "\$$exit = 0;use Term::ANSIColor;print(sprintf(\"%-40s\t[ \",${PRCELL}));if(m/:\s+0\n/ig){print(color('green').'DRC OK  '.color('reset'));}else{print(color('red').'DRC FAIL'.color('reset'));\$$exit = 1;};print(\" ]\n\");exit \$$exit;" || tail -n 10 drc/${PRCELL}_drc.log
 
 #- Run parasitic extraction
 lpe:
