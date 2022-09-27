@@ -17,21 +17,38 @@ jobs:
         uses: actions/checkout@main
         with:
           submodules: true
-      - name: eda
-        uses: actions/checkout@main
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
         with:
-          repository: wulffern/eda
-          path: eda
-      - name: cicsim
-        uses: actions/checkout@master
-        with:
-          repository: wulffern/cicsim
-          path: cicsim
-      - name: Install cicsim
+          python-version: 3.9
+      #- name: eda
+      #  uses: actions/checkout@main
+        #with:
+        #  repository: wulffern/eda
+        #  path: eda
+      #- name: cicsim
+      #  uses: actions/checkout@master
+        #with:
+        #  repository: wulffern/cicsim
+        #  path: cicsim
+      - name: Install eda
         run: |
+          #- Get cicpy
+          git clone https://github.com/wulffern/cicpy.git
+          cd cicpy
+          git pull
+          python3 -m pip install --user -e .
+          cd ..
+          #- Get cicsim
+          git clone https://github.com/wulffern/cicsim.git
           cd cicsim
-          pip3 install  -r requirements.txt
-          pip3 install   .
+          git pull
+          python3 -m pip install -r requirements.txt --user
+          python3 -m pip install --user -e .
+          cd ..
+          #- Get EDA
+          git clone https://github.com/wulffern/eda
+
       - name: Run test
         run:  |
           git submodule init

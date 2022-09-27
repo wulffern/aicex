@@ -67,9 +67,9 @@ CICEXCLUDE?=""
 
 CICDIR=${HOME}/pro/cic/ciccreator
 ifeq ("$(wildcard $(CICDIR))","")
-CIC=../../../tools/ciccreator/bin/cic
-CICGUI=../../../tools/ciccreator/bin/cic-gui
-CICPY=python3 ../../../tools/cicpy/cicpy/cic.py
+CIC=cic
+CICGUI=cic-gui
+CICPY=cicpy
 else
 ifeq ($(UNAME_S),Linux)
 CIC=cic
