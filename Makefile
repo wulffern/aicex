@@ -3,7 +3,7 @@
 
 #- Compile is not perfect yet on ubuntu
 dirs = 	ip/sun_tr_sky130nm/work \
-#	ip/sun_trb_sky130nm/work \
+	ip/sun_trb_sky130nm/work \
 	ip/sun_sar9b_sky130nm/work \
 	ip/sun_pll_sky130nm/work \
 
