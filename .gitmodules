@@ -6,3 +6,6 @@
 	url = https://github.com/wulffern/xschem_sky130
 [submodule "externals/xschem_sky130/"]
 	branch = main
+[submodule "externals/sky130A"]
+	path = externals/sky130A
+	url = https://github.com/wulffern/sky130A.git

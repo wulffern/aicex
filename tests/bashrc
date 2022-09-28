@@ -1,0 +1,5 @@
+
+
+#- Setup PDK
+
+export PDK_ROOT=${PWD}/externals/
