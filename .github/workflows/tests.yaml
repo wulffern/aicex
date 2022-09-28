@@ -19,7 +19,7 @@ jobs:
           submodules: true
       - name: Install eda
         run: |
-          source tests/install_ubuntu.sh
+          sudo source tests/install_ubuntu.sh
           source tests/install_cicsim.sh
           source tests/install_cicpy.sh
       - name: Run test
