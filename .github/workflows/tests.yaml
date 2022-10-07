@@ -17,26 +17,11 @@ jobs:
         uses: actions/checkout@main
         with:
           submodules: true
-      - name: eda
-        uses: actions/checkout@main
-        with:
-          repository: wulffern/eda
-          path: eda
-      - name: cicsim
-        uses: actions/checkout@master
-        with:
-          repository: wulffern/cicsim
-          path: cicsim
-      - name: Install cicsim
+      - name: Install eda
         run: |
-          cd cicsim
-          pip3 install  -r requirements.txt
-          pip3 install   .
+          source tests/install_ubuntu.sh
+          source tests/install_cicsim.sh
+          source tests/install_cicpy.sh
       - name: Run test
         run:  |
-          git submodule init
-          git submodule update
-          echo "eda/bin" >> $GITHUB_PATH
-          export PATH=`pwd`/eda/bin:$PATH
-          echo $HOME
-          make test
+          source tests/run_tests.sh

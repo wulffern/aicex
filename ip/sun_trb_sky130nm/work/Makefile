@@ -10,7 +10,6 @@
 # -----------------------------------------------------------
 include ../../../tech/make/core.make
 
-PREFIX=
 LIB=SUN_TRB_SKY130NM
 CELL=DFRNQNX1_CV
 PREFIX=SUNTRB_
