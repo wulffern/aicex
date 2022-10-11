@@ -1,0 +1,12 @@
+
+.lib Vt
+.param vdda=1.8 vdde = 3.0 vddh = 12
+.endl
+
+.lib Vl
+.param vdda=1.7 vdde = 2.4 vddh = 10.8
+.endl
+
+.lib Vh
+.param vdda=1.9 vdde = 3.6 vddh = 13.2
+.endl

@@ -1,0 +1,86 @@
+
+simulator: ngspice
+
+corner:
+  Gt: |
+    .lib "../../../tech/ngspice/common.spi" Gt
+
+# Mosfet corners
+  Mtt: |
+    .lib "../../../tech/ngspice/mos.spi" Mtt
+  Mff: |
+    .lib "../../../tech/ngspice/mos.spi" Mff
+  Mss: |
+    .lib "../../../tech/ngspice/mos.spi" Mss
+  Mfs: |
+    .lib "../../../tech/ngspice/mos.spi" Mfs
+  Msf: |
+    .lib "../../../tech/ngspice/mos.spi" Msf
+
+#Resistor corners
+  Rt: |
+    .lib "../../../tech/ngspice/res.spi" Rt
+  Rl: |
+    .lib "../../../tech/ngspice/res.spi" Rl
+  Rh: |
+    .lib "../../../tech/ngspice/res.spi" Rh
+
+#Capacitor corners
+  Ct: |
+    .lib "../../../tech/ngspice/cap.spi" Ct
+  Cl: |
+    .lib "../../../tech/ngspice/cap.spi" Cl
+  Ch: |
+    .lib "../../../tech/ngspice/cap.spi" Ch
+
+# Temperature corners
+  Tt: |
+    .lib "../../../tech/ngspice/temperature.spi" Tt
+  Tl: |
+    .lib "../../../tech/ngspice/temperature.spi" Tl
+  Th: |
+    .lib "../../../tech/ngspice/temperature.spi" Th
+
+# Voltage corners
+  Vt: |
+    .lib "../../../tech/ngspice/supply.spi" Vt
+  Vl: |
+    .lib "../../../tech/ngspice/supply.spi" Vl
+  Vh: |
+    .lib "../../../tech/ngspice/supply.spi" Vh
+
+#diode corners
+  Dt: |
+    .lib "../../../tech/ngspice/diode.spi" Dt
+  Df: |
+    .lib "../../../tech/ngspice/diode.spi" Df
+  Ds: |
+    .lib "../../../tech/ngspice/diode.spi" Ds
+
+#Bipolar corners
+  Bt: |
+    .lib "../../../tech/ngspice/bjt.spi" Bt
+  Bf: |
+    .lib "../../../tech/ngspice/bjt.spi" Bf
+  Bs: |
+    .lib "../../../tech/ngspice/bjt.spi" Bs
+
+#- All corners
+  Att: |
+    .lib  "../../../models/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" tt
+  Asf: |
+    .lib  "../../../models/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" sf
+  Afs: |
+    .lib  "../../../models/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" fs
+  Aff: |
+    .lib  "../../../models/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" ff
+  Ass: |
+    .lib  "../../../models/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" ss
+  All: |
+    .lib  "../../../models/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" ll
+  Ahh: |
+    .lib  "../../../models/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" hh
+  Ahl: |
+    .lib  "../../../models/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" hl
+  Alh: |
+    .lib  "../../../models/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" lh
