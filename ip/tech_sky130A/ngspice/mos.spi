@@ -3,24 +3,24 @@
 .lib Mtt
 *--------------------------------------------------
 
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8/sky130_fd_pr__nfet_01v8__tt.corner.spice"
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8/sky130_fd_pr__nfet_01v8__tt.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
 
 
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__tt.corner.spice"
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__mismatch.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__tt.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__mismatch.corner.spice"
 
 
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8/sky130_fd_pr__pfet_01v8__tt.corner.spice"
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8/sky130_fd_pr__pfet_01v8__tt.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
 
 
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__tt.corner.spice"
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__mismatch.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__tt.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__mismatch.corner.spice"
 
 
 
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/models/all.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/models/all.spice"
 .endl
 * end Mtt
 
@@ -30,24 +30,24 @@
 .lib Mff
 *--------------------------------------------------
 
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8/sky130_fd_pr__nfet_01v8__ff.corner.spice"
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8/sky130_fd_pr__nfet_01v8__ff.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
 
 
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__ff.corner.spice"
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__mismatch.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__ff.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__mismatch.corner.spice"
 
 
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8/sky130_fd_pr__pfet_01v8__ff.corner.spice"
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8/sky130_fd_pr__pfet_01v8__ff.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
 
 
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__ff.corner.spice"
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__mismatch.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__ff.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__mismatch.corner.spice"
 
 
 
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/models/all.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/models/all.spice"
 .endl
 * end Mff
 
@@ -57,24 +57,24 @@
 .lib Msf
 *--------------------------------------------------
 
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8/sky130_fd_pr__nfet_01v8__sf.corner.spice"
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8/sky130_fd_pr__nfet_01v8__sf.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
 
 
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__sf.corner.spice"
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__mismatch.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__sf.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__mismatch.corner.spice"
 
 
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8/sky130_fd_pr__pfet_01v8__sf.corner.spice"
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8/sky130_fd_pr__pfet_01v8__sf.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
 
 
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__sf.corner.spice"
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__mismatch.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__sf.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__mismatch.corner.spice"
 
 
 
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/models/all.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/models/all.spice"
 .endl
 * end Msf
 
@@ -84,24 +84,24 @@
 .lib Mfs
 *--------------------------------------------------
 
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8/sky130_fd_pr__nfet_01v8__fs.corner.spice"
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8/sky130_fd_pr__nfet_01v8__fs.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
 
 
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__fs.corner.spice"
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__mismatch.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__fs.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__mismatch.corner.spice"
 
 
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8/sky130_fd_pr__pfet_01v8__fs.corner.spice"
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8/sky130_fd_pr__pfet_01v8__fs.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
 
 
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__fs.corner.spice"
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__mismatch.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__fs.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__mismatch.corner.spice"
 
 
 
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/models/all.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/models/all.spice"
 .endl
 * end Mfs
 
@@ -111,24 +111,24 @@
 .lib Mss
 *--------------------------------------------------
 
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8/sky130_fd_pr__nfet_01v8__ss.corner.spice"
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8/sky130_fd_pr__nfet_01v8__ss.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
 
 
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__ss.corner.spice"
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__mismatch.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__ss.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__mismatch.corner.spice"
 
 
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8/sky130_fd_pr__pfet_01v8__ss.corner.spice"
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8/sky130_fd_pr__pfet_01v8__ss.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
 
 
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__ss.corner.spice"
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__mismatch.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__ss.corner.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__mismatch.corner.spice"
 
 
 
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/models/all.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/models/all.spice"
 .endl
 * end Mss
 

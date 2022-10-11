@@ -1,11 +1,11 @@
 
 .lib Rt
 
-*.include "../../../models/skywater-pdk-libs-sky130_fd_pr/models/r+c/res_typical__cap_typical.spice"
-*.include "../../../models/skywater-pdk-libs-sky130_fd_pr/models/r+c/res_typical__cap_typical__lin.spice"
+*.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/models/r+c/res_typical__cap_typical.spice"
+*.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/models/r+c/res_typical__cap_typical__lin.spice"
 
-*.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/res_xhigh_po/sky130_fd_pr__res_xhigh_po.model.spice"
-*.include "../../../models/skywater-pdk-libs-sky130_fd_pr/cells/res_high_po/sky130_fd_pr__res_high_po.model.spice"
+*.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/res_xhigh_po/sky130_fd_pr__res_xhigh_po.model.spice"
+*.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/res_high_po/sky130_fd_pr__res_high_po.model.spice"
 
 
 

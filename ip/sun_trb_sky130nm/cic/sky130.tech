@@ -104,7 +104,7 @@
         },
         "symbol_lib" : "cpdk",
         "symbol_libs" : ["../../cpdk/design/cic_wbulk",
-                         "../../../externals/xschem_sky130/sky130_fd_pr"
+                         "../tech/external/xschem_sky130/sky130_fd_pr"
                         ]
     },
     "rules" : {

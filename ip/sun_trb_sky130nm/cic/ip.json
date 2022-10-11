@@ -217,6 +217,35 @@
               "addPortOnRects" : [ ["A", "M1","MN0:G"], ["CN", "M1"], ["C", "M1"], ["RN","M1","MN2:G" ],["Y","M1","MN1:D"], ["BULKP","M1","MP0:B"], ["BULKN","M1","MN0:B"]]
           }
         },
+                { "name": "TAPCELLB_CV",
+          "class" : "Layout::LayoutDigitalCell",
+          "boundaryIgnoreRouting" : 1,
+          "beforeRoute" : {
+              "addDirectedRoutes" : [ ["M1","BULKN","MN1:B->MN1:G"],
+                                      ["M1","BULKN","MN1:G-|--MN1:S"],
+                                      ["M1","BULKN","MN1:G-|--MN1:D"],
+                                      ["M1","BULKP","MP:S-|--MP:G"],
+                                      ["M1","BULKP","MP:D-|--MP:G"],
+                                      ["M1","BULKP","MP:G->MP:B"]
+                                    ]
+
+          }
+
+        },
+        { "name": "TAPCELLBAVSS_CV",
+          "class" : "Layout::LayoutDigitalCell",
+          "boundaryIgnoreRouting" : 1,
+          "beforeRoute" : {
+              "addDirectedRoutes" : [ ["M1","BULKN","MN1:B->MN1:G"],
+                                      ["M1","BULKN","MN1:G-|--MN1:S"],
+                                      ["M1","BULKN","MN1:G-|--MN1:D"],
+                                      ["M1","BULKP","MP:S-|--MP:G"],
+                                      ["M1","BULKP","MP:D-|--MP:G"]
+                                    ]
+
+          }
+
+        },
 
         { "name": "DFRNQNX1_CV",
           "class" : "Layout::LayoutDigitalCell",
@@ -345,36 +374,6 @@
               "addPortOnRects" : [  ["C","M1", "MP0:G"],["B","M1","MP2:S"],["A","M1","MN2:D"]
                                  ]
           }
-        },
-
-        { "name": "TAPCELLB_CV",
-          "class" : "Layout::LayoutDigitalCell",
-          "boundaryIgnoreRouting" : 1,
-          "beforeRoute" : {
-              "addDirectedRoutes" : [ ["M1","BULKN","MN1:B->MN1:G"],
-                                      ["M1","BULKN","MN1:G-|--MN1:S"],
-                                      ["M1","BULKN","MN1:G-|--MN1:D"],
-                                      ["M1","BULKP","MP:S-|--MP:G"],
-                                      ["M1","BULKP","MP:D-|--MP:G"],
-                                      ["M1","BULKP","MP:G->MP:B"]
-                                    ]
-
-          }
-
-        },
-        { "name": "TAPCELLBAVSS_CV",
-          "class" : "Layout::LayoutDigitalCell",
-          "boundaryIgnoreRouting" : 1,
-          "beforeRoute" : {
-              "addDirectedRoutes" : [ ["M1","BULKN","MN1:B->MN1:G"],
-                                      ["M1","BULKN","MN1:G-|--MN1:S"],
-                                      ["M1","BULKN","MN1:G-|--MN1:D"],
-                                      ["M1","BULKP","MP:S-|--MP:G"],
-                                      ["M1","BULKP","MP:D-|--MP:G"]
-                                    ]
-
-          }
-
         }
     ]
 }

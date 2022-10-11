@@ -60880,12 +60880,12 @@
     "info": {
         "arguments": "/Users/wulff/pro/cic/ciccreator/bin/darwin/cic.app/Contents/MacOS/cic ../cic/ip.json ../cic/sky130.tech SUN_TR_SKY130NM",
         "file": "../cic/ip.json",
-        "hash": "0.1.0-beta-122-g37d5f71",
+        "hash": "0.1.0-beta-123-g51bb8a5",
         "includepaths": "../cic",
         "libpaths": "",
         "library": "SUN_TR_SKY130NM",
         "prefix": "",
         "rules": "../cic/sky130.tech",
-        "version": "0.1.4+ built on Tue Sep 13 16:31:42 CEST 2022"
+        "version": "0.1.4+ built on Mon Oct 10 12:42:10 CEST 2022"
     }
 }

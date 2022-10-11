@@ -26,7 +26,7 @@
 ######################################################################
 
 
-include ../../../tech/make/core.make
+include ../tech/make/core.make
 
 LIB=SUN_SAR9B_SKY130NM
 CELL=SUNSAR_SAR9B_CV

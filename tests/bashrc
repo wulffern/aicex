@@ -2,4 +2,4 @@
 
 #- Setup PDK
 
-export PDK_ROOT=${PWD}/externals/
+export PDK_ROOT=${PWD}/ip/tech_sky130/external/

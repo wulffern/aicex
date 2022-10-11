@@ -199,9 +199,26 @@ XMP1 Y CN N2 BULKP SUNTRB_PCHDL
 .ENDS
 
 *-------------------------------------------------------------
+* SUNTRB_TAPCELLB_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTRB_TAPCELLB_CV AVDD AVSS
+XMN1 AVSS AVSS AVSS AVSS SUNTRB_NCHDL
+XMP1 AVDD AVDD AVDD AVDD SUNTRB_PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTRB_TAPCELLBAVSS_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTRB_TAPCELLBAVSS_CV AVDD AVSS
+XMN1 AVSS AVSS AVSS AVSS SUNTRB_NCHDL
+XMP1 NC1 NC1 NC1 AVDD SUNTRB_PCHDL
+.ENDS
+
+*-------------------------------------------------------------
 * SUNTRB_DFRNQNX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
 .SUBCKT SUNTRB_DFRNQNX1_CV D CK RN Q QN BULKP BULKN AVDD AVSS
+XA0 BULKP BULKN SUNTRB_TAPCELLBAVSS_CV
 XA1 CK RN CKN BULKP BULKN AVDD AVSS SUNTRB_NDX1_CV
 XA2 CKN CKB BULKP BULKN AVDD AVSS SUNTRB_IVX1_CV
 XA3 D CKN CKB A0 BULKP BULKN AVDD AVSS SUNTRB_IVTRIX1_CV
@@ -262,20 +279,4 @@ XMN2 A CN B BULKN SUNTRB_NCHDL
 XMP0 AVDD C CN BULKP SUNTRB_PCHDL
 XMP1_DMY B AVDD AVDD BULKP SUNTRB_PCHDL
 XMP2 A C B BULKP SUNTRB_PCHDL
-.ENDS
-
-*-------------------------------------------------------------
-* SUNTRB_TAPCELLB_CV <class 'cicpy.core.layoutcell.LayoutCell'>
-*-------------------------------------------------------------
-.SUBCKT SUNTRB_TAPCELLB_CV AVDD AVSS
-XMN1 AVSS AVSS AVSS AVSS SUNTRB_NCHDL
-XMP1 AVDD AVDD AVDD AVDD SUNTRB_PCHDL
-.ENDS
-
-*-------------------------------------------------------------
-* SUNTRB_TAPCELLBAVSS_CV <class 'cicpy.core.layoutcell.LayoutCell'>
-*-------------------------------------------------------------
-.SUBCKT SUNTRB_TAPCELLBAVSS_CV AVDD AVSS
-XMN1 AVSS AVSS AVSS AVSS SUNTRB_NCHDL
-XMP1 NC1 NC1 NC1 AVDD SUNTRB_PCHDL
 .ENDS

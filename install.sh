@@ -1,13 +1,5 @@
 #!/usr/bin/env bash
 
-
-#- Get cicpy
-git clone https://github.com/wulffern/cicpy.git
-cd cicpy
-git pull
-python3 -m pip install --user -e .
-cd ..
-
 #- Get cicsim
 git clone https://github.com/wulffern/cicsim.git
 cd cicsim

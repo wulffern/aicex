@@ -8,7 +8,7 @@
 # lpe: Extract parasitics lpe/<CELL>.spi
 # drc: Run design rule checks on ../design/<LIB>/<CELL>.mag
 # -----------------------------------------------------------
-include ../../../tech/make/core.make
+include ../tech/make/core.make
 
 LIB=SUN_PLL_SKY130NM
 CELL=SUN_PLL

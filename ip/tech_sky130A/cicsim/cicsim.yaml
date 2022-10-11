@@ -67,20 +67,20 @@ corner:
 
 #- All corners
   Att: |
-    .lib  "../../../models/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" tt
+    .lib  "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" tt
   Asf: |
-    .lib  "../../../models/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" sf
+    .lib  "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" sf
   Afs: |
-    .lib  "../../../models/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" fs
+    .lib  "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" fs
   Aff: |
-    .lib  "../../../models/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" ff
+    .lib  "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" ff
   Ass: |
-    .lib  "../../../models/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" ss
+    .lib  "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" ss
   All: |
-    .lib  "../../../models/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" ll
+    .lib  "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" ll
   Ahh: |
-    .lib  "../../../models/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" hh
+    .lib  "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" hh
   Ahl: |
-    .lib  "../../../models/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" hl
+    .lib  "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" hl
   Alh: |
-    .lib  "../../../models/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" lh
+    .lib  "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" lh

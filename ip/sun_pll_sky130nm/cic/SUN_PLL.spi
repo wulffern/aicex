@@ -90,6 +90,8 @@ xa3 IBPSR_1U IBPSR_1U AVSS AVSS SUNTR_NCHDLCM xoffset=0 yoffset=0 angle=0 M=10
 *.ipin VI
 *.opin VO
 *.ipin VFB
+*  xd2 -  SUNSAR_CAP_BSSW_CV  IS MISSING !!!!
+*  xd3 -  SUNSAR_CAP_BSSW_CV  IS MISSING !!!!
 xa1 VS VBN AVSS AVSS SUNTR_NCHDLCM xoffset=0 yoffset=0 angle=0 M=1
 xa2 VDP VFB VS AVSS SUNTR_NCHDLA xoffset=0 yoffset=0 angle=0 M=1
 xa4 VGP VI VS AVSS SUNTR_NCHDLA xoffset=0 yoffset=0 angle=0 M=1
@@ -98,8 +100,6 @@ xc2 VDP VDP AVDD AVDD SUNTR_PCHDLA xoffset=0 yoffset=0 angle=0 M=1
 xc3_0 VO VGP AVDD AVDD SUNTR_PCHDLA xoffset=0 yoffset=0 angle=0 M=1
 xc3_1 VO VGP AVDD AVDD SUNTR_PCHDLA xoffset=0 yoffset=0 angle=0 M=1
 xc3_2 VO VGP AVDD AVDD SUNTR_PCHDLA xoffset=0 yoffset=0 angle=0 M=1
-xd2 VO AVSS SUNSAR_CAP_BSSW_CV xoffset=2 yoffset=0 angle=0 M=1
-xd3 VO AVSS SUNSAR_CAP_BSSW_CV xoffset=0 yoffset=0 angle=0 M=8
 .ends
 
 
@@ -232,8 +232,7 @@ xc2b YN Y net1 AVDD SUNTR_PCHDL xoffset=0 yoffset=0 angle=0 M=1
 .subckt CAP_LPF  A B   xoffset=0 yoffset=0 angle=0 M=1
 *.iopin A
 *.iopin B
-R1 A NC0 sky130_fd_pr__res_generic_m3 W=0.4 L=0.4 m=1
-R2 B NC1 sky130_fd_pr__res_generic_m3 W=0.4 L=0.4 m=1
+R1 __UNCONNECTED_PIN__0 __UNCONNECTED_PIN__1 sky130_fd_pr__res_generic_m3 W=0.4 L=0.4 m=1
 .ends
 
 .end

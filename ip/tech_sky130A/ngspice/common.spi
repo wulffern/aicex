@@ -1,7 +1,7 @@
 
 .lib Gt
 
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/models/r+c/res_high__cap_high.spice"
-.include "../../../models/skywater-pdk-libs-sky130_fd_pr/models/sky130_fd_pr__model__r+c.model.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/models/r+c/res_high__cap_high.spice"
+.include "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/models/sky130_fd_pr__model__r+c.model.spice"
 
 .endl
