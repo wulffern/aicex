@@ -720,3 +720,35 @@ SUNTR_SWX2_CV XF13 (A13,Y13,V13,AVDD,AVSS);
 SUNTR_SWX4_CV XF14 (A14,Y14,V14,AVDD,AVSS);
 SUNTR_TGPD_CV XF15 (A15,Y15,V15,AVDD,AVSS);
 endmodule
+
+//-------------------------------------------------------------
+// SUNTR_CAPBASE_LEFT_SIDE_PORT <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module SUNTR_CAPBASE_LEFT_SIDE_PORT(A,B);
+input logic B;
+input logic A;
+endmodule
+
+//-------------------------------------------------------------
+// SUNTR_CAP_1 <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module SUNTR_CAP_1(A,B);
+input logic B;
+input logic A;
+endmodule
+
+//-------------------------------------------------------------
+// SUNTR_CAP_10 <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module SUNTR_CAP_10(A,B);
+input logic B;
+input logic A;
+endmodule
+
+//-------------------------------------------------------------
+// SUNTR_CAP_20 <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module SUNTR_CAP_20(A,B);
+input logic B;
+input logic A;
+endmodule

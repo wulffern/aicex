@@ -232,7 +232,8 @@ xc2b YN Y net1 AVDD SUNTR_PCHDL xoffset=0 yoffset=0 angle=0 M=1
 .subckt CAP_LPF  A B   xoffset=0 yoffset=0 angle=0 M=1
 *.iopin A
 *.iopin B
-R1 __UNCONNECTED_PIN__0 __UNCONNECTED_PIN__1 sky130_fd_pr__res_generic_m3 W=0.4 L=0.4 m=1
+R1 A NC0 sky130_fd_pr__res_generic_m3 W=0.4 L=0.4 m=1
+R2 B NC1 sky130_fd_pr__res_generic_m3 W=0.4 L=0.4 m=1
 .ends
 
 .end

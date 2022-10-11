@@ -97,11 +97,12 @@ create:
     | ANT                         | VER  | :x:    |                                |
 
 do:
+  - ln -s ../tech_sky130A tech
   - cd work && ln -s ../tech/magic/mos.24bit.dstyle
   - cd work && ln -s ../tech/magic/mos.24bit.std.cmap
   - cd sim && ln -s ../tech/cicsim/cicsim.yaml
-  - cd cic && cp ../tech/cic/sky130.tech .
-  - ln -s ../tech_sky130A tech
+  - cd cic && ln -s ../tech/cic/sky130A.tech
+
 
 echo: |
   Good luck with ${IP}

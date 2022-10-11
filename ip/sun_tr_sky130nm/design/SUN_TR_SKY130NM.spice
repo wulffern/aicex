@@ -521,3 +521,38 @@ XF13 A13 Y13 V13 AVDD AVSS SUNTR_SWX2_CV
 XF14 A14 Y14 V14 AVDD AVSS SUNTR_SWX4_CV
 XF15 A15 Y15 V15 AVDD AVSS SUNTR_TGPD_CV
 .ENDS
+
+*-------------------------------------------------------------
+* SUNTR_CAPBASE_LEFT_SIDE_PORT <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTR_CAPBASE_LEFT_SIDE_PORT A B
+RR1 A NC0 sky130_fd_pr__res_generic_m3  l=0.36  w=0.44  
+RR2 B NC1 sky130_fd_pr__res_generic_m3  l=0.36  w=0.44  
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTR_CAP_1 <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTR_CAP_1 A B
+C0 A B 12.95f
+C1 B 0 3.31f
+C2 A 0 3.30f
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTR_CAP_10 <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTR_CAP_10 A B
+C0 A B 25.81fF
+C1 B 0 5.39fF
+C2 A 0 5.36fF
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTR_CAP_20 <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTR_CAP_20 A B
+C0 A B 50.22fF
+C1 B 0 9.29fF
+C2 A 0 9.24fF
+.ENDS
