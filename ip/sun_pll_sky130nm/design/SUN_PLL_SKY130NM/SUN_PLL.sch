@@ -143,16 +143,16 @@ C {devices/lab_pin.sym} -520 -90 1 0 {name=l1 sig_type=std_logic lab=CP_UP_N}
 C {devices/lab_pin.sym} -520 -70 3 0 {name=l2 sig_type=std_logic lab=CP_DOWN}
 C {devices/lab_pin.sym} 140 -90 1 0 {name=l3 sig_type=std_logic lab=VDD_ROSC}
 C {devices/ipin.sym} -850 110 0 0 {name=p6 lab=IBPSR_1U}
-C {SUN_PLL_SKY130NM/SUN_PLL_ROSC.sym} 340 -60 0 0 {name=xd1 xoffset=5 yoffset=0 angle=0 }
-C {SUN_PLL_SKY130NM/SUN_PLL_DIVN.sym} 320 150 0 1 {name=xc1 xoffset=-310 yoffset=0 angle=0 }
-C {SUN_PLL_SKY130NM/SUN_PLL_BIAS.sym} -360 240 0 1 {name=xl1 xoffset=5 yoffset=0 angle=0 }
-C {SUN_PLL_SKY130NM/SUN_PLL_BUF.sym} -100 -70 0 0 {name=xb1 xoffset=0 yoffset=0 angle=0 }
-C {SUN_PLL_SKY130NM/SUN_PLL_LPF.sym} -60 60 0 0 {name=xb2 xoffset=0 yoffset=5 angle=0 }
-C {SUN_PLL_SKY130NM/SUN_PLL_CP.sym} -500 -60 0 0 {name=xk2 xoffset=0 yoffset=5 angle=0 }
-C {SUN_PLL_SKY130NM/SUN_PLL_PFD.sym} -610 -70 0 0 {name=xk3 xoffset=0 yoffset=5 angle=0 }
+C {SUN_PLL_SKY130NM/SUN_PLL_ROSC.sym} 340 -60 0 0 {name=xaa5 xoffset=5 yoffset=0 angle=0 }
+C {SUN_PLL_SKY130NM/SUN_PLL_DIVN.sym} 320 150 0 1 {name=xaa6 xoffset=-310 yoffset=0 angle=0 }
+C {SUN_PLL_SKY130NM/SUN_PLL_BIAS.sym} -360 240 0 1 {name=xbb1 xoffset=5 yoffset=0 angle=0 }
+C {SUN_PLL_SKY130NM/SUN_PLL_BUF.sym} -100 -70 0 0 {name=xaa4 xoffset=0 yoffset=0 angle=0 }
+C {SUN_PLL_SKY130NM/SUN_PLL_LPF.sym} -60 60 0 0 {name=xbb0 xoffset=0 yoffset=5 angle=0 }
+C {SUN_PLL_SKY130NM/SUN_PLL_CP.sym} -500 -60 0 0 {name=xaa1 xoffset=0 yoffset=5 angle=0 }
+C {SUN_PLL_SKY130NM/SUN_PLL_PFD.sym} -610 -70 0 0 {name=xaa0 xoffset=0 yoffset=5 angle=0 }
 C {devices/lab_pin.sym} -230 -70 1 0 {name=l4 sig_type=std_logic lab=VLPF}
 C {devices/lab_pin.sym} 80 150 1 0 {name=l5 sig_type=std_logic lab=CK_FB}
-C {SUN_PLL_SKY130NM/SUN_PLL_KICK.sym} -530 240 0 0 {name=xk1 xoffset=20 yoffset=0 angle=0}
+C {SUN_PLL_SKY130NM/SUN_PLL_KICK.sym} -530 240 0 0 {name=xaa3 xoffset=20 yoffset=0 angle=0}
 C {devices/lab_pin.sym} -250 -40 3 0 {name=l6 sig_type=std_logic lab=VLPFZ}
 C {devices/lab_pin.sym} -390 50 2 0 {name=l7 sig_type=std_logic lab=KICK}
 C {devices/lab_pin.sym} -480 260 3 0 {name=l8 sig_type=std_logic lab=PWRUP_1V8_N}

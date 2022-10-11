@@ -7,14 +7,14 @@
 *.opin CK
 *.ipin IBPSR_1U
 + angle=0
-xb1 AVDD VDD_ROSC VLPF VDD_ROSC IBPSR_1U AVSS SUN_PLL_BUF xoffset=0 yoffset=0 angle=0
-xb2 VLPFZ AVSS VLPF SUN_PLL_LPF xoffset=0 yoffset=5 angle=0
-xc1 AVDD CK_FB CK PWRUP_1V8 AVSS SUN_PLL_DIVN xoffset=-310 yoffset=0 angle=0
-xd1 AVDD CK VDD_ROSC PWRUP_1V8 AVSS SUN_PLL_ROSC xoffset=5 yoffset=0 angle=0
-xk1 AVDD KICK net1 PWRUP_1V8 AVSS PWRUP_1V8_N SUN_PLL_KICK xoffset=20 yoffset=0 angle=0
-xk2 AVDD CP_UP_N VLPF CP_DOWN IBPSR_1U AVSS VLPFZ PWRUP_1V8 KICK SUN_PLL_CP xoffset=0 yoffset=5
-xk3 AVDD CP_UP_N CK_REF CP_DOWN CK_FB AVSS SUN_PLL_PFD xoffset=0 yoffset=5 angle=0
-xl1 IBPSR_1U PWRUP_1V8_N AVSS SUN_PLL_BIAS xoffset=5 yoffset=0 angle=0
+xaa0 AVDD CP_UP_N CK_REF CP_DOWN CK_FB AVSS SUN_PLL_PFD xoffset=0 yoffset=5 angle=0
+xaa1 AVDD CP_UP_N VLPF CP_DOWN IBPSR_1U AVSS VLPFZ PWRUP_1V8 KICK SUN_PLL_CP xoffset=0 yoffset=5
+xaa3 AVDD KICK net1 PWRUP_1V8 AVSS PWRUP_1V8_N SUN_PLL_KICK xoffset=20 yoffset=0 angle=0
+xaa4 AVDD VDD_ROSC VLPF VDD_ROSC IBPSR_1U AVSS SUN_PLL_BUF xoffset=0 yoffset=0 angle=0
+xaa5 AVDD CK VDD_ROSC PWRUP_1V8 AVSS SUN_PLL_ROSC xoffset=5 yoffset=0 angle=0
+xaa6 AVDD CK_FB CK PWRUP_1V8 AVSS SUN_PLL_DIVN xoffset=-310 yoffset=0 angle=0
+xbb0 VLPFZ AVSS VLPF SUN_PLL_LPF xoffset=0 yoffset=5 angle=0
+xbb1 IBPSR_1U PWRUP_1V8_N AVSS SUN_PLL_BIAS xoffset=5 yoffset=0 angle=0
 .ends
 
 * expanding   symbol:  SUN_PLL_SKY130NM/SUN_PLL_ROSC.sym # of pins=5
