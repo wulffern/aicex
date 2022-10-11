@@ -1,3 +1,4 @@
 
 
 source ../tech/xschem/xschemrc
+set xschem_libs { {/SUN_TR_SKY130N} {/SUN_TRB_SKY130N}}

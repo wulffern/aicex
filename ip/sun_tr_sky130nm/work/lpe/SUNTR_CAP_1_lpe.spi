@@ -1,0 +1,9 @@
+* NGSPICE file created from SUNTR_CAP_1.ext - technology: sky130A
+
+.subckt SUNTR_CAP_1 A B
+R0 A m3_1332_132# sky130_fd_pr__res_generic_m3 w=440000u l=360000u
+R1 m3_252_308# B sky130_fd_pr__res_generic_m3 w=440000u l=360000u
+C0 A B 12.95fF
+C1 B 0 3.31fF
+C2 A 0 3.30fF
+.ends

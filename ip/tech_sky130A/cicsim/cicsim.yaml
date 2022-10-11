@@ -3,7 +3,8 @@ simulator: ngspice
 
 corner:
   Gt: |
-    .lib "../../../tech/ngspice/common.spi" Gt
+    .include "../../../tech/pdk/sky130A/libs.tech/ngspice/r+c/res_high__cap_high.spice"
+    .include "../../../tech/pdk/sky130A/libs.tech/ngspice/sky130_fd_pr__model__r+c.model.spice"
 
 # Mosfet corners
   Mtt: |
@@ -65,22 +66,23 @@ corner:
   Bs: |
     .lib "../../../tech/ngspice/bjt.spi" Bs
 
+
 #- All corners
   Att: |
-    .lib  "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" tt
+    .lib  "../../../tech/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
   Asf: |
-    .lib  "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" sf
+    .lib  "../../../tech/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice" sf
   Afs: |
-    .lib  "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" fs
+    .lib  "../../../tech/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice" fs
   Aff: |
-    .lib  "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" ff
+    .lib  "../../../tech/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice" ff
   Ass: |
-    .lib  "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" ss
+    .lib  "../../../tech/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice" ss
   All: |
-    .lib  "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" ll
+    .lib  "../../../tech/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice" ll
   Ahh: |
-    .lib  "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" hh
+    .lib  "../../../tech/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice" hh
   Ahl: |
-    .lib  "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" hl
+    .lib  "../../../tech/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice" hl
   Alh: |
-    .lib  "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" lh
+    .lib  "../../../tech/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice" lh
