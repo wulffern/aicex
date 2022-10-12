@@ -181,7 +181,7 @@ lab=PWRUP_N_1V8}
 N -780 -520 -140 -520 {
 lab=VSS}
 N -330 -880 -320 -880 {
-lab=VDD_1V5}
+lab=VDD_1V8}
 N -330 -800 -320 -800 {
 lab=VSS}
 N -370 -670 -320 -670 {
@@ -191,13 +191,13 @@ lab=D1}
 N -620 -670 -570 -670 {
 lab=PWRUP_N_1V8}
 N -280 -710 -270 -710 {
-lab=VDD_1V5}
+lab=VDD_1V8}
 N -410 -710 -290 -710 {
-lab=#net2}
+lab=VDD_1V8}
 N -530 -710 -410 -710 {
-lab=#net2}
+lab=VDD_1V8}
 N -660 -710 -530 -710 {
-lab=#net2}
+lab=VDD_1V8}
 N -320 -670 -320 -620 {
 lab=D2}
 N -470 -670 -470 -610 {
@@ -216,21 +216,11 @@ N -660 -630 -660 -520 {
 lab=VSS}
 N -730 -670 -700 -670 {
 lab=PWRUP_1V8}
-N -600 -820 -600 -670 {
-lab=PWRUP_N_1V8}
-N -600 -850 -600 -820 {
-lab=PWRUP_N_1V8}
-N -600 -850 -370 -850 {
-lab=PWRUP_N_1V8}
 N -240 -670 -150 -670 {
 lab=D3}
 N -150 -750 -150 -670 {
 lab=D3}
 N -420 -750 -150 -750 {
-lab=D3}
-N -420 -830 -420 -750 {
-lab=D3}
-N -420 -830 -370 -830 {
 lab=D3}
 N -280 -840 -220 -840 {
 lab=KICK_1V8}
@@ -238,6 +228,38 @@ N 310 -840 350 -840 {
 lab=VIP}
 N 20 -840 50 -840 {
 lab=VIN}
+N -290 -710 -280 -710 {
+lab=VDD_1V8}
+N -460 -880 -330 -880 {
+lab=VDD_1V8}
+N -420 -850 -420 -840 {
+lab=D5}
+N -420 -850 -370 -850 {
+lab=D5}
+N -460 -800 -330 -800 {
+lab=VSS}
+N -500 -750 -420 -750 {
+lab=D3}
+N -370 -830 -370 -770 {
+lab=PWRUP_N_1V8}
+N -530 -840 -500 -840 {
+lab=D4}
+N -570 -880 -460 -880 {
+lab=VDD_1V8}
+N -570 -800 -460 -800 {
+lab=VSS}
+N -640 -750 -500 -750 {
+lab=D3}
+N -640 -840 -640 -750 {
+lab=D3}
+N -640 -840 -610 -840 {
+lab=D3}
+N -470 -770 -370 -770 {
+lab=PWRUP_N_1V8}
+N -590 -770 -470 -770 {
+lab=PWRUP_N_1V8}
+N -590 -770 -590 -670 {
+lab=PWRUP_N_1V8}
 C {cborder/border_s.sym} 400 -480 0 0 {}
 C {SUN_TR_SKY130NM/SUNTR_PCHDLCM2.sym} 440 -1180 0 0 {name=x1 xoffset=0 yoffset=0 angle=0 M=1}
 C {SUN_TR_SKY130NM/SUNTR_PCHDLCM2.sym} -50 -1180 0 1 {name=x2 xoffset=0 yoffset=0 angle=0 M=1}
@@ -259,7 +281,7 @@ C {devices/opin.sym} 670 -960 0 0 {name=p2 lab=VO}
 C {SUN_TR_SKY130NM/SUNTR_NCHDL.sym} 670 -580 0 1 {name=x14 xoffset=0 yoffset=0 angle=0 M=1}
 C {devices/lab_pin.sym} 710 -580 0 1 {name=l3 sig_type=std_logic lab=KICK_1V8}
 C {devices/lab_pin.sym} 260 -370 0 1 {name=l4 sig_type=std_logic lab=PWRUP_N_1V8}
-C {devices/lab_pin.sym} 260 -1340 0 1 {name=l5 sig_type=std_logic lab=PWRUP_N_1V8}
+C {devices/lab_pin.sym} 260 -1340 0 1 {name=l5 sig_type=std_logic lab=PWRUP_1V8}
 C {devices/lab_pin.sym} 90 -760 0 1 {name=l6 sig_type=std_logic lab=VBN1}
 C {devices/lab_pin.sym} 270 -760 0 1 {name=l7 sig_type=std_logic lab=VBN2}
 C {devices/ipin.sym} -770 -520 0 0 {name=p3 lab=VSS}
@@ -268,9 +290,9 @@ C {SUN_TR_SKY130NM/SUNTR_IVX1_CV.sym} -570 -670 0 0 {name=x16 xoffset=0 yoffset=
 C {SUN_TR_SKY130NM/SUNTR_IVX1_CV.sym} -450 -670 0 0 {name=x17 xoffset=0 yoffset=0 angle=0 M=1}
 C {SUN_TR_SKY130NM/SUNTR_IVX1_CV.sym} -320 -670 0 0 {name=x18 xoffset=0 yoffset=0 angle=0 M=1}
 C {SUN_TR_SKY130NM/SUNTR_NRX1_CV.sym} -370 -830 0 0 {name=x19 xoffset=0 yoffset=0 angle=0 M=1}
-C {devices/lab_pin.sym} -320 -880 0 1 {name=l8 sig_type=std_logic lab=VDD_1V5}
+C {devices/lab_pin.sym} -320 -880 0 1 {name=l8 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_pin.sym} -320 -800 0 1 {name=l9 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} -270 -710 0 1 {name=l10 sig_type=std_logic lab=VDD_1V5}
+C {devices/lab_pin.sym} -270 -710 0 1 {name=l10 sig_type=std_logic lab=VDD_1V8}
 C {SUN_TR_SKY130NM/SUNTR_CAP_10.sym} -470 -550 0 0 {name=x20 xoffset=0 yoffset=0 angle=0 M=1}
 C {SUN_TR_SKY130NM/SUNTR_CAP_10.sym} -320 -560 0 0 {name=x21 xoffset=0 yoffset=0 angle=0 M=1}
 C {devices/ipin.sym} -720 -670 0 0 {name=p4 lab=PWRUP_1V8}
@@ -281,3 +303,7 @@ C {devices/ipin.sym} 340 -840 0 1 {name=p6 lab=VIP}
 C {devices/lab_pin.sym} -480 -670 3 1 {name=l13 sig_type=std_logic lab=D1}
 C {devices/lab_pin.sym} -350 -670 3 1 {name=l14 sig_type=std_logic lab=D2}
 C {devices/lab_pin.sym} -170 -670 3 1 {name=l15 sig_type=std_logic lab=D3}
+C {SUN_TR_SKY130NM/SUNTR_IVX1_CV.sym} -500 -840 0 0 {name=x22 xoffset=0 yoffset=0 angle=0 M=1}
+C {devices/lab_pin.sym} -390 -850 3 1 {name=l16 sig_type=std_logic lab=D5}
+C {SUN_TR_SKY130NM/SUNTR_IVX1_CV.sym} -610 -840 0 0 {name=x23 xoffset=0 yoffset=0 angle=0 M=1}
+C {devices/lab_pin.sym} -510 -840 3 1 {name=l17 sig_type=std_logic lab=D4}

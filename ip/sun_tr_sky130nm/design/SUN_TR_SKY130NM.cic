@@ -1943,7 +1943,7 @@
                 "devices": [
                     {
                         "class": "cIcSpice::Mosfet",
-                        "deviceName": "pch_lvt",
+                        "deviceName": "pch",
                         "name": "M1",
                         "nodes": [
                             "D",
@@ -2106,8 +2106,8 @@
                     "net": "",
                     "x1": 10800,
                     "x2": 46800,
-                    "y1": -1800,
-                    "y2": 1800
+                    "y1": -1400,
+                    "y2": 1400
                 },
                 {
                     "class": "Rect",
@@ -2115,8 +2115,8 @@
                     "net": "",
                     "x1": 10800,
                     "x2": 46800,
-                    "y1": 7000,
-                    "y2": 10600
+                    "y1": 7400,
+                    "y2": 10200
                 },
                 {
                     "class": "Port",
@@ -2136,8 +2136,8 @@
                     "net": "",
                     "x1": 10800,
                     "x2": 46800,
-                    "y1": 15800,
-                    "y2": 19400
+                    "y1": 16200,
+                    "y2": 19000
                 },
                 {
                     "class": "Rect",
@@ -2451,7 +2451,7 @@
                 "devices": [
                     {
                         "class": "cIcSpice::Mosfet",
-                        "deviceName": "pch_lvt",
+                        "deviceName": "pch",
                         "name": "M1",
                         "nodes": [
                             "D",
@@ -2461,7 +2461,7 @@
                         ],
                         "properties": {
                             "drainWidth": 0.44,
-                            "length": 0.17999999999999999,
+                            "length": 0.28000000000000003,
                             "multiplier": 1,
                             "nf": 1,
                             "sourceWidth": 0.44,
@@ -2959,7 +2959,7 @@
                 "devices": [
                     {
                         "class": "cIcSpice::Mosfet",
-                        "deviceName": "nch_lvt",
+                        "deviceName": "nch",
                         "name": "M1",
                         "nodes": [
                             "D",
@@ -2999,6 +2999,514 @@
                 "symbol": "nch"
             },
             "name": "SUNTR_NCHDL",
+            "net": "",
+            "physicalOnly": false,
+            "widthoffset": -0.5,
+            "x1": 0,
+            "x2": 63000,
+            "xmax": 18,
+            "xspace": 3600,
+            "y1": 0,
+            "y2": 17600,
+            "ymax": 4,
+            "yoffset": -0.5,
+            "yspace": 4400
+        },
+        {
+            "abstract": false,
+            "boundaryIgnoreRouting": false,
+            "cellused": false,
+            "children": [
+                {
+                    "class": "Rect",
+                    "layer": "OD",
+                    "net": "",
+                    "x1": 37800,
+                    "x2": 48600,
+                    "y1": 2200,
+                    "y2": 6600
+                },
+                {
+                    "class": "Rect",
+                    "layer": "OD",
+                    "net": "",
+                    "x1": 37800,
+                    "x2": 48600,
+                    "y1": 6600,
+                    "y2": 11000
+                },
+                {
+                    "class": "Rect",
+                    "layer": "OD",
+                    "net": "",
+                    "x1": 37800,
+                    "x2": 48600,
+                    "y1": 11000,
+                    "y2": 15400
+                },
+                {
+                    "class": "Rect",
+                    "layer": "NDIFF",
+                    "net": "",
+                    "x1": 37800,
+                    "x2": 48600,
+                    "y1": 2200,
+                    "y2": 6600
+                },
+                {
+                    "class": "Rect",
+                    "layer": "NDIFF",
+                    "net": "",
+                    "x1": 37800,
+                    "x2": 48600,
+                    "y1": 6600,
+                    "y2": 11000
+                },
+                {
+                    "class": "Rect",
+                    "layer": "NDIFF",
+                    "net": "",
+                    "x1": 37800,
+                    "x2": 48600,
+                    "y1": 11000,
+                    "y2": 15400
+                },
+                {
+                    "class": "Rect",
+                    "layer": "PTAP",
+                    "net": "",
+                    "x1": -5400,
+                    "x2": 5400,
+                    "y1": -2200,
+                    "y2": 2200
+                },
+                {
+                    "class": "Rect",
+                    "layer": "PTAP",
+                    "net": "",
+                    "x1": -5400,
+                    "x2": 5400,
+                    "y1": 2200,
+                    "y2": 6600
+                },
+                {
+                    "class": "Rect",
+                    "layer": "PTAP",
+                    "net": "",
+                    "x1": -5400,
+                    "x2": 5400,
+                    "y1": 6600,
+                    "y2": 11000
+                },
+                {
+                    "class": "Rect",
+                    "layer": "PTAP",
+                    "net": "",
+                    "x1": -5400,
+                    "x2": 5400,
+                    "y1": 11000,
+                    "y2": 15400
+                },
+                {
+                    "class": "Rect",
+                    "layer": "PTAP",
+                    "net": "",
+                    "x1": -5400,
+                    "x2": 5400,
+                    "y1": 15400,
+                    "y2": 19800
+                },
+                {
+                    "class": "Rect",
+                    "layer": "PO",
+                    "net": "",
+                    "x1": 16200,
+                    "x2": 52200,
+                    "y1": -1400,
+                    "y2": 1400
+                },
+                {
+                    "class": "Rect",
+                    "layer": "PO",
+                    "net": "",
+                    "x1": 16200,
+                    "x2": 52200,
+                    "y1": 7400,
+                    "y2": 10200
+                },
+                {
+                    "class": "Port",
+                    "layer": "M1",
+                    "name": "G",
+                    "net": "",
+                    "pinLayer": "M1_pin",
+                    "spicePort": true,
+                    "x1": 16200,
+                    "x2": 27000,
+                    "y1": 7300,
+                    "y2": 10300
+                },
+                {
+                    "class": "Rect",
+                    "layer": "PO",
+                    "net": "",
+                    "x1": 16200,
+                    "x2": 52200,
+                    "y1": 16200,
+                    "y2": 19000
+                },
+                {
+                    "class": "Rect",
+                    "layer": "PCO",
+                    "net": "",
+                    "x1": 17400,
+                    "x2": 19800,
+                    "y1": 7700,
+                    "y2": 8800
+                },
+                {
+                    "class": "Rect",
+                    "layer": "PCO",
+                    "net": "",
+                    "x1": 17400,
+                    "x2": 19800,
+                    "y1": 8800,
+                    "y2": 9900
+                },
+                {
+                    "class": "Rect",
+                    "layer": "PCO",
+                    "net": "",
+                    "x1": 19800,
+                    "x2": 23400,
+                    "y1": 7700,
+                    "y2": 8800
+                },
+                {
+                    "class": "Rect",
+                    "layer": "PCO",
+                    "net": "",
+                    "x1": 19800,
+                    "x2": 23400,
+                    "y1": 8800,
+                    "y2": 9900
+                },
+                {
+                    "class": "Rect",
+                    "layer": "PCO",
+                    "net": "",
+                    "x1": 23400,
+                    "x2": 25800,
+                    "y1": 7700,
+                    "y2": 8800
+                },
+                {
+                    "class": "Rect",
+                    "layer": "PCO",
+                    "net": "",
+                    "x1": 23400,
+                    "x2": 25800,
+                    "y1": 8800,
+                    "y2": 9900
+                },
+                {
+                    "class": "Rect",
+                    "layer": "POB",
+                    "net": "",
+                    "x1": 16200,
+                    "x2": 27000,
+                    "y1": 6600,
+                    "y2": 11000
+                },
+                {
+                    "class": "Rect",
+                    "layer": "M1",
+                    "net": "",
+                    "x1": -5400,
+                    "x2": 5400,
+                    "y1": -2200,
+                    "y2": 2200
+                },
+                {
+                    "class": "Rect",
+                    "layer": "M1",
+                    "net": "",
+                    "x1": -5400,
+                    "x2": 5400,
+                    "y1": 2200,
+                    "y2": 6600
+                },
+                {
+                    "class": "Rect",
+                    "layer": "M1",
+                    "net": "",
+                    "x1": 37800,
+                    "x2": 48600,
+                    "y1": 2900,
+                    "y2": 5900
+                },
+                {
+                    "class": "Port",
+                    "layer": "M1",
+                    "name": "S",
+                    "net": "",
+                    "pinLayer": "M1_pin",
+                    "spicePort": true,
+                    "x1": 37800,
+                    "x2": 48600,
+                    "y1": 2900,
+                    "y2": 5900
+                },
+                {
+                    "class": "Rect",
+                    "layer": "M1",
+                    "net": "",
+                    "x1": -5400,
+                    "x2": 5400,
+                    "y1": 6600,
+                    "y2": 11000
+                },
+                {
+                    "class": "Port",
+                    "layer": "M1",
+                    "name": "B",
+                    "net": "",
+                    "pinLayer": "M1_pin",
+                    "spicePort": true,
+                    "x1": -5400,
+                    "x2": 5400,
+                    "y1": 6600,
+                    "y2": 11000
+                },
+                {
+                    "class": "Rect",
+                    "layer": "M1",
+                    "net": "",
+                    "x1": 16200,
+                    "x2": 27000,
+                    "y1": 7300,
+                    "y2": 10300
+                },
+                {
+                    "class": "Rect",
+                    "layer": "M1",
+                    "net": "",
+                    "x1": -5400,
+                    "x2": 5400,
+                    "y1": 11000,
+                    "y2": 15400
+                },
+                {
+                    "class": "Rect",
+                    "layer": "M1",
+                    "net": "",
+                    "x1": 37800,
+                    "x2": 48600,
+                    "y1": 11700,
+                    "y2": 14700
+                },
+                {
+                    "class": "Port",
+                    "layer": "M1",
+                    "name": "D",
+                    "net": "",
+                    "pinLayer": "M1_pin",
+                    "spicePort": true,
+                    "x1": 37800,
+                    "x2": 48600,
+                    "y1": 11700,
+                    "y2": 14700
+                },
+                {
+                    "class": "Rect",
+                    "layer": "M1",
+                    "net": "",
+                    "x1": -5400,
+                    "x2": 5400,
+                    "y1": 15400,
+                    "y2": 19800
+                },
+                {
+                    "class": "Rect",
+                    "layer": "PTAPC",
+                    "net": "",
+                    "x1": -1800,
+                    "x2": 1800,
+                    "y1": 2200,
+                    "y2": 6600
+                },
+                {
+                    "class": "Rect",
+                    "layer": "PTAPC",
+                    "net": "",
+                    "x1": -1800,
+                    "x2": 1800,
+                    "y1": 11000,
+                    "y2": 15400
+                },
+                {
+                    "class": "Rect",
+                    "layer": "NDIFFC",
+                    "net": "",
+                    "x1": 39000,
+                    "x2": 41400,
+                    "y1": 3300,
+                    "y2": 4400
+                },
+                {
+                    "class": "Rect",
+                    "layer": "NDIFFC",
+                    "net": "",
+                    "x1": 39000,
+                    "x2": 41400,
+                    "y1": 4400,
+                    "y2": 5500
+                },
+                {
+                    "class": "Rect",
+                    "layer": "NDIFFC",
+                    "net": "",
+                    "x1": 41400,
+                    "x2": 45000,
+                    "y1": 3300,
+                    "y2": 4400
+                },
+                {
+                    "class": "Rect",
+                    "layer": "NDIFFC",
+                    "net": "",
+                    "x1": 41400,
+                    "x2": 45000,
+                    "y1": 4400,
+                    "y2": 5500
+                },
+                {
+                    "class": "Rect",
+                    "layer": "NDIFFC",
+                    "net": "",
+                    "x1": 45000,
+                    "x2": 47400,
+                    "y1": 3300,
+                    "y2": 4400
+                },
+                {
+                    "class": "Rect",
+                    "layer": "NDIFFC",
+                    "net": "",
+                    "x1": 45000,
+                    "x2": 47400,
+                    "y1": 4400,
+                    "y2": 5500
+                },
+                {
+                    "class": "Rect",
+                    "layer": "NDIFFC",
+                    "net": "",
+                    "x1": 39000,
+                    "x2": 41400,
+                    "y1": 12100,
+                    "y2": 13200
+                },
+                {
+                    "class": "Rect",
+                    "layer": "NDIFFC",
+                    "net": "",
+                    "x1": 39000,
+                    "x2": 41400,
+                    "y1": 13200,
+                    "y2": 14300
+                },
+                {
+                    "class": "Rect",
+                    "layer": "NDIFFC",
+                    "net": "",
+                    "x1": 41400,
+                    "x2": 45000,
+                    "y1": 12100,
+                    "y2": 13200
+                },
+                {
+                    "class": "Rect",
+                    "layer": "NDIFFC",
+                    "net": "",
+                    "x1": 41400,
+                    "x2": 45000,
+                    "y1": 13200,
+                    "y2": 14300
+                },
+                {
+                    "class": "Rect",
+                    "layer": "NDIFFC",
+                    "net": "",
+                    "x1": 45000,
+                    "x2": 47400,
+                    "y1": 12100,
+                    "y2": 13200
+                },
+                {
+                    "class": "Rect",
+                    "layer": "NDIFFC",
+                    "net": "",
+                    "x1": 45000,
+                    "x2": 47400,
+                    "y1": 13200,
+                    "y2": 14300
+                },
+                {
+                    "class": "Rect",
+                    "layer": "PWT",
+                    "net": "",
+                    "x1": -9000,
+                    "x2": 63000,
+                    "y1": -6600,
+                    "y2": 24200
+                }
+            ],
+            "ckt": {
+                "class": "cIcCore::PatternTransistor",
+                "devices": [
+                    {
+                        "class": "cIcSpice::Mosfet",
+                        "deviceName": "nch",
+                        "name": "M1",
+                        "nodes": [
+                            "D",
+                            "G",
+                            "S",
+                            "B"
+                        ],
+                        "properties": {
+                            "drainWidth": 0.44,
+                            "length": 0.28000000000000003,
+                            "multiplier": 1,
+                            "nf": 1,
+                            "sourceWidth": 0.44,
+                            "width": 1.0800000000000001
+                        }
+                    }
+                ],
+                "instances": [
+                ],
+                "name": "SUNTR_NCHDL2",
+                "nodes": [
+                    "D",
+                    "G",
+                    "S",
+                    "B"
+                ],
+                "properties": {
+                }
+            },
+            "class": "cIcCore::PatternTransistor",
+            "has_pr": true,
+            "heightoffset": 0,
+            "layer": "PR",
+            "libcell": false,
+            "libpath": "",
+            "meta": {
+                "symbol": "nch"
+            },
+            "name": "SUNTR_NCHDL2",
             "net": "",
             "physicalOnly": false,
             "widthoffset": -0.5,
@@ -3467,7 +3975,7 @@
                 "devices": [
                     {
                         "class": "cIcSpice::Mosfet",
-                        "deviceName": "nch_lvt",
+                        "deviceName": "nch",
                         "name": "M1",
                         "nodes": [
                             "D",
@@ -4238,7 +4746,7 @@
             "children": [
                 {
                     "angle": "",
-                    "cell": "SUNTR_NCHDL",
+                    "cell": "SUNTR_NCHDL2",
                     "children": [
                         {
                             "class": "Port",
@@ -4303,7 +4811,7 @@
                     "instanceName": "M0",
                     "layer": "PR",
                     "libpath": "",
-                    "name": "SUNTR_NCHDL",
+                    "name": "SUNTR_NCHDL2",
                     "net": "",
                     "subcktInstance": {
                         "class": "cIcSpice::SubcktInstance",
@@ -4318,7 +4826,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_NCHDL"
+                        "subcktName": "SUNTR_NCHDL2"
                     },
                     "x1": 0,
                     "x2": 63000,
@@ -4329,7 +4837,7 @@
                 },
                 {
                     "angle": "",
-                    "cell": "SUNTR_NCHDL",
+                    "cell": "SUNTR_NCHDL2",
                     "children": [
                         {
                             "class": "Port",
@@ -4394,7 +4902,7 @@
                     "instanceName": "M1",
                     "layer": "PR",
                     "libpath": "",
-                    "name": "SUNTR_NCHDL",
+                    "name": "SUNTR_NCHDL2",
                     "net": "",
                     "subcktInstance": {
                         "class": "cIcSpice::SubcktInstance",
@@ -4409,7 +4917,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_NCHDL"
+                        "subcktName": "SUNTR_NCHDL2"
                     },
                     "x1": 0,
                     "x2": 63000,
@@ -4420,7 +4928,7 @@
                 },
                 {
                     "angle": "",
-                    "cell": "SUNTR_NCHDL",
+                    "cell": "SUNTR_NCHDL2",
                     "children": [
                         {
                             "class": "Port",
@@ -4485,7 +4993,7 @@
                     "instanceName": "M2",
                     "layer": "PR",
                     "libpath": "",
-                    "name": "SUNTR_NCHDL",
+                    "name": "SUNTR_NCHDL2",
                     "net": "",
                     "subcktInstance": {
                         "class": "cIcSpice::SubcktInstance",
@@ -4500,7 +5008,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_NCHDL"
+                        "subcktName": "SUNTR_NCHDL2"
                     },
                     "x1": 0,
                     "x2": 63000,
@@ -4511,7 +5019,7 @@
                 },
                 {
                     "angle": "",
-                    "cell": "SUNTR_NCHDL",
+                    "cell": "SUNTR_NCHDL2",
                     "children": [
                         {
                             "class": "Port",
@@ -4576,7 +5084,7 @@
                     "instanceName": "M3",
                     "layer": "PR",
                     "libpath": "",
-                    "name": "SUNTR_NCHDL",
+                    "name": "SUNTR_NCHDL2",
                     "net": "",
                     "subcktInstance": {
                         "class": "cIcSpice::SubcktInstance",
@@ -4591,7 +5099,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_NCHDL"
+                        "subcktName": "SUNTR_NCHDL2"
                     },
                     "x1": 0,
                     "x2": 63000,
@@ -4602,7 +5110,7 @@
                 },
                 {
                     "angle": "",
-                    "cell": "SUNTR_NCHDL",
+                    "cell": "SUNTR_NCHDL2",
                     "children": [
                         {
                             "class": "Port",
@@ -4667,7 +5175,7 @@
                     "instanceName": "M4",
                     "layer": "PR",
                     "libpath": "",
-                    "name": "SUNTR_NCHDL",
+                    "name": "SUNTR_NCHDL2",
                     "net": "",
                     "subcktInstance": {
                         "class": "cIcSpice::SubcktInstance",
@@ -4682,7 +5190,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_NCHDL"
+                        "subcktName": "SUNTR_NCHDL2"
                     },
                     "x1": 0,
                     "x2": 63000,
@@ -4693,7 +5201,7 @@
                 },
                 {
                     "angle": "",
-                    "cell": "SUNTR_NCHDL",
+                    "cell": "SUNTR_NCHDL2",
                     "children": [
                         {
                             "class": "Port",
@@ -4758,7 +5266,7 @@
                     "instanceName": "M5",
                     "layer": "PR",
                     "libpath": "",
-                    "name": "SUNTR_NCHDL",
+                    "name": "SUNTR_NCHDL2",
                     "net": "",
                     "subcktInstance": {
                         "class": "cIcSpice::SubcktInstance",
@@ -4773,7 +5281,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_NCHDL"
+                        "subcktName": "SUNTR_NCHDL2"
                     },
                     "x1": 0,
                     "x2": 63000,
@@ -4784,7 +5292,7 @@
                 },
                 {
                     "angle": "",
-                    "cell": "SUNTR_NCHDL",
+                    "cell": "SUNTR_NCHDL2",
                     "children": [
                         {
                             "class": "Port",
@@ -4849,7 +5357,7 @@
                     "instanceName": "M6",
                     "layer": "PR",
                     "libpath": "",
-                    "name": "SUNTR_NCHDL",
+                    "name": "SUNTR_NCHDL2",
                     "net": "",
                     "subcktInstance": {
                         "class": "cIcSpice::SubcktInstance",
@@ -4864,7 +5372,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_NCHDL"
+                        "subcktName": "SUNTR_NCHDL2"
                     },
                     "x1": 0,
                     "x2": 63000,
@@ -4875,7 +5383,7 @@
                 },
                 {
                     "angle": "",
-                    "cell": "SUNTR_NCHDL",
+                    "cell": "SUNTR_NCHDL2",
                     "children": [
                         {
                             "class": "Port",
@@ -4940,7 +5448,7 @@
                     "instanceName": "M7",
                     "layer": "PR",
                     "libpath": "",
-                    "name": "SUNTR_NCHDL",
+                    "name": "SUNTR_NCHDL2",
                     "net": "",
                     "subcktInstance": {
                         "class": "cIcSpice::SubcktInstance",
@@ -4955,7 +5463,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_NCHDL"
+                        "subcktName": "SUNTR_NCHDL2"
                     },
                     "x1": 0,
                     "x2": 63000,
@@ -4966,7 +5474,7 @@
                 },
                 {
                     "angle": "",
-                    "cell": "SUNTR_NCHDL",
+                    "cell": "SUNTR_NCHDL2",
                     "children": [
                         {
                             "class": "Port",
@@ -5031,7 +5539,7 @@
                     "instanceName": "M8",
                     "layer": "PR",
                     "libpath": "",
-                    "name": "SUNTR_NCHDL",
+                    "name": "SUNTR_NCHDL2",
                     "net": "",
                     "subcktInstance": {
                         "class": "cIcSpice::SubcktInstance",
@@ -5046,7 +5554,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_NCHDL"
+                        "subcktName": "SUNTR_NCHDL2"
                     },
                     "x1": 0,
                     "x2": 63000,
@@ -5162,7 +5670,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_NCHDL"
+                        "subcktName": "SUNTR_NCHDL2"
                     },
                     {
                         "class": "cIcSpice::SubcktInstance",
@@ -5177,7 +5685,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_NCHDL"
+                        "subcktName": "SUNTR_NCHDL2"
                     },
                     {
                         "class": "cIcSpice::SubcktInstance",
@@ -5192,7 +5700,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_NCHDL"
+                        "subcktName": "SUNTR_NCHDL2"
                     },
                     {
                         "class": "cIcSpice::SubcktInstance",
@@ -5207,7 +5715,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_NCHDL"
+                        "subcktName": "SUNTR_NCHDL2"
                     },
                     {
                         "class": "cIcSpice::SubcktInstance",
@@ -5222,7 +5730,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_NCHDL"
+                        "subcktName": "SUNTR_NCHDL2"
                     },
                     {
                         "class": "cIcSpice::SubcktInstance",
@@ -5237,7 +5745,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_NCHDL"
+                        "subcktName": "SUNTR_NCHDL2"
                     },
                     {
                         "class": "cIcSpice::SubcktInstance",
@@ -5252,7 +5760,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_NCHDL"
+                        "subcktName": "SUNTR_NCHDL2"
                     },
                     {
                         "class": "cIcSpice::SubcktInstance",
@@ -5267,7 +5775,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_NCHDL"
+                        "subcktName": "SUNTR_NCHDL2"
                     },
                     {
                         "class": "cIcSpice::SubcktInstance",
@@ -5282,7 +5790,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_NCHDL"
+                        "subcktName": "SUNTR_NCHDL2"
                     }
                 ],
                 "name": "SUNTR_NCHDLCM",
@@ -5321,7 +5829,7 @@
             "children": [
                 {
                     "angle": "",
-                    "cell": "SUNTR_PCHDL",
+                    "cell": "SUNTR_PCHDL2",
                     "children": [
                         {
                             "class": "Port",
@@ -5386,7 +5894,7 @@
                     "instanceName": "M0",
                     "layer": "PR",
                     "libpath": "",
-                    "name": "SUNTR_PCHDL",
+                    "name": "SUNTR_PCHDL2",
                     "net": "",
                     "subcktInstance": {
                         "class": "cIcSpice::SubcktInstance",
@@ -5401,7 +5909,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_PCHDL"
+                        "subcktName": "SUNTR_PCHDL2"
                     },
                     "x1": 0,
                     "x2": 63000,
@@ -5412,7 +5920,7 @@
                 },
                 {
                     "angle": "",
-                    "cell": "SUNTR_PCHDL",
+                    "cell": "SUNTR_PCHDL2",
                     "children": [
                         {
                             "class": "Port",
@@ -5477,7 +5985,7 @@
                     "instanceName": "M7",
                     "layer": "PR",
                     "libpath": "",
-                    "name": "SUNTR_PCHDL",
+                    "name": "SUNTR_PCHDL2",
                     "net": "",
                     "subcktInstance": {
                         "class": "cIcSpice::SubcktInstance",
@@ -5492,7 +6000,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_PCHDL"
+                        "subcktName": "SUNTR_PCHDL2"
                     },
                     "x1": 0,
                     "x2": 63000,
@@ -5608,7 +6116,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_PCHDL"
+                        "subcktName": "SUNTR_PCHDL2"
                     },
                     {
                         "class": "cIcSpice::SubcktInstance",
@@ -5623,7 +6131,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_PCHDL"
+                        "subcktName": "SUNTR_PCHDL2"
                     }
                 ],
                 "name": "SUNTR_PCHDLCM",
@@ -5662,7 +6170,7 @@
             "children": [
                 {
                     "angle": "",
-                    "cell": "SUNTR_NCHDL",
+                    "cell": "SUNTR_NCHDL2",
                     "children": [
                         {
                             "class": "Port",
@@ -5727,7 +6235,7 @@
                     "instanceName": "M0",
                     "layer": "PR",
                     "libpath": "",
-                    "name": "SUNTR_NCHDL",
+                    "name": "SUNTR_NCHDL2",
                     "net": "",
                     "subcktInstance": {
                         "class": "cIcSpice::SubcktInstance",
@@ -5742,7 +6250,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_NCHDL"
+                        "subcktName": "SUNTR_NCHDL2"
                     },
                     "x1": 0,
                     "x2": 63000,
@@ -5753,7 +6261,7 @@
                 },
                 {
                     "angle": "",
-                    "cell": "SUNTR_NCHDL",
+                    "cell": "SUNTR_NCHDL2",
                     "children": [
                         {
                             "class": "Port",
@@ -5818,7 +6326,7 @@
                     "instanceName": "M1",
                     "layer": "PR",
                     "libpath": "",
-                    "name": "SUNTR_NCHDL",
+                    "name": "SUNTR_NCHDL2",
                     "net": "",
                     "subcktInstance": {
                         "class": "cIcSpice::SubcktInstance",
@@ -5833,7 +6341,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_NCHDL"
+                        "subcktName": "SUNTR_NCHDL2"
                     },
                     "x1": 0,
                     "x2": 63000,
@@ -6007,7 +6515,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_NCHDL"
+                        "subcktName": "SUNTR_NCHDL2"
                     },
                     {
                         "class": "cIcSpice::SubcktInstance",
@@ -6022,7 +6530,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_NCHDL"
+                        "subcktName": "SUNTR_NCHDL2"
                     }
                 ],
                 "name": "SUNTR_NCHDLA",
@@ -6061,7 +6569,7 @@
             "children": [
                 {
                     "angle": "",
-                    "cell": "SUNTR_PCHDL",
+                    "cell": "SUNTR_PCHDL2",
                     "children": [
                         {
                             "class": "Port",
@@ -6126,7 +6634,7 @@
                     "instanceName": "M0",
                     "layer": "PR",
                     "libpath": "",
-                    "name": "SUNTR_PCHDL",
+                    "name": "SUNTR_PCHDL2",
                     "net": "",
                     "subcktInstance": {
                         "class": "cIcSpice::SubcktInstance",
@@ -6141,7 +6649,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_PCHDL"
+                        "subcktName": "SUNTR_PCHDL2"
                     },
                     "x1": 0,
                     "x2": 63000,
@@ -6152,7 +6660,7 @@
                 },
                 {
                     "angle": "",
-                    "cell": "SUNTR_PCHDL",
+                    "cell": "SUNTR_PCHDL2",
                     "children": [
                         {
                             "class": "Port",
@@ -6217,7 +6725,7 @@
                     "instanceName": "M1",
                     "layer": "PR",
                     "libpath": "",
-                    "name": "SUNTR_PCHDL",
+                    "name": "SUNTR_PCHDL2",
                     "net": "",
                     "subcktInstance": {
                         "class": "cIcSpice::SubcktInstance",
@@ -6232,7 +6740,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_PCHDL"
+                        "subcktName": "SUNTR_PCHDL2"
                     },
                     "x1": 0,
                     "x2": 63000,
@@ -6243,7 +6751,7 @@
                 },
                 {
                     "angle": "",
-                    "cell": "SUNTR_PCHDL",
+                    "cell": "SUNTR_PCHDL2",
                     "children": [
                         {
                             "class": "Port",
@@ -6308,7 +6816,7 @@
                     "instanceName": "M2",
                     "layer": "PR",
                     "libpath": "",
-                    "name": "SUNTR_PCHDL",
+                    "name": "SUNTR_PCHDL2",
                     "net": "",
                     "subcktInstance": {
                         "class": "cIcSpice::SubcktInstance",
@@ -6323,7 +6831,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_PCHDL"
+                        "subcktName": "SUNTR_PCHDL2"
                     },
                     "x1": 0,
                     "x2": 63000,
@@ -6334,7 +6842,7 @@
                 },
                 {
                     "angle": "",
-                    "cell": "SUNTR_PCHDL",
+                    "cell": "SUNTR_PCHDL2",
                     "children": [
                         {
                             "class": "Port",
@@ -6399,7 +6907,7 @@
                     "instanceName": "M3",
                     "layer": "PR",
                     "libpath": "",
-                    "name": "SUNTR_PCHDL",
+                    "name": "SUNTR_PCHDL2",
                     "net": "",
                     "subcktInstance": {
                         "class": "cIcSpice::SubcktInstance",
@@ -6414,7 +6922,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_PCHDL"
+                        "subcktName": "SUNTR_PCHDL2"
                     },
                     "x1": 0,
                     "x2": 63000,
@@ -6425,7 +6933,7 @@
                 },
                 {
                     "angle": "",
-                    "cell": "SUNTR_PCHDL",
+                    "cell": "SUNTR_PCHDL2",
                     "children": [
                         {
                             "class": "Port",
@@ -6490,7 +6998,7 @@
                     "instanceName": "M4",
                     "layer": "PR",
                     "libpath": "",
-                    "name": "SUNTR_PCHDL",
+                    "name": "SUNTR_PCHDL2",
                     "net": "",
                     "subcktInstance": {
                         "class": "cIcSpice::SubcktInstance",
@@ -6505,7 +7013,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_PCHDL"
+                        "subcktName": "SUNTR_PCHDL2"
                     },
                     "x1": 0,
                     "x2": 63000,
@@ -6516,7 +7024,7 @@
                 },
                 {
                     "angle": "",
-                    "cell": "SUNTR_PCHDL",
+                    "cell": "SUNTR_PCHDL2",
                     "children": [
                         {
                             "class": "Port",
@@ -6581,7 +7089,7 @@
                     "instanceName": "M5",
                     "layer": "PR",
                     "libpath": "",
-                    "name": "SUNTR_PCHDL",
+                    "name": "SUNTR_PCHDL2",
                     "net": "",
                     "subcktInstance": {
                         "class": "cIcSpice::SubcktInstance",
@@ -6596,13 +7104,195 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_PCHDL"
+                        "subcktName": "SUNTR_PCHDL2"
                     },
                     "x1": 0,
                     "x2": 63000,
                     "xcell": 0,
                     "y1": 44000,
                     "y2": 61600,
+                    "ycell": 0
+                },
+                {
+                    "angle": "",
+                    "cell": "SUNTR_PCHDL2",
+                    "children": [
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "D",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": 14400,
+                            "x2": 25200,
+                            "y1": 64500,
+                            "y2": 67500
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "G",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": 36000,
+                            "x2": 46800,
+                            "y1": 60100,
+                            "y2": 63100
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "S",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": 14400,
+                            "x2": 25200,
+                            "y1": 55700,
+                            "y2": 58700
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "B",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": 57600,
+                            "x2": 68400,
+                            "y1": 59400,
+                            "y2": 63800
+                        },
+                        {
+                            "class": "Text",
+                            "layer": "TXT",
+                            "name": "M6",
+                            "net": "",
+                            "x1": 31500,
+                            "x2": 31500,
+                            "y1": 61600,
+                            "y2": 61600
+                        }
+                    ],
+                    "class": "Instance",
+                    "instanceName": "M6",
+                    "layer": "PR",
+                    "libpath": "",
+                    "name": "SUNTR_PCHDL2",
+                    "net": "",
+                    "subcktInstance": {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "M",
+                        "name": "M6",
+                        "nodes": [
+                            "D",
+                            "G",
+                            "S",
+                            "B"
+                        ],
+                        "properties": {
+                        },
+                        "subcktName": "SUNTR_PCHDL2"
+                    },
+                    "x1": 0,
+                    "x2": 63000,
+                    "xcell": 0,
+                    "y1": 52800,
+                    "y2": 70400,
+                    "ycell": 0
+                },
+                {
+                    "angle": "",
+                    "cell": "SUNTR_PCHDL2",
+                    "children": [
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "S",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": 14400,
+                            "x2": 25200,
+                            "y1": 73300,
+                            "y2": 76300
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "G",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": 36000,
+                            "x2": 46800,
+                            "y1": 68900,
+                            "y2": 71900
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "D",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": 14400,
+                            "x2": 25200,
+                            "y1": 64500,
+                            "y2": 67500
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "B",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": 57600,
+                            "x2": 68400,
+                            "y1": 68200,
+                            "y2": 72600
+                        },
+                        {
+                            "class": "Text",
+                            "layer": "TXT",
+                            "name": "M7",
+                            "net": "",
+                            "x1": 31500,
+                            "x2": 31500,
+                            "y1": 70400,
+                            "y2": 70400
+                        }
+                    ],
+                    "class": "Instance",
+                    "instanceName": "M7",
+                    "layer": "PR",
+                    "libpath": "",
+                    "name": "SUNTR_PCHDL2",
+                    "net": "",
+                    "subcktInstance": {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "M",
+                        "name": "M7",
+                        "nodes": [
+                            "S",
+                            "G",
+                            "D",
+                            "B"
+                        ],
+                        "properties": {
+                        },
+                        "subcktName": "SUNTR_PCHDL2"
+                    },
+                    "x1": 0,
+                    "x2": 63000,
+                    "xcell": 0,
+                    "y1": 61600,
+                    "y2": 79200,
                     "ycell": 0
                 },
                 {
@@ -6651,9 +7341,18 @@
                             "layer": "M1",
                             "net": "",
                             "x1": 8400,
+                            "x2": 19800,
+                            "y1": 73300,
+                            "y2": 76300
+                        },
+                        {
+                            "class": "Rect",
+                            "layer": "M1",
+                            "net": "",
+                            "x1": 8400,
                             "x2": 11400,
                             "y1": 2900,
-                            "y2": 58700
+                            "y2": 76300
                         },
                         {
                             "class": "Text",
@@ -6679,7 +7378,7 @@
                     "x1": 8400,
                     "x2": 19800,
                     "y1": 2900,
-                    "y2": 58700
+                    "y2": 76300
                 },
                 {
                     "abstract": false,
@@ -6717,10 +7416,19 @@
                             "class": "Rect",
                             "layer": "M1",
                             "net": "",
+                            "x1": 19800,
+                            "x2": 28200,
+                            "y1": 64500,
+                            "y2": 67500
+                        },
+                        {
+                            "class": "Rect",
+                            "layer": "M1",
+                            "net": "",
                             "x1": 28200,
                             "x2": 31200,
                             "y1": 11700,
-                            "y2": 49900
+                            "y2": 67500
                         },
                         {
                             "class": "Text",
@@ -6746,7 +7454,7 @@
                     "x1": 14400,
                     "x2": 31200,
                     "y1": 11700,
-                    "y2": 49900
+                    "y2": 67500
                 },
                 {
                     "abstract": false,
@@ -6760,7 +7468,7 @@
                             "x1": 39900,
                             "x2": 42900,
                             "y1": 7300,
-                            "y2": 54300
+                            "y2": 71900
                         },
                         {
                             "class": "Text",
@@ -6786,7 +7494,7 @@
                     "x1": 36000,
                     "x2": 42900,
                     "y1": 7300,
-                    "y2": 54300
+                    "y2": 71900
                 },
                 {
                     "class": "Port",
@@ -6855,7 +7563,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_PCHDL"
+                        "subcktName": "SUNTR_PCHDL2"
                     },
                     {
                         "class": "cIcSpice::SubcktInstance",
@@ -6870,7 +7578,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_PCHDL"
+                        "subcktName": "SUNTR_PCHDL2"
                     },
                     {
                         "class": "cIcSpice::SubcktInstance",
@@ -6885,7 +7593,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_PCHDL"
+                        "subcktName": "SUNTR_PCHDL2"
                     },
                     {
                         "class": "cIcSpice::SubcktInstance",
@@ -6900,7 +7608,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_PCHDL"
+                        "subcktName": "SUNTR_PCHDL2"
                     },
                     {
                         "class": "cIcSpice::SubcktInstance",
@@ -6915,7 +7623,7 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_PCHDL"
+                        "subcktName": "SUNTR_PCHDL2"
                     },
                     {
                         "class": "cIcSpice::SubcktInstance",
@@ -6930,7 +7638,37 @@
                         ],
                         "properties": {
                         },
-                        "subcktName": "SUNTR_PCHDL"
+                        "subcktName": "SUNTR_PCHDL2"
+                    },
+                    {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "M",
+                        "name": "M6",
+                        "nodes": [
+                            "D",
+                            "G",
+                            "S",
+                            "B"
+                        ],
+                        "properties": {
+                        },
+                        "subcktName": "SUNTR_PCHDL2"
+                    },
+                    {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "M",
+                        "name": "M7",
+                        "nodes": [
+                            "S",
+                            "G",
+                            "D",
+                            "B"
+                        ],
+                        "properties": {
+                        },
+                        "subcktName": "SUNTR_PCHDL2"
                     }
                 ],
                 "name": "SUNTR_PCHDLA",
@@ -6959,7 +7697,7 @@
             "x1": 0,
             "x2": 63000,
             "y1": 0,
-            "y2": 61600
+            "y2": 79200
         },
         {
             "abstract": false,
@@ -8053,8 +8791,8 @@
                             "net": "",
                             "x1": 31500,
                             "x2": 31500,
-                            "y1": 83600,
-                            "y2": 83600
+                            "y1": 92400,
+                            "y2": 92400
                         }
                     ],
                     "class": "Instance",
@@ -8082,7 +8820,7 @@
                     "x2": 63000,
                     "xcell": 0,
                     "y1": 52800,
-                    "y2": 114400,
+                    "y2": 132000,
                     "ycell": 0
                 },
                 {
@@ -8279,7 +9017,7 @@
             "x1": 0,
             "x2": 63000,
             "y1": 0,
-            "y2": 114400
+            "y2": 132000
         },
         {
             "abstract": false,
@@ -79564,6 +80302,6 @@
         "library": "SUN_TR_SKY130NM",
         "prefix": "",
         "rules": "../cic/sky130.tech",
-        "version": "0.1.4+ built on Mon Oct 10 12:42:10 CEST 2022"
+        "version": "0.1.4+ built on Wed Oct 12 19:50:38 CEST 2022"
     }
 }

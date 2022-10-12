@@ -7,30 +7,34 @@ VIEW=Sch
 OPT=
 
 all:
-	make tfs tfsp TB=idgm_lvt OPT=${OPT}
-	make tfs tfsp TB=idgm OPT=${OPT}
+	make tfs TB=idgm_nchdla
+	make tfs TB=idgm_nchdl
+	make tfs TB=idgm_nchdlcm
+	make tfs TB=idgm_pchdla
+	make tfs TB=idgm_pchdl
+	make tfs TB=idgm_pchdlcm
+
 
 typical:
-	cicsim runng ${TB} ${OPT} ${VIEW} Gt Mtt Rt Ct Tt Vt Dt Bt
+	cicsim runng ${TB} ${OPT} ${VIEW} Gt Att Tt Vt
 
 slow:
-	cicsim runng ${TB} ${OPT} ${VIEW} Gt Mss Rh Ch Bf Df "Th,Tl" Vl
+	cicsim runng ${TB} ${OPT} ${VIEW} Gt Ass "Th,Tl" Vl
 
 fast:
-	cicsim runng ${TB} ${OPT} ${VIEW} Gt Mff Rl Cl Bs Ds "Th,Tl" Vh
+	cicsim runng ${TB} ${OPT} ${VIEW} Gt Aff "Th,Tl" Vh
 
 tfs:
-	cicsim runng ${TB} ${OPT} ${VIEW} Gt "Mtt,Mss,Mff" Rl Cl Bs Ds "Tt,Th,Tl" Vt
+	cicsim runng ${TB} ${OPT} ${VIEW} Gt "Att,Ass,Aff"  "Tt,Th,Tl" Vt
 
 ttffss:
-	cicsim runng ${TB} ${OPT} ${VIEW} Gt "Mtt,Mss,Mff" Rl Cl Bs Ds "Tt" Vt
+	cicsim runng ${TB} ${OPT} ${VIEW} Gt "Att,Ass,Aff" "Tt" Vt
 
 temp:
-	cicsim runng ${TB} ${OPT} ${VIEW} Gt "Mtt" Rl Cl Bs Ds "Tt,Th,Tl" Vt
+	cicsim runng ${TB} ${OPT} ${VIEW} Gt "Att" "Tt,Th,Tl" Vt
 
 tfsp:
-	python3 plot_idgm.py ${TB}_${VIEW}GtMttMssMffRlClBsDsTtThTlVt.run ${OPT}
-
+	python3 plot_idgm.py ${TB}_${VIEW}GtAttAssAffTtThTlVt.run ${OPT}
 
 test:
 	${MAKE} tfs tfsp

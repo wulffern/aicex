@@ -125,7 +125,7 @@ C {sky130_fd_pr/pnp_05v5.sym} 300 -100 0 0 {name=Q2[7:0]
 model=pnp_05v5_W3p40L3p40
 spiceprefix=X
 }
-C {SUN_TR_SKY130NM/SUNTR_RPPO8.sym} 320 -240 1 0 {name=x2 xoffset=0 yoffset=0 angle=0 M=1}
+C {SUN_TR_SKY130NM/SUNTR_RPPO16.sym} 320 -240 1 0 {name=x2 xoffset=0 yoffset=0 angle=0 M=1}
 C {SUN_TR_SKY130NM/SUNTR_CAP_20.sym} 140 -750 0 0 {name=x3<2:0> xoffset=0 yoffset=0 angle=0 M=1}
 C {RPLY_TEMP_SKY130A/RPLYTEMP_OTA.sym} 150 -540 3 0 {name=xota}
 C {devices/lab_pin.sym} 110 -370 3 0 {name=l1 sig_type=std_logic lab=VDD_1V8}

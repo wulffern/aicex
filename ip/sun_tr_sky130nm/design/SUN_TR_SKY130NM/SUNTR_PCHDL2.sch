@@ -9,7 +9,7 @@ C {devices/iopin.sym} 0 20 0 0{name=p1 lab=G}
 C {devices/iopin.sym} 0 40 0 0{name=p2 lab=S}
 C {devices/iopin.sym} 0 60 0 0{name=p3 lab=B}
 C {sky130_fd_pr/pfet_01v8.sym} 400 0 0 0 {name=M1
-L=0.18
+L=0.28
 W=1.08
 nf=1
 mult=1

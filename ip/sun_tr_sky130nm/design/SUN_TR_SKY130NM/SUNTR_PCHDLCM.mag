@@ -10,10 +10,10 @@ rect 1152 132 1368 220
 rect 288 410 504 470
 rect 720 146 936 206
 rect 288 58 504 118
-use SUNTR_PCHDL M0
+use SUNTR_PCHDL2 M0
 transform 1 0 0 0 1 0
 box 0 0 1260 352
-use SUNTR_PCHDL M7
+use SUNTR_PCHDL2 M7
 transform 1 0 0 0 1 176
 box 0 176 1260 528
 << labels >>

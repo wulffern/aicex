@@ -48,22 +48,22 @@ test:
 	python3 results.py
 
 typical:
-	cicsim runng ${TB} ${OPT} ${VIEW} Gt Mtt Rt Ct Tt Vt Dt Bt
+	cicsim runng ${TB} ${OPT} ${VIEW} Gt Att Tt Vt
 
 slow:
-	cicsim runng ${TB} ${OPT} ${VIEW} Gt Mss Rh Ch Bf Df "Th,Tl" Vl
+	cicsim runng ${TB} ${OPT} ${VIEW} Gt Ass "Th,Tl" Vl
 
 fast:
-	cicsim runng ${TB} ${OPT} ${VIEW} Gt Mff Rl Cl Bs Ds "Th,Tl" Vh
+	cicsim runng ${TB} ${OPT} ${VIEW} Gt Aff "Th,Tl" Vh
 
 tfs:
-	cicsim runng ${TB} ${OPT} ${VIEW} Gt "Mtt,Mss,Mff" Rl Cl Bs Ds "Tt,Th,Tl" Vt
+	cicsim runng ${TB} ${OPT} ${VIEW} Gt "Att,Ass,Aff"  "Tt,Th,Tl" Vt
 
 ttffss:
-	cicsim runng ${TB} ${OPT} ${VIEW} Gt "Mtt,Mss,Mff" Rl Cl Bs Ds "Tt" Vt
+	cicsim runng ${TB} ${OPT} ${VIEW} Gt "Att,Ass,Aff" "Tt" Vt
 
 temp:
-	cicsim runng ${TB} ${OPT} ${VIEW} Gt "Mtt" Rl Cl Bs Ds "Tt,Th,Tl" Vt
+	cicsim runng ${TB} ${OPT} ${VIEW} Gt "Att" "Tt,Th,Tl" Vt
 
 doc:
 	pandoc -s README.md -o README.html

@@ -6,9 +6,8 @@
 *.ipin CK_REF
 *.opin CK
 *.ipin IBPSR_1U
-+ angle=0
 xaa0 AVDD CP_UP_N CK_REF CP_DOWN CK_FB AVSS SUN_PLL_PFD xoffset=0 yoffset=5 angle=0
-xaa1 AVDD CP_UP_N VLPF CP_DOWN IBPSR_1U AVSS VLPFZ PWRUP_1V8 KICK SUN_PLL_CP xoffset=0 yoffset=5
+xaa1 AVDD CP_UP_N VLPF CP_DOWN IBPSR_1U AVSS VLPFZ PWRUP_1V8 KICK SUN_PLL_CP xoffset=0 yoffset=5  angle=0
 xaa3 AVDD KICK net1 PWRUP_1V8 AVSS PWRUP_1V8_N SUN_PLL_KICK xoffset=20 yoffset=0 angle=0
 xaa4 AVDD VDD_ROSC VLPF VDD_ROSC IBPSR_1U AVSS SUN_PLL_BUF xoffset=0 yoffset=0 angle=0
 xaa5 AVDD CK VDD_ROSC PWRUP_1V8 AVSS SUN_PLL_ROSC xoffset=5 yoffset=0 angle=0
@@ -90,8 +89,6 @@ xa3 IBPSR_1U IBPSR_1U AVSS AVSS SUNTR_NCHDLCM xoffset=0 yoffset=0 angle=0 M=10
 *.ipin VI
 *.opin VO
 *.ipin VFB
-*  xd2 -  SUNSAR_CAP_BSSW_CV  IS MISSING !!!!
-*  xd3 -  SUNSAR_CAP_BSSW_CV  IS MISSING !!!!
 xa1 VS VBN AVSS AVSS SUNTR_NCHDLCM xoffset=0 yoffset=0 angle=0 M=1
 xa2 VDP VFB VS AVSS SUNTR_NCHDLA xoffset=0 yoffset=0 angle=0 M=1
 xa4 VGP VI VS AVSS SUNTR_NCHDLA xoffset=0 yoffset=0 angle=0 M=1
@@ -100,6 +97,8 @@ xc2 VDP VDP AVDD AVDD SUNTR_PCHDLA xoffset=0 yoffset=0 angle=0 M=1
 xc3_0 VO VGP AVDD AVDD SUNTR_PCHDLA xoffset=0 yoffset=0 angle=0 M=1
 xc3_1 VO VGP AVDD AVDD SUNTR_PCHDLA xoffset=0 yoffset=0 angle=0 M=1
 xc3_2 VO VGP AVDD AVDD SUNTR_PCHDLA xoffset=0 yoffset=0 angle=0 M=1
+xd2 VO AVSS SUNSAR_CAP_BSSW_CV xoffset=2 yoffset=0 angle=0 M=1
+xd3 VO AVSS SUNSAR_CAP_BSSW_CV xoffset=0 yoffset=0 angle=0 M=8
 .ends
 
 
@@ -128,7 +127,7 @@ xb3 VLPFZ AVSS CAP_LPF xoffset=0 yoffset=0 angle=0 M=48
 *+ /Users/wulff/Documents/pro/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_CP.sym
 ** sch_path:
 *+ /Users/wulff/Documents/pro/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_CP.sch
-.subckt SUN_PLL_CP  AVDD CP_UP_N LPF CP_DOWN VBN AVSS LPFZ PWRUP_1V8 KICK   xoffset=0 yoffset=0
+.subckt SUN_PLL_CP  AVDD CP_UP_N LPF CP_DOWN VBN AVSS LPFZ PWRUP_1V8 KICK   xoffset=0 yoffset=0  angle=0
 *.ipin AVDD
 *.ipin CP_UP_N
 *.ipin CP_DOWN
@@ -138,7 +137,6 @@ xb3 VLPFZ AVSS CAP_LPF xoffset=0 yoffset=0 angle=0 M=48
 *.ipin PWRUP_1V8
 *.opin LPFZ
 *.ipin KICK
-+ angle=0
 xa1 VBP VBN AVSS AVSS SUNTR_NCHDLCM xoffset=0 yoffset=0 angle=0 M=1
 xa2 VNS VBN AVSS AVSS SUNTR_NCHDLCM xoffset=0 yoffset=0 angle=0 M=1
 xa3 LPF CP_DOWN VNS AVSS SUNTR_NCHDL xoffset=0 yoffset=0 angle=0 M=1
@@ -221,6 +219,19 @@ xc1a net2 YN AVDD AVDD SUNTR_PCHDL xoffset=0 yoffset=0 angle=0 M=1
 xc1b Y YN net2 AVDD SUNTR_PCHDL xoffset=0 yoffset=0 angle=0 M=1
 xc2a net1 Y AVDD AVDD SUNTR_PCHDL xoffset=0 yoffset=0 angle=0 M=1
 xc2b YN Y net1 AVDD SUNTR_PCHDL xoffset=0 yoffset=0 angle=0 M=1
+.ends
+
+
+* expanding   symbol:  SUN_SAR9B_SKY130NM/SUNSAR_CAP_BSSW_CV.sym # of pins=2
+** sym_path:
+*+ /Users/wulff/Documents/pro/aicex/ip/sun_sar9b_sky130nm/design/SUN_SAR9B_SKY130NM/SUNSAR_CAP_BSSW_CV.sym
+** sch_path:
+*+ /Users/wulff/Documents/pro/aicex/ip/sun_sar9b_sky130nm/design/SUN_SAR9B_SKY130NM/SUNSAR_CAP_BSSW_CV.sch
+.subckt SUNSAR_CAP_BSSW_CV  A B   xoffset=0 yoffset=0 angle=0 M=1
+*.iopin A
+*.iopin B
+R1 A NC0 sky130_fd_pr__res_generic_m1 W=0.44 L=0.36 m=1
+R2 B NC1 sky130_fd_pr__res_generic_m1 W=0.44 L=0.36 m=1
 .ends
 
 

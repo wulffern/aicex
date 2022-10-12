@@ -32,8 +32,15 @@ XM3 EN1 N2 VSS VSS SUNTR_NCHDL
 
 B1 gm 0 v=(i(E0) - i(E1))/1u
 B2 idsq 0 v=i(INN)/3
+B3 gmid 0 v=v(gm)/i(inn)
 
-.probe i(inn) i(e0) i(e1) v(n1) v(gm) v(EN1) v(EN0) v(idsq)
+.measure dc NCHDL_gmid10_id find i(INN) when v(gmid)=10
+.measure dc NCHDL_gmid10_vgs find v(N1) when v(gmid)=10
+.measure dc NCHDL_gmid20_id find i(INN) when v(gmid)=20
+.measure dc NCHDL_gmid20_vgs find v(N1) when v(gmid)=20
+
+
+.probe i(inn) i(e0) i(e1) v(n1) v(gm) v(EN1) v(EN0) v(idsq) v(gmid)
 *----------------------------------------------------------------
 * Control
 *----------------------------------------------------------------

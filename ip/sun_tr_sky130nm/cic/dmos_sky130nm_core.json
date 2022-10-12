@@ -183,14 +183,15 @@
               ]
           ]
         },
-        { "name" : "PCHDL",
+
+         { "name" : "PCHDL",
 		  "xoffset" : 0.0,
           "inherit" : "DMOS_BULKP",
           "meta" : {
               "symbol" : "pch"
           },
           "abstract" : 0,
-          "type" : "pch_lvt",
+          "type" : "pch",
           "beforePlace" :{
               "addEnclosuresByRectangle" : [
                   ["PDIFF",[0,-1,20,7],["NWT"]]
@@ -199,10 +200,12 @@
         },
          { "name" : "PCHDL2",
           "inherit" : "PCHDL",
-           "minPolyLength" : 18.0
+           "afterNew":{
+           "minPolyLength" : 14.0
+           }
         },
 
-        { "name" : "NCHDL",
+         { "name" : "NCHDL",
           "inherit" : "DMOS_BULKN",
           "meta" : {
               "symbol" : "nch"
@@ -212,15 +215,21 @@
           "afterNew" : {
               "mirrorPatternString" : 1
           },
-          "type" : "nch_lvt",
+          "type" : "nch",
           "beforePlace" :{
               "addEnclosuresByRectangle" : [
                   ["NDIFF",[-1,-1,20,7],["PWT"]]
               ]
           }
         },
+        { "name" : "NCHDL2",
+          "inherit" : "NCHDL",
+          "afterNew":{
+              "minPolyLength" : 14.0
+          }
+        },
 
-        { "name" : "NCHDLR", "type" : "nch_lvt",
+        { "name" : "NCHDLR", "type" : "nch",
           "inherit" : "NCHDL", "afterPaint" : { "mirrorCenterX" : 0 },
           "xoffset" : -1.5,
           "widthoffset" : 2

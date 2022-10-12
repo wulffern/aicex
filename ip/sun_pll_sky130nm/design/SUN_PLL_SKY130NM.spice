@@ -210,6 +210,13 @@ XMP1 NC1 NC1 NC1 AVDD SUNTRB_PCHDL
 .ENDS
 
 *-------------------------------------------------------------
+* SUNSAR_CAP_BSSW_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNSAR_CAP_BSSW_CV A B
+C1 A B 100f
+.ENDS
+
+*-------------------------------------------------------------
 * CAP_LPF <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
 .SUBCKT CAP_LPF A B
@@ -245,6 +252,15 @@ xc20 VDP VDP AVDD AVDD SUNTR_PCHDLA
 xc3_00 VO VGP AVDD AVDD SUNTR_PCHDLA
 xc3_10 VO VGP AVDD AVDD SUNTR_PCHDLA
 xc3_20 VO VGP AVDD AVDD SUNTR_PCHDLA
+xd20 VO AVSS SUNSAR_CAP_BSSW_CV
+xd30 VO AVSS SUNSAR_CAP_BSSW_CV
+xd31 VO AVSS SUNSAR_CAP_BSSW_CV
+xd32 VO AVSS SUNSAR_CAP_BSSW_CV
+xd33 VO AVSS SUNSAR_CAP_BSSW_CV
+xd34 VO AVSS SUNSAR_CAP_BSSW_CV
+xd35 VO AVSS SUNSAR_CAP_BSSW_CV
+xd36 VO AVSS SUNSAR_CAP_BSSW_CV
+xd37 VO AVSS SUNSAR_CAP_BSSW_CV
 .ENDS
 
 *-------------------------------------------------------------

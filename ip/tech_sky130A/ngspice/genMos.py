@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 
 
+pdk = "../../tech/pdk/sky130A/libs.ref/sky130_fd_pr/spice"
 
-pdk = "../../models/skywater-pdk-libs-sky130_fd_pr"
+
 
 corners = { "Mtt" : "tt",
             "Mff" : "ff",
@@ -18,16 +19,21 @@ lbheader = """
 
 lbfooter = """
 
-.include "../{pdk}/models/all.spice"
+.include ""../../../tech/pdk/sky130A/libs.tech/ngspice/all.spice"
 .endl
 * end {key}
 
 """
 
 tmpl = """
-.include "../{pdk}/cells/{device}/sky130_fd_pr__{device}__{corner}.corner.spice"
-.include "../{pdk}/cells/{device}/sky130_fd_pr__{device}__mismatch.corner.spice"
+.include "../{pdk}/sky130_fd_pr__{device}__{corner}.corner.spice"
+.include "../{pdk}/sky130_fd_pr__{device}__mismatch.corner.spice"
 """
+
+#tmpl = """
+#.include "../{pdk}/cells/{device}/sky130_fd_pr__{device}__{corner}.corner.spice"
+#.include "../{pdk}/cells/{device}/sky130_fd_pr__{device}__mismatch.corner.spice"
+#"""
 
 devices = [
     "nfet_01v8",

@@ -30,6 +30,16 @@ input logic D;
 endmodule
 
 //-------------------------------------------------------------
+// SUNTR_NCHDL2 <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module SUNTR_NCHDL2(D,G,S,B);
+input logic G;
+input logic S;
+input logic B;
+input logic D;
+endmodule
+
+//-------------------------------------------------------------
 // SUNTR_NCHDLR <class 'cicpy.core.layoutcell.LayoutCell'>
 //-------------------------------------------------------------
 module SUNTR_NCHDLR(D,G,S,B);
@@ -55,15 +65,15 @@ input logic B;
 input logic D;
 input logic G;
 input logic S;
-SUNTR_NCHDL M0 (N0,G,S,B);
-SUNTR_NCHDL M1 (N1,G,N0,B);
-SUNTR_NCHDL M2 (N2,G,N1,B);
-SUNTR_NCHDL M3 (N3,G,N2,B);
-SUNTR_NCHDL M4 (N4,G,N3,B);
-SUNTR_NCHDL M5 (N5,G,N4,B);
-SUNTR_NCHDL M6 (N6,G,N5,B);
-SUNTR_NCHDL M7 (N7,G,N6,B);
-SUNTR_NCHDL M8 (D,G,N7,B);
+SUNTR_NCHDL2 M0 (N0,G,S,B);
+SUNTR_NCHDL2 M1 (N1,G,N0,B);
+SUNTR_NCHDL2 M2 (N2,G,N1,B);
+SUNTR_NCHDL2 M3 (N3,G,N2,B);
+SUNTR_NCHDL2 M4 (N4,G,N3,B);
+SUNTR_NCHDL2 M5 (N5,G,N4,B);
+SUNTR_NCHDL2 M6 (N6,G,N5,B);
+SUNTR_NCHDL2 M7 (N7,G,N6,B);
+SUNTR_NCHDL2 M8 (D,G,N7,B);
 endmodule
 
 //-------------------------------------------------------------
@@ -74,8 +84,8 @@ input logic B;
 input logic D;
 input logic G;
 input logic S;
-SUNTR_PCHDL M0 (N0,G,S,B);
-SUNTR_PCHDL M7 (D,G,N0,B);
+SUNTR_PCHDL2 M0 (N0,G,S,B);
+SUNTR_PCHDL2 M7 (D,G,N0,B);
 endmodule
 
 //-------------------------------------------------------------
@@ -86,8 +96,8 @@ input logic B;
 input logic D;
 input logic G;
 input logic S;
-SUNTR_NCHDL M0 (D,G,S,B);
-SUNTR_NCHDL M1 (S,G,D,B);
+SUNTR_NCHDL2 M0 (D,G,S,B);
+SUNTR_NCHDL2 M1 (S,G,D,B);
 endmodule
 
 //-------------------------------------------------------------
@@ -98,12 +108,14 @@ input logic B;
 input logic D;
 input logic G;
 input logic S;
-SUNTR_PCHDL M0 (D,G,S,B);
-SUNTR_PCHDL M1 (S,G,D,B);
-SUNTR_PCHDL M2 (D,G,S,B);
-SUNTR_PCHDL M3 (S,G,D,B);
-SUNTR_PCHDL M4 (D,G,S,B);
-SUNTR_PCHDL M5 (S,G,D,B);
+SUNTR_PCHDL2 M0 (D,G,S,B);
+SUNTR_PCHDL2 M1 (S,G,D,B);
+SUNTR_PCHDL2 M2 (D,G,S,B);
+SUNTR_PCHDL2 M3 (S,G,D,B);
+SUNTR_PCHDL2 M4 (D,G,S,B);
+SUNTR_PCHDL2 M5 (S,G,D,B);
+SUNTR_PCHDL2 M6 (D,G,S,B);
+SUNTR_PCHDL2 M7 (S,G,D,B);
 endmodule
 
 //-------------------------------------------------------------
