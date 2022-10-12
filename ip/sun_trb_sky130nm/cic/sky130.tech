@@ -91,7 +91,7 @@
             "mresM2" : { "inherit" : "mresM1", "name" : "sky130_fd_pr__res_generic_m1"},
             "mresM3" : { "inherit" : "mresM1", "name" : "sky130_fd_pr__res_generic_m2"},
             "mresM4" : { "inherit" : "mresM1", "name" : "sky130_fd_pr__res_generic_m3"},
-            "nch_lvt" : { "name" : "sky130_fd_pr__nfet_01v8",    "ports" : ["D","G","S","B"],
+            "nch" : { "name" : "sky130_fd_pr__nfet_01v8",    "ports" : ["D","G","S","B"],
                           "devicetype" : "XM",
                           "propertymap" : {
                               "l" : { "name" : "length", "str" : ""},
@@ -99,7 +99,7 @@
                               "w" : { "name" : "width", "str" : ""}
                           }
                         },
-            "pch_lvt"     : { "inherit" : "nch_lvt", "devicetype" : "XM", "name" : "sky130_fd_pr__pfet_01v8" }
+            "pch"     : { "inherit" : "nch", "devicetype" : "XM", "name" : "sky130_fd_pr__pfet_01v8" }
 
         },
         "symbol_lib" : "cpdk",

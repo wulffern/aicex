@@ -1778,7 +1778,7 @@
                 "devices": [
                     {
                         "class": "cIcSpice::Mosfet",
-                        "deviceName": "pch_lvt",
+                        "deviceName": "pch",
                         "name": "M1",
                         "nodes": [
                             "D",
@@ -2286,7 +2286,7 @@
                 "devices": [
                     {
                         "class": "cIcSpice::Mosfet",
-                        "deviceName": "nch_lvt",
+                        "deviceName": "nch",
                         "name": "M1",
                         "nodes": [
                             "D",
@@ -2794,7 +2794,7 @@
                 "devices": [
                     {
                         "class": "cIcSpice::Mosfet",
-                        "deviceName": "nch_lvt",
+                        "deviceName": "nch",
                         "name": "M1",
                         "nodes": [
                             "D",
@@ -26858,6 +26858,6 @@
         "library": "SUN_TRB_SKY130NM",
         "prefix": "",
         "rules": "../cic/sky130.tech",
-        "version": "0.1.4+ built on Mon Oct 10 12:42:10 CEST 2022"
+        "version": "0.1.4+ built on Wed Oct 12 19:50:38 CEST 2022"
     }
 }

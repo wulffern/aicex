@@ -40,6 +40,7 @@ B4 vgs 0 v=v(vdd)-v(n1)
 .measure dc PCHDL_gmid20_id find i(INN) when v(gmid)=20
 .measure dc PCHDL_gmid20_vgs find v(vgs) when v(gmid)=20
 
+*.save @XM1.XMM1M1[gm]
 
 .probe i(inn) i(e0) i(e1) v(n1) v(gm) v(EN1) v(EN0) v(idsq) v(gmid) v(vgs)
 *----------------------------------------------------------------
