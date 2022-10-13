@@ -123,25 +123,23 @@ lab=VDD_1V8}
 N 480 -1130 480 -610 {
 lab=VO}
 N 190 -1290 220 -1290 {
-lab=PWRUP_N_1V8}
+lab=PWRUP_1V8}
 N 190 -1340 190 -1290 {
-lab=PWRUP_N_1V8}
+lab=PWRUP_1V8}
 N 10 -1290 50 -1290 {
-lab=PWRUP_N_1V8}
+lab=PWRUP_1V8}
 N 10 -1340 10 -1290 {
-lab=PWRUP_N_1V8}
+lab=PWRUP_1V8}
 N -360 -1230 -120 -1230 {
 lab=VDD_1V8}
 N 170 -910 170 -890 {
 lab=#net1}
 N 210 -1000 210 -840 {
 lab=VDD_1V8}
-N 170 -1000 210 -1000 {
+N 170 -1100 210 -1100 {
 lab=VDD_1V8}
 N 170 -1000 170 -990 {
-lab=VDD_1V8}
-N 170 -1230 170 -1000 {
-lab=VDD_1V8}
+lab=#net2}
 N 100 -950 150 -950 {
 lab=VSS}
 N -90 -1070 -30 -1070 {
@@ -175,9 +173,9 @@ lab=VO}
 N 670 -580 710 -580 {
 lab=KICK_1V8}
 N 10 -1340 190 -1340 {
-lab=PWRUP_N_1V8}
+lab=PWRUP_1V8}
 N 190 -1340 260 -1340 {
-lab=PWRUP_N_1V8}
+lab=PWRUP_1V8}
 N -780 -520 -140 -520 {
 lab=VSS}
 N -330 -880 -320 -880 {
@@ -260,19 +258,27 @@ N -590 -770 -470 -770 {
 lab=PWRUP_N_1V8}
 N -590 -770 -590 -670 {
 lab=PWRUP_N_1V8}
+N 210 -1100 210 -1000 {
+lab=VDD_1V8}
+N 170 -1020 170 -1000 {
+lab=#net2}
+N 170 -1230 170 -1100 {
+lab=VDD_1V8}
+N 110 -1060 150 -1060 {}
+N 110 -1060 110 -950 {}
 C {cborder/border_s.sym} 400 -480 0 0 {}
-C {SUN_TR_SKY130NM/SUNTR_PCHDLCM2.sym} 440 -1180 0 0 {name=x1 xoffset=0 yoffset=0 angle=0 M=1}
-C {SUN_TR_SKY130NM/SUNTR_PCHDLCM2.sym} -50 -1180 0 1 {name=x2 xoffset=0 yoffset=0 angle=0 M=1}
+C {SUN_TR_SKY130NM/SUNTR_PCHLCM.sym} 440 -1180 0 0 {name=x1 xoffset=0 yoffset=0 angle=0 M=1}
+C {SUN_TR_SKY130NM/SUNTR_PCHLCM.sym} -50 -1180 0 1 {name=x2 xoffset=0 yoffset=0 angle=0 M=1}
 C {SUN_TR_SKY130NM/SUNTR_PCHDL.sym} 220 -1290 0 0 {name=x3 xoffset=0 yoffset=0 angle=0 M=1}
 C {SUN_TR_SKY130NM/SUNTR_PCHDL.sym} 50 -1290 0 0 {name=x4 xoffset=0 yoffset=0 angle=0 M=1}
-C {SUN_TR_SKY130NM/SUNTR_NCHDLCM2.sym} 440 -580 0 0 {name=x7 xoffset=0 yoffset=0 angle=0 M=1}
-C {SUN_TR_SKY130NM/SUNTR_NCHDLCM2.sym} -50 -580 0 1 {name=x8 xoffset=0 yoffset=0 angle=0 M=1}
-C {SUN_TR_SKY130NM/SUNTR_NCHDLCM2.sym} 50 -580 0 0 {name=x9 xoffset=0 yoffset=0 angle=0 M=1}
-C {SUN_TR_SKY130NM/SUNTR_NCHDLCM2.sym} 310 -580 0 1 {name=x10 xoffset=0 yoffset=0 angle=0 M=1}
+C {SUN_TR_SKY130NM/SUNTR_NCHLCM.sym} 440 -580 0 0 {name=x7 xoffset=0 yoffset=0 angle=0 M=1}
+C {SUN_TR_SKY130NM/SUNTR_NCHLCM.sym} -50 -580 0 1 {name=x8 xoffset=0 yoffset=0 angle=0 M=1}
+C {SUN_TR_SKY130NM/SUNTR_NCHLCM.sym} 50 -580 0 0 {name=x9 xoffset=0 yoffset=0 angle=0 M=1}
+C {SUN_TR_SKY130NM/SUNTR_NCHLCM.sym} 310 -580 0 1 {name=x10 xoffset=0 yoffset=0 angle=0 M=1}
 C {SUN_TR_SKY130NM/SUNTR_NCHDL.sym} -20 -440 0 0 {name=x11 xoffset=0 yoffset=0 angle=0 M=1}
 C {SUN_TR_SKY130NM/SUNTR_NCHDL.sym} 320 -440 0 0 {name=x12 xoffset=0 yoffset=0 angle=0 M=1}
-C {SUN_TR_SKY130NM/SUNTR_PCHDLA.sym} 50 -840 0 0 {name=x5 xoffset=0 yoffset=0 angle=0 M=1}
-C {SUN_TR_SKY130NM/SUNTR_PCHDLA.sym} 310 -840 0 1 {name=x6 xoffset=0 yoffset=0 angle=0 M=1}
+C {SUN_TR_SKY130NM/SUNTR_PCHDLA.sym} 50 -840 0 0 {name=x5[5:0] xoffset=0 yoffset=0 angle=0 M=1}
+C {SUN_TR_SKY130NM/SUNTR_PCHDLA.sym} 310 -840 0 1 {name=x6[5:0] xoffset=0 yoffset=0 angle=0 M=1}
 C {devices/ipin.sym} -360 -1230 0 0 {name=p1 lab=VDD_1V8}
 C {SUN_TR_SKY130NM/SUNTR_RPPO16.sym} 170 -990 1 0 {name=x13 xoffset=0 yoffset=0 angle=0 M=1}
 C {devices/lab_pin.sym} 100 -950 0 0 {name=l1 sig_type=std_logic lab=VSS}
@@ -307,3 +313,4 @@ C {SUN_TR_SKY130NM/SUNTR_IVX1_CV.sym} -500 -840 0 0 {name=x22 xoffset=0 yoffset=
 C {devices/lab_pin.sym} -390 -850 3 1 {name=l16 sig_type=std_logic lab=D5}
 C {SUN_TR_SKY130NM/SUNTR_IVX1_CV.sym} -610 -840 0 0 {name=x23 xoffset=0 yoffset=0 angle=0 M=1}
 C {devices/lab_pin.sym} -510 -840 3 1 {name=l17 sig_type=std_logic lab=D4}
+C {SUN_TR_SKY130NM/SUNTR_RPPO16.sym} 170 -1100 1 0 {name=x5 xoffset=0 yoffset=0 angle=0 M=1}

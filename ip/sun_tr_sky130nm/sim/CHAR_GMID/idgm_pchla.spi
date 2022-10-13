@@ -26,19 +26,19 @@ VD1 N2 N1 dc 1u
 *----------------------------------------------------------------
 * DUT
 *----------------------------------------------------------------
-XM1 N1 N1 VDD VDD SUNTR_PCHDLCM
-XM2 EN0 N1 VDD VDD SUNTR_PCHDLCM
-XM3 EN1 N2 VDD VDD SUNTR_PCHDLCM
+XM1 N1 N1 VDD VDD SUNTR_PCHLA
+XM2 EN0 N1 VDD VDD SUNTR_PCHLA
+XM3 EN1 N2 VDD VDD SUNTR_PCHLA
 
 B1 gm 0 v=(i(E0) - i(E1))/1u
 B2 idsq 0 v=i(INN)/3
 B3 gmid 0 v=v(gm)/i(inn)
 B4 vgs 0 v=v(vdd)-v(n1)
 
-.measure dc PCHDLCM_gmid10_id find i(INN) when v(gmid)=10
-.measure dc PCHDLCM_gmid10_vgs find v(vgs) when v(gmid)=10
-.measure dc PCHDLCM_gmid20_id find i(INN) when v(gmid)=20
-.measure dc PCHDLCM_gmid20_vgs find v(vgs) when v(gmid)=20
+.measure dc PCHLA_gmid10_id find i(INN) when v(gmid)=10
+.measure dc PCHLA_gmid10_vgs find v(vgs) when v(gmid)=10
+.measure dc PCHLA_gmid20_id find i(INN) when v(gmid)=20
+.measure dc PCHLA_gmid20_vgs find v(vgs) when v(gmid)=20
 
 *.save @XM1.XMM1M1[gm]
 

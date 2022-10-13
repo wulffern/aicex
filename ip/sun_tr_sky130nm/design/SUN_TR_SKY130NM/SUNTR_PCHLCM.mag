@@ -1,0 +1,29 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1664575200
+<< checkpaint >>
+rect 0 0 1260 1056
+<< locali >>
+rect 798 234 858 822
+rect 366 322 426 734
+rect 1152 220 1368 308
+rect 288 850 504 910
+rect 720 234 936 294
+rect 288 146 504 206
+use SUNTR_PCHL M0
+transform 1 0 0 0 1 0
+box 0 0 1260 528
+use SUNTR_PCHL M7
+transform 1 0 0 0 1 528
+box 0 528 1260 1056
+<< labels >>
+flabel locali s 1152 220 1368 308 0 FreeSans 400 0 0 0 B
+port 4 nsew
+flabel locali s 288 850 504 910 0 FreeSans 400 0 0 0 D
+port 1 nsew
+flabel locali s 720 234 936 294 0 FreeSans 400 0 0 0 G
+port 2 nsew
+flabel locali s 288 146 504 206 0 FreeSans 400 0 0 0 S
+port 3 nsew
+<< end >>

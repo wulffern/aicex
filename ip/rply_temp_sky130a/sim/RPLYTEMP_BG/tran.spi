@@ -21,7 +21,7 @@
 #ifdef Debug
 .option reltol=1e-3 srcsteps=1 ramptime=10n noopiter keepopinfo gmin=1e-12
 #else
-.option reltol=1e-5 srcsteps=1 ramptime=10n noopiter keepopinfo gmin=1e-15
+.option reltol=1e-5 srcsteps=1 ramptime=10n noopiter keepopinfo gmin=1e-15 method=gear
 #endif
 
 *-----------------------------------------------------------------
@@ -30,6 +30,7 @@
 .param TRF = 10p
 
 .param AVDD = {vdda}
+.param T_END = {390n}
 
 *-----------------------------------------------------------------
 * FORCE
@@ -49,17 +50,27 @@ XDUT VDD_1V8 VSS PWRUP_1V8 LPO LPO IBP_1U RPLYTEMP_BG
 
 V1 IBP_1U 0 dc {AVDD/2}
 
+B1 D_VD 0 v=v(XDUT.VR1)-v(XDUT.VD2)
+B2 D_VD_REF 0 v=1.38062e-23/1.60219e-19*(temper + 273.15)*ln(64)
+B3 D_VD_ERR 0 v=v(D_VD)-v(D_VD_REF)
 *----------------------------------------------------------------
 * PROBE
 *----------------------------------------------------------------
 
-.measure tran ibp_1u FIND i(V1) AT=100n
+.measure tran ibp_1u FIND i(V1) AT={T_END}
+.measure tran vd1 FIND v(XDUT.VD1) AT={T_END}
+.measure tran vd2 FIND v(XDUT.VD2) AT={T_END}
+.measure tran vr1 FIND v(XDUT.VR1) AT={T_END}
+.measure tran dvd FIND v(D_VD) AT={T_END}
+.measure tran dvdref FIND v(D_VD_REF) AT=100n
+.measure tran dvderr FIND v(D_VD_ERR) AT=100n
 
 
 #ifdef Debug
 .save all
 #else
-.probe v(VDD_1V8) v(VSS) v(PWRUP_1V8) v(LPI) v(LPO) v(IBP_1U) i(v1) v(XDUT.VD1) v(XDUT.VD2)
+.probe v(VDD_1V8) v(VSS) v(PWRUP_1V8) v(LPI) v(LPO) v(IBP_1U) i(v1)
++ v(XDUT.VD1) v(XDUT.VD2) v(XDUT.VR1) v(D_VD) v(D_VD_REF) v(D_VD_ERR)
 #endif
 
 *----------------------------------------------------------------
@@ -72,17 +83,13 @@ set color1=black
 unset askquit
 
 #ifdef Debug
-tran 1n 200n 1n
+tran 1n 400n 1n
 write
 *quit
 #else
-tran 1n 200n 1n
+tran 1n 400n 1n
 write
 quit
 #endif
 
 .endc
-
-.end
-
-

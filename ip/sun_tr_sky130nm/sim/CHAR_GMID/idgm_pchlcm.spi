@@ -35,10 +35,10 @@ B2 idsq 0 v=i(INN)/3
 B3 gmid 0 v=v(gm)/i(inn)
 B4 vgs 0 v=v(vdd)-v(n1)
 
-.measure dc PCHDL_gmid10_id find i(INN) when v(gmid)=10
-.measure dc PCHDL_gmid10_vgs find v(vgs) when v(gmid)=10
-.measure dc PCHDL_gmid20_id find i(INN) when v(gmid)=20
-.measure dc PCHDL_gmid20_vgs find v(vgs) when v(gmid)=20
+.measure dc PCHLCM_gmid10_id find i(INN) when v(gmid)=10
+.measure dc PCHLCM_gmid10_vgs find v(vgs) when v(gmid)=10
+.measure dc PCHLCM_gmid20_id find i(INN) when v(gmid)=20
+.measure dc PCHLCM_gmid20_vgs find v(vgs) when v(gmid)=20
 
 *.save @XM1.XMM1M1[gm]
 

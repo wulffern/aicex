@@ -41,9 +41,9 @@ lab=VDD_1V8}
 N 10 -720 280 -720 {
 lab=LPI}
 N 320 -690 320 -240 {
-lab=VD2}
+lab=VR1}
 N 320 -160 320 -130 {
-lab=#net1}
+lab=VD2}
 N 230 -200 300 -200 {
 lab=VSS}
 N 230 -200 230 -100 {
@@ -61,9 +61,9 @@ lab=VD1}
 N -30 -240 130 -240 {
 lab=VD1}
 N 150 -360 150 -240 {
-lab=VD2}
+lab=VR1}
 N 150 -240 320 -240 {
-lab=VD2}
+lab=VR1}
 N 110 -390 110 -370 {
 lab=VDD_1V8}
 N 130 -310 130 -240 {
@@ -73,7 +73,7 @@ lab=PWRUP_1V8}
 N 190 -390 190 -370 {
 lab=VSS}
 N 150 -390 150 -360 {
-lab=VD2}
+lab=VR1}
 N 140 -630 140 -610 {
 lab=LPO}
 N 170 -720 170 -690 {
@@ -115,8 +115,8 @@ C {devices/ipin.sym} 170 -380 3 0 {name=p3 lab=PWRUP_1V8}
 C {devices/opin.sym} 170 -700 1 0 {name=p6 lab=LPI}
 C {devices/opin.sym} 140 -620 3 0 {name=p7 lab=LPO}
 C {devices/opin.sym} 820 -630 0 0 {name=p8 lab=IBP_1U}
-C {SUN_TR_SKY130NM/SUNTR_PCHDLCM2.sym} 280 -720 0 0 {name=x1 xoffset=0 yoffset=0 angle=0 M=1}
-C {SUN_TR_SKY130NM/SUNTR_PCHDLCM2.sym} 10 -720 0 1 {name=x2[7:0] xoffset=0 yoffset=0 angle=0 M=1}
+C {SUN_TR_SKY130NM/SUNTR_PCHLCM.sym} 280 -720 0 0 {name=x1 xoffset=0 yoffset=0 angle=0 M=1}
+C {SUN_TR_SKY130NM/SUNTR_PCHLCM.sym} 10 -720 0 1 {name=x2[7:0] xoffset=0 yoffset=0 angle=0 M=1}
 C {sky130_fd_pr/pnp_05v5.sym} -50 -100 0 0 {name=Q1
 model=pnp_05v5_W3p40L3p40
 spiceprefix=X
@@ -126,10 +126,11 @@ model=pnp_05v5_W3p40L3p40
 spiceprefix=X
 }
 C {SUN_TR_SKY130NM/SUNTR_RPPO16.sym} 320 -240 1 0 {name=x2 xoffset=0 yoffset=0 angle=0 M=1}
-C {SUN_TR_SKY130NM/SUNTR_CAP_20.sym} 140 -750 0 0 {name=x3<2:0> xoffset=0 yoffset=0 angle=0 M=1}
+C {SUN_TR_SKY130NM/SUNTR_CAP_20.sym} 140 -750 0 0 {name=x3[5:0] xoffset=0 yoffset=0 angle=0 M=1}
 C {RPLY_TEMP_SKY130A/RPLYTEMP_OTA.sym} 150 -540 3 0 {name=xota}
 C {devices/lab_pin.sym} 110 -370 3 0 {name=l1 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_pin.sym} 190 -370 3 0 {name=l3 sig_type=std_logic lab=VSS}
-C {SUN_TR_SKY130NM/SUNTR_PCHDLCM2.sym} 470 -720 0 0 {name=x4 xoffset=0 yoffset=0 angle=0 M=1}
+C {SUN_TR_SKY130NM/SUNTR_PCHLCM.sym} 470 -720 0 0 {name=x4 xoffset=0 yoffset=0 angle=0 M=1}
 C {devices/lab_pin.sym} -30 -300 0 1 {name=l2 sig_type=std_logic lab=VD1}
-C {devices/lab_pin.sym} 320 -300 0 1 {name=l4 sig_type=std_logic lab=VD2}
+C {devices/lab_pin.sym} 320 -150 0 1 {name=l4 sig_type=std_logic lab=VD2}
+C {devices/lab_pin.sym} 320 -280 0 1 {name=l5 sig_type=std_logic lab=VR1}

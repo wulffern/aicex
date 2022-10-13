@@ -6,15 +6,15 @@ VIEW=Sch
 
 OPT=
 
+TBS=idgm_nchdla idgm_pchdla idgm_nchdlcm idgm_pchdlcm idgm_nchl idgm_pchl idgm_nchla idgm_pchla idgm_nchlcm idgm_pchlcm
+
+CORNER=tfs
 
 all:
-	make tfs TB=idgm_nchdla
-	make tfs TB=idgm_nchdl
-	make tfs TB=idgm_nchdlcm
-	make tfs TB=idgm_pchdla
-	make tfs TB=idgm_pchdl
-	make tfs TB=idgm_pchdlcm
+	${foreach f,${TBS}, make ${CORNER} TB=${f};}
 
+genspi:
+	python3 genspi.py
 
 typical:
 	cicsim runng ${TB} ${OPT} ${VIEW} Gt Att Tt Vt

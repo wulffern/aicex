@@ -44,7 +44,7 @@ for f in files:
 
 print("|Parameter|Min | Typ | Max| ")
 print("|:---| :-:| :-:| :-:| ")
-for c in df_all.columns:
+for c in sorted(df_all.columns):
     if("gmid" not in c):
         continue
     print("|%s | %.2g | %.2g | %.2g|" % (c,df_all[c].min(),df_all[c].mean(),df_all[c].max()))
