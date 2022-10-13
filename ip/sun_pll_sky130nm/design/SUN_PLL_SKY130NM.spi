@@ -62,6 +62,8 @@ XM2 D G S B SUNTR_PCHDL
 XM3 S G D B SUNTR_PCHDL
 XM4 D G S B SUNTR_PCHDL
 XM5 S G D B SUNTR_PCHDL
+XM6 D G S B SUNTR_PCHDL
+XM7 S G D B SUNTR_PCHDL
 .ENDS
 
 *-------------------------------------------------------------

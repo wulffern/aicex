@@ -10,7 +10,7 @@ cwd = ${shell pwd}
 
 
 test:
-	${foreach d, ${dirs}, cd ${cwd}; cd ${d} && make test ;}
+	${foreach d, ${dirs}, cd ${cwd}; cd ${d} && make test|| exit ;}
 
 
 
@@ -23,14 +23,8 @@ foss-sh:
 ci:
 	docker build -f Dockerfile . -t wulffern/aicex
 
-
 cish:
 	docker run --rm -it -i wulffern/aicex bash --login
 
 clean:
 	cd ip && find ./ -name "*.ext" -exec rm {} \;
-	cd models && find ./ -name "*.svg" -exec rm {} \;
-	cd models && find ./ -name "*.data" -exec rm {} \;
-	cd models && find ./ -name "*.json" -exec rm {} \;
-	cd models && find ./ -name "*.lef" -exec rm {} \;
-	cd models && find ./ -name "*.gds" -exec rm {} \;

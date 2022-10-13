@@ -22,6 +22,7 @@ jobs:
           source tests/install_ubuntu.sh
           source tests/install_cicsim.sh
           source tests/install_cicpy.sh
+          source tests/install_open_pdk.sh
       - name: Run test
         run:  |
           source tests/run_tests.sh

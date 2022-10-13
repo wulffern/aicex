@@ -1,4 +1,4 @@
-** sch_path: /Users/wulff/pro/aicex/ip/sun_pll_sky130nm/work/../design/SUN_PLL_SKY130NM/SUN_PLL.sch
+** sch_path: /Users/wulff/prog/aicex/ip/sun_pll_sky130nm/work/../design/SUN_PLL_SKY130NM/SUN_PLL.sch
 .subckt SUN_PLL AVDD AVSS PWRUP_1V8 CK_REF CK IBPSR_1U
 *.ipin AVDD
 *.ipin AVSS
@@ -17,10 +17,8 @@ xbb1 IBPSR_1U PWRUP_1V8_N AVSS SUN_PLL_BIAS xoffset=5 yoffset=0 angle=0
 .ends
 
 * expanding   symbol:  SUN_PLL_SKY130NM/SUN_PLL_ROSC.sym # of pins=5
-** sym_path:
-*+ /Users/wulff/Documents/pro/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_ROSC.sym
-** sch_path:
-*+ /Users/wulff/Documents/pro/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_ROSC.sch
+** sym_path: /Users/wulff/prog/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_ROSC.sym
+** sch_path: /Users/wulff/prog/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_ROSC.sch
 .subckt SUN_PLL_ROSC  AVDD CK VDD_ROSC PWRUP_1V8 AVSS   xoffset=0 yoffset=0 angle=0
 *.ipin PWRUP_1V8
 *.ipin VDD_ROSC
@@ -45,10 +43,8 @@ xb3 AVDD AVSS SUNTRB_TAPCELLBAVSS_CV xoffset=0 yoffset=0 angle=0 M=1
 
 
 * expanding   symbol:  SUN_PLL_SKY130NM/SUN_PLL_DIVN.sym # of pins=5
-** sym_path:
-*+ /Users/wulff/Documents/pro/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_DIVN.sym
-** sch_path:
-*+ /Users/wulff/Documents/pro/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_DIVN.sch
+** sym_path: /Users/wulff/prog/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_DIVN.sym
+** sch_path: /Users/wulff/prog/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_DIVN.sch
 .subckt SUN_PLL_DIVN  AVDD CK_FB CK PWRUP_1V8 AVSS   xoffset=0 yoffset=0 angle=0
 *.ipin PWRUP_1V8
 *.ipin CK
@@ -64,10 +60,8 @@ xg N6 CK PWRUP_1V8 D5 N6 AVDD AVSS SUNTR_DFRNQNX1_CV xoffset=0 yoffset=0 angle=0
 
 
 * expanding   symbol:  SUN_PLL_SKY130NM/SUN_PLL_BIAS.sym # of pins=3
-** sym_path:
-*+ /Users/wulff/Documents/pro/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_BIAS.sym
-** sch_path:
-*+ /Users/wulff/Documents/pro/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_BIAS.sch
+** sym_path: /Users/wulff/prog/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_BIAS.sym
+** sch_path: /Users/wulff/prog/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_BIAS.sch
 .subckt SUN_PLL_BIAS  IBPSR_1U PWRUP_1V8_N AVSS   xoffset=0 yoffset=0 angle=0
 *.ipin IBPSR_1U
 *.ipin PWRUP_1V8_N
@@ -78,10 +72,8 @@ xa3 IBPSR_1U IBPSR_1U AVSS AVSS SUNTR_NCHDLCM xoffset=0 yoffset=0 angle=0 M=10
 
 
 * expanding   symbol:  SUN_PLL_SKY130NM/SUN_PLL_BUF.sym # of pins=6
-** sym_path:
-*+ /Users/wulff/Documents/pro/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_BUF.sym
-** sch_path:
-*+ /Users/wulff/Documents/pro/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_BUF.sch
+** sym_path: /Users/wulff/prog/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_BUF.sym
+** sch_path: /Users/wulff/prog/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_BUF.sch
 .subckt SUN_PLL_BUF  AVDD VFB VI VO VBN AVSS   xoffset=0 yoffset=0 angle=0
 *.ipin AVDD
 *.ipin VBN
@@ -103,10 +95,8 @@ xd3 VO AVSS SUNSAR_CAP_BSSW_CV xoffset=0 yoffset=0 angle=0 M=8
 
 
 * expanding   symbol:  SUN_PLL_SKY130NM/SUN_PLL_LPF.sym # of pins=3
-** sym_path:
-*+ /Users/wulff/Documents/pro/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_LPF.sym
-** sch_path:
-*+ /Users/wulff/Documents/pro/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_LPF.sch
+** sym_path: /Users/wulff/prog/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_LPF.sym
+** sch_path: /Users/wulff/prog/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_LPF.sch
 .subckt SUN_PLL_LPF  VLPFZ AVSS VLPF   xoffset=0 yoffset=0 angle=0
 *.ipin VLPF
 *.ipin AVSS
@@ -123,10 +113,8 @@ xb3 VLPFZ AVSS CAP_LPF xoffset=0 yoffset=0 angle=0 M=48
 
 
 * expanding   symbol:  SUN_PLL_SKY130NM/SUN_PLL_CP.sym # of pins=9
-** sym_path:
-*+ /Users/wulff/Documents/pro/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_CP.sym
-** sch_path:
-*+ /Users/wulff/Documents/pro/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_CP.sch
+** sym_path: /Users/wulff/prog/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_CP.sym
+** sch_path: /Users/wulff/prog/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_CP.sch
 .subckt SUN_PLL_CP  AVDD CP_UP_N LPF CP_DOWN VBN AVSS LPFZ PWRUP_1V8 KICK   xoffset=0 yoffset=0  angle=0
 *.ipin AVDD
 *.ipin CP_UP_N
@@ -149,10 +137,8 @@ xb4 LPF PWRUP_1V8 AVDD AVDD SUNTR_PCHDL xoffset=0 yoffset=0 angle=0 M=1
 
 
 * expanding   symbol:  SUN_PLL_SKY130NM/SUN_PLL_PFD.sym # of pins=6
-** sym_path:
-*+ /Users/wulff/Documents/pro/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_PFD.sym
-** sch_path:
-*+ /Users/wulff/Documents/pro/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_PFD.sch
+** sym_path: /Users/wulff/prog/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_PFD.sym
+** sch_path: /Users/wulff/prog/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_PFD.sch
 .subckt SUN_PLL_PFD  AVDD CP_UP_N CK_REF CP_DOWN CK_FB AVSS   xoffset=0 yoffset=0 angle=0
 *.ipin CK_FB
 *.ipin CK_REF
@@ -171,10 +157,8 @@ xa6 CP_DOWN_N CP_DOWN AVDD AVSS SUNTR_IVX1_CV xoffset=0 yoffset=0 angle=0 M=1
 
 
 * expanding   symbol:  SUN_PLL_SKY130NM/SUN_PLL_KICK.sym # of pins=6
-** sym_path:
-*+ /Users/wulff/Documents/pro/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_KICK.sym
-** sch_path:
-*+ /Users/wulff/Documents/pro/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_KICK.sch
+** sym_path: /Users/wulff/prog/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_KICK.sym
+** sch_path: /Users/wulff/prog/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_KICK.sch
 .subckt SUN_PLL_KICK  AVDD KICK KICK_N PWRUP_1V8 AVSS PWRUP_1V8_N   xoffset=0 yoffset=0 angle=0
 *.ipin PWRUP_1V8
 *.opin KICK
@@ -200,10 +184,8 @@ xa9 KICK KICK_N AVDD AVSS SUNTR_IVX1_CV xoffset=0 yoffset=0 angle=0 M=1
 
 
 * expanding   symbol:  SUN_PLL_SKY130NM/SUN_PLL_LSCORE.sym # of pins=6
-** sym_path:
-*+ /Users/wulff/Documents/pro/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_LSCORE.sym
-** sch_path:
-*+ /Users/wulff/Documents/pro/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_LSCORE.sch
+** sym_path: /Users/wulff/prog/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_LSCORE.sym
+** sch_path: /Users/wulff/prog/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/SUN_PLL_LSCORE.sch
 .subckt SUN_PLL_LSCORE  A AN YN Y AVDD AVSS
 *.ipin AVDD
 *.ipin A
@@ -224,9 +206,9 @@ xc2b YN Y net1 AVDD SUNTR_PCHDL xoffset=0 yoffset=0 angle=0 M=1
 
 * expanding   symbol:  SUN_SAR9B_SKY130NM/SUNSAR_CAP_BSSW_CV.sym # of pins=2
 ** sym_path:
-*+ /Users/wulff/Documents/pro/aicex/ip/sun_sar9b_sky130nm/design/SUN_SAR9B_SKY130NM/SUNSAR_CAP_BSSW_CV.sym
+*+ /Users/wulff/prog/aicex/ip/sun_sar9b_sky130nm/design/SUN_SAR9B_SKY130NM/SUNSAR_CAP_BSSW_CV.sym
 ** sch_path:
-*+ /Users/wulff/Documents/pro/aicex/ip/sun_sar9b_sky130nm/design/SUN_SAR9B_SKY130NM/SUNSAR_CAP_BSSW_CV.sch
+*+ /Users/wulff/prog/aicex/ip/sun_sar9b_sky130nm/design/SUN_SAR9B_SKY130NM/SUNSAR_CAP_BSSW_CV.sch
 .subckt SUNSAR_CAP_BSSW_CV  A B   xoffset=0 yoffset=0 angle=0 M=1
 *.iopin A
 *.iopin B
@@ -236,10 +218,8 @@ R2 B NC1 sky130_fd_pr__res_generic_m1 W=0.44 L=0.36 m=1
 
 
 * expanding   symbol:  SUN_PLL_SKY130NM/CAP_LPF.sym # of pins=2
-** sym_path:
-*+ /Users/wulff/Documents/pro/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/CAP_LPF.sym
-** sch_path:
-*+ /Users/wulff/Documents/pro/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/CAP_LPF.sch
+** sym_path: /Users/wulff/prog/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/CAP_LPF.sym
+** sch_path: /Users/wulff/prog/aicex/ip/sun_pll_sky130nm/design/SUN_PLL_SKY130NM/CAP_LPF.sch
 .subckt CAP_LPF  A B   xoffset=0 yoffset=0 angle=0 M=1
 *.iopin A
 *.iopin B
