@@ -21,6 +21,22 @@
           "afterRoute" : {
               "addPortOnRects" : [  ["B","M1", "M0:B"] ]
           }
+        },
+        { "name" : "NCHLCM",
+          //"setYoffsetHalf" : 1,
+          "meta" : {
+              "symbol" : "nch"
+          },
+          "class" : "Layout::LayoutDigitalCell",
+          "beforeRoute" : {
+              "addConnectivityRoutes" : [
+                  ["M1","^G","||","onTopL"],
+                  ["M1","^N","||","onTopL"]
+              ]
+          },
+          "afterRoute" : {
+              "addPortOnRects" : [  ["B","M1", "M0:B"] ]
+          }
         }
          ,
         { "name" : "PCHDLCM",
@@ -32,6 +48,22 @@
           "beforeRoute" : {
               "addConnectivityRoutes" : [
                   ["M1","^G","||","onTopL"]
+              ]
+          },
+          "afterRoute" : {
+              "addPortOnRects" : [  ["B","M1", "M0:B"] ]
+          }
+        },
+         { "name" : "PCHLCM",
+          "meta" : {
+              "symbol" : "pch"
+          },
+          //"setYoffsetHalf" : 1,
+          "class" : "Layout::LayoutDigitalCell",
+          "beforeRoute" : {
+              "addConnectivityRoutes" : [
+                  ["M1","^G","||","onTopL"],
+                  ["M1","^N","||","onTopL"]
               ]
           },
           "afterRoute" : {
@@ -54,6 +86,23 @@
           "afterRoute" : {
               "addPortOnRects" : [  ["B","M1", "M0:B"] ]
           }
+        },
+        { "name" : "NCHLA",
+          "meta" : {
+              "symbol" : "nch"
+          },
+          //"setYoffsetHalf" : 1,
+          "class" : "Layout::LayoutDigitalCell",
+          "beforeRoute" : {
+              "addConnectivityRoutes" : [
+                  ["M1","^S","-|--","onTopL"],
+                  ["M1","^D","||","onTopL"],
+                  ["M1","^G","||","onTopL"]
+              ]
+          },
+          "afterRoute" : {
+              "addPortOnRects" : [  ["B","M1", "M0:B"] ]
+          }
         }
          ,
         { "name" : "PCHDLA",
@@ -61,6 +110,23 @@
               "symbol" : "pch"
           },
           "setYoffsetHalf" : 1,
+          "class" : "Layout::LayoutDigitalCell",
+          "beforeRoute" : {
+              "addConnectivityRoutes" : [
+                  ["M1","^S","--|-","onTopL"],
+                  ["M1","^D","-|--","onTopR"],
+                  ["M1","^G","||","onTopL"]
+              ]
+          },
+          "afterRoute" : {
+              "addPortOnRects" : [  ["B","M1", "M0:B"] ]
+          }
+        },
+        { "name" : "PCHLA",
+          "meta" : {
+              "symbol" : "pch"
+          },
+          //"setYoffsetHalf" : 1,
           "class" : "Layout::LayoutDigitalCell",
           "beforeRoute" : {
               "addConnectivityRoutes" : [

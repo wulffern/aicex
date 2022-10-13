@@ -3,67 +3,73 @@ tech sky130A
 magscale 1 2
 timestamp 1664575200
 << checkpaint >>
-rect 0 0 1260 352
+rect 0 0 1260 528
 << ndiff >>
-rect 756 44 972 132
 rect 756 132 972 220
 rect 756 220 972 308
+rect 756 308 972 396
 << ptap >>
 rect -108 -44 108 44
 rect -108 44 108 132
 rect -108 132 108 220
 rect -108 220 108 308
 rect -108 308 108 396
+rect -108 396 108 484
+rect -108 484 108 572
 << poly >>
-rect 324 -28 1044 28
-rect 324 148 1044 204
-rect 324 324 1044 380
-rect 324 132 540 220
+rect 324 -36 1044 36
+rect 324 228 1044 300
+rect 324 492 1044 564
+rect 324 220 540 308
 << locali >>
-rect 324 146 540 206
+rect 324 234 540 294
 rect -108 -44 108 44
 rect -108 44 108 132
-rect 756 58 972 118
-rect 756 58 972 118
 rect -108 132 108 220
-rect -108 132 108 220
-rect 324 146 540 206
+rect 756 146 972 206
+rect 756 146 972 206
 rect -108 220 108 308
-rect 756 234 972 294
-rect 756 234 972 294
+rect -108 220 108 308
+rect 324 234 540 294
 rect -108 308 108 396
+rect 756 322 972 382
+rect 756 322 972 382
+rect -108 396 108 484
+rect -108 484 108 572
 << pcontact >>
-rect 348 154 396 176
-rect 348 176 396 198
-rect 396 154 468 176
-rect 396 176 468 198
-rect 468 154 516 176
-rect 468 176 516 198
+rect 348 242 396 264
+rect 348 264 396 286
+rect 396 242 468 264
+rect 396 264 468 286
+rect 468 242 516 264
+rect 468 264 516 286
 << ptapc >>
-rect -36 44 36 132
-rect -36 220 36 308
+rect -36 132 36 220
+rect -36 308 36 396
 << ndcontact >>
-rect 780 66 828 88
-rect 780 88 828 110
-rect 828 66 900 88
-rect 828 88 900 110
-rect 900 66 948 88
-rect 900 88 948 110
-rect 780 242 828 264
-rect 780 264 828 286
-rect 828 242 900 264
-rect 828 264 900 286
-rect 900 242 948 264
-rect 900 264 948 286
+rect 780 154 828 176
+rect 780 176 828 198
+rect 828 154 900 176
+rect 828 176 900 198
+rect 900 154 948 176
+rect 900 176 948 198
+rect 780 330 828 352
+rect 780 352 828 374
+rect 828 330 900 352
+rect 828 352 900 374
+rect 900 330 948 352
+rect 900 352 948 374
+<< nmoslvt >>
+rect 756 228 972 300
 << pwell >>
-rect -180 -132 1260 484
+rect -180 -132 1260 660
 << labels >>
-flabel locali s 324 146 540 206 0 FreeSans 400 0 0 0 G
+flabel locali s 324 234 540 294 0 FreeSans 400 0 0 0 G
 port 2 nsew
-flabel locali s 756 58 972 118 0 FreeSans 400 0 0 0 S
+flabel locali s 756 146 972 206 0 FreeSans 400 0 0 0 S
 port 3 nsew
-flabel locali s -108 132 108 220 0 FreeSans 400 0 0 0 B
+flabel locali s -108 220 108 308 0 FreeSans 400 0 0 0 B
 port 4 nsew
-flabel locali s 756 234 972 294 0 FreeSans 400 0 0 0 D
+flabel locali s 756 322 972 382 0 FreeSans 400 0 0 0 D
 port 1 nsew
 << end >>

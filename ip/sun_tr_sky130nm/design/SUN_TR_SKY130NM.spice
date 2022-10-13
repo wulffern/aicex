@@ -7,10 +7,10 @@ XMM1 D G S B sky130_fd_pr__pfet_01v8  l=0.18  nf=1  w=1.08
 .ENDS
 
 *-------------------------------------------------------------
-* SUNTR_PCHDL2 <class 'cicpy.core.layoutcell.LayoutCell'>
+* SUNTR_PCHL <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
-.SUBCKT SUNTR_PCHDL2 D G S B
-XMM1 D G S B sky130_fd_pr__pfet_01v8  l=0.28  nf=1  w=1.08  
+.SUBCKT SUNTR_PCHL D G S B
+XMM1 D G S B sky130_fd_pr__pfet_01v8_lvt  l=0.36  nf=1  w=1.08  
 .ENDS
 
 *-------------------------------------------------------------
@@ -21,10 +21,10 @@ XMM1 D G S B sky130_fd_pr__nfet_01v8  l=0.18  nf=1  w=1.08
 .ENDS
 
 *-------------------------------------------------------------
-* SUNTR_NCHDL2 <class 'cicpy.core.layoutcell.LayoutCell'>
+* SUNTR_NCHL <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
-.SUBCKT SUNTR_NCHDL2 D G S B
-XMM1 D G S B sky130_fd_pr__nfet_01v8  l=0.28  nf=1  w=1.08  
+.SUBCKT SUNTR_NCHL D G S B
+XMM1 D G S B sky130_fd_pr__nfet_01v8_lvt  l=0.36  nf=1  w=1.08  
 .ENDS
 
 *-------------------------------------------------------------
@@ -45,45 +45,90 @@ C1 A B 78f
 * SUNTR_NCHDLCM <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
 .SUBCKT SUNTR_NCHDLCM D G S B
-XM0 N0 G S B SUNTR_NCHDL2
-XM1 N1 G N0 B SUNTR_NCHDL2
-XM2 N2 G N1 B SUNTR_NCHDL2
-XM3 N3 G N2 B SUNTR_NCHDL2
-XM4 N4 G N3 B SUNTR_NCHDL2
-XM5 N5 G N4 B SUNTR_NCHDL2
-XM6 N6 G N5 B SUNTR_NCHDL2
-XM7 N7 G N6 B SUNTR_NCHDL2
-XM8 D G N7 B SUNTR_NCHDL2
+XM0 N0 G S B SUNTR_NCHDL
+XM1 N1 G N0 B SUNTR_NCHDL
+XM2 N2 G N1 B SUNTR_NCHDL
+XM3 N3 G N2 B SUNTR_NCHDL
+XM4 N4 G N3 B SUNTR_NCHDL
+XM5 N5 G N4 B SUNTR_NCHDL
+XM6 N6 G N5 B SUNTR_NCHDL
+XM7 N7 G N6 B SUNTR_NCHDL
+XM8 D G N7 B SUNTR_NCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTR_NCHLCM <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTR_NCHLCM D G S B
+XM0 N0 G S B SUNTR_NCHL
+XM1 N1 G N0 B SUNTR_NCHL
+XM2 N2 G N1 B SUNTR_NCHL
+XM3 N3 G N2 B SUNTR_NCHL
+XM4 N4 G N3 B SUNTR_NCHL
+XM5 N5 G N4 B SUNTR_NCHL
+XM6 N6 G N5 B SUNTR_NCHL
+XM7 N7 G N6 B SUNTR_NCHL
+XM8 D G N7 B SUNTR_NCHL
 .ENDS
 
 *-------------------------------------------------------------
 * SUNTR_PCHDLCM <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
 .SUBCKT SUNTR_PCHDLCM D G S B
-XM0 N0 G S B SUNTR_PCHDL2
-XM7 D G N0 B SUNTR_PCHDL2
+XM0 N0 G S B SUNTR_PCHDL
+XM7 D G N0 B SUNTR_PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTR_PCHLCM <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTR_PCHLCM D G S B
+XM0 N0 G S B SUNTR_PCHL
+XM7 D G N0 B SUNTR_PCHL
 .ENDS
 
 *-------------------------------------------------------------
 * SUNTR_NCHDLA <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
 .SUBCKT SUNTR_NCHDLA D G S B
-XM0 D G S B SUNTR_NCHDL2
-XM1 S G D B SUNTR_NCHDL2
+XM0 D G S B SUNTR_NCHDL
+XM1 S G D B SUNTR_NCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTR_NCHLA <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTR_NCHLA D G S B
+XM0 D G S B SUNTR_NCHL
+XM1 S G D B SUNTR_NCHL
 .ENDS
 
 *-------------------------------------------------------------
 * SUNTR_PCHDLA <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
 .SUBCKT SUNTR_PCHDLA D G S B
-XM0 D G S B SUNTR_PCHDL2
-XM1 S G D B SUNTR_PCHDL2
-XM2 D G S B SUNTR_PCHDL2
-XM3 S G D B SUNTR_PCHDL2
-XM4 D G S B SUNTR_PCHDL2
-XM5 S G D B SUNTR_PCHDL2
-XM6 D G S B SUNTR_PCHDL2
-XM7 S G D B SUNTR_PCHDL2
+XM0 D G S B SUNTR_PCHDL
+XM1 S G D B SUNTR_PCHDL
+XM2 D G S B SUNTR_PCHDL
+XM3 S G D B SUNTR_PCHDL
+XM4 D G S B SUNTR_PCHDL
+XM5 S G D B SUNTR_PCHDL
+XM6 D G S B SUNTR_PCHDL
+XM7 S G D B SUNTR_PCHDL
+.ENDS
+
+*-------------------------------------------------------------
+* SUNTR_PCHLA <class 'cicpy.core.layoutcell.LayoutCell'>
+*-------------------------------------------------------------
+.SUBCKT SUNTR_PCHLA D G S B
+XM0 D G S B SUNTR_PCHL
+XM1 S G D B SUNTR_PCHL
+XM2 D G S B SUNTR_PCHL
+XM3 S G D B SUNTR_PCHL
+XM4 D G S B SUNTR_PCHL
+XM5 S G D B SUNTR_PCHL
+XM6 D G S B SUNTR_PCHL
+XM7 S G D B SUNTR_PCHL
 .ENDS
 
 *-------------------------------------------------------------

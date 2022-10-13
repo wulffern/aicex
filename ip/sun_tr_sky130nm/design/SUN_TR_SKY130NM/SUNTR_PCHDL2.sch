@@ -8,8 +8,8 @@ C {devices/iopin.sym} 0 0 0 0{name=p0 lab=D}
 C {devices/iopin.sym} 0 20 0 0{name=p1 lab=G}
 C {devices/iopin.sym} 0 40 0 0{name=p2 lab=S}
 C {devices/iopin.sym} 0 60 0 0{name=p3 lab=B}
-C {sky130_fd_pr/pfet_01v8.sym} 400 0 0 0 {name=M1
-L=0.28
+C {sky130_fd_pr/pfet_01v8_lvt.sym} 400 0 0 0 {name=M1
+L=0.36
 W=1.08
 nf=1
 mult=1
@@ -19,7 +19,7 @@ as="'int((nf+2)/2) * W/nf * 0.29'"
 ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
 nrd="'0.29 / W'" nrs="'0.29 / W'"
 sa=0 sb=0 sd=0
-model=pfet_01v8
+model=pfet_01v8_lvt
 spiceprefix=X
 }
 N 440.0 30.0 420.0 30.0{lab=D}
