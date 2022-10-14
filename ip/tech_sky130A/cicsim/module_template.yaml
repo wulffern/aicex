@@ -32,6 +32,7 @@ create:
     CELLS = ${CELL}
 
   work/.magicrc: |
+    source ../tech/magic/.magicrc
     addpath ../design/${IP}
 
   work/xschemrc: |
@@ -102,6 +103,12 @@ do:
   - cd work && ln -s ../tech/magic/mos.24bit.std.cmap
   - cd sim && ln -s ../tech/cicsim/cicsim.yaml
   - cd cic && ln -s ../tech/cic/sky130A.tech
+  - git add .
+  - git add -f work/.magicrc
+  - git add -f work/xschemrc
+  - git add -f work/Makefile
+  - git add -f work/mos.24bit.dstyle
+  - git add -f work/mos.24bit.std.cmap
 
 
 echo: |

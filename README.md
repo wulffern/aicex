@@ -36,17 +36,41 @@ cd aicex
 docker run --rm  -it -p 2022:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:latest bash --login
 ```
 
+The first time you start a new aicex clone, then you need to install cicpy and cicsim.
 In the docker shell, do 
 
 ``` sh
-make test
+/bin/bash tests/run_docker_test.sh
 ```
+## SSH into the docker image
+To ssh into the docker image you need to add a key to the `authorized_keys`
+file. 
 
-From another terminal, You can connect to the docker image (once it's started) with
+The commands below needs to be done in another terminal.
+
+If don't have a ssh key, then you can do 
 
 ``` sh
-ssh -Y -p 2022 localhost
-magic 
+ssh-keygen -t rsa
+```
+
+Once you have an ssh key, do
+
+``` sh
+cd <where you cloned aicex>
+mkdir .ssh
+cat $HOME/.ssh/id_rsa.pub > .ssh/authorized_keys 
+```
+
+You should no be able to connect to the docker image
+
+For example
+
+``` sh
+ssh -Y -p 2022 aicex@localhost
+cd ip/sun_sar9b_sky130nm/work 
+magic ../design/SUN_SAR9B_SKY130NM/SUNSAR_SAR9B_CV.mag &
+
 ```
 
 ## Introduction

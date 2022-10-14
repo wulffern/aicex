@@ -33,6 +33,7 @@ RUN /bin/bash tests/install_open_pdk.sh
 RUN sudo rm -rf skywater-pdk
 RUN sudo rm -rf open_pdk
 
+RUN sudo python3 -m pip install matplotlib numpy click svgwrite pyyaml pandas tabulate wheel setuptools tikzplotlib
 
 USER aicex
 WORKDIR /home/aicex
