@@ -26,19 +26,27 @@ This repository is a collection of IPs in Skywater 130nm technology.
 I install the tools manually on MacOS, however, on Ubuntu 20.4 I've made a
 [makefile](https://github.com/wulffern/eda) to install everything.
 
-## Getting Started with simulation
+## Getting Started
 
-Quick install 
-
-``` sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/wulffern/aicex/main/tests/install.sh)"
-```
-    
-Check that test runs
+I've made a docker image that you can run the tools in if you don't have them 
 
 ``` sh
+git clone https://github.com/wulffern/aicex.git
 cd aicex
+docker run --rm  -it -p 2022:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:latest bash --login
+```
+
+In the docker shell, do 
+
+``` sh
 make test
+```
+
+From another terminal, You can connect to the docker image (once it's started) with
+
+``` sh
+ssh -Y -p 2022 localhost
+magic 
 ```
 
 ## Introduction
