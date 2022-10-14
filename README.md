@@ -14,18 +14,6 @@ This repository is a collection of IPs in Skywater 130nm technology.
 | [ip/tech_sky130A](ip/tech_sky130A)             | Technology files for SKY130A                                                                    |
 
 
-## Requirements
-
-- [Skywater 130nm PDK](https://github.com/google/skywater-pdk). I use [open_pdks](https://github.com/RTimothyEdwards/open_pdks) to install the PDK
-- [Magic VLSI](https://github.com/RTimothyEdwards/magic) for layout
-- [ngspice](https://git.code.sf.net/p/ngspice/ngspice) for simulation 
-- [netgen](https://github.com/RTimothyEdwards/netgen.git) for LVS
-- [xschem]()
-- python > 3.8
-
-I install the tools manually on MacOS, however, on Ubuntu 20.4 I've made a
-[makefile](https://github.com/wulffern/eda) to install all the tools.
-
 ## Getting Started
 
 I've made a docker image that you can run the tools in if you don't have them 
@@ -81,6 +69,17 @@ directory structure.
 
 [https://www.youtube.com/watch?v=yvUW2gA42bM](https://www.youtube.com/watch?v=yvUW2gA42bM)
 
+## Requirements
+
+- [Skywater 130nm PDK](https://github.com/google/skywater-pdk). I use [open_pdks](https://github.com/RTimothyEdwards/open_pdks) to install the PDK
+- [Magic VLSI](https://github.com/RTimothyEdwards/magic) for layout
+- [ngspice](https://git.code.sf.net/p/ngspice/ngspice) for simulation 
+- [netgen](https://github.com/RTimothyEdwards/netgen.git) for LVS
+- [xschem]()
+- python > 3.8
+
+I install the tools manually on MacOS, however, on Ubuntu 20.4 I've made a
+[makefile](https://github.com/wulffern/eda) to install all the tools.
 
 
 # Notes
