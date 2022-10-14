@@ -70,6 +70,7 @@ For example
 ssh -Y -p 2022 aicex@localhost
 cd ip/sun_sar9b_sky130nm/work 
 magic ../design/SUN_SAR9B_SKY130NM/SUNSAR_SAR9B_CV.mag &
+xschem -b ../design/SUN_SAR9B_SKY130NM/SUNSAR_SAR9B_CV.sch &
 
 ```
 
