@@ -1,0 +1,3 @@
+
+* TODO Fix LVS for PLL. The LVS does not work well with xschem and for some reason .spi for PLL
+* TODO PLL won't work until I update CIC, need to update docker afterwards
