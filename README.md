@@ -24,7 +24,7 @@ This repository is a collection of IPs in Skywater 130nm technology.
 - python > 3.8
 
 I install the tools manually on MacOS, however, on Ubuntu 20.4 I've made a
-[makefile](https://github.com/wulffern/eda) to install everything.
+[makefile](https://github.com/wulffern/eda) to install all the tools.
 
 ## Getting Started
 
@@ -75,6 +75,9 @@ xschem -b ../design/SUN_SAR9B_SKY130NM/SUNSAR_SAR9B_CV.sch &
 ```
 
 ## Introduction
+
+The video is old, which means things have changed on how to install and also the
+directory structure.
 
 [https://www.youtube.com/watch?v=yvUW2gA42bM](https://www.youtube.com/watch?v=yvUW2gA42bM)
 
