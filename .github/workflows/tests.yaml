@@ -10,7 +10,9 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
-    container: wulffern/aicex:latest
+    container:
+      image: wulffern/aicex:latest
+      options: --user 1000
     steps:
       - name: aicex
         uses: actions/checkout@main
