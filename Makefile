@@ -1,5 +1,7 @@
 
 
+TAG = 0.1.0
+
 dirs = 	ip/sun_tr_sky130nm/work \
 	ip/sun_trb_sky130nm/work \
 	ip/sun_sar9b_sky130nm/work \
@@ -21,10 +23,15 @@ foss-sh:
 	docker exec -i foss-asic bash
 
 ci:
-	docker build -f Dockerfile . -t wulffern/aicex:latest
+	docker build -f docker/Dockerfile . -t wulffern/aicex:latest
+
+tagpush:
+	docker tag wulffern/aicex:latest wulffern/aicex:${TAG}
+	docker push wulffern/aicex:${TAG}
+	docker push wulffern/aicex:latest
 
 cish:
-	docker run --rm -it  -p 2022:22  -i wulffern/aicex:latest bash --login
+	docker run --rm  -it -p 2022:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:latest bash --login
 
 clean:
 	cd ip && find ./ -name "*.ext" -exec rm {} \;

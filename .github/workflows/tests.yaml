@@ -8,21 +8,12 @@ on:
 
 jobs:
 
-  build:
-
-    runs-on: ubuntu-20.04
-
+  test:
+    runs-on: ubuntu-latest
+    container: wulffern/aicex:latest
     steps:
       - name: aicex
         uses: actions/checkout@main
-        with:
-          submodules: true
-      - name: Install eda
+      - name: Run tests
         run: |
-          source tests/install_ubuntu.sh
-          source tests/install_cicsim.sh
-          source tests/install_cicpy.sh
-          source tests/install_open_pdk.sh
-      - name: Run test
-        run:  |
-          source tests/run_tests.sh
+          /bin/bash tests/run_docker_test.sh

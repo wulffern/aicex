@@ -2,7 +2,7 @@
 #
 #- Prerequisites
 sudo apt update
-sudo apt -y install python3-pip libqt5core5a libxft2 libxss1 libgl1-mesa-glx libglu1-mesa libxaw7
+sudo apt -y install python3-pip libqt5core5a libxft2 libxss1 libgl1-mesa-glx libglu1-mesa libxaw7 libcairo2
 
 export AICEX=${PWD}
 #- Get EDA

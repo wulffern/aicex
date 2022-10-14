@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-git submodule init
-git submodule update
 source tests/bashrc
 echo "$HOME/.local/bin" >> $GITHUB_PATH
 echo "/opt/eda/bin" >> $GITHUB_PATH
