@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: wulffern/aicex:latest
-      options: --user 1000
+      options: --user root
     steps:
       - name: aicex
         uses: actions/checkout@main

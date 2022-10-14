@@ -26,8 +26,8 @@ ci:
 	docker build -f docker/Dockerfile . -t wulffern/aicex:latest
 
 tagpush:
-	docker tag wulffern/aicex:latest wulffern/aicex:${TAG}
-	docker push wulffern/aicex:${TAG}
+	#docker tag wulffern/aicex:latest wulffern/aicex:${TAG}
+	#docker push wulffern/aicex:${TAG}
 	docker push wulffern/aicex:latest
 
 cish:
