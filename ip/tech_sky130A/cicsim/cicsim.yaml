@@ -3,9 +3,7 @@ simulator: ngspice
 
 corner:
   Gt: |
-    *.include "../../../tech/pdk/sky130A/libs.tech/ngspice/r+c/res_high__cap_high.spice"
-    *.include "../../../tech/pdk/sky130A/libs.tech/ngspice/sky130_fd_pr__model__r+c.model.spice"
-
+    *Nothing here
 
 # Temperature corners
   Tt: |
@@ -26,20 +24,20 @@ corner:
 
 #- All corners
   Att: |
-    .lib  "../../../tech/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+    .lib  "$PDK_ROOT/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
   Asf: |
-    .lib  "../../../tech/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice" sf
+    .lib  "$PDK_ROOT/sky130A/libs.tech/ngspice/sky130.lib.spice" sf
   Afs: |
-    .lib  "../../../tech/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice" fs
+    .lib  "$PDK_ROOT/sky130A/libs.tech/ngspice/sky130.lib.spice" fs
   Aff: |
-    .lib  "../../../tech/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice" ff
+    .lib  "$PDK_ROOT/sky130A/libs.tech/ngspice/sky130.lib.spice" ff
   Ass: |
-    .lib  "../../../tech/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice" ss
+    .lib  "$PDK_ROOT/sky130A/libs.tech/ngspice/sky130.lib.spice" ss
   All: |
-    .lib  "../../../tech/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice" ll
+    .lib  "$PDK_ROOT/sky130A/libs.tech/ngspice/sky130.lib.spice" ll
   Ahh: |
-    .lib  "../../../tech/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice" hh
+    .lib  "$PDK_ROOT/sky130A/libs.tech/ngspice/sky130.lib.spice" hh
   Ahl: |
-    .lib  "../../../tech/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice" hl
+    .lib  "$PDK_ROOT/sky130A/libs.tech/ngspice/sky130.lib.spice" hl
   Alh: |
-    .lib  "../../../tech/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice" lh
+    .lib  "$PDK_ROOT/sky130A/libs.tech/ngspice/sky130.lib.spice" lh

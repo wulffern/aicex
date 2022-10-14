@@ -6,26 +6,38 @@ FROM ubuntu:20.04
 RUN ln -snf /usr/share/zoneinfo/$CONTAINER_TIMEZONE /etc/localtime && echo $CONTAINER_TIMEZONE > /etc/timezone
 
 RUN apt-get update && \
-      apt-get -y install sudo curl git python3-pip
+    apt-get -y install sudo curl git python3-pip\
+    openssh-server  vim && \
+    apt-get autoremove -y && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
-RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
+RUN useradd -ms /bin/bash aicex
+RUN echo "aicex:aicex" | chpasswd && adduser aicex sudo
 RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+
+
+RUN echo  "X11UseLocalhost no\n" >> /etc/ssh/sshd_config
+
+
+RUN echo "set num_threads=8\nset ngbehavior=hsa\nset ng_nomodcheck\n" >> /home/aicex/.spiceinit
+
+EXPOSE 22
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-USER docker
-WORKDIR /home/docker
-RUN mkdir pro
-WORKDIR /home/docker/pro
+WORKDIR /opt/
+COPY tests tests
+RUN /bin/bash tests/install_ubuntu.sh
+RUN /bin/bash tests/install_open_pdk.sh
+RUN sudo rm -rf skywater-pdk
+RUN sudo rm -rf open_pdk
 
-COPY . aicex
-WORKDIR /home/docker/pro/aicex
-RUN sudo /bin/bash tests/install_cicsim.sh
-RUN sudo /bin/bash tests/install_cicpy.sh
-RUN sudo /bin/bash tests/install_ubuntu.sh
-RUN sudo /bin/bash tests/install_open_pdk.sh
-#COPY install.sh .
-#RUN /bin/bash install.sh
-RUN echo 'export PATH=/opt/eda/bin:$HOME/.local/bin:$PATH' >> ~/.bashrc
-RUN echo 'export PDK_ROOT=/opt/pdk/share/pdk' >> ~/.bashrc
-#RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/wulffern/aicex/main/install.sh?$RANDOM)"
+
+USER aicex
+WORKDIR /home/aicex
+RUN mkdir /home/aicex/.ssh
+
+#RUN cp tests/src/.bashrc .
+#RUN cp tests/src/.dircolors .
+#RUN cp tests/src/.bash_profile .

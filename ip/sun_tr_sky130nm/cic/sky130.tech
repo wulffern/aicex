@@ -122,7 +122,7 @@
         "symbol_lib" : "cpdk",
         "symbol_libs" : ["../../cpdk/design/cic",
                          "../../cpdk/design/cic_wbulk",
-                         "../tech/pdk/sky130A/libs.tech/xschem/sky130_fd_pr"
+                         "$PDK_ROOT/sky130A/libs.tech/xschem/sky130_fd_pr"
                         ]
     },
     "rules" : {

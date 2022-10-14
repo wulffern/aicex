@@ -21,10 +21,10 @@ foss-sh:
 	docker exec -i foss-asic bash
 
 ci:
-	docker build -f Dockerfile . -t wulffern/aicex
+	docker build -f Dockerfile . -t wulffern/aicex:latest
 
 cish:
-	docker run --rm -it -i wulffern/aicex bash --login
+	docker run --rm -it  -p 2022:22  -i wulffern/aicex:latest bash --login
 
 clean:
 	cd ip && find ./ -name "*.ext" -exec rm {} \;

@@ -31,7 +31,7 @@ I install the tools manually on MacOS, however, on Ubuntu 20.4 I've made a
 Quick install 
 
 ``` sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/wulffern/aicex/main/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/wulffern/aicex/main/tests/install.sh)"
 ```
     
 Check that test runs
