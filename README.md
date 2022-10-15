@@ -21,16 +21,50 @@ I've made a docker image that you can run the tools in if you don't have them
 ``` sh
 git clone https://github.com/wulffern/aicex.git
 cd aicex
-docker run --rm  -it -p 2022:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:latest bash --login
+docker run --rm -p 2022:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:latest &
 ```
 
+The first time you want to connect to the docker image you need to setup an ssh
+public/private key
+
+If don't have a ssh key, then you can do 
+
+``` sh
+ssh-keygen -t rsa
+```
+
+Once you have an ssh key, then
+
+``` sh
+cd aicex
+mkdir .ssh
+cat $HOME/.ssh/id_rsa.pub > .ssh/authorized_keys 
+```
+
+You should now be able to connect to the docker image
+
+``` sh
+ssh -Y -p 2022 aicex@localhost
+```
+
+
 The first time you start a new aicex clone, then you need to install cicpy and cicsim.
-In the docker shell, do 
 
 ``` sh
 /bin/bash tests/run_docker_test.sh
 ```
-## SSH into the docker image
+
+To test if things work, do 
+
+``` sh
+cd ip/sun_sar9b_sky130nm/work 
+magic ../design/SUN_SAR9B_SKY130NM/SUNSAR_SAR9B_CV.mag &
+xschem -b ../design/SUN_SAR9B_SKY130NM/SUNSAR_SAR9B_CV.sch &
+```
+
+
+
+
 To ssh into the docker image you need to add a key to the `authorized_keys`
 file. 
 
