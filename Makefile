@@ -33,5 +33,8 @@ tagpush:
 cish:
 	docker run --rm  -it -p 2022:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:latest bash --login
 
+cirun:
+	docker run --rm  -p 2022:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:latest &
+
 clean:
 	cd ip && find ./ -name "*.ext" -exec rm {} \;

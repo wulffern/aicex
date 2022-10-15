@@ -29,7 +29,10 @@ ARG DEBIAN_FRONTEND=noninteractive
 WORKDIR /opt/
 COPY tests tests
 RUN /bin/bash tests/install_ubuntu.sh
-RUN /bin/bash tests/install_open_pdk.sh
+
+#- I've compiled the eda tools and open_pdk result on a ubuntu 20.04 machine, so it's just cloning
+RUN /bin/bash tests/clone_eda.sh
+RUN /bin/bash tests/clone_open_pdk.sh
 RUN sudo rm -rf skywater-pdk
 RUN sudo rm -rf open_pdk
 
@@ -39,6 +42,5 @@ USER aicex
 WORKDIR /home/aicex
 RUN mkdir /home/aicex/.ssh
 
-#RUN cp tests/src/.bashrc .
-#RUN cp tests/src/.dircolors .
-#RUN cp tests/src/.bash_profile .
+ENTRYPOINT sudo service ssh restart && tail -f /dev/null
+#CMD ["/usr/bin/sudo", "/usr/sbin/sshd", "-D", "-o", "ListenAddress=0.0.0.0"]
