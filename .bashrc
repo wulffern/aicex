@@ -21,12 +21,9 @@ case $TERM in
 		;;
 esac
 
-sudo service ssh restart
-
-[ -e "$HOME/aicex/.dircolors" ] && DIR_COLORS="$HOME/aicex/.dircolors"
+[ -e "$HOME/.dircolors" ] && DIR_COLORS="$HOME/.dircolors"
 [ -e "$DIR_COLORS" ] || DIR_COLORS=""
 eval "`dircolors -b $DIR_COLORS`"
-
 
 export PDK_ROOT=/opt/pdk/share/pdk
 

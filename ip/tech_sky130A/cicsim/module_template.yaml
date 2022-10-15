@@ -31,6 +31,13 @@ create:
     #- Provide cells you want to check for the lvsall drcall commands
     CELLS = ${CELL}
 
+  sim/Makefile: |
+    include ../tech/make/sim.make
+
+    LIB=${IP}
+    CELL=${CELL}
+
+
   work/.magicrc: |
     source ../tech/magic/.magicrc
     addpath ../design/${IP}
