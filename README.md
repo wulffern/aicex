@@ -34,7 +34,6 @@ Then
 ssh -Y -p 2022 aicex@localhost
 ```
 
-![aicex.png](aicex.png)
 
 ## Test that it works
 
