@@ -31,8 +31,8 @@ M7 D G N0  B PCHDL
 .ends
 
 .subckt PCHLCM D G S B
-M0 N0 G  S B PCHL
-M7 D G N0  B PCHL
+M0 D G  S B PCHL
+
 .ends
 
 

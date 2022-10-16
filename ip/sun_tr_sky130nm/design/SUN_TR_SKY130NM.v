@@ -115,8 +115,7 @@ input logic B;
 input logic D;
 input logic G;
 input logic S;
-SUNTR_PCHL M0 (N0,G,S,B);
-SUNTR_PCHL M7 (D,G,N0,B);
+SUNTR_PCHL M0 (D,G,S,B);
 endmodule
 
 //-------------------------------------------------------------

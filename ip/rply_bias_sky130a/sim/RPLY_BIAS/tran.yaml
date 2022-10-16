@@ -1,0 +1,27 @@
+err_kt_q:
+  src:
+    - dvderr
+  typ: 0
+  min: -10
+  max: 10
+  scale: 1e3
+  digits: 3
+  unit: mV
+
+offset:
+  src:
+    - m_offset
+  typ: 0
+  min: -10
+  max: 10
+  scale: 1e3
+  unit: mV
+
+ibp:
+  src:
+    - ibp_1u
+  typ: 1
+  min: 0.8
+  max: 2
+  scale: 1e6
+  unit: "uA"

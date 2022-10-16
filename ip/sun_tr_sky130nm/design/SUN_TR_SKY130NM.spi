@@ -84,8 +84,7 @@ XM7 D G N0 B SUNTR_PCHDL
 * SUNTR_PCHLCM <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
 .SUBCKT SUNTR_PCHLCM D G S B
-XM0 N0 G S B SUNTR_PCHL
-XM7 D G N0 B SUNTR_PCHL
+XM0 D G S B SUNTR_PCHL
 .ENDS
 
 *-------------------------------------------------------------

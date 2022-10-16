@@ -8736,7 +8736,7 @@
                         {
                             "class": "Port",
                             "layer": "M1",
-                            "name": "N0",
+                            "name": "D",
                             "net": "",
                             "pinLayer": "M1_pin",
                             "spicePort": true,
@@ -8804,7 +8804,7 @@
                         "groupName": "M",
                         "name": "M0",
                         "nodes": [
-                            "N0",
+                            "D",
                             "G",
                             "S",
                             "B"
@@ -8821,110 +8821,10 @@
                     "ycell": 0
                 },
                 {
-                    "angle": "",
-                    "cell": "SUNTR_PCHL",
-                    "children": [
-                        {
-                            "class": "Port",
-                            "layer": "M1",
-                            "name": "D",
-                            "net": "",
-                            "pinLayer": "M1_pin",
-                            "spicePort": true,
-                            "x1": 14400,
-                            "x2": 25200,
-                            "y1": 42500,
-                            "y2": 45500
-                        },
-                        {
-                            "class": "Port",
-                            "layer": "M1",
-                            "name": "G",
-                            "net": "",
-                            "pinLayer": "M1_pin",
-                            "spicePort": true,
-                            "x1": 36000,
-                            "x2": 46800,
-                            "y1": 38100,
-                            "y2": 41100
-                        },
-                        {
-                            "class": "Port",
-                            "layer": "M1",
-                            "name": "N0",
-                            "net": "",
-                            "pinLayer": "M1_pin",
-                            "spicePort": true,
-                            "x1": 14400,
-                            "x2": 25200,
-                            "y1": 33700,
-                            "y2": 36700
-                        },
-                        {
-                            "class": "Port",
-                            "layer": "M1",
-                            "name": "B",
-                            "net": "",
-                            "pinLayer": "M1_pin",
-                            "spicePort": true,
-                            "x1": 57600,
-                            "x2": 68400,
-                            "y1": 37400,
-                            "y2": 41800
-                        },
-                        {
-                            "class": "Text",
-                            "layer": "TXT",
-                            "name": "M7",
-                            "net": "",
-                            "x1": 31500,
-                            "x2": 31500,
-                            "y1": 39600,
-                            "y2": 39600
-                        }
-                    ],
-                    "class": "Instance",
-                    "instanceName": "M7",
-                    "layer": "PR",
-                    "libpath": "",
-                    "name": "SUNTR_PCHL",
-                    "net": "",
-                    "subcktInstance": {
-                        "class": "cIcSpice::SubcktInstance",
-                        "deviceName": "subckt",
-                        "groupName": "M",
-                        "name": "M7",
-                        "nodes": [
-                            "D",
-                            "G",
-                            "N0",
-                            "B"
-                        ],
-                        "properties": {
-                        },
-                        "subcktName": "SUNTR_PCHL"
-                    },
-                    "x1": 0,
-                    "x2": 63000,
-                    "xcell": 0,
-                    "y1": 26400,
-                    "y2": 52800,
-                    "ycell": 0
-                },
-                {
                     "abstract": false,
                     "boundaryIgnoreRouting": false,
                     "cellused": false,
                     "children": [
-                        {
-                            "class": "Rect",
-                            "layer": "M1",
-                            "net": "",
-                            "x1": 39900,
-                            "x2": 42900,
-                            "y1": 11700,
-                            "y2": 41100
-                        },
                         {
                             "class": "Text",
                             "layer": "TXT",
@@ -8947,49 +8847,9 @@
                     "net": "",
                     "physicalOnly": false,
                     "x1": 36000,
-                    "x2": 42900,
+                    "x2": 36000,
                     "y1": 11700,
-                    "y2": 41100
-                },
-                {
-                    "abstract": false,
-                    "boundaryIgnoreRouting": false,
-                    "cellused": false,
-                    "children": [
-                        {
-                            "class": "Rect",
-                            "layer": "M1",
-                            "net": "",
-                            "x1": 18300,
-                            "x2": 21300,
-                            "y1": 16100,
-                            "y2": 36700
-                        },
-                        {
-                            "class": "Text",
-                            "layer": "TXT",
-                            "name": "N0",
-                            "net": "",
-                            "x1": 14400,
-                            "x2": 14400,
-                            "y1": 16100,
-                            "y2": 16100
-                        }
-                    ],
-                    "class": "cIcCore::Route",
-                    "has_pr": false,
-                    "layer": "PR",
-                    "libcell": false,
-                    "libpath": "",
-                    "meta": {
-                    },
-                    "name": "N0",
-                    "net": "",
-                    "physicalOnly": false,
-                    "x1": 14400,
-                    "x2": 21300,
-                    "y1": 16100,
-                    "y2": 36700
+                    "y2": 11700
                 },
                 {
                     "class": "Port",
@@ -9012,8 +8872,8 @@
                     "spicePort": true,
                     "x1": 14400,
                     "x2": 25200,
-                    "y1": 42500,
-                    "y2": 45500
+                    "y1": 16100,
+                    "y2": 19100
                 },
                 {
                     "class": "Port",
@@ -9051,24 +8911,9 @@
                         "groupName": "M",
                         "name": "M0",
                         "nodes": [
-                            "N0",
-                            "G",
-                            "S",
-                            "B"
-                        ],
-                        "properties": {
-                        },
-                        "subcktName": "SUNTR_PCHL"
-                    },
-                    {
-                        "class": "cIcSpice::SubcktInstance",
-                        "deviceName": "subckt",
-                        "groupName": "M",
-                        "name": "M7",
-                        "nodes": [
                             "D",
                             "G",
-                            "N0",
+                            "S",
                             "B"
                         ],
                         "properties": {
@@ -9102,7 +8947,7 @@
             "x1": 0,
             "x2": 63000,
             "y1": 0,
-            "y2": 52800
+            "y2": 26400
         },
         {
             "abstract": false,

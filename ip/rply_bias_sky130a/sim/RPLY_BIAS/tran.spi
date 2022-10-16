@@ -59,6 +59,7 @@ B3 D_VD_ERR 0 v=v(D_VD)-v(D_VD_REF)
 * MEASURES
 *----------------------------------------------------------------
 .measure tran ibp_1u FIND i(V1) AT={T_END}
+.measure tran ivdd FIND i(VDD) AT={T_END}
 .measure tran vd1 FIND v(XDUT.VD1) AT={T_END}
 .measure tran vd2 FIND v(XDUT.VD2) AT={T_END}
 .measure tran vr1 FIND v(XDUT.VR1) AT={T_END}
@@ -76,7 +77,7 @@ B3 D_VD_ERR 0 v=v(D_VD)-v(D_VD_REF)
 #else
 .probe v(VDD_1V8) v(VSS) v(PWRUP_1V8) v(LPI) v(LPO) v(IBP_1U) i(v1)
 + v(XDUT.VD1) v(XDUT.VD2) v(XDUT.VR1) v(D_VD) v(D_VD_REF) v(D_VD_ERR)
-+ v(V_OFF)
++ v(V_OFF) i(VDD)
 #endif
 
 *----------------------------------------------------------------

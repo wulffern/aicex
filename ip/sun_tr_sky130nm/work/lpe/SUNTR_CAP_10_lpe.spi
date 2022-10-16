@@ -1,6 +1,6 @@
 * NGSPICE file created from SUNTR_CAP_10.ext - technology: sky130A
 
-.subckt SUNTR_CAP_10 A B xoffset=0 yoffset=0 angle=0 M=1
+.subckt SUNTR_CAP_10 A B xoffset=0 yoffset=0 angle=0
 C0 A B 25.81fF
 C1 B 0 5.39fF
 C2 A 0 5.36fF

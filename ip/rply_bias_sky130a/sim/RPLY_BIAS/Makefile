@@ -21,7 +21,7 @@ fast: netlist
 	cicsim run ${TB} ${OPT} ${VIEW} Gt Aff "Th,Tl" Vh
 
 tfs: netlist
-	cicsim run ${TB} ${OPT} ${VIEW} Gt "Att,Ass,Aff" "Tt,Th,Tl" Vt
+	cicsim run ${TB} ${OPT} ${VIEW} Gt "Att,Ass,Aff" "Tt,Th,Tl" "Vt,Vl,Vh"
 
 ttffss: netlist
 	cicsim run ${TB} ${OPT} ${VIEW} Gt "Att,Ass,Aff" "Tt" Vt

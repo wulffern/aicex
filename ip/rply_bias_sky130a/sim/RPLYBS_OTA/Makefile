@@ -1,4 +1,4 @@
-TB=op
+TB=dc
 VIEW=Sch
 #VIEW=Lay
 
@@ -12,23 +12,23 @@ netlist:
 test:
 	${MAKE} typical OPT="Debug"
 
-typical:
-	cicsim run ${TB} ${OPT} ${VIEW} Gt Att Tt Vt
+typical: netlist
+	cicsim run ${TB} ${OPT} ${VIEW} Gt Vct Att Tt Vt
 
-slow:
-	cicsim run ${TB} ${OPT} ${VIEW} Gt Ass "Th,Tl" Vl
+slow: netlist
+	cicsim run ${TB} ${OPT} ${VIEW} Gt Vct Ass "Th,Tl" Vl
 
-fast:
-	cicsim run ${TB} ${OPT} ${VIEW} Gt Aff "Th,Tl" Vh
+fast: netlist
+	cicsim run ${TB} ${OPT} ${VIEW} Gt Vct Aff "Th,Tl" Vh
 
-tfs:
-	cicsim run ${TB} ${OPT} ${VIEW} Gt "Att,Ass,Aff" "Tt,Th,Tl" Vt
+tfs: netlist
+	cicsim run ${TB} ${OPT} ${VIEW} Gt Vct "Att,Ass,Aff" "Tt,Th,Tl" Vt
 
-ttffss:
-	cicsim run ${TB} ${OPT} ${VIEW} Gt "Att,Ass,Aff" "Tt" Vt
+ttffss: netlist
+	cicsim run ${TB} ${OPT} ${VIEW} Gt Vct "Att,Ass,Aff" "Tt" Vt
 
-temp:
-	cicsim run ${TB} ${OPT} ${VIEW} Gt "Att" "Tt,Th,Tl" Vt
+temp: netlist
+	cicsim run ${TB} ${OPT} ${VIEW} Gt Vct "Att" "Tt,Th,Tl" Vt
 
 clean:
 	-rm -rf output_*
