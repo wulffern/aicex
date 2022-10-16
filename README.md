@@ -22,14 +22,15 @@ You need to create a public/private SSH key first if you don't have that
 ssh-keygen -t rsa
 ```
 
-To install on Mac or Linux do 
+Install on Linux or Mac
 
 ``` sh
-git clone https://github.com/wulffern/aicex.git
-cd aicex
-mkdir .ssh
-cat ~/.ssh/id rsa.pub > .ssh/authorized_keys
-make cirun
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/wulffern/aicex/main/install.sh)"
+```
+
+Then
+
+``` sh
 ssh -Y -p 2022 aicex@localhost
 ```
 
