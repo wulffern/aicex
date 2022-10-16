@@ -63,8 +63,13 @@ I install the tools manually on MacOS, however, on Ubuntu 20.4 I've made a
 [makefile](https://github.com/wulffern/eda) to install all the tools.
 
 
-# Notes
+# Known issues
 
 ## xschem
 - netlisting seems to be done not by pin number, but by order of B's in .sym.
   Also, I've experienced different ordering for subckts, and for top cell
+
+## docker
+The aicex user has a uid of 1000, however, if you try and run it on a machine
+with a different uid for your user, then it does not seem to work. Don't know
+how to fix it yet.
