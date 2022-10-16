@@ -27,7 +27,7 @@ To install on Mac or Linux do
 ``` sh
 git clone https://github.com/wulffern/aicex.git
 cd aicex
-mkdir ./ssh
+mkdir .ssh
 cat ~/.ssh/id rsa.pub > .ssh/authorized_keys
 make cirun
 ssh -Y -p 2022 aicex@localhost
