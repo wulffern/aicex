@@ -14,15 +14,9 @@ This repository is a collection of IPs in Skywater 130nm technology.
 | [ip/tech_sky130A](ip/tech_sky130A)             | Technology files for SKY130A                                                                    |
 
 
-## Getting Started
+## Getting Started with aicex on Docker
 
-You need to create a public/private SSH key first if you don't have that
-
-``` sh
-ssh-keygen -t rsa
-```
-
-Install on Linux or Mac
+On Linux or Mac
 
 ``` sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/wulffern/aicex/main/install.sh)"
@@ -34,16 +28,13 @@ Then
 ssh -Y -p 2022 aicex@localhost
 ```
 
-
-## Test that it works
-
 Aicex relies on python scripts, the command below will install them, and
 run through the tests.
 ``` sh
 /bin/bash tests/run_docker_test.sh
 ```
 
-To check that magic and xschem works, do the following
+To check that magic and xschem works
 
 ``` sh
 cd ip/sun_sar9b_sky130nm/work 
