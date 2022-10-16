@@ -17,22 +17,22 @@ genspi:
 	python3 genspi.py
 
 typical:
-	cicsim runng ${TB} ${OPT} ${VIEW} Gt Att Tt Vt
+	cicsim run ${TB} ${OPT} ${VIEW} Gt Att Tt Vt
 
 slow:
-	cicsim runng ${TB} ${OPT} ${VIEW} Gt Ass "Th,Tl" Vl
+	cicsim run ${TB} ${OPT} ${VIEW} Gt Ass "Th,Tl" Vl
 
 fast:
-	cicsim runng ${TB} ${OPT} ${VIEW} Gt Aff "Th,Tl" Vh
+	cicsim run ${TB} ${OPT} ${VIEW} Gt Aff "Th,Tl" Vh
 
 tfs:
-	cicsim runng ${TB} ${OPT} ${VIEW} Gt "Att,Ass,Aff"  "Tt,Th,Tl" Vt
+	cicsim run ${TB} ${OPT} ${VIEW} Gt "Att,Ass,Aff"  "Tt,Th,Tl" Vt
 
 ttffss:
-	cicsim runng ${TB} ${OPT} ${VIEW} Gt "Att,Ass,Aff" "Tt" Vt
+	cicsim run ${TB} ${OPT} ${VIEW} Gt "Att,Ass,Aff" "Tt" Vt
 
 temp:
-	cicsim runng ${TB} ${OPT} ${VIEW} Gt "Att" "Tt,Th,Tl" Vt
+	cicsim run ${TB} ${OPT} ${VIEW} Gt "Att" "Tt,Th,Tl" Vt
 
 tfsp:
 	python3 plot_idgm.py ${TB}_${VIEW}GtAttAssAffTtThTlVt.run ${OPT}

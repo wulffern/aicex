@@ -8,26 +8,25 @@ netlist:
 	cd ../../work && xschem -q -x -b -s -n ../design/RPLY_BIAS_SKY130A/RPLY_BIAS.sch
 	perl -pi -e "s/\*\*\.subckt/\.subckt/ig;s/\*\*\.ends/\.ends/ig;" ../../work/xsch/RPLY_BIAS.spice
 
-
 test:
 	${MAKE} typical OPT="Debug"
 
-typical:
+typical: netlist
 	cicsim run ${TB} ${OPT} ${VIEW} Gt Att Tt Vt
 
-slow:
+slow: netlist
 	cicsim run ${TB} ${OPT} ${VIEW} Gt Ass "Th,Tl" Vl
 
-fast:
+fast: netlist
 	cicsim run ${TB} ${OPT} ${VIEW} Gt Aff "Th,Tl" Vh
 
-tfs:
+tfs: netlist
 	cicsim run ${TB} ${OPT} ${VIEW} Gt "Att,Ass,Aff" "Tt,Th,Tl" Vt
 
-ttffss:
+ttffss: netlist
 	cicsim run ${TB} ${OPT} ${VIEW} Gt "Att,Ass,Aff" "Tt" Vt
 
-temp:
+temp: netlist
 	cicsim run ${TB} ${OPT} ${VIEW} Gt "Att" "Tt,Th,Tl" Vt
 
 clean:

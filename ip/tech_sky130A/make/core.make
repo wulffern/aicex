@@ -153,3 +153,6 @@ spi:
 	test -d xsch || mkdir xsch
 	xschem -q -x -b -s -n ../design/${LIB}/${CELL}.sch
 	cat xsch/${CELL}.spice| ../tech/script/fixspi > ../cic/${CELL}.spi
+
+xview:
+	xschem -b  ../design/${LIB}/${CELL}.sch &

@@ -1,4 +1,4 @@
-TB=tran
+TB=op
 VIEW=Sch
 #VIEW=Lay
 

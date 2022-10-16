@@ -5,7 +5,6 @@ TAG = 0.1.0
 dirs = 	ip/sun_tr_sky130nm/work \
 	ip/sun_trb_sky130nm/work \
 	ip/sun_sar9b_sky130nm/work \
-	ip/sun_pll_sky130nm/work \
 	ip/sun_tr_sky130nm/sim/IVX1_CV
 
 cwd = ${shell pwd}
