@@ -14,6 +14,7 @@ if [ ! -d aicex ]; then
    cd aicex
    mkdir .ssh
    cat $HOME/.ssh/id_rsa.pub > .ssh/authorized_keys
+   sleep 2s
    docker run --rm  -p 2022:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:latest &
 
 else
