@@ -10,7 +10,8 @@
 		"tr.json",
 		"resistors.json",
 		"dig.json",
-		"components.json"
+		"components.json",
+		"capacitor.json"
 
 	],
     "cells" : []

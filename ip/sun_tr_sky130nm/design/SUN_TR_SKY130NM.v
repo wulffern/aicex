@@ -10,9 +10,9 @@ input logic D;
 endmodule
 
 //-------------------------------------------------------------
-// SUNTR_PCHDL2 <class 'cicpy.core.layoutcell.LayoutCell'>
+// SUNTR_PCHL <class 'cicpy.core.layoutcell.LayoutCell'>
 //-------------------------------------------------------------
-module SUNTR_PCHDL2(D,G,S,B);
+module SUNTR_PCHL(D,G,S,B);
 input logic G;
 input logic S;
 input logic B;
@@ -23,6 +23,16 @@ endmodule
 // SUNTR_NCHDL <class 'cicpy.core.layoutcell.LayoutCell'>
 //-------------------------------------------------------------
 module SUNTR_NCHDL(D,G,S,B);
+input logic G;
+input logic S;
+input logic B;
+input logic D;
+endmodule
+
+//-------------------------------------------------------------
+// SUNTR_NCHL <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module SUNTR_NCHL(D,G,S,B);
 input logic G;
 input logic S;
 input logic B;
@@ -67,6 +77,25 @@ SUNTR_NCHDL M8 (D,G,N7,B);
 endmodule
 
 //-------------------------------------------------------------
+// SUNTR_NCHLCM <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module SUNTR_NCHLCM(D,G,S,B);
+input logic B;
+input logic D;
+input logic G;
+input logic S;
+SUNTR_NCHL M0 (N0,G,S,B);
+SUNTR_NCHL M1 (N1,G,N0,B);
+SUNTR_NCHL M2 (N2,G,N1,B);
+SUNTR_NCHL M3 (N3,G,N2,B);
+SUNTR_NCHL M4 (N4,G,N3,B);
+SUNTR_NCHL M5 (N5,G,N4,B);
+SUNTR_NCHL M6 (N6,G,N5,B);
+SUNTR_NCHL M7 (N7,G,N6,B);
+SUNTR_NCHL M8 (D,G,N7,B);
+endmodule
+
+//-------------------------------------------------------------
 // SUNTR_PCHDLCM <class 'cicpy.core.layoutcell.LayoutCell'>
 //-------------------------------------------------------------
 module SUNTR_PCHDLCM(D,G,S,B);
@@ -79,6 +108,17 @@ SUNTR_PCHDL M7 (D,G,N0,B);
 endmodule
 
 //-------------------------------------------------------------
+// SUNTR_PCHLCM <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module SUNTR_PCHLCM(D,G,S,B);
+input logic B;
+input logic D;
+input logic G;
+input logic S;
+SUNTR_PCHL M0 (D,G,S,B);
+endmodule
+
+//-------------------------------------------------------------
 // SUNTR_NCHDLA <class 'cicpy.core.layoutcell.LayoutCell'>
 //-------------------------------------------------------------
 module SUNTR_NCHDLA(D,G,S,B);
@@ -88,6 +128,18 @@ input logic G;
 input logic S;
 SUNTR_NCHDL M0 (D,G,S,B);
 SUNTR_NCHDL M1 (S,G,D,B);
+endmodule
+
+//-------------------------------------------------------------
+// SUNTR_NCHLA <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module SUNTR_NCHLA(D,G,S,B);
+input logic B;
+input logic D;
+input logic G;
+input logic S;
+SUNTR_NCHL M0 (D,G,S,B);
+SUNTR_NCHL M1 (S,G,D,B);
 endmodule
 
 //-------------------------------------------------------------
@@ -104,6 +156,26 @@ SUNTR_PCHDL M2 (D,G,S,B);
 SUNTR_PCHDL M3 (S,G,D,B);
 SUNTR_PCHDL M4 (D,G,S,B);
 SUNTR_PCHDL M5 (S,G,D,B);
+SUNTR_PCHDL M6 (D,G,S,B);
+SUNTR_PCHDL M7 (S,G,D,B);
+endmodule
+
+//-------------------------------------------------------------
+// SUNTR_PCHLA <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module SUNTR_PCHLA(D,G,S,B);
+input logic B;
+input logic D;
+input logic G;
+input logic S;
+SUNTR_PCHL M0 (D,G,S,B);
+SUNTR_PCHL M1 (S,G,D,B);
+SUNTR_PCHL M2 (D,G,S,B);
+SUNTR_PCHL M3 (S,G,D,B);
+SUNTR_PCHL M4 (D,G,S,B);
+SUNTR_PCHL M5 (S,G,D,B);
+SUNTR_PCHL M6 (D,G,S,B);
+SUNTR_PCHL M7 (S,G,D,B);
 endmodule
 
 //-------------------------------------------------------------
@@ -719,4 +791,36 @@ SUNTR_TAPCELLB_CV XF0 (AVDD,AVSS);
 SUNTR_SWX2_CV XF13 (A13,Y13,V13,AVDD,AVSS);
 SUNTR_SWX4_CV XF14 (A14,Y14,V14,AVDD,AVSS);
 SUNTR_TGPD_CV XF15 (A15,Y15,V15,AVDD,AVSS);
+endmodule
+
+//-------------------------------------------------------------
+// SUNTR_CAPBASE_LEFT_SIDE_PORT <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module SUNTR_CAPBASE_LEFT_SIDE_PORT(A,B);
+input logic B;
+input logic A;
+endmodule
+
+//-------------------------------------------------------------
+// SUNTR_CAP_1 <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module SUNTR_CAP_1(A,B);
+input logic B;
+input logic A;
+endmodule
+
+//-------------------------------------------------------------
+// SUNTR_CAP_10 <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module SUNTR_CAP_10(A,B);
+input logic B;
+input logic A;
+endmodule
+
+//-------------------------------------------------------------
+// SUNTR_CAP_20 <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module SUNTR_CAP_20(A,B);
+input logic B;
+input logic A;
 endmodule

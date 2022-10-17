@@ -1,0 +1,5 @@
+corner:
+  Lay: ''
+  Sch: ''
+ngspice:
+  cell: RPLYTEMP_BG

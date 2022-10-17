@@ -106,13 +106,15 @@
                               "w" : { "name" : "width", "str" : ""}
                           }
                         },
-            "pch_lvt"     : { "inherit" : "nch_lvt", "devicetype" : "XM", "name" : "sky130_fd_pr__pfet_01v8" }
+            "pch_lvt"     : { "inherit" : "nch_lvt", "devicetype" : "XM", "name" : "sky130_fd_pr__pfet_01v8" },
+            "nch"     : { "inherit" : "nch_lvt", "devicetype" : "XM", "name" : "sky130_fd_pr__nfet_01v8" },
+            "pch"     : { "inherit" : "nch_lvt", "devicetype" : "XM", "name" : "sky130_fd_pr__pfet_01v8" }
 
         },
         "symbol_lib" : "cpdk",
         "symbol_libs" : ["../../cpdk/design/cic",
                          "../../cpdk/design/cic_wbulk",
-                         "../../../externals/xschem_sky130/sky130_fd_pr"
+                         "$PDK_ROOT/sky130A/libs.tech/xschem/sky130_fd_pr"
                         ]
     },
     "rules" : {

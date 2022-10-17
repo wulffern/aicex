@@ -1,0 +1,111 @@
+{
+    "cells" : [
+     { "name" : "CAPBASE_LEFT_SIDE_PORT",
+      "boundaryIgnoreRouting" : 0,
+      "class" : "Gds::GdsPatternCapacitor",
+      "yoffset": -0.5,
+      "xoffset": -0.5,
+      "widthoffset" : -1,
+      "metalUnderMetalRes" : 0,
+      "fillCoordinatesFromStrings" : [
+
+        [   "M1",
+            "-----------------------",
+            "-----------------------",
+            "--xxxxxxxxxxxxxxxxxxx--",
+            "--x--------------------",
+            "--x-xxxxxxxxxxxxxxxxx--",
+            "--x-----------------x--",
+            "--xxxxxxxxxxxxxxxxx-x--",
+            "--x-----------------x--",
+            "--x-xxxxxxxxxxxxxxxxx--",
+            "--x-----------------x--",
+            "--xxxxxxxxxxxxxxxxx-x--",
+            "--------------------x--",
+            "--xxxxxxxxxxxxxxxxxxx--"
+
+        ],
+        [   "VIA1",
+            "-----------------------",
+            "-----------------------",
+            "-----EEE---------------",
+            "-----------------------",
+            "----------------EEE----",
+            "-----------------------",
+            "-----EEE---------------",
+            "-----------------------",
+            "----------------EEE----",
+            "-----------------------",
+            "-----EEE---------------",
+            "-----------------------",
+            "----------------EEE----"
+
+        ],
+        [   "M4",
+            "-----------------------",
+            "-----------------------",
+            "--xxxxxxxxxxAxxxxxxxx--",
+            "--x--------------------",
+            "--x-xxxxxxxxxxxxxxxxx--",
+            "--x-----------------x--",
+            "--xxxxxxxxxxxxxxxxx-x--",
+            "--x-----------------x--",
+            "--x-xrxxxxxxxxxxxxxxx--",
+            "--x-----------------x--",
+            "--xxxxxxxxxxxxxxrxx-x--",
+            "--------------------x--",
+            "--xxxxxxxxxxBxxxxxxxx--"
+        ]
+
+      ],
+      "afterNew" : {
+        "copyLayers" : [["M1","M2"],["M1","M3"],["VIA1","VIA2"],["VIA1","VIA3"]]
+      }
+    },
+     { "name" : "CAP_1",
+          "inherit" : "CAPBASE_LEFT_SIDE_PORT",
+          "abstract" : 0,
+          "getRuleForHorizontalGrid" : ["M3","cap_width"],
+          "getRuleForVerticalGrid" : ["M3","cap_width"],
+          "meta" : {
+              "spice" : "C0 A B 12.95f\nC1 B 0 3.31f\nC2 A 0 3.30f",
+              "symbol" : "cic/cap"
+          },
+          "afterNew" :{
+              "copyColumns" :[
+                  { "count" : 1, "offset" : 8,"length" : 2}
+              ]
+          }
+    },
+    { "name" : "CAP_10",
+          "inherit" : "CAPBASE_LEFT_SIDE_PORT",
+          "abstract" : 0,
+          "getRuleForHorizontalGrid" : ["M3","cap_width"],
+          "getRuleForVerticalGrid" : ["M3","cap_width"],
+          "meta" : {
+              "spice" : "C0 A B 25.81fF\nC1 B 0 5.39fF\nC2 A 0 5.36fF",
+              "symbol" : "cic/cap"
+          },
+          "afterNew" :{
+              "copyColumns" :[
+                  { "count" : 10, "offset" : 8,"length" : 2}
+              ]
+          }
+    },
+    { "name" : "CAP_20",
+          "inherit" : "CAPBASE_LEFT_SIDE_PORT",
+          "abstract" : 0,
+          "getRuleForHorizontalGrid" : ["M3","cap_width"],
+          "getRuleForVerticalGrid" : ["M3","cap_width"],
+          "meta" : {
+              "spice" : "C0 A B 50.22fF\nC1 B 0 9.29fF\nC2 A 0 9.24fF",
+              "symbol" : "cic/cap"
+          },
+          "afterNew" :{
+              "copyColumns" :[
+                  { "count" : 27, "offset" : 8,"length" : 2}
+              ]
+          }
+    }
+]
+}

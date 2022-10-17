@@ -1,27 +1,23 @@
 #!/usr/bin/env bash
 
+if [ ! -f $HOME/.ssh/id_rsa.pub ]; then
 
-#- Get cicpy
-git clone https://github.com/wulffern/cicpy.git
-cd cicpy
-git pull
-python3 -m pip install --user -e .
-cd ..
+    echo "Error: No RSA SSH key found at $HOME/.ssh/id_rsa.pub";
+    echo "Create a key with 'ssh-keygen -t rsa' before running install";
+    exit 0;
 
-#- Get cicsim
-git clone https://github.com/wulffern/cicsim.git
-cd cicsim
-git pull
-python3 -m pip install -r requirements.txt --user
-python3 -m pip install --user -e .
-cd ..
+fi
 
-#- Get aicex
-git clone https://github.com/wulffern/aicex.git
-cd aicex
-git pull
-git submodule init
-git submodule update
-cd ..
+if [ ! -d aicex ]; then
 
-echo "You also need magic, netgen, xschem, ngspice and cic. See tests/install_ubuntu.sh for details"
+   git clone https://github.com/wulffern/aicex.git
+   cd aicex
+   mkdir .ssh
+   cat $HOME/.ssh/id_rsa.pub > .ssh/authorized_keys
+   sleep 2s
+   docker run --rm  -p 2022:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:latest &
+
+else
+    echo "aicex already installed"
+
+fi

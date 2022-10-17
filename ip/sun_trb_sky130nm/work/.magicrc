@@ -1,0 +1,2 @@
+source ../tech/magic/.magicrc
+addpath ../design/SUN_TRB_SKY130NM

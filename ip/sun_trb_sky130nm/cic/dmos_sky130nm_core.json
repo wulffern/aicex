@@ -191,7 +191,7 @@
           },
 
           "abstract" : 0,
-          "type" : "pch_lvt",
+          "type" : "pch",
           "beforePlace" :{
               "addEnclosuresByRectangle" : [
                   ["PDIFF",[0,-1,20,7],["NWT"]]
@@ -210,15 +210,14 @@
           "afterNew" : {
               "mirrorPatternString" : 1
           },
-          "type" : "nch_lvt",
+          "type" : "nch",
           "beforePlace" :{
               "addEnclosuresByRectangle" : [
                   ["NDIFF",[-1,-1,20,7],["PWT"]]
               ]
           }
         },
-
-        { "name" : "NCHDLR", "type" : "nch_lvt",
+        { "name" : "NCHDLR", "type" : "nch",
           "inherit" : "NCHDL", "afterPaint" : { "mirrorCenterX" : 0 },
           "xoffset" : -1.5,
           "widthoffset" : 2

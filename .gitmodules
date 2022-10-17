@@ -1,11 +1,11 @@
 [submodule "models/skywater-pdk-libs-sky130_fd_pr"]
-	path = models/skywater-pdk-libs-sky130_fd_pr
+	path = ip/tech_sky130A/external/skywater-pdk-libs-sky130_fd_pr
 	url = https://github.com/google/skywater-pdk-libs-sky130_fd_pr.git
 [submodule "externals/xschem_sky130"]
-	path = externals/xschem_sky130
+	path = ip/tech_sky130A/external/xschem_sky130
 	url = https://github.com/wulffern/xschem_sky130
 [submodule "externals/xschem_sky130/"]
 	branch = main
 [submodule "externals/sky130A"]
-	path = externals/sky130A
+	path = ip/tech_sky130A/external/sky130A
 	url = https://github.com/wulffern/sky130A.git

@@ -1,0 +1,4 @@
+
+* TODO Fix LVS for XSCHEM, probably need a xsch
+* TODO PLL won't work until I update CIC, need to update docker afterwards
+* TODO make updated video

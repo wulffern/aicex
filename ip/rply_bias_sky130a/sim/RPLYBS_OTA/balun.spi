@@ -1,0 +1,15 @@
+* Ideal balun https://designers-guide.org/analysis/diff.pdf
+
+*d=1, c=2, p=3, n=4
+.subckt balun 1 2 3 4
+* Ideal transformer for the positive input
+E1 5 2 1 0 0.5
+V1 3 5 dc 0
+F1 1 0 V1 -0.5
+R1 1 0 1T
+*Ideal transformer for the negative input
+E2 6 4 1 0 0.5
+V2 2 7 dc 0
+F2 1 0 V2 -0.5
+R2 7 6 1u
+.ends balun

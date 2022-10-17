@@ -72,6 +72,8 @@
 
         "NWT" : { "alias" : "nwell","number" : 21, "datatype" : -1 , "material" : "implant", "color" : "red","fill" : "nofill"},
         "PWT" : { "alias" : "pwell","number" : 21, "datatype" : -1 , "material" : "implant", "color" : "red","fill" : "nofill"},
+        "NLVT" : { "alias" : "nmoslvt","number" : 21, "datatype" : -1 , "material" : "implant", "color" : "red","fill" : "nofill"},
+        "PLVT" : { "alias" : "pmoslvt","number" : 21, "datatype" : -1 , "material" : "implant", "color" : "red","fill" : "nofill"},
         "PPT" : { "alias" : "","number" : 31, "datatype" : -1 , "material" : "implant", "color" : "pink","fill" : "nofill"},
         "NPT" : { "alias" : "","number" : 32, "datatype" : -1 , "material" : "implant", "color" : "cyan","fill" : "nofill"},
 
@@ -104,7 +106,7 @@
             "mresM2" : { "inherit" : "mresM1", "name" : "sky130_fd_pr__res_generic_m1"},
             "mresM3" : { "inherit" : "mresM1", "name" : "sky130_fd_pr__res_generic_m2"},
             "mresM4" : { "inherit" : "mresM1", "name" : "sky130_fd_pr__res_generic_m3"},
-            "nch_lvt" : { "name" : "sky130_fd_pr__nfet_01v8",    "ports" : ["D","G","S","B"],
+            "nch_lvt" : { "name" : "sky130_fd_pr__nfet_01v8_lvt",    "ports" : ["D","G","S","B"],
                           "devicetype" : "XM",
                           "propertymap" : {
                               "l" : { "name" : "length", "str" : ""},
@@ -112,13 +114,15 @@
                               "w" : { "name" : "width", "str" : ""}
                           }
                         },
-            "pch_lvt"     : { "inherit" : "nch_lvt", "devicetype" : "XM", "name" : "sky130_fd_pr__pfet_01v8" }
+            "pch_lvt"     : { "inherit" : "nch_lvt", "devicetype" : "XM", "name" : "sky130_fd_pr__pfet_01v8_lvt" },
+            "pch"     : { "inherit" : "nch_lvt", "devicetype" : "XM", "name" : "sky130_fd_pr__pfet_01v8" },
+            "nch"     : { "inherit" : "nch_lvt", "devicetype" : "XM", "name" : "sky130_fd_pr__nfet_01v8" }
 
         },
         "symbol_lib" : "cpdk",
         "symbol_libs" : ["../../cpdk/design/cic",
                          "../../cpdk/design/cic_wbulk",
-                         "../../../externals/xschem_sky130/sky130_fd_pr"
+                         "$PDK_ROOT/sky130A/libs.tech/xschem/sky130_fd_pr"
                         ]
     },
     "rules" : {
@@ -147,6 +151,8 @@
         "PTAP" :{ "PTAPCencOpposite" : 4, "enclosure" : 4,"PTAPCenclosure" : 4},
 
 
+        "PLVT"   : { "space" : 30, "width" : 9 , "mingatelength" : 9, "enclosure" : 2},
+        "NLVT"   : { "space" : 30, "width" : 9 , "mingatelength" : 9, "enclosure" : 2},
         "PO"   : { "space" : 30, "width" : 9 , "mingatelength" : 9, "enclosure" : 2},
         "POB"   : { "space" : 30, "width" : 9 , "mingatelength" : 9, "enclosure" : 2},
 

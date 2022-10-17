@@ -11,15 +11,39 @@ M7 N7 G  N6 B NCHDL
 M8 D G N7  B NCHDL
 .ends
 
+.subckt NCHLCM D G S B
+M0 N0 G  S B NCHL
+M1 N1 G  N0 B NCHL
+M2 N2 G  N1 B NCHL
+M3 N3 G  N2 B NCHL
+M4 N4 G  N3 B NCHL
+M5 N5 G  N4 B NCHL
+M6 N6 G  N5 B NCHL
+M7 N7 G  N6 B NCHL
+M8 D G N7  B NCHL
+.ends
+
+
+
 .subckt PCHDLCM D G S B
 M0 N0 G  S B PCHDL
 M7 D G N0  B PCHDL
+.ends
+
+.subckt PCHLCM D G S B
+M0 D G  S B PCHL
+
 .ends
 
 
 .subckt NCHDLA D G S B
 M0 D G  S B NCHDL
 M1 S G  D B NCHDL
+.ends
+
+.subckt NCHLA D G S B
+M0 D G  S B NCHL
+M1 S G  D B NCHL
 .ends
 
 .subckt PCHDLA D G S B
@@ -29,6 +53,19 @@ M2 D G S B PCHDL
 M3 S G D B PCHDL
 M4 D G S B PCHDL
 M5 S G D B PCHDL
+M6 D G S B PCHDL
+M7 S G D B PCHDL
+.ends
+
+.subckt PCHLA D G S B
+M0 D G S B PCHL
+M1 S G D B PCHL
+M2 D G S B PCHL
+M3 S G D B PCHL
+M4 D G S B PCHL
+M5 S G D B PCHL
+M6 D G S B PCHL
+M7 S G D B PCHL
 .ends
 
 .subckt NCHDLCM2 D G S B

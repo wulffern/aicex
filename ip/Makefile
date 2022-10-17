@@ -9,7 +9,7 @@ sun_pll_sky130nm
 PWD=$(shell pwd)
 
 newip:
-	cicsim ip ${IP} ../tech/cicsim/module_template.yaml --src sun_sar9b_sky130nm
+	cicsim ip ${IP} tech_sky130A/cicsim/module_template.yaml
 
 ip:
 	${foreach d, ${IPS}, cd ${d}/work ; make ip ; cd ${PWD};}

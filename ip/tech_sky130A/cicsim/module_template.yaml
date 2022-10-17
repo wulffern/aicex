@@ -1,0 +1,122 @@
+
+dirs:
+  - cic
+  - design
+  - design/${IP}
+  - documents
+  - sim
+  - work
+
+copy:
+  - cic/dmos_sky130nm_core.json
+
+create:
+  work/Makefile: |
+
+    #- Core makefile provides the following commands:
+    # -----------------------------------------------------------
+    # ip: generate ../design/<LIB> from ../cic/ip.json
+    # gds: generate gds/<CELL>.gds
+    # cdl: generate cdl/<CELL>.cdl
+    # lvs: Check cdl/<CELL>.cdl versus ../design/<LIB>/<CELL>.mag
+    # lpe: Extract parasitics lpe/<CELL>.spi
+    # drc: Run design rule checks on ../design/<LIB>/<CELL>.mag
+    # -----------------------------------------------------------
+    include ../tech/make/core.make
+
+    PREFIX=
+    LIB=${IP}
+    CELL=${CELL}
+
+    #- Provide cells you want to check for the lvsall drcall commands
+    CELLS = ${CELL}
+
+  sim/Makefile: |
+    include ../tech/make/sim.make
+
+    LIB=${IP}
+    CELL=${CELL}
+
+
+  work/.magicrc: |
+    source ../tech/magic/.magicrc
+    addpath ../design/${IP}
+
+  work/xschemrc: |
+    source ../tech/xschem/xschemrc
+  README.md: |
+
+    # ${IP}
+
+    # Who
+    ${USER}
+
+    # Why
+     <explain why you made this module>
+
+    # How
+     <explain short how you made this module>
+
+
+    # What
+
+    | What            | Lib/Folder       | Cell/Name |
+    | :-              | :-:              | :-:       |
+    | Schematic       | ${IP} | ${CELL} |
+    | Layout          | ${IP} | ${CELL} |
+    | LPE             | ${IP} | ${CELL} |
+
+
+    # Changelog/Plan
+    | Version | Status | Comment|
+    | :-| :-| :-|
+    |0.1.0 | :x: | Make something |
+
+
+    # Signal interface
+    | Signal       | Direction | Domain  | Description                               |
+    | :---         | :---:     | :---:   | :---                                      |
+    | AVDD         | Input     | VDD_1V8 | Main supply                               |
+    | AVSS         | Input     | Ground  |                                           |
+    | PWRUP_CV     | Input    | VDD_1V8 | Power up the circuit                       |
+
+
+    # Key parameters
+    | Parameter           | Min     | Typ           | Max     | Unit  |
+    | :---                | :-:     | :-:           | :-:     | :---: |
+    | Technology          |         | GF130NBCDLite |         |       |
+    | AVDD                | 1.7    | 1.8           | 1.9    | V     |
+    | Temperature         | -40     | 27            | 125     | C     |
+
+
+    # Status
+
+    | Stage                       | TYPE | Status | Comment                        |
+    | :---                        | :-:  | :---:  | :--:                           |
+    | Specification               | DOC  | :x:    |                                |
+    | Schematic                   | VIEW | :x:    |                                |
+    | Schematic simulation        | VER  | N/A    |                                |
+    | Layout                      | VIEW | :x:    |                                |
+    | Layout parasitic extraction | VIEW | :x:    |                                |
+    | LPE simulation              | VER  | :x:    |                                |
+    | LVS                         | VER  | :x:    |                                |
+    | DRC                         | VER  | :x:    |                                |
+    | ERC                         | VER  | :x:    |                                |
+    | ANT                         | VER  | :x:    |                                |
+
+do:
+  - ln -s ../tech_sky130A tech
+  - cd work && ln -s ../tech/magic/mos.24bit.dstyle
+  - cd work && ln -s ../tech/magic/mos.24bit.std.cmap
+  - cd sim && ln -s ../tech/cicsim/cicsim.yaml
+  - cd cic && ln -s ../tech/cic/sky130A.tech
+  - git add .
+  - git add -f work/.magicrc
+  - git add -f work/xschemrc
+  - git add -f work/Makefile
+  - git add -f work/mos.24bit.dstyle
+  - git add -f work/mos.24bit.std.cmap
+
+
+echo: |
+  Good luck with ${IP}

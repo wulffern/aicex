@@ -12,6 +12,10 @@ __pycache__/
 *.gds
 .DS_Store
 *.html
+.cache
+.local/
+cicpy/
+cicsim/
 tools
 output*/
 

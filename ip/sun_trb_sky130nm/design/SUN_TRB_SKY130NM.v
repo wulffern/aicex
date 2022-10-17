@@ -324,6 +324,25 @@ SUNTRB_PCHDL MP1 (Y,CN,N2,BULKP);
 endmodule
 
 //-------------------------------------------------------------
+// SUNTRB_TAPCELLB_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module SUNTRB_TAPCELLB_CV(AVDD,AVSS);
+input logic AVDD;
+input logic AVSS;
+SUNTRB_NCHDL MN1 (AVSS,AVSS,AVSS,AVSS);
+SUNTRB_PCHDL MP1 (AVDD,AVDD,AVDD,AVDD);
+endmodule
+
+//-------------------------------------------------------------
+// SUNTRB_TAPCELLBAVSS_CV <class 'cicpy.core.layoutcell.LayoutCell'>
+//-------------------------------------------------------------
+module SUNTRB_TAPCELLBAVSS_CV(AVDD,AVSS);
+input logic AVSS;
+SUNTRB_NCHDL MN1 (AVSS,AVSS,AVSS,AVSS);
+SUNTRB_PCHDL MP1 (NC1,NC1,NC1,AVDD);
+endmodule
+
+//-------------------------------------------------------------
 // SUNTRB_DFRNQNX1_CV <class 'cicpy.core.layoutcell.LayoutCell'>
 //-------------------------------------------------------------
 module SUNTRB_DFRNQNX1_CV(D,CK,RN,Q,QN,BULKP,BULKN,AVDD,AVSS);
@@ -336,7 +355,7 @@ input logic BULKP;
 input logic BULKN;
 input logic AVDD;
 input logic AVSS;
-SUNTRB_TAPCELLB_CV XA0 (BULKP,BULKN);
+SUNTRB_TAPCELLBAVSS_CV XA0 (BULKP,BULKN);
 SUNTRB_NDX1_CV XA1 (CK,RN,CKN,BULKP,BULKN,AVDD,AVSS);
 SUNTRB_IVX1_CV XA2 (CKN,CKB,BULKP,BULKN,AVDD,AVSS);
 SUNTRB_IVTRIX1_CV XA3 (D,CKN,CKB,A0,BULKP,BULKN,AVDD,AVSS);
@@ -416,23 +435,4 @@ SUNTRB_NCHDL MN2 (A,CN,B,BULKN);
 SUNTRB_PCHDL MP0 (AVDD,C,CN,BULKP);
 SUNTRB_PCHDL MP1_DMY (B,AVDD,AVDD,BULKP);
 SUNTRB_PCHDL MP2 (A,C,B,BULKP);
-endmodule
-
-//-------------------------------------------------------------
-// SUNTRB_TAPCELLB_CV <class 'cicpy.core.layoutcell.LayoutCell'>
-//-------------------------------------------------------------
-module SUNTRB_TAPCELLB_CV(AVDD,AVSS);
-input logic AVDD;
-input logic AVSS;
-SUNTRB_NCHDL MN1 (AVSS,AVSS,AVSS,AVSS);
-SUNTRB_PCHDL MP1 (AVDD,AVDD,AVDD,AVDD);
-endmodule
-
-//-------------------------------------------------------------
-// SUNTRB_TAPCELLBAVSS_CV <class 'cicpy.core.layoutcell.LayoutCell'>
-//-------------------------------------------------------------
-module SUNTRB_TAPCELLBAVSS_CV(AVDD,AVSS);
-input logic AVSS;
-SUNTRB_NCHDL MN1 (AVSS,AVSS,AVSS,AVSS);
-SUNTRB_PCHDL MP1 (NC1,NC1,NC1,AVDD);
 endmodule

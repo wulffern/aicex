@@ -62,3 +62,21 @@ N 460.0 820.0 440.0 820.0{lab=D}
 C {devices/lab_pin.sym} 460.0 820.0 2 0  {name=l22 sig_type=std_logic lab=D }
 N 460.0 850.0 440.0 850.0{lab=B}
 C {devices/lab_pin.sym} 460.0 850.0 2 0  {name=l23 sig_type=std_logic lab=B }
+C {SUN_TR_SKY130NM/SUNTR_PCHDL.sym} 900 0 0 0 {name=XM6}
+N 960.0 30.0 940.0 30.0{lab=D}
+C {devices/lab_pin.sym} 960.0 30.0 2 0  {name=l24 sig_type=std_logic lab=D }
+N 880.0 0.0 900.0 0.0{lab=G}
+C {devices/lab_pin.sym} 880.0 0.0 0 0  {name=l25 sig_type=std_logic lab=G }
+N 960.0 -30.0 940.0 -30.0{lab=S}
+C {devices/lab_pin.sym} 960.0 -30.0 2 0  {name=l26 sig_type=std_logic lab=S }
+N 960.0 0.0 940.0 0.0{lab=B}
+C {devices/lab_pin.sym} 960.0 0.0 2 0  {name=l27 sig_type=std_logic lab=B }
+C {SUN_TR_SKY130NM/SUNTR_PCHDL.sym} 900 170.0 0 0 {name=XM7}
+N 960.0 200.0 940.0 200.0{lab=S}
+C {devices/lab_pin.sym} 960.0 200.0 2 0  {name=l28 sig_type=std_logic lab=S }
+N 880.0 170.0 900.0 170.0{lab=G}
+C {devices/lab_pin.sym} 880.0 170.0 0 0  {name=l29 sig_type=std_logic lab=G }
+N 960.0 140.0 940.0 140.0{lab=D}
+C {devices/lab_pin.sym} 960.0 140.0 2 0  {name=l30 sig_type=std_logic lab=D }
+N 960.0 170.0 940.0 170.0{lab=B}
+C {devices/lab_pin.sym} 960.0 170.0 2 0  {name=l31 sig_type=std_logic lab=B }

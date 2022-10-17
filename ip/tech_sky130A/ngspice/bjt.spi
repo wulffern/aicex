@@ -1,0 +1,15 @@
+
+.lib Bt
+
+*.include  "../../../tech/external/skywater-pdk-libs-sky130_fd_pr/cells/pnp_05v5/sky130_fd_pr__pnp_05v5_W3p40L3p40.model.spice"
+
+
+.endl
+
+.lib Bf
+
+.endl
+
+.lib Bs
+
+.endl

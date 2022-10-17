@@ -1,20 +1,22 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1661983200
+timestamp 1664575200
 << checkpaint >>
-rect 0 0 1260 1232
+rect 0 0 1260 1584
 << locali >>
 rect 168 58 396 118
 rect 168 410 396 470
 rect 168 762 396 822
 rect 168 1114 396 1174
-rect 168 58 228 1174
+rect 168 1466 396 1526
+rect 168 58 228 1526
 rect 396 234 564 294
 rect 396 586 564 646
 rect 396 938 564 998
-rect 564 234 624 998
-rect 798 146 858 1086
+rect 396 1290 564 1350
+rect 564 234 624 1350
+rect 798 146 858 1438
 rect 1152 132 1368 220
 rect 288 234 504 294
 rect 720 146 936 206
@@ -37,6 +39,12 @@ box 0 704 1260 1056
 use SUNTR_PCHDL M5
 transform 1 0 0 0 1 880
 box 0 880 1260 1232
+use SUNTR_PCHDL M6
+transform 1 0 0 0 1 1056
+box 0 1056 1260 1408
+use SUNTR_PCHDL M7
+transform 1 0 0 0 1 1232
+box 0 1232 1260 1584
 << labels >>
 flabel locali s 1152 132 1368 220 0 FreeSans 400 0 0 0 B
 port 4 nsew

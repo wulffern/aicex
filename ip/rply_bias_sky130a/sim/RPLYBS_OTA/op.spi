@@ -1,0 +1,89 @@
+*RPLY_BIAS_SKY130A/RPLYBS_OTA
+*----------------------------------------------------------------
+* Include
+*----------------------------------------------------------------
+#ifdef Lay
+.include ../../../work/lpe/RPLYBS_OTA_lpe.spi
+#else
+.include ../../../../sun_tr_sky130nm/work/lpe/SUNTR_CAP_10_lpe.spi
+.include ../../../../sun_tr_sky130nm/work/lpe/SUNTR_CAP_20_lpe.spi
+.include ../../../work/xsch/RPLYBS_OTA.spice
+#endif
+
+.include ../balun.spi
+
+*-----------------------------------------------------------------
+* OPTIONS
+*-----------------------------------------------------------------
+#ifdef Debug
+*.option reltol=1e-3 srcsteps=1 ramptime=10n noopiter keepopinfo gmin=1e-12
+#else
+*.option reltol=1e-5 srcsteps=1 ramptime=10n noopiter keepopinfo gmin=1e-15
+#endif
+
+*-----------------------------------------------------------------
+* PARAMETERS
+*-----------------------------------------------------------------
+
+*-----------------------------------------------------------------
+* FORCE
+*-----------------------------------------------------------------
+VSS  VSS  0     dc 0
+VDD  VDD_1V8  VSS  dc {vdda}
+VPWR PWRUP_1V8 0 dc {vdda}
+
+VI VI 0 dc 0 ac 1
+VC VC 0 dc 0.7
+
+XB VI VC VIP VIN balun
+
+
+*-----------------------------------------------------------------
+* DUT
+*-----------------------------------------------------------------
+XDUT VDD_1V8 VO VSS PWRUP_1V8 VIN VIP RPLYBS_OTA
+
+*----------------------------------------------------------------
+* MEASURES
+*----------------------------------------------------------------
+
+
+*----------------------------------------------------------------
+* PROBE
+*----------------------------------------------------------------
+
+#ifdef Debug
+.save all
+#else
+.save all
+*.probe v(VDD_1V8) v(VO) v(VSS) v(PWRUP_1V8) v(VIN) v(VIP)
+*+ v(VIN)
+#endif
+
+*----------------------------------------------------------------
+* NGSPICE control
+*----------------------------------------------------------------
+.control
+set num_threads=8
+set color0=white
+set color1=black
+unset askquit
+
+#ifdef AC
+ac dec 50 1k 1G
+#else
+dc VI -1 1 1m
+#endif
+
+write
+#ifdef Debug
+
+*quit
+#else
+
+quit
+#endif
+
+.endc
+
+.end

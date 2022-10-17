@@ -8,14 +8,14 @@
 # lpe: Extract parasitics lpe/<CELL>.spi
 # drc: Run design rule checks on ../design/<LIB>/<CELL>.mag
 # -----------------------------------------------------------
-include ../../../tech/make/core.make
+include ../tech/make/core.make
 
 LIB=SUN_TRB_SKY130NM
 CELL=DFRNQNX1_CV
 PREFIX=SUNTRB_
 
 #- Provide cells you want to check for the lvsall drcall commands
-CELLS = DFRNQNX1_CV
+CELLS = NDX1_CV
 
 test:
 	make ip

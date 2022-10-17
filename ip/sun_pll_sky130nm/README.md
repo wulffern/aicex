@@ -5,7 +5,13 @@
 wulff
 
 # Why
- <explain why you made this module>
+ Example PLL with a VDD controlled ring oscillator. This is not a design you
+ should use for a real circuit. It's a design made to further develop
+ ciccreator.
+ 
+ If you wanted to use the architecture I would start by replacing the
+ ring-oscillator with something different, something with smaller Kvco, for
+ example a current controlled ring-oscillator.
 
 # How
  <explain short how you made this module>
