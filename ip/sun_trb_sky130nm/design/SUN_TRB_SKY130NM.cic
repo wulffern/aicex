@@ -783,11 +783,11 @@
                         ],
                         "properties": {
                             "drainWidth": 0.44,
-                            "length": 0.17999999999999999,
+                            "length": 0.18,
                             "multiplier": 1,
                             "nf": 1,
                             "sourceWidth": 0.44,
-                            "width": 1.0800000000000001
+                            "width": 1.08
                         }
                     }
                 ],
@@ -1281,11 +1281,11 @@
                         ],
                         "properties": {
                             "drainWidth": 0.44,
-                            "length": 0.17999999999999999,
+                            "length": 0.18,
                             "multiplier": 1,
                             "nf": 1,
                             "sourceWidth": 0.44,
-                            "width": 1.0800000000000001
+                            "width": 1.08
                         }
                     }
                 ],
@@ -1788,11 +1788,11 @@
                         ],
                         "properties": {
                             "drainWidth": 0.44,
-                            "length": 0.17999999999999999,
+                            "length": 0.18,
                             "multiplier": 1,
                             "nf": 1,
                             "sourceWidth": 0.44,
-                            "width": 1.0800000000000001
+                            "width": 1.08
                         }
                     }
                 ],
@@ -2296,11 +2296,11 @@
                         ],
                         "properties": {
                             "drainWidth": 0.44,
-                            "length": 0.17999999999999999,
+                            "length": 0.18,
                             "multiplier": 1,
                             "nf": 1,
                             "sourceWidth": 0.44,
-                            "width": 1.0800000000000001
+                            "width": 1.08
                         }
                     }
                 ],
@@ -2804,11 +2804,11 @@
                         ],
                         "properties": {
                             "drainWidth": 0.44,
-                            "length": 0.17999999999999999,
+                            "length": 0.18,
                             "multiplier": 1,
                             "nf": 1,
                             "sourceWidth": 0.44,
-                            "width": 1.0800000000000001
+                            "width": 1.08
                         }
                     }
                 ],
@@ -26850,7 +26850,7 @@
         }
     ],
     "info": {
-        "arguments": "/Users/wulff/pro/cic/ciccreator/bin/darwin/cic.app/Contents/MacOS/cic ../cic/ip.json ../cic/sky130.tech SUN_TRB_SKY130NM",
+        "arguments": "cic ../cic/ip.json ../cic/sky130.tech SUN_TRB_SKY130NM",
         "file": "../cic/ip.json",
         "hash": "0.1.0-beta-123-g51bb8a5",
         "includepaths": "../cic",
@@ -26858,6 +26858,6 @@
         "library": "SUN_TRB_SKY130NM",
         "prefix": "",
         "rules": "../cic/sky130.tech",
-        "version": "0.1.4+ built on Wed Oct 12 19:50:38 CEST 2022"
+        "version": "0.1.4+ built on Sat 15 Oct 2022 04:22:59 PM UTC"
     }
 }
