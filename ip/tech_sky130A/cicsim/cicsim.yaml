@@ -1,6 +1,10 @@
 
 simulator: ngspice
 
+variable:
+  CPDK_NGPICE: ../../../
+
+
 corner:
   Gt: |
     *Nothing here

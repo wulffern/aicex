@@ -30,14 +30,20 @@ import pandas as pd
 import glob
 import os
 import sys
+import yaml
 
 
 
-files = glob.glob("output_idgm*/idgm_*.csv")
+files = glob.glob("output_idgm*/idgm_*.yaml")
 df_all = pd.DataFrame()
 for f in files:
-    df = pd.read_csv(f)
-    df["name"] =os.path.basename(f).replace("idgm_","").replace(".csv","")
+    with open(f) as fi:
+        obj = yaml.safe_load(fi)
+    #print(obj)
+    df = pd.DataFrame([pd.Series(obj)])
+    #df = pd.read_yaml(f)
+    df["name"] =os.path.basename(f).replace("idgm_","").replace(".yaml","")
+    #print(df)
     df_all = pd.concat([df,df_all])
 
 
@@ -47,4 +53,6 @@ print("|:---| :-:| :-:| :-:| ")
 for c in sorted(df_all.columns):
     if("gmid" not in c):
         continue
+    df_all[c].dropna(inplace=True)
+    #print(df_all[c])
     print("|%s | %.2g | %.2g | %.2g|" % (c,df_all[c].min(),df_all[c].mean(),df_all[c].max()))

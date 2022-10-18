@@ -3542,15 +3542,6 @@
                 },
                 {
                     "class": "Rect",
-                    "layer": "PLVT",
-                    "net": "",
-                    "x1": 14400,
-                    "x2": 25200,
-                    "y1": 11400,
-                    "y2": 15000
-                },
-                {
-                    "class": "Rect",
                     "layer": "NWT",
                     "net": "",
                     "x1": 0,
@@ -3564,7 +3555,7 @@
                 "devices": [
                     {
                         "class": "cIcSpice::Mosfet",
-                        "deviceName": "pch_lvt",
+                        "deviceName": "pch",
                         "name": "M1",
                         "nodes": [
                             "D",
@@ -4603,15 +4594,6 @@
                 },
                 {
                     "class": "Rect",
-                    "layer": "NLVT",
-                    "net": "",
-                    "x1": 37800,
-                    "x2": 48600,
-                    "y1": 11400,
-                    "y2": 15000
-                },
-                {
-                    "class": "Rect",
                     "layer": "PWT",
                     "net": "",
                     "x1": -9000,
@@ -4625,7 +4607,7 @@
                 "devices": [
                     {
                         "class": "cIcSpice::Mosfet",
-                        "deviceName": "nch_lvt",
+                        "deviceName": "nch",
                         "name": "M1",
                         "nodes": [
                             "D",
@@ -7356,7 +7338,7 @@
                         {
                             "class": "Port",
                             "layer": "M1",
-                            "name": "N4",
+                            "name": "N6",
                             "net": "",
                             "pinLayer": "M1_pin",
                             "spicePort": true,
@@ -7404,7 +7386,7 @@
                         {
                             "class": "Text",
                             "layer": "TXT",
-                            "name": "M4",
+                            "name": "M6",
                             "net": "",
                             "x1": 31500,
                             "x2": 31500,
@@ -7413,7 +7395,7 @@
                         }
                     ],
                     "class": "Instance",
-                    "instanceName": "M4",
+                    "instanceName": "M6",
                     "layer": "PR",
                     "libpath": "",
                     "name": "SUNTR_NCHL",
@@ -7422,9 +7404,9 @@
                         "class": "cIcSpice::SubcktInstance",
                         "deviceName": "subckt",
                         "groupName": "M",
-                        "name": "M4",
+                        "name": "M6",
                         "nodes": [
-                            "N4",
+                            "N6",
                             "G",
                             "N3",
                             "B"
@@ -7447,7 +7429,7 @@
                         {
                             "class": "Port",
                             "layer": "M1",
-                            "name": "N5",
+                            "name": "N7",
                             "net": "",
                             "pinLayer": "M1_pin",
                             "spicePort": true,
@@ -7471,7 +7453,7 @@
                         {
                             "class": "Port",
                             "layer": "M1",
-                            "name": "N4",
+                            "name": "N6",
                             "net": "",
                             "pinLayer": "M1_pin",
                             "spicePort": true,
@@ -7495,194 +7477,12 @@
                         {
                             "class": "Text",
                             "layer": "TXT",
-                            "name": "M5",
+                            "name": "M7",
                             "net": "",
                             "x1": 31500,
                             "x2": 31500,
                             "y1": 145200,
                             "y2": 145200
-                        }
-                    ],
-                    "class": "Instance",
-                    "instanceName": "M5",
-                    "layer": "PR",
-                    "libpath": "",
-                    "name": "SUNTR_NCHL",
-                    "net": "",
-                    "subcktInstance": {
-                        "class": "cIcSpice::SubcktInstance",
-                        "deviceName": "subckt",
-                        "groupName": "M",
-                        "name": "M5",
-                        "nodes": [
-                            "N5",
-                            "G",
-                            "N4",
-                            "B"
-                        ],
-                        "properties": {
-                        },
-                        "subcktName": "SUNTR_NCHL"
-                    },
-                    "x1": 0,
-                    "x2": 63000,
-                    "xcell": 0,
-                    "y1": 132000,
-                    "y2": 158400,
-                    "ycell": 0
-                },
-                {
-                    "angle": "",
-                    "cell": "SUNTR_NCHL",
-                    "children": [
-                        {
-                            "class": "Port",
-                            "layer": "M1",
-                            "name": "N6",
-                            "net": "",
-                            "pinLayer": "M1_pin",
-                            "spicePort": true,
-                            "x1": 37800,
-                            "x2": 48600,
-                            "y1": 174500,
-                            "y2": 177500
-                        },
-                        {
-                            "class": "Port",
-                            "layer": "M1",
-                            "name": "G",
-                            "net": "",
-                            "pinLayer": "M1_pin",
-                            "spicePort": true,
-                            "x1": 16200,
-                            "x2": 27000,
-                            "y1": 170100,
-                            "y2": 173100
-                        },
-                        {
-                            "class": "Port",
-                            "layer": "M1",
-                            "name": "N5",
-                            "net": "",
-                            "pinLayer": "M1_pin",
-                            "spicePort": true,
-                            "x1": 37800,
-                            "x2": 48600,
-                            "y1": 165700,
-                            "y2": 168700
-                        },
-                        {
-                            "class": "Port",
-                            "layer": "M1",
-                            "name": "B",
-                            "net": "",
-                            "pinLayer": "M1_pin",
-                            "spicePort": true,
-                            "x1": -5400,
-                            "x2": 5400,
-                            "y1": 169400,
-                            "y2": 173800
-                        },
-                        {
-                            "class": "Text",
-                            "layer": "TXT",
-                            "name": "M6",
-                            "net": "",
-                            "x1": 31500,
-                            "x2": 31500,
-                            "y1": 171600,
-                            "y2": 171600
-                        }
-                    ],
-                    "class": "Instance",
-                    "instanceName": "M6",
-                    "layer": "PR",
-                    "libpath": "",
-                    "name": "SUNTR_NCHL",
-                    "net": "",
-                    "subcktInstance": {
-                        "class": "cIcSpice::SubcktInstance",
-                        "deviceName": "subckt",
-                        "groupName": "M",
-                        "name": "M6",
-                        "nodes": [
-                            "N6",
-                            "G",
-                            "N5",
-                            "B"
-                        ],
-                        "properties": {
-                        },
-                        "subcktName": "SUNTR_NCHL"
-                    },
-                    "x1": 0,
-                    "x2": 63000,
-                    "xcell": 0,
-                    "y1": 158400,
-                    "y2": 184800,
-                    "ycell": 0
-                },
-                {
-                    "angle": "",
-                    "cell": "SUNTR_NCHL",
-                    "children": [
-                        {
-                            "class": "Port",
-                            "layer": "M1",
-                            "name": "N7",
-                            "net": "",
-                            "pinLayer": "M1_pin",
-                            "spicePort": true,
-                            "x1": 37800,
-                            "x2": 48600,
-                            "y1": 200900,
-                            "y2": 203900
-                        },
-                        {
-                            "class": "Port",
-                            "layer": "M1",
-                            "name": "G",
-                            "net": "",
-                            "pinLayer": "M1_pin",
-                            "spicePort": true,
-                            "x1": 16200,
-                            "x2": 27000,
-                            "y1": 196500,
-                            "y2": 199500
-                        },
-                        {
-                            "class": "Port",
-                            "layer": "M1",
-                            "name": "N6",
-                            "net": "",
-                            "pinLayer": "M1_pin",
-                            "spicePort": true,
-                            "x1": 37800,
-                            "x2": 48600,
-                            "y1": 192100,
-                            "y2": 195100
-                        },
-                        {
-                            "class": "Port",
-                            "layer": "M1",
-                            "name": "B",
-                            "net": "",
-                            "pinLayer": "M1_pin",
-                            "spicePort": true,
-                            "x1": -5400,
-                            "x2": 5400,
-                            "y1": 195800,
-                            "y2": 200200
-                        },
-                        {
-                            "class": "Text",
-                            "layer": "TXT",
-                            "name": "M7",
-                            "net": "",
-                            "x1": 31500,
-                            "x2": 31500,
-                            "y1": 198000,
-                            "y2": 198000
                         }
                     ],
                     "class": "Instance",
@@ -7709,8 +7509,8 @@
                     "x1": 0,
                     "x2": 63000,
                     "xcell": 0,
-                    "y1": 184800,
-                    "y2": 211200,
+                    "y1": 132000,
+                    "y2": 158400,
                     "ycell": 0
                 },
                 {
@@ -7726,8 +7526,8 @@
                             "spicePort": true,
                             "x1": 37800,
                             "x2": 48600,
-                            "y1": 227300,
-                            "y2": 230300
+                            "y1": 174500,
+                            "y2": 177500
                         },
                         {
                             "class": "Port",
@@ -7738,8 +7538,8 @@
                             "spicePort": true,
                             "x1": 16200,
                             "x2": 27000,
-                            "y1": 222900,
-                            "y2": 225900
+                            "y1": 170100,
+                            "y2": 173100
                         },
                         {
                             "class": "Port",
@@ -7750,8 +7550,8 @@
                             "spicePort": true,
                             "x1": 37800,
                             "x2": 48600,
-                            "y1": 218500,
-                            "y2": 221500
+                            "y1": 165700,
+                            "y2": 168700
                         },
                         {
                             "class": "Port",
@@ -7762,8 +7562,8 @@
                             "spicePort": true,
                             "x1": -5400,
                             "x2": 5400,
-                            "y1": 222200,
-                            "y2": 226600
+                            "y1": 169400,
+                            "y2": 173800
                         },
                         {
                             "class": "Text",
@@ -7772,8 +7572,8 @@
                             "net": "",
                             "x1": 31500,
                             "x2": 31500,
-                            "y1": 224400,
-                            "y2": 224400
+                            "y1": 171600,
+                            "y2": 171600
                         }
                     ],
                     "class": "Instance",
@@ -7800,8 +7600,8 @@
                     "x1": 0,
                     "x2": 63000,
                     "xcell": 0,
-                    "y1": 211200,
-                    "y2": 237600,
+                    "y1": 158400,
+                    "y2": 184800,
                     "ycell": 0
                 },
                 {
@@ -7816,7 +7616,7 @@
                             "x1": 20100,
                             "x2": 23100,
                             "y1": 11700,
-                            "y2": 225900
+                            "y2": 173100
                         },
                         {
                             "class": "Text",
@@ -7842,7 +7642,7 @@
                     "x1": 16200,
                     "x2": 23100,
                     "y1": 11700,
-                    "y2": 225900
+                    "y2": 173100
                 },
                 {
                     "abstract": false,
@@ -8021,7 +7821,7 @@
                         {
                             "class": "Text",
                             "layer": "TXT",
-                            "name": "N4",
+                            "name": "N6",
                             "net": "",
                             "x1": 37800,
                             "x2": 37800,
@@ -8036,7 +7836,7 @@
                     "libpath": "",
                     "meta": {
                     },
-                    "name": "N4",
+                    "name": "N6",
                     "net": "",
                     "physicalOnly": false,
                     "x1": 37800,
@@ -8061,7 +7861,7 @@
                         {
                             "class": "Text",
                             "layer": "TXT",
-                            "name": "N5",
+                            "name": "N7",
                             "net": "",
                             "x1": 37800,
                             "x2": 37800,
@@ -8076,93 +7876,13 @@
                     "libpath": "",
                     "meta": {
                     },
-                    "name": "N5",
+                    "name": "N7",
                     "net": "",
                     "physicalOnly": false,
                     "x1": 37800,
                     "x2": 44700,
                     "y1": 148100,
                     "y2": 168700
-                },
-                {
-                    "abstract": false,
-                    "boundaryIgnoreRouting": false,
-                    "cellused": false,
-                    "children": [
-                        {
-                            "class": "Rect",
-                            "layer": "M1",
-                            "net": "",
-                            "x1": 41700,
-                            "x2": 44700,
-                            "y1": 174500,
-                            "y2": 195100
-                        },
-                        {
-                            "class": "Text",
-                            "layer": "TXT",
-                            "name": "N6",
-                            "net": "",
-                            "x1": 37800,
-                            "x2": 37800,
-                            "y1": 174500,
-                            "y2": 174500
-                        }
-                    ],
-                    "class": "cIcCore::Route",
-                    "has_pr": false,
-                    "layer": "PR",
-                    "libcell": false,
-                    "libpath": "",
-                    "meta": {
-                    },
-                    "name": "N6",
-                    "net": "",
-                    "physicalOnly": false,
-                    "x1": 37800,
-                    "x2": 44700,
-                    "y1": 174500,
-                    "y2": 195100
-                },
-                {
-                    "abstract": false,
-                    "boundaryIgnoreRouting": false,
-                    "cellused": false,
-                    "children": [
-                        {
-                            "class": "Rect",
-                            "layer": "M1",
-                            "net": "",
-                            "x1": 41700,
-                            "x2": 44700,
-                            "y1": 200900,
-                            "y2": 221500
-                        },
-                        {
-                            "class": "Text",
-                            "layer": "TXT",
-                            "name": "N7",
-                            "net": "",
-                            "x1": 37800,
-                            "x2": 37800,
-                            "y1": 200900,
-                            "y2": 200900
-                        }
-                    ],
-                    "class": "cIcCore::Route",
-                    "has_pr": false,
-                    "layer": "PR",
-                    "libcell": false,
-                    "libpath": "",
-                    "meta": {
-                    },
-                    "name": "N7",
-                    "net": "",
-                    "physicalOnly": false,
-                    "x1": 37800,
-                    "x2": 44700,
-                    "y1": 200900,
-                    "y2": 221500
                 },
                 {
                     "class": "Port",
@@ -8185,8 +7905,8 @@
                     "spicePort": true,
                     "x1": 37800,
                     "x2": 48600,
-                    "y1": 227300,
-                    "y2": 230300
+                    "y1": 174500,
+                    "y2": 177500
                 },
                 {
                     "class": "Port",
@@ -8282,41 +8002,11 @@
                         "class": "cIcSpice::SubcktInstance",
                         "deviceName": "subckt",
                         "groupName": "M",
-                        "name": "M4",
-                        "nodes": [
-                            "N4",
-                            "G",
-                            "N3",
-                            "B"
-                        ],
-                        "properties": {
-                        },
-                        "subcktName": "SUNTR_NCHL"
-                    },
-                    {
-                        "class": "cIcSpice::SubcktInstance",
-                        "deviceName": "subckt",
-                        "groupName": "M",
-                        "name": "M5",
-                        "nodes": [
-                            "N5",
-                            "G",
-                            "N4",
-                            "B"
-                        ],
-                        "properties": {
-                        },
-                        "subcktName": "SUNTR_NCHL"
-                    },
-                    {
-                        "class": "cIcSpice::SubcktInstance",
-                        "deviceName": "subckt",
-                        "groupName": "M",
                         "name": "M6",
                         "nodes": [
                             "N6",
                             "G",
-                            "N5",
+                            "N3",
                             "B"
                         ],
                         "properties": {
@@ -8380,7 +8070,7 @@
             "x1": 0,
             "x2": 63000,
             "y1": 0,
-            "y2": 237600
+            "y2": 184800
         },
         {
             "abstract": false,
@@ -8736,7 +8426,7 @@
                         {
                             "class": "Port",
                             "layer": "M1",
-                            "name": "D",
+                            "name": "N0",
                             "net": "",
                             "pinLayer": "M1_pin",
                             "spicePort": true,
@@ -8804,7 +8494,7 @@
                         "groupName": "M",
                         "name": "M0",
                         "nodes": [
-                            "D",
+                            "N0",
                             "G",
                             "S",
                             "B"
@@ -8821,10 +8511,110 @@
                     "ycell": 0
                 },
                 {
+                    "angle": "",
+                    "cell": "SUNTR_PCHL",
+                    "children": [
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "D",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": 14400,
+                            "x2": 25200,
+                            "y1": 42500,
+                            "y2": 45500
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "G",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": 36000,
+                            "x2": 46800,
+                            "y1": 38100,
+                            "y2": 41100
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "N0",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": 14400,
+                            "x2": 25200,
+                            "y1": 33700,
+                            "y2": 36700
+                        },
+                        {
+                            "class": "Port",
+                            "layer": "M1",
+                            "name": "B",
+                            "net": "",
+                            "pinLayer": "M1_pin",
+                            "spicePort": true,
+                            "x1": 57600,
+                            "x2": 68400,
+                            "y1": 37400,
+                            "y2": 41800
+                        },
+                        {
+                            "class": "Text",
+                            "layer": "TXT",
+                            "name": "M7",
+                            "net": "",
+                            "x1": 31500,
+                            "x2": 31500,
+                            "y1": 39600,
+                            "y2": 39600
+                        }
+                    ],
+                    "class": "Instance",
+                    "instanceName": "M7",
+                    "layer": "PR",
+                    "libpath": "",
+                    "name": "SUNTR_PCHL",
+                    "net": "",
+                    "subcktInstance": {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "M",
+                        "name": "M7",
+                        "nodes": [
+                            "D",
+                            "G",
+                            "N0",
+                            "B"
+                        ],
+                        "properties": {
+                        },
+                        "subcktName": "SUNTR_PCHL"
+                    },
+                    "x1": 0,
+                    "x2": 63000,
+                    "xcell": 0,
+                    "y1": 26400,
+                    "y2": 52800,
+                    "ycell": 0
+                },
+                {
                     "abstract": false,
                     "boundaryIgnoreRouting": false,
                     "cellused": false,
                     "children": [
+                        {
+                            "class": "Rect",
+                            "layer": "M1",
+                            "net": "",
+                            "x1": 39900,
+                            "x2": 42900,
+                            "y1": 11700,
+                            "y2": 41100
+                        },
                         {
                             "class": "Text",
                             "layer": "TXT",
@@ -8847,9 +8637,49 @@
                     "net": "",
                     "physicalOnly": false,
                     "x1": 36000,
-                    "x2": 36000,
+                    "x2": 42900,
                     "y1": 11700,
-                    "y2": 11700
+                    "y2": 41100
+                },
+                {
+                    "abstract": false,
+                    "boundaryIgnoreRouting": false,
+                    "cellused": false,
+                    "children": [
+                        {
+                            "class": "Rect",
+                            "layer": "M1",
+                            "net": "",
+                            "x1": 18300,
+                            "x2": 21300,
+                            "y1": 16100,
+                            "y2": 36700
+                        },
+                        {
+                            "class": "Text",
+                            "layer": "TXT",
+                            "name": "N0",
+                            "net": "",
+                            "x1": 14400,
+                            "x2": 14400,
+                            "y1": 16100,
+                            "y2": 16100
+                        }
+                    ],
+                    "class": "cIcCore::Route",
+                    "has_pr": false,
+                    "layer": "PR",
+                    "libcell": false,
+                    "libpath": "",
+                    "meta": {
+                    },
+                    "name": "N0",
+                    "net": "",
+                    "physicalOnly": false,
+                    "x1": 14400,
+                    "x2": 21300,
+                    "y1": 16100,
+                    "y2": 36700
                 },
                 {
                     "class": "Port",
@@ -8872,8 +8702,8 @@
                     "spicePort": true,
                     "x1": 14400,
                     "x2": 25200,
-                    "y1": 16100,
-                    "y2": 19100
+                    "y1": 42500,
+                    "y2": 45500
                 },
                 {
                     "class": "Port",
@@ -8911,9 +8741,24 @@
                         "groupName": "M",
                         "name": "M0",
                         "nodes": [
-                            "D",
+                            "N0",
                             "G",
                             "S",
+                            "B"
+                        ],
+                        "properties": {
+                        },
+                        "subcktName": "SUNTR_PCHL"
+                    },
+                    {
+                        "class": "cIcSpice::SubcktInstance",
+                        "deviceName": "subckt",
+                        "groupName": "M",
+                        "name": "M7",
+                        "nodes": [
+                            "D",
+                            "G",
+                            "N0",
                             "B"
                         ],
                         "properties": {
@@ -8947,7 +8792,7 @@
             "x1": 0,
             "x2": 63000,
             "y1": 0,
-            "y2": 26400
+            "y2": 52800
         },
         {
             "abstract": false,

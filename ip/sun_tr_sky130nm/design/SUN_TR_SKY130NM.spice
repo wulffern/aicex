@@ -10,7 +10,7 @@ XMM1 D G S B sky130_fd_pr__pfet_01v8  l=0.18  nf=1  w=1.08
 * SUNTR_PCHL <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
 .SUBCKT SUNTR_PCHL D G S B
-XMM1 D G S B sky130_fd_pr__pfet_01v8_lvt  l=0.36  nf=1  w=1.08  
+XMM1 D G S B sky130_fd_pr__pfet_01v8  l=0.36  nf=1  w=1.08  
 .ENDS
 
 *-------------------------------------------------------------
@@ -24,7 +24,7 @@ XMM1 D G S B sky130_fd_pr__nfet_01v8  l=0.18  nf=1  w=1.08
 * SUNTR_NCHL <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
 .SUBCKT SUNTR_NCHL D G S B
-XMM1 D G S B sky130_fd_pr__nfet_01v8_lvt  l=0.36  nf=1  w=1.08  
+XMM1 D G S B sky130_fd_pr__nfet_01v8  l=0.36  nf=1  w=1.08  
 .ENDS
 
 *-------------------------------------------------------------
@@ -64,9 +64,7 @@ XM0 N0 G S B SUNTR_NCHL
 XM1 N1 G N0 B SUNTR_NCHL
 XM2 N2 G N1 B SUNTR_NCHL
 XM3 N3 G N2 B SUNTR_NCHL
-XM4 N4 G N3 B SUNTR_NCHL
-XM5 N5 G N4 B SUNTR_NCHL
-XM6 N6 G N5 B SUNTR_NCHL
+XM6 N6 G N3 B SUNTR_NCHL
 XM7 N7 G N6 B SUNTR_NCHL
 XM8 D G N7 B SUNTR_NCHL
 .ENDS
@@ -83,7 +81,8 @@ XM7 D G N0 B SUNTR_PCHDL
 * SUNTR_PCHLCM <class 'cicpy.core.layoutcell.LayoutCell'>
 *-------------------------------------------------------------
 .SUBCKT SUNTR_PCHLCM D G S B
-XM0 D G S B SUNTR_PCHL
+XM0 N0 G S B SUNTR_PCHL
+XM7 D G N0 B SUNTR_PCHL
 .ENDS
 
 *-------------------------------------------------------------

@@ -6,12 +6,10 @@ __pycache__/
 # C extensions
 *.so
 *.run
-*.csv
 *.pdf
 *.ext
 *.gds
 .DS_Store
-*.html
 .cache
 .local/
 cicpy/

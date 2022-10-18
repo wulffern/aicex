@@ -10,7 +10,7 @@ err_kt_q:
 
 offset:
   src:
-    - m_offset
+    - offset
   typ: 0
   min: -10
   max: 10
@@ -25,3 +25,39 @@ ibp:
   max: 2
   scale: 1e6
   unit: "uA"
+
+ivdd:
+  src:
+    - ivdd
+  typ: 30
+  min: 10
+  max: 50
+  scale: -1e6
+  unit: "uA"
+
+temp:
+  src:
+    - m_temp
+  typ: 27
+  min: -50
+  max: 125
+  scale: 1
+  unit: "C"
+
+temperr:
+  src:
+    - m_temp_err
+  typ: 0
+  min: -10
+  max: 10
+  scale: 1
+  unit: "C"
+
+vref:
+  src:
+    - vref
+  typ: 1.22
+  min: -2%
+  max: 2%
+  digits: 3
+  scale: 1

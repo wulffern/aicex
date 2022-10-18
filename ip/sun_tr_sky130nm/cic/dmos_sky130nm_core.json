@@ -378,6 +378,7 @@
               ]
           }
         },
+        //pch_lvt has horrible intrinsic gain, don't use it
          { "name" : "PCHL",
            "xoffset" : 0.0,
           "inherit" : "DMOS_BULKP2",
@@ -385,18 +386,7 @@
               "symbol" : "pch"
           },
           "abstract" : 0,
-          "type" : "pch_lvt",
-           "fillCoordinatesFromStrings" : [
-              [   "PLVT",
-                  "-------------------",
-                  "-------------------",
-                  "-------------------",
-                  "----mmm------------",
-                  "-------------------",
-                  "-------------------",
-                  "-------------------"
-              ]
-          ],
+          "type" : "pch",
           "beforePlace" :{
               "addEnclosuresByRectangle" : [
                   ["PDIFF",[0,-1,20,9],["NWT"]]
@@ -432,22 +422,11 @@
           },
           "xoffset" : -1.5,
           "abstract" : 0,
-                 "fillCoordinatesFromStrings" : [
-              [   "NLVT",
-                  "-------------------",
-                  "-------------------",
-                  "-------------------",
-                  "----mmm------------",
-                  "-------------------",
-                  "-------------------",
-                  "-------------------"
-              ]
-          ],
           "afterNew" : {
               "mirrorPatternString" : 1,
               "minPolyLength" : 18.0
           },
-          "type" : "nch_lvt",
+          "type" : "nch",
           "beforePlace" :{
               "addEnclosuresByRectangle" : [
                   ["NDIFF",[-1,-1,20,9],["PWT"]]

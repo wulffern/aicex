@@ -88,9 +88,7 @@ SUNTR_NCHL M0 (N0,G,S,B);
 SUNTR_NCHL M1 (N1,G,N0,B);
 SUNTR_NCHL M2 (N2,G,N1,B);
 SUNTR_NCHL M3 (N3,G,N2,B);
-SUNTR_NCHL M4 (N4,G,N3,B);
-SUNTR_NCHL M5 (N5,G,N4,B);
-SUNTR_NCHL M6 (N6,G,N5,B);
+SUNTR_NCHL M6 (N6,G,N3,B);
 SUNTR_NCHL M7 (N7,G,N6,B);
 SUNTR_NCHL M8 (D,G,N7,B);
 endmodule
@@ -115,7 +113,8 @@ input logic B;
 input logic D;
 input logic G;
 input logic S;
-SUNTR_PCHL M0 (D,G,S,B);
+SUNTR_PCHL M0 (N0,G,S,B);
+SUNTR_PCHL M7 (D,G,N0,B);
 endmodule
 
 //-------------------------------------------------------------

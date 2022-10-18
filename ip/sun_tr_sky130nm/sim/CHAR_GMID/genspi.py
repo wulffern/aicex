@@ -18,7 +18,6 @@ def genspi(fname,sub,repl):
             for l in fi:
                 l = l.replace(sub,repl)
                 fo.write(l)
-    os.system(f"ln -s {fname}.py {foname}.py")
     os.system(f"git add {foname}.py {foname}.spi")
     return foname
 

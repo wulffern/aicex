@@ -48,8 +48,6 @@ XDUT VDD_1V8 VO VSS PWRUP_1V8 VIN VIP IBP_2U RPLYBS_OTA
 * WAVES
 *----------------------------------------------------------------
 
-*B1 gain_large_db 0 v=20*log10(abs(v(VO)/v(VI)))
-*B2 gain_small_db 0 v=20*log10(abs(deriv(v(VO))/deriv(v(VI))))
 
 *----------------------------------------------------------------
 * MEASURES
@@ -58,7 +56,7 @@ XDUT VDD_1V8 VO VSS PWRUP_1V8 VIN VIP IBP_2U RPLYBS_OTA
 .measure dc vs FIND v(xdut.vs) AT={0}
 .measure dc vbn1 FIND v(xdut.vbn1) AT={0}
 .measure dc vbn2 FIND v(xdut.vbn1) AT={0}
-.measure dc AldB FIND v(gain_large_db) AT={0}
+
 
 *----------------------------------------------------------------
 * PROBE
@@ -70,7 +68,7 @@ XDUT VDD_1V8 VO VSS PWRUP_1V8 VIN VIP IBP_2U RPLYBS_OTA
 *.save all
 .probe v(VDD_1V8) v(VO) v(VSS) v(PWRUP_1V8) v(VIN) v(VIP) v(gain_large_db)
 + v(gain_small_db)
-+ v(VIN)
++ v(VI)
 + v(xdut.vbn1)
 + v(xdut.vbn2)
 + v(xdut.vs)
@@ -93,8 +91,12 @@ unset askquit
 *- Use a step that does not hit 0 to avoid infinite large signal gain
 dc VI -0.5 0.5 1.1m
 
-let A1db = 20*log10(deriv(v(vo))/deriv(vi))
-
+let asdb = 20*log10(abs(deriv(v(vo))/deriv(vi)))
+let aldb = 20*log10(abs(v(vo)/v(vi)))
+meas dc a_small_db_0  find asdb at=0
+meas dc a_large_db_0  find aldb at=0
+meas dc a_small_db_max  max asdb
+meas dc a_large_db_max  max aldb
 write
 quit
 

@@ -1,0 +1,45 @@
+*Measure file
+
+.control
+
+set t_end=2u
+load {cicraw}
+let k_q=boltz/echarge
+let vd_ref=k_q*(v(temp)+273.15)*ln(64)
+let r_scale = 5 + 1/8
+
+echo "MEAS_START"
+
+* Calculate temperature error
+let w_diff = v(t_op)-v(t_on)
+let w_temp=w_diff/(k_q*ln(64)*r_scale) - 273.15
+let w_temp_ref = v(temp)
+let w_temp_err = w_temp-w_temp_ref
+
+meas tran m_temp find w_temp at=$t_end
+meas tran m_temp_ref find w_temp_ref at=$t_end
+meas tran m_temp_err find w_temp_err at=$t_end
+
+* Get currents
+meas tran ibp_1u find i(v1) at=$t_end
+meas tran ivdd find i(vdd) at=$t_end
+meas tran vd1 find v(xdut.vd1) at=$t_end
+meas tran vd2 find v(xdut.vd2) at=$t_end
+meas tran vr1 find v(xdut.vr1) at=$t_end
+
+let w_offset = v(xdut.vr1)-v(xdut.vd1)
+meas tran offset find  w_offset at=$t_end
+
+let d_vd = v(xdut.vr1)-v(xdut.vd2)
+let d_vd_err = d_vd - vd_ref
+meas tran dvd find d_vd at=$t_end
+meas tran dvdref find vd_ref at=$t_end
+meas tran dvderr find d_vd_err at=$t_end
+
+meas tran vref find v(t_op) at=$t_end
+
+
+
+echo "MEAS_END"
+
+.endc
