@@ -498,6 +498,10 @@
           "class" : "Layout::LayoutDigitalCell",
           "setYoffsetHalf" :  1 ,
           "rows" : 7,
+          "meta" : {
+                "noSchematic" : true
+          },
+
           "decorator" : [
               {"ConnectSourceDrain" : ["M1","||",""]}
           ],
@@ -745,6 +749,10 @@
         { "name": "SARDIGEX4_CV",
           "abstract": 0,
           "inherit" : "SARDIGEX2_CV",
+          "meta" : {
+              "noSchematic" : true
+          },
+
           "spiceRegex" : [
               ["SWX2_CV","SWX4_CV"]
           ]
@@ -761,6 +769,9 @@
          "class" : "Layout::LayoutSARCDAC",
          "inherit" : "SAR9B_CV_NOROUTE",
          "ctrlOutside" : 0,
+         "meta" : {
+                "noSchematic" : true
+            },
          "afterPlace" : [
 
              {"addPowerRings" :[

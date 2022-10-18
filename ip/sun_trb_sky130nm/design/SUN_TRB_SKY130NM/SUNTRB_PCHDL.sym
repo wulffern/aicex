@@ -1,22 +1,20 @@
 v {xschem version=3.0.0 file_version=1.2 }
 K {type=subcircuit
-format="@name @pinlist @symname xoffset=@xoffset yoffset=@yoffset angle=@angle M=@M"
-template="name=x1 xoffset=0 yoffset=0 angle=0 M=1"
+format="@name @pinlist @symname xoffset=@xoffset yoffset=@yoffset angle=@angle "
+template="name=x1 xoffset=0 yoffset=0 angle=0 "
 } 
-L 4 20 15 40 15 {}
-L 4 40 15 40 30 {}
-L 4 20 -15 40 -15 {}
-L 4 40 -15 40 -30 {}
-L 4 20 0 40 0 {}
-L 4 37 -20 27 -15 {}
-L 4 27 -15 37 -10 {}
-L 4 20 15 20 -15 {}
-L 4 15 -15 15 15 {}
-A 4 11 0 4 0 360 {}
-L 4 0 0 7 0 {}
-T {@symname} 40 20 0 0 0.16 0.16 { vcenter=true}
-T {@name} 36 -25 0 0 0.25 0.25 { vcenter=true}
-B 5 36 34 44 26 {name=D dir=inout pinnumber=1}
-B 5 -4 4 4 -4 {name=G dir=inout pinnumber=2}
-B 5 36 -26 44 -34 {name=S dir=inout pinnumber=3}
-B 5 36 4 44 -4 {name=B dir=inout pinnumber=4}
+B 5 -22.5 -2.5  -17.5 2.5 {name=D dir=inout }
+L 4 -20 0 0 0 {}
+T {D} 5 -5 0 0 0.2 0.2  {}
+B 5 -22.5 17.5  -17.5 22.5 {name=G dir=inout }
+L 4 -20 20 0 20 {}
+T {G} 5 15 0 0 0.2 0.2  {}
+B 5 -22.5 37.5  -17.5 42.5 {name=S dir=inout }
+L 4 -20 40 0 40 {}
+T {S} 5 35 0 0 0.2 0.2  {}
+B 5 -22.5 57.5  -17.5 62.5 {name=B dir=inout }
+L 4 -20 60 0 60 {}
+T {B} 5 55 0 0 0.2 0.2  {}
+P 4 5 0 -10 180 -10 180 70 0 70 0 -10 {}
+T {@symname}  50 20.0  0 0 0.25 0.25 {}
+T {@name} 0 -25 0 0 0.2 0.2 {}

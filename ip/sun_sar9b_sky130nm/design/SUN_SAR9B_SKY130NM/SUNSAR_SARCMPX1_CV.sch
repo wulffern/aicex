@@ -1,4 +1,4 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2 }
 G {}
 K {}
 V {}
@@ -7,6 +7,9 @@ E {}
 T {Strongarm half circuits} 370 170 0 0 0.5 0.5 {}
 T {Charge kickback compensation} 780 260 0 0 0.5 0.5 {}
 T {Comparator with kickback compensation} 290 -10 0 0 1 1 {}
+T {Buffers} 1355 265 0 0 0.4 0.4 {}
+T {CK_CMP logic. Stop clock when CK_SAMPLE=0. Stop clock when DONE=1. 
+Otherwise, propagate the clock trough to CK_B} 425 925 0 0 0.4 0.4 {}
 N 1020 870 1040 870 {lab=AVDD}
 N 1020 910 1040 910 {lab=AVSS}
 N 850 330 870 330 {lab=CPI}
