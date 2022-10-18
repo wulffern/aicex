@@ -3,7 +3,7 @@
 For details see <a href='tran_SchGtAttAssAffTtThTlVtVlVh.html'>tran_SchGtAttAssAffTtThTlVtVlVh.html</a>
 
 |**Parameter**|**View**|**Min** | **Typ** | **Max**|
-|:---| :-:| :-:| :-:| :-:| :-:|
+|:---| :---:| :---:| :---:| :---:| :---:|
 |dvderr | Spec | -10.000 mV | 0.000 mV | 10.000 mV |
 | | Sch|0.262 mV | 2.092 mV | 4.842 mV |
 |offset | Spec | -10.00 mV | 0.00 mV | 10.00 mV |
