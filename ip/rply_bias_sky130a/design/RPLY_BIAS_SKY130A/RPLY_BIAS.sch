@@ -67,7 +67,7 @@ lab=VR1}
 N -150 -400 -150 -380 {
 lab=VDD_1V8}
 N -130 -320 -130 -250 {
-lab=VD1}
+lab=VD1}‰
 N -90 -400 -90 -380 {
 lab=PWRUP_1V8}
 N -70 -400 -70 -380 {
@@ -178,6 +178,8 @@ N 510 -540 510 -350 {
 lab=T_OP}
 N 430 -350 510 -350 {
 lab=T_OP}
+N -120 -760 -120 -750 {
+lab=LPI}
 C {cborder/border_s.sym} 520 0 0 0 {
 user="Carsten Wulff"
 company="Carsten Wulff Software"}
@@ -187,8 +189,8 @@ C {devices/ipin.sym} -90 -390 3 0 {name=p3 lab=PWRUP_1V8}
 C {devices/opin.sym} -90 -710 1 0 {name=p6 lab=LPI}
 C {devices/opin.sym} -120 -630 3 0 {name=p7 lab=LPO}
 C {devices/opin.sym} 740 -500 1 0 {name=p8 lab=IBP_1U[3:0]}
-C {SUN_TR_SKY130NM/SUNTR_PCHLCM.sym} 20 -730 0 0 {name=xpb2 xoffset=0 yoffset=0 angle=0 M=1}
-C {SUN_TR_SKY130NM/SUNTR_PCHLCM.sym} -250 -730 0 1 {name=xpb1[7:0] xoffset=0 yoffset=0 angle=0 M=1}
+C {SUN_TR_SKY130NM/SUNTR_PCHLCM.sym} 20 -730 0 0 {name=xpb2 }
+C {SUN_TR_SKY130NM/SUNTR_PCHLCM.sym} -250 -730 0 1 {name=xpb1[7:0] }
 C {sky130_fd_pr/pnp_05v5.sym} -310 10 0 0 {name=Q1
 model=pnp_05v5_W3p40L3p40
 spiceprefix=X
@@ -197,29 +199,29 @@ C {sky130_fd_pr/pnp_05v5.sym} 40 10 0 0 {name=Q2[7:0]
 model=pnp_05v5_W3p40L3p40
 spiceprefix=X
 }
-C {SUN_TR_SKY130NM/SUNTR_RPPO16.sym} 60 -250 1 0 {name=x20 xoffset=0 yoffset=0 angle=0 M=1}
-C {SUN_TR_SKY130NM/SUNTR_CAP_20.sym} -120 -760 0 0 {name=x3[5:0] xoffset=0 yoffset=0 angle=0 M=1}
+C {SUN_TR_SKY130NM/SUNTR_RPPO16.sym} 60 -250 1 0 {name=x20 }
 C {RPLY_BIAS_SKY130A/RPLYBS_OTA.sym} -110 -550 3 0 {name=xota}
 C {devices/lab_pin.sym} -150 -380 3 0 {name=l1 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_pin.sym} -70 -380 3 0 {name=l3 sig_type=std_logic lab=VSS}
-C {SUN_TR_SKY130NM/SUNTR_PCHLCM.sym} 700 -730 0 0 {name=xpb4[3:0] xoffset=0 yoffset=0 angle=0 M=1}
+C {SUN_TR_SKY130NM/SUNTR_PCHLCM.sym} 700 -730 0 0 {name=xpb4[3:0] }
 C {devices/lab_pin.sym} -290 -310 0 1 {name=l2 sig_type=std_logic lab=VD1}
 C {devices/lab_pin.sym} 60 -40 0 1 {name=l4 sig_type=std_logic lab=VD2}
 C {devices/lab_pin.sym} 60 -310 0 1 {name=l5 sig_type=std_logic lab=VR1}
-C {SUN_TR_SKY130NM/SUNTR_PCHLCM.sym} 220 -730 0 0 {name=xpb3 xoffset=0 yoffset=0 angle=0 M=1}
+C {SUN_TR_SKY130NM/SUNTR_PCHLCM.sym} 220 -730 0 0 {name=xpb3 }
 C {devices/lab_wire.sym} 160 -570 0 0 {name=l6 sig_type=std_logic lab=IBP_2U}
-C {SUN_TR_SKY130NM/SUNTR_PCHLCM.sym} 390 -730 0 0 {name=xpb1 xoffset=0 yoffset=0 angle=0 M=1}
+C {SUN_TR_SKY130NM/SUNTR_PCHLCM.sym} 390 -730 0 0 {name=xpb1 }
 C {sky130_fd_pr/pnp_05v5.sym} 410 0 0 0 {name=Q2
 model=pnp_05v5_W3p40L3p40
 spiceprefix=X
 }
-C {SUN_TR_SKY130NM/SUNTR_RPPO16.sym} 430 -200 1 0 {name=x1[4:0] xoffset=0 yoffset=0 angle=0 M=1}
+C {SUN_TR_SKY130NM/SUNTR_RPPO16.sym} 430 -200 1 0 {name=x1[4:0] }
 C {devices/lab_pin.sym} 430 -90 0 1 {name=l7 sig_type=std_logic lab=T_ON,VR2[3:0]}
 C {devices/lab_pin.sym} 430 -230 0 1 {name=l8 sig_type=std_logic lab=VR2[3:0],VRT}
-C {SUN_TR_SKY130NM/SUNTR_RPPO2.sym} 430 -340 1 0 {name=x2 xoffset=0 yoffset=0 angle=0 M=1}
-C {SUN_TR_SKY130NM/SUNTR_RPPO2.sym} 430 -440 1 0 {name=x1 xoffset=0 yoffset=0 angle=0 M=1}
-C {SUN_TR_SKY130NM/SUNTR_RPPO2.sym} 430 -540 1 0 {name=x3 xoffset=0 yoffset=0 angle=0 M=1}
+C {SUN_TR_SKY130NM/SUNTR_RPPO2.sym} 430 -340 1 0 {name=x2 }
+C {SUN_TR_SKY130NM/SUNTR_RPPO2.sym} 430 -440 1 0 {name=x1 }
+C {SUN_TR_SKY130NM/SUNTR_RPPO2.sym} 430 -540 1 0 {name=x3 }
 C {devices/opin.sym} 540 -540 0 0 {name=p4 lab=T_OP}
 C {devices/lab_pin.sym} 430 -50 0 1 {name=l9 sig_type=std_logic lab=T_ON}
 C {devices/lab_pin.sym} 430 -250 0 1 {name=l10 sig_type=std_logic lab=VRT}
 C {devices/opin.sym} 530 -50 0 0 {name=p5 lab=T_ON}
+C {SUN_TR_SKY130NM/SUNTR_CAP_20.sym} -120 -760 0 0 {name=xcap[5:0] }

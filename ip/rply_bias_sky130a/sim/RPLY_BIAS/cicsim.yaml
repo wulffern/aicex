@@ -4,3 +4,4 @@ corner:
 ngspice:
   library: RPLY_BIAS_SKY130A
   cell: RPLY_BIAS
+  options: -b
