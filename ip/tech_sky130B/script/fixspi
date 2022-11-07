@@ -1,0 +1,75 @@
+#!/usr/bin/env python3
+
+#- Sort instances accoring to group and number.
+#
+#-Example:
+#   xbber223a D G S B PMOS
+#   xaber223a D G S B NMOS
+#   xaber123a D G S B NMOS
+#   |   ||  |
+#   |   ||- number
+#   |- group
+#
+#- Turns into
+#
+#   xaber123a D G S B NMOS
+#   xaber223a D G S B NMOS
+#   xbber223a D G S B PMOS
+
+import sys
+import re
+
+isSubckt = False
+sublines = dict()
+lines = list()
+
+#- Collect input and remove +
+for l in sys.stdin:
+    l = re.sub("\n","",l)
+    if(l.startswith("+")):
+        lines[-1] += re.sub("^\s*\+"," ",l)
+    else:
+        lines.append(l)
+
+#- Groups
+for i in range(0,len(lines)):
+    l = lines[i]
+
+    #- Remove commented out subckt of top
+    l = l.replace("**.subckt",".subckt")
+    l = l.replace("**.ends",".ends")
+    l = l.replace("<","_")
+    l = l.replace(">","")
+        
+
+    if(re.search("^\.ends",l,flags=re.IGNORECASE)):
+        isSubckt = False
+
+        for gr in sorted(sublines.keys()):
+            for num in sorted(sublines[gr].keys()):
+                print(sublines[gr][num])
+
+
+    if(not isSubckt):
+        print(l)
+    elif(l.startswith('*')):
+        print(l)
+    elif(l == ""):
+        continue
+    else:
+        m = re.search("^([^\d<>]+)(\S+)\s+",l)
+        if(m is None):
+            raise Exception("No match, that should not happen")
+        group = m.groups()[0]
+        num = m.groups()[1]
+
+        if(group not in sublines):
+            sublines[group] = dict()
+
+        sublines[group][num] = l
+
+
+
+    if(re.search("^\.subckt",l,flags=re.IGNORECASE)):
+        isSubckt = True
+        sublines = dict()
