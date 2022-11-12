@@ -1,0 +1,31 @@
+* The loopgainprobe subcircuit needs to be named X999 (numeric node name chosen for compatibility with KiCad)
+
+* The probe subcircuit is inserted as follows, the a_node/b_node (input/output) order is unimportant
+* X999 a_node b_node loopgainprobe
+
+* The following .control section performs the loop analysis and plots the results
+* .control 
+* run 
+* alter i.X999.Ii acmag=1 
+* alter v.X999.Vi acmag=0 
+* run
+* gnuplot magfile db(tian_loop())
+* gnuplot phfile 180*cph(tian_loop())/pi
+* .endc
+
+* The loopgainprobe can be disabled by setting both i.X999.Ii and v.X999.Vi to zero
+
+* tian_loop.lib was translated from Frank Wiedmann's LTspice LoopGainProbe.asc into the ngspice dialect
+* For more information see: https://sites.google.com/site/frankwiedmann/loopgain
+
+* Michael Tian, V. Visvanathan, Jeffrey Hantgan, and Kenneth Kundert,
+*    "Striving for Small-Signal Stability", IEEE Circuits and Devices Magazine,
+*     vol. 17, no. 1, pp. 31-41, January 2001.
+
+.subckt loopgainprobe a b
+Ii 0 x DC 0 AC 0
+Vi x a DC 0 AC 1
+Vnodebuffer b x 0
+.ends loopgainprobe
+
+.func tian_loop() {1/(1-1/(2*(ac1.I(v.X999.Vi)*ac2.V(X999.x)-ac1.V(X999.x)*ac2.I(v.X999.Vi))+ac1.V(X999.x)+ac2.I(v.X999.Vi)))}

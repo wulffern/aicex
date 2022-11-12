@@ -1,29 +1,13 @@
 * Measure LSTB
 .control
 
-load {cicname}_0.raw
+load {cicname}.raw
 
-load {cicname}_1.raw
-
-let ip11 = ac1.i(vlstb1)
-let ip12 = ac1.i(vlstb2)
-let ip21 = ac2.i(vlstb1)
-let ip22 = ac2.i(vlstb2)
-let vprb1 = ac1.lstbprobe
-let vprb2 = ac2.lstbprobe
-
-
-* Tian method
-let av = 1/(1/(2*(ip11*vprb2-vprb1*ip21)+vprb1+ip21)-1)
-let phase=180/PI*vp(av)
-
-meas ac gm_db find vdb(av) when vp(av)=0
-meas ac pm_deg find phase when vdb(av)=0
-meas ac 3db_f when phase=135
-meas ac 0db_f when vdb(av)=0
-meas ac dc_gain find vdb(av) at=0.01
-meas ac m6dB when vdB(av)=-6
-
+meas ac gm_db find lg_mag when lg_phase=0
+meas ac pm_deg find lg_phase when lg_mag=0
+meas ac f3db when lg_phase=135
+meas ac ug when lg_mag=0
+meas ac lf_gain find lg_mag at=1k
 write {cicname}_meas.raw
 
 .endc

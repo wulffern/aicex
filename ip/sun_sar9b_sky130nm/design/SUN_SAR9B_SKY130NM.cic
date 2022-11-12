@@ -1737,11 +1737,11 @@
                         ],
                         "properties": {
                             "drainWidth": 0.44,
-                            "length": 0.18,
+                            "length": 0.17999999999999999,
                             "multiplier": 1,
                             "nf": 1,
                             "sourceWidth": 0.44,
-                            "width": 1.08
+                            "width": 1.0800000000000001
                         }
                     }
                 ],
@@ -2245,11 +2245,11 @@
                         ],
                         "properties": {
                             "drainWidth": 0.44,
-                            "length": 0.18,
+                            "length": 0.17999999999999999,
                             "multiplier": 1,
                             "nf": 1,
                             "sourceWidth": 0.44,
-                            "width": 1.08
+                            "width": 1.0800000000000001
                         }
                     }
                 ],
@@ -2753,11 +2753,11 @@
                         ],
                         "properties": {
                             "drainWidth": 0.44,
-                            "length": 0.18,
+                            "length": 0.17999999999999999,
                             "multiplier": 1,
                             "nf": 1,
                             "sourceWidth": 0.44,
-                            "width": 1.08
+                            "width": 1.0800000000000001
                         }
                     }
                 ],
@@ -2866,7 +2866,7 @@
                         ],
                         "properties": {
                             "layer": "M1",
-                            "length": 0.3,
+                            "length": 0.29999999999999999,
                             "width": 0.38
                         }
                     }
@@ -7519,7 +7519,7 @@
                         ],
                         "properties": {
                             "layer": "M4",
-                            "length": 0.36,
+                            "length": 0.35999999999999999,
                             "width": 0.44
                         }
                     },
@@ -7533,7 +7533,7 @@
                         ],
                         "properties": {
                             "layer": "M4",
-                            "length": 0.36,
+                            "length": 0.35999999999999999,
                             "width": 0.44
                         }
                     }
@@ -7546,8 +7546,8 @@
                     "B"
                 ],
                 "properties": {
-                    "height": 5.28,
-                    "width": 50.76
+                    "height": 5.2800000000000002,
+                    "width": 50.759999999999998
                 }
             },
             "class": "cIcCore::PatternCapacitor",
@@ -23383,6 +23383,7 @@
             "libcell": false,
             "libpath": "",
             "meta": {
+                "noSchematic": true
             },
             "name": "SUNSAR_SARCMPHX1_CV",
             "net": "",
@@ -40098,7 +40099,7 @@
             "libcell": false,
             "libpath": "",
             "meta": {
-                "symbol": "cic_wbulk/sardigex"
+                "noSchematic": true
             },
             "name": "SUNSAR_SARDIGEX4_CV",
             "net": "",
@@ -56517,6 +56518,7 @@
             "libcell": false,
             "libpath": "",
             "meta": {
+                "noSchematic": true
             },
             "name": "SUNSAR_SAR9B_CV",
             "net": "",
@@ -56530,7 +56532,7 @@
         }
     ],
     "info": {
-        "arguments": "cic ../cic/ip.json ../cic/sky130.tech SUN_SAR9B_SKY130NM",
+        "arguments": "/Users/wulff/pro/cic/ciccreator/bin/darwin/cic.app/Contents/MacOS/cic ../cic/ip.json ../cic/sky130.tech SUN_SAR9B_SKY130NM",
         "file": "../cic/ip.json",
         "hash": "0.1.0-beta-123-g51bb8a5",
         "includepaths": "../cic",
@@ -56538,6 +56540,6 @@
         "library": "SUN_SAR9B_SKY130NM",
         "prefix": "",
         "rules": "../cic/sky130.tech",
-        "version": "0.1.4+ built on Sat 15 Oct 2022 04:22:59 PM UTC"
+        "version": "0.1.4+ built on Wed Oct 12 19:50:38 CEST 2022"
     }
 }
