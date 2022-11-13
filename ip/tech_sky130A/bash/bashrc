@@ -1,3 +1,0 @@
-
-#- Assume that open_pdk is installed in $HOME/share/pdk
-export PDK_ROOT=$HOME/share/pdk

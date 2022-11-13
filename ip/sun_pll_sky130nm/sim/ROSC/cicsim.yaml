@@ -1,9 +1,0 @@
-
-ngspice:
-  options: |
-
-
-corner:
-  Sch: |
-
-  Lay: |
