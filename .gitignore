@@ -17,7 +17,11 @@ cicsim/
 tools
 output*/
 
+ip/
 work/
+.data
+.plt
+.csv
 # Distribution / packaging
 .Python
 build/
