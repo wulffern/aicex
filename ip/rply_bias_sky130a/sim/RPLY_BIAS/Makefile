@@ -29,6 +29,10 @@ ttffss: netlist
 temp: netlist
 	cicsim run ${TB} ${OPT} ${VIEW} Gt "Att" "Tt,Th,Tl" Vt
 
+all:
+	${MAKE} tfs TB=tran
+	${MAKE} tfs TB=lstb
+
 clean:
 	-rm -rf output_*
 	-rm -rf __pycache__
