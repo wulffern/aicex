@@ -27,13 +27,15 @@ On Linux or Mac
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/wulffern/aicex/main/install.sh)"
 ```
 
-Then
+Wait a few seconds until you see "Restarting OpenBSD Secure Shell server".Then
 
 ``` sh
 ssh -Y -p 2022 aicex@localhost
 ```
 
-Aicex relies on python scripts, the command below will install them, and
+You are now in the docker image, and the home directory will be set to the aicex cloned git repository.
+
+Aicex relies on python scripts, the command below will install them, and clone the ip's defined in [ip/config.yaml](ip/config.yaml). Once everything is installed, the script will build from scratch the ADC, transistors etc, and run DRC/LVS, and a small simulation to verify the environment is OK.
 run through the tests.
 ``` sh
 /bin/bash tests/run_docker_test.sh
@@ -47,15 +49,11 @@ magic ../design/SUN_SAR9B_SKY130NM/SUNSAR_SAR9B_CV.mag &
 xschem -b ../design/SUN_SAR9B_SKY130NM/SUNSAR_SAR9B_CV.sch &
 ```
 
+## Getting started on native linux or mac
 
-## Introduction
+For the analog toolchain we need some tools, and a process design kit (PDK). These must be installed first.
 
-The video is old, which means things have changed on how to install and also the
-directory structure.
-
-[https://www.youtube.com/watch?v=yvUW2gA42bM](https://www.youtube.com/watch?v=yvUW2gA42bM)
-
-## Requirements
+### Requirements
 
 - [Skywater 130nm PDK](https://github.com/google/skywater-pdk). I use [open_pdks](https://github.com/RTimothyEdwards/open_pdks) to install the PDK
 - [Magic VLSI](https://github.com/RTimothyEdwards/magic) for layout
@@ -66,6 +64,81 @@ directory structure.
 
 I install the tools manually on MacOS, however, on Ubuntu 20.4 I've made a
 [makefile](https://github.com/wulffern/eda) to install all the tools.
+
+### Install aicex
+
+I'd recommend that you look in the [install.sh](install.sh) script, and understand what it does. Same for the [tests/run_docker_test.sh](tests/run_docker_test.sh)
+
+# Make your own design
+
+The technology setup, and the python scripts expects IPs to follow a certain directory structure. Do the following:
+
+Navigate to the IP folder
+
+```sh
+cd ip
+```
+I use `cicconf ip` to create a new IP. cicconf will search for a `config.yaml` file that contains information on default template for IPs, project name, and technology name. Do
+
+```sh
+cicconf newip myip
+```
+
+On docker this will probably fail to commit to the git repository it makes, since you may not have setup your name etc, but if you have installed native on linux on mac it should work
+
+You need to setup the github (or other remote) yourself for the newly created git repository. At the time of writing, the cicconf will create the following structure.
+
+```sh
+rply_myip_sky130nm                                        # Main directory
+├── README.md                                             # Generated readme
+├── design
+│   └── RPLY_MYIP_SKY130NM                                # Where all scripts expect the schematics, symbols and layout of the IP to be
+│       └── RPLY_MYIP.sch                                 # Top level schematic
+├── documents                                     
+├── sim
+│   ├── Makefile                                          # Sim Makefile, links to the default simulation makefile in the technology
+│   └── cicsim.yaml -> ../tech/cicsim/cicsim.yaml
+├── tech -> ../tech_sky130B                               # Link to the PDK setup
+└── work                                                  # Where you should start xschem, and magic from
+    ├── Makefile                                                  # Layout makefile, usually has gds, cdl, lvs, drc make commands
+    ├── mos.24bit.dstyle -> ../tech/magic/mos.24bit.dstyle        # Change the default colors of Magic
+    ├── mos.24bit.std.cmap -> ../tech/magic/mos.24bit.std.cmap    # Same as above
+    └── xschemrc                                                  # Xschem setup file
+    └── .magicrc                                                  # Magic setup file
+```
+
+To start designing your new IP
+
+```sh
+cd work; xschem ../design/RPLY_MYIP_SKY130NM/RPLY_MYIP.sch
+```
+
+For example, you could insert a SUN_TR_SKY130NM/SUNTR_NCHDLCM with gate to PWRUP_1V8, drain to VDD_1V8 and source/bulk to VSS
+
+Once you want to simulate, navigate to the sim/ directory, and create a simulation folder. I use `cicsim` for that
+
+```sh
+cicsim simcell RPLY_MYIP_SKY130NM RPLY_MYIP ../tech/cicsim/simcell_template.yaml
+
+```
+
+
+The files at generated at the time of writing are
+| File         | Description                                                                                                                                                                 |
+|:-------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| RPLY_MYIP/   | simulation folder                                                                                                                                                           |
+|  Makefile     | Makefile with corners, try `make typical`                                                                                                                                   |
+|  cicsim.yaml  | Setup for cicsim                                                                                                                                                            |
+|  summary.yaml | Setup for cicsim summary, generating a markdown summary of simulations, for example [RPLY_BIAS](https://github.com/wulffern/rply_bias_sky130nm/tree/main/sim/RPLY_BIAS)     |
+|  tran.meas    | Measurements. It's good to separate the measurement from the simulation, so you can do `make typical OPT="--no-run"` to only do measurements, and not the actual simulation |
+|  tran.py      | Python script that runs after measurement are extracted                                                                                                                     |
+|  tran.spi     | Transient testbench                                                                                                                                                         |
+|  tran.yaml    | Defines the parameters that should be summarized by cicsim results and cicsim summary                                                                                       |
+
+By default, there is no measurements included, that you need to do your self,
+but have a look at
+[RPLY_BIAS](https://github.com/wulffern/rply_bias_sky130nm/tree/main/sim/RPLY_BIAS)
+for hints.
 
 
 # Known issues

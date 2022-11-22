@@ -13,10 +13,10 @@ options:
 #-------------------------------------------------------
 cpdk:
   remote: git@github.com:wulffern/cpdk.git
-  revision: 0.1.0
+  revision: main
 tech_sky130A:
   remote: git@github.com:wulffern/tech_sky130A.git
-  revision: 0.1.0
+  revision: main
 tech_sky130B:
   remote: git@github.com:wulffern/tech_sky130B.git
   revision: main
@@ -30,10 +30,10 @@ sun_pll_sky130nm:
   revision: main
 sun_tr_sky130nm:
   remote: git@github.com:wulffern/sun_tr_sky130nm.git
-  revision: 0.1.1
+  revision: main
 sun_trb_sky130nm:
   remote: git@github.com:wulffern/sun_trb_sky130nm.git
-  revision: 0.1.0
+  revision: main
 sun_sar9b_sky130nm:
   remote: git@github.com:wulffern/sun_sar9b_sky130nm.git
   revision: main
