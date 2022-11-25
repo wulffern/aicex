@@ -73,6 +73,16 @@ I install the tools manually on MacOS, however, on Ubuntu 20.4 I've made a
 
 I'd recommend that you look in the [install.sh](install.sh) script, and understand what it does. Same for the [tests/run_docker_test.sh](tests/run_docker_test.sh)
 
+But if you want the short version 
+
+``` sh
+git clone git@github.com:wulffern/aicex.git
+cd aicex
+/bin/bash tests/install_cicconf.sh 
+cd ip
+cicconf clone 
+```
+
 # Make your own design
 
 The technology setup, and the python scripts expects IPs to follow a certain directory structure. Do the following:
