@@ -7,10 +7,21 @@ options:
   project: rply
   technology: sky130nm
 
+
+#-------------------------------------------------------
+# Tools
+#-------------------------------------------------------
+cicconf:
+  remote: git@github.com:wulffern/cicconf.git
+  revision: main
 cicsim:
   remote: git@github.com:wulffern/cicsim.git
   revision: main
   on_clone: python3 -m pip install --user -e .
+ciccreator:
+  remote: git@github.com:wulffern/ciccreator.git
+  revision: master
+  on_clone: make
 cicpy:
   remote: git@github.com:wulffern/cicpy.git
   revision: master
