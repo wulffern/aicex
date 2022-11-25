@@ -8,6 +8,7 @@ if [ ! -f $HOME/.ssh/id_rsa.pub ]; then
 
 fi
 
+
 if [ ! -d aicex ]; then
 
    git clone https://github.com/wulffern/aicex.git

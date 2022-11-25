@@ -7,6 +7,14 @@ options:
   project: rply
   technology: sky130nm
 
+cicsim:
+  remote: git@github.com:wulffern/cicsim.git
+  revision: main
+  on_clone: python3 -m pip install --user -e .
+cicpy:
+  remote: git@github.com:wulffern/cicpy.git
+  revision: master
+  on_clone: python3 -m pip install --user -e .
 
 #-------------------------------------------------------
 # TECHs
