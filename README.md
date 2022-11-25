@@ -81,6 +81,8 @@ cd aicex
 /bin/bash tests/install_cicconf.sh 
 cd ip
 cicconf clone 
+cd ..
+make test
 ```
 
 # Make your own design
