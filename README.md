@@ -12,6 +12,7 @@ The available IPs can be seen in [ip/config.yaml](ip/config.yaml). I use
 | [ip/cicconf](https://github.com/wulffern/cicconf)                       | Custom IC Creator Configuration tool                                                            |
 | [ip/cicpy](https://github.com/wulffern/cicconf)                         | Custom IC Creator Python Transpiler                                                             |
 | [ip/cicsim](https://github.com/wulffern/cicsim)                         | Custom IC Creator Simulation Toolbox                                                            |
+| [ip/ciccreator](https://github.com/wulffern/ciccreator)                 | Custom IC Creator                                                                               |
 | [ip/sun_sar9b_sky130nm](https://github.com/wulffern/sun_sar9b_sky130nm) | 9-bit successive approximation analog-to-digital converter                                      |
 | [ip/sun_pll_sky130nm](https://github.com/wulffern/sun_pll_sky130nm)     | *General purpose PLL. Should not be used for real designs. Development platform for ciccreator* |
 | [ip/sun_tr_sky130nm](https://github.com/wulffern/sun_tr_sky130nm)       | Standard cell libraries for analog schematics                                                   |

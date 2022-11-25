@@ -10,6 +10,8 @@ dirs = 	ip/sun_tr_sky130nm/work \
 cwd = ${shell pwd}
 
 
+OPT=
+
 test:
 	${foreach d, ${dirs}, cd ${cwd}; cd ${d} && make test|| exit ;}
 
@@ -22,7 +24,7 @@ foss-sh:
 	docker exec -i foss-asic bash
 
 ci:
-	docker build -f docker/Dockerfile . -t wulffern/aicex:latest
+	docker build -f docker/Dockerfile ${OPT} . -t wulffern/aicex:latest
 
 tagpush:
 	#docker tag wulffern/aicex:latest wulffern/aicex:${TAG}

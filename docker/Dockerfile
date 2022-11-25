@@ -31,12 +31,14 @@ COPY tests tests
 RUN /bin/bash tests/install_ubuntu.sh
 
 #- I've compiled the eda tools and open_pdk result on a ubuntu 20.04 machine, so it's just cloning
+#ARG STEP12=false
 RUN /bin/bash tests/clone_eda.sh
+#ARG STEP13=false
 RUN /bin/bash tests/clone_open_pdk.sh
 RUN sudo rm -rf skywater-pdk
 RUN sudo rm -rf open_pdk
 
-RUN sudo python3 -m pip install matplotlib numpy click svgwrite pyyaml pandas tabulate wheel setuptools tikzplotlib
+RUN sudo python3 -m pip install matplotlib numpy click svgwrite pyyaml pandas tabulate wheel setuptools tikzplotlib jinja2
 
 USER aicex
 WORKDIR /home/aicex
