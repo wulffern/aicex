@@ -21,7 +21,7 @@ cicsim:
 ciccreator:
   remote: git@github.com:wulffern/ciccreator.git
   revision: master
-  on_clone: ciconf clone --https
+  on_clone: cicconf clone --https
 cicpy:
   remote: git@github.com:wulffern/cicpy.git
   revision: master
