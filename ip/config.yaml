@@ -21,7 +21,7 @@ cicsim:
 ciccreator:
   remote: git@github.com:wulffern/ciccreator.git
   revision: master
-  on_clone: make -j 8
+  on_clone: make binary
 cicpy:
   remote: git@github.com:wulffern/cicpy.git
   revision: master

@@ -80,7 +80,7 @@ git clone git@github.com:wulffern/aicex.git
 cd aicex
 /bin/bash tests/install_cicconf.sh 
 cd ip
-cicconf clone 
+cicconf clone --https 
 cd ..
 make test
 ```
