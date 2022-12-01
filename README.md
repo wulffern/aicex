@@ -2,8 +2,7 @@
 [![aicex ci](https://github.com/wulffern/aicex/actions/workflows/tests.yaml/badge.svg)](https://github.com/wulffern/aicex/actions/workflows/tests.yaml)
 
 
-<span style='color:red'> This repo is still in "main" branch development. Expect
-fast paced changes. </span>
+Warning: This repo is still in "main" branch development. Expect fast paced changes.
 
 # aicex
 This repository is a collection of IPs in Skywater 130nm technology. 
