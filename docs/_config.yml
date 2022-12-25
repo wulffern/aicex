@@ -28,7 +28,6 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-readme-index
 
 minima:
   skin: auto
