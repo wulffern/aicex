@@ -13,7 +13,7 @@ options:
 #-------------------------------------------------------
 cicconf:
   remote: git@github.com:wulffern/cicconf.git
-  revision: 0.1.2
+  revision: main
 cicsim:
   remote: git@github.com:wulffern/cicsim.git
   revision: 0.1.1
