@@ -31,7 +31,7 @@ jobs:
         uses: actions/configure-pages@v2
       - name: Copy readme
         run: |
-          cp README.md docs/readme.md
+          cp README.md docs/index.md
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:

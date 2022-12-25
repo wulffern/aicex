@@ -1,10 +1,11 @@
 ---
-layout: post
+layout: page 
 title: Create an IP
+permalink: /createip/
 categories: AIC
 ---
 
-For a full tutorial head over to [rply_ex0_sky130nm](wulffern.github.io/rply_ex0_sky130nm).
+For a full tutorial head over to [rply_ex0_sky130nm](https://wulffern.github.io/rply_ex0_sky130nm).
 
 The technology setup, and the python scripts expects IPs to follow a certain
 directory structure. 
