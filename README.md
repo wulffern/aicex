@@ -7,6 +7,8 @@ permalink: /readme/
 
 [![aicex ci](https://github.com/wulffern/aicex/actions/workflows/tests.yaml/badge.svg)](https://github.com/wulffern/aicex/actions/workflows/tests.yaml)
 
+[![docs](https://github.com/wulffern/aicex/actions/workflows/jekyll-gh-pages.yml/badge.svg)](https://wulffern.github.io/aicex)
+
 This repository is a collection of IPs in Skywater 130nm technology. 
 
 The available IPs can be seen in [ip/config.yaml](ip/config.yaml). I use
