@@ -49,7 +49,7 @@ sun_tr_sky130nm:
   revision: 0.1.2
 sun_trb_sky130nm:
   remote: git@github.com:wulffern/sun_trb_sky130nm.git
-  revision: 0.1.2
+  revision: 0.1.3
 sun_sar9b_sky130nm:
   remote: git@github.com:wulffern/sun_sar9b_sky130nm.git
   revision: 0.1.1
