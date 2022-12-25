@@ -67,5 +67,5 @@ rply_bias_sky130nm:
 #  remote: git@github.com:wulffern/rply_bias_sky130nm.git
 #  revision: main
 rply_ex0_sky130nm:
-  remote: git@github.com:wulffern/rply_bias_sky130nm.git
+  remote: git@github.com:wulffern/rply_ex0_sky130nm.git
   revision: main
