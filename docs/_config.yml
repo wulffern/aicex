@@ -14,25 +14,41 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: aicex
-email: carsten@wulff.no
+author:
+  name: Carsten Wulff
+  email: carsten@wulff.no
+
 description: >- # this means to ignore newlines until "baseurl:"
     I want to simplify analog integrated circuit design.
 domain: "wulffern.github.io"
 baseurl: "/aicex" # the subpath of your site, e.g. /blog
 url: "https://wulffern.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: cmoswulff
-github_username: wulffern
+
 
 # Build settings
-markdown: kramdown
-theme: minima
-plugins:
-  - jekyll-feed
+show_excerpts: false
 
 minima:
   skin: auto
+  social_links:
+    - { platform: github,         user_url: "https://github.com/wulffern/rply_bias_sky130nm" }
+    - { platform: google_scholar, user_url: "https://scholar.google.com/citations?user=uMepikoAAAAJ&hl=en&oi=ao" }
+    - { platform: linkedin,       user_url: "https://www.linkedin.com/in/carsten-wulff-1855032/" }
+    - { platform: twitter,        user_url: "https://twitter.com/cmoswulff" }
+    - { platform: youtube,        user_url: "https://www.youtube.com/@CarstenWulffNorway" }
 
-show_excerpts: true
+
+# Build settings
+markdown: kramdown
+
+remote_theme: jekyll/minima
+plugins:
+  - jekyll-feed
+  - jemoji
+  - jekyll-seo-tag
+  - jekyll-remote-theme
+
+
 
 
 # Exclude from processing.
