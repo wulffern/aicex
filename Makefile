@@ -9,13 +9,13 @@ dirs = 	ip/sun_tr_sky130nm/work \
 
 cwd = ${shell pwd}
 
+JEKYLL_VERSION=3.8
+SITE=${shell pwd}/docs
 
 OPT=
 
 test:
 	${foreach d, ${dirs}, cd ${cwd}; cd ${d} && make test|| exit ;}
-
-
 
 foss-run:
 	docker run -it --rm -p 80:80 -p 5901:5901 --name foss-asic --user $(id -u):$(id -g) -v $(abspath ./):/foss/designs -e VNC_RESOLUTION=1920x1000 efabless/foss-asic-tools:latest bash
@@ -39,3 +39,6 @@ cirun:
 
 clean:
 	cd ip && find ./ -name "*.ext" -exec rm {} \;
+
+jstart:
+	docker run --rm --name aicex_docs --volume="${SITE}:/srv/jekyll" -p 3000:4000 -it jekyll/jekyll:${JEKYLL_VERSION} jekyll serve --watch --drafts

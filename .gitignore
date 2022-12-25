@@ -1,4 +1,9 @@
 # Byte-compiled / optimized / DLL files
+
+_site
+.sass-cache
+.jekyll-metadata
+
 __pycache__/
 *.py[cod]
 *$py.class
