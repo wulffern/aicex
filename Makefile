@@ -1,6 +1,6 @@
 
 
-TAG = 0.1.0
+TAG = 0.1.1
 
 dirs = 	ip/sun_tr_sky130nm/work \
 	ip/sun_trb_sky130nm/work \
@@ -27,9 +27,9 @@ ci:
 	docker build -f docker/Dockerfile ${OPT} . -t wulffern/aicex:latest
 
 tagpush:
-	#docker tag wulffern/aicex:latest wulffern/aicex:${TAG}
-	#docker push wulffern/aicex:${TAG}
-	docker push wulffern/aicex:latest
+	docker tag wulffern/aicex:latest wulffern/aicex:${TAG}
+	docker push wulffern/aicex:${TAG}
+	#docker push wulffern/aicex:latest
 
 cish:
 	docker run --rm  -it -p 2022:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:latest bash --login

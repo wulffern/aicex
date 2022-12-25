@@ -16,7 +16,7 @@ if [ ! -d aicex ]; then
    mkdir .ssh
    cat $HOME/.ssh/id_rsa.pub > .ssh/authorized_keys
    sleep 2s
-   docker run --rm  --name aicex -p 2022:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:latest &
+   docker run --rm --name aicex -p 2022:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:latest &
 
 else
     echo "aicex already installed"

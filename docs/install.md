@@ -55,7 +55,7 @@ Install [docker](https://www.docker.com) if you don't have it.
 
 
 ``` bash
-docker run --rm  --name aicex -p 2022:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:latest &
+docker run --rm --name aicex -p 2022:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:0.1.1 &
 ```
 
 Wait a few seconds until you see "Restarting OpenBSD Secure Shell server".Then
@@ -79,6 +79,7 @@ cd ip
 git clone  https://github.com/wulffern/cicconf.git
 cd cicconf
 python3 -m pip install --user -e .
+cd ../..
 ```
 
 ## Clone repositories
@@ -92,6 +93,7 @@ To clone all repositories do.
 ``` bash
 cd ip
 cicconf clone --https
+cd ..
 ```
 
 ## Check that magic and xschem works
