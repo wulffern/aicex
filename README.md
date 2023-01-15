@@ -5,7 +5,8 @@ layout: home
 [![aicex ci](https://github.com/wulffern/aicex/actions/workflows/tests.yaml/badge.svg)](https://github.com/wulffern/aicex/actions/workflows/tests.yaml)[![docs](https://github.com/wulffern/aicex/actions/workflows/jekyll-gh-pages.yml/badge.svg)](https://wulffern.github.io/aicex)
 
 Head over to [wulffern.github.io/aicex](https://wulffern.github.io/aicex) for
-information on how to use this repository.
+the docs.
+
 
 # Known issues
 

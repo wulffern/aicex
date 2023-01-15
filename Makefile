@@ -1,6 +1,6 @@
 
 
-TAG = 0.1.1
+TAG = 0.1.2
 
 dirs = 	ip/sun_tr_sky130nm/work \
 	ip/sun_trb_sky130nm/work \
@@ -24,18 +24,28 @@ foss-sh:
 	docker exec -i foss-asic bash
 
 ci:
-	docker build -f docker/Dockerfile ${OPT} . -t wulffern/aicex:latest
+	docker build -f docker/Dockerfile ${OPT} . -t wulffern/aicex:20.04_latest
+
+ci22:
+	docker build -f docker/Dockerfile_22.04 ${OPT} . -t wulffern/aicex:22.04_latest
 
 tagpush:
-	docker tag wulffern/aicex:latest wulffern/aicex:${TAG}
-	docker push wulffern/aicex:${TAG}
+	docker tag wulffern/aicex:20.04_latest wulffern/aicex:20.4_${TAG}
+	docker push wulffern/aicex:20.04_${TAG}
+
+tagpush22:
+	docker tag wulffern/aicex:22.04_latest wulffern/aicex:22.4_${TAG}
+	docker push wulffern/aicex:22.04_${TAG}
 	#docker push wulffern/aicex:latest
 
 cish:
 	docker run --rm  -it -p 2022:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:latest bash --login
 
 cirun:
-	docker run --rm  -p 2022:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:latest &
+	docker run --rm  -p 2022:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:20.04_latest &
+
+cirun22:
+	docker run --rm  -p 2022:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:22.04_latest &
 
 clean:
 	cd ip && find ./ -name "*.ext" -exec rm {} \;

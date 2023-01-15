@@ -1,13 +1,13 @@
 #- This docker file is not really to run the tools in docker. It's mostly for testing that the full install works
 # in linux
-FROM ubuntu:20.04
+FROM ubuntu:22.04
     MAINTAINER Carsten Wulff <carsten@wulff.no>
 
 RUN ln -snf /usr/share/zoneinfo/$CONTAINER_TIMEZONE /etc/localtime && echo $CONTAINER_TIMEZONE > /etc/timezone
 
 RUN apt-get update && \
     apt-get -y install sudo make \
-    openssh-server && \
+    openssh-server  && \
     apt-get autoremove -y && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
@@ -27,16 +27,16 @@ EXPOSE 22
 ARG DEBIAN_FRONTEND=noninteractive
 
 WORKDIR /opt/
+#ARG STEP10=false
 COPY tests tests
-RUN /bin/bash tests/install_ubuntu.sh
 
-#- I've compiled the eda tools and open_pdk result on a ubuntu 20.04 machine, so it's just cloning
-#ARG STEP12=false
-RUN /bin/bash tests/clone_eda.sh
-#ARG STEP13=false
-#RUN /bin/bash tests/clone_open_pdk.sh
-#RUN sudo rm -rf skywater-pdk
-#RUN sudo rm -rf open_pdk
+#- If you want to install from scratch, use this
+#ARG STEP11=false
+RUN /bin/bash tests/install_eda.sh
+
+RUN /bin/bash tests/install_open_pdk.sh
+RUN sudo rm -rf skywater-pdk
+RUN sudo rm -rf open_pdk
 
 RUN sudo python3 -m pip install matplotlib numpy click svgwrite pyyaml pandas tabulate wheel setuptools tikzplotlib
 
