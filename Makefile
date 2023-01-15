@@ -36,7 +36,7 @@ tagpush:
 tagpush22:
 	docker tag wulffern/aicex:22.04_latest wulffern/aicex:22.4_${TAG}
 	docker push wulffern/aicex:22.04_${TAG}
-	#docker push wulffern/aicex:latest
+	docker push wulffern/aicex:22.04_latest wulffern/aicex:latest
 
 cish:
 	docker run --rm  -it -p 2022:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:latest bash --login
