@@ -7,6 +7,8 @@ layout: home
 Head over to [wulffern.github.io/aicex](https://wulffern.github.io/aicex) for
 the docs.
 
+For the repo see [https://github.com/wulffern/aicex](https://github.com/wulffern/aicex)
+
 
 # Known issues
 

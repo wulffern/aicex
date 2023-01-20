@@ -35,21 +35,6 @@ ifeq ($(UNAME_S),Darwin)
 OS = mac
 endif
 
-all:
-#ifeq (${OS},mac)
-	${MAKE} tcl_compile
-	sudo ${MAKE} tcl_install
-	${MAKE} tk_compile
-	sudo ${MAKE} tk_install
-#endif
-	${MAKE} magic_compile
-	sudo ${MAKE} magic_install
-	${MAKE} netgen_compile
-	sudo ${MAKE} netgen_install
-	${MAKE} xschem_compile
-	sudo ${MAKE} xschem_install
-
-
 
 tt: tcl_compile tcl_install \
 	tk_compile tk_install
@@ -58,6 +43,7 @@ tt: tcl_compile tcl_install \
 eda_compile: magic_compile \
 	xschem_compile \
 	netgen_compile \
+	ngspice_compile \
 	ngspice_compile
 
 eda_install: magic_install \
