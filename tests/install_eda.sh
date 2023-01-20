@@ -9,7 +9,7 @@ export PATH=/opt/eda/bin:$HOME/.local/bin:$PATH
 
 
 cd tests
-sudo make requirements
+make requirements
 sudo make all
 sudo make clean
 cd ..

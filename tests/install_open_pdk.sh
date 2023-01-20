@@ -33,4 +33,4 @@ make
 sudo make install
 
 #- Patch missing metal resistor
-sudo cp /opt/pdk/share/pdk/sky130A/libs.tech/xschem/sky130_fd_pr/res_generic_li.sym  /opt/pdk/share/pdk/sky130A/libs.tech/xschem/sky130_fd_pr/res_generic_l1.sym
+#sudo cp /opt/pdk/share/pdk/sky130A/libs.tech/xschem/sky130_fd_pr/res_generic_li.sym  /opt/pdk/share/pdk/sky130A/libs.tech/xschem/sky130_fd_pr/res_generic_l1.sym
