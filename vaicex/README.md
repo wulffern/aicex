@@ -27,7 +27,7 @@ git clone https://github.com/wulffern/aicex.git --config core.autocrlf=input
 ## Start box 
 
 ``` bash
-cd vaciex
+cd aicex/vaciex
 vagrant up 
 ```
 
