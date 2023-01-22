@@ -17,12 +17,9 @@ __pycache__/
 .DS_Store
 .cache
 .local/
-cicpy/
-cicsim/
 tools
 output*/
 
-ip/
 work/
 .data
 .plt

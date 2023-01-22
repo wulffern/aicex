@@ -212,7 +212,7 @@ ngspice:
 # Need to use gcc-11 or gcc-12 from homebrew to get openmp to work
 ngspice_compile: ngspice
 ifeq (${OS},mac)
-	cd ngspice && ./autogen.sh && ./configure \
+	cd ngspice && glibtoolize && ./autogen.sh && ./configure \
 	--prefix ${EDA_PREFIX}/ \
 	--with-x \
 	--x-includes=${X11_INC} \
