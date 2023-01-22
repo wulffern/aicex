@@ -33,6 +33,5 @@ sudo python3 -m pip install matplotlib numpy click svgwrite pyyaml pandas tabula
 rm -rf /tests/skywater-pdk
 rm -rf /tests/open_pdk
 
-echo "export PDK_ROOT=/opt/pdk/share/pdk" >> ~/.bashrc
-echo "export LD_LIBRARY_PATH=/opt/eda/lib" >> ~/.bashrc
-echo 'export PATH=/opt/eda/bin:$HOME/.local/bin:$PATH' >> ~/.bashrc
+cat .bashrc >> /home/vagrant/.bashrc
+cp .dircolors /home/vagrant/.dircolors

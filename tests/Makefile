@@ -36,6 +36,16 @@ OS = mac
 endif
 
 
+ifeq (${OS},mac)
+	X11_LIB = /opt/X11/lib
+	X11_INC = /opt/X11/include
+else
+	X11_LIB = /usr/lib/X11
+	X11_INC = /usr/include/X11
+endif
+
+
+
 tt: tcl_compile tcl_install \
 	tk_compile tk_install
 
@@ -80,7 +90,7 @@ else
 	git vim curl  libx11-dev libxrender1 libxrender-dev \
 	libxcb1 libx11-xcb-dev libcairo2 libcairo2-dev \
 	tcl8.6 tcl8.6-dev tk8.6 tk8.6-dev libxpm4  \
-	xterm vim-gtk3 gawk tcl-tclreadline libxpm-dev automake	libtool libxaw7-dev
+	xterm vim-gtk3 gawk tcl-tclreadline libxpm-dev automake	libtool libxaw7-dev libreadline-dev
 endif
 
 #--------------------------------------------------------------------
@@ -113,14 +123,14 @@ tk_compile: ${tkver}
 	cd ${tkver}/unix && \
 	./configure --prefix=${TK_PREFIX} \
 	--with-tcl=${TK_PREFIX}/lib \
-	--with-x --x-includes=/opt/X11/include --x-libraries=/opt/X11/lib   && \
+	--with-x --x-includes=${X11_INC} --x-libraries=${X11_LIB}   && \
 	make
 
 tk_install:
 	cd ${tkver}/unix; sudo make install
 ifeq (${OS},mac)
 	cd ${TK_PREFIX}/bin/ && \
-	sudo install_name_tool -change ${TK_PREFIX}/lib:/opt/X11/lib/libtk${ttver}.dylib \
+	sudo install_name_tool -change ${TK_PREFIX}/lib:${X11_LIB}/libtk${ttver}.dylib \
 	${TK_PREFIX}/lib/libtk${ttver}.dylib wish${ttver}
 endif
 
@@ -134,14 +144,13 @@ magic:
 magic_compile: magic
 	perl -pe "s/-g/-g -Wno-error=implicit-function-declaration/ig" -i magic/configure
 	cd magic && ./configure --prefix=${TK_PREFIX} --with-tcl=${TK_PREFIX}/lib \
-	--with-tk=${TK_PREFIX}/lib --x-includes=/opt/X11/include --x-libraries=/opt/X11/lib && \
+	--with-tk=${TK_PREFIX}/lib --x-includes=${X11_INC} --x-libraries=${X11_LIB} && \
 	make
 
 magic_install:
 	cd magic && sudo make install
 ifeq (${OS},mac)
-	sudo install_name_tool -change ${TK_PREFIX}/lib:/opt/X11/lib/libtk${ttver}.dylib \
-	       ${TK_PREFIX}/lib/libtk${ttver}.dylib ${TK_PREFIX}/lib/magic/tcl/magicexec
+	sudo install_name_tool -change ${TK_PREFIX}/lib:${X11_LIB}/libtk${ttver}.dylib ${TK_PREFIX}/lib/libtk${ttver}.dylib ${TK_PREFIX}/lib/magic/tcl/magicexec
 endif
 
 #--------------------------------------------------------------------
@@ -157,7 +166,7 @@ xschem_compile: xschem
 
 ifeq (${OS},mac)
 	perl -ibak -pe "s/CFLAGS/#CFLAGS/ig;s/LDFLAGS/#LDFLAGS/ig" xschem/Makefile.conf
-	echo "CFLAGS=-I/opt/X11/include -I/opt/X11/include/cairo -I${TK_PREFIX}/include -O2\n LDFLAGS= -L${TK_PREFIX}/lib -L/opt/X11/lib -lm -lcairo  -lX11 -lXrender -lxcb -lxcb-render -lX11-xcb -lXpm -ltcl8.6 -ltk8.6" >> xschem/Makefile.conf
+	echo "CFLAGS=-I${X11_INC} -I${X11_INC}/cairo -I${TK_PREFIX}/include -O2\n LDFLAGS= -L${TK_PREFIX}/lib -L${X11_LIB} -lm -lcairo  -lX11 -lXrender -lxcb -lxcb-render -lX11-xcb -lXpm -ltcl8.6 -ltk8.6" >> xschem/Makefile.conf
 endif
 
 	cd xschem && make
@@ -166,7 +175,8 @@ endif
 xschem_install:
 	cd xschem && sudo make install
 ifeq (${OS},mac)
-	sudo install_name_tool -change ${TK_PREFIX}/lib:/opt/X11/lib/libtk${ttver}.dylib ${TK_PREFIX}/lib/libtk${ttver}.dylib ${EDA_PREFIX}/bin/xschem
+	sudo install_name_tool -change ${TK_PREFIX}/lib:${X11_LIB}/libtk${ttver}.dylib \
+	${TK_PREFIX}/lib/libtk${ttver}.dylib ${EDA_PREFIX}/bin/xschem
 endif
 #--------------------------------------------------------------------
 # Netgen
@@ -178,13 +188,13 @@ netgen:
 netgen_compile: netgen
 	perl -pe "s/-g/-g -Wno-error=implicit-function-declaration/ig" -i netgen/configure
 	cd netgen && ./configure --prefix ${EDA_PREFIX}/ --with-tcl=${TK_PREFIX}/lib \
-	--with-tk=${TK_PREFIX}/lib --x-includes=/opt/X11/include --x-libraries=/opt/X11/lib && \
+	--with-tk=${TK_PREFIX}/lib --x-includes=${X11_INC} --x-libraries=${X11_LIB} && \
 	make
 
 netgen_install:
 	cd netgen && sudo make install
 ifeq (${OS},mac)
-	sudo install_name_tool -change ${TK_PREFIX}/lib:/opt/X11/lib/libtk${ttver}.dylib \
+	sudo install_name_tool -change ${TK_PREFIX}/lib:${X11_LIB}/libtk${ttver}.dylib \
 	${TK_PREFIX}/lib/libtk${ttver}.dylib ${EDA_PREFIX}/lib/netgen/tcl/netgenexec
 endif
 #--------------------------------------------------------------------
@@ -205,8 +215,8 @@ ifeq (${OS},mac)
 	cd ngspice && ./autogen.sh && ./configure \
 	--prefix ${EDA_PREFIX}/ \
 	--with-x \
-	--x-includes=/opt/X11/include \
-	--x-libraries=/opt/X11/lib \
+	--x-includes=${X11_INC} \
+	--x-libraries=${X11_LIB} \
 	--enable-xspice  \
 	--enable-openmp \
 	--enable-pss \
@@ -214,21 +224,21 @@ ifeq (${OS},mac)
 	CC="gcc-12" CXX="g++-12" \
 	--with-readline=/usr/local/opt/readline \
 	--disable-debug \
-	CFLAGS=" -O2 -I/opt/X11/include/freetype2 -I/usr/local/include -I/usr/local/opt/readline/include " \
+	CFLAGS=" -O2 -I${X11_INC}/freetype2 -I/usr/local/include -I/usr/local/opt/readline/include " \
 	LDFLAGS=" -L/usr/local/opt/bison/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/ncurses/lib -L/usr/local/lib -L/usr/local/opt/libomp/lib/ -fopenmp -lomp"
 else
-	cd ngspice && ./autogen.sh && ./configure \
+	cd ngspice && libtoolize && ./autogen.sh && ./configure \
 	--prefix ${EDA_PREFIX}/ \
 	--with-x \
-	--x-includes=/opt/X11/include \
-	--x-libraries=/opt/X11/lib \
+	--x-includes=/usr/include/X11 \
+	--x-libraries=/usr/lib/X11 \
 	--enable-xspice  \
 	--enable-openmp \
 	--enable-pss \
 	--enable-cider \
-	--disable-debug
+	--with-readline=yes \
+	--disable-debug	&& CFLAGS="-g -m64 -O0 -Wall -Wno-unused-but-set-variable" LDFLAGS="-m64 -g"
 endif
-
 	cd ngspice  && make -j4
 
 

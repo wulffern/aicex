@@ -6,19 +6,29 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # https://vagrantcloud.com/ubuntu
-  config.vm.box = "ubuntu/focal64"
-
-
+  config.vm.box = "ubuntu/jammy64"
 
   config.vm.network "private_network", type: "dhcp"
 
-  # Forward ports
-  config.vm.network "forwarded_port", guest: 22, host: 2023 # web server
+
+  config.vm.network "forwarded_port", guest: 22, host: 2023
+
+  config.vm.provision :shell, inline: "sudo apt update -y"
+
+  config.vm.provision :shell, inline: "sudo apt install -y --no-install-recommends ubuntu-desktop"
+
+  config.vm.provision :shell, inline: "sudo usermod -a -G sudo vagrant"
+
+  config.ssh.forward_agent = true
+  config.ssh.forward_x11 = true
 
   config.vm.provider "virtualbox" do |v|
     v.memory = 4096
     v.cpus = 2
-    v.gui = true
+    #v.gui = true
+    v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+    v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
+    v.customize ['modifyvm', :id, '--cableconnected1', 'on']
   end
 
   config.ssh.forward_agent = true
