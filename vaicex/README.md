@@ -11,7 +11,39 @@ Vagrant is yet another way to try and get the tools.
 - [Vagrant](https://www.vagrantup.com)
 - [VirtualBox](https://www.virtualbox.org)
 
-## Clone repo 
+
+## Get box from vagrant cloud 
+
+``` bash
+mkdir vaicex
+cd vaicex 
+```
+
+Create a text file with following content 
+
+``` bash
+Vagrant.configure("2") do |config|
+  config.vm.box = "wulffern/vaicex"
+  config.vm.box_version = "0.1.0"
+end
+```
+
+Start the box 
+
+``` bash
+vagrant up
+```
+
+Log into the box from either WSL2 (With Mobaxterm or Windows 11), or terminal on mac/linux
+
+``` bash
+vagrant ssh
+
+```
+
+## Build your own vagrant box 
+
+### Clone repo 
 
 On linux or mac
 ``` bash
@@ -24,14 +56,14 @@ On window
 git clone https://github.com/wulffern/aicex.git --config core.autocrlf=input
 ```
 
-## Start box 
+### Start box 
 
 ``` bash
 cd aicex/vaciex
 vagrant up 
 ```
 
-## SSH to box 
+### SSH to box 
 
 ``` bash
 vagrant ssh

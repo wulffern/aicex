@@ -4,6 +4,8 @@ _site
 .sass-cache
 .jekyll-metadata
 
+*.box
+.vagrant
 __pycache__/
 *.py[cod]
 *$py.class
