@@ -166,7 +166,7 @@ xschem_compile: xschem
 
 ifeq (${OS},mac)
 	perl -ibak -pe "s/CFLAGS/#CFLAGS/ig;s/LDFLAGS/#LDFLAGS/ig" xschem/Makefile.conf
-	echo "CFLAGS=-I${X11_INC} -I${X11_INC}/cairo -I${TK_PREFIX}/include -O2\n LDFLAGS= -L${TK_PREFIX}/lib -L${X11_LIB} -lm -lcairo  -lX11 -lXrender -lxcb -lxcb-render -lX11-xcb -lXpm -ltcl8.6 -ltk8.6" >> xschem/Makefile.conf
+	echo "CFLAGS=-I${X11_INC} -I${X11_INC}/cairo -I${TK_PREFIX}/include -O2\n LDFLAGS= -L${TK_PREFIX}/lib -L${X11_LIB} -lm -ljpeg -lcairo  -lX11 -lXrender -lxcb -lxcb-render -lX11-xcb -lXpm -ltcl8.6 -ltk8.6" >> xschem/Makefile.conf
 endif
 
 	cd xschem && make

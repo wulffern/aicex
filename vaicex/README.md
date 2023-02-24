@@ -25,6 +25,17 @@ Create a text file with following content
 Vagrant.configure("2") do |config|
   config.vm.box = "wulffern/vaicex"
   config.vm.box_version = "0.1.0"
+  config.vm.network "private_network", type: "dhcp"
+  config.vm.network "forwarded_port", guest: 22, host: 2023
+  config.ssh.forward_agent = true
+  config.vm.provider "virtualbox" do |v|
+    v.memory = 4096
+    v.cpus = 2
+    #v.gui = true
+    v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+    v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
+    v.customize ['modifyvm', :id, '--cableconnected1', 'on']
+  end
 end
 ```
 
