@@ -39,7 +39,7 @@
 	branch = main
 [submodule "ip/rply_bias_sky130nm"]
 	path = ip/rply_bias_sky130nm
-	url = https://github.com/wulffern/rply_bias_sky130nm
+	url = https://github.com/wulffern/rply_ex0_sky130nm
 	branch = main
 [submodule "ip/rply_cm_sky130nm"]
 	path = ip/rply_cm_sky130nm
