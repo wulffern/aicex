@@ -16,11 +16,11 @@ cicconf:
   revision: main
 cicsim:
   remote: git@github.com:wulffern/cicsim.git
-  revision: 0.1.1
+  revision: main
   on_clone: python3 -m pip install --user -e .
 ciccreator:
   remote: git@github.com:wulffern/ciccreator.git
-  revision: 0.1.5
+  revision: master
   on_clone: cicconf clone --https
 cicpy:
   remote: git@github.com:wulffern/cicpy.git
@@ -32,10 +32,10 @@ cicpy:
 #-------------------------------------------------------
 cpdk:
   remote: git@github.com:wulffern/cpdk.git
-  revision: 0.1.1
+  revision: main
 tech_sky130B:
   remote: git@github.com:wulffern/tech_sky130B.git
-  revision: 0.1.0
+  revision: main
 
 #-------------------------------------------------------
 # SUN (2022)
