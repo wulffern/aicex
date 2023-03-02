@@ -30,9 +30,24 @@
 	path = ip/sun_sar9b_sky130nm
 	url = https://github.com/wulffern/sun_sar9b_sky130nm
 	branch = main
+[submodule "ip/rply_aic00_sky130nm"]
+	path = ip/rply_aic00_sky130nm
+	url = https://github.com/wulffern/rply_aic00_sky130nm
 [submodule "ip/rply_ex0_sky130nm"]
 	path = ip/rply_ex0_sky130nm
 	url = https://github.com/wulffern/rply_ex0_sky130nm
+	branch = main
+[submodule "ip/rply_bias_sky130nm"]
+	path = ip/rply_bias_sky130nm
+	url = https://github.com/wulffern/rply_bias_sky130nm
+	branch = main
+[submodule "ip/rply_cm_sky130nm"]
+	path = ip/rply_cm_sky130nm
+	url = https://github.com/wulffern/rply_cm_sky130nm
+	branch = main
+[submodule "ip/rply_temp_sky130nm"]
+	path = ip/rply_temp_sky130nm
+	url = https://github.com/wulffern/rply_temp_sky130nm
 	branch = main
 [submodule "ip/sun_pll_sky130nm"]
 	path = ip/sun_pll_sky130nm
