@@ -41,7 +41,7 @@ minima:
 # Build settings
 markdown: kramdown
 
-remote_theme: jekyll/minima
+remote_theme: wulffern/minima
 plugins:
   - jekyll-feed
   - jemoji
