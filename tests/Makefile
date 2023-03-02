@@ -201,14 +201,9 @@ endif
 # ngspice
 #--------------------------------------------------------------------
 
-#- Looks like the homebrew
-
 ngspice:
 	git clone https://git.code.sf.net/p/ngspice/ngspice ngspice
 
-# Pre-requisites
-# brew install bison
-# # fix bison paths
 # Need to use gcc-11 or gcc-12 from homebrew to get openmp to work
 ngspice_compile: ngspice
 ifeq (${OS},mac)

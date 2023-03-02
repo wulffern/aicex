@@ -4,11 +4,9 @@ title: Getting started
 permalink: /started/
 ---
 
-## Setup tools on linux or mac
+## Setup tools on linux or mac (or WSL on Windows)
 
 For the analog toolchain we need some tools, and a process design kit (PDK).
-These must be installed first. If you have no idea how to install from source,
-skip this section, and look how to use aicex with docker
 
 - [Skywater 130nm PDK](https://github.com/google/skywater-pdk). I use [open_pdks](https://github.com/RTimothyEdwards/open_pdks) to install the PDK
 - [Magic VLSI](https://github.com/RTimothyEdwards/magic) for layout
@@ -17,101 +15,44 @@ skip this section, and look how to use aicex with docker
 - [xschem](https://github.com/StefanSchippers/xschem)
 - python > 3.10
 
-If you choose to install the tools by yourself, then you can get hints in
-`docker/Dockerfile`
-
 Clone the github repo 
 
 ```bash
 git clone git@github.com:wulffern/aicex.git
 ```
 
-If you're on Mac or Ubuntu, then
-
 ```bash
-cd tests
+cd aicex/tests/
 make requirements
 make tt
 make eda_compile
 sudo make eda_install
+sudo python3 -m pip install matplotlib numpy click svgwrite pyyaml pandas tabulate wheel setuptools tikzplotlib
+source install_open_pdk.sh
+cd ../..
 ```
 
----
+You need to add the following to your ~/.bashrc
+```bash
+export PDK_ROOT=/opt/pdk/share/pdk
+export LD_LIBRARY_PATH=/opt/eda/lib
+export PATH=/opt/eda/bin:$HOME/.local/bin:$PATH
+```
 
-## Setup tools on Docker
-
-### SSH keys 
-Check that you have a SSH public key 
+## Install cicconf 
 
 ``` bash
-ls -l ./ssh/id_rsa.pub
-```
-
-If you don't have an SSH key, make one 
-
-``` bash
-ssh-keygen -t rsa
-```
-
-### Setup aicex 
-
-``` bash
-git clone https://github.com/wulffern/aicex.git
-cd aicex
-mkdir .ssh
-cat $HOME/.ssh/id_rsa.pub > .ssh/authorized_keys
-
-```
-
-### Start the docker container
-
-Install [docker](https://www.docker.com) if you don't have it.
-
-
-``` bash
-docker run --rm --name aicex -p 2022:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:0.1.1 &
-```
-
-Wait a few seconds until you see "Restarting OpenBSD Secure Shell server".Then
-
-``` sh
-ssh -Y -p 2022 aicex@localhost
-```
-
-You are now in the docker image, and the home directory will be set to the aicex
-cloned git repository.
-
----
-
-## Bootstrap cicconf 
-
-Aicex uses [cicconf](https://github.com/wulffern/cicconf) and if you don't have
-that installed, we need to
-boostrap cicconf before we can use it. If you already have cicconf, then skip
-this step
-
-``` bash
-cd ip 
-git clone  https://github.com/wulffern/cicconf.git
-cd cicconf
+cd aicex/ip/cicconf
 python3 -m pip install --user -e .
 cd ../..
 ```
 
----
-
-## Clone repositories
-
-The cicconf script reads the config.yaml, and clones all repositories. 
-It will also run the "on_clone" events in config.yaml, but you can skip those
-with "--no-onclone" if you know what your doing.
-
-To clone all repositories do.
+## Install cicsim
 
 ``` bash
-cd ip
-cicconf clone --https
-cd ..
+cd aicex/ip/cicsim
+python3 -m pip install --user -e .
+cd ../..
 ```
 
 ---
