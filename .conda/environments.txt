@@ -1,2 +1,0 @@
-/opt/pdk/skywater-pdk/env/conda
-/opt/pdk/skywater-pdk/env/conda/envs/skywater-pdk-scripts
