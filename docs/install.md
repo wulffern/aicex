@@ -19,6 +19,21 @@ Clone the github repo
 
 ```bash
 git clone git@github.com:wulffern/aicex.git
+git submodule init
+git submodule update
+```
+
+You need to add the following to your ~/.bashrc
+```bash
+export PDK_ROOT=/opt/pdk/share/pdk
+export LD_LIBRARY_PATH=/opt/eda/lib
+export PATH=/opt/eda/bin:$HOME/.local/bin:$PATH
+```
+
+Make sure you load the settings before you proceed
+
+```bash
+source ~/.bashrc
 ```
 
 ```bash
@@ -32,12 +47,7 @@ source install_open_pdk.sh
 cd ../..
 ```
 
-You need to add the following to your ~/.bashrc
-```bash
-export PDK_ROOT=/opt/pdk/share/pdk
-export LD_LIBRARY_PATH=/opt/eda/lib
-export PATH=/opt/eda/bin:$HOME/.local/bin:$PATH
-```
+
 
 ## Install cicconf 
 
