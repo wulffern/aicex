@@ -46,3 +46,6 @@
 	path = ip/cicconf
 	url = https://github.com/wulffern/cicconf
 	branch = main
+[submodule "ip/ciccheatgen"]
+	path = ip/ciccheatgen
+	url = git@github.com:wulffern/ciccheatgen.git
