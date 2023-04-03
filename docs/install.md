@@ -18,9 +18,7 @@ For the analog toolchain we need some tools, and a process design kit (PDK).
 Clone the github repo 
 
 ```bash
-git clone git@github.com:wulffern/aicex.git
-git submodule init
-git submodule update
+git clone --recursive git@github.com:wulffern/aicex.git
 ```
 
 You need to add the following to your ~/.bashrc
