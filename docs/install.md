@@ -6,6 +6,9 @@ permalink: /started/
 
 ## Setup tools on linux or mac (or WSL on Windows)
 
+
+<iframe width="400" height="315" src="https://www.youtube.com/embed/DRppsdjo2Rc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 For the analog toolchain we need some tools, and a process design kit (PDK).
 
 - [Skywater 130nm PDK](https://github.com/google/skywater-pdk). I use [open_pdks](https://github.com/RTimothyEdwards/open_pdks) to install the PDK
