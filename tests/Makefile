@@ -25,6 +25,17 @@
 ##
 ######################################################################
 
+#---------------------------------------------------------------------
+#- GIT repo Versions
+#---------------------------------------------------------------------
+XSCHEM_VER=master
+MAGIC_VER=master
+NETGEN_VER=master
+NGSPICE_VER=master
+
+#---------------------------------------------------------------------
+#- Variables
+#---------------------------------------------------------------------
 TK_PREFIX=/opt/eda
 EDA_PREFIX=/opt/eda
 
@@ -80,6 +91,10 @@ ifeq (${OS},mac)
 	brew install glib
 	brew install libxaw
 	brew install flex
+
+# Xyce
+	brew install fftw suite-sparse cmake flex bison autoconf automake libtool openmpi
+
 #libxft really creates issues it seems
 	brew uninstall libxft
 else
@@ -140,11 +155,13 @@ endif
 
 magic:
 	git clone https://github.com/RTimothyEdwards/magic
+	cd magic && git checkout ${MAGIC_VER}
 
 magic_compile: magic
 	perl -pe "s/-g/-g -Wno-error=implicit-function-declaration/ig" -i magic/configure
 	cd magic && ./configure --prefix=${TK_PREFIX} --with-tcl=${TK_PREFIX}/lib \
-	--with-tk=${TK_PREFIX}/lib --x-includes=${X11_INC} --x-libraries=${X11_LIB} && \
+	--with-tk=${TK_PREFIX}/lib --x-includes=${X11_INC} --x-libraries=${X11_LIB} \
+	--with-cairo=${X11_INC}/cairo && \
 	make
 
 magic_install:
@@ -159,7 +176,7 @@ endif
 
 xschem:
 	git clone https://github.com/StefanSchippers/xschem.git
-
+	cd xschem && git checkout ${XSCHEM_VER}
 
 xschem_compile: xschem
 	cd xschem && ./configure --prefix=${EDA_PREFIX}
@@ -184,6 +201,7 @@ endif
 
 netgen:
 	git clone https://github.com/RTimothyEdwards/netgen.git
+	cd netgen && git checkout ${NETGEN_VER}
 
 netgen_compile: netgen
 	perl -pe "s/-g/-g -Wno-error=implicit-function-declaration/ig" -i netgen/configure
@@ -203,6 +221,7 @@ endif
 
 ngspice:
 	git clone https://git.code.sf.net/p/ngspice/ngspice ngspice
+	cd ngspice && git checkout ${NGSPICE_VER}
 
 # Need to use gcc-11 or gcc-12 from homebrew to get openmp to work
 ngspice_compile: ngspice
@@ -239,3 +258,18 @@ endif
 
 ngspice_install:
 	cd ngspice &&  sudo make install
+
+
+#--------------------------------------------------------------------
+# XYCE
+#--------------------------------------------------------------------
+
+
+trilinos:
+	git clone git@github.com:trilinos/Trilinos.git
+
+xyce:
+	git clone git@github.com:Xyce/Xyce.git
+
+xyce_compile: trilinos xyce
+	./compile_xyce.sh
