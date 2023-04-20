@@ -99,7 +99,7 @@ ifeq (${OS},mac)
 	brew uninstall libxft
 else
 	sudo apt update
-	sudo mkdir /opt
+	sudo test -d /opt || mkdir /opt
 	sudo apt -y install python3-pip libxft2 libxss1 \
 	libgl1-mesa-glx libglu1-mesa libxaw7 libcairo2 \
 	tcsh flex bison \
