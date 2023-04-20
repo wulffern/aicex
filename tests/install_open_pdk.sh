@@ -3,7 +3,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/eda/lib
 export PATH=/opt/eda/bin:$HOME/.local/bin:$PATH
 
 #- Pre install skywater pdk
-sudo mkdir --parents /opt/pdk
+sudo mkdir /opt/pdk
 sudo chmod 777 /opt/pdk
 cd /opt/pdk
 git clone https://github.com/google/skywater-pdk
