@@ -1,6 +1,6 @@
 
 
-TAG = 0.1.2
+TAG = 0.1.3
 
 dirs = 	ip/sun_tr_sky130nm/work \
 	ip/sun_sar9b_sky130nm/work \
@@ -34,18 +34,18 @@ tagpush:
 	docker push wulffern/aicex:20.04_${TAG}
 
 tagpush22:
-	docker tag wulffern/aicex:22.04_latest wulffern/aicex:22.4_${TAG}
+	docker tag wulffern/aicex:22.04_latest wulffern/aicex:22.04_${TAG}
 	docker push wulffern/aicex:22.04_${TAG}
-	docker push wulffern/aicex:22.04_latest wulffern/aicex:latest
+	#docker push wulffern/aicex:22.04_latest wulffern/aicex:latest
 
 cish:
-	docker run --rm  -it -p 2022:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:latest bash --login
+	docker run --rm  -it -p 2021:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:latest bash --login
 
 cirun:
-	docker run --rm  -p 2022:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:20.04_latest &
+	docker run --rm  -p 2021:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:20.04_latest &
 
 cirun22:
-	docker run --rm  -p 2022:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:22.04_latest &
+	docker run --rm  -p 2021:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:22.04_latest &
 
 clean:
 	cd ip && find ./ -name "*.ext" -exec rm {} \;

@@ -91,6 +91,8 @@ ifeq (${OS},mac)
 	brew install glib
 	brew install libxaw
 	brew install flex
+	brew install glfw3
+	brew install glew
 
 # Xyce
 	brew install fftw suite-sparse cmake flex bison autoconf automake libtool openmpi
@@ -160,9 +162,9 @@ magic:
 
 magic_compile: magic
 	perl -pe "s/-g/-g -Wno-error=implicit-function-declaration/ig" -i magic/configure
-	cd magic && ./configure --prefix=${TK_PREFIX} --with-tcl=${TK_PREFIX}/lib \
+	cd magic && ./configure CC="gcc-12" CXX="g++-12" --prefix=${TK_PREFIX} --with-tcl=${TK_PREFIX}/lib \
 	--with-tk=${TK_PREFIX}/lib --x-includes=${X11_INC} --x-libraries=${X11_LIB} \
-	--with-cairo=${X11_INC}/cairo && \
+	--with-cairo=${X11_INC}/cairo  --with-opengl=${X11_LIB} && \
 	make
 
 magic_install:
@@ -207,7 +209,7 @@ netgen:
 netgen_compile: netgen
 	perl -pe "s/-g/-g -Wno-error=implicit-function-declaration/ig" -i netgen/configure
 	cd netgen && ./configure --prefix ${EDA_PREFIX}/ --with-tcl=${TK_PREFIX}/lib \
-	--with-tk=${TK_PREFIX}/lib --x-includes=${X11_INC} --x-libraries=${X11_LIB} && \
+	--with-tk=${TK_PREFIX}/lib --x-includes=${X11_INC} --x-libraries=${X11_LIB}&& \
 	make
 
 netgen_install:

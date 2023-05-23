@@ -6,7 +6,7 @@ FROM ubuntu:22.04
 RUN ln -snf /usr/share/zoneinfo/$CONTAINER_TIMEZONE /etc/localtime && echo $CONTAINER_TIMEZONE > /etc/timezone
 
 RUN apt-get update && \
-    apt-get -y install sudo make \
+    apt-get -y install sudo make  qt6-base-dev \
     openssh-server  && \
     apt-get autoremove -y && \
     apt-get clean && \
@@ -36,7 +36,7 @@ ENV LD_LIBRARY_PATH=/opt/eda/lib
 ENV PATH=/opt/eda/bin:$HOME/.local/bin:$PATH
 
 RUN make requirements
-RUN make tt
+RUN sudo make tt
 RUN make eda_compile
 RUN sudo make eda_install
 RUN make clean
