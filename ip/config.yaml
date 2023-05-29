@@ -4,7 +4,7 @@
 options:
   template:
     ip: tech_sky130B/cicconf/ip_template.yaml
-  project: rply
+  project: cnr
   technology: sky130nm
 
 
@@ -63,9 +63,14 @@ sun_sar9b_sky130nm:
 rply_bias_sky130nm:
   remote: git@github.com:wulffern/rply_bias_sky130nm.git
   revision: main
-#rply_temp_sky130nm:
-#  remote: git@github.com:wulffern/rply_bias_sky130nm.git
-#  revision: main
 rply_ex0_sky130nm:
   remote: git@github.com:wulffern/rply_ex0_sky130nm.git
+  revision: main
+
+
+#-------------------------------------------------------
+#"In an insane world, it was the sanest choice."
+# - Sarah Connor, Terminator 2: Judgment Day
+cnr_atr_sky130nm:
+  remote: git@github.com:wulffern/cnr_atr_sky130nm.git
   revision: main
