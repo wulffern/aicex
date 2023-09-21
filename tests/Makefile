@@ -33,6 +33,8 @@ MAGIC_VER=master
 NETGEN_VER=master
 NGSPICE_VER=master
 
+CC_GCC=gcc-13
+CC_GPP=g++-13
 #---------------------------------------------------------------------
 #- Variables
 #---------------------------------------------------------------------
@@ -64,7 +66,7 @@ tt: tcl_compile tcl_install \
 eda_compile: magic_compile \
 	xschem_compile \
 	netgen_compile \
-	ngspice_compile \
+	-ngspice_compile \
 	ngspice_compile
 
 eda_install: magic_install \
@@ -91,11 +93,12 @@ ifeq (${OS},mac)
 	brew install glib
 	brew install libxaw
 	brew install flex
-	brew install glfw3
-	brew install glew
+	brew install tcl-tk
+	#brew install glfw3
+	#brew install glew
 
 # Xyce
-	brew install fftw suite-sparse cmake flex bison autoconf automake libtool openmpi
+	#brew install fftw suite-sparse cmake flex bison autoconf automake libtool openmpi
 
 #libxft really creates issues it seems
 	brew uninstall libxft
@@ -161,11 +164,21 @@ magic:
 	cd magic && git checkout ${MAGIC_VER}
 
 magic_compile: magic
+#ifeq (${OS},mac)
+#	cd magic &&  ./configure \
+#    --with-tcl=${shell brew --prefix tcl-tk}\
+#    --with-tk=${shell brew --prefix tcl-tk}\
+#    --with-cairo=${shell brew --prefix cairo}/include\
+#    "LDFLAGS=-L$(brew --prefix cairo)/lib" --prefix=${TK_PREFIX}  && \
+#	make database/database.h  && \
+#	make
+#else
 	perl -pe "s/-g/-g -Wno-error=implicit-function-declaration/ig" -i magic/configure
-	cd magic && ./configure CC="gcc-12" CXX="g++-12" --prefix=${TK_PREFIX} --with-tcl=${TK_PREFIX}/lib \
+	cd magic && ./configure CC=${CC_GCC} CXX=${CC_GPP}  --prefix=${TK_PREFIX} --with-tcl=${TK_PREFIX}/lib \
 	--with-tk=${TK_PREFIX}/lib --x-includes=${X11_INC} --x-libraries=${X11_LIB} \
 	--with-cairo=${X11_INC}/cairo  --with-opengl=${X11_LIB} && \
 	make
+#endif
 
 magic_install:
 	cd magic && sudo make install
@@ -184,10 +197,10 @@ xschem:
 xschem_compile: xschem
 	cd xschem && ./configure --prefix=${EDA_PREFIX}
 
-ifeq (${OS},mac)
-	perl -ibak -pe "s/CFLAGS/#CFLAGS/ig;s/LDFLAGS/#LDFLAGS/ig" xschem/Makefile.conf
-	echo "CFLAGS=-I${X11_INC} -I${X11_INC}/cairo -I${TK_PREFIX}/include -O2\n LDFLAGS= -L${TK_PREFIX}/lib -L${X11_LIB} -lm -ljpeg -lcairo  -lX11 -lXrender -lxcb -lxcb-render -lX11-xcb -lXpm -ltcl8.6 -ltk8.6" >> xschem/Makefile.conf
-endif
+#ifeq (${OS},mac)
+#	perl -ibak -pe "s/CFLAGS/#CFLAGS/ig;s/LDFLAGS/#LDFLAGS/ig" xschem/Makefile.conf
+#	echo "CFLAGS=-I${X11_INC} -I${X11_INC}/cairo -I${TK_PREFIX}/include -O2\n LDFLAGS= -L${TK_PREFIX}/lib -L${X11_LIB} -lm -ljpeg -lcairo  -lX11 -lXrender -lxcb -lxcb-render -lX11-xcb -lXpm -ltcl8.6 -ltk8.6" >> xschem/Makefile.conf
+#endif
 
 	cd xschem && make
 
@@ -207,6 +220,7 @@ netgen:
 	cd netgen && git checkout ${NETGEN_VER}
 
 netgen_compile: netgen
+#if()
 	perl -pe "s/-g/-g -Wno-error=implicit-function-declaration/ig" -i netgen/configure
 	cd netgen && ./configure --prefix ${EDA_PREFIX}/ --with-tcl=${TK_PREFIX}/lib \
 	--with-tk=${TK_PREFIX}/lib --x-includes=${X11_INC} --x-libraries=${X11_LIB}&& \
@@ -238,7 +252,7 @@ ifeq (${OS},mac)
 	--enable-openmp \
 	--enable-pss \
 	--enable-cider \
-	CC="gcc-12" CXX="g++-12" \
+	CC=${CC_GCC} CXX=${CC_GPP} \
 	--with-readline=/usr/local/opt/readline \
 	--disable-debug \
 	CFLAGS=" -O2 -I${X11_INC}/freetype2 -I/usr/local/include -I/usr/local/opt/readline/include " \
