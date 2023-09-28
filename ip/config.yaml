@@ -74,3 +74,48 @@ rply_ex0_sky130nm:
 cnr_atr_sky130nm:
   remote: git@github.com:wulffern/cnr_atr_sky130nm.git
   revision: main
+
+#- Groups
+cnr_gr00_sky130nm:
+  remote: git@github.com:wulffern/cnr_gr01_sky130nm.git
+  revision: main
+
+cnr_gr01_sky130nm:
+  remote: git@github.com:wulffern/cnr_gr01_sky130nm.git
+  revision: main
+
+cnr_gr02_sky130nm:
+  remote: git@github.com:wulffern/cnr_gr02_sky130nm.git
+  revision: main
+
+cnr_gr03_sky130nm:
+  remote: git@github.com:wulffern/cnr_gr03_sky130nm.git
+  revision: main
+
+cnr_gr04_sky130nm:
+  remote: git@github.com:wulffern/cnr_gr04_sky130nm.git
+  revision: main
+
+cnr_gr05_sky130nm:
+  remote: git@github.com:wulffern/cnr_gr05_sky130nm.git
+  revision: main
+
+cnr_gr06_sky130nm:
+  remote: git@github.com:wulffern/cnr_gr06_sky130nm.git
+  revision: main
+
+cnr_gr07_sky130nm:
+  remote: git@github.com:wulffern/cnr_gr07_sky130nm.git
+  revision: main
+
+cnr_gr08_sky130nm:
+  remote: git@github.com:wulffern/cnr_gr08_sky130nm.git
+  revision: main
+
+cnr_gr09_sky130nm:
+  remote: git@github.com:wulffern/cnr_gr09_sky130nm.git
+  revision: main
+
+cnr_gr10_sky130nm:
+  remote: git@github.com:wulffern/cnr_gr10_sky130nm.git
+  revision: main
