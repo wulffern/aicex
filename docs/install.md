@@ -43,7 +43,7 @@ make requirements
 make tt
 make eda_compile
 sudo make eda_install
-sudo python3 -m pip install matplotlib numpy click svgwrite pyyaml pandas tabulate wheel setuptools tikzplotlib
+python3 -m pip install matplotlib numpy click svgwrite pyyaml pandas tabulate wheel setuptools tikzplotlib
 source install_open_pdk.sh
 cd ../..
 ```
