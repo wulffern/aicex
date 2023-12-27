@@ -78,7 +78,7 @@ cnr_atr_sky130nm:
 
 #- Groups
 cnr_gr00_sky130nm:
-  remote: git@github.com:analogicus/cnr_gr01_sky130nm.git
+  remote: git@github.com:analogicus/cnr_gr00_sky130nm.git
   revision: main
 
 cnr_gr01_sky130nm:

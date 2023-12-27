@@ -33,8 +33,14 @@ MAGIC_VER=master
 NETGEN_VER=master
 NGSPICE_VER=master
 
+ifeq (${OS},mac)
 CC_GCC=gcc-13
 CC_GPP=g++-13
+else
+CC_GCC=gcc
+CC_GPP=g++
+endif
+
 #---------------------------------------------------------------------
 #- Variables
 #---------------------------------------------------------------------
@@ -66,7 +72,7 @@ tt: tcl_compile tcl_install \
 eda_compile: magic_compile \
 	xschem_compile \
 	netgen_compile \
-	-ngspice_compile \
+	ngspice_compile \
 	ngspice_compile
 
 eda_install: magic_install \
@@ -220,11 +226,14 @@ netgen:
 	cd netgen && git checkout ${NETGEN_VER}
 
 netgen_compile: netgen
-#if()
+ifeq (${OS},mac)
 	perl -pe "s/-g/-g -Wno-error=implicit-function-declaration/ig" -i netgen/configure
-	cd netgen && ./configure --prefix ${EDA_PREFIX}/ --with-tcl=${TK_PREFIX}/lib \
+	cd netgen && ./configure --prefix ${EDA_PREFIX}/ --with-tclincls=${TK_PREFIX}/include --with-tkincls=${TK_PREFIX}/include --with-tcl=${TK_PREFIX}/lib \
 	--with-tk=${TK_PREFIX}/lib --x-includes=${X11_INC} --x-libraries=${X11_LIB}&& \
 	make
+else
+	cd netgen && ./configure --prefix ${EDA_PREFIX}/ && make
+endif
 
 netgen_install:
 	cd netgen && sudo make install
@@ -243,7 +252,7 @@ ngspice:
 # Need to use gcc-11 or gcc-12 from homebrew to get openmp to work
 ngspice_compile: ngspice
 ifeq (${OS},mac)
-	cd ngspice && glibtoolize && ./autogen.sh && ./configure \
+	-cd ngspice && glibtoolize && ./autogen.sh && ./configure \
 	--prefix ${EDA_PREFIX}/ \
 	--with-x \
 	--x-includes=${X11_INC} \
@@ -258,7 +267,7 @@ ifeq (${OS},mac)
 	CFLAGS=" -O2 -I${X11_INC}/freetype2 -I/usr/local/include -I/usr/local/opt/readline/include " \
 	LDFLAGS=" -L/usr/local/opt/bison/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/ncurses/lib -L/usr/local/lib -L/usr/local/opt/libomp/lib/ -fopenmp -lomp"
 else
-	cd ngspice && libtoolize && ./autogen.sh && ./configure \
+	-cd ngspice && libtoolize && ./autogen.sh && ./configure \
 	--prefix ${EDA_PREFIX}/ \
 	--with-x \
 	--x-includes=/usr/include/X11 \
