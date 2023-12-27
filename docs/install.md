@@ -43,7 +43,7 @@ make requirements
 make tt
 make eda_compile
 sudo make eda_install
-sudo python3 -m pip install matplotlib numpy click svgwrite pyyaml pandas tabulate wheel setuptools tikzplotlib
+python3 -m pip install matplotlib numpy click svgwrite pyyaml pandas tabulate wheel setuptools tikzplotlib
 source install_open_pdk.sh
 cd ../..
 ```
@@ -55,8 +55,15 @@ cd ../..
 ``` bash
 cd aicex/ip/cicconf
 python3 -m pip install --user -e .
-cd ../..
+cd ../
 ```
+
+```sh
+
+cicconf update 
+cd ..
+```
+
 
 ## Install cicsim
 
@@ -67,6 +74,7 @@ cd ../..
 ```
 
 ---
+
 
 ## Check that magic and xschem works
 
