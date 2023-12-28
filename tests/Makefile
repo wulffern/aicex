@@ -338,7 +338,7 @@ gtkwave:
 	tar zxvf gtkwave-${GTKWAVE_VER}.tar.gz
 	ln -s gtkwave-${GTKWAVE_VER} gtkwave
 
-gtkwave_compile:
+gtkwave_compile: gtkwave
 ifeq (${OS},mac)
 	cd gtkwave && export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig/ &&./configure --prefix ${EDA_PREFIX} --disable-tcl --disable-xy && make
 else
