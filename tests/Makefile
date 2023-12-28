@@ -32,6 +32,9 @@ XSCHEM_VER=master
 MAGIC_VER=master
 NETGEN_VER=master
 NGSPICE_VER=master
+IVERILOG_VER=master
+YOSYS_VER=master
+GTKWAVE_VER=3.3.117
 
 ifeq (${OS},mac)
 CC_GCC=gcc-13
@@ -74,11 +77,17 @@ eda_compile: magic_compile \
 	netgen_compile \
 	ngspice_compile \
 	ngspice_compile
+	#iverilog_compile \
+	yosys_compile \
+	gtkwave_compile
 
 eda_install: magic_install \
 	xschem_install \
 	netgen_install \
 	ngspice_install
+	#iverilog_compile
+	#yosys_compile \
+	gtkwave_compile
 
 clean:
 	rm -rf ${tclver}*
@@ -87,6 +96,8 @@ clean:
 	rm -rf magic
 	rm -rf xschem*
 	rm -rf netgen
+	rm -rf gtkwave*
+	rm -rf iverilog
 
 requirements:
 ifeq (${OS},mac)
@@ -100,6 +111,8 @@ ifeq (${OS},mac)
 	brew install libxaw
 	brew install flex
 	brew install tcl-tk
+	brew install gtk+
+	brew install gtk-mac-integration
 	#brew install glfw3
 	#brew install glew
 
@@ -217,6 +230,7 @@ ifeq (${OS},mac)
 	sudo install_name_tool -change ${TK_PREFIX}/lib:${X11_LIB}/libtk${ttver}.dylib \
 	${TK_PREFIX}/lib/libtk${ttver}.dylib ${EDA_PREFIX}/bin/xschem
 endif
+
 #--------------------------------------------------------------------
 # Netgen
 #--------------------------------------------------------------------
@@ -241,6 +255,7 @@ ifeq (${OS},mac)
 	sudo install_name_tool -change ${TK_PREFIX}/lib:${X11_LIB}/libtk${ttver}.dylib \
 	${TK_PREFIX}/lib/libtk${ttver}.dylib ${EDA_PREFIX}/lib/netgen/tcl/netgenexec
 endif
+
 #--------------------------------------------------------------------
 # ngspice
 #--------------------------------------------------------------------
@@ -279,12 +294,59 @@ else
 	--with-readline=yes \
 	--disable-debug	&& CFLAGS="-g -m64 -O0 -Wall -Wno-unused-but-set-variable" LDFLAGS="-m64 -g"
 endif
-	cd ngspice  && make -j4
+	-cd ngspice  && make -j4
 
 
 ngspice_install:
 	cd ngspice &&  sudo make install
 
+
+#--------------------------------------------------------------------
+# icarus verilog
+#--------------------------------------------------------------------
+iverilog:
+	git clone https://github.com/steveicarus/iverilog.git
+	cd iverilog && git checkout ${MAGIC_VER}
+
+iverilog_compile: iverilog
+	cd iverilog && git pull && \
+	sh autoconf.sh && ./configure --prefix ${EDA_PREFIX} && make
+
+iverilog_install:
+	cd iverilog && sudo make install
+
+
+#--------------------------------------------------------------------
+# yosys
+#--------------------------------------------------------------------
+yosys:
+	git clone https://github.com/YosysHQ/yosys.git
+	cd yosys && git checkout ${YOSYS_VER}
+
+yosys_compile:
+	cd yosys && git pull && make config-gcc PREFIX=${EDA_PREFIX} \
+	&& make PREFIX=${EDA_PREFIX}
+
+yosys_install:
+	cd yosys && sudo make PREFIX=${EDA_PREFIX} install
+
+#--------------------------------------------------------------------
+# GTKWave
+#--------------------------------------------------------------------
+gtkwave:
+	wget http://gtkwave.sourceforge.net/gtkwave-${GTKWAVE_VER}.tar.gz
+	tar zxvf gtkwave-${GTKWAVE_VER}.tar.gz
+	ln -s gtkwave-${GTKWAVE_VER} gtkwave
+
+gtkwave_compile:
+ifeq (${OS},mac)
+	cd gtkwave && export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig/ &&./configure --prefix ${EDA_PREFIX} --disable-tcl --disable-xy && make
+else
+	cd gtkwave && ./configure --prefix ${EDA_PREFIX} --disable-tcl --disable-xy && make
+endif
+
+gtkwave_install:
+	cd gtkwave && sudo make install
 
 #--------------------------------------------------------------------
 # XYCE
