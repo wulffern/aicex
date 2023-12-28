@@ -35,6 +35,7 @@ NGSPICE_VER=master
 IVERILOG_VER=master
 YOSYS_VER=master
 GTKWAVE_VER=3.3.117
+OPENROAD_VER=master
 
 ifeq (${OS},mac)
 CC_GCC=gcc-13
@@ -113,13 +114,7 @@ ifeq (${OS},mac)
 	brew install tcl-tk
 	brew install gtk+
 	brew install gtk-mac-integration
-	#brew install glfw3
-	#brew install glew
 
-# Xyce
-	#brew install fftw suite-sparse cmake flex bison autoconf automake libtool openmpi
-
-#libxft really creates issues it seems
 	brew uninstall libxft
 else
 	sudo apt update
@@ -130,7 +125,8 @@ else
 	git vim curl  libx11-dev libxrender1 libxrender-dev \
 	libxcb1 libx11-xcb-dev libcairo2 libcairo2-dev \
 	tcl8.6 tcl8.6-dev tk8.6 tk8.6-dev libxpm4  \
-	xterm vim-gtk3 gawk tcl-tclreadline libxpm-dev automake	libtool libxaw7-dev libreadline-dev
+	xterm vim-gtk3 gawk tcl-tclreadline libxpm-dev automake	libtool libxaw7-dev libreadline-dev gperf \
+	xz-utils liblzma-dev libgtk2.0-dev
 endif
 
 #--------------------------------------------------------------------
@@ -323,7 +319,7 @@ yosys:
 	git clone https://github.com/YosysHQ/yosys.git
 	cd yosys && git checkout ${YOSYS_VER}
 
-yosys_compile:
+yosys_compile: yosys
 	cd yosys && git pull && make config-gcc PREFIX=${EDA_PREFIX} \
 	&& make PREFIX=${EDA_PREFIX}
 
@@ -349,10 +345,24 @@ gtkwave_install:
 	cd gtkwave && sudo make install
 
 #--------------------------------------------------------------------
+# OpenRoad
+#--------------------------------------------------------------------
+OpenROAD:
+	git clone --recursive https://github.com/The-OpenROAD-Project/OpenROAD.git
+	cd OpenROAD && git checkout ${OPENROAD_VER}
+	cd OpenROAD && sudo ./etc/DependencyInstaller.sh
+
+openroad_compile: OpenROAD
+	-cd OpenROAD && mkdir build
+	cd OpenROAD/build && cmake .. -DCMAKE_INSTALL_PREFIX=${EDA_PREFIX} && make
+
+openroad_install:
+	cd OpenROAD && make install
+
+
+#--------------------------------------------------------------------
 # XYCE
 #--------------------------------------------------------------------
-
-
 trilinos:
 	git clone git@github.com:trilinos/Trilinos.git
 
