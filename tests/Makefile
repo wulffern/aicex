@@ -28,7 +28,8 @@
 #---------------------------------------------------------------------
 #- GIT repo Versions
 #---------------------------------------------------------------------
-XSCHEM_VER=master
+#- Schem netlisting changes from version 3.4.4 to 3.4.5. Reall skrewed up some testbenches
+XSCHEM_VER=3.4.4
 MAGIC_VER=master
 NETGEN_VER=master
 NGSPICE_VER=master
@@ -350,11 +351,14 @@ gtkwave_install:
 OpenROAD:
 	git clone --recursive https://github.com/The-OpenROAD-Project/OpenROAD.git
 	cd OpenROAD && git checkout ${OPENROAD_VER}
-	cd OpenROAD && sudo ./etc/DependencyInstaller.sh
+	cd OpenROAD && ./etc/DependencyInstaller.sh -base
+	cd OpenROAD && ./etc/DependencyInstaller.sh -common -prefix=${EDA_PREFIX}
 
 openroad_compile: OpenROAD
 	-cd OpenROAD && mkdir build
-	cd OpenROAD/build && cmake .. -DCMAKE_INSTALL_PREFIX=${EDA_PREFIX} && make
+	cd OpenROAD/build && export PATH="$(brew --prefix bison)/bin:$(brew --prefix flex)/bin:$(brew --prefix tcl-tk)/bin:${PATH}" && \
+    export CMAKE_PREFIX_PATH=$(shell brew --prefix or-tools) && \
+		cmake .. -DCMAKE_INSTALL_PREFIX=${EDA_PREFIX} && make
 
 openroad_install:
 	cd OpenROAD && make install
