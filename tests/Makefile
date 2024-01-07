@@ -80,8 +80,8 @@ eda_compile: magic_compile \
 	ngspice_compile \
 	ngspice_compile
 	#iverilog_compile \
-	yosys_compile \
-	gtkwave_compile
+	#yosys_compile \
+	#gtkwave_compile
 
 eda_install: magic_install \
 	xschem_install \
@@ -89,7 +89,7 @@ eda_install: magic_install \
 	ngspice_install
 	#iverilog_compile
 	#yosys_compile \
-	gtkwave_compile
+	#gtkwave_compile
 
 clean:
 	rm -rf ${tclver}*
