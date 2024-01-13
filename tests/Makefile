@@ -76,12 +76,12 @@ tt: tcl_compile tcl_install \
 
 eda_compile: magic_compile \
 	xschem_compile \
-	netgen_compile \
-	ngspice_compile \
-	ngspice_compile
+	netgen_compile
 	#iverilog_compile \
 	#yosys_compile \
 	#gtkwave_compile
+	make ngspice_compile
+	make ngspice_compile
 
 eda_install: magic_install \
 	xschem_install \
