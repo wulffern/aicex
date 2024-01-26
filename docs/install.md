@@ -18,7 +18,36 @@ For the analog toolchain we need some tools, and a process design kit (PDK).
 - [xschem](https://github.com/StefanSchippers/xschem)
 - python > 3.10
 
-Clone the github repo 
+## Setup WSL (Applicable for Windows users)
+Install a Linux distribution such as Ubuntu 22.04 LTS by running the following command in PowerShell on Windows and follow the instructions.
+```bash
+wsl --install -d Ubuntu-22.04
+```
+
+When you have installed the Linux distribution and  signed into it, install make
+
+```bash
+sudo apt install make
+```
+
+## Setup public key towards github
+
+Do 
+
+```bash
+ssh-keygen -t rsa
+```
+
+And press "enter" on most things, or if you're paranoid, add a passphrase
+
+Then 
+```bash 
+cat ~/.ssh/id_rsa.pub 
+```
+
+And add the public key to your github account. Settings - SSH and GPG keys 
+
+## Clone the github repo, install, and set up tools
 
 ```bash
 git clone --recursive git@github.com:wulffern/aicex.git
@@ -57,7 +86,7 @@ cd ../..
 
 ``` bash
 cd aicex/ip/cicconf
-python3 -m pip install --user -e .
+python3 -m pip install .
 cd ../
 ```
 
@@ -72,7 +101,7 @@ cd ..
 
 ``` bash
 cd aicex/ip/cicsim
-python3 -m pip install --user -e .
+python3 -m pip install .
 cd ../..
 ```
 
