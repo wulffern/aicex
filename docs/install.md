@@ -54,7 +54,8 @@ git clone --recursive git@github.com:wulffern/aicex.git
 ```
 
 You need to add the following to your ~/.bashrc (note that `~` refers to your
-home directory `$HOME/.bashrc` also works)
+home directory `$HOME/.bashrc` also works, or `$HOME/.bash_profile` on some
+newer macs)
 
 
 ```bash
