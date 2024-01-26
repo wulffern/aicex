@@ -24,7 +24,10 @@ Clone the github repo
 git clone --recursive git@github.com:wulffern/aicex.git
 ```
 
-You need to add the following to your ~/.bashrc
+You need to add the following to your ~/.bashrc (note that `~` refers to your
+home directory `$HOME/.bashrc` also works)
+
+
 ```bash
 export PDK_ROOT=/opt/pdk/share/pdk
 export LD_LIBRARY_PATH=/opt/eda/lib

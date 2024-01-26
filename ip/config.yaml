@@ -76,6 +76,10 @@ cnr_atr_sky130nm:
   remote: git@github.com:wulffern/cnr_atr_sky130nm.git
   revision: main
 
+cnr_ota_sky130nm:
+  remote: git@github.com:wulffern/cnr_ota_sky130nm.git
+  revision: main
+
 #- Groups
 cnr_gr00_sky130nm:
   remote: git@github.com:analogicus/cnr_gr00_sky130nm.git
