@@ -29,7 +29,7 @@
 #- GIT repo Versions
 #---------------------------------------------------------------------
 #- Schem netlisting changes from version 3.4.4 to 3.4.5. Reall skrewed up some testbenches
-XSCHEM_VER=3.4.4
+XSCHEM_VER=master
 MAGIC_VER=master
 NETGEN_VER=master
 NGSPICE_VER=master
@@ -115,8 +115,8 @@ ifeq (${OS},mac)
 	brew install tcl-tk
 	brew install gtk+
 	brew install gtk-mac-integration
-
-	brew uninstall libxft
+	brew install libxft
+	#brew uninstall libxft
 else
 	sudo apt update
 	sudo test -d /opt || mkdir /opt
@@ -127,7 +127,7 @@ else
 	libxcb1 libx11-xcb-dev libcairo2 libcairo2-dev \
 	tcl8.6 tcl8.6-dev tk8.6 tk8.6-dev libxpm4  \
 	xterm vim-gtk3 gawk tcl-tclreadline libxpm-dev automake	libtool libxaw7-dev libreadline-dev gperf \
-	xz-utils liblzma-dev libgtk2.0-dev
+	xz-utils liblzma-dev libgtk2.0-dev python3-pil.imagetk
 endif
 
 #--------------------------------------------------------------------
@@ -213,10 +213,10 @@ xschem:
 xschem_compile: xschem
 	cd xschem && ./configure --prefix=${EDA_PREFIX}
 
-#ifeq (${OS},mac)
-#	perl -ibak -pe "s/CFLAGS/#CFLAGS/ig;s/LDFLAGS/#LDFLAGS/ig" xschem/Makefile.conf
-#	echo "CFLAGS=-I${X11_INC} -I${X11_INC}/cairo -I${TK_PREFIX}/include -O2\n LDFLAGS= -L${TK_PREFIX}/lib -L${X11_LIB} -lm -ljpeg -lcairo  -lX11 -lXrender -lxcb -lxcb-render -lX11-xcb -lXpm -ltcl8.6 -ltk8.6" >> xschem/Makefile.conf
-#endif
+ifeq (${OS},mac)
+	perl -ibak -pe "s/CFLAGS/#CFLAGS/ig;s/LDFLAGS/#LDFLAGS/ig" xschem/Makefile.conf
+	echo "CFLAGS=-I${X11_INC} -I${X11_INC}/cairo -I${TK_PREFIX}/include -O2\n LDFLAGS= -L${TK_PREFIX}/lib -L${X11_LIB} -lm -ljpeg -lcairo  -lX11 -lXrender -lxcb -lxcb-render -lX11-xcb -lXpm -ltcl8.6 -ltk8.6" >> xschem/Makefile.conf
+endif
 
 	cd xschem && make
 

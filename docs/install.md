@@ -18,7 +18,10 @@ For the analog toolchain we need some tools, and a process design kit (PDK).
 - [xschem](https://github.com/StefanSchippers/xschem)
 - python > 3.10
 
-## Setup WSL (Applicable for Windows users)
+The tools are not that big, but the PDK is huge, so you need to have about 50 GB
+disk space available. 
+
+### Setup WSL (Applicable for Windows users)
 Install a Linux distribution such as Ubuntu 22.04 LTS by running the following command in PowerShell on Windows and follow the instructions.
 ```bash
 wsl --install -d Ubuntu-22.04
