@@ -38,13 +38,6 @@ YOSYS_VER=master
 GTKWAVE_VER=3.3.117
 OPENROAD_VER=master
 
-ifeq (${OS},mac)
-CC_GCC=gcc-13
-CC_GPP=g++-13
-else
-CC_GCC=gcc
-CC_GPP=g++
-endif
 
 #---------------------------------------------------------------------
 #- Variables
@@ -58,6 +51,15 @@ OS = linux
 ifeq ($(UNAME_S),Darwin)
 OS = mac
 endif
+
+ifeq (${OS},mac)
+CC_GCC=gcc-13
+CC_GPP=gcc-13
+else
+CC_GCC=gcc
+CC_GPP=g++
+endif
+
 
 
 ifeq (${OS},mac)
@@ -80,7 +82,7 @@ eda_compile: magic_compile \
 	#iverilog_compile \
 	#yosys_compile \
 	#gtkwave_compile
-	make ngspice_compile
+	-make ngspice_compile
 	make ngspice_compile
 
 eda_install: magic_install \
@@ -110,13 +112,14 @@ ifeq (${OS},mac)
 	brew install libomp
 	brew install automake
 	brew install glib
+	brew install cairo
 	brew install libxaw
 	brew install flex
 	brew install tcl-tk
+	brew install gcc
 	brew install gtk+
 	brew install gtk-mac-integration
 	brew install libxft
-	#brew uninstall libxft
 else
 	sudo apt update
 	sudo test -d /opt || mkdir /opt
