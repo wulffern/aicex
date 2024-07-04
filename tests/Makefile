@@ -28,7 +28,7 @@
 #---------------------------------------------------------------------
 #- GIT repo Versions
 #---------------------------------------------------------------------
-#- Schem netlisting changes from version 3.4.4 to 3.4.5. Reall skrewed up some testbenches
+#- Schem netlisting changes from version 3.4.4 to 3.4.5. Really skrewed up some testbenches
 XSCHEM_VER=master
 MAGIC_VER=master
 NETGEN_VER=master
@@ -63,8 +63,8 @@ endif
 
 
 ifeq (${OS},mac)
-	X11_LIB = /opt/X11/lib
-	X11_INC = /opt/X11/include
+	X11_LIB = /usr/X11/lib
+	X11_INC = /usr/X11/include
 else
 	X11_LIB = /usr/lib/X11
 	X11_INC = /usr/include/X11
@@ -184,13 +184,14 @@ magic:
 
 magic_compile: magic
 #ifeq (${OS},mac)
-#	cd magic &&  ./configure \
+#	cd magic &&  ./configure CC=${CC_GCC} CXX=${CC_GPP} \
 #    --with-tcl=${shell brew --prefix tcl-tk}\
-#    --with-tk=${shell brew --prefix tcl-tk}\
-#    --with-cairo=${shell brew --prefix cairo}/include\
-#    "LDFLAGS=-L$(brew --prefix cairo)/lib" --prefix=${TK_PREFIX}  && \
-#	make database/database.h  && \
-#	make
+    --with-tk=${shell brew --prefix tcl-tk}\
+	--x-includes=${X11_INC} --x-libraries=${X11_LIB} \
+	--with-cairo=${X11_INC}/cairo  --with-opengl=${X11_LIB} \
+    --prefix=${TK_PREFIX}  && \
+	make database/database.h && \
+	make
 #else
 	perl -pe "s/-g/-g -Wno-error=implicit-function-declaration/ig" -i magic/configure
 	cd magic && ./configure CC=${CC_GCC} CXX=${CC_GPP}  --prefix=${TK_PREFIX} --with-tcl=${TK_PREFIX}/lib \
