@@ -75,6 +75,7 @@ rply_ex0_sky130nm:
 # CNR(2024)
 #"In an insane world, it was the sanest choice."
 # - Sarah Connor, Terminator 2: Judgment Day
+#-------------------------------------------------------
 cnr_atr_sky130nm:
   remote: git@github.com:wulffern/cnr_atr_sky130nm.git
   revision: main
@@ -108,18 +109,3 @@ cnr_gr06_sky130nm:
   remote: git@github.com:analogicus/cnr_gr06_sky130nm.git
   revision: main
 
-#cnr_gr07_sky130nm:
-#  remote: git@github.com:analogicus/cnr_gr07_sky130nm.git
-#  revision: main
-
-#cnr_gr08_sky130nm:
-#  remote: git@github.com:analogicus/cnr_gr08_sky130nm.git
-#  revision: main
-
-#cnr_gr09_sky130nm:
-#  remote: git@github.com:analogicus/cnr_gr09_sky130nm.git
-#  revision: main
-
-#cnr_gr10_sky130nm:
-#  remote: git@github.com:analogicus/cnr_gr10_sky130nm.git
-#  revision: main
