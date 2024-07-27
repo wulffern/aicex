@@ -3,7 +3,7 @@
 #-------------------------------------------------------
 options:
   template:
-    ip: tech_sky130B/cicconf/ip_template.yaml
+    ip: tech_sky130A/cicconf/ip_template.yaml
   project: jnw
   technology: sky130nm
 
@@ -104,8 +104,3 @@ cnr_gr04_sky130nm:
 cnr_gr05_sky130nm:
   remote: git@github.com:analogicus/cnr_gr05_sky130nm.git
   revision: main
-
-cnr_gr06_sky130nm:
-  remote: git@github.com:analogicus/cnr_gr06_sky130nm.git
-  revision: main
-

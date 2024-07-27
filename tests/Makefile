@@ -53,14 +53,14 @@ OS = mac
 endif
 
 ifeq (${OS},mac)
-CC_GCC=gcc-13
-CC_GPP=gcc-13
+CC_GCC=gcc-14
+CC_GPP=gcc-14
 else
 CC_GCC=gcc
 CC_GPP=g++
 endif
 
-
+VER=$(shell lsb_release -sr)
 
 ifeq (${OS},mac)
 	X11_LIB = /usr/X11/lib
@@ -121,16 +121,32 @@ ifeq (${OS},mac)
 	brew install gtk-mac-integration
 	brew install libxft
 else
+
 	sudo apt update
 	sudo test -d /opt || mkdir /opt
+
+ifeq (${VER},24.04)
 	sudo apt -y install python3-pip libxft2 libxss1 \
-	libgl1-mesa-glx libglu1-mesa libxaw7 libcairo2 \
+	libxaw7 libcairo2 \
 	tcsh flex bison \
 	git vim curl  libx11-dev libxrender1 libxrender-dev \
 	libxcb1 libx11-xcb-dev libcairo2 libcairo2-dev \
 	tcl8.6 tcl8.6-dev tk8.6 tk8.6-dev libxpm4  \
 	xterm vim-gtk3 gawk tcl-tclreadline libxpm-dev automake	libtool libxaw7-dev libreadline-dev gperf \
 	xz-utils liblzma-dev libgtk2.0-dev python3-pil.imagetk
+
+else
+	sudo apt -y install python3-pip libxft2 libxss1 \
+	libxaw7 libcairo2 \
+	libgl1-mesa-glx libglu1-mesa \
+	tcsh flex bison \
+	git vim curl  libx11-dev libxrender1 libxrender-dev \
+	libxcb1 libx11-xcb-dev libcairo2 libcairo2-dev \
+	tcl8.6 tcl8.6-dev tk8.6 tk8.6-dev libxpm4  \
+	xterm vim-gtk3 gawk tcl-tclreadline libxpm-dev automake	libtool libxaw7-dev libreadline-dev gperf \
+	xz-utils liblzma-dev libgtk2.0-dev python3-pil.imagetk
+
+endif
 endif
 
 #--------------------------------------------------------------------

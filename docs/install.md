@@ -67,11 +67,37 @@ export LD_LIBRARY_PATH=/opt/eda/lib
 export PATH=/opt/eda/bin:$HOME/.local/bin:$PATH
 ```
 
+
+## Ubuntu 24.04 or new system
+
+On newer systems it's not trivial to install python packages because python is
+externally managed. As such, we need to install a python environment.
+
+```bash 
+#- Find a package similar to name below
+sudo apt install python3.12-venv
+sudo mkdir /opt/eda/python3
+sudo chown -R $USER:$USER /opt/eda/python3/
+python3 -m venv /opt/eda/python3
+```
+
+Modify the `~/.bashrc` to include the python environment
+
+```bash
+export PATH=/opt/eda/bin:/opt/eda/python3/bin:$HOME/.local/bin:$PATH
+```
+
+
+## Install 
+
+
 Make sure you load the settings before you proceed
 
 ```bash
 source ~/.bashrc
 ```
+
+
 
 ```bash
 cd aicex/tests/
@@ -90,7 +116,9 @@ cd ../..
 
 ``` bash
 cd aicex/ip/cicconf
-python3 -m pip install .
+git checkout main 
+git pull
+python3 -m pip install -e .
 cd ../
 ```
 
@@ -105,7 +133,7 @@ cd ..
 
 ``` bash
 cd aicex/ip/cicsim
-python3 -m pip install .
+python3 -m pip install -e .
 cd ../..
 ```
 

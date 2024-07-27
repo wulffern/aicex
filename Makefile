@@ -1,6 +1,6 @@
 
 
-TAG = 0.1.3
+TAG = 0.1.4
 
 dirs = 	ip/cnr_atr_sky130nm/sim \
  ip/sun_tr_sky130nm/work \
@@ -31,6 +31,9 @@ ci:
 ci22:
 	docker build -f docker/Dockerfile_22.04 ${OPT} . -t wulffern/aicex:22.04_latest
 
+ci24	:
+	docker build -f docker/Dockerfile_24.04 ${OPT} . -t wulffern/aicex:24.04_latest
+
 tagpush:
 	docker tag wulffern/aicex:20.04_latest wulffern/aicex:20.4_${TAG}
 	docker push wulffern/aicex:20.04_${TAG}
@@ -43,11 +46,16 @@ tagpush22:
 cish:
 	docker run --rm  -it -p 2021:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:latest bash --login
 
+
+
 cirun:
 	docker run --rm  -p 2021:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:20.04_latest &
 
 cirun22:
 	docker run --rm  -p 2021:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:22.04_latest &
+
+cirun24:
+	docker run --rm   -p 2021:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:24.04_latest &
 
 clean:
 	cd ip && find ./ -name "*.ext" -exec rm {} \;
