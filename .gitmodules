@@ -2,50 +2,19 @@
 	path = ip/tech_sky130B
 	url = https://github.com/wulffern/tech_sky130B
 	branch = main
-[submodule "ip/cicpy"]
-	path = ip/cicpy
-	url = https://github.com/wulffern/cicpy
-	branch = master
 [submodule "ip/cicsim"]
 	path = ip/cicsim
 	url = https://github.com/wulffern/cicsim
 	branch = main
-[submodule "ip/ciccreator"]
-	path = ip/ciccreator
-	url = https://github.com/wulffern/ciccreator
-	branch = master
 [submodule "ip/cpdk"]
 	path = ip/cpdk
 	url = https://github.com/wulffern/cpdk
-	branch = main
-[submodule "ip/sun_tr_sky130nm"]
-	path = ip/sun_tr_sky130nm
-	url = https://github.com/wulffern/sun_tr_sky130nm
-	branch = main
-[submodule "ip/sun_trb_sky130nm"]
-	path = ip/sun_trb_sky130nm
-	url = https://github.com/wulffern/sun_trb_sky130nm
-	branch = main
-[submodule "ip/sun_sar9b_sky130nm"]
-	path = ip/sun_sar9b_sky130nm
-	url = https://github.com/wulffern/sun_sar9b_sky130nm
 	branch = main
 [submodule "ip/rply_ex0_sky130nm"]
 	path = ip/rply_ex0_sky130nm
 	url = https://github.com/wulffern/rply_ex0_sky130nm
 	branch = main
-[submodule "ip/rply_bias_sky130nm"]
-	path = ip/rply_bias_sky130nm
-	url = https://github.com/wulffern/rply_bias_sky130nm
-	branch = main
-[submodule "ip/sun_pll_sky130nm"]
-	path = ip/sun_pll_sky130nm
-	url = https://github.com/wulffern/sun_pll_sky130nm
-	branch = main
 [submodule "ip/cicconf"]
 	path = ip/cicconf
 	url = https://github.com/wulffern/cicconf
 	branch = main
-[submodule "ip/ciccheatgen"]
-	path = ip/ciccheatgen
-	url = git@github.com:wulffern/ciccheatgen.git

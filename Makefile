@@ -2,11 +2,8 @@
 
 TAG = 0.1.4
 
-dirs = 	ip/cnr_atr_sky130nm/sim \
- ip/sun_tr_sky130nm/work \
-	ip/sun_sar9b_sky130nm/work \
-	ip/sun_pll_sky130nm/work \
-	ip/sun_tr_sky130nm/sim/IVX1_CV \
+dirs = ip/rply_ex0_sky130nm/sim/RPLY_EX0 \
+	ip/rply_ex0_sky130nm/work
 
 
 cwd = ${shell pwd}
@@ -17,6 +14,7 @@ SITE=${shell pwd}/docs
 OPT=
 
 test:
+
 	${foreach d, ${dirs}, cd ${cwd}; cd ${d} && make test|| exit ;}
 
 foss-run:

@@ -34,7 +34,7 @@ MAGIC_VER=master
 NETGEN_VER=master
 NGSPICE_VER=master
 IVERILOG_VER=master
-YOSYS_VER=master
+YOSYS_VER=main
 GTKWAVE_VER=3.3.117
 OPENROAD_VER=master
 
@@ -323,7 +323,7 @@ ngspice_install:
 #--------------------------------------------------------------------
 iverilog:
 	git clone https://github.com/steveicarus/iverilog.git
-	cd iverilog && git checkout ${MAGIC_VER}
+	cd iverilog && git checkout ${IVERILOG_VER}
 
 iverilog_compile: iverilog
 	cd iverilog && git pull && \
@@ -337,12 +337,12 @@ iverilog_install:
 # yosys
 #--------------------------------------------------------------------
 yosys:
-	git clone https://github.com/YosysHQ/yosys.git
+	git clone --recursive https://github.com/YosysHQ/yosys.git
 	cd yosys && git checkout ${YOSYS_VER}
 
 yosys_compile: yosys
 	cd yosys && git pull && make config-gcc PREFIX=${EDA_PREFIX} \
-	&& make PREFIX=${EDA_PREFIX}
+	&& make -j 8 PREFIX=${EDA_PREFIX}
 
 yosys_install:
 	cd yosys && sudo make PREFIX=${EDA_PREFIX} install
