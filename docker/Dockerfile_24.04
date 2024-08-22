@@ -38,17 +38,16 @@ WORKDIR /opt/tests
 ENV LD_LIBRARY_PATH=/opt/eda/lib
 ENV PATH=/opt/eda/bin:$HOME/.local/bin:$PATH
 
-#RUN make requirements
-#RUN make tt
-#RUN make eda_compile
-#RUN sudo make eda_install
-#RUN python3 -m pip install matplotlib numpy click svgwrite pyyaml pandas tabulate wheel setuptools tikzplotlib
-#RUN source install_open_pdk.sh
-#RUN sudo rm -rf skywater-pdk
-#RUN sudo rm -rf open_pdk
+RUN make requirements
+RUN make tt
+RUN make eda_compile
+RUN sudo make eda_install
+RUN python3 -m pip install matplotlib numpy click svgwrite pyyaml pandas tabulate wheel setuptools tikzplotlib
+RUN source install_open_pdk.sh
+RUN sudo rm -rf skywater-pdk
+RUN sudo rm -rf open_pdk
 
 WORKDIR /home/aicex
 RUN mkdir /home/aicex/.ssh
 
 ENTRYPOINT sudo service ssh restart && tail -f /dev/null
-#CMD ["/usr/bin/sudo", "/usr/sbin/sshd", "-D", "-o", "ListenAddress=0.0.0.0"]

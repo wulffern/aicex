@@ -79,19 +79,17 @@ tt: tcl_compile tcl_install \
 eda_compile: magic_compile \
 	xschem_compile \
 	netgen_compile
-	#iverilog_compile \
-	#yosys_compile \
-	#gtkwave_compile
+	iverilog_compile \
+	yosys_compile \
 	-make ngspice_compile
 	make ngspice_compile
 
 eda_install: magic_install \
 	xschem_install \
 	netgen_install \
-	ngspice_install
-	#iverilog_compile
-	#yosys_compile \
-	#gtkwave_compile
+	ngspice_install \
+	iverilog_install \
+	yosys_install
 
 clean:
 	rm -rf ${tclver}*
@@ -152,13 +150,14 @@ endif
 #--------------------------------------------------------------------
 # TCL/TK
 #--------------------------------------------------------------------
-ttver=8.6
-tclver=tcl${ttver}.10
-tkver=tk${ttver}.10
+ttver=8.6.10
+tclver=tcl${ttver}
+tkver=tk${ttver}
 
+https://downloads.sourceforge.net/project/tcl/Tcl/8.6.10/tk8.6.10-src.tar.gz?ts=gAAAAABmwgzQOV9CsxTKp_oaEBCEZ-XvDrehgbv1M-e8v2mI4m_HoouvHYWfQ6BfOWiGVh1jltOdhhUWrm9wgTYqteFej8QCpg%3D%3D&r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Ftcl%2Ffiles%2FTcl%2F8.6.10%2Ftk8.6.10-src.tar.gz%2Fdownload
 
 ${tclver}:
-	wget https://prdownloads.sourceforge.net/tcl/${tclver}-src.tar.gz
+	test -f ${tclver}-src.tar.gz ||wget https://downloads.sourceforge.net/project/tcl/Tcl/${ttver}/${tclver}-src.tar.gz
 	tar zxvf ${tclver}-src.tar.gz
 
 
@@ -171,7 +170,7 @@ tcl_install:
 	cd ${tclver}/unix; sudo make install
 
 ${tkver}:
-	wget https://prdownloads.sourceforge.net/tcl/${tkver}-src.tar.gz
+	test -f ${tkver}-src.tar.gz || wget https://downloads.sourceforge.net/project/tcl/Tcl/${ttver}/${tkver}-src.tar.gz
 	tar zxvf ${tkver}-src.tar.gz
 
 

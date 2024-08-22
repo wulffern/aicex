@@ -115,40 +115,44 @@ cnr_gr00_sky130nm:
   revision: main
 
 #- Temperature sensor - Group 2 (Alireza, Bjørn, Sheikha, Youssef )
-# - PTAT bandgap core with PTAT current output and 1.2 VREF
-# - PTAT current into capacitor
-# - Comparator between VREF and capacitor voltage to check charge delay
-# SCH: CNR_GR02, LAY: CNR_GR02, DRC: OK, LVS: NOK
+#- - PTAT bandgap core with PTAT current output and 1.2 VREF
+#- - PTAT current into capacitor
+#- - Comparator between VREF and capacitor voltage to check charge delay
+#- SCH: CNR_GR02, LAY: CNR_GR02, DRC: OK, LVS: NOK
 cnr_gr02_sky130nm:
   remote: git@github.com:analogicus/cnr_gr02_sky130nm.git
   revision: main
 
 #- Temperature sensor - Group 3 (Daniel, Mangus, Martin, Vetle)
-# - PTAT bandgap core with PTAT current output and 1.2 VREF
-# - PTAT current into capacitor
-# - Comparator between VREF and capacitor voltage to check charge delay
-# SCH: TOPLEVEL, LAY: TOPLEVEL, DRC: OK, LVS: NOK (missing files)
-cnr_gr03_sky130nm:
-  remote: git@github.com:analogicus/cnr_gr03_sky130nm.git
-  revision: main
+#- - PTAT bandgap core with PTAT current output and 1.2 VREF
+#- - PTAT current into capacitor
+#- - Comparator between VREF and capacitor voltage to check charge delay
+#- SCH: TOPLEVEL, LAY: TOPLEVEL, DRC: OK, LVS: NOK (missing files)
+#- Repository excluded cause of missing files
+#cnr_gr03_sky130nm:
+#  remote: git@github.com:analogicus/cnr_gr03_sky130nm.git
+#  revision: main
+
 
 #- Temperature sensor - Group 4 (Syver, Leidulf, Mohammad, Peter)
 # - PTAT bandgap core with PTAT current output
 # - PTAT current into capacitor
 # - Comparator between VDD_1V8/2 and capacitor voltage to check charge delay
 # SCH: CNR_GR04, LAY: CNR_GR04, DRC: NOK, LVS: NOK
-cnr_gr04_sky130nm:
-  remote: git@github.com:analogicus/cnr_gr04_sky130nm.git
-  revision: main
+#- Repository excluded because DRC is not ok
+#cnr_gr04_sky130nm:
+#  remote: git@github.com:analogicus/cnr_gr04_sky130nm.git
+#  revision: main
 
 #- Temperature sensor - Group 5 (Trond, Markus, Andrea)
-# - PTAT bandgap core with PTAT current output
-# - PTAT current into capacitor
-# - Comparator between VDD_1V8/2 and capacitor voltage to check charge delay
-# SCH: final, LAY: final, DRC: OK, LVS: NOK (missing files)
-cnr_gr05_sky130nm:
-  remote: git@github.com:analogicus/cnr_gr05_sky130nm.git
-  revision: main
+#- - PTAT bandgap core with PTAT current output
+#- - PTAT current into capacitor
+#- - Comparator between VDD_1V8/2 and capacitor voltage to check charge delay
+#- SCH: final, LAY: final, DRC: OK, LVS: NOK (missing files)
+#- Repository excluded because it's so large
+#cnr_gr05_sky130nm:
+#  remote: git@github.com:analogicus/cnr_gr05_sky130nm.git
+#  revision: main
 
 #-------------------------------------------------------
 # JNW(2025

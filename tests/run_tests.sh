@@ -5,6 +5,7 @@ echo "/opt/eda/bin" >> $GITHUB_PATH
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/eda/lib
 export PATH=/opt/eda/bin:$HOME/.local/bin:$PATH
 echo $HOME
+echo $PATH
 
 #- clone IPs
 cd ip
