@@ -22,6 +22,12 @@ cicsim:
   revision: main
   on_clone: python3 -m pip install --user -e .
 
+cicspi:
+  remote: git@github.com:wulffern/cicspi.git
+  revision: main
+  on_clone: python3 -m pip install --user -e .
+
+
 #- Custom IC Creator - compiled analog blocks
 ciccreator:
   remote: git@github.com:wulffern/ciccreator.git
