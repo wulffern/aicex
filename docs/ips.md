@@ -48,6 +48,11 @@ waveform viewer for spice raw files
 
 [Documentation](https://wulffern.github.io/rply_ex0_sky130nm) 
 
+
+[![GDS](https://github.com/wulffern/rply_ex0_sky130nm/actions/workflows/gds.yaml/badge.svg)](https://github.com/wulffern/rply_ex0_sky130nm/actions/workflows/gds.yaml)
+[![DRC](https://github.com/wulffern/rply_ex0_sky130nm/actions/workflows/drc.yaml/badge.svg)](https://github.com/wulffern/rply_ex0_sky130nm/actions/workflows/drc.yaml)
+[![LVS](https://github.com/wulffern/rply_ex0_sky130nm/actions/workflows/lvslpe.yaml/badge.svg)](https://github.com/wulffern/rply_ex0_sky130nm/actions/workflows/lvslpe.yaml) 
+
 Tutorial on sky130nm analog flow
 
 ## IPs 
