@@ -11,7 +11,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     container:
-      image: wulffern/aicex:22.04_0.1.4
+      image: wulffern/aicex:24.04_0.1.4
       options: --user root
     steps:
       - name: aicex
