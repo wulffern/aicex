@@ -1,0 +1,44 @@
+name: 'Analogicus Janeway DRC Action'
+description: 'This action runs DRC'
+branding:
+  color: purple
+  icon: layers
+
+inputs:
+  cell:
+    description: 'Name of cell'
+    required: true
+    type: string
+  library:
+    description: 'Name of library'
+    required: true
+    type: string
+
+
+runs:
+    using: 'composite'
+    steps:
+      - name: Checkout dependencies
+        shell: bash
+        run: |
+          python3 -m pip install cicconf
+          cicconf --rundir ../ --config config.yaml clone --https
+      - name: Run DRC
+        shell: bash
+        env:
+          CELL: ${{ inputs.cell }}
+          LIBRARY: ${{ inputs.library }}
+        run: |
+          export PDK_ROOT=/opt/pdk/share/pdk
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+          echo "/opt/eda/bin" >> $GITHUB_PATH
+          cd work
+          make drc CELL=$CELL LIB=$LIBRARY
+          cat drc/${CELL}_drc.log >> $GITHUB_STEP_SUMMARY
+          tail -n 1 drc/${CELL}_drc.log| perl -ne '$exit =0;if(!m/:\s+0\n/ig){$exit = 1;}if(m/couldn?t be read/ig){$exit = 2}; exit $exit'
+      - name: Archive DRC
+        uses: actions/upload-artifact@v4
+        with:
+          name: drc
+          path: |
+            work/drc/${{ inputs.cell }}_drc.log
