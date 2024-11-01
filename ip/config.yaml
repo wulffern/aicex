@@ -3,13 +3,18 @@
 #-------------------------------------------------------
 options:
   template:
-    ip: tech_sky130A/cicconf/ip_template.yaml
+    ip: tech_sky130a/cicconf/ip_template.yaml
   project: jnw
   technology: sky130A
 
 #-------------------------------------------------------
 # Tools
 #-------------------------------------------------------
+#- GDS to graphics
+GDS2glTF:
+  remote: git@github.com:wulffern/GDS2glTF.git
+  revision: main
+  on_clone: python3 -m pip install -r requirements.txt
 
 #- Configuration. Cloining, update, status of this file
 cicconf:
@@ -161,22 +166,22 @@ cnr_gr02_sky130nm:
 #  revision: main
 
 #-------------------------------------------------------
-# JNW(2025
+# JNW(2025)
 # "You can use logic to justify almost anything. That's its power. And its flaw."
 # - Kathryn Janeway, Star Trek Voyager: Prime Factors
 #-------------------------------------------------------
 
 #- Analog transistors
-jnw_atr_sky130A:
+jnw_atr_sky130a:
   remote: git@github.com:analogicus/jnw_atr_sky130a.git
   revision: main
 
 #- Standard library
-jnw_tr_sky130A:
+jnw_tr_sky130a:
   remote: git@github.com:analogicus/jnw_tr_sky130a.git
   revision: main
 
 #- Temperature sensor? (Carsten)
-jnw_gr00_sky130A:
+jnw_gr00_sky130a:
   remote: git@github.com:analogicus/jnw_gr00_sky130a.git
   revision: main

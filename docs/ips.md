@@ -69,7 +69,8 @@ Tutorial on sky130nm analog flow
 
 [![GDS](https://github.com/wulffern/sun_sar9b_sky130nm/actions/workflows/gds.yaml/badge.svg)](https://github.com/wulffern/sun_sar9b_sky130nm/actions/workflows/gds.yaml)
 [![DRC](https://github.com/wulffern/sun_sar9b_sky130nm/actions/workflows/drc.yaml/badge.svg)](https://github.com/wulffern/sun_sar9b_sky130nm/actions/workflows/drc.yaml)
-[![LVS](https://github.com/wulffern/sun_sar9b_sky130nm/actions/workflows/lvslpe.yaml/badge.svg)](https://github.com/wulffern/sun_sar9b_sky130nm/actions/workflows/lvslpe.yaml) 
+[![LVS](https://github.com/wulffern/sun_sar9b_sky130nm/actions/workflows/lpe.yaml/badge.svg)](https://github.com/wulffern/sun_sar9b_sky130nm/actions/workflows/lpe.yaml) 
+[![DOCS](https://github.com/wulffern/sun_sar9b_sky130nm/actions/workflows/docs.yaml/badge.svg)](https://analogicus.com/sun_sar9b_sky130nm/) 
 
 9-bit successive approximation analog-to-digital converter 
 8-bit successive approximation analog-to-digital converter 
