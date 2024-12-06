@@ -3,7 +3,7 @@
 #-------------------------------------------------------
 options:
   template:
-    ip: tech_sky130a/cicconf/ip_template.yaml
+    ip: tech_sky130A/cicconf/ip_template.yaml
   project: jnw
   technology: sky130A
 
