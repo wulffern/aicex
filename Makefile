@@ -32,6 +32,9 @@ ci22:
 ci24	:
 	docker build -f docker/Dockerfile_24.04 ${OPT} . -t wulffern/aicex:24.04_latest
 
+ci24base:
+	docker build -f docker/Dockerfile_24.04_base ${OPT} . -t wulffern/aicex:base_24.04
+
 tagpush:
 	docker tag wulffern/aicex:20.04_latest wulffern/aicex:20.4_${TAG}
 	docker push wulffern/aicex:20.04_${TAG}
@@ -40,6 +43,11 @@ tagpush22:
 	docker tag wulffern/aicex:22.04_latest wulffern/aicex:22.04_${TAG}
 	docker push wulffern/aicex:22.04_${TAG}
 	#docker push wulffern/aicex:22.04_latest wulffern/aicex:latest
+
+tagpush24:
+	docker tag wulffern/aicex:24.04_latest wulffern/aicex:24.04_${TAG}
+	docker push wulffern/aicex:24.04_latest
+	docker push wulffern/aicex:24.04_${TAG}
 
 cish:
 	docker run --rm  -it -p 2021:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:latest bash --login

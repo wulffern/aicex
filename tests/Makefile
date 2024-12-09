@@ -28,7 +28,6 @@
 #---------------------------------------------------------------------
 #- GIT repo Versions
 #---------------------------------------------------------------------
-#- Schem netlisting changes from version 3.4.4 to 3.4.5. Really skrewed up some testbenches
 XSCHEM_VER=master
 MAGIC_VER=master
 NETGEN_VER=master
@@ -76,11 +75,12 @@ tt: tcl_compile tcl_install \
 	tk_compile tk_install
 
 
-eda_compile: magic_compile \
-	xschem_compile \
-	netgen_compile
-	iverilog_compile \
-	yosys_compile \
+eda_compile:
+	make magic_compile
+	make xschem_compile
+	make netgen_compile
+	make iverilog_compile
+	make yosys_compile
 	-make ngspice_compile
 	make ngspice_compile
 
@@ -92,14 +92,15 @@ eda_install: magic_install \
 	yosys_install
 
 clean:
-	rm -rf ${tclver}*
-	rm -rf ${tkver}*
-	rm -rf ngspice
-	rm -rf magic
-	rm -rf xschem*
-	rm -rf netgen
-	rm -rf gtkwave*
-	rm -rf iverilog
+	-rm -rf ${tclver}*
+	-rm -rf ${tkver}*
+	-rm -rf ngspice
+	-rm -rf magic
+	-rm -rf xschem*
+	-rm -rf netgen
+	-rm -rf gtkwave*
+	-rm -rf iverilog
+	-rm -rf yosys
 
 requirements:
 ifeq (${OS},mac)
@@ -126,18 +127,18 @@ else
 ifeq (${VER},24.04)
 	sudo apt -y install python3-pip libxft2 libxss1 \
 	libxaw7 libcairo2 \
-	tcsh flex bison \
+	tcsh flex bison pandoc \
 	git vim curl  libx11-dev libxrender1 libxrender-dev \
 	libxcb1 libx11-xcb-dev libcairo2 libcairo2-dev \
 	tcl8.6 tcl8.6-dev tk8.6 tk8.6-dev libxpm4  \
 	xterm vim-gtk3 gawk tcl-tclreadline libxpm-dev automake	libtool libxaw7-dev libreadline-dev gperf \
-	xz-utils liblzma-dev libgtk2.0-dev python3-pil.imagetk
+	xz-utils liblzma-dev libgtk2.0-dev python3-pil.imagetk verilator
 
 else
 	sudo apt -y install python3-pip libxft2 libxss1 \
 	libxaw7 libcairo2 \
 	libgl1-mesa-glx libglu1-mesa \
-	tcsh flex bison \
+	tcsh flex bison pandoc \
 	git vim curl  libx11-dev libxrender1 libxrender-dev \
 	libxcb1 libx11-xcb-dev libcairo2 libcairo2-dev \
 	tcl8.6 tcl8.6-dev tk8.6 tk8.6-dev libxpm4  \
@@ -154,7 +155,7 @@ ttver=8.6.10
 tclver=tcl${ttver}
 tkver=tk${ttver}
 
-https://downloads.sourceforge.net/project/tcl/Tcl/8.6.10/tk8.6.10-src.tar.gz?ts=gAAAAABmwgzQOV9CsxTKp_oaEBCEZ-XvDrehgbv1M-e8v2mI4m_HoouvHYWfQ6BfOWiGVh1jltOdhhUWrm9wgTYqteFej8QCpg%3D%3D&r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Ftcl%2Ffiles%2FTcl%2F8.6.10%2Ftk8.6.10-src.tar.gz%2Fdownload
+#https://downloads.sourceforge.net/project/tcl/Tcl/8.6.10/tk8.6.10-src.tar.gz?ts=gAAAAABmwgzQOV9CsxTKp_oaEBCEZ-XvDrehgbv1M-e8v2mI4m_HoouvHYWfQ6BfOWiGVh1jltOdhhUWrm9wgTYqteFej8QCpg%3D%3D&r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Ftcl%2Ffiles%2FTcl%2F8.6.10%2Ftk8.6.10-src.tar.gz%2Fdownload
 
 ${tclver}:
 	test -f ${tclver}-src.tar.gz ||wget https://downloads.sourceforge.net/project/tcl/Tcl/${ttver}/${tclver}-src.tar.gz
@@ -208,12 +209,20 @@ magic_compile: magic
 	make database/database.h && \
 	make
 #else
+#
+ifeq (${VER},24.04)
 	perl -pe "s/-g/-g -Wno-error=implicit-function-declaration/ig" -i magic/configure
 	cd magic && ./configure CC=${CC_GCC} CXX=${CC_GPP}  --prefix=${TK_PREFIX} --with-tcl=${TK_PREFIX}/lib \
 	--with-tk=${TK_PREFIX}/lib --x-includes=${X11_INC} --x-libraries=${X11_LIB} \
 	--with-cairo=${X11_INC}/cairo  --with-opengl=${X11_LIB} && \
 	make
-#endif
+else
+	perl -pe "s/-g/-g -Wno-error=implicit-function-declaration/ig" -i magic/configure
+	cd magic && ./configure CC=${CC_GCC} CXX=${CC_GPP}  --prefix=${TK_PREFIX} --with-tcl=${TK_PREFIX}/lib \
+	--with-tk=${TK_PREFIX}/lib --x-includes=${X11_INC} --x-libraries=${X11_LIB} \
+	--with-cairo=${X11_INC}/cairo  --with-opengl=${X11_LIB} && \
+	make
+endif
 
 magic_install:
 	cd magic && sudo make install
