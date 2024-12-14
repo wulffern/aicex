@@ -1,9 +1,13 @@
 name: AICEX CI
 
-on:
-  workflow_call:
 
-jobs:
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+    jobs:
   sim:
     runs-on: ubuntu-latest
     container:
