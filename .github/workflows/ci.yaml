@@ -19,5 +19,6 @@ jobs:
       - name: JNW_EX0_SKY130A
         shell: bash
         run: |
+          source ci/jnw_ex0_sky130a/.bashrc
           cd ci/jnw_ex0_sky130a
           make all
