@@ -173,15 +173,15 @@ cnr_gr02_sky130nm:
 
 #- Analog transistors
 jnw_atr_sky130a:
-  remote: git@github.com:analogicus/jnw_atr_sky130a.git
+  remote: git@github.com:analogicus/jnw_atr_sky130A.git
   revision: main
 
 #- Standard library
 jnw_tr_sky130a:
-  remote: git@github.com:analogicus/jnw_tr_sky130a.git
+  remote: git@github.com:analogicus/jnw_tr_sky130A.git
   revision: main
 
 #- Temperature sensor? (Carsten)
 jnw_gr00_sky130a:
-  remote: git@github.com:analogicus/jnw_gr00_sky130a.git
+  remote: git@github.com:analogicus/jnw_gr00_sky130A.git
   revision: main
