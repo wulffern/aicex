@@ -63,7 +63,7 @@ simlay:
 
 
 simdir:
-	cd aicex/ip/jnw_ex_sky130A/sim && make cell CELL=JNW_EX
+	cd ${DST}/sim && make cell CELL=JNW_EX
 	touch simdir
 
 cicsim:
