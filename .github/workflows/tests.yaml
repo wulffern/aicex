@@ -1,4 +1,4 @@
-name: aicex ci
+name: aicex tests
 
 on:
   push:

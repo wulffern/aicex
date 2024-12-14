@@ -1,0 +1,19 @@
+name: AICEX CI
+
+on:
+  workflow_call:
+
+jobs:
+  sim:
+    runs-on: ubuntu-latest
+    container:
+      image: wulffern/aicex:24.04_0.1.6
+      options: --user root
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: JNW_EX0_SKY130A
+        shell: bash
+        run: |
+          cd ci/jnw_ex0_sky130a
+          make all
