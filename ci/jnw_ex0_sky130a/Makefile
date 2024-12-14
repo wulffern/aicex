@@ -44,6 +44,7 @@ sch:
 	touch sch
 
 simtyp:
+	cat ../.spiceinit > ~/.spiceinit
 	cat ${SRC_S}/tran.spi | perl -pe "s/EX0/EX/ig;" > ${DST_S}/tran.spi
 	cat ${SRC_S}/tran.meas | perl -pe "s/EX0/EX/ig;" > ${DST_S}/tran.meas
 	cat ${SRC_S}/tran.yaml | perl -pe "s/EX0/EX/ig;" > ${DST_S}/tran.yaml
