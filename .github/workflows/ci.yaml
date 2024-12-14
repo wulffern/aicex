@@ -7,8 +7,8 @@ on:
   pull_request:
     branches: [ main ]
 
-    jobs:
-  sim:
+jobs:
+  ci:
     runs-on: ubuntu-latest
     container:
       image: wulffern/aicex:24.04_0.1.6
