@@ -3,6 +3,13 @@ cirun:
 	docker run --rm   -p 2021:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:24.04_0.1.6 &
 
 
+build:
+	mkdir build
+
+all: build
+	cd build;${MAKE} -f ../Makefile ci
+
+
 
 SRC=aicex/ip/jnw_ex0_sky130a
 SRC_D=${SRC}/design/JNW_EX0_SKY130A
@@ -11,11 +18,13 @@ DST=aicex/ip/jnw_ex_sky130a
 DST_D=${DST}/design/JNW_EX_SKY130A
 DST_S=${DST}/sim/JNW_EX
 
-build:
-	mkdir build
+UNAME_S := $(shell uname -s)
+OS = linux
+ifeq ($(UNAME_S),Darwin)
+OS = mac
+endif
 
-all: build
-	cd build;${MAKE} -f ../Makefile ci
+
 
 
 aicex:
@@ -55,10 +64,24 @@ simtyp:
 	cd ${DST_S} && make typical && make summary
 	touch simtyp
 
+info:
+	cat ${SRC}/info.yaml | perl -pe "s/EX0/EX/ig;" > ${DST}/info.yaml
+	touch info
+
 lay:
 	cat ${SRC_D}/JNW_EX0.mag > ${DST_D}/JNW_EX.mag
 	cd ${DST}/work && make cdl lvs lpe
 	touch lay
+
+act:
+ifeq (${OS},mac)
+	cd ${DST} && act
+else
+	echo "No Act support, yet"
+endif
+	touch act
+
+
 
 simlay:
 	cd ${DST_S} && make typical VIEW=Lay && make summary
@@ -73,7 +96,7 @@ cicsim:
 	cd aicex/ip/cicsim && python3 -m pip install -e .
 	touch cicsim
 
-ci: aicex cicconf cifclone cicsim newip simdir ex0 sch simtyp lay simlay
+ci: aicex cicconf cifclone cicsim newip simdir ex0 sch simtyp lay simlay info act
 
 
 clean:
