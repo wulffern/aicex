@@ -14,7 +14,7 @@ DST_S=${DST}/sim/JNW_EX
 build:
 	mkdir build
 
-all:
+all: build
 	cd build;${MAKE} -f ../Makefile ci
 
 

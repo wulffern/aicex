@@ -8,7 +8,7 @@ on:
     branches: [ main ]
 
 jobs:
-  ci:
+  jnw_ex0_sky130a:
     runs-on: ubuntu-latest
     container:
       image: wulffern/aicex:24.04_0.1.6
