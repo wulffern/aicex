@@ -25,10 +25,12 @@ cicconf:
 	cd aicex/ip/cicconf && \
 	git checkout main && \
 	git pull && \
-	python3 -m pip install -e . &&\
-	cd ../ &&\
-	cicconf clone --https
+	python3 -m pip install -e .
 	touch cicconf
+
+cifclone:
+	cd aicex/ip/ && cicconf  clone --https
+	touch cifclone
 
 newip:
 	cd aicex/ip && \
@@ -71,7 +73,7 @@ cicsim:
 	cd aicex/ip/cicsim && python3 -m pip install -e .
 	touch cicsim
 
-ci: aicex cicconf cicsim newip simdir ex0 sch simtyp lay simlay
+ci: aicex cicconf cifclone cicsim newip simdir ex0 sch simtyp lay simlay
 
 
 clean:

@@ -25,25 +25,25 @@ cicconf:
 cicsim:
   remote: git@github.com:wulffern/cicsim.git
   revision: main
-  on_clone: python3 -m pip install  -e .
+#  on_clone: python3 -m pip install  -e .
 
 cicspi:
   remote: git@github.com:wulffern/cicspi.git
   revision: main
-  on_clone: python3 -m pip install  -e .
+#  on_clone: python3 -m pip install  -e .
 
 
 #- Custom IC Creator - compiled analog blocks
 ciccreator:
   remote: git@github.com:wulffern/ciccreator.git
   revision: master
-  on_clone: cicconf clone --https
+#  on_clone: cicconf clone --https
 
 #- Transpiler and layout support
 cicpy:
   remote: git@github.com:wulffern/cicpy.git
   revision: master
-  on_clone: python3 -m pip install  -e .
+#  on_clone: python3 -m pip install  -e .
 
 #-------------------------------------------------------
 # TECHs
