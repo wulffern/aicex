@@ -71,8 +71,11 @@ endif
 
 
 
-tt: tcl_compile tcl_install \
-	tk_compile tk_install
+tt:
+	make tcl_compile
+	make tcl_install
+	make tk_compile
+	make tk_install
 
 
 eda_compile:
@@ -84,12 +87,13 @@ eda_compile:
 	-make ngspice_compile
 	make ngspice_compile
 
-eda_install: magic_install \
-	xschem_install \
-	netgen_install \
-	ngspice_install \
-	iverilog_install \
-	yosys_install
+eda_install:
+	make magic_install
+	make xschem_install
+	make netgen_install
+	make ngspice_install
+	make iverilog_install
+	make yosys_install
 
 clean:
 	-rm -rf ${tclver}*
