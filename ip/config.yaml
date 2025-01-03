@@ -185,3 +185,29 @@ jnw_tr_sky130a:
 jnw_gr00_sky130a:
   remote: git@github.com:analogicus/jnw_gr00_sky130A.git
   revision: main
+
+
+jnw_gr01_sky130a:
+  remote: git@github.com:analogicus/jnw_gr01_sky130a.git
+  revision: main
+
+jnw_gr02_sky130a:
+  remote: git@github.com:analogicus/jnw_gr02_sky130a.git
+  revision: main
+
+
+jnw_gr03_sky130a:
+  remote: git@github.com:analogicus/jnw_gr03_sky130a.git
+  revision: main
+
+jnw_gr04_sky130a:
+  remote: git@github.com:analogicus/jnw_gr04_sky130a.git
+  revision: main
+
+jnw_gr05_sky130a:
+  remote: git@github.com:analogicus/jnw_gr05_sky130a.git
+  revision: main
+
+jnw_gr06_sky130a:
+  remote: git@github.com:analogicus/jnw_gr06_sky130a.git
+  revision: main
