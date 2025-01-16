@@ -57,9 +57,9 @@ CC_GPP=gcc-14
 else
 CC_GCC=gcc
 CC_GPP=g++
+VER=$(shell lsb_release -sr)
 endif
 
-VER=$(shell lsb_release -sr)
 
 ifeq (${OS},mac)
 	X11_LIB = /usr/X11/lib
@@ -108,6 +108,8 @@ clean:
 
 requirements:
 ifeq (${OS},mac)
+	brew install wget
+	brew install git
 	brew install xquartz --cask
 	brew install libxpm
 	brew install bison
@@ -123,6 +125,9 @@ ifeq (${OS},mac)
 	brew install gtk+
 	brew install gtk-mac-integration
 	brew install libxft
+	brew install gcc 
+	brew install libtool
+	brew install libomp
 else
 
 	sudo apt update
@@ -189,9 +194,14 @@ tk_compile: ${tkver}
 tk_install:
 	cd ${tkver}/unix; sudo make install
 ifeq (${OS},mac)
-	cd ${TK_PREFIX}/bin/ && \
+
+	-test -f ${TK_PREFIX}/bin/wish${ttver} &&  \
 	sudo install_name_tool -change ${TK_PREFIX}/lib:${X11_LIB}/libtk${ttver}.dylib \
-	${TK_PREFIX}/lib/libtk${ttver}.dylib wish${ttver}
+	${TK_PREFIX}/lib/libtk${ttver}.dylib ${TK_PREFIX}/bin/wish${ttver}
+	
+	-test -f ${TK_PREFIX}/bin/wish8.6 && \
+	sudo install_name_tool -change ${TK_PREFIX}/lib:${X11_LIB}/libtk8.6.dylib \
+	${TK_PREFIX}/lib/libtk8.6.dylib ${TK_PREFIX}/bin/wish8.6
 endif
 
 #--------------------------------------------------------------------
@@ -247,17 +257,18 @@ xschem_compile: xschem
 
 ifeq (${OS},mac)
 	perl -ibak -pe "s/CFLAGS/#CFLAGS/ig;s/LDFLAGS/#LDFLAGS/ig" xschem/Makefile.conf
-	echo "CFLAGS=-I${X11_INC} -I${X11_INC}/cairo -I${TK_PREFIX}/include -O2\n LDFLAGS= -L${TK_PREFIX}/lib -L${X11_LIB} -lm -ljpeg -lcairo  -lX11 -lXrender -lxcb -lxcb-render -lX11-xcb -lXpm -ltcl8.6 -ltk8.6" >> xschem/Makefile.conf
+	echo "CFLAGS=-I${X11_INC} -I${X11_INC}/cairo -I${TK_PREFIX}/include -I/opt/homebrew/opt/jpeg-turbo/include  -O2\n LDFLAGS= -L${TK_PREFIX}/lib -L${X11_LIB} -L/opt/homebrew/opt/jpeg-turbo/lib -lm -ljpeg -lcairo  -lX11 -lXrender -lxcb -lxcb-render -lX11-xcb -lXpm -ltcl8.6 -ltk8.6" >> xschem/Makefile.conf
 endif
-
 	cd xschem && make
 
 
 xschem_install:
 	cd xschem && sudo make install
 ifeq (${OS},mac)
-	sudo install_name_tool -change ${TK_PREFIX}/lib:${X11_LIB}/libtk${ttver}.dylib \
-	${TK_PREFIX}/lib/libtk${ttver}.dylib ${EDA_PREFIX}/bin/xschem
+	sudo install_name_tool -change ${TK_PREFIX}/lib:${X11_LIB}/libtk8.6.dylib \
+	${TK_PREFIX}/lib/libtk8.6.dylib ${EDA_PREFIX}/bin/xschem
+
+
 endif
 
 #--------------------------------------------------------------------
@@ -293,7 +304,7 @@ ngspice:
 	git clone https://git.code.sf.net/p/ngspice/ngspice ngspice
 	cd ngspice && git checkout ${NGSPICE_VER}
 
-# Need to use gcc-11 or gcc-12 from homebrew to get openmp to work
+# Need to use gcc-11 or higher from homebrew to get openmp to work
 ngspice_compile: ngspice
 ifeq (${OS},mac)
 	-cd ngspice && glibtoolize && ./autogen.sh && ./configure \
@@ -306,10 +317,11 @@ ifeq (${OS},mac)
 	--enable-pss \
 	--enable-cider \
 	CC=${CC_GCC} CXX=${CC_GPP} \
-	--with-readline=/usr/local/opt/readline \
+	--with-readline=/opt/homebrew/opt/readline \
 	--disable-debug \
-	CFLAGS=" -O2 -I${X11_INC}/freetype2 -I/usr/local/include -I/usr/local/opt/readline/include " \
-	LDFLAGS=" -L/usr/local/opt/bison/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/ncurses/lib -L/usr/local/lib -L/usr/local/opt/libomp/lib/ -fopenmp -lomp"
+	CFLAGS=" -O2 -I${X11_INC}/freetype2 -I/opt/homebrew/include -I/opt/homebrew/opt/libomp/include -L/opt/homebrew/opt/readline/include/readline  " \
+	LDFLAGS=" -L/opt/homebrew/opt/readline/lib -L/opt/homebrew/opt/libomp/lib  -L/opt/homebrew/lib -L/usr/local/opt/ncurses/lib -L/usr/local/lib -L/usr/local/opt/libomp/lib/ -fopenmp -lomp"
+	
 else
 	-cd ngspice && libtoolize && ./autogen.sh && ./configure \
 	--prefix ${EDA_PREFIX}/ \
@@ -339,7 +351,7 @@ iverilog:
 
 iverilog_compile: iverilog
 	cd iverilog && git pull && \
-	sh autoconf.sh && ./configure --prefix ${EDA_PREFIX} && make
+	sh autoconf.sh && ./configure --prefix ${EDA_PREFIX} LDFLAGS="-L/opt/homebrew/opt/bison/lib" && make
 
 iverilog_install:
 	cd iverilog && sudo make install
