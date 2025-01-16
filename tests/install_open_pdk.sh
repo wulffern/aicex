@@ -11,6 +11,7 @@ sudo chmod 777 /opt/pdk
 cd /opt/pdk
 git clone https://github.com/google/skywater-pdk
 cd skywater-pdk
+git pull
 git submodule init libraries/sky130_fd_io/latest
 git submodule init libraries/sky130_fd_pr/latest
 #Skip most of the libraries, usully not needed for analog design
