@@ -24,6 +24,7 @@ cd /opt/pdk
 #- Use open pdk to install pdk
 git clone https://github.com/RTimothyEdwards/open_pdks
 cd open_pdks
+git pull
 ./configure --enable-sky130-pdk=/opt/pdk/skywater-pdk --prefix=/opt/pdk/ \
     --enable-irsim=no \
     --enable-openlane=no \
