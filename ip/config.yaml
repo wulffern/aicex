@@ -211,3 +211,7 @@ jnw_gr05_sky130a:
 jnw_gr06_sky130a:
   remote: git@github.com:analogicus/jnw_gr06_sky130a.git
   revision: main
+
+jnw_gr07_sky130a:
+  remote: git@github.com:analogicus/jnw_gr07_sky130a.git
+  revision: main
