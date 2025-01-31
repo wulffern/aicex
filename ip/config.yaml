@@ -177,8 +177,14 @@ jnw_atr_sky130a:
   revision: main
 
 #- Standard library
+
 jnw_tr_sky130a:
   remote: git@github.com:analogicus/jnw_tr_sky130A.git
+  revision: main
+
+
+jnw_bias_sky130a:
+  remote: git@github.com:wulffern/jnw_bias_sky130a.git
   revision: main
 
 jnw_grex_sky130a:
