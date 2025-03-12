@@ -188,9 +188,26 @@ jnw_bias_sky130a:
   revision: main
 
 #- Standard library
+
 jnw_tr_sky130a:
   remote: git@github.com:analogicus/jnw_tr_sky130A.git
   revision: main
+
+
+jnw_bias_sky130a:
+  remote: git@github.com:wulffern/jnw_bias_sky130a.git
+  revision: main
+
+jnw_grex_sky130a:
+  remote: git@github.com:wulffern/jnw_grex_sky130a.git
+  revision: main
+
+jnw_sv_sky130a:
+  remote: git@github.com:wulffern/jnw_sv_sky130a.git
+  revision: main
+
+
+
 
 #- Temperature sensor? (Carsten)
 jnw_gr00_sky130a:
@@ -223,6 +240,11 @@ jnw_gr06_sky130a:
   remote: git@github.com:analogicus/jnw_gr06_sky130a.git
   revision: main
 
+jnw_gr07_sky130a:
+  remote: git@github.com:analogicus/jnw_gr07_sky130a.git
+  revision: main
+
+
 #-------------------------------------------------------
 # LELO(2026)
 # "Chicken, goooood!"
@@ -235,4 +257,3 @@ tech_ihp13g2:
 
 lelo_tr_ihp13g2:
   remote: git@github.com:wulffern/lelo_tr_ihp13g2.git
-  revision: main

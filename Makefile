@@ -1,6 +1,6 @@
 
 
-TAG = 0.1.5
+TAG = 0.1.6
 
 dirs = ip/rply_ex0_sky130nm/sim/RPLY_EX0 \
 	ip/rply_ex0_sky130nm/work
