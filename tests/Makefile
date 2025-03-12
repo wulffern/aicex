@@ -61,6 +61,13 @@ VER=$(shell lsb_release -sr)
 endif
 
 
+ifneq ($(wildcard /opt/homebrew),)
+   BREW_DIR=/opt/homebrew
+else
+   BREW_DIR=/usr/local
+endif
+
+
 ifeq (${OS},mac)
 	X11_LIB = /usr/X11/lib
 	X11_INC = /usr/X11/include
@@ -120,6 +127,7 @@ ifeq (${OS},mac)
 	brew install cairo
 	brew install libxaw
 	brew install flex
+	brew install fftw
 	brew install tcl-tk
 	brew install gcc
 	brew install gtk+
@@ -128,6 +136,7 @@ ifeq (${OS},mac)
 	brew install gcc 
 	brew install libtool
 	brew install libomp
+	brew install rust
 else
 
 	sudo apt update
@@ -198,7 +207,6 @@ ifeq (${OS},mac)
 	-test -f ${TK_PREFIX}/bin/wish${ttver} &&  \
 	sudo install_name_tool -change ${TK_PREFIX}/lib:${X11_LIB}/libtk${ttver}.dylib \
 	${TK_PREFIX}/lib/libtk${ttver}.dylib ${TK_PREFIX}/bin/wish${ttver}
-	
 	-test -f ${TK_PREFIX}/bin/wish8.6 && \
 	sudo install_name_tool -change ${TK_PREFIX}/lib:${X11_LIB}/libtk8.6.dylib \
 	${TK_PREFIX}/lib/libtk8.6.dylib ${TK_PREFIX}/bin/wish8.6
@@ -257,7 +265,7 @@ xschem_compile: xschem
 
 ifeq (${OS},mac)
 	perl -ibak -pe "s/CFLAGS/#CFLAGS/ig;s/LDFLAGS/#LDFLAGS/ig" xschem/Makefile.conf
-	echo "CFLAGS=-I${X11_INC} -I${X11_INC}/cairo -I${TK_PREFIX}/include -I/opt/homebrew/opt/jpeg-turbo/include  -O2\n LDFLAGS= -L${TK_PREFIX}/lib -L${X11_LIB} -L/opt/homebrew/opt/jpeg-turbo/lib -lm -ljpeg -lcairo  -lX11 -lXrender -lxcb -lxcb-render -lX11-xcb -lXpm -ltcl8.6 -ltk8.6" >> xschem/Makefile.conf
+	echo "CFLAGS=-I${X11_INC} -I${X11_INC}/cairo -I${TK_PREFIX}/include -I${BREW_DIR}/opt/jpeg-turbo/include  -O2\n LDFLAGS= -L${TK_PREFIX}/lib -L${X11_LIB} -L${BREW_DIR}/opt/jpeg-turbo/lib -lm -ljpeg -lcairo  -lX11 -lXrender -lxcb -lxcb-render -lX11-xcb -lXpm -ltcl8.6 -ltk8.6" >> xschem/Makefile.conf
 endif
 	cd xschem && make
 
@@ -317,11 +325,10 @@ ifeq (${OS},mac)
 	--enable-pss \
 	--enable-cider \
 	CC=${CC_GCC} CXX=${CC_GPP} \
-	--with-readline=/opt/homebrew/opt/readline \
+	--with-readline=${BREW_DIR}/opt/readline \
 	--disable-debug \
-	CFLAGS=" -O2 -I${X11_INC}/freetype2 -I/opt/homebrew/include -I/opt/homebrew/opt/libomp/include -L/opt/homebrew/opt/readline/include/readline  " \
-	LDFLAGS=" -L/opt/homebrew/opt/readline/lib -L/opt/homebrew/opt/libomp/lib  -L/opt/homebrew/lib -L/usr/local/opt/ncurses/lib -L/usr/local/lib -L/usr/local/opt/libomp/lib/ -fopenmp -lomp"
-	
+	CFLAGS=" -O2 -I${X11_INC}/freetype2 -I${BREW_DIR}/include -I${BREW_DIR}/opt/libomp/include -I${BREW_DIR}/opt/readline/include/readline -I${BREW_DIR}/opt/readline/include  " \
+	LDFLAGS=" -L${BREW_DIR}/opt/readline/lib -L${BREW_DIR}/opt/libomp/lib  -L${BREW_DIR}/lib -L/usr/local/opt/ncurses/lib -L/usr/local/lib -L/usr/local/opt/libomp/lib/ -fopenmp -lomp"
 else
 	-cd ngspice && libtoolize && ./autogen.sh && ./configure \
 	--prefix ${EDA_PREFIX}/ \
@@ -351,7 +358,7 @@ iverilog:
 
 iverilog_compile: iverilog
 	cd iverilog && git pull && \
-	sh autoconf.sh && ./configure --prefix ${EDA_PREFIX} LDFLAGS="-L/opt/homebrew/opt/bison/lib" && make
+	sh autoconf.sh && ./configure --prefix ${EDA_PREFIX} LDFLAGS="-L${BREW_DIR}/opt/bison/lib" && make
 
 iverilog_install:
 	cd iverilog && sudo make install

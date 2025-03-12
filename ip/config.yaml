@@ -1,11 +1,13 @@
+
+
 #-------------------------------------------------------
 # Options to cicconf
 #-------------------------------------------------------
 options:
   template:
-    ip: tech_sky130A/cicconf/ip_template.yaml
-  project: jnw
-  technology: sky130A
+    ip: tech_ihp13g2/cicconf/ip_template.yaml
+  project: lelo
+  technology: ihp13g2
 
 #-------------------------------------------------------
 # Tools
@@ -171,9 +173,18 @@ cnr_gr02_sky130nm:
 # - Kathryn Janeway, Star Trek Voyager: Prime Factors
 #-------------------------------------------------------
 
+jnw:
+  remote: git@github.com:analogicus/jnw.git
+  revision: main
+
 #- Analog transistors
 jnw_atr_sky130a:
   remote: git@github.com:analogicus/jnw_atr_sky130A.git
+  revision: main
+
+#- PTAT example
+jnw_bias_sky130a:
+  remote: git@github.com:wulffern/jnw_bias_sky130a.git
   revision: main
 
 #- Standard library
@@ -210,4 +221,18 @@ jnw_gr05_sky130a:
 
 jnw_gr06_sky130a:
   remote: git@github.com:analogicus/jnw_gr06_sky130a.git
+  revision: main
+
+#-------------------------------------------------------
+# LELO(2026)
+# "Chicken, goooood!"
+# - Leeloo, Fifth element
+#-------------------------------------------------------
+
+tech_ihp13g2:
+  remote: git@github.com:wulffern/tech_ihp13g2.git
+  revision: main
+
+lelo_tr_ihp13g2:
+  remote: git@github.com:wulffern/lelo_tr_ihp13g2.git
   revision: main

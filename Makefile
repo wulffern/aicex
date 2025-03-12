@@ -30,10 +30,10 @@ ci22:
 	docker build -f docker/Dockerfile_22.04 ${OPT} . -t wulffern/aicex:22.04_latest
 
 ci24	:
-	docker build -f docker/Dockerfile_24.04 ${OPT} . -t wulffern/aicex:24.04_latest
+	docker build  --platform linux/amd64,linux/arm64 -f docker/Dockerfile_24.04 ${OPT} . -t wulffern/aicex:24.04_latest
 
 ci24base:
-	docker build -f docker/Dockerfile_24.04_base ${OPT} . -t wulffern/aicex:base_24.04
+	docker build  --platform linux/amd64,linux/arm64 -f docker/Dockerfile_24.04_base ${OPT} . -t wulffern/aicex:base_24.04
 
 tagpush:
 	docker tag wulffern/aicex:20.04_latest wulffern/aicex:20.4_${TAG}
@@ -61,7 +61,7 @@ cirun22:
 	docker run --rm  -p 2021:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:22.04_latest &
 
 cirun24:
-	docker run --rm   -p 2021:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:24.04_latest &
+	docker run --rm --name aicex  -p 2021:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:24.04_latest &
 
 clean:
 	cd ip && find ./ -name "*.ext" -exec rm {} \;
