@@ -5,9 +5,11 @@
 #-------------------------------------------------------
 options:
   template:
-    ip: tech_ihp13g2/cicconf/ip_template.yaml
+    #ip: tech_ihp13g2/cicconf/ip_template.yaml
+    ip: sky130A/cicconf/ip_template.yaml
   project: lelo
-  technology: ihp13g2
+  technology: sky130A
+  #technology: ihp13g2
 
 #-------------------------------------------------------
 # Tools
@@ -206,14 +208,10 @@ jnw_sv_sky130a:
   remote: git@github.com:wulffern/jnw_sv_sky130a.git
   revision: main
 
-
-
-
 #- Temperature sensor? (Carsten)
 jnw_gr00_sky130a:
   remote: git@github.com:analogicus/jnw_gr00_sky130A.git
   revision: main
-
 
 jnw_gr01_sky130a:
   remote: git@github.com:analogicus/jnw_gr01_sky130a.git
@@ -222,7 +220,6 @@ jnw_gr01_sky130a:
 jnw_gr02_sky130a:
   remote: git@github.com:analogicus/jnw_gr02_sky130a.git
   revision: main
-
 
 jnw_gr03_sky130a:
   remote: git@github.com:analogicus/jnw_gr03_sky130a.git
@@ -244,7 +241,6 @@ jnw_gr07_sky130a:
   remote: git@github.com:analogicus/jnw_gr07_sky130a.git
   revision: main
 
-
 #-------------------------------------------------------
 # LELO(2026)
 # "Chicken, goooood!"
@@ -257,3 +253,12 @@ tech_ihp13g2:
 
 lelo_tr_ihp13g2:
   remote: git@github.com:wulffern/lelo_tr_ihp13g2.git
+  revision: main
+
+lelo_atr_ihp13g2:
+  remote: git@github.com:wulffern/lelo_atr_ihp13g2.git
+  revision: main
+
+lelo_sar9b_ihp13g2:
+  remote: git@github.com:wulffern/lelo_sar9b_ihp13g2.git
+  revision: main
