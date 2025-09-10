@@ -14,8 +14,10 @@ For the repo see [https://github.com/wulffern/aicex](https://github.com/wulffern
 # Known issues
 
 ## Xschem
+
 * Netlisting seems to be done not by pin number, but by order of B's in .sym.
   Also, I've experienced different ordering for subckts, and for top cell
+
 * Be careful of x1[5:0] notation. Xschem does not automatically discover if
   there is another same x<nr>. I would recommend always uniquely naming
   instances with bus notation 
@@ -24,3 +26,8 @@ For the repo see [https://github.com/wulffern/aicex](https://github.com/wulffern
 * The aicex user has a uid of 1000, however, if you try and run it on a machine
   with a different uid for your user, then it does not seem to work. Don't know
   how to fix it yet.
+
+## Ngspice
+
+* In 44.2 there is a missing $LDFLAGS on the line "shell g++ --shared $v_objs
+  $v_lib -pthread -lpthread -o $soname" to compile on my M4 mac 

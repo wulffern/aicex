@@ -137,6 +137,7 @@ ifeq (${OS},mac)
 	brew install libtool
 	brew install libomp
 	brew install rust
+	brew install gnu-sed
 else
 
 	sudo apt update
