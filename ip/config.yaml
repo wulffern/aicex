@@ -193,7 +193,6 @@ jnw_tr_sky130a:
   remote: git@github.com:analogicus/jnw_tr_sky130A.git
   revision: main
 
-
 jnw_bias_sky130a:
   remote: git@github.com:wulffern/jnw_bias_sky130a.git
   revision: main
@@ -206,17 +205,10 @@ jnw_sv_sky130a:
   remote: git@github.com:wulffern/jnw_sv_sky130a.git
   revision: main
 
-<<<<<<< HEAD
 jnw_temp_sky130a:
   remote: git@github.com:wulffern/jnw_temp_sky130a.git
   revision: main
 
-
-
-
-
-=======
->>>>>>> 453dac1d76feac69d57cad5f47c711b6728485b6
 #- Temperature sensor? (Carsten)
 jnw_gr00_sky130a:
   remote: git@github.com:analogicus/jnw_gr00_sky130A.git
