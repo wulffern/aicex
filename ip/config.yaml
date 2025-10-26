@@ -70,25 +70,28 @@ tech_sky130A:
 # "It's not you, it's me, I don't like you." – Ayrun Sun, Farscape
 #-------------------------------------------------------
 
-#- PLL design (sch,lay)
+
 sun_pll_sky130nm:
   remote: git@github.com:wulffern/sun_pll_sky130nm.git
   revision: main
+  description: A bad PLL design (sch,lay)
 
-#- Transistor library (sky130B,sch,lay)
+
 sun_tr_sky130nm:
   remote: git@github.com:wulffern/sun_tr_sky130nm.git
   revision: main
+  description: Transistor Library and Logic Cells (sky130B,sch,lay)
 
-#- Transistor library (sky130B,sch,lay)
+
 sun_trb_sky130nm:
   remote: git@github.com:wulffern/sun_trb_sky130nm.git
   revision: main
+  description: A analog transistor library (sky130B,sch,lay)
 
-#- 9-bit SAR (sky130A,sch,lay)
 sun_sar9b_sky130nm:
   remote: git@github.com:wulffern/sun_sar9b_sky130nm.git
   revision: main
+  description: A 9-bit SAR (on <https://tinytapeout.com/chips/tt06/>)
 
 #-------------------------------------------------------
 # RPLY (2023)
@@ -96,15 +99,17 @@ sun_sar9b_sky130nm:
 # It's the only way to be sure.", Ellen Ripley, Aliens
 #-------------------------------------------------------
 
-#- PTAT bias source (sky130B, sch only)
+#-
 rply_bias_sky130nm:
   remote: git@github.com:wulffern/rply_bias_sky130nm.git
   revision: main
+  description: A PTAT bias source (sky130B, sch only)
 
-#- Skywater 130nm tutorial (sky130B, sch/lay)
+
 rply_ex0_sky130nm:
   remote: git@github.com:wulffern/rply_ex0_sky130nm.git
   revision: main
+  description: Skywater 130nm tutorial (sky130B, sch/lay)
 
 #-------------------------------------------------------
 # CNR(2024)
@@ -112,20 +117,23 @@ rply_ex0_sky130nm:
 # - Sarah Connor, Terminator 2: Judgment Day
 #-------------------------------------------------------
 
-#- Analog transitor library (sky130B, sch/lay)
+
 cnr_atr_sky130nm:
   remote: git@github.com:wulffern/cnr_atr_sky130nm.git
   revision: main
+  description: Analog transitor library (sky130B, sch/lay)
 
-#- Carsten's favorite differential OTA (sch only)
+
 cnr_ota_sky130nm:
   remote: git@github.com:wulffern/cnr_ota_sky130nm.git
   revision: main
+  description: Carsten's favorite differential OTA (sch only)
 
-#- Carsten's Sigma-Delta temperature sensor (sch only)
+
 cnr_gr00_sky130nm:
   remote: git@github.com:analogicus/cnr_gr00_sky130nm.git
   revision: main
+  description: Carsten's Sigma-Delta temperature sensor (sch only)
 
 #- Temperature sensor - Group 2 (Alireza, Bjørn, Sheikha, Youssef )
 #- - PTAT bandgap core with PTAT current output and 1.2 VREF
@@ -135,6 +143,7 @@ cnr_gr00_sky130nm:
 cnr_gr02_sky130nm:
   remote: git@github.com:analogicus/cnr_gr02_sky130nm.git
   revision: main
+  description: Temperature sensor - Group 2 (Alireza, Bjørn, Sheikha, Youssef )
 
 #- Temperature sensor - Group 3 (Daniel, Mangus, Martin, Vetle)
 #- - PTAT bandgap core with PTAT current output and 1.2 VREF
@@ -177,20 +186,23 @@ cnr_gr02_sky130nm:
 #  remote: git@github.com:analogicus/jnw.git
 #  revision: main
 
-#- Analog transistors
+#-
 jnw_atr_sky130a:
   remote: git@github.com:analogicus/jnw_atr_sky130A.git
   revision: main
+  description: Analog transistor library (sky130A)
 
 #- PTAT example
 jnw_bias_sky130a:
   remote: git@github.com:wulffern/jnw_bias_sky130a.git
   revision: main
+  description: PTAT bias source
 
 #- Standard library
 jnw_tr_sky130a:
   remote: git@github.com:analogicus/jnw_tr_sky130A.git
   revision: main
+  description: transistor library and logic cells (sky130A)
 
 #jnw_grex_sky130a:
 #  remote: git@github.com:wulffern/jnw_grex_sky130a.git
@@ -199,6 +211,7 @@ jnw_tr_sky130a:
 jnw_sv_sky130a:
   remote: git@github.com:wulffern/jnw_sv_sky130a.git
   revision: main
+  description: Tutorial on SystemVerilog and ngspice simulation
 
 #jnw_temp_sky130a:
 #  remote: git@github.com:wulffern/jnw_temp_sky130a.git
@@ -233,11 +246,13 @@ jnw_sv_sky130a:
 jnw_gr06_sky130a:
   remote: git@github.com:analogicus/jnw_gr06_sky130a.git
   revision: main
+  description: Temperature Sensor by group 6 (On <https://tinytapeout.com/chips/ttsky25a/>)
 
 #- https://analogicus.github.io/jnw_gr07_sky130a/
 jnw_gr07_sky130a:
   remote: git@github.com:analogicus/jnw_gr07_sky130a.git
   revision: main
+  description: Temperature Sensor by group 7 (On <https://tinytapeout.com/chips/ttsky25a/>)
 
 #-------------------------------------------------------
 # LELO(2026)

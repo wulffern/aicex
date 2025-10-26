@@ -11,6 +11,36 @@ the docs.
 For the repo see [https://github.com/wulffern/aicex](https://github.com/wulffern/aicex)
 
 
+# Files and folders
+
+This is a repository that contains links to other github repositories with
+analog designs. Most of the designs have been developed as part of the NTNU
+course TFE4188 - Advanced Integrated Circuits.
+
+``` sh
+ci/       # Continous integration. Mostly check of the tutorials
+docker/   # Dockerfiles to create a container with the tools
+ip/       # all the IPs, config.yaml contains the links
+tests/    # Makefile used for installation of the tools
+```
+
+# Cloning
+
+For a detailed scription of installing the tools, see
+<http://analogicus.com/aic2026/2025/10/25/The-Tools.html>
+
+For the impatient
+
+``` sh
+
+git clone --recursive https://github.com/wulffern/aicex.git
+cd aicex/ip/cicconf
+git checkout main
+python3 -m pip install -e .
+cd ..
+cicconf clone --https
+```
+
 # Known issues
 
 ## Xschem

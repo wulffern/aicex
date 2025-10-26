@@ -34,11 +34,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Setup Pages
-        uses: actions/configure-pages@v2
+        with:
+          submodules: recursive
+      - name: Get cicconf and update repos
+        run: |
+          cd ip/cicconf
+          git checkout main
+          python3 -m pip install -e .
+          cd ..
+          cicconf clone --https
+          python3 docs/info.py >> docs/ips.md
       - name: Copy readme
         run: |
           cp README.md docs/index.md
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
