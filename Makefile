@@ -61,6 +61,9 @@ cirun22:
 cirun24:
 	docker run --rm --name aicex  -p 2021:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:24.04_latest &
 
+cirun24tag:
+	docker run --rm --name aicex  -p 2021:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:24.04_${TAG} &
+
 sh24:
 	docker run --rm  -it -p 2021:22 --name aicex -v `pwd`:/home/aicex/ -i wulffern/aicex:24.04_0.1.4 bash --login &
 

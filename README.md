@@ -24,25 +24,45 @@ ip/       # all the IPs, config.yaml contains the links
 tests/    # Makefile used for installation of the tools
 ```
 
-# Cloning
+# Installing, and usage 
 
 For a detailed scription of installing the tools, see
 <http://analogicus.com/aic2026/2025/10/25/The-Tools.html>
 
-For the impatient
-
-``` sh
-git clone --recursive https://github.com/wulffern/aicex.git
-python3 -m pip install cicconf
-cd aicex/ip/
-cicconf clone --https
-```
-
-# Usage
-
 For a description of the usage, see
 <https://analogicus.com/aic2026/2025/10/26/Sky130nm-tutorial.html>
 
+
+# For the impatient
+
+``` sh
+git clone --recursive https://github.com/wulffern/aicex.git
+```
+
+I assume you have docker installed, or have windows subsystem for linux. 
+
+> :NOTE: It's a very good idea to check what's inside scripts before you run them
+
+``` sh
+./run.sh
+```
+
+You should now see a cyan "aicex@~$" terminal.
+
+Check that you can open a new X terminal 
+
+``` sh
+xterm &
+```
+
+``` sh
+python3 -m pip install cicconf cicspi cicsim
+cd ip
+cicconf clone --https
+```
+
+You should now be able to run the tutorial at 
+<https://analogicus.com/aic2026/2025/10/26/Sky130nm-tutorial.html>
 
 # Known issues
 

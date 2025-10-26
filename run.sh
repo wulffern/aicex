@@ -8,17 +8,15 @@ if [ ! -f $HOME/.ssh/id_rsa.pub ]; then
 
 fi
 
-
-if [ ! -d aicex ]; then
-
-   git clone --depth 1 https://github.com/wulffern/aicex.git
-   cd aicex
+if [ ! -d .ssh ]; then
    mkdir .ssh
    cat $HOME/.ssh/id_rsa.pub > .ssh/authorized_keys
-   sleep 2s
-   docker run --rm --name aicex -p 2022:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:latest &
+   sleep 1s
+fi
 
-else
-    echo "aicex already installed"
 
+if [ -d ../aicex ]; then
+   docker run --rm --name aicex -p 2022:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:24.04_latest &
+   sleep 5s
+   ssh -X -p 2022 aicex@localhost
 fi
