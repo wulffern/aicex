@@ -23,7 +23,9 @@ DRC/LVS clean layout in the form of a .cic file.
 ## Libraries 
 
 [cpdk](https://github.com/wulffern/cpdk) : Carsten's design kit
+
 [tech_sky130B](https://github.com/wulffern/tech_sky130B) : Technology files for SKY130B
+
 [tech_sky130A](https://github.com/wulffern/tech_sky130A)  : Technology files  for SKY130A
 
 
