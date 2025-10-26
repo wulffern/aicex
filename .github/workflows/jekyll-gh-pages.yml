@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@main
         with:
           submodules: recursive
       - name: Get cicconf and update repos
@@ -48,15 +48,15 @@ jobs:
         run: |
           cp README.md docs/index.md
       - name: Setup Pages
-        uses: actions/configure-pages@v2
+        uses: actions/configure-pages@main
 
       - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+        uses: actions/jekyll-build-pages@main
         with:
           source: ./docs/
           destination: ./_site
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@main
 
   # Deployment job
   deploy:
@@ -68,4 +68,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@main
