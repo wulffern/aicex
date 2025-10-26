@@ -53,7 +53,7 @@ endif
 
 ifeq (${OS},mac)
 CC_GCC=gcc-14
-CC_GPP=gcc-14
+CC_GPP=g++-14
 else
 CC_GCC=gcc
 CC_GPP=g++
@@ -129,7 +129,7 @@ ifeq (${OS},mac)
 	brew install flex
 	brew install fftw
 	brew install tcl-tk
-	brew install gcc
+	brew install gcc@14
 	brew install gtk+
 	brew install gtk-mac-integration
 	brew install libxft
@@ -222,6 +222,7 @@ magic:
 	cd magic && git checkout ${MAGIC_VER}
 
 magic_compile: magic
+	cd magic && git checkout ${MAGIC_VER} && git pull
 #ifeq (${OS},mac)
 #	cd magic &&  ./configure CC=${CC_GCC} CXX=${CC_GPP} \
 #    --with-tcl=${shell brew --prefix tcl-tk}\
@@ -235,15 +236,15 @@ magic_compile: magic
 #
 ifeq (${VER},24.04)
 	perl -pe "s/-g/-g -Wno-error=implicit-function-declaration/ig" -i magic/configure
-	cd magic && ./configure CC=${CC_GCC} CXX=${CC_GPP}  --prefix=${TK_PREFIX} --with-tcl=${TK_PREFIX}/lib \
+	cd magic &&  ./configure CC=${CC_GCC} CXX=${CC_GPP}  --prefix=${TK_PREFIX} --with-tcl=${TK_PREFIX}/lib \
 	--with-tk=${TK_PREFIX}/lib --x-includes=${X11_INC} --x-libraries=${X11_LIB} \
 	--with-cairo=${X11_INC}/cairo  --with-opengl=${X11_LIB} && \
 	make
 else
 	perl -pe "s/-g/-g -Wno-error=implicit-function-declaration/ig" -i magic/configure
-	cd magic && ./configure CC=${CC_GCC} CXX=${CC_GPP}  --prefix=${TK_PREFIX} --with-tcl=${TK_PREFIX}/lib \
+	cd magic && CC=${CC_GCC} CXX=${CC_GPP} ./configure CC=${CC_GCC} CXX=${CC_GPP}  --prefix=${TK_PREFIX} --with-tcl=${TK_PREFIX}/lib \
 	--with-tk=${TK_PREFIX}/lib --x-includes=${X11_INC} --x-libraries=${X11_LIB} \
-	--with-cairo=${X11_INC}/cairo  --with-opengl=${X11_LIB} && \
+	--with-cairo=${X11_INC}/cairo  --with-opengl=${X11_LIB} CFLAGS="${CFLAGS}"&& \
 	make
 endif
 
@@ -259,9 +260,10 @@ endif
 
 xschem:
 	git clone https://github.com/StefanSchippers/xschem.git
-	cd xschem && git checkout ${XSCHEM_VER}
+	cd xschem && git checkout ${XSCHEM_VER} && git pull
 
 xschem_compile: xschem
+	cd xschem && git checkout ${XSCHEM_VER} && git pull
 	cd xschem && ./configure --prefix=${EDA_PREFIX}
 
 ifeq (${OS},mac)
@@ -286,9 +288,10 @@ endif
 
 netgen:
 	git clone https://github.com/RTimothyEdwards/netgen.git
-	cd netgen && git checkout ${NETGEN_VER}
+	cd netgen && git checkout ${NETGEN_VER} && git pull
 
 netgen_compile: netgen
+	cd netgen && git checkout ${NETGEN_VER} && git pull
 ifeq (${OS},mac)
 	perl -pe "s/-g/-g -Wno-error=implicit-function-declaration/ig" -i netgen/configure
 	cd netgen && ./configure --prefix ${EDA_PREFIX}/ --with-tclincls=${TK_PREFIX}/include --with-tkincls=${TK_PREFIX}/include --with-tcl=${TK_PREFIX}/lib \
@@ -311,10 +314,11 @@ endif
 
 ngspice:
 	git clone https://git.code.sf.net/p/ngspice/ngspice ngspice
-	cd ngspice && git checkout ${NGSPICE_VER}
+	cd ngspice && git checkout ${NGSPICE_VER} && git pull
 
 # Need to use gcc-11 or higher from homebrew to get openmp to work
 ngspice_compile: ngspice
+	cd ngspice && git checkout ${NGSPICE_VER} && git pull
 ifeq (${OS},mac)
 	-cd ngspice && glibtoolize && ./autogen.sh && ./configure \
 	--prefix ${EDA_PREFIX}/ \
@@ -358,6 +362,7 @@ iverilog:
 	cd iverilog && git checkout ${IVERILOG_VER}
 
 iverilog_compile: iverilog
+	cd iverilog && git checkout ${IVERILOG_VER} && git pull
 	cd iverilog && git pull && \
 	sh autoconf.sh && ./configure --prefix ${EDA_PREFIX} LDFLAGS="-L${BREW_DIR}/opt/bison/lib" && make
 
@@ -373,6 +378,7 @@ yosys:
 	cd yosys && git checkout ${YOSYS_VER}
 
 yosys_compile: yosys
+	cd yosys && git checkout ${YOSYS_VER}
 	cd yosys && git pull && make config-gcc PREFIX=${EDA_PREFIX} \
 	&& make -j 8 PREFIX=${EDA_PREFIX}
 
