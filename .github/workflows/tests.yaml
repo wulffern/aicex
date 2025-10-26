@@ -3,6 +3,10 @@ name: aicex tests
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'ci/**'
+      - 'ip/**'
+      - 'tests/**'
   pull_request:
     branches: [ main ]
 

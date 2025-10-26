@@ -4,6 +4,9 @@ name: AICEX CI
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'ci/**'
+      - 'ip/**'
   pull_request:
     branches: [ main ]
 

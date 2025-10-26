@@ -41,6 +41,12 @@ cd ..
 cicconf clone --https
 ```
 
+# Usage
+
+For a description of the usage, see
+<https://analogicus.com/aic2026/2025/10/26/Sky130nm-tutorial.html>
+
+
 # Known issues
 
 ## Xschem
@@ -59,5 +65,5 @@ cicconf clone --https
 
 ## Ngspice
 
-* In 44.2 there is a missing $LDFLAGS on the line "shell g++ --shared $v_objs
-  $v_lib -pthread -lpthread -o $soname" to compile on my M4 mac 
+* In 44.2 there is a missing \$LDFLAGS on the line `shell g++ --shared $v_objs
+  $v_lib -pthread -lpthread -o $soname` to compile on my M4 mac 
