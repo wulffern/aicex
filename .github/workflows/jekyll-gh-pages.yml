@@ -44,6 +44,7 @@ jobs:
           python3 -m pip install -e .
           cd ..
           cicconf clone --https
+          cd ..
           python3 docs/info.py >> docs/ips.md
       - name: Copy readme
         run: |
