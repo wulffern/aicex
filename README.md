@@ -41,7 +41,7 @@ git clone --recursive https://github.com/wulffern/aicex.git
 
 I assume you have docker installed, or have windows subsystem for linux. 
 
-> :NOTE: It's a very good idea to check what's inside scripts before you run them
+> &#x26A0;  It's a very good idea to check what's inside scripts before you run them
 
 ``` sh
 ./run.sh
