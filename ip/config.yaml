@@ -12,58 +12,63 @@ options:
 #-------------------------------------------------------
 # Tools
 #-------------------------------------------------------
-#- GDS to graphics
 GDS2glTF:
   remote: git@github.com:wulffern/GDS2glTF.git
   revision: main
+  description: GDS to 3D graphics
   on_clone: python3 -m pip install -r requirements.txt
 
-#- Configuration. Cloining, update, status of this file
 cicconf:
   remote: git@github.com:wulffern/cicconf.git
   revision: main
+  description: Configuration. Cloning, update, status of this file
 
-#- Simulation orchestration
+
 cicsim:
   remote: git@github.com:wulffern/cicsim.git
   revision: main
-#  on_clone: python3 -m pip install  -e .
+  description: Simulation orchestration
 
 cicspi:
   remote: git@github.com:wulffern/cicspi.git
   revision: main
-#  on_clone: python3 -m pip install  -e .
+  description: Python library to parse SPICE files
 
 
-#- Custom IC Creator - compiled analog blocks
+
+
 ciccreator:
   remote: git@github.com:wulffern/ciccreator.git
   revision: master
-#  on_clone: cicconf clone --https
+  description: Custom IC Creator - compiled analog blocks
 
-#- Transpiler and layout support
+
+
 cicpy:
   remote: git@github.com:wulffern/cicpy.git
   revision: master
-#  on_clone: python3 -m pip install  -e .
+  description: Transpiler and layout support
+
 
 #-------------------------------------------------------
 # TECHs
 #-------------------------------------------------------
-#- Carsten's PDK. Borders, symbols, loop stability
+
 cpdk:
   remote: git@github.com:wulffern/cpdk.git
   revision: main
+  description: Carsten's PDK. Borders, symbols, loop stability
 
-#- Technology used by sun/rply/cnr projects
 tech_sky130B:
   remote: git@github.com:wulffern/tech_sky130B.git
   revision: main
+  description: Technology used by sun/rply/cnr projects
 
-#- Technology used by Tiny Tapeout
+
 tech_sky130A:
   remote: git@github.com:wulffern/tech_sky130A.git
   revision: main
+  description: Technology used by Tiny Tapeout
 
 #-------------------------------------------------------
 # SUN (2022)

@@ -41,6 +41,24 @@ years["cnr"] = { "year" : 2024, "name": "Sarah Connor", "universe" : "Terminator
 years["jnw"] = { "year" : 2025, "name": "Kathryn Janeway", "universe" : "Star Trek Voyager: Prime Factors", "quote" : "You can use logic to justify almost anything. That's its power. And its flaw."}
 
 
+def printInfo(k):
+    if("remote" not in config[k]):
+        return
+    repo = config[k]["remote"]
+    url = "https://" + repo.replace("git@github.com:","").replace(".git","").replace("/",".github.io/")
+    gitrepo = "https://" + repo.replace("git@","").replace(".git","").replace(":","/")
+    description = ""
+    if("description" in config[k]):
+        description = config[k]["description"]
+    if(is_404(url)):
+        print("[" + k.upper() + "](" + gitrepo + ") : " + description)
+
+    else:
+        print("[" + k.upper() + "](" + url + ") : " + description)
+    print("\n")
+
+
+
 visited = list()
 
 for key in years:
@@ -49,16 +67,10 @@ for key in years:
     print(f"\n> {years[key]['quote']} - {years[key]['name']},{years[key]['universe']}\n")
     for k in config:
         if(key in k):
-            repo = config[k]["remote"]
-            url = "https://" + repo.replace("git@github.com:","").replace(".git","").replace("/",".github.io/")
-            gitrepo = "https://" + repo.replace("git@","").replace(".git","").replace(":","/")
-            description = ""
-            if("description" in config[k]):
-                description = config[k]["description"]
-            if(is_404(url)):
-                print("[" + k.upper() + "](" + gitrepo + ") : " + description)
+            printInfo(k)
+            visited.append(k)
 
-            else:
-                print("[" + k.upper() + "](" + url + ") : " + description)
-            print("\n")
-    print("\n\n")
+print("## Other \n")
+for k in config:
+    if(k not in visited):
+        printInfo(k)
