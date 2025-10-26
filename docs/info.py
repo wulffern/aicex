@@ -60,4 +60,4 @@ for key in years:
 
             else:
                 print("[" + k.upper() + "](" + url + ") : " + description)
-    print("")
+    print("\n")
