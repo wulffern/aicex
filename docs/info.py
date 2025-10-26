@@ -51,10 +51,10 @@ def printInfo(k):
     if("description" in config[k]):
         description = config[k]["description"]
     if(is_404(url)):
-        print("[" + k.upper() + "](" + gitrepo + ") : " + description)
+        print("[" + k + "](" + gitrepo + ") : " + description)
 
     else:
-        print("[" + k.upper() + "](" + url + ") : " + description)
+        print("[" + k + "](" + url + ") : " + description)
     print("\n")
 
 

@@ -32,12 +32,9 @@ For a detailed scription of installing the tools, see
 For the impatient
 
 ``` sh
-
 git clone --recursive https://github.com/wulffern/aicex.git
-cd aicex/ip/cicconf
-git checkout main
-python3 -m pip install -e .
-cd ..
+python3 -m pip install cicconf
+cd aicex/ip/
 cicconf clone --https
 ```
 
