@@ -1,14 +1,16 @@
 
+
+
 cirun:
-	docker run --rm   -p 2021:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:24.04_0.1.6 &
+	docker run --rm   -p 2022:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:24.04_0.1.6 &
 
 
 build:
 	mkdir build
 
+
 all: build
 	cd build;${MAKE} -f ../Makefile ci
-
 
 
 SRC=aicex/ip/jnw_ex0_sky130a
@@ -23,8 +25,6 @@ OS = linux
 ifeq ($(UNAME_S),Darwin)
 OS = mac
 endif
-
-
 
 
 aicex:
@@ -43,7 +43,7 @@ cifclone:
 
 newip:
 	cd aicex/ip && \
-	cicconf newip ex
+	cicconf newip ex --project jnw --technology sky130A --ip  tech_sky130A/cicconf/jnw.yaml
 	touch newip
 
 ex0:

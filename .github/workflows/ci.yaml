@@ -4,6 +4,9 @@ name: AICEX CI
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'ci/**'
+      - 'ip/**'
   pull_request:
     branches: [ main ]
 
@@ -21,4 +24,10 @@ jobs:
         run: |
           source ci/jnw_ex0_sky130a/.bashrc
           cd ci/jnw_ex0_sky130a
+          make all
+      - name: LELO_EX_SKY130A
+        shell: bash
+        run: |
+          source ci/lelo_ex_sky130a/.bashrc
+          cd ci/lelo_ex_sky130a
           make all

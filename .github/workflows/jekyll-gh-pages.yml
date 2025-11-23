@@ -7,6 +7,7 @@ on:
     branches: ["main"]
     paths:
       - '**.md'
+      - 'docs/**'
       - 'documents/**'
       - 'media/**'
       - 'design/**'
@@ -33,19 +34,31 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup Pages
-        uses: actions/configure-pages@v2
+        uses: actions/checkout@main
+        with:
+          submodules: recursive
+      - name: Get cicconf and update repos
+        run: |
+          cd ip/cicconf
+          git checkout main
+          python3 -m pip install -e .
+          cd ..
+          cicconf clone --https
+          cd ..
+          python3 docs/info.py >> docs/ips.md
       - name: Copy readme
         run: |
           cp README.md docs/index.md
+      - name: Setup Pages
+        uses: actions/configure-pages@main
+
       - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+        uses: actions/jekyll-build-pages@main
         with:
           source: ./docs/
           destination: ./_site
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@main
 
   # Deployment job
   deploy:
@@ -57,4 +70,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@main

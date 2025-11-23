@@ -11,6 +11,59 @@ the docs.
 For the repo see [https://github.com/wulffern/aicex](https://github.com/wulffern/aicex)
 
 
+# Files and folders
+
+This is a repository that contains links to other github repositories with
+analog designs. Most of the designs have been developed as part of the NTNU
+course TFE4188 - Advanced Integrated Circuits.
+
+``` sh
+ci/       # Continous integration. Mostly check of the tutorials
+docker/   # Dockerfiles to create a container with the tools
+ip/       # all the IPs, config.yaml contains the links
+tests/    # Makefile used for installation of the tools
+```
+
+# Installing, and usage 
+
+For a detailed scription of installing the tools, see
+<http://analogicus.com/aic2026/2025/10/25/The-Tools.html>
+
+For a description of the usage, see
+<https://analogicus.com/aic2026/2025/10/26/Sky130nm-tutorial.html>
+
+
+# For the impatient
+
+``` sh
+git clone --recursive https://github.com/wulffern/aicex.git
+```
+
+I assume you have docker installed, or have windows subsystem for linux. 
+
+> &#x26A0;  It's a very good idea to check what's inside scripts before you run them
+
+``` sh
+./run.sh
+```
+
+You should now see a cyan "aicex@~$" terminal.
+
+Check that you can open a new X terminal 
+
+``` sh
+xterm &
+```
+
+``` sh
+python3 -m pip install cicconf cicspi cicsim
+cd ip
+cicconf clone --https
+```
+
+You should now be able to run the tutorial at 
+<https://analogicus.com/aic2026/2025/10/26/Sky130nm-tutorial.html>
+
 # Known issues
 
 ## Xschem
@@ -29,5 +82,5 @@ For the repo see [https://github.com/wulffern/aicex](https://github.com/wulffern
 
 ## Ngspice
 
-* In 44.2 there is a missing $LDFLAGS on the line "shell g++ --shared $v_objs
-  $v_lib -pthread -lpthread -o $soname" to compile on my M4 mac 
+* In 44.2 there is a missing \$LDFLAGS on the line `shell g++ --shared $v_objs
+  $v_lib -pthread -lpthread -o $soname` to compile on my M4 mac 
