@@ -36,7 +36,7 @@ IVERILOG_VER=master
 YOSYS_VER=main
 GTKWAVE_VER=3.3.117
 OPENROAD_VER=master
-
+GCC_VER=gcc-15
 
 #---------------------------------------------------------------------
 #- Variables
@@ -52,8 +52,8 @@ OS = mac
 endif
 
 ifeq (${OS},mac)
-CC_GCC=gcc-14
-CC_GPP=gcc-14
+CC_GCC=${GCC_VER}
+CC_GPP=${GCC_VER}
 else
 CC_GCC=gcc
 CC_GPP=g++
