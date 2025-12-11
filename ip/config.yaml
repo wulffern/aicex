@@ -259,6 +259,11 @@ jnw_gr07_sky130a:
   revision: main
   description: Temperature Sensor by group 7 (On <https://tinytapeout.com/chips/ttsky25a/>)
 
+jnw-actions:
+  remote: git@github.com:analogicus/jnw-actions.git
+  revision: main
+  descriptions: Github actions for building the JNW sites
+
 #-------------------------------------------------------
 # LELO(2026)
 # "Chicken, goooood!"
