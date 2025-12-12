@@ -259,6 +259,11 @@ jnw_gr07_sky130a:
   revision: main
   description: Temperature Sensor by group 7 (On <https://tinytapeout.com/chips/ttsky25a/>)
 
+jnw-actions:
+  remote: git@github.com:analogicus/jnw-actions.git
+  revision: main
+  descriptions: Github actions for building the JNW sites
+
 #-------------------------------------------------------
 # LELO(2026)
 # "Chicken, goooood!"
@@ -282,3 +287,9 @@ lelo_temp_sky130a:
 #lelo_sar9b_ihp13g2:
 #  remote: git@github.com:wulffern/lelo_sar9b_ihp13g2.git
 #  revision: main
+
+lelo_temp_sky130a:
+  remote: git@github.com:wulffern/lelo_temp_sky130a.git
+  revision: main
+  description: Temperature sensor (sky130A)
+
