@@ -28,7 +28,7 @@
 #---------------------------------------------------------------------
 #- GIT repo Versions
 #---------------------------------------------------------------------
-XSCHEM_VER=master
+XSCHEM_VER=3.4.7
 MAGIC_VER=master
 NETGEN_VER=master
 NGSPICE_VER=master
@@ -260,10 +260,11 @@ endif
 
 xschem:
 	git clone https://github.com/StefanSchippers/xschem.git
-	cd xschem && git checkout ${XSCHEM_VER} && git pull
+
 
 xschem_compile: xschem
-	cd xschem && git checkout ${XSCHEM_VER} && git pull
+	-cd xschem && git pull
+	cd xschem && git checkout ${XSCHEM_VER}
 	cd xschem && ./configure --prefix=${EDA_PREFIX}
 
 ifeq (${OS},mac)

@@ -271,9 +271,9 @@ jnw_gr07_sky130a:
 #  remote: git@github.com:wulffern/tech_ihp13g2.git
 #  revision: main
 
-#lelo_tr_ihp13g2:
-#  remote: git@github.com:wulffern/lelo_tr_ihp13g2.git
-#  revision: main
+lelo_temp_sky130a:
+  remote: git@github.com:wulffern/lelo_temp_sky130a
+  revision: main
 
 #lelo_atr_ihp13g2:
 #  remote: git@github.com:wulffern/lelo_atr_ihp13g2.git
