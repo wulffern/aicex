@@ -52,8 +52,8 @@ OS = mac
 endif
 
 ifeq (${OS},mac)
-CC_GCC=gcc-14
-CC_GPP=g++-14
+CC_GCC=gcc-15
+CC_GPP=g++-15
 else
 CC_GCC=gcc
 CC_GPP=g++
@@ -365,7 +365,7 @@ iverilog:
 iverilog_compile: iverilog
 	cd iverilog && git checkout ${IVERILOG_VER} && git pull
 	cd iverilog && git pull && \
-	sh autoconf.sh && ./configure --prefix ${EDA_PREFIX} LDFLAGS="-L${BREW_DIR}/opt/bison/lib" && make
+	sh autoconf.sh && CC=clang CXX=clang++ CFLAGS="-include mach-o/dyld.h"  ./configure --prefix ${EDA_PREFIX} LDFLAGS="-L${BREW_DIR}/opt/bison/lib" --enable-libvvp && make
 
 iverilog_install:
 	cd iverilog && sudo make install

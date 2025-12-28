@@ -27,10 +27,10 @@ tests/    # Makefile used for installation of the tools
 # Installing, and usage 
 
 For a detailed scription of installing the tools, see
-<http://analogicus.com/aic2026/2025/10/25/The-Tools.html>
+<http://analogicus.com/aic2026/the_tools>
 
 For a description of the usage, see
-<https://analogicus.com/aic2026/2025/10/26/Sky130nm-tutorial.html>
+<https://analogicus.com/aic2026/sky130nm_tutorial>
 
 
 # For the impatient
@@ -62,7 +62,7 @@ cicconf clone --https
 ```
 
 You should now be able to run the tutorial at 
-<https://analogicus.com/aic2026/2025/10/26/Sky130nm-tutorial.html>
+<https://analogicus.com/aic2026/sky130nm_tutorial>
 
 # Known issues
 
