@@ -3,7 +3,8 @@ layout: home
 ---
 
 [![tests](https://github.com/wulffern/aicex/actions/workflows/tests.yaml/badge.svg)](https://github.com/wulffern/aicex/actions/workflows/tests.yaml)[![docs](https://github.com/wulffern/aicex/actions/workflows/jekyll-gh-pages.yml/badge.svg)](https://wulffern.github.io/aicex)
-[![ci](https://github.com/wulffern/aicex/actions/workflows/ci.yaml/badge.svg)](https://github.com/wulffern/aicex/actions/workflows/ci.yaml)
+[![JNW](https://github.com/wulffern/aicex/actions/workflows/jnw.yaml/badge.svg)](https://github.com/wulffern/aicex/actions/workflows/jnw.yaml)
+[![LELO](https://github.com/wulffern/aicex/actions/workflows/lelo.yaml/badge.svg)](https://github.com/wulffern/aicex/actions/workflows/lelo.yaml)
 
 Head over to [wulffern.github.io/aicex](https://wulffern.github.io/aicex) for
 the docs.
