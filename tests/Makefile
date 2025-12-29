@@ -28,7 +28,7 @@
 #---------------------------------------------------------------------
 #- GIT repo Versions
 #---------------------------------------------------------------------
-XSCHEM_VER=master
+XSCHEM_VER=3.4.7
 MAGIC_VER=master
 NETGEN_VER=master
 NGSPICE_VER=master
@@ -52,9 +52,14 @@ OS = mac
 endif
 
 ifeq (${OS},mac)
+<<<<<<< HEAD
 CC_GCC=${GCC_VER}
 CC_GPP=${GCC_VER}
 
+=======
+CC_GCC=gcc-15
+CC_GPP=g++-15
+>>>>>>> a56f3a4d6d01dfca577cc614d8bd1032337d42db
 else
 CC_GCC=gcc
 CC_GPP=g++
@@ -261,10 +266,11 @@ endif
 
 xschem:
 	git clone https://github.com/StefanSchippers/xschem.git
-	cd xschem && git checkout ${XSCHEM_VER} && git pull
+
 
 xschem_compile: xschem
-	cd xschem && git checkout ${XSCHEM_VER} && git pull
+	-cd xschem && git pull
+	cd xschem && git checkout ${XSCHEM_VER}
 	cd xschem && ./configure --prefix=${EDA_PREFIX}
 
 ifeq (${OS},mac)
@@ -365,7 +371,7 @@ iverilog:
 iverilog_compile: iverilog
 	cd iverilog && git checkout ${IVERILOG_VER} && git pull
 	cd iverilog && git pull && \
-	sh autoconf.sh && ./configure --prefix ${EDA_PREFIX} LDFLAGS="-L${BREW_DIR}/opt/bison/lib" && make
+	sh autoconf.sh && CC=clang CXX=clang++ CFLAGS="-include mach-o/dyld.h"  ./configure --prefix ${EDA_PREFIX} LDFLAGS="-L${BREW_DIR}/opt/bison/lib" --enable-libvvp && make
 
 iverilog_install:
 	cd iverilog && sudo make install

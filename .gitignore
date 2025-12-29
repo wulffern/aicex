@@ -1,5 +1,6 @@
 # Byte-compiled / optimized / DLL files
-
+ip/
+ci/
 _site
 .sass-cache
 .jekyll-metadata

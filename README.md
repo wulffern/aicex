@@ -3,7 +3,8 @@ layout: home
 ---
 
 [![tests](https://github.com/wulffern/aicex/actions/workflows/tests.yaml/badge.svg)](https://github.com/wulffern/aicex/actions/workflows/tests.yaml)[![docs](https://github.com/wulffern/aicex/actions/workflows/jekyll-gh-pages.yml/badge.svg)](https://wulffern.github.io/aicex)
-[![ci](https://github.com/wulffern/aicex/actions/workflows/ci.yaml/badge.svg)](https://github.com/wulffern/aicex/actions/workflows/ci.yaml)
+[![JNW](https://github.com/wulffern/aicex/actions/workflows/jnw.yaml/badge.svg)](https://github.com/wulffern/aicex/actions/workflows/jnw.yaml)
+[![LELO](https://github.com/wulffern/aicex/actions/workflows/lelo.yaml/badge.svg)](https://github.com/wulffern/aicex/actions/workflows/lelo.yaml)
 
 Head over to [wulffern.github.io/aicex](https://wulffern.github.io/aicex) for
 the docs.
@@ -27,10 +28,10 @@ tests/    # Makefile used for installation of the tools
 # Installing, and usage 
 
 For a detailed scription of installing the tools, see
-<http://analogicus.com/aic2026/2025/10/25/The-Tools.html>
+<http://analogicus.com/aic2026/the_tools>
 
 For a description of the usage, see
-<https://analogicus.com/aic2026/2025/10/26/Sky130nm-tutorial.html>
+<https://analogicus.com/aic2026/sky130nm_tutorial>
 
 
 # For the impatient
@@ -62,7 +63,7 @@ cicconf clone --https
 ```
 
 You should now be able to run the tutorial at 
-<https://analogicus.com/aic2026/2025/10/26/Sky130nm-tutorial.html>
+<https://analogicus.com/aic2026/sky130nm_tutorial>
 
 # Known issues
 
