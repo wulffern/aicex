@@ -243,9 +243,10 @@ jnw_sv_sky130a:
 #  remote: git@github.com:analogicus/jnw_gr04_sky130a.git
 #  revision: main
 
-#jnw_gr05_sky130a:
-#  remote: git@github.com:analogicus/jnw_gr05_sky130a.git
-#  revision: main
+jnw_gr05_sky130a:
+  remote: git@github.com:analogicus/jnw_gr05_sky130a.git
+  revision: main
+  description: Temperature sensor by group 5
 
 #- https://analogicus.github.io/jnw_gr06_sky130a/
 jnw_gr06_sky130a:
