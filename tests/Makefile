@@ -364,11 +364,22 @@ iverilog:
 
 iverilog_compile: iverilog
 	cd iverilog && git checkout ${IVERILOG_VER} && git pull
+ifeq (${OS},mac)
 	cd iverilog && git pull && \
 	sh autoconf.sh && CC=clang CXX=clang++ CFLAGS="-include mach-o/dyld.h"  ./configure --prefix ${EDA_PREFIX} LDFLAGS="-L${BREW_DIR}/opt/bison/lib" --enable-libvvp && make
 
+else
+	cd iverilog && git pull && \
+	sh autoconf.sh &&  CFLAGS=""  ./configure --prefix ${EDA_PREFIX} LDFLAGS="-L${BREW_DIR}/opt/bison/lib" --enable-libvvp && make
+endif
+
 iverilog_install:
 	cd iverilog && sudo make install
+ifeq (${OS},mac)
+	sudo install_name_tool -change libvvp.so /opt/eda/lib/libvvp.so /opt/eda/bin/vvp
+else
+
+endif
 
 
 #--------------------------------------------------------------------
