@@ -39,6 +39,7 @@ years["sun"] = { "year" : 2022, "name": "Ayrun Sun", "universe" : "Farscape", "q
 years["rply"] = { "year" : 2023, "name": "Ellen Ripley", "universe" : "Aliens", "quote" : "I say we take off and nuke the site from orbit. It's the only way to be sure."}
 years["cnr"] = { "year" : 2024, "name": "Sarah Connor", "universe" : "Terminator 2: Judgment Day", "quote" : "In an insane world, it was the sanest choice."}
 years["jnw"] = { "year" : 2025, "name": "Kathryn Janeway", "universe" : "Star Trek Voyager: Prime Factors", "quote" : "You can use logic to justify almost anything. That's its power. And its flaw."}
+years["lelo"] = { "year" : 2026, "name": "Leelo", "universe" : "The Fifth Element", "quote" : "Cheekan! ... Good!"}
 
 
 def printInfo(k):
