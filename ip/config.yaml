@@ -276,6 +276,11 @@ jnw-actions:
 #tech_ihp13g2:
 #  remote: git@github.com:wulffern/tech_ihp13g2.git
 #  revision: main
+#
+lelo_atr_sky130a:
+  remote: git@github.com:wulffern/lelo_atr_sky130a.git
+  revision: main
+  description: Standard transistors (sky130A)
 
 lelo_temp_sky130a:
   remote: git@github.com:wulffern/lelo_temp_sky130a.git
