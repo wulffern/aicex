@@ -281,3 +281,37 @@ lelo_temp_sky130a:
   revision: main
   description: Temperature sensor (sky130A)
 
+lelo_gr01_sky130a:
+  remote: git@github.com:analogicus/lelo_gr01_sky130a.git
+  revision: main
+  description: Temperature sensor Group 1
+
+lelo_gr02_sky130a:
+  remote: git@github.com:analogicus/lelo_gr02_sky130a.git
+  revision: main
+  description: Temperature sensor Group 2
+
+lelo_gr03_sky130a:
+  remote: git@github.com:analogicus/lelo_gr03_sky130a.git
+  revision: main
+  description: Temperature sensor Group 3
+
+lelo_gr04_sky130a:
+  remote: git@github.com:analogicus/lelo_gr04_sky130a.git
+  revision: main
+  description: Temperature sensor Group 4
+
+lelo_gr05_sky130a:
+  remote: git@github.com:analogicus/lelo_gr05_sky130a.git
+  revision: main
+  description: Temperature sensor Group 5
+
+lelo_gr06_sky130a:
+  remote: git@github.com:analogicus/lelo_gr06_sky130a.git
+  revision: main
+  description: Temperature sensor Group 6
+
+lelo_gr07_sky130a:
+  remote: git@github.com:analogicus/lelo_gr07_sky130a.git
+  revision: main
+  description: Temperature sensor Group 7
