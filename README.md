@@ -77,7 +77,7 @@ You should now be able to run the tutorial at
   instances with bus notation 
 
 ## docker
-* The aicex user has a uid of 1000, however, if you try and run it on a machine
+* The aicex user has a uid of 1001, however, if you try and run it on a machine
   with a different uid for your user, then it does not seem to work. Don't know
   how to fix it yet.
 
