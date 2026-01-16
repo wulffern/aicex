@@ -78,8 +78,9 @@ You should now be able to run the tutorial at
 
 ## docker
 * The aicex user has a uid of 1001, however, if you try and run it on a machine
-  with a different uid for your user, then it does not seem to work. Don't know
-  how to fix it yet.
+  with a different uid for your user, then it does not seem to work. 
+  One solution is on your system add a user with the uid 1001 (not ideal)
+  Another solution is to tell me how to fix it.
 
 ## Ngspice
 

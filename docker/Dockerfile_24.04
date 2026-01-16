@@ -62,4 +62,5 @@ RUN sudo apt-get update && \
 WORKDIR /home/aicex
 RUN mkdir /home/aicex/.ssh
 
+# Fix docker for UID
 ENTRYPOINT sudo service ssh restart && tail -f /dev/null
