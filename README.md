@@ -38,6 +38,10 @@ For a description of the usage, see
 
 ``` sh
 git clone --recursive https://github.com/wulffern/aicex.git
+python3 -m pip install cicconf
+cd ip
+cicconf clone --https
+cd ..
 ```
 
 I assume you have docker installed, or have windows subsystem for linux. 
@@ -56,12 +60,6 @@ Check that you can open a new X terminal
 xterm &
 ```
 
-``` sh
-python3 -m pip install cicconf cicspi cicsim
-cd ip
-cicconf clone --https
-```
-
 You should now be able to run the tutorial at 
 <https://analogicus.com/aic2026/sky130nm_tutorial>
 
@@ -77,12 +75,7 @@ You should now be able to run the tutorial at
   instances with bus notation 
 
 ## docker
-* The aicex user has a uid of 1001, however, if you try and run it on a machine
+* Using SSH: The aicex user has a uid of 1001, however, if you try and run it on a machine
   with a different uid for your user, then it does not seem to work. 
-  One solution is on your system add a user with the uid 1001 (not ideal)
-  Another solution is to tell me how to fix it.
 
 ## Ngspice
-
-* In 44.2 there is a missing \$LDFLAGS on the line `shell g++ --shared $v_objs
-  $v_lib -pthread -lpthread -o $soname` to compile on my M4 mac 
