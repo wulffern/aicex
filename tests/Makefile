@@ -29,8 +29,8 @@
 #- GIT repo Versions
 #---------------------------------------------------------------------
 XSCHEM_VER=3.4.7
-#MAGIC_VER=8.3.522
-MAGIC_VER=master
+MAGIC_VER=8.3.541
+#MAGIC_VER=master
 NETGEN_VER=master
 NGSPICE_VER=master
 IVERILOG_VER=master
