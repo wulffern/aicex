@@ -39,7 +39,7 @@ For a description of the usage, see
 ``` sh
 git clone --recursive https://github.com/wulffern/aicex.git
 python3 -m pip install cicconf
-cd ip
+cd aicex/ip
 cicconf clone --https
 cd ..
 ```
