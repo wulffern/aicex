@@ -29,7 +29,7 @@
 #- GIT repo Versions
 #---------------------------------------------------------------------
 XSCHEM_VER=3.4.7
-MAGIC_VER=master
+MAGIC_VER=8.3.522
 NETGEN_VER=master
 NGSPICE_VER=master
 IVERILOG_VER=master
@@ -222,7 +222,8 @@ magic:
 	cd magic && git checkout ${MAGIC_VER}
 
 magic_compile: magic
-	cd magic && git checkout ${MAGIC_VER} && git pull
+	cd magic && git checkout ${MAGIC_VER}
+	-cd magic && git pull
 #ifeq (${OS},mac)
 #	cd magic &&  ./configure CC=${CC_GCC} CXX=${CC_GPP} \
 #    --with-tcl=${shell brew --prefix tcl-tk}\

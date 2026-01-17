@@ -17,6 +17,6 @@ fi
 
 if [ -d ../aicex ]; then
    docker run --rm --name aicex -p 2022:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:24.04_latest &
-   sleep 5s
+   sleep 5
    ssh -X -p 2022 aicex@localhost
 fi
