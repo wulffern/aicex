@@ -235,11 +235,20 @@ magic_compile: magic
 	make
 #else
 #
+
 ifeq (${VER},24.04)
 	perl -pe "s/-g/-g -Wno-error=implicit-function-declaration/ig" -i magic/configure
 	cd magic &&  ./configure CC=${CC_GCC} CXX=${CC_GPP}  --prefix=${TK_PREFIX} --with-tcl=${TK_PREFIX}/lib \
 	--with-tk=${TK_PREFIX}/lib --x-includes=${X11_INC} --x-libraries=${X11_LIB} \
 	--with-cairo=${X11_INC}/cairo  --with-opengl=${X11_LIB} && \
+	make
+
+else
+ifeq (${VER},26.04)
+	perl -pe "s/-g/-g -Wno-error=implicit-function-declaration/ig" -i magic/configure
+	cd magic &&  ./configure CC=${CC_GCC} CXX=${CC_GPP}  --prefix=${TK_PREFIX} --with-tcl=${TK_PREFIX}/lib \
+	--with-tk=${TK_PREFIX}/lib --x-includes=${X11_INC} --x-libraries=${X11_LIB} \
+	--with-cairo=${X11_INC}/cairo  --with-opengl=${X11_LIB} CFLAGS="${CFLAGS} -std=c17"&& \
 	make
 else
 	perl -pe "s/-g/-g -Wno-error=implicit-function-declaration/ig" -i magic/configure
@@ -247,6 +256,7 @@ else
 	--with-tk=${TK_PREFIX}/lib --x-includes=${X11_INC} --x-libraries=${X11_LIB} \
 	--with-cairo=${X11_INC}/cairo  --with-opengl=${X11_LIB} CFLAGS="${CFLAGS}"&& \
 	make
+endif
 endif
 
 magic_install:
