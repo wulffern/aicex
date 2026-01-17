@@ -29,7 +29,8 @@
 #- GIT repo Versions
 #---------------------------------------------------------------------
 XSCHEM_VER=3.4.7
-MAGIC_VER=8.3.522
+#MAGIC_VER=8.3.522
+MAGIC_VER=master
 NETGEN_VER=master
 NGSPICE_VER=master
 IVERILOG_VER=master
@@ -183,7 +184,7 @@ ${tclver}:
 
 tcl_compile: ${tclver}
 	cd ${tclver}/unix && \
-	./configure --prefix=${TK_PREFIX} && \
+	./configure --prefix=${TK_PREFIX} CFLAGS="${CFLAGS} -std=gnu17" && \
 	make
 
 tcl_install:
@@ -198,7 +199,7 @@ tk_compile: ${tkver}
 	cd ${tkver}/unix && \
 	./configure --prefix=${TK_PREFIX} \
 	--with-tcl=${TK_PREFIX}/lib \
-	--with-x --x-includes=${X11_INC} --x-libraries=${X11_LIB}   && \
+	--with-x --x-includes=${X11_INC} --x-libraries=${X11_LIB} CFLAGS="${CFLAGS} -std=gnu17"  && \
 	make
 
 tk_install:
@@ -245,10 +246,11 @@ ifeq (${VER},24.04)
 
 else
 ifeq (${VER},26.04)
-	perl -pe "s/-g/-g -Wno-error=implicit-function-declaration/ig" -i magic/configure
-	cd magic &&  ./configure CC=${CC_GCC} CXX=${CC_GPP}  --prefix=${TK_PREFIX} --with-tcl=${TK_PREFIX}/lib \
-	--with-tk=${TK_PREFIX}/lib --x-includes=${X11_INC} --x-libraries=${X11_LIB} \
-	--with-cairo=${X11_INC}/cairo  --with-opengl=${X11_LIB} CFLAGS="${CFLAGS} -std=c17"&& \
+	#perl -pe "s/-g/-g -Wno-error=implicit-function-declaration/ig" -i magic/configure
+	cd magic && python3 ../patch_legacy_c.py --apply .
+	cd magic &&  ./configure CC=${CC_GCC} CXX=${CC_GPP}  --prefix=${TK_PREFIX} --with-tcl \
+	--with-tk --with-opengl  \
+	--with-cairo  CFLAGS="${CFLAGS} -std=gnu11"&& \
 	make
 else
 	perl -pe "s/-g/-g -Wno-error=implicit-function-declaration/ig" -i magic/configure
@@ -310,7 +312,12 @@ ifeq (${OS},mac)
 	--with-tk=${TK_PREFIX}/lib --x-includes=${X11_INC} --x-libraries=${X11_LIB}&& \
 	make
 else
+ifeq (${VER},26.04)
+	cd netgen &&  ./configure CC=${CC_GCC} CXX=${CC_GPP}  --prefix=${EDA_PREFIX} CFLAGS="${CFLAGS} -std=gnu17"&& \
+	make
+else
 	cd netgen && ./configure --prefix ${EDA_PREFIX}/ && make
+endif
 endif
 
 netgen_install:
@@ -392,6 +399,15 @@ else
 
 endif
 
+
+#--------------------------------------------------------------------
+# Open EMS
+#--------------------------------------------------------------------
+openems:
+	git clone --recursive https://github.com/thliebig/openEMS-Project.git
+
+openems_compile:
+	echo
 
 #--------------------------------------------------------------------
 # yosys

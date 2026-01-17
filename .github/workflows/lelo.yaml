@@ -14,7 +14,7 @@ jobs:
   lelo:
     runs-on: ubuntu-latest
     container:
-      image: wulffern/aicex:24.04_0.1.6
+      image: wulffern/aicex:26.04_latest
       options: --user root
     steps:
       - name: Checkout

@@ -1,0 +1,77 @@
+FROM ubuntu:resolute
+
+ARG UID=1001
+ARG USER=aicex
+
+RUN ln -snf /usr/share/zoneinfo/$CONTAINER_TIMEZONE /etc/localtime && echo $CONTAINER_TIMEZONE > /etc/timezone
+
+RUN apt-get update && \
+    apt-get -y install sudo make ngspice verilator pandoc  \
+    openssh-server iverilog yosys   && \
+    apt-get autoremove --purge -y && \
+    apt-get clean && \
+    apt-get autoclean && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN useradd -m -u ${UID}  -s /bin/bash ${USER}
+RUN echo "${USER}:${USER}" | chpasswd && adduser ${USER} sudo
+RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+
+RUN echo  "X11UseLocalhost no\n" >> /etc/ssh/sshd_config
+COPY .spiceinit .spiceinit
+
+EXPOSE 22
+
+ARG DEBIAN_FRONTEND=noninteractive
+
+RUN test -d /opt || mkdir /opt
+RUN test -d /opt/eda || mkdir /opt/eda
+
+WORKDIR /opt/
+RUN sudo chown -R ${USER}:${USER} /opt
+USER ${USER}
+
+RUN sudo apt-get update && \
+    sudo apt install -y git python3.13-venv && \
+    sudo apt-get autoremove -y && \
+    sudo apt-get clean && \
+    sudo rm -rf /var/lib/apt/lists/*
+
+ENV LD_LIBRARY_PATH=/opt/eda/lib
+ENV PATH=/opt/eda/bin:~/.local/bin:$PATH
+
+RUN sudo mkdir /opt/eda/python3
+RUN sudo chown -R ${USER}:${USER} /opt/eda/python3/
+RUN python3 -m venv /opt/eda/python3
+ENV PATH=/opt/eda/bin:/opt/eda/python3/bin:~/.local/bin:$PATH
+RUN python3 -m pip install matplotlib cicsim cicconf cicpy cicspi numpy click svgwrite pyyaml pandas tabulate wheel setuptools tikzplotlib
+RUN sudo mkdir --parents /opt/pdk/share/
+RUN cd /opt/pdk/share/ && sudo git clone https://github.com/wulffern/sky130.git pdk
+
+RUN sudo apt-get update && \
+    sudo apt install -y vim curl xterm gawk bash python3-pip libxft2 libxss1 m4 libx11-dev tcl-dev tk-dev \
+    libxaw7 mesa-common-dev libgl-dev libglu1-mesa-dev  zlib1g-dev libncurses-dev  \
+    tcsh flex bison pandoc \
+    git vim curl  libxrender1 libxrender-dev \
+    libxcb1 libx11-xcb-dev libcairo2 libcairo2-dev \
+    libxpm4  \
+    xterm vim-gtk3 gawk tcl-tclreadline libxpm-dev automake libtool libxaw7-dev libreadline-dev gperf \
+    xz-utils liblzma-dev libgtk2.0-dev python3-pil.imagetk &&\
+    sudo apt-get autoremove --purge -y && \
+    sudo apt-get clean && \
+    sudo apt-get autoclean && \
+    sudo rm -rf /var/lib/apt/lists/*
+
+COPY tests tests
+WORKDIR /opt/tests
+
+RUN sudo make xschem_compile && sudo make xschem_install && sudo make clean
+RUN sudo make netgen_compile && sudo make netgen_install && sudo make clean
+RUN sudo make magic_compile && sudo make magic_install && sudo make clean
+
+WORKDIR /home/${USER}
+RUN mkdir /home/${USER}/.ssh
+
+COPY docker/entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN sudo chmod ug+rwx /usr/local/bin/entrypoint.sh
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]

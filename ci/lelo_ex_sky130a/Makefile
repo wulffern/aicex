@@ -71,6 +71,7 @@ sch:
 
 simtyp:
 	test ~/.spiceinit || cat ../.spiceinit > ~/.spiceinit
+#	cat ../.spiceinit > ~/.spiceinit
 	cat ${SRC_S}/tran.spi > ${DST_S}/tran.spi
 	cat ${SRC_S}/tran.meas > ${DST_S}/tran.meas
 	cat ${SRC_S}/tran.yaml  > ${DST_S}/tran.yaml

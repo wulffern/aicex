@@ -53,14 +53,14 @@ ENV PATH=/opt/eda/bin:/opt/eda/python3/bin:$HOME/.local/bin:$PATH
 RUN python3 -m pip install matplotlib numpy click svgwrite pyyaml pandas tabulate wheel setuptools tikzplotlib
 RUN sudo /bin/bash install_open_pdk.sh && cd /opt/pdk && sudo rm -rf skywater-pdk && sudo rm -rf open_pdks \
     && sudo find ./ -name "*.lib" -exec rm {} \;
-RUN sudo apt-get update && \
-    sudo apt-get -y install pandoc verilator &&  \
-    sudo apt-get autoremove -y && \
-    sudo apt-get clean && \
-    sudo rm -rf /var/lib/apt/lists/*
 
 WORKDIR /home/aicex
 RUN mkdir /home/aicex/.ssh
 
+
 # Fix docker for UID
 ENTRYPOINT sudo service ssh restart && tail -f /dev/null
+
+#COPY docker/entrypoint.sh /usr/local/bin/entrypoint.sh
+#RUN sudo chmod +x /usr/local/bin/entrypoint.sh
+#ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]

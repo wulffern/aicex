@@ -16,7 +16,7 @@ GDS2glTF:
   remote: git@github.com:wulffern/GDS2glTF.git
   revision: main
   description: GDS to 3D graphics
-  on_clone: python3 -m pip install -r requirements.txt
+  #on_clone: python3 -m pip install -r requirements.txt
 
 cicconf:
   remote: git@github.com:wulffern/cicconf.git
