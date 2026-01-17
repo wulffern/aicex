@@ -49,7 +49,7 @@ else
   HOST="host.docker.internal"
   # Common default display. For VcXsrv/Xming it’s usually :0.0
   DISPLAY_VALUE="${DISPLAY_VALUE:-$HOST:0}"
-
+  xhost +localhost
   DOCKER_X_ARGS+=(
     -e DISPLAY="$DISPLAY_VALUE"
     # Some X clients need these; harmless otherwise
