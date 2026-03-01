@@ -381,10 +381,10 @@ ngspice_automake:
 # Need to use gcc-11 or higher from homebrew to get openmp to work
 ngspice2_compile: ngspice
 	cd ngspice && git checkout ${NGSPICE_VER} && git pull
+	-mkdir ngspice/release
 	cd ngspice && git checkout autogen.sh
 	perl -pe "s/# optional feature: autoheader/ln -sf \.\.\/ltmain.sh \.\/ltmain.sh/ig" -i ngspice/autogen.sh
 	cd ngspice && ./autogen.sh
-
 
 ifeq (${OS},mac)
 	-cd ngspice/release && ../configure \
