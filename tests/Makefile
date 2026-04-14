@@ -368,9 +368,60 @@ else
 endif
 	-cd ngspice  && make -j4
 
+ngspice_automake:
+	-rm ltmain.sh
+	-rm autom4te.cache
+	glibtoolize --copy --force --install
+	ln -sf ../ltmain.sh ./ltmain.sh
+	aclocal
+	autoheader
+	automake -Wall --copy --add-missing
+	autoconf
+
+# Need to use gcc-11 or higher from homebrew to get openmp to work
+ngspice2_compile: ngspice
+	cd ngspice && git checkout ${NGSPICE_VER} && git pull
+	-mkdir ngspice/release
+	cd ngspice && git checkout autogen.sh
+	perl -pe "s/# optional feature: autoheader/ln -sf \.\.\/ltmain.sh \.\/ltmain.sh/ig" -i ngspice/autogen.sh
+	cd ngspice && ./autogen.sh
+
+ifeq (${OS},mac)
+	-cd ngspice/release && ../configure \
+	--prefix ${EDA_PREFIX}/ \
+	--with-x \
+	--x-includes=${X11_INC} \
+	--x-libraries=${X11_LIB} \
+	--enable-xspice  \
+	--enable-openmp \
+	--enable-pss \
+	--enable-cider \
+	CC=${CC_GCC} CXX=${CC_GPP} \
+	--with-readline=${BREW_DIR}/opt/readline \
+	--disable-debug \
+	CFLAGS=" -O2 -I${X11_INC}/freetype2 -I${BREW_DIR}/include -I${BREW_DIR}/opt/libomp/include -I${BREW_DIR}/opt/readline/include/readline -I${BREW_DIR}/opt/readline/include  " \
+	LDFLAGS=" -L${BREW_DIR}/opt/readline/lib -L${BREW_DIR}/opt/libomp/lib  -L${BREW_DIR}/lib -L/usr/local/opt/ncurses/lib -L/usr/local/lib -L/usr/local/opt/libomp/lib/ -fopenmp -lomp"
+else
+	-cd ngspice/release ../configure \
+	--prefix ${EDA_PREFIX}/ \
+	--with-x \
+	--x-includes=/usr/include/X11 \
+	--x-libraries=/usr/lib/X11 \
+	--enable-xspice  \
+	--enable-openmp \
+	--enable-pss \
+	--enable-cider \
+	--with-readline=yes \
+	--disable-debug	&& CFLAGS="-g -m64 -O0 -Wall -Wno-unused-but-set-variable" LDFLAGS="-m64 -g"
+endif
+	-cd ngspice/release  && make -j4
+
 
 ngspice_install:
 	cd ngspice &&  sudo make install
+
+ngspice2_install:
+	cd ngspice/release &&  sudo make install
 
 
 #--------------------------------------------------------------------

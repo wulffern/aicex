@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>IP</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">IP</h1>
+</header>
+<p>This repository is a collection of IPs in Skywater 130nm technology.
+The available IPs can be seen in <a
+href="https://github.com/wulffern/aicex/blob/main/ip/config.yaml">ip/config.yaml</a>.</p>
+<h2 id="tools">Tools</h2>
+<h3 id="cicconf"><a
+href="https://github.com/wulffern/cicconf">cicconf</a></h3>
+<p>A configuration tool. An alternative to submodules. Takes a yaml
+file, and allows you to get the right version of dependencies</p>
+<h3 id="ciccreator"><a
+href="https://github.com/wulffern/ciccreator">ciccreator</a></h3>
+<p><a href="https://wulffern.github.io/ciccreator">Documentation</a></p>
+<p>Carsten’s IC creator. Takes json, spice, and a rule file as input,
+and generate DRC/LVS clean layout in the form of a .cic file.</p>
+<h3 id="cicpy"><a
+href="https://github.com/wulffern/cicconf">cicpy</a></h3>
+<p>Transpiler for *.cic files. Convert the output from ciccreator into
+skill, xschem, magic and other formats</p>
+<h3 id="cicsim"><a
+href="https://github.com/wulffern/cicsim">cicsim</a></h3>
+<p>Simulation orchestration. Run multiple spice simulations over
+corners. Also a waveform viewer for spice raw files</p>
+<h2 id="libraries">Libraries</h2>
+<ul>
+<li><a href="https://github.com/wulffern/cpdk">cpdk</a> : Carsten’s
+design kit</li>
+<li><a href="https://github.com/wulffern/tech_sky130B">tech_sky130B</a>
+: Technology files for SKY130B</li>
+<li><a href="https://github.com/wulffern/tech_sky130A">tech_sky130A</a>
+: Technology files for SKY130A</li>
+<li><a
+href="https://github.com/wulffern/sun_tr_sky130nm">sun_tr_sky130nm</a> :
+Standard cell libraries for analog schematics</li>
+<li><a
+href="https://github.com/wulffern/sun_trb_sky130nm">sun_trb_sky130nm</a>
+: Standard cell libraries for analog schematics with separate bulk
+connections</li>
+</ul>
+<h2 id="examples">Examples</h2>
+<h3 id="rply_ex0_sky130nm"><a
+href="https://github.com/wulffern/rply_ex0_sky130nm">rply_ex0_sky130nm</a></h3>
+<p><a
+href="https://wulffern.github.io/rply_ex0_sky130nm">Documentation</a></p>
+<p>Tutorial on sky130nm analog flow</p>
+<h2 id="ips">IPs</h2>
+<h2 id="sun_pll_sky130nm"><a
+href="https://github.com/wulffern/sun_pll_sky130nm">sun_pll_sky130nm</a></h2>
+<p><a
+href="https://github.com/wulffern/sun_pll_sky130nm/actions/workflows/gds.yaml"><img
+src="https://github.com/wulffern/sun_pll_sky130nm/actions/workflows/gds.yaml/badge.svg"
+alt="GDS" /></a> <a
+href="https://github.com/wulffern/sun_pll_sky130nm/actions/workflows/drc.yaml"><img
+src="https://github.com/wulffern/sun_pll_sky130nm/actions/workflows/drc.yaml/badge.svg"
+alt="DRC" /></a> <a
+href="https://github.com/wulffern/sun_pll_sky130nm/actions/workflows/lvslpe.yaml"><img
+src="https://github.com/wulffern/sun_pll_sky130nm/actions/workflows/lvslpe.yaml/badge.svg"
+alt="LVS" /></a></p>
+<p><em>General purpose PLL. Should not be used for real designs.
+Development platform for ciccreator</em></p>
+<h2 id="sun_sar9b_sky130nm"><a
+href="https://github.com/wulffern/sun_sar9b_sky130nm">sun_sar9b_sky130nm</a>
+|</h2>
+<p><a
+href="https://github.com/wulffern/sun_sar9b_sky130nm/actions/workflows/gds.yaml"><img
+src="https://github.com/wulffern/sun_sar9b_sky130nm/actions/workflows/gds.yaml/badge.svg"
+alt="GDS" /></a> <a
+href="https://github.com/wulffern/sun_sar9b_sky130nm/actions/workflows/drc.yaml"><img
+src="https://github.com/wulffern/sun_sar9b_sky130nm/actions/workflows/drc.yaml/badge.svg"
+alt="DRC" /></a> <a
+href="https://github.com/wulffern/sun_sar9b_sky130nm/actions/workflows/lvslpe.yaml"><img
+src="https://github.com/wulffern/sun_sar9b_sky130nm/actions/workflows/lvslpe.yaml/badge.svg"
+alt="LVS" /></a></p>
+<p>9-bit successive approximation analog-to-digital converter 8-bit
+successive approximation analog-to-digital converter</p>
+<h2 id="rply_bias_sky130nm"><a
+href="https://github.com/wulffern/rply_bias_sky130nm">rply_bias_sky130nm</a></h2>
+<p><a href="https://wulffern.github.io/rply_bias_sky130nm">docs</a></p>
+<p>PTAT current source</p>
+</body>
+</html>
