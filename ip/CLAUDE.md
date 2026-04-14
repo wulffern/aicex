@@ -91,3 +91,4 @@ config.yaml
 ## CI/CD
 
 GitHub Actions (`.github/workflows/`) run GDS/DRC/LVS/DOCS pipelines using Docker image `wulffern/aicex:26.04_latest`. Workflows delegate to shared reusable workflows in the `jnw-actions` repo. The `PDK_ROOT` env var must point to the SkyWater PDK (typically `/opt/pdks/sky130A` in CI).
+
