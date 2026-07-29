@@ -3,7 +3,13 @@ name: EDA tool build
 on:
   push:
     branches:
-      - claude/aicex-issue-15-akzwhg
+      - main
+      - claude/**
+    paths:
+      - tests/Makefile
+      - tests/patch_legacy_c.py
+      - .github/workflows/tcl-tk-build.yml
+  pull_request:
     paths:
       - tests/Makefile
       - tests/patch_legacy_c.py
@@ -40,9 +46,10 @@ jobs:
         working-directory: tests
         run: make requirements
 
-      # Not covered by the 24.04 requirements list, but needed to build
-      # tk and magic from source.
+      # The 26.04 requirements list is self-sufficient; 24.04 still misses
+      # what tk and magic need to build from source.
       - name: Install remaining build dependencies
+        if: matrix.ubuntu == '24.04'
         run: |
           apt-get install -y \
             libxft-dev libxt-dev autoconf \

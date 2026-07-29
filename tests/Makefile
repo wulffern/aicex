@@ -166,10 +166,10 @@ ifeq (${VER},26.04)
 	libxaw7 libxaw7-dev libcairo2 libcairo2-dev \
 	mesa-common-dev libgl-dev libglu1-mesa-dev \
 	tcsh flex bison pandoc m4 \
-	git vim curl  libx11-dev libxrender1 libxrender-dev \
+	git vim curl  libx11-dev libxt-dev libxrender1 libxrender-dev \
 	libxcb1 libx11-xcb-dev \
 	tcl-dev tk-dev tcl-tclreadline libxpm4 libxpm-dev \
-	xterm vim-gtk3 gawk automake	libtool libreadline-dev gperf \
+	xterm vim-gtk3 gawk autoconf automake	libtool libreadline-dev gperf \
 	zlib1g-dev libncurses-dev libqhull-dev \
 	xz-utils liblzma-dev libgtk2.0-dev python3-pil.imagetk verilator
 
