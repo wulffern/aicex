@@ -1,4 +1,4 @@
-name: TCL/TK build
+name: EDA tool build
 
 on:
   push:
@@ -29,18 +29,24 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install build dependencies
+      # lsb-release must be present before make runs, otherwise VER is
+      # empty and the Makefile picks the wrong branch.
+      - name: Bootstrap
         run: |
           apt-get update
+          apt-get install -y build-essential wget git sudo lsb-release python3
+
+      - name: Install requirements from the Makefile
+        working-directory: tests
+        run: make requirements
+
+      # Not covered by the 24.04 requirements list, but needed to build
+      # tk and magic from source.
+      - name: Install remaining build dependencies
+        run: |
           apt-get install -y \
-            build-essential wget git sudo lsb-release python3 \
-            libx11-dev libxft-dev libxft2 libxpm-dev libxpm4 \
-            libxaw7-dev libxaw7 libxrender-dev libxrender1 \
-            libxcb1 libx11-xcb-dev libxss1 libxt-dev \
-            libcairo2-dev libgl-dev libglu1-mesa-dev \
-            flex bison gawk m4 autoconf automake libtool \
-            libreadline-dev tcsh zlib1g-dev \
-            tcl-dev tk-dev
+            libxft-dev libxt-dev autoconf \
+            libcairo2-dev libgl-dev libglu1-mesa-dev zlib1g-dev
 
       - name: Prepare install prefix
         run: mkdir -p /opt/eda
@@ -48,7 +54,11 @@ jobs:
       - name: Add /opt/eda/bin to PATH
         run: echo "/opt/eda/bin" >> $GITHUB_PATH
 
+      # 24.04 points magic at ${TK_PREFIX}/lib, so tcl/tk has to be built
+      # first. 26.04 resolves tcl/tk from the system packages instead, and
+      # skipping this step here is what proves that.
       - name: Build and install TCL/TK
+        if: matrix.ubuntu == '24.04'
         working-directory: tests
         run: make tt
 
