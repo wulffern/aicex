@@ -1,0 +1,65 @@
+name: TCL/TK build
+
+on:
+  push:
+    branches:
+      - claude/aicex-issue-15-akzwhg
+    paths:
+      - tests/Makefile
+      - tests/patch_legacy_c.py
+      - .github/workflows/tcl-tk-build.yml
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Ubuntu ${{ matrix.ubuntu }}
+    runs-on: ubuntu-latest
+    container:
+      image: ${{ matrix.container }}
+      options: --user root
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - ubuntu: 24.04
+            container: ubuntu:24.04
+          - ubuntu: 26.04
+            container: ubuntu:26.04
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install build dependencies
+        run: |
+          apt-get update
+          apt-get install -y \
+            build-essential wget git sudo lsb-release python3 \
+            libx11-dev libxft-dev libxft2 libxpm-dev libxpm4 \
+            libxaw7-dev libxaw7 libxrender-dev libxrender1 \
+            libxcb1 libx11-xcb-dev libxss1 libxt-dev \
+            libcairo2-dev libgl-dev libglu1-mesa-dev \
+            flex bison gawk m4 autoconf automake libtool \
+            libreadline-dev tcsh zlib1g-dev \
+            tcl-dev tk-dev
+
+      - name: Prepare install prefix
+        run: mkdir -p /opt/eda
+
+      - name: Add /opt/eda/bin to PATH
+        run: echo "/opt/eda/bin" >> $GITHUB_PATH
+
+      - name: Build and install TCL/TK
+        working-directory: tests
+        run: make tt
+
+      - name: Build and install Magic
+        working-directory: tests
+        run: make magic_compile && make magic_install
+
+      - name: Build and install Netgen
+        working-directory: tests
+        run: make netgen_compile && make netgen_install
+
+      - name: Build and install Xschem
+        working-directory: tests
+        run: make xschem_compile && make xschem_install

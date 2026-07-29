@@ -171,7 +171,7 @@ endif
 #--------------------------------------------------------------------
 # TCL/TK
 #--------------------------------------------------------------------
-ttver=8.6.10
+ttver=8.6.13
 tclver=tcl${ttver}
 tkver=tk${ttver}
 
@@ -184,7 +184,7 @@ ${tclver}:
 
 tcl_compile: ${tclver}
 	cd ${tclver}/unix && \
-	./configure --prefix=${TK_PREFIX} CFLAGS="${CFLAGS} -std=gnu17" && \
+	./configure --prefix=${TK_PREFIX} CFLAGS="${CFLAGS}" && \
 	make
 
 tcl_install:
@@ -199,7 +199,7 @@ tk_compile: ${tkver}
 	cd ${tkver}/unix && \
 	./configure --prefix=${TK_PREFIX} \
 	--with-tcl=${TK_PREFIX}/lib \
-	--with-x --x-includes=${X11_INC} --x-libraries=${X11_LIB} CFLAGS="${CFLAGS} -std=gnu17"  && \
+	--with-x --x-includes=${X11_INC} --x-libraries=${X11_LIB} CFLAGS="${CFLAGS}" && \
 	make
 
 tk_install:
