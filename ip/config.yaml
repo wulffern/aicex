@@ -322,3 +322,15 @@ lelo_gr04_sky130a:
   revision: main
   description: Temperature sensor Group 4
 
+#-------------------------------------------------------
+# REY(2026)
+# "Something inside me has always been there.
+#  Now it's awake."
+# - Rey, The Force Awakens
+#-------------------------------------------------------
+
+rey_atr_sky130a:
+  remote: git@github.com:wulffern/rey_atr_sky130a.git
+  revision: main
+  description: Analog transistor and resistor library for autolayout (sky130A)
+
