@@ -5,8 +5,8 @@
 #-------------------------------------------------------
 options:
   template:
-    ip: tech_sky130A/cicconf/lelo.yaml
-  project: lelo
+    ip: tech_sky130A/cicconf/rey.yaml
+  project: rey
   technology: sky130A
 
 #-------------------------------------------------------
@@ -29,6 +29,11 @@ cicsim:
   revision: main
   description: Simulation orchestration
 
+cicsim:
+  remote: git@github.com:wulffern/cicwave.git
+  revision: main
+  description: Waveform viewer
+
 cicspi:
   remote: git@github.com:wulffern/cicspi.git
   revision: main
@@ -49,6 +54,11 @@ cicpy:
   revision: master
   description: Transpiler and layout support
 
+
+librelane:
+  remote: git@github.com:librelane/librelane.git
+  revision: main
+  description: ASIC implementation flow infrastructure, successor to OpenLane
 
 #-------------------------------------------------------
 # TECHs
@@ -312,17 +322,15 @@ lelo_gr04_sky130a:
   revision: main
   description: Temperature sensor Group 4
 
-lelo_gr05_sky130a:
-  remote: git@github.com:analogicus/lelo_gr05_sky130a.git
-  revision: main
-  description: Temperature sensor Group 5
+#-------------------------------------------------------
+# REY(2026)
+# "Something inside me has always been there.
+#  Now it's awake."
+# - Rey, The Force Awakens
+#-------------------------------------------------------
 
-lelo_gr06_sky130a:
-  remote: git@github.com:analogicus/lelo_gr06_sky130a.git
+rey_atr_sky130a:
+  remote: git@github.com:wulffern/rey_atr_sky130a.git
   revision: main
-  description: Temperature sensor Group 6
+  description: Analog transistor and resistor library for autolayout (sky130A)
 
-lelo_gr07_sky130a:
-  remote: git@github.com:analogicus/lelo_gr07_sky130a.git
-  revision: main
-  description: Temperature sensor Group 7

@@ -1,6 +1,6 @@
 
 
-TAG = 0.1.7
+TAG = 0.1.8
 
 dirs = ip/rply_ex0_sky130nm/sim/RPLY_EX0 \
 	ip/rply_ex0_sky130nm/work
@@ -34,6 +34,12 @@ ci24	:
 
 ci26:
 	docker build  --platform linux/amd64,linux/arm64 -f docker/Dockerfile_26.04 ${OPT} . -t wulffern/aicex:26.04_latest
+
+ci26ms:
+	docker build  --platform linux/amd64,linux/arm64 -f docker/Dockerfile_26.04_multistage ${OPT} . -t wulffern/aicex:26.04_multistage
+
+claude:
+	docker build  --platform linux/amd64,linux/arm64 -f docker/Dockerfile_claude ${OPT} . -t wulffern/aicex:claude
 
 ci24base:
 	docker build  --platform linux/amd64,linux/arm64 -f docker/Dockerfile_24.04_base ${OPT} . -t wulffern/aicex:base_24.04
@@ -70,7 +76,11 @@ cirun24:
 	docker run --rm --name aicex  -p 2021:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:24.04_latest &
 
 cirun26:
-	docker run --rm --name aicex  -p 2021:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:26.04_latest &
+	docker run --rm --name aicex \
+		-e PUID=$$(id -u) -e PGID=$$(id -g) \
+		-e TAKE_UID_FROM_DIR=/home/aicex \
+		-p 2021:22 -v `pwd`:/home/aicex/ \
+		-i wulffern/aicex:26.04_latest &
 
 cirun24tag:
 	docker run --rm --name aicex  -p 2021:22 -v `pwd`:/home/aicex/ -i wulffern/aicex:24.04_${TAG} &

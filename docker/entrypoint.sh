@@ -7,6 +7,11 @@ APP_GROUP="${APP_GROUP:-aicex}"
 PUID="${PUID:-}"
 PGID="${PGID:-}"
 TAKE_UID_FROM_DIR="${TAKE_UID_FROM_DIR:-/opt}"
+CHOWN_TAKE_UID_FROM_DIR="${CHOWN_TAKE_UID_FROM_DIR:-0}"
+
+if (( $# == 0 )); then
+  set -- bash -lc 'echo "No command provided; Starting SSH"; sudo service ssh restart && tail -f /dev/null'
+fi
 
 # Infer UID/GID from mount if not provided
 if [[ -z "${PUID}" || -z "${PGID}" ]] && [[ -e "${TAKE_UID_FROM_DIR}" ]]; then
@@ -25,6 +30,10 @@ as_root() {
     return 127
   fi
 }
+
+export PDK_ROOT=/opt/pdk/share/pdk
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/eda/lib
+export PATH=/opt/eda/bin:$HOME/.local/bin:$PATH
 
 # If we can get root (sudo works), do the UID/GID alignment
 if as_root true >/dev/null 2>&1; then
@@ -47,7 +56,7 @@ if as_root true >/dev/null 2>&1; then
   fi
 
   # Optional: make the mount writable (can be slow on huge trees)
-  if [[ -e "${TAKE_UID_FROM_DIR}" ]]; then
+  if [[ "${CHOWN_TAKE_UID_FROM_DIR}" == "1" && -e "${TAKE_UID_FROM_DIR}" ]]; then
     as_root chown -R "${APP_USER}:${APP_GROUP}" "${TAKE_UID_FROM_DIR}" 2>/dev/null || true
   fi
 fi
@@ -59,13 +68,9 @@ if [[ "$(id -un)" != "${APP_USER}" ]]; then
   elif command -v su-exec >/dev/null 2>&1; then
     exec su-exec "${APP_USER}:${APP_GROUP}" "$@"
   else
+    export HOME="$(getent passwd "${APP_USER}" | cut -d: -f6)"
     exec su -s /bin/bash -c "$(printf '%q ' "$@")" "${APP_USER}"
   fi
 fi
 
-if (( $# == 0 )); then
-  echo "No command provided; Starting SSH"
-  sudo service ssh restart && tail -f /dev/null
-else
-  exec "$@"
-fi
+exec "$@"

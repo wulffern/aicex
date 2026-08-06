@@ -79,6 +79,9 @@ endif
 
 
 
+#- Builds tcl/tk from source into ${TK_PREFIX}. Needed on 24.04, where
+#- magic_compile points --with-tcl at ${TK_PREFIX}/lib. On 26.04 the tools
+#- pick up the system tcl/tk, so "make requirements" is enough.
 tt:
 	make tcl_compile
 	make tcl_install
@@ -155,6 +158,22 @@ ifeq (${VER},24.04)
 	xz-utils liblzma-dev libgtk2.0-dev python3-pil.imagetk verilator
 
 else
+ifeq (${VER},26.04)
+#- 26.04 builds magic, netgen and xschem against the system tcl/tk, so
+#- there is no need to run "make tt" first. libgl1-mesa-glx is gone from
+#- 24.04 onwards, use the mesa dev packages instead.
+	sudo apt -y install python3-pip python3-dev python3-venv libxft2 libxft-dev libxss1 \
+	libxaw7 libxaw7-dev libcairo2 libcairo2-dev \
+	mesa-common-dev libgl-dev libglu1-mesa-dev \
+	tcsh flex bison pandoc m4 \
+	git vim curl  libx11-dev libxt-dev libxrender1 libxrender-dev \
+	libxcb1 libx11-xcb-dev \
+	tcl-dev tk-dev tcl-tclreadline libxpm4 libxpm-dev \
+	xterm vim-gtk3 gawk autoconf automake	libtool libreadline-dev gperf \
+	zlib1g-dev libncurses-dev libqhull-dev \
+	xz-utils liblzma-dev libgtk2.0-dev python3-pil.imagetk verilator
+
+else
 	sudo apt -y install python3-pip libxft2 libxss1 \
 	libxaw7 libcairo2 \
 	libgl1-mesa-glx libglu1-mesa \
@@ -167,11 +186,12 @@ else
 
 endif
 endif
+endif
 
 #--------------------------------------------------------------------
 # TCL/TK
 #--------------------------------------------------------------------
-ttver=8.6.10
+ttver=8.6.13
 tclver=tcl${ttver}
 tkver=tk${ttver}
 
@@ -184,7 +204,7 @@ ${tclver}:
 
 tcl_compile: ${tclver}
 	cd ${tclver}/unix && \
-	./configure --prefix=${TK_PREFIX} CFLAGS="${CFLAGS} -std=gnu17" && \
+	./configure --prefix=${TK_PREFIX} CFLAGS="${CFLAGS}" && \
 	make
 
 tcl_install:
@@ -199,7 +219,7 @@ tk_compile: ${tkver}
 	cd ${tkver}/unix && \
 	./configure --prefix=${TK_PREFIX} \
 	--with-tcl=${TK_PREFIX}/lib \
-	--with-x --x-includes=${X11_INC} --x-libraries=${X11_LIB} CFLAGS="${CFLAGS} -std=gnu17"  && \
+	--with-x --x-includes=${X11_INC} --x-libraries=${X11_LIB} CFLAGS="${CFLAGS}" && \
 	make
 
 tk_install:

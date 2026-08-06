@@ -1,28 +1,29 @@
 FROM ubuntu:resolute
 
-ARG UID=1001
+ARG UID=10001
 ARG USER=aicex
 
 RUN ln -snf /usr/share/zoneinfo/$CONTAINER_TIMEZONE /etc/localtime && echo $CONTAINER_TIMEZONE > /etc/timezone
 
 RUN apt-get update && \
-    apt-get -y install sudo make ngspice verilator pandoc  \
-    openssh-server iverilog yosys  \
-    vim curl xterm gawk bash python3-pip libxft2 libxss1 m4 libx11-dev tcl-dev tk-dev \
-    libxaw7 mesa-common-dev libgl-dev libglu1-mesa-dev  zlib1g-dev libncurses-dev  \
-    tcsh flex bison pandoc \
-    git vim curl  libxrender1 libxrender-dev \
+    apt-get -y install --no-install-recommends sudo make ngspice verilator pandoc ca-certificates lsb-release g++ \
+    openssh-server iverilog yosys klayout  \
+    vim curl xterm gawk bash python3-pip python3-dev libxft2 libxss1 m4 libx11-dev tcl-dev tk-dev \
+    libxaw7 mesa-common-dev libgl-dev libglu1-mesa-dev  zlib1g-dev libncurses-dev libqhull-dev \
+    tcsh flex bison \
+    texlive-latex-base texlive-latex-recommended texlive-fonts-recommended lmodern librsvg2-bin \
+    git libxrender1 libxrender-dev \
     libxcb1 libx11-xcb-dev libcairo2 libcairo2-dev \
     libxpm4  \
-    xterm vim-gtk3 gawk tcl-tclreadline libxpm-dev automake libtool libxaw7-dev libreadline-dev gperf \
-    xz-utils liblzma-dev libgtk2.0-dev python3-pil.imagetk git python3.13-venv &&\
+    vim-gtk3 tcl-tclreadline libxpm-dev automake libtool libxaw7-dev libreadline-dev gperf \
+    xz-utils liblzma-dev libgtk2.0-dev python3-pil.imagetk python3-venv gosu &&\
     apt-get autoremove --purge -y && \
     apt-get clean && \
     apt-get autoclean && \
     rm -rf /var/lib/apt/lists/*
 
 RUN useradd -m -u ${UID}  -s /bin/bash ${USER}
-RUN echo "${USER}:${USER}" | chpasswd && adduser ${USER} sudo
+RUN echo "${USER}:${USER}" | chpasswd && usermod -aG sudo ${USER}
 RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 RUN echo  "X11UseLocalhost no\n" >> /etc/ssh/sshd_config
@@ -46,22 +47,46 @@ RUN sudo mkdir /opt/eda/python3
 RUN sudo chown -R ${USER}:${USER} /opt/eda/python3/
 RUN python3 -m venv /opt/eda/python3
 ENV PATH=/opt/eda/bin:/opt/eda/python3/bin:~/.local/bin:$PATH
-RUN python3 -m pip install matplotlib cicsim cicconf cicpy cicspi numpy click svgwrite pyyaml pandas tabulate wheel setuptools tikzplotlib scipy
+
 RUN sudo mkdir --parents /opt/pdk/share/
-RUN cd /opt/pdk/share/ && sudo git clone https://github.com/wulffern/sky130.git pdk
 
-
-
-COPY tests tests
+COPY tests/Makefile tests/patch_legacy_c.py tests/
 WORKDIR /opt/tests
-
 RUN sudo make xschem_compile && sudo make xschem_install && sudo make clean
 RUN sudo make netgen_compile && sudo make netgen_install && sudo make clean
 RUN sudo make magic_compile && sudo make magic_install && sudo make clean
+WORKDIR /opt/
+RUN git clone https://github.com/RTimothyEdwards/open_pdks.git && cd open_pdks && \
+          ./configure --prefix=/opt/pdk --enable-sky130-pdk --with-sky130-variants=A \
+            --enable-primitive-sky130 --enable-sc-hd-sky130 \
+            --disable-io-sky130 --disable-sc-hs-sky130 --disable-sc-ms-sky130 --disable-sc-ls-sky130 \
+            --disable-sc-lp-sky130 --disable-sc-hdll-sky130 --disable-sc-hvl-sky130 --disable-alpha-sky130 \
+            --enable-xschem-sky130 \
+            --disable-gf180mcu-pdk --disable-primitive-gf180mcu \
+            --disable-verification-gf180mcu --disable-klayout-gf180mcu --disable-io-gf180mcu \
+            --disable-sc-7t5v0-gf180mcu --disable-sc-9t5v0-gf180mcu --disable-sram-gf180mcu \
+            --disable-alpha-gf180mcu --disable-osu-sc-gf180mcu --disable-avalon-sc-gf180mcu \
+            --disable-ocd-io-gf180mcu --disable-ocd-sram-gf180mcu \
+            && make && sudo make install && cd .. && rm -rf open_pdks
+
+RUN python3 -m pip install --no-cache-dir matplotlib cicsim cicconf cicpy cicspi numpy click \
+svgwrite pyyaml pandas tabulate wheel setuptools tikzplotlib scipy gdstk pygltflib gdspy
+
+# `triangle` on PyPI ships a Cython-generated triangle/core.c that includes
+# longintrepr.h, which was removed in Python 3.12+. Ubuntu 'resolute' ships
+# Python 3.14, so the wheel fails to build. Install from upstream with a
+# current Cython (no build isolation) so the C is regenerated.
+RUN python3 -m pip install --no-cache-dir "cython>=3" && \
+    python3 -m pip install --no-cache-dir --no-build-isolation git+https://github.com/drufat/triangle.git
+
+
+
+
 RUN git config --global --add safe.directory /home/aicex
 WORKDIR /home/${USER}
 RUN mkdir /home/${USER}/.ssh
 
+USER root
 COPY docker/entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN sudo chmod ug+rwx /usr/local/bin/entrypoint.sh
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]

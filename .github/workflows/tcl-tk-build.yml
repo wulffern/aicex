@@ -1,0 +1,82 @@
+name: EDA tool build
+
+on:
+  push:
+    branches:
+      - main
+      - claude/**
+    paths:
+      - tests/Makefile
+      - tests/patch_legacy_c.py
+      - .github/workflows/tcl-tk-build.yml
+  pull_request:
+    paths:
+      - tests/Makefile
+      - tests/patch_legacy_c.py
+      - .github/workflows/tcl-tk-build.yml
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Ubuntu ${{ matrix.ubuntu }}
+    runs-on: ubuntu-latest
+    container:
+      image: ${{ matrix.container }}
+      options: --user root
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - ubuntu: 24.04
+            container: ubuntu:24.04
+          - ubuntu: 26.04
+            container: ubuntu:26.04
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # lsb-release must be present before make runs, otherwise VER is
+      # empty and the Makefile picks the wrong branch.
+      - name: Bootstrap
+        run: |
+          apt-get update
+          apt-get install -y build-essential wget git sudo lsb-release python3
+
+      - name: Install requirements from the Makefile
+        working-directory: tests
+        run: make requirements
+
+      # The 26.04 requirements list is self-sufficient; 24.04 still misses
+      # what tk and magic need to build from source.
+      - name: Install remaining build dependencies
+        if: matrix.ubuntu == '24.04'
+        run: |
+          apt-get install -y \
+            libxft-dev libxt-dev autoconf \
+            libcairo2-dev libgl-dev libglu1-mesa-dev zlib1g-dev
+
+      - name: Prepare install prefix
+        run: mkdir -p /opt/eda
+
+      - name: Add /opt/eda/bin to PATH
+        run: echo "/opt/eda/bin" >> $GITHUB_PATH
+
+      # 24.04 points magic at ${TK_PREFIX}/lib, so tcl/tk has to be built
+      # first. 26.04 resolves tcl/tk from the system packages instead, and
+      # skipping this step here is what proves that.
+      - name: Build and install TCL/TK
+        if: matrix.ubuntu == '24.04'
+        working-directory: tests
+        run: make tt
+
+      - name: Build and install Magic
+        working-directory: tests
+        run: make magic_compile && make magic_install
+
+      - name: Build and install Netgen
+        working-directory: tests
+        run: make netgen_compile && make netgen_install
+
+      - name: Build and install Xschem
+        working-directory: tests
+        run: make xschem_compile && make xschem_install
