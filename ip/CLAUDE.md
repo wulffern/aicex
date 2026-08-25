@@ -52,11 +52,14 @@ cd cicpy  && ruff check src/
 ```bash
 cd <tool> && make build && make upload
 ```
+`cicspi` is the exception: it releases from a tag push, and its workflow
+builds, publishes and cuts the GitHub release.
 
 ### IP-level simulation
 ```bash
 cd <ip_name>/sim
 cicsim run <Testbench>.spi --corners Tt Th Tl
+cicsim run <Testbench>.spi --threads 4   # corners in parallel
 cicsim wave                          # open waveform viewer
 cicsim results                       # tabular summary
 cicsim summary                       # markdown report with spec checking
@@ -85,10 +88,11 @@ make committers NAME=lelo_gr02_sky130a   # ... for a single repo
 config.yaml          # Pinned dependency list (cicconf reads this)
 Makefile             # Top-level batch targets (e.g. make lelo)
 cicconf/             # Dependency & clone manager
-cicsim/              # Simulation orchestrator + waveform viewer
+cicsim/              # Simulation orchestrator
 cicpy/               # Transpiler (.cic JSON → SPICE/SKILL/Verilog/Magic/SVG)
 ciccreator/          # C++ generator for SAR ADC layouts (.cic.gz files)
 cicspi/              # SPICE netlist parser (used by cicpy)
+cicwave/             # Waveform viewer / analysis (standalone package)
 cpdk/                # Carsten's PDK: XSchem symbols, design rules
 tech_sky130A/        # Technology library for Skywater 130A (Tiny Tapeout)
 tech_sky130B/        # Technology library for Skywater 130B
@@ -138,12 +142,15 @@ config.yaml
 | Tool | Entry point | Notable modules |
 |------|-------------|-----------------|
 | cicconf | `cicconf/entry.py` | `config.py`, `cmdip.py` |
-| cicsim | `cicsim/cicsim.py` | `cmdrunng.py` (ngspice runner), `cmdwave_pg.py` (PyQtGraph viewer), `ngraw.py` (binary raw parser), `spec.py`, `pivot.py` |
-| cicpy | `src/cicpy/cic.py` | `core/` (data model), `printer/` (output generators), `eda/` (Magic/Xschem integration) |
+| cicsim | `cicsim/cicsim.py` | `cmdrunng.py` (ngspice runner), `ngraw.py` (binary raw parser), `spec.py`, `pivot.py` |
+| cicpy | `src/cicpy/cic.py` | `core/` (data model), `printer/` (output generators), `compiler/` (ciccreator object files), `eda/` (Magic/Xschem integration), `logger.py` |
+| cicspi | `cicspi/entry.py` | `spiceparser.py`, `subckt.py`, `subcktinstance.py` |
+| cicwave | `src/cicwave/cli.py` | `wave_pg.py` (PyQtGraph viewer), `wavefiles.py` (file readers), `pivot.py` |
 
 ## Rules
 - **Never add IP or tool folders directly to git** — use `cicconf` to manage them.
 - **Always use [Click](https://click.palletsprojects.com/) for CLI argument parsing** in all Python tools.
+- **Log, don't print** — the Python tools configure logging centrally (cicpy in `logger.py`); command output that is data goes to the console object, diagnostics to the logger.
 - **Document your work** — each IP has a `README.md`; tools use docstrings and `--help`.
 - Simulation corners are temperature × voltage pairs: `Tt/Tl/Th` × `Vt/Vh/Vl`.
 - IPs use a shared `Makefile` pattern: a minimal local file that does `include tech/make/main.make`.
@@ -151,4 +158,4 @@ config.yaml
 
 ## CI/CD
 
-GitHub Actions (`.github/workflows/`) run GDS/DRC/LVS/DOCS pipelines using Docker image `wulffern/aicex:26.04_latest` (has ngspice, Magic, XSchem, Python env). Workflows delegate to shared reusable workflows in the `jnw-actions` repo. The `PDK_ROOT` env var must point to the SkyWater PDK (typically `/opt/pdks/sky130A` in CI).
+GitHub Actions (`.github/workflows/`) run GDS/DRC/LVS/DOCS pipelines using Docker image `wulffern/aicex:26.04_latest` (has ngspice, Magic, XSchem, Python env). Workflows delegate to shared reusable workflows in the `jnw-actions` repo, and take the cell they build from `info.yaml`, not from `work/Makefile`. The `PDK_ROOT` env var must point to the SkyWater PDK (typically `/opt/pdks/sky130A` in CI).
