@@ -150,3 +150,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Build products of tests/Makefile: sources it clones or unpacks to build
+# the EDA tools locally. 1.3 GB of them, and `make clean` removes them.
+/tests/yosys/
+/tests/tcl8.6.10/
+/tests/tcl8.6.10-src.tar.gz
+/tests/ltmain.sh
+/iic-osic-tools/
