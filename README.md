@@ -19,15 +19,15 @@ analog designs. Most of the designs have been developed as part of the NTNU
 course TFE4188 - Advanced Integrated Circuits.
 
 ``` sh
-ci/       # Continous integration. Mostly check of the tutorials
+ci/       # Continuous integration. Mostly check of the tutorials
 docker/   # Dockerfiles to create a container with the tools
 ip/       # all the IPs, config.yaml contains the links
 tests/    # Makefile used for installation of the tools
 ```
 
-# Installing, and usage 
+# Installing and usage
 
-For a detailed scription of installing the tools, see
+For a detailed description of installing the tools, see
 <http://analogicus.com/aic2026/the_tools>
 
 For a description of the usage, see
@@ -44,7 +44,7 @@ cicconf clone --https
 cd ..
 ```
 
-I assume you have docker installed, or have windows subsystem for linux. 
+I assume you have Docker installed, or have Windows Subsystem for Linux.
 
 > &#x26A0;  It's a very good idea to check what's inside scripts before you run them
 
