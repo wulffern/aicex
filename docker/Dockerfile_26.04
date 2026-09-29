@@ -56,19 +56,24 @@ RUN sudo make xschem_compile && sudo make xschem_install && sudo make clean
 RUN sudo make netgen_compile && sudo make netgen_install && sudo make clean
 RUN sudo make magic_compile && sudo make magic_install && sudo make clean
 WORKDIR /opt/
-RUN git clone https://github.com/RTimothyEdwards/open_pdks.git && cd open_pdks && \
-          ./configure --prefix=/opt/pdk --enable-sky130-pdk --with-sky130-variants=A \
-            --enable-primitive-sky130 --enable-sc-hd-sky130 \
-            --disable-io-sky130 --disable-sc-hs-sky130 --disable-sc-ms-sky130 --disable-sc-ls-sky130 \
-            --disable-sc-lp-sky130 --disable-sc-hdll-sky130 --disable-sc-hvl-sky130 --disable-alpha-sky130 \
-            --enable-xschem-sky130 \
-            --disable-gf180mcu-pdk --disable-primitive-gf180mcu \
-            --disable-verification-gf180mcu --disable-klayout-gf180mcu --disable-io-gf180mcu \
-            --disable-sc-7t5v0-gf180mcu --disable-sc-9t5v0-gf180mcu --disable-sram-gf180mcu \
-            --disable-alpha-gf180mcu --disable-osu-sc-gf180mcu --disable-avalon-sc-gf180mcu \
-            --disable-ocd-io-gf180mcu --disable-ocd-sram-gf180mcu \
-            && make && sudo make install && cd .. && rm -rf open_pdks
+#- The PDK is DOWNLOADED, not built: building open_pdks runs magic over
+#- every library and was the slowest step of this image. ciel serves the
+#- same open_pdks output prebuilt, keyed by open_pdks commit, so the
+#- version is pinned here instead of being whatever HEAD was on the day.
+#- Only what the flows read: common (libs.tech: magic, netgen, xschem,
+#- ngspice, klayout), the primitives and sc_hd. This build was made with
+#- magic 8.3.677 (sky130A/.config/nodeinfo.json); MAGIC_VER in
+#- tests/Makefile must stay at or above it.
+ARG CIEL_SKY130=1689ac3f2dc763876eaf967227c7dfe831b031ae
+RUN python3 -m pip install --no-cache-dir ciel && \
+    sudo mkdir -p /opt/pdk/share/pdk && sudo chown -R ${USER}:${USER} /opt/pdk && \
+    ciel enable --pdk-family sky130 --pdk-root /opt/pdk/share/pdk \
+        -l sky130_fd_pr -l sky130_fd_sc_hd ${CIEL_SKY130}
 
+#- changing PIP_REFRESH misses the cache from here down, so a rebuild
+#- with a warm cache still installs the CURRENT Python tools: CI once
+#- ran on a baked-in cicspi a release behind for a month
+ARG PIP_REFRESH=0
 RUN python3 -m pip install --no-cache-dir matplotlib cicsim cicconf cicpy cicspi numpy click \
 svgwrite pyyaml pandas tabulate wheel setuptools tikzplotlib scipy gdstk pygltflib gdspy
 

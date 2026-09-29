@@ -1,0 +1,242 @@
+name: CI image (GHCR)
+
+# Builds docker/Dockerfile_26.04 on NATIVE runners -- amd64 and arm64 each
+# on their own hardware, no QEMU -- merges the two into one multi-arch
+# image on GHCR, proves it by running what the IP workflows run, and only
+# then publishes it as 26.04_latest.
+#
+# Why native: on an Apple-silicon Mac the amd64 half builds under QEMU and
+# took 16 min; here a cold build is ~8 min and a warm one ~3. The PDK is
+# downloaded with ciel, not built (see the Dockerfile).
+#
+# Every run first pushes a CANDIDATE, 26.04_run-<run id>. The prove jobs
+# run inside the candidate; `publish` retags it 26.04_latest and
+# 26.04_<yyyymmdd> -- on main only, and only when every proof passed. A
+# pull request therefore builds and proves, but never moves latest.
+#
+# The monthly schedule exists because the Python tools are baked in: the
+# image once shipped cicspi 0.1.4 for a month after 0.1.5 was released,
+# and CI tested against the old one. PIP_REFRESH (the run id) makes every
+# build reinstall them even when the layer cache is warm.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 4 1 * *'
+  push:
+    branches: ["main"]
+    paths:
+      - 'docker/Dockerfile_26.04'
+      - 'docker/entrypoint.sh'
+      - 'docker/test_ip.sh'
+      - 'tests/Makefile'
+      - 'tests/patch_legacy_c.py'
+      - '.github/workflows/docker-ghcr.yaml'
+  pull_request:
+    paths:
+      - 'docker/Dockerfile_26.04'
+      - 'docker/entrypoint.sh'
+      - 'docker/test_ip.sh'
+      - 'tests/Makefile'
+      - 'tests/patch_legacy_c.py'
+      - '.github/workflows/docker-ghcr.yaml'
+
+concurrency:
+  group: docker-ghcr-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  packages: write
+
+env:
+  IMAGE: ghcr.io/${{ github.repository_owner }}/aicex
+  CANDIDATE: 26.04_run-${{ github.run_id }}
+  #- the image's entrypoint sets this, but a container JOB bypasses the
+  #- entrypoint, so every job that runs the tools needs it said here --
+  #- as the IP actions and cicpy's CI do (without it xschem exits 10)
+  PDK_ROOT: /opt/pdk/share/pdk
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: linux/amd64
+            runner: ubuntu-24.04
+          - platform: linux/arm64
+            runner: ubuntu-24.04-arm
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - name: Free disk
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL || true
+          df -h /
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      #- pushed by digest only; the merge job gives the pair one tag
+      - name: Build and push
+        id: build
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: docker/Dockerfile_26.04
+          platforms: ${{ matrix.platform }}
+          build-args: PIP_REFRESH=${{ github.run_id }}
+          outputs: type=image,name=${{ env.IMAGE }},push-by-digest=true,name-canonical=true,push=true
+          cache-from: type=gha,scope=${{ matrix.platform }}
+          cache-to: type=gha,mode=max,scope=${{ matrix.platform }}
+
+      - name: Export digest
+        run: |
+          mkdir -p /tmp/digests
+          d="${{ steps.build.outputs.digest }}"
+          touch "/tmp/digests/${d#sha256:}"
+
+      - name: Upload digest
+        uses: actions/upload-artifact@v4
+        with:
+          name: digest-${{ matrix.runner }}
+          path: /tmp/digests/*
+          if-no-files-found: error
+
+  merge:
+    needs: build
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Download digests
+        uses: actions/download-artifact@v4
+        with:
+          path: /tmp/digests
+          pattern: digest-*
+          merge-multiple: true
+
+      - name: Set up Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Tag the candidate
+        working-directory: /tmp/digests
+        run: |
+          docker buildx imagetools create -t $IMAGE:$CANDIDATE \
+            $(printf "$IMAGE@sha256:%s " *)
+          docker buildx imagetools inspect $IMAGE:$CANDIDATE
+
+  #- the image on each architecture: the tools start and say their versions
+  smoke:
+    needs: merge
+    strategy:
+      fail-fast: false
+      matrix:
+        runner: [ubuntu-24.04, ubuntu-24.04-arm]
+    runs-on: ${{ matrix.runner }}
+    container:
+      image: ghcr.io/${{ github.repository_owner }}/aicex:26.04_run-${{ github.run_id }}
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+      options: --user root
+    steps:
+      - name: Tool versions
+        run: |
+          export PATH=/opt/eda/bin:/opt/eda/python3/bin:$PATH
+          uname -m
+          magic --version
+          echo quit | netgen -batch | head -3
+          xschem -v 2>&1 | head -2
+          ngspice -v | head -2
+          ls -l /opt/pdk/share/pdk/
+          python3 -m pip list 2>/dev/null | grep -iE "^cic"
+
+  #- the proof: what the IP workflows do, on IPs that cover the flows.
+  #- sun_pll is sky130B, which the docker.io images never had; its LVS
+  #- does not match today, so it is run for the tools, not judged.
+  prove:
+    needs: merge
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - repo: https://github.com/wulffern/lelo_temp_sky130a.git
+            lvs: lvs
+          - repo: https://github.com/wulffern/rey_ldo_sky130a.git
+            lvs: lvs
+          - repo: https://github.com/analogicus/jnw_tr_sky130A.git
+            lvs: lvs
+          - repo: https://github.com/wulffern/sun_pll_sky130nm.git
+            lvs: nolvs
+    runs-on: ubuntu-24.04
+    container:
+      image: ghcr.io/${{ github.repository_owner }}/aicex:26.04_run-${{ github.run_id }}
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+      options: --user root
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Test IP
+        run: bash docker/test_ip.sh ${{ matrix.repo }} ${{ matrix.lvs }}
+
+  #- cicpy's own suites, in the image, against the cicspi it ships
+  cicpy:
+    needs: merge
+    runs-on: ubuntu-24.04
+    container:
+      image: ghcr.io/${{ github.repository_owner }}/aicex:26.04_run-${{ github.run_id }}
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+      options: --user root
+    steps:
+      - name: cicpy tests
+        run: |
+          export PATH=/opt/eda/bin:/opt/eda/python3/bin:$PATH
+          git clone -q --depth 1 https://github.com/wulffern/cicpy /tmp/cicpy
+          cd /tmp/cicpy
+          python3 -m pip install -q .
+          python3 -m pip list 2>/dev/null | grep -iE "^cic"
+          make unit_test test
+
+  #- only a proven image on main becomes latest
+  publish:
+    needs: [smoke, prove, cicpy]
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Set up Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish
+        run: |
+          docker buildx imagetools create \
+            -t $IMAGE:26.04_latest -t $IMAGE:26.04_$(date -u +%Y%m%d) \
+            $IMAGE:$CANDIDATE
+          docker buildx imagetools inspect $IMAGE:26.04_latest
