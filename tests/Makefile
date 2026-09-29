@@ -29,9 +29,9 @@
 #- GIT repo Versions
 #---------------------------------------------------------------------
 XSCHEM_VER=3.4.7
-MAGIC_VER=8.3.541
+MAGIC_VER=8.3.684
 #MAGIC_VER=master
-NETGEN_VER=master
+NETGEN_VER=1.5.324
 NGSPICE_VER=master
 IVERILOG_VER=master
 YOSYS_VER=main
@@ -322,10 +322,11 @@ endif
 
 netgen:
 	git clone https://github.com/RTimothyEdwards/netgen.git
-	cd netgen && git checkout ${NETGEN_VER} && git pull
+	cd netgen && git checkout ${NETGEN_VER}
 
 netgen_compile: netgen
-	cd netgen && git checkout ${NETGEN_VER} && git pull
+	cd netgen && git checkout ${NETGEN_VER}
+	-cd netgen && git pull
 ifeq (${OS},mac)
 	perl -pe "s/-g/-g -Wno-error=implicit-function-declaration/ig" -i netgen/configure
 	cd netgen && ./configure --prefix ${EDA_PREFIX}/ --with-tclincls=${TK_PREFIX}/include --with-tkincls=${TK_PREFIX}/include --with-tcl=${TK_PREFIX}/lib \
