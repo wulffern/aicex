@@ -1,20 +1,38 @@
 name: CI image (GHCR)
 
 # Builds docker/Dockerfile_26.04 on NATIVE runners -- amd64 and arm64 each
-# on their own hardware, no QEMU -- merges the two into one multi-arch tag
-# on GHCR, then proves the image by running what the IP workflows run.
+# on their own hardware, no QEMU -- merges the two into one multi-arch
+# image on GHCR, proves it by running what the IP workflows run, and only
+# then publishes it as 26.04_latest.
 #
 # Why native: on an Apple-silicon Mac the amd64 half builds under QEMU and
-# took 16 min, against 3 min natively. The PDK is downloaded with ciel,
-# not built (see the Dockerfile).
+# took 16 min; here a cold build is ~8 min and a warm one ~3. The PDK is
+# downloaded with ciel, not built (see the Dockerfile).
 #
-# TRIAL: it pushes only the tag below and touches nothing any workflow
-# uses today. The docker.io images and their tags are unchanged.
+# Every run first pushes a CANDIDATE, 26.04_run-<run id>. The prove jobs
+# run inside the candidate; `publish` retags it 26.04_latest and
+# 26.04_<yyyymmdd> -- on main only, and only when every proof passed. A
+# pull request therefore builds and proves, but never moves latest.
+#
+# The monthly schedule exists because the Python tools are baked in: the
+# image once shipped cicspi 0.1.4 for a month after 0.1.5 was released,
+# and CI tested against the old one. PIP_REFRESH (the run id) makes every
+# build reinstall them even when the layer cache is warm.
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '0 4 1 * *'
   push:
-    branches: ["docker-ciel"]
+    branches: ["main"]
+    paths:
+      - 'docker/Dockerfile_26.04'
+      - 'docker/entrypoint.sh'
+      - 'docker/test_ip.sh'
+      - 'tests/Makefile'
+      - 'tests/patch_legacy_c.py'
+      - '.github/workflows/docker-ghcr.yaml'
+  pull_request:
     paths:
       - 'docker/Dockerfile_26.04'
       - 'docker/entrypoint.sh'
@@ -24,7 +42,7 @@ on:
       - '.github/workflows/docker-ghcr.yaml'
 
 concurrency:
-  group: docker-ghcr
+  group: docker-ghcr-${{ github.ref }}
   cancel-in-progress: true
 
 permissions:
@@ -33,7 +51,7 @@ permissions:
 
 env:
   IMAGE: ghcr.io/${{ github.repository_owner }}/aicex
-  TAG: 26.04_ciel-test
+  CANDIDATE: 26.04_run-${{ github.run_id }}
   #- the image's entrypoint sets this, but a container JOB bypasses the
   #- entrypoint, so every job that runs the tools needs it said here --
   #- as the IP actions and cicpy's CI do (without it xschem exits 10)
@@ -77,6 +95,7 @@ jobs:
           context: .
           file: docker/Dockerfile_26.04
           platforms: ${{ matrix.platform }}
+          build-args: PIP_REFRESH=${{ github.run_id }}
           outputs: type=image,name=${{ env.IMAGE }},push-by-digest=true,name-canonical=true,push=true
           cache-from: type=gha,scope=${{ matrix.platform }}
           cache-to: type=gha,mode=max,scope=${{ matrix.platform }}
@@ -86,7 +105,6 @@ jobs:
           mkdir -p /tmp/digests
           d="${{ steps.build.outputs.digest }}"
           touch "/tmp/digests/${d#sha256:}"
-          df -h /
 
       - name: Upload digest
         uses: actions/upload-artifact@v4
@@ -116,13 +134,12 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Create multi-arch tag
+      - name: Tag the candidate
         working-directory: /tmp/digests
         run: |
-          docker buildx imagetools create \
-            -t $IMAGE:$TAG -t $IMAGE:26.04_${{ github.sha }} \
+          docker buildx imagetools create -t $IMAGE:$CANDIDATE \
             $(printf "$IMAGE@sha256:%s " *)
-          docker buildx imagetools inspect $IMAGE:$TAG
+          docker buildx imagetools inspect $IMAGE:$CANDIDATE
 
   #- the image on each architecture: the tools start and say their versions
   smoke:
@@ -133,7 +150,7 @@ jobs:
         runner: [ubuntu-24.04, ubuntu-24.04-arm]
     runs-on: ${{ matrix.runner }}
     container:
-      image: ghcr.io/${{ github.repository_owner }}/aicex:26.04_ciel-test
+      image: ghcr.io/${{ github.repository_owner }}/aicex:26.04_run-${{ github.run_id }}
       credentials:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
@@ -151,8 +168,8 @@ jobs:
           python3 -m pip list 2>/dev/null | grep -iE "^cic"
 
   #- the proof: what the IP workflows do, on IPs that cover the flows.
-  #- sun_pll is sky130B, which the previous image did not have at all;
-  #- its LVS does not match today, so it is run for the tools, not judged.
+  #- sun_pll is sky130B, which the docker.io images never had; its LVS
+  #- does not match today, so it is run for the tools, not judged.
   prove:
     needs: merge
     strategy:
@@ -169,7 +186,7 @@ jobs:
             lvs: nolvs
     runs-on: ubuntu-24.04
     container:
-      image: ghcr.io/${{ github.repository_owner }}/aicex:26.04_ciel-test
+      image: ghcr.io/${{ github.repository_owner }}/aicex:26.04_run-${{ github.run_id }}
       credentials:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
@@ -186,7 +203,7 @@ jobs:
     needs: merge
     runs-on: ubuntu-24.04
     container:
-      image: ghcr.io/${{ github.repository_owner }}/aicex:26.04_ciel-test
+      image: ghcr.io/${{ github.repository_owner }}/aicex:26.04_run-${{ github.run_id }}
       credentials:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
@@ -200,3 +217,26 @@ jobs:
           python3 -m pip install -q .
           python3 -m pip list 2>/dev/null | grep -iE "^cic"
           make unit_test test
+
+  #- only a proven image on main becomes latest
+  publish:
+    needs: [smoke, prove, cicpy]
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Set up Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish
+        run: |
+          docker buildx imagetools create \
+            -t $IMAGE:26.04_latest -t $IMAGE:26.04_$(date -u +%Y%m%d) \
+            $IMAGE:$CANDIDATE
+          docker buildx imagetools inspect $IMAGE:26.04_latest

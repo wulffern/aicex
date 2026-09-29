@@ -70,6 +70,10 @@ RUN python3 -m pip install --no-cache-dir ciel && \
     ciel enable --pdk-family sky130 --pdk-root /opt/pdk/share/pdk \
         -l sky130_fd_pr -l sky130_fd_sc_hd ${CIEL_SKY130}
 
+#- changing PIP_REFRESH misses the cache from here down, so a rebuild
+#- with a warm cache still installs the CURRENT Python tools: CI once
+#- ran on a baked-in cicspi a release behind for a month
+ARG PIP_REFRESH=0
 RUN python3 -m pip install --no-cache-dir matplotlib cicsim cicconf cicpy cicspi numpy click \
 svgwrite pyyaml pandas tabulate wheel setuptools tikzplotlib scipy gdstk pygltflib gdspy
 
