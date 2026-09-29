@@ -34,6 +34,10 @@ permissions:
 env:
   IMAGE: ghcr.io/${{ github.repository_owner }}/aicex
   TAG: 26.04_ciel-test
+  #- the image's entrypoint sets this, but a container JOB bypasses the
+  #- entrypoint, so every job that runs the tools needs it said here --
+  #- as the IP actions and cicpy's CI do (without it xschem exits 10)
+  PDK_ROOT: /opt/pdk/share/pdk
 
 jobs:
   build:
