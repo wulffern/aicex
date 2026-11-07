@@ -491,7 +491,8 @@ yosys:
 yosys_compile: yosys
 	cd yosys && git checkout ${YOSYS_VER}
 	cd yosys && git pull && make config-gcc PREFIX=${EDA_PREFIX} \
-	&& make -j 8 PREFIX=${EDA_PREFIX}
+	&& make -j 8 PREFIX=${EDA_PREFIX} \
+	    "PKG_CONFIG=env PKG_CONFIG_PATH=${EDA_PREFIX}/lib/pkgconfig:/opt/homebrew/opt/libffi/lib/pkgconfig pkg-config"
 
 yosys_install:
 	cd yosys && sudo make PREFIX=${EDA_PREFIX} install

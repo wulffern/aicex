@@ -25,11 +25,11 @@ cd /opt/pdk
 
 test -f open_pdks || git clone https://github.com/RTimothyEdwards/open_pdks.git
 
-cd open_pdks && \
+cd open_pdks && git pull && \
           ./configure --prefix=/opt/pdk --enable-sky130-pdk --with-sky130-variants=A \
             --enable-primitive-sky130 --enable-sc-hd-sky130 \
-            --disable-io-sky130 --disable-sc-hs-sky130 --disable-sc-ms-sky130 --disable-sc-ls-sky130 \
-            --disable-sc-lp-sky130 --disable-sc-hdll-sky130 --disable-sc-hvl-sky130 --disable-alpha-sky130 \
+            --enable-io-sky130 --enable-sc-hs-sky130 --enable-sc-ms-sky130 --enable-sc-ls-sky130 \
+            --enable-sc-lp-sky130 --enable-sc-hdll-sky130 --enable-sc-hvl-sky130 --disable-alpha-sky130 \
             --enable-xschem-sky130 \
             --disable-gf180mcu-pdk --disable-primitive-gf180mcu \
             --disable-verification-gf180mcu --disable-klayout-gf180mcu --disable-io-gf180mcu \
