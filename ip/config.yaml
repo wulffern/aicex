@@ -334,3 +334,8 @@ rey_atr_sky130a:
   revision: main
   description: Analog transistor and resistor library for autolayout (sky130A)
 
+rey_ex_sky130a:
+  remote: git@github.com:analogicus/rey_ex_sky130a.git
+  revision: main
+  description: Tutorial example, 1 to 4 current mirror (sky130A)
+
