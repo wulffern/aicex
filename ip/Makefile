@@ -7,10 +7,17 @@ dirs = lelo_gr01_sky130a \
 CMD="make drc cdl lvs OPT='--short'"
 DESIGN_EXTS_RE = \.(sch|sym|spi|spice|sp|cir|meas|mag|maglef|lef|v|sv|vh|svh|py|tcl|yaml|yml|json|md)$$
 
-.PHONY: lelo command committers committers-repo
+.PHONY: lelo lelotran command committers committers-repo
 
 lelo:
 	${foreach d, ${dirs}, ${MAKE} command DIR=${d}/work CMD="${CMD}"; }
+
+# Functional transient on the extracted tapeout top level of every lelo
+# block. Reuses the existing work/lpe netlists, it does not re-extract.
+lelotran:
+	${foreach d, ${dirs}, ${MAKE} command \
+	  DIR=${d}/sim/tt_um_$(patsubst %_sky130a,%,${d})_analogicus \
+	  CMD="make all"; }
 
 command:
 	cd ${DIR} && ${CMD}
