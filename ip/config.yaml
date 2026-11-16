@@ -339,3 +339,41 @@ rey_ex_sky130a:
   revision: main
   description: Tutorial example, 1 to 4 current mirror (sky130A)
 
+rey_tr_sky130a:
+  remote: git@github.com:wulffern/rey_tr_sky130a.git
+  revision: main
+
+rey_gr01_sky130a:
+  remote: git@github.com:analogicus/rey_gr01_sky130a.git
+  revision: main
+  description: REY Group 1
+
+rey_gr02_sky130a:
+  remote: git@github.com:analogicus/rey_gr02_sky130a.git
+  revision: main
+  description: REY Group 2
+
+rey_gr03_sky130a:
+  remote: git@github.com:analogicus/rey_gr03_sky130a.git
+  revision: main
+  description: REY Group 3
+
+rey_gr04_sky130a:
+  remote: git@github.com:analogicus/rey_gr04_sky130a.git
+  revision: main
+  description: REY Group 4
+
+rey_gr05_sky130a:
+  remote: git@github.com:analogicus/rey_gr05_sky130a.git
+  revision: main
+  description: REY Group 5
+
+rey_gr06_sky130a:
+  remote: git@github.com:analogicus/rey_gr06_sky130a.git
+  revision: main
+  description: REY Group 6
+
+rey_gr07_sky130a:
+  remote: git@github.com:analogicus/rey_gr07_sky130a.git
+  revision: main
+  description: REY Group 7
